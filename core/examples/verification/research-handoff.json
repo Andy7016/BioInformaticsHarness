@@ -1,0 +1,32 @@
+{
+  "schema_version": "research-handoff-v1",
+  "splits": {
+    "independence_required": true,
+    "train_ids": ["sample-fiction-train-001", "sample-fiction-train-002"],
+    "validation_ids": ["sample-fiction-valid-001"],
+    "test_ids": ["test-fiction-001", "test-fiction-002"],
+    "rationale": "The fictional benchmark requires disjoint sample IDs for a held-out test check."
+  },
+  "evaluation": {
+    "required_ids": ["test-fiction-001", "test-fiction-002"],
+    "predicted_ids": ["test-fiction-001", "test-fiction-002"],
+    "failed_ids": [],
+    "excluded": []
+  },
+  "weights": {
+    "pretraining_required": true,
+    "expected_revision": "revision-fiction-2026-10-01",
+    "loaded_revision": "revision-fiction-2026-10-01",
+    "loaded": true,
+    "unexpected_missing_keys": [],
+    "intentional_skips": []
+  },
+  "execution": {
+    "required_step_ids": ["step-fiction-load", "step-fiction-evaluate"],
+    "completed_step_ids": [
+      "step-fiction-prepare-record",
+      "step-fiction-load",
+      "step-fiction-evaluate"
+    ]
+  }
+}

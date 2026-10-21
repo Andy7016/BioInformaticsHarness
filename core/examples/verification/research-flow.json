@@ -1,0 +1,91 @@
+{
+  "schema_version": "research-flow-v1",
+  "stages": [
+    {"id": "prepare", "depends_on": []},
+    {"id": "select", "depends_on": ["prepare"]},
+    {"id": "evaluate", "depends_on": ["select"]}
+  ],
+  "assets": [
+    {"id": "fictional-data", "kind": "data", "derived_from": []},
+    {"id": "fictional-labels", "kind": "labels", "derived_from": []},
+    {"id": "fictional-weights", "kind": "weights", "derived_from": []}
+  ],
+  "sections": {
+    "selection": {
+      "applicable": true,
+      "records": [
+        {
+          "stage_id": "prepare",
+          "unit": "fictional-sample",
+          "rule_ref": "all-inputs",
+          "input_ids": ["fiction-001", "fiction-002"],
+          "selected_ids": ["fiction-001", "fiction-002"],
+          "excluded": [],
+          "failed": [],
+          "unobserved_ids": []
+        },
+        {
+          "stage_id": "select",
+          "unit": "fictional-sample",
+          "rule_ref": "fictional-quality-filter",
+          "input_ids": ["fiction-001", "fiction-002"],
+          "selected_ids": ["fiction-001"],
+          "excluded": [
+            {"id": "fiction-002", "reason": "fictional quality filter"}
+          ],
+          "failed": [],
+          "unobserved_ids": [],
+          "predecessor_stage_id": "prepare",
+          "not_forwarded": []
+        }
+      ],
+      "claims": [
+        {
+          "id": "selected-denominator",
+          "stage_id": "select",
+          "denominator_role": "selected",
+          "denominator_ids": ["fiction-001"]
+        }
+      ]
+    },
+    "information": {
+      "applicable": true,
+      "history_complete": true,
+      "uses": [
+        {"stage_id": "evaluate", "asset_id": "fictional-data", "purpose": "evaluate"},
+        {"stage_id": "evaluate", "asset_id": "fictional-labels", "purpose": "evaluate"}
+      ],
+      "claims": [
+        {
+          "id": "fictional-independent-evaluation",
+          "stage_id": "evaluate",
+          "kind": "independent",
+          "protected_asset_ids": ["fictional-data", "fictional-labels"],
+          "prohibited_purposes": ["fit", "tune", "select"]
+        }
+      ]
+    },
+    "consumption": {
+      "applicable": true,
+      "required": [
+        {
+          "stage_id": "evaluate",
+          "role": "weights",
+          "artifact_id": "fictional-weights",
+          "expected_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "required_level": "artifact_checked"
+        }
+      ],
+      "receipts": [
+        {
+          "stage_id": "evaluate",
+          "role": "weights",
+          "artifact_id": "fictional-weights",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "evidence_level": "artifact_checked",
+          "status": "completed"
+        }
+      ]
+    }
+  }
+}

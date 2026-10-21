@@ -1,0 +1,2479 @@
+{
+  "candidate": {
+    "branch": "codex/public-candidate",
+    "commit_sha_receipt": "docs/reviews/2026-10-public-history/commit-map.json in the private source checkout",
+    "private_source_baseline": "5c365b7",
+    "public_commit_labels": {
+      "accepted_core_import": "core-import-commit",
+      "documentation_clarification": "documentation-commit",
+      "scope_and_evolution": "scope-commit"
+    }
+  },
+  "candidate_files": [
+    {
+      "bytes": 1009,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "README.md",
+      "sha256": "ab883cd366f25fbfb448e82593f5d4712e5aa77886cf9a0a58b4c942bc9e6a32",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_root_readme",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 2248,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "PUBLICATION.md",
+      "sha256": "9c1cef9c97a4051b23e9a97ddf1ab2ce086c048b67fb485049b2d073967f5bd1",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_publication",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 1274,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "LICENSING.md",
+      "sha256": "23a46bac936dca7ef867c5c181bfb6048ab557dfa3a2a2ed0d3d15327e6bd419",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_licensing",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 568,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "NOTICE",
+      "sha256": "29486f9bc6550ffc08d72656483ea6a2fbff963037173f4050bdb4d8051deff2",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_notice",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 832,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "CITATION.cff",
+      "sha256": "8f23b1de6cb7e9aea332dc011fd4b7a503b91b709b05c83d4371a974bc3179bd",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_citation",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 4655,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "docs/history/EVOLUTION.zh.md",
+      "sha256": "6a03308d8feb858189981fb6c32221cd809c2a5950168f40bf36e5e55abc5823",
+      "source": "generated:scripts/release/prepare_public_candidate.py::_evolution",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-from-script-template"
+    },
+    {
+      "bytes": 11358,
+      "license": "Apache-2.0",
+      "public_path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transform": "verbatim"
+    },
+    {
+      "bytes": 18657,
+      "license": "CC-BY-4.0",
+      "public_path": "LICENSES/CC-BY-4.0.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "source": "LICENSES/CC-BY-4.0.txt",
+      "source_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "transform": "verbatim"
+    },
+    {
+      "bytes": null,
+      "generator_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "license": "CC-BY-4.0",
+      "public_path": "docs/history/source-index.json",
+      "self_hashed": false,
+      "sha256": null,
+      "source": "generated:scripts/release/prepare_public_candidate.py::_source_index",
+      "source_sha256": "cc24d3cee19da8be038e139b8b824f8278dea4ce81aa1ecde6b262f3a83762be",
+      "transform": "generated-index; self hash intentionally omitted"
+    }
+  ],
+  "core_files": [
+    {
+      "bytes": 965,
+      "license": "CC-BY-4.0",
+      "path": "CITATION.cff",
+      "public_path": "core/CITATION.cff",
+      "role": "citation",
+      "sha256": "e0e557753e3a04ec359f96968a18f12016a74a6da37ead0bbce80e7ecb68e530",
+      "source": "CITATION.cff",
+      "source_sha256": "e0e557753e3a04ec359f96968a18f12016a74a6da37ead0bbce80e7ecb68e530",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 4480,
+      "license": "CC-BY-4.0",
+      "path": "EVIDENCE.zh.md",
+      "public_path": "core/EVIDENCE.zh.md",
+      "role": "evidence-boundary",
+      "sha256": "124aecc66345227ffef7405d1dbd9aa6454c2f714e1f61e58db16a385583f775",
+      "source": "docs/reviews/2026-10-release-preparation/public-evidence/EVIDENCE.zh.md",
+      "source_sha256": "ef0a25f007b68653e078636e09fdf9ce63095b2a2bd9f4505056066900fb640b",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 11358,
+      "license": "Apache-2.0",
+      "path": "LICENSE",
+      "public_path": "core/LICENSE",
+      "role": "upstream-license-text",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "source": "LICENSE",
+      "source_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 18657,
+      "license": "CC-BY-4.0",
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "public_path": "core/LICENSES/CC-BY-4.0.txt",
+      "role": "upstream-license-text",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "source": "LICENSES/CC-BY-4.0.txt",
+      "source_sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 2273,
+      "license": "CC-BY-4.0",
+      "path": "LICENSING.md",
+      "public_path": "core/LICENSING.md",
+      "role": "license-scope",
+      "sha256": "41460083ba65d0134a41d66a29e60b1037984c8779d679556993dae497c91c14",
+      "source": "LICENSING.md",
+      "source_sha256": "41460083ba65d0134a41d66a29e60b1037984c8779d679556993dae497c91c14",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 702,
+      "license": "Apache-2.0",
+      "path": "NOTICE",
+      "public_path": "core/NOTICE",
+      "role": "notice",
+      "sha256": "b3bd013a10c19fe5a3725c644b6c173eb98728de431e0246e4a6c45c5ab31f21",
+      "source": "NOTICE",
+      "source_sha256": "b3bd013a10c19fe5a3725c644b6c173eb98728de431e0246e4a6c45c5ab31f21",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 3741,
+      "license": "CC-BY-4.0",
+      "path": "QUICKSTART.md",
+      "public_path": "core/QUICKSTART.md",
+      "role": "release-guide",
+      "sha256": "dcccc2b4e59519d43d3f2725b60926545bbaf9851183bae1bad9013e0dd779dc",
+      "source": "package-templates/QUICKSTART.md",
+      "source_sha256": "dcccc2b4e59519d43d3f2725b60926545bbaf9851183bae1bad9013e0dd779dc",
+      "transform": "template-version-substitution",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 1749,
+      "license": "CC-BY-4.0",
+      "path": "README.md",
+      "public_path": "core/README.md",
+      "role": "release-entry",
+      "sha256": "bd786ef8929f7b51424f663210c4f0782002fd1036a7424f190deb8c24e4a69d",
+      "source": "package-templates/README.md",
+      "source_sha256": "7ac2225b972d1e5e09ea122f997b0191cc3e1381d639b526aad574f999db4c5f",
+      "transform": "template-version-substitution",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 10,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 26863,
+      "license": "CC-BY-4.0",
+      "path": "REFERENCES.bib",
+      "public_path": "core/REFERENCES.bib",
+      "role": "reference-data",
+      "sha256": "9b7284ae0ece2d76c909831a0209af9b9d43795f242dc4969502b318ae34e199",
+      "source": "docs/reviews/2026-10-release-preparation/bibliography/references.bib",
+      "source_sha256": "9b7284ae0ece2d76c909831a0209af9b9d43795f242dc4969502b318ae34e199",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 22666,
+      "license": "CC-BY-4.0",
+      "path": "REFERENCES.md",
+      "public_path": "core/REFERENCES.md",
+      "role": "reference-index",
+      "sha256": "7bc9394fb1dfab646078bb29e11db5c3450a55b2077138bb6d22832af7b44f14",
+      "source": "docs/reviews/2026-10-release-preparation/bibliography/REFERENCES.md",
+      "source_sha256": "4cc1e3455bf4d5ca40808d13cb962908bc2e6451190c2db761a37b7ccb4a897f",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4333,
+      "license": "CC-BY-4.0",
+      "path": "THIRD_PARTY.md",
+      "public_path": "core/THIRD_PARTY.md",
+      "role": "rights-boundary",
+      "sha256": "377c8618338b2585e457a3a7b58c8cac3550e8d82d2d81f4c593e168b877df1e",
+      "source": "THIRD_PARTY.md",
+      "source_sha256": "377c8618338b2585e457a3a7b58c8cac3550e8d82d2d81f4c593e168b877df1e",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 14,
+      "license": "Apache-2.0",
+      "path": "VERSION",
+      "public_path": "core/VERSION",
+      "role": "release-metadata",
+      "sha256": "ed41d33f787456abe92ea03b820e4c832b1e2b9e6867242eaea03258bae8d119",
+      "source": "VERSION",
+      "source_sha256": "ed41d33f787456abe92ea03b820e4c832b1e2b9e6867242eaea03258bae8d119",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 109367,
+      "license": "CC-BY-4.0",
+      "path": "docs/ARCHIVE_POINTERS.md",
+      "public_path": "core/docs/ARCHIVE_POINTERS.md",
+      "role": "archive-navigation",
+      "sha256": "dfc1e6f6236a5c5bd2133750ca90e6cb8988bb7ab7bb99452c064125f3630bd8",
+      "source": "package-templates/ARCHIVE_POINTERS.md",
+      "source_sha256": "f09ccb0c52252eb403fd0b5f8252f670f2a864b37d06be23f3127d1091481f03",
+      "transform": "generated-archive-pointer-list",
+      "transform_details": {
+        "archive_pointer_count": 245
+      }
+    },
+    {
+      "bytes": 9446,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/01-design-vision.md",
+      "public_path": "core/docs/design/01-design-vision.md",
+      "role": "normative-prose",
+      "sha256": "006062344244fc4e7edcbbdf4fe2242e38ca989ebe5822d36fe87c5523d0eeab",
+      "source": "docs/design/01-design-vision.md",
+      "source_sha256": "6b2ad82d429be4936701aa5e496d74d7207c3b0f09ad0db55c3bdc7100ca52af",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5111,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/03-research-and-validation.md",
+      "public_path": "core/docs/design/03-research-and-validation.md",
+      "role": "normative-prose",
+      "sha256": "09ca0839c16a95874fe4b0d1dcd5ebd8112e36d0688f57e592c151c07eee95da",
+      "source": "docs/design/03-research-and-validation.md",
+      "source_sha256": "dfe55d245b6e4d234ee6a753cab3ac37f160a0242454b468ccfcf1889032c4be",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 8617,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/05-paper-case-workflow.md",
+      "public_path": "core/docs/design/05-paper-case-workflow.md",
+      "role": "normative-prose",
+      "sha256": "d7b13198897295e3f79746eca517e13cc891ab6b254cde6677532625b4d397e0",
+      "source": "docs/design/05-paper-case-workflow.md",
+      "source_sha256": "9de3371e6200027571fb68cc76e35df30051789633e5bba78bc9a3db8ccc5681",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7676,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/06-readable-process.md",
+      "public_path": "core/docs/design/06-readable-process.md",
+      "role": "normative-prose",
+      "sha256": "182cc72248fa176e4ff839af37b4c37e818d55fdb87aa2d92f21efaa75614032",
+      "source": "docs/design/06-readable-process.md",
+      "source_sha256": "5be9f9c729093cc4b0fd88072888b87e57044de5e21742f41ae27d904c8e92d4",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7979,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/07-agent-assistance.md",
+      "public_path": "core/docs/design/07-agent-assistance.md",
+      "role": "normative-prose",
+      "sha256": "91925bfd14d10b2339da9e966a8c27e184c985572a337ca6e3fca6d9652be510",
+      "source": "docs/design/07-agent-assistance.md",
+      "source_sha256": "8169f7a89dd5696d36a6dfd40bb8bb79fddd655bede77790e15c2da8dc05e04d",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 2989,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/08-repository-scope.md",
+      "public_path": "core/docs/design/08-repository-scope.md",
+      "role": "normative-prose",
+      "sha256": "1f91b4821688c3201f8a9a87238efe825c4c6461f0488b77068713de14589402",
+      "source": "docs/design/08-repository-scope.md",
+      "source_sha256": "9db21dc2c2edcb88a9122ec526d25433e28b55e9d2b70c8f8d135760066b9458",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": [
+          {
+            "count": 1,
+            "kind": "local-endpoint",
+            "replacement": "<local endpoint omitted from release>"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 7517,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/11-case-driven-engineering-guidance.md",
+      "public_path": "core/docs/design/11-case-driven-engineering-guidance.md",
+      "role": "normative-prose",
+      "sha256": "d1a29b02f0e668deabd28e6f3f5a16e892d62a1943df1819a86178cbb3bd8059",
+      "source": "docs/design/11-case-driven-engineering-guidance.md",
+      "source_sha256": "491d1b5bb429041c19ba007b47757ebbc93f54707dd6a30e69a1af3853ed7138",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 10672,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/12-case-observations-and-citations.md",
+      "public_path": "core/docs/design/12-case-observations-and-citations.md",
+      "role": "normative-prose",
+      "sha256": "55099c315920ff7ac93a7a012351cf0519fbfeb50223098561c69bacd8b0c794",
+      "source": "docs/design/12-case-observations-and-citations.md",
+      "source_sha256": "e8e57c6e677b41a3be67e3c15a9b47187566ae7d0553ea4262ba0be8b8d21e0c",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 17,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 6695,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/13-calibrated-relations-and-checks.md",
+      "public_path": "core/docs/design/13-calibrated-relations-and-checks.md",
+      "role": "normative-prose",
+      "sha256": "3731acee07fc0300e077f6ee69f99f95ec5c555c58f0265bc8429327f19ecddb",
+      "source": "docs/design/13-calibrated-relations-and-checks.md",
+      "source_sha256": "38b6da6c7b2c3eef5ca640b27dc7cca9c85d58b3ceb7fb913aed38faf19078e0",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5208,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/14-twenty-case-relations-and-evidence.md",
+      "public_path": "core/docs/design/14-twenty-case-relations-and-evidence.md",
+      "role": "normative-prose",
+      "sha256": "c691d764e0b06c90750d1824cad70bd1378b4ff8b2220b0960471b934fc8c0a2",
+      "source": "docs/design/14-twenty-case-relations-and-evidence.md",
+      "source_sha256": "34ce9b9518e6eec9767ceb389bac91f94c89b92d0374b4d8a93ab8c21efee7bd",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5052,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/15-obligations-guidance-and-prospective-use.md",
+      "public_path": "core/docs/design/15-obligations-guidance-and-prospective-use.md",
+      "role": "normative-prose",
+      "sha256": "3a0100599890bb48013d29e33fbe7f088b9cb60294d92bd770062974873a165b",
+      "source": "docs/design/15-obligations-guidance-and-prospective-use.md",
+      "source_sha256": "0d89e8531d293de06dcea7a3ed1dfe0135d8fc58da746fec0904fb9047512c07",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3808,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/16-peer-review-and-revision-comparison.md",
+      "public_path": "core/docs/design/16-peer-review-and-revision-comparison.md",
+      "role": "normative-prose",
+      "sha256": "8c74c3843af280a90a8ba44672e290db3f2547302e6d5d08a17cfc7a30b6a90d",
+      "source": "docs/design/16-peer-review-and-revision-comparison.md",
+      "source_sha256": "22c98bd638bf49e37091082bd26ae32bf7aad098fb7485a82ae9ae60d6a18d51",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4393,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/17-paper-guidance-to-revision.md",
+      "public_path": "core/docs/design/17-paper-guidance-to-revision.md",
+      "role": "normative-prose",
+      "sha256": "24e8aafeb855b2ce496723d8b9ee9f6d86ab227505a9c64b5abc44e5affdb24d",
+      "source": "docs/design/17-paper-guidance-to-revision.md",
+      "source_sha256": "5a31c156e2883eb2a8d9fce81871b84c203b7e276a359f4fa2f3634050a5fffb",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4591,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/18-revisor-guidance-and-acceptance.md",
+      "public_path": "core/docs/design/18-revisor-guidance-and-acceptance.md",
+      "role": "normative-prose",
+      "sha256": "b1650e0e72b290821dec2d34b195c2b1caf7da29755a63884cdf8d55626f2ce9",
+      "source": "docs/design/18-revisor-guidance-and-acceptance.md",
+      "source_sha256": "5a5fac5b7bd9ca266cfd695ea92ffd0e069476aaa9d6c3e719e99a2a2accf693",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5115,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/19-revision-guidance-and-acceptance.md",
+      "public_path": "core/docs/design/19-revision-guidance-and-acceptance.md",
+      "role": "normative-prose",
+      "sha256": "45e2e4484fce5ceea96c5ae25afeb1ef4c0bc9af178d7bada2df7500e4598d33",
+      "source": "docs/design/19-revision-guidance-and-acceptance.md",
+      "source_sha256": "37045df407d0a3c9f2f2bdd6091f5b2969acb15fcd172bc12470e8f7ff7227dd",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 7,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3849,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/20-operational-revisor-guidance.md",
+      "public_path": "core/docs/design/20-operational-revisor-guidance.md",
+      "role": "normative-prose",
+      "sha256": "dd887ad378cf2b251cc7c88ac5800be64f602d61160797c805821ba361024207",
+      "source": "docs/design/20-operational-revisor-guidance.md",
+      "source_sha256": "e3d1c088c0784b87ef16a4656e622ea13dec5c966f00197bca57f0b882af1fbc",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3163,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/21-domain-validation-guidance.md",
+      "public_path": "core/docs/design/21-domain-validation-guidance.md",
+      "role": "normative-prose",
+      "sha256": "3dc300fe2d6961d252f22f0d09f30340a7f615cc26af0f9dcef2c99b48d956c7",
+      "source": "docs/design/21-domain-validation-guidance.md",
+      "source_sha256": "4c6c486f901cd72a1c1f38ce22a8ea4f0be84914154886b0c0ac0a67a3d546a7",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3160,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/22-research-operational-support.md",
+      "public_path": "core/docs/design/22-research-operational-support.md",
+      "role": "normative-prose",
+      "sha256": "b5535ff5d92440313e99b0953fb4af211bef7aea1ee42bf1e8f826084fde2dc2",
+      "source": "docs/design/22-research-operational-support.md",
+      "source_sha256": "314fb077c537480a34cdb91a20d6f496f939b3ef01d943e0cb8ad5d41f58ad61",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 2429,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/23-real-artifacts-and-research-decisions.md",
+      "public_path": "core/docs/design/23-real-artifacts-and-research-decisions.md",
+      "role": "normative-prose",
+      "sha256": "4aa0c444d8776e2bf34945c1892eb665e4cdb3819e9b5b1802aeafa85e21538f",
+      "source": "docs/design/23-real-artifacts-and-research-decisions.md",
+      "source_sha256": "7b6316cba33b4d4db172c47a5d9de072927c9971a1ac06e69135842a1730b626",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3048,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/24-production-consumption-and-handoff.md",
+      "public_path": "core/docs/design/24-production-consumption-and-handoff.md",
+      "role": "normative-prose",
+      "sha256": "9c2e45f67324b60135ccb2080aaa93ab138a83b4310fbf98d7d637e0eeb2136e",
+      "source": "docs/design/24-production-consumption-and-handoff.md",
+      "source_sha256": "fa79cd9249e7feecb38f8ff1218b7383304012c13864d3861f545e716c7d5260",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4165,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/25-research-facets-and-effort-comparison.md",
+      "public_path": "core/docs/design/25-research-facets-and-effort-comparison.md",
+      "role": "normative-prose",
+      "sha256": "f9af9e731c8df2a0b9a6830808525000b9b770c1f6d866c42fe40f476131a814",
+      "source": "docs/design/25-research-facets-and-effort-comparison.md",
+      "source_sha256": "ca2bb2e7843b82cc9de6b16e948a3e886ff482191a492002eb42d82c423a280a",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 15,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 2644,
+      "license": "CC-BY-4.0",
+      "path": "docs/design/26-real-artifacts-and-public-alpha.md",
+      "public_path": "core/docs/design/26-real-artifacts-and-public-alpha.md",
+      "role": "normative-prose",
+      "sha256": "f78cda08e32ca4550e07e7bd76a8d182884b5d81bdfdceaa0e6433fb5ec743b8",
+      "source": "docs/design/26-real-artifacts-and-public-alpha.md",
+      "source_sha256": "34a72f0362a781282c957bb8839f135fbd52729f6ab976bfd36c4e93e2a6b85e",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 15372,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/README.md",
+      "public_path": "core/docs/methods/README.md",
+      "role": "normative-prose",
+      "sha256": "32018f8305a56753a022e088a85a0e28c38ef5c90350f698c38232fd42d4cf3d",
+      "source": "docs/methods/README.md",
+      "source_sha256": "b8a97f71695e541d383d82505ed6cd47058c501215362cba4ee37a1be984c7fb",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 13,
+        "links_rewritten_to_package": 101,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4880,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/benchmark-teacher-fairness.md",
+      "public_path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
+      "role": "normative-prose",
+      "sha256": "a536a9e35c92a519c9b43da5d922f7aaa4670e6b5dcc58ef9c33d1594213b77f",
+      "source": "docs/methods/cards/benchmark-teacher-fairness.md",
+      "source_sha256": "1df66931540e8b31d0908d6c8eb58db55e691626ac2a8a528b67f09576fb1d3d",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5368,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/coordinate-transforms.md",
+      "public_path": "core/docs/methods/cards/coordinate-transforms.md",
+      "role": "normative-prose",
+      "sha256": "0937c35da95fb2a2de6040fadb94129adf61a609784402e60106709452c05ea3",
+      "source": "docs/methods/cards/coordinate-transforms.md",
+      "source_sha256": "faf9be5a0e53a96607d2410e5bb65c1e0edb60dcfef5083433bf4be7517f4493",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5644,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/execution-evidence.md",
+      "public_path": "core/docs/methods/cards/execution-evidence.md",
+      "role": "normative-prose",
+      "sha256": "22be892c50a592825a9a16d1bd270c8d395a68a1a338db877814fd5a5eb2b81c",
+      "source": "docs/methods/cards/execution-evidence.md",
+      "source_sha256": "f77b4d213930390f48a45c7e0e17781ef36f43b1fa53862ca8d0436f6d0ed1cc",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3638,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/information-use.md",
+      "public_path": "core/docs/methods/cards/information-use.md",
+      "role": "normative-prose",
+      "sha256": "d724e1c9e64cfdc3b0c1bb9ae84282878ac391b36ef9c4f2c5ce28378a7a3d21",
+      "source": "docs/methods/cards/information-use.md",
+      "source_sha256": "9bbee1f7cc3911e61c51745f84c7328ba0b5a6c71eadeff767a43e89c51e33bd",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5583,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/metric-semantics.md",
+      "public_path": "core/docs/methods/cards/metric-semantics.md",
+      "role": "normative-prose",
+      "sha256": "ee98fd41fd4505fa0b5e1a0900050f9e29ce96b4aead3244a822ab2993c79dc4",
+      "source": "docs/methods/cards/metric-semantics.md",
+      "source_sha256": "97b5031e3b9ebe2e7c5741d5501297f603403b291345fa5b83048b5ce2b64bff",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 6,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3743,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/molecular-graph.md",
+      "public_path": "core/docs/methods/cards/molecular-graph.md",
+      "role": "normative-prose",
+      "sha256": "1cca5bb88cc854b3d59bba4b1bf1c9c48bba0947f6e4330dea035cd7c2605b06",
+      "source": "docs/methods/cards/molecular-graph.md",
+      "source_sha256": "ef84d66776b33e81b81c094ed004d68725085f3f78fc07fc1775356f322dff9c",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4669,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/sequence-representation.md",
+      "public_path": "core/docs/methods/cards/sequence-representation.md",
+      "role": "normative-prose",
+      "sha256": "a9e04adfdbb697fc85f3671bf70772a79e61f2a5324e41b8a53352cbab4e277a",
+      "source": "docs/methods/cards/sequence-representation.md",
+      "source_sha256": "46fe08cf3ba96bab1f6abdfa318a84f4caba7f710733800f9586505633489e3f",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3660,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/single-cell-boundaries.md",
+      "public_path": "core/docs/methods/cards/single-cell-boundaries.md",
+      "role": "normative-prose",
+      "sha256": "c7e3c268d40969f6c7eba50c9a9bf65510276150bbad53443a6a5347f6e2b833",
+      "source": "docs/methods/cards/single-cell-boundaries.md",
+      "source_sha256": "96cc913875f156adea4e7ec57b61ff16178ce8639ae73504eba61a0688c5b832",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3192,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/stage-selection.md",
+      "public_path": "core/docs/methods/cards/stage-selection.md",
+      "role": "normative-prose",
+      "sha256": "9241dbabe10f7e84fdac9838b721f41790d13123ba08e0fa2feb570f8179b54f",
+      "source": "docs/methods/cards/stage-selection.md",
+      "source_sha256": "e0d65aa88040cd4c77dc81544c076ba654ed1a7e69a1af65658686aa5d1b3c1b",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4704,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/structure-mapping-scoring.md",
+      "public_path": "core/docs/methods/cards/structure-mapping-scoring.md",
+      "role": "normative-prose",
+      "sha256": "4cadbf520b6916fb63d3ae85c0a3d169df04545fd29a6b3481d102ba565d1bbd",
+      "source": "docs/methods/cards/structure-mapping-scoring.md",
+      "source_sha256": "ba1008be02e11b14fc25228ac7846e072f58977322ac12a838b14acd0ad8f114",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4287,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/cards/visualization-efficiency.md",
+      "public_path": "core/docs/methods/cards/visualization-efficiency.md",
+      "role": "normative-prose",
+      "sha256": "6061d2865470875edb6fc8b61722e2f36ae5aafaf37f008ec9b48f0c168794aa",
+      "source": "docs/methods/cards/visualization-efficiency.md",
+      "source_sha256": "24cfe6bcc133c3d0bf80a0724c1ba3fc15001823887dc03368d0d73a8cde0963",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7110,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/flow-contract.md",
+      "public_path": "core/docs/methods/flow-contract.md",
+      "role": "normative-prose",
+      "sha256": "f8ef3c264bdce1466d53393451f706bb25616b196518bbcc9f8c5bc6be94ba58",
+      "source": "docs/methods/flow-contract.md",
+      "source_sha256": "e425197ed8f8e2f6d47080efc8b392e236304b7144d4569aab01f4785fc8dc2b",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 10,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7094,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/artifact-producer-consumer.md",
+      "public_path": "core/docs/methods/guides/artifact-producer-consumer.md",
+      "role": "normative-prose",
+      "sha256": "e79ec0216ef1d3c3af3f45303c53aa5eb02c2598fad9c3a781ae24c935677193",
+      "source": "docs/methods/guides/artifact-producer-consumer.md",
+      "source_sha256": "3d1053bb5b97a9bd63c08f60e6bbabae16d38ed57c81e51a0f03d7b6723f802e",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7673,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/biological-explanation-and-handoff.md",
+      "public_path": "core/docs/methods/guides/biological-explanation-and-handoff.md",
+      "role": "normative-prose",
+      "sha256": "2f8dc75f5985a7d05a8b574505b47d9c5308e147fd6fc0bb73837c08cb3a1aa2",
+      "source": "docs/methods/guides/biological-explanation-and-handoff.md",
+      "source_sha256": "1146c3197ace3d9c30e8f14cbb2d823c98d3e5a96bc60aa3b6ca3d55a63a8c1f",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 7,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 4369,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/finite-diagnostics.md",
+      "public_path": "core/docs/methods/guides/finite-diagnostics.md",
+      "role": "normative-prose",
+      "sha256": "79099254c58c307f7cd9eb8a6dfe893129258973bc13032e1df254811358eba7",
+      "source": "docs/methods/guides/finite-diagnostics.md",
+      "source_sha256": "abe0dddcbef6cd8df7db38ea624ff412667974caba3887e3431a30ec3ac6d935",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 9530,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/function-and-utility-validation.md",
+      "public_path": "core/docs/methods/guides/function-and-utility-validation.md",
+      "role": "normative-prose",
+      "sha256": "b25b8cb3672df68d3b3e1fbcf8ff599ebab60b29b35b0a9671f87a2e663e77e6",
+      "source": "docs/methods/guides/function-and-utility-validation.md",
+      "source_sha256": "dfe8e767836d30f1f13219173f53fb5ec5500cdc8d137914500934185e41429d",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7137,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/guidance-calibration-and-handoff.md",
+      "public_path": "core/docs/methods/guides/guidance-calibration-and-handoff.md",
+      "role": "normative-prose",
+      "sha256": "78b4c1e7618bf3124c4ed763a96c8d86a7e970f1010e3e2467ae95984f69af01",
+      "source": "docs/methods/guides/guidance-calibration-and-handoff.md",
+      "source_sha256": "db71d086b00998781e00e6662a79c67c183b49982e76ae0d53f4ad8852771bad",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 19536,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/information-and-state-effects.md",
+      "public_path": "core/docs/methods/guides/information-and-state-effects.md",
+      "role": "normative-prose",
+      "sha256": "86eae02b30b261caff9a936d4401bdfe5cee02e1133313e2614b6cf41c717a0f",
+      "source": "docs/methods/guides/information-and-state-effects.md",
+      "source_sha256": "e7ff036034ac3aa8432050ab277b4df6e671331b05a7b762edd830c9fab21122",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 23,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3074,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/joint-geometry-diagnostics.md",
+      "public_path": "core/docs/methods/guides/joint-geometry-diagnostics.md",
+      "role": "normative-prose",
+      "sha256": "cfc86e7888014bdb7bcad90dfec2580d86f2e302428b8560a7bec2240b65160b",
+      "source": "docs/methods/guides/joint-geometry-diagnostics.md",
+      "source_sha256": "ad384a08eb78174ee9f44b8fc10ef80432e201154af1ce5df39086e2259fe596",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 2,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5331,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/label-source-and-update.md",
+      "public_path": "core/docs/methods/guides/label-source-and-update.md",
+      "role": "normative-prose",
+      "sha256": "b00d2e9cc0481ef3ea96f4d95d6c1dd69e949f6054fba36afdac2ffc77e32d04",
+      "source": "docs/methods/guides/label-source-and-update.md",
+      "source_sha256": "0577021552146b409fe16f432c1d24c7f80dc949f3b32eadfda48609287a2262",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 10904,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/measurement-to-claim.md",
+      "public_path": "core/docs/methods/guides/measurement-to-claim.md",
+      "role": "normative-prose",
+      "sha256": "92367a7be0f1befb88ce65acb2efc722883f353b994f7216891cbf1949666bed",
+      "source": "docs/methods/guides/measurement-to-claim.md",
+      "source_sha256": "3bcef73990f0f42692092202729a2be0eb1f9a44eac02f7ed051311312f76c76",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 7,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 13396,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/proto-tool-use.md",
+      "public_path": "core/docs/methods/guides/proto-tool-use.md",
+      "role": "normative-prose",
+      "sha256": "f8e99bbe1a421c4f69edeb35fcc831b0c26d8e7a8603e0869221f304a956bc2b",
+      "source": "docs/methods/guides/proto-tool-use.md",
+      "source_sha256": "876be7a80d42a5a9ac41d910841ec6c16e9d0e7e6bd29ad34c42a92ab021c6a0",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 9,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 6887,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/receiving-research-work.md",
+      "public_path": "core/docs/methods/guides/receiving-research-work.md",
+      "role": "normative-prose",
+      "sha256": "f1cdce601ce3f7bf9b4048dcdafeaf2dcf394b4954dcff86608ba2424f00f882",
+      "source": "docs/methods/guides/receiving-research-work.md",
+      "source_sha256": "5619c283fd7c81746da6a0e333679af4d8932f65efaadfb86b58133fce154c38",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 10401,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/revision-responses-and-acceptance.md",
+      "public_path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
+      "role": "normative-prose",
+      "sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
+      "source": "docs/methods/guides/revision-responses-and-acceptance.md",
+      "source_sha256": "3029d9ffe3ee27f454ad9a8f1f9f3f6eb8affb72c08a7fea1bc74f05f0760ab5",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 9145,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/sequence-novelty-and-background.md",
+      "public_path": "core/docs/methods/guides/sequence-novelty-and-background.md",
+      "role": "normative-prose",
+      "sha256": "4ce66c3cb298e05ee812a47d31195d1cadb2f31377e3c8f1cc57ca072e779572",
+      "source": "docs/methods/guides/sequence-novelty-and-background.md",
+      "source_sha256": "cb91d5024656d4da2d12c0b8a038ea92e4b98e9017d830f25a7b6a74b2be9de2",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 18906,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/statistical-units-and-selection.md",
+      "public_path": "core/docs/methods/guides/statistical-units-and-selection.md",
+      "role": "normative-prose",
+      "sha256": "e93e7f664e29e0e6f2ebdd42f47217136cda16779a6c2e16fa3fc7b12c21c1c0",
+      "source": "docs/methods/guides/statistical-units-and-selection.md",
+      "source_sha256": "c9633fa968317dee706dd3daaa194ab01ed5c1274a1c9062e1c71ddac742c0f4",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 15,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 11482,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/guides/structural-geometry-and-perturbation.md",
+      "public_path": "core/docs/methods/guides/structural-geometry-and-perturbation.md",
+      "role": "normative-prose",
+      "sha256": "11e857c37605aef9296317d24ded180edc9dea413a13cb0e4c9ae5ac7f84e1b7",
+      "source": "docs/methods/guides/structural-geometry-and-perturbation.md",
+      "source_sha256": "deaf66986def45dcd2ffda1dc71f11373a44788b79f5c6f0b7a55cd278a337e6",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7624,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/handoff-contract.md",
+      "public_path": "core/docs/methods/handoff-contract.md",
+      "role": "normative-prose",
+      "sha256": "fa676daa8d6da23103da532432752de745530818522a7bbc71b2f522b5e34433",
+      "source": "docs/methods/handoff-contract.md",
+      "source_sha256": "e640e1e5b99ab19c593cf7d9e600989ee61fa04fc080133f2cb218267192a88d",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 5,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 25140,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/peer-review-comparison.md",
+      "public_path": "core/docs/methods/peer-review-comparison.md",
+      "role": "normative-prose",
+      "sha256": "c03679a4cea752119ce85884c1ffe60eaf8b7d1c69fe75d07b5a8e12b650c375",
+      "source": "docs/methods/peer-review-comparison.md",
+      "source_sha256": "0454da690d289ba141373ec0f1bb1ea42bd3d5184a991c40c4c0fb062ce97bcd",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 3,
+        "links_rewritten_to_package": 6,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 6427,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/relations-contract.md",
+      "public_path": "core/docs/methods/relations-contract.md",
+      "role": "normative-prose",
+      "sha256": "dcccc1b8497161bf5e646054a0114a2484dee3fa4ac81856d2b94238189a2f50",
+      "source": "docs/methods/relations-contract.md",
+      "source_sha256": "896488bb2b63950ae12d2de2cf40542b6cd74100b5318b7d2450c066c468f117",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 6,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 6540,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/research-support-tools.md",
+      "public_path": "core/docs/methods/research-support-tools.md",
+      "role": "normative-prose",
+      "sha256": "0cfc1a20a13c940d8b9a6508d3ad1cd4796871241f928d3a6400123027d01e60",
+      "source": "docs/methods/research-support-tools.md",
+      "source_sha256": "7cdbf535380c43557d259f3071b8467d33d958171af4909113ad8c42fecbf78d",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 9,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 3846,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/review-receipt.md",
+      "public_path": "core/docs/methods/review-receipt.md",
+      "role": "normative-prose",
+      "sha256": "a63a5f93087889e6cf315650128b495fe53e7dee2672749664f5a9c258595afa",
+      "source": "docs/methods/review-receipt.md",
+      "source_sha256": "c0178d8d2d97c2b5f69a3cae2feae2dad0ca83da2ab8b65c227e8bc2287e4edd",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 9984,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/revision-contract.md",
+      "public_path": "core/docs/methods/revision-contract.md",
+      "role": "normative-prose",
+      "sha256": "20228b2c3a9bfa45573330559a898282c8cb59241487071ed41ebcefa910a2d1",
+      "source": "docs/methods/revision-contract.md",
+      "source_sha256": "20228b2c3a9bfa45573330559a898282c8cb59241487071ed41ebcefa910a2d1",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 6,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 11968,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/revision-guidance-contract.md",
+      "public_path": "core/docs/methods/revision-guidance-contract.md",
+      "role": "normative-prose",
+      "sha256": "870c37810adcbde1dbef70603e0f5c83924f8ad1404140b0a8eb8ae1016edcb3",
+      "source": "docs/methods/revision-guidance-contract.md",
+      "source_sha256": "61f0a9d6f7bd07b8126c3f92f76edd461300d3251e55f78f7f4b1090d9e415b6",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 1,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 5610,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/source-acquisition-routing.md",
+      "public_path": "core/docs/methods/source-acquisition-routing.md",
+      "role": "normative-prose",
+      "sha256": "3f731303cdc2f205214cd57fc4534a72bde2d2c08696e85588e403b0d68c6f12",
+      "source": "docs/methods/source-acquisition-routing.md",
+      "source_sha256": "f7a7c105ff9bde36e5bf7e67a7f328725cf41da813c7fd9dae715a03676d9236",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 0,
+        "local_redactions": [
+          {
+            "count": 1,
+            "kind": "local-endpoint",
+            "replacement": "<local endpoint omitted from release>"
+          }
+        ]
+      }
+    },
+    {
+      "bytes": 1509,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/worked-examples/README.md",
+      "public_path": "core/docs/methods/worked-examples/README.md",
+      "role": "normative-prose",
+      "sha256": "6661b6468da0bde40b284258f14c24ec279d8d474de3695173b360b88018fdff",
+      "source": "docs/methods/worked-examples/README.md",
+      "source_sha256": "0b1251e5426bbd5fa235f4eb3a87fcb4af1a38db331417b786524f854b62bd11",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 4,
+        "links_rewritten_to_package": 3,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 10774,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/worked-examples/common-and-task-specific.md",
+      "public_path": "core/docs/methods/worked-examples/common-and-task-specific.md",
+      "role": "normative-prose",
+      "sha256": "bd670b6e4ba5b3955ae2d7d3dda88df6b5486c8524f7f4c0f038b1ff52fe4797",
+      "source": "docs/methods/worked-examples/common-and-task-specific.md",
+      "source_sha256": "f5fcb549e1f9dfbfdb07d74951e637c42b5b246d877001cee1ef6fc11b7969e2",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 4,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 9469,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/worked-examples/confidence-to-decision.md",
+      "public_path": "core/docs/methods/worked-examples/confidence-to-decision.md",
+      "role": "normative-prose",
+      "sha256": "54ad92def8d1b1462557ae80b712f9afcb340bb96c044b4abeb7747ba48870e3",
+      "source": "docs/methods/worked-examples/confidence-to-decision.md",
+      "source_sha256": "96d31e10b696c425c63beec85cbac786a11eeb63cd9d26b9db639d6a34b8bcf2",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 2,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 14139,
+      "license": "CC-BY-4.0",
+      "path": "docs/methods/worked-examples/dynamic-process-interpretation.md",
+      "public_path": "core/docs/methods/worked-examples/dynamic-process-interpretation.md",
+      "role": "normative-prose",
+      "sha256": "b993dda6ca68162a0627fe2264f940a47fc1c84addbe080b786b5a5e2d10b922",
+      "source": "docs/methods/worked-examples/dynamic-process-interpretation.md",
+      "source_sha256": "d3a5178c5ccf7a6958c3297be890cd1130b0bfa0d8ff6353e6e37f6a09be81b6",
+      "transform": "markdown-links-and-local-redaction",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 1,
+        "links_redirected_to_archive_pointers": 6,
+        "links_rewritten_to_package": 5,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 7928,
+      "license": "CC-BY-4.0",
+      "path": "docs/reviews/2026-10-release-preparation/release-spec.json",
+      "public_path": "core/docs/reviews/2026-10-release-preparation/release-spec.json",
+      "role": "release-spec",
+      "sha256": "881aaee2338bf9e897a4a8247cd4a643c48e2ef405ef7a0ebbf566bd0cdf4347",
+      "source": "docs/reviews/2026-10-release-preparation/release-spec.json",
+      "source_sha256": "881aaee2338bf9e897a4a8247cd4a643c48e2ef405ef7a0ebbf566bd0cdf4347",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 6826,
+      "license": "CC-BY-4.0",
+      "path": "evidence-summary.json",
+      "public_path": "core/evidence-summary.json",
+      "role": "evidence-summary",
+      "sha256": "e0d7660e4d7f73533cf31ad96c0a5620b341bf019eadb93a2f932e2af2151176",
+      "source": "docs/reviews/2026-10-release-preparation/public-evidence/evidence-summary.json",
+      "source_sha256": "e0d7660e4d7f73533cf31ad96c0a5620b341bf019eadb93a2f932e2af2151176",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 4403,
+      "license": "CC-BY-4.0",
+      "path": "examples/domain-validation/README.md",
+      "public_path": "core/examples/domain-validation/README.md",
+      "role": "fictional-domain-example",
+      "sha256": "6c333c3b69221f006fcac0b2f8e7078411c1d94825109efd808a123f36e62ca2",
+      "source": "examples/domain-validation/README.md",
+      "source_sha256": "6c333c3b69221f006fcac0b2f8e7078411c1d94825109efd808a123f36e62ca2",
+      "transform": "verbatim",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 14541,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/expression_events.py",
+      "public_path": "core/examples/domain-validation/expression_events.py",
+      "role": "fictional-domain-example",
+      "sha256": "ef1a51a4669b648d47ddac2b5023c0d76fc77fb857728e0c09644333101fc3b1",
+      "source": "examples/domain-validation/expression_events.py",
+      "source_sha256": "ef1a51a4669b648d47ddac2b5023c0d76fc77fb857728e0c09644333101fc3b1",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 815,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-error-wrong-metric.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-error-wrong-metric.json",
+      "role": "fictional-domain-example",
+      "sha256": "0ad5ed02d320cf34ec5fccd9be300749552bd350d6eade5755385f5ff3025bda",
+      "source": "examples/domain-validation/fixtures/expression-error-wrong-metric.json",
+      "source_sha256": "0ad5ed02d320cf34ec5fccd9be300749552bd350d6eade5755385f5ff3025bda",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 807,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-independence-unknown.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-independence-unknown.json",
+      "role": "fictional-domain-example",
+      "sha256": "6e241a8be0f662ae04ed598f4ef26abf04c74b12fbe37b3d2ec89a01fab0fe45",
+      "source": "examples/domain-validation/fixtures/expression-independence-unknown.json",
+      "source_sha256": "6e241a8be0f662ae04ed598f4ef26abf04c74b12fbe37b3d2ec89a01fab0fe45",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 730,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-invalid-row.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-invalid-row.json",
+      "role": "fictional-domain-example",
+      "sha256": "364f8b76379d08c4f610c47a43de5e471e9baccc5dc0e2d70a4ffbefc886d98b",
+      "source": "examples/domain-validation/fixtures/expression-invalid-row.json",
+      "source_sha256": "364f8b76379d08c4f610c47a43de5e471e9baccc5dc0e2d70a4ffbefc886d98b",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 815,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-mean-of-ratios.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-mean-of-ratios.json",
+      "role": "fictional-domain-example",
+      "sha256": "5f442a5d188daa04a2d54f721236f459596e22581bb8751f0e935fcfe88500be",
+      "source": "examples/domain-validation/fixtures/expression-mean-of-ratios.json",
+      "source_sha256": "5f442a5d188daa04a2d54f721236f459596e22581bb8751f0e935fcfe88500be",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 799,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-missing-basal-declared.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-missing-basal-declared.json",
+      "role": "fictional-domain-example",
+      "sha256": "2d49efb21972a47a47b5af5f0c61d9c37089f62e442f33a8e06487acd8d58308",
+      "source": "examples/domain-validation/fixtures/expression-missing-basal-declared.json",
+      "source_sha256": "2d49efb21972a47a47b5af5f0c61d9c37089f62e442f33a8e06487acd8d58308",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 682,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-missing-basal.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-missing-basal.json",
+      "role": "fictional-domain-example",
+      "sha256": "0624d386495cf81b3091d7e26dbc36376a1e6969b32dfb57fc36b58c555369fd",
+      "source": "examples/domain-validation/fixtures/expression-missing-basal.json",
+      "source_sha256": "0624d386495cf81b3091d7e26dbc36376a1e6969b32dfb57fc36b58c555369fd",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 701,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-nonpositive-basal.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-nonpositive-basal.json",
+      "role": "fictional-domain-example",
+      "sha256": "43180a9b346c36fc4ca3f2d50e8e0e4c4a85756a01ef4c8c9c95e1c5959a31f4",
+      "source": "examples/domain-validation/fixtures/expression-nonpositive-basal.json",
+      "source_sha256": "43180a9b346c36fc4ca3f2d50e8e0e4c4a85756a01ef4c8c9c95e1c5959a31f4",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 817,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/expression-normal.json",
+      "public_path": "core/examples/domain-validation/fixtures/expression-normal.json",
+      "role": "fictional-domain-example",
+      "sha256": "c2cd47885164524b214daf3cd3f74e3e21426a18b46b51717c32b8b368cf5e2d",
+      "source": "examples/domain-validation/fixtures/expression-normal.json",
+      "source_sha256": "c2cd47885164524b214daf3cd3f74e3e21426a18b46b51717c32b8b368cf5e2d",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 356,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/novelty-error-invalid-letter.json",
+      "public_path": "core/examples/domain-validation/fixtures/novelty-error-invalid-letter.json",
+      "role": "fictional-domain-example",
+      "sha256": "642d0dd79a6c4d5a839ea9710821805ca66d31e9de8cd1020048c1616bc632dc",
+      "source": "examples/domain-validation/fixtures/novelty-error-invalid-letter.json",
+      "source_sha256": "642d0dd79a6c4d5a839ea9710821805ca66d31e9de8cd1020048c1616bc632dc",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 298,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/novelty-missing-empty-pool.json",
+      "public_path": "core/examples/domain-validation/fixtures/novelty-missing-empty-pool.json",
+      "role": "fictional-domain-example",
+      "sha256": "3320bcf51b605a3261a5e4045e259069af943ea3db70c6cd3a034318824a899e",
+      "source": "examples/domain-validation/fixtures/novelty-missing-empty-pool.json",
+      "source_sha256": "3320bcf51b605a3261a5e4045e259069af943ea3db70c6cd3a034318824a899e",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 412,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/novelty-normal.json",
+      "public_path": "core/examples/domain-validation/fixtures/novelty-normal.json",
+      "role": "fictional-domain-example",
+      "sha256": "7b7fb905b1f87ae47599e43981b0ce335b3efcc55ea792461786733f0564e913",
+      "source": "examples/domain-validation/fixtures/novelty-normal.json",
+      "source_sha256": "7b7fb905b1f87ae47599e43981b0ce335b3efcc55ea792461786733f0564e913",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 394,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/novelty-template-alternative.json",
+      "public_path": "core/examples/domain-validation/fixtures/novelty-template-alternative.json",
+      "role": "fictional-domain-example",
+      "sha256": "9d0a23338af77a28555c4028a5835795cedf5df1b06e393c1ea0368d447eb769",
+      "source": "examples/domain-validation/fixtures/novelty-template-alternative.json",
+      "source_sha256": "9d0a23338af77a28555c4028a5835795cedf5df1b06e393c1ea0368d447eb769",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1182,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-error-subset-denominator.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-error-subset-denominator.json",
+      "role": "fictional-domain-example",
+      "sha256": "0a1149f116d02dde3df2f40b38f82af3c9d3a327dffa403a9f0278a340fc6c08",
+      "source": "examples/domain-validation/fixtures/structure-error-subset-denominator.json",
+      "source_sha256": "0a1149f116d02dde3df2f40b38f82af3c9d3a327dffa403a9f0278a340fc6c08",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 987,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-missing-unit.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-missing-unit.json",
+      "role": "fictional-domain-example",
+      "sha256": "f19210c4e53e4605506ab2d674b5a41837e8ff6096d68ed3eeec9574d8f38918",
+      "source": "examples/domain-validation/fixtures/structure-missing-unit.json",
+      "source_sha256": "f19210c4e53e4605506ab2d674b5a41837e8ff6096d68ed3eeec9574d8f38918",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1109,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-no-retained.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-no-retained.json",
+      "role": "fictional-domain-example",
+      "sha256": "4a2ba85a2d8646d728dea3ce48881f47dc5e46e6130d2f5f8febcb303710ec7a",
+      "source": "examples/domain-validation/fixtures/structure-no-retained.json",
+      "source_sha256": "4a2ba85a2d8646d728dea3ce48881f47dc5e46e6130d2f5f8febcb303710ec7a",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1298,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-normal.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-normal.json",
+      "role": "fictional-domain-example",
+      "sha256": "b5ab3cf21bb469045d8c7318aac0b5d25f62ab0da36126685e4b62af43c26c43",
+      "source": "examples/domain-validation/fixtures/structure-normal.json",
+      "source_sha256": "b5ab3cf21bb469045d8c7318aac0b5d25f62ab0da36126685e4b62af43c26c43",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1131,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-reported-counts.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-reported-counts.json",
+      "role": "fictional-domain-example",
+      "sha256": "30f9075cb8c9233d7fbb28bc9ebb595951395354b07505c37c31f5cd9be69f73",
+      "source": "examples/domain-validation/fixtures/structure-reported-counts.json",
+      "source_sha256": "30f9075cb8c9233d7fbb28bc9ebb595951395354b07505c37c31f5cd9be69f73",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1283,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-threshold-alternative.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-threshold-alternative.json",
+      "role": "fictional-domain-example",
+      "sha256": "0d4f3834a81d201f6d3552d0730eacac8928a81601e9c408a06e044c9c0c2a33",
+      "source": "examples/domain-validation/fixtures/structure-threshold-alternative.json",
+      "source_sha256": "0d4f3834a81d201f6d3552d0730eacac8928a81601e9c408a06e044c9c0c2a33",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1060,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/fixtures/structure-undefined-declared-rate.json",
+      "public_path": "core/examples/domain-validation/fixtures/structure-undefined-declared-rate.json",
+      "role": "fictional-domain-example",
+      "sha256": "aa379580cb35936ddb072c40296fdeca558d2a6b91e71e6a681161571f348a3c",
+      "source": "examples/domain-validation/fixtures/structure-undefined-declared-rate.json",
+      "source_sha256": "aa379580cb35936ddb072c40296fdeca558d2a6b91e71e6a681161571f348a3c",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 10409,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/nearest_reference.py",
+      "public_path": "core/examples/domain-validation/nearest_reference.py",
+      "role": "fictional-domain-example",
+      "sha256": "5487f6a240c1034eda376adb186b7248bcf16062ff13ee06c18b8ee2feecf7f0",
+      "source": "examples/domain-validation/nearest_reference.py",
+      "source_sha256": "5487f6a240c1034eda376adb186b7248bcf16062ff13ee06c18b8ee2feecf7f0",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 18192,
+      "license": "Apache-2.0",
+      "path": "examples/domain-validation/structural_cohort.py",
+      "public_path": "core/examples/domain-validation/structural_cohort.py",
+      "role": "fictional-domain-example",
+      "sha256": "c47b7a46a95a9ae153107c2f0ace1ad5522d313e436c3d327dd7e7b90e828f7c",
+      "source": "examples/domain-validation/structural_cohort.py",
+      "source_sha256": "c47b7a46a95a9ae153107c2f0ace1ad5522d313e436c3d327dd7e7b90e828f7c",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1460,
+      "license": "CC-BY-4.0",
+      "path": "examples/research-support/README.md",
+      "public_path": "core/examples/research-support/README.md",
+      "role": "fictional-example",
+      "sha256": "7c3c6617a824206dbb1552648e2864a6ac2cb34847c815284449555ecb900791",
+      "source": "examples/research-support/README.md",
+      "source_sha256": "8e5516b0f8c17d029af0df313705ce27095d603a138d732d4d7e64858c9c8e6c",
+      "transform": "verbatim",
+      "transform_details": {
+        "changed": true,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 1,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 163,
+      "license": "Apache-2.0",
+      "path": "examples/research-support/diagnostic-matrix.tsv",
+      "public_path": "core/examples/research-support/diagnostic-matrix.tsv",
+      "role": "fictional-example",
+      "sha256": "a97417b25a12b0c5e7d824da4635803873dfe96abd1592835c86a8d697e0abfc",
+      "source": "examples/research-support/diagnostic-matrix.tsv",
+      "source_sha256": "a97417b25a12b0c5e7d824da4635803873dfe96abd1592835c86a8d697e0abfc",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 704,
+      "license": "Apache-2.0",
+      "path": "examples/research-support/diagnostic-plan.json",
+      "public_path": "core/examples/research-support/diagnostic-plan.json",
+      "role": "fictional-example",
+      "sha256": "1d5863fc91990d43ebf917afa448119a69b644c402e5a795a425b6ff5d7feb6e",
+      "source": "examples/research-support/diagnostic-plan.json",
+      "source_sha256": "1d5863fc91990d43ebf917afa448119a69b644c402e5a795a425b6ff5d7feb6e",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 735,
+      "license": "Apache-2.0",
+      "path": "examples/research-support/evidence.json",
+      "public_path": "core/examples/research-support/evidence.json",
+      "role": "fictional-example",
+      "sha256": "fa1dbb45c027a98a6a3dfbdfd84482bcbcd8d7d788880f8f5fc2235da05d53e7",
+      "source": "examples/research-support/evidence.json",
+      "source_sha256": "fa1dbb45c027a98a6a3dfbdfd84482bcbcd8d7d788880f8f5fc2235da05d53e7",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 437,
+      "license": "Apache-2.0",
+      "path": "examples/research-support/handoff.json",
+      "public_path": "core/examples/research-support/handoff.json",
+      "role": "fictional-example",
+      "sha256": "36abcc14903f3e029b334ad61f97dbb379a3556590e03cfbc3a1ca40a90cd268",
+      "source": "examples/research-support/handoff.json",
+      "source_sha256": "36abcc14903f3e029b334ad61f97dbb379a3556590e03cfbc3a1ca40a90cd268",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 28,
+      "license": "Apache-2.0",
+      "path": "examples/research-support/measurements.tsv",
+      "public_path": "core/examples/research-support/measurements.tsv",
+      "role": "fictional-example",
+      "sha256": "f15f70f8052dfe528c646365e724ea9771ebe89690b6dc6b3fe103805a02f3af",
+      "source": "examples/research-support/measurements.tsv",
+      "source_sha256": "f15f70f8052dfe528c646365e724ea9771ebe89690b6dc6b3fe103805a02f3af",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 26766,
+      "license": "Apache-2.0",
+      "path": "examples/s4pred/describe_entities.py",
+      "public_path": "core/examples/s4pred/describe_entities.py",
+      "role": "metadata-parser",
+      "sha256": "171c915df36984b9140ccde0dda78758e906536d93c2db7f34535dba3e92f9e2",
+      "source": "examples/s4pred/describe_entities.py",
+      "source_sha256": "171c915df36984b9140ccde0dda78758e906536d93c2db7f34535dba3e92f9e2",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 2796,
+      "license": "Apache-2.0",
+      "path": "examples/verification/research-flow.json",
+      "public_path": "core/examples/verification/research-flow.json",
+      "role": "fictional-fixture",
+      "sha256": "17084b6f20f38ba5d7a4020cf3a737ac1ab796a19b6d943d814d7d67a968c5b8",
+      "source": "examples/verification/research-flow.json",
+      "source_sha256": "17084b6f20f38ba5d7a4020cf3a737ac1ab796a19b6d943d814d7d67a968c5b8",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 1043,
+      "license": "Apache-2.0",
+      "path": "examples/verification/research-handoff.json",
+      "public_path": "core/examples/verification/research-handoff.json",
+      "role": "fictional-fixture",
+      "sha256": "4e31388fcd4418c593b56bbd28389364d6b5694c2b5018db40b855e8639b2481",
+      "source": "examples/verification/research-handoff.json",
+      "source_sha256": "4e31388fcd4418c593b56bbd28389364d6b5694c2b5018db40b855e8639b2481",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 2560,
+      "license": "Apache-2.0",
+      "path": "examples/verification/research-relations.json",
+      "public_path": "core/examples/verification/research-relations.json",
+      "role": "fictional-fixture",
+      "sha256": "1c4a667f9d91b5ed1bfcc0f2d595088545b3838e85a421f583af1335332c3f1a",
+      "source": "examples/verification/research-relations.json",
+      "source_sha256": "1c4a667f9d91b5ed1bfcc0f2d595088545b3838e85a421f583af1335332c3f1a",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 3824,
+      "license": "Apache-2.0",
+      "path": "examples/verification/research-revision.json",
+      "public_path": "core/examples/verification/research-revision.json",
+      "role": "fictional-fixture",
+      "sha256": "0f620d01542980479f400c0f690d97a6b0891ca24d818ba4458f7ff56cf86c84",
+      "source": "examples/verification/research-revision.json",
+      "source_sha256": "0f620d01542980479f400c0f690d97a6b0891ca24d818ba4458f7ff56cf86c84",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 83,
+      "license": "CC-BY-4.0",
+      "path": "examples/verification/revision-fixtures/explanation.md",
+      "public_path": "core/examples/verification/revision-fixtures/explanation.md",
+      "role": "fictional-fixture",
+      "sha256": "969479107f40b30a3557816a82bd2e650463bc1a4bccd3963bfebb5a1f48350e",
+      "source": "examples/verification/revision-fixtures/explanation.md",
+      "source_sha256": "969479107f40b30a3557816a82bd2e650463bc1a4bccd3963bfebb5a1f48350e",
+      "transform": "verbatim",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 72,
+      "license": "Apache-2.0",
+      "path": "examples/verification/revision-fixtures/request.txt",
+      "public_path": "core/examples/verification/revision-fixtures/request.txt",
+      "role": "fictional-fixture",
+      "sha256": "f6a73516d5b058cca463689712a78a1f9c3979d488e9a1c3ff2ccff37e2fe1b0",
+      "source": "examples/verification/revision-fixtures/request.txt",
+      "source_sha256": "f6a73516d5b058cca463689712a78a1f9c3979d488e9a1c3ff2ccff37e2fe1b0",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 124,
+      "license": "CC-BY-4.0",
+      "path": "examples/verification/revision-guidance-fixtures/explanation.md",
+      "public_path": "core/examples/verification/revision-guidance-fixtures/explanation.md",
+      "role": "fictional-fixture",
+      "sha256": "0588314777b4f6e00eb698fe57a4e34324b835f49e9e0f50b665565401a37c9e",
+      "source": "examples/verification/revision-guidance-fixtures/explanation.md",
+      "source_sha256": "0588314777b4f6e00eb698fe57a4e34324b835f49e9e0f50b665565401a37c9e",
+      "transform": "verbatim",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 199,
+      "license": "CC-BY-4.0",
+      "path": "examples/verification/revision-guidance-fixtures/guidance.md",
+      "public_path": "core/examples/verification/revision-guidance-fixtures/guidance.md",
+      "role": "fictional-fixture",
+      "sha256": "76532df5a19a29b8b85835e5c43f877ba58b6d8f5fc4c596005a91321a6b953b",
+      "source": "examples/verification/revision-guidance-fixtures/guidance.md",
+      "source_sha256": "76532df5a19a29b8b85835e5c43f877ba58b6d8f5fc4c596005a91321a6b953b",
+      "transform": "verbatim",
+      "transform_details": {
+        "changed": false,
+        "images_converted_to_ordinary_links": 0,
+        "links_redirected_to_archive_pointers": 0,
+        "links_rewritten_to_package": 0,
+        "local_redactions": []
+      }
+    },
+    {
+      "bytes": 164,
+      "license": "Apache-2.0",
+      "path": "examples/verification/revision-guidance-fixtures/implementation.py",
+      "public_path": "core/examples/verification/revision-guidance-fixtures/implementation.py",
+      "role": "fictional-fixture",
+      "sha256": "fa53fa043be6cbb20e776f117b975a503006767e62fcaa141d8fce365729dbf4",
+      "source": "examples/verification/revision-guidance-fixtures/implementation.py",
+      "source_sha256": "fa53fa043be6cbb20e776f117b975a503006767e62fcaa141d8fce365729dbf4",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 75,
+      "license": "Apache-2.0",
+      "path": "examples/verification/revision-guidance-fixtures/receipt.json",
+      "public_path": "core/examples/verification/revision-guidance-fixtures/receipt.json",
+      "role": "fictional-fixture",
+      "sha256": "29e63aa46a5af604b1f599a1f3c1a2cd685839b08e9d1cdddabce9d2f1685a7c",
+      "source": "examples/verification/revision-guidance-fixtures/receipt.json",
+      "source_sha256": "29e63aa46a5af604b1f599a1f3c1a2cd685839b08e9d1cdddabce9d2f1685a7c",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 100,
+      "license": "Apache-2.0",
+      "path": "examples/verification/revision-guidance-fixtures/request.txt",
+      "public_path": "core/examples/verification/revision-guidance-fixtures/request.txt",
+      "role": "fictional-fixture",
+      "sha256": "b3b957aa690c087bf29f148aeb3ffebb20110ce49c427434d29798a506242246",
+      "source": "examples/verification/revision-guidance-fixtures/request.txt",
+      "source_sha256": "b3b957aa690c087bf29f148aeb3ffebb20110ce49c427434d29798a506242246",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 6565,
+      "license": "Apache-2.0",
+      "path": "examples/verification/revision-guidance.json",
+      "public_path": "core/examples/verification/revision-guidance.json",
+      "role": "fictional-fixture",
+      "sha256": "40047b001034a782ad2938170f1ab3dc6621d6068933405d7009b19a50b30430",
+      "source": "examples/verification/revision-guidance.json",
+      "source_sha256": "40047b001034a782ad2938170f1ab3dc6621d6068933405d7009b19a50b30430",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 46128,
+      "license": "CC-BY-4.0",
+      "path": "references.json",
+      "public_path": "core/references.json",
+      "role": "reference-data",
+      "sha256": "2ddec00fe84773b995b126874736553e262fbfb914bd465e2a002252bc1881e7",
+      "source": "docs/reviews/2026-10-release-preparation/bibliography/references.json",
+      "source_sha256": "2ddec00fe84773b995b126874736553e262fbfb914bd465e2a002252bc1881e7",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 649,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/__init__.py",
+      "public_path": "core/scripts/research_support/__init__.py",
+      "role": "code",
+      "sha256": "219f81ca5e41fca2237bafced609b18070874d760ba59c611c37bf143e21c2a2",
+      "source": "scripts/research_support/__init__.py",
+      "source_sha256": "219f81ca5e41fca2237bafced609b18070874d760ba59c611c37bf143e21c2a2",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 9430,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/_common.py",
+      "public_path": "core/scripts/research_support/_common.py",
+      "role": "code",
+      "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+      "source": "scripts/research_support/_common.py",
+      "source_sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 37548,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/artifact_interface.py",
+      "public_path": "core/scripts/research_support/artifact_interface.py",
+      "role": "code",
+      "sha256": "26dee22360e9d5219bd9e007fe2e2675c753fc039c699a3b790766c65b6b4a49",
+      "source": "scripts/research_support/artifact_interface.py",
+      "source_sha256": "26dee22360e9d5219bd9e007fe2e2675c753fc039c699a3b790766c65b6b4a49",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 34882,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/diagnostics.py",
+      "public_path": "core/scripts/research_support/diagnostics.py",
+      "role": "code",
+      "sha256": "1eb2a5f848b55aa23ee6ab267ff029cbd20534a1c5e3e04c152c8b634c7c7a37",
+      "source": "scripts/research_support/diagnostics.py",
+      "source_sha256": "1eb2a5f848b55aa23ee6ab267ff029cbd20534a1c5e3e04c152c8b634c7c7a37",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 40563,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/evidence.py",
+      "public_path": "core/scripts/research_support/evidence.py",
+      "role": "code",
+      "sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+      "source": "scripts/research_support/evidence.py",
+      "source_sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 29901,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/handoff.py",
+      "public_path": "core/scripts/research_support/handoff.py",
+      "role": "code",
+      "sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+      "source": "scripts/research_support/handoff.py",
+      "source_sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 28892,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/release.py",
+      "public_path": "core/scripts/research_support/release.py",
+      "role": "code",
+      "sha256": "a25523044f4975aef8b06102dfa5f0156d4a2cd926a2485ad37435b5151fc74f",
+      "source": "scripts/research_support/release.py",
+      "source_sha256": "a25523044f4975aef8b06102dfa5f0156d4a2cd926a2485ad37435b5151fc74f",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 28167,
+      "license": "Apache-2.0",
+      "path": "scripts/research_support/sequence_interface.py",
+      "public_path": "core/scripts/research_support/sequence_interface.py",
+      "role": "code",
+      "sha256": "e8dbcccfbd9796d3b7f3aaba0e177ddbd9ecfe491f593b88970f0d282baf2337",
+      "source": "scripts/research_support/sequence_interface.py",
+      "source_sha256": "e8dbcccfbd9796d3b7f3aaba0e177ddbd9ecfe491f593b88970f0d282baf2337",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 66761,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/check_research_flow.py",
+      "public_path": "core/scripts/verification/check_research_flow.py",
+      "role": "code",
+      "sha256": "cfebec2142238444800ff4acbfd34b9b90f6b8a75befdbe3d07f809208e104d3",
+      "source": "scripts/verification/check_research_flow.py",
+      "source_sha256": "cfebec2142238444800ff4acbfd34b9b90f6b8a75befdbe3d07f809208e104d3",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 30421,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/check_research_handoff.py",
+      "public_path": "core/scripts/verification/check_research_handoff.py",
+      "role": "code",
+      "sha256": "384d79b6fd4bd2533c326344b111eebdccb1ce2398074ff9c8cafd54083ffda6",
+      "source": "scripts/verification/check_research_handoff.py",
+      "source_sha256": "384d79b6fd4bd2533c326344b111eebdccb1ce2398074ff9c8cafd54083ffda6",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 49978,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/check_research_relations.py",
+      "public_path": "core/scripts/verification/check_research_relations.py",
+      "role": "code",
+      "sha256": "2d732da1bc33b9bb3e61d6d4e91ef1b248b2a32e057badd583237213ec0a81b1",
+      "source": "scripts/verification/check_research_relations.py",
+      "source_sha256": "2d732da1bc33b9bb3e61d6d4e91ef1b248b2a32e057badd583237213ec0a81b1",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 62834,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/check_research_revision.py",
+      "public_path": "core/scripts/verification/check_research_revision.py",
+      "role": "code",
+      "sha256": "6f4e5dd216b22e56d08e87fcde343218b3bd86f140fcf4372a4d304a36590b0c",
+      "source": "scripts/verification/check_research_revision.py",
+      "source_sha256": "6f4e5dd216b22e56d08e87fcde343218b3bd86f140fcf4372a4d304a36590b0c",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 74227,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/check_revision_guidance.py",
+      "public_path": "core/scripts/verification/check_revision_guidance.py",
+      "role": "code",
+      "sha256": "663cf78f068448260ff3d1d0fd87c2cd51649b0c316da72af08f267090def432",
+      "source": "scripts/verification/check_revision_guidance.py",
+      "source_sha256": "663cf78f068448260ff3d1d0fd87c2cd51649b0c316da72af08f267090def432",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 17703,
+      "license": "Apache-2.0",
+      "path": "scripts/verification/collect_artifact_evidence.py",
+      "public_path": "core/scripts/verification/collect_artifact_evidence.py",
+      "role": "code",
+      "sha256": "73deb692f80587490c0e0fa2dfc2942f4b7113050da30e4af4acdce0a4550fc0",
+      "source": "scripts/verification/collect_artifact_evidence.py",
+      "source_sha256": "73deb692f80587490c0e0fa2dfc2942f4b7113050da30e4af4acdce0a4550fc0",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 4089,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/portable_fixtures.py",
+      "public_path": "core/tests/research_support/portable_fixtures.py",
+      "role": "test",
+      "sha256": "671d7cb411c46e70cd31943e2efe822a63395318dfdc05eddad94ab7170de7d5",
+      "source": "tests/research_support/portable_fixtures.py",
+      "source_sha256": "671d7cb411c46e70cd31943e2efe822a63395318dfdc05eddad94ab7170de7d5",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 11837,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_artifact_interface.py",
+      "public_path": "core/tests/research_support/test_artifact_interface.py",
+      "role": "test",
+      "sha256": "35c81fafa4a2ada9fefdbf42ba13421af8336888095ce0622f20ff57f2afd10f",
+      "source": "tests/research_support/test_artifact_interface.py",
+      "source_sha256": "35c81fafa4a2ada9fefdbf42ba13421af8336888095ce0622f20ff57f2afd10f",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 8508,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_biological_units_example.py",
+      "public_path": "core/tests/research_support/test_biological_units_example.py",
+      "role": "test",
+      "sha256": "5530dd44487ed2226c001bdf142f028ad627a022db652a8b6909a714dc540c02",
+      "source": "tests/research_support/test_biological_units_example.py",
+      "source_sha256": "5530dd44487ed2226c001bdf142f028ad627a022db652a8b6909a714dc540c02",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 19115,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_diagnostics.py",
+      "public_path": "core/tests/research_support/test_diagnostics.py",
+      "role": "test",
+      "sha256": "4f69b4c880959a15d71aa6234cb0643ecdd2bdf95bbec2c8d89ae8826317aed9",
+      "source": "tests/research_support/test_diagnostics.py",
+      "source_sha256": "4f69b4c880959a15d71aa6234cb0643ecdd2bdf95bbec2c8d89ae8826317aed9",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 17040,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_evidence.py",
+      "public_path": "core/tests/research_support/test_evidence.py",
+      "role": "test",
+      "sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+      "source": "tests/research_support/test_evidence.py",
+      "source_sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 12738,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_handoff.py",
+      "public_path": "core/tests/research_support/test_handoff.py",
+      "role": "test",
+      "sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+      "source": "tests/research_support/test_handoff.py",
+      "source_sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 10480,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_release.py",
+      "public_path": "core/tests/research_support/test_release.py",
+      "role": "test",
+      "sha256": "0d0e90d08b6090573967dbb795319f65a21d3c00e89ca71c8c61f827938a743a",
+      "source": "tests/research_support/test_release.py",
+      "source_sha256": "0d0e90d08b6090573967dbb795319f65a21d3c00e89ca71c8c61f827938a743a",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 8856,
+      "license": "Apache-2.0",
+      "path": "tests/research_support/test_sequence_interface.py",
+      "public_path": "core/tests/research_support/test_sequence_interface.py",
+      "role": "test",
+      "sha256": "9b78bf87c41218d467e62334246ecd666c9bb3dca3af5201cb3800128ea31f54",
+      "source": "tests/research_support/test_sequence_interface.py",
+      "source_sha256": "9b78bf87c41218d467e62334246ecd666c9bb3dca3af5201cb3800128ea31f54",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 12585,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_artifact_evidence.py",
+      "public_path": "core/tests/verification/test_artifact_evidence.py",
+      "role": "test",
+      "sha256": "0ee386d12379092383c32750848230d66b3c3bcadddfc1385bf71f1d30e41291",
+      "source": "tests/verification/test_artifact_evidence.py",
+      "source_sha256": "0ee386d12379092383c32750848230d66b3c3bcadddfc1385bf71f1d30e41291",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 22239,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_research_flow.py",
+      "public_path": "core/tests/verification/test_research_flow.py",
+      "role": "test",
+      "sha256": "919aa22a8ae7ae445a1c7fcc24e7154c0709d4d2efd9e8aa76d95c288b13c4ac",
+      "source": "tests/verification/test_research_flow.py",
+      "source_sha256": "919aa22a8ae7ae445a1c7fcc24e7154c0709d4d2efd9e8aa76d95c288b13c4ac",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 15299,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_research_handoff.py",
+      "public_path": "core/tests/verification/test_research_handoff.py",
+      "role": "test",
+      "sha256": "b3a595c74b9fe82a2c4ae80b67d94bae724b9f449bafefcb0dca13ee14406653",
+      "source": "tests/verification/test_research_handoff.py",
+      "source_sha256": "b3a595c74b9fe82a2c4ae80b67d94bae724b9f449bafefcb0dca13ee14406653",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 26352,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_research_relations.py",
+      "public_path": "core/tests/verification/test_research_relations.py",
+      "role": "test",
+      "sha256": "dddd95316511ee15ce068b1ea7d272390b70a8a010d2b69f58dd9fd6aede9e2b",
+      "source": "tests/verification/test_research_relations.py",
+      "source_sha256": "dddd95316511ee15ce068b1ea7d272390b70a8a010d2b69f58dd9fd6aede9e2b",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 15298,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_research_revision.py",
+      "public_path": "core/tests/verification/test_research_revision.py",
+      "role": "test",
+      "sha256": "e00cded696b40bcaa4074eb52ab987165e42525c63c469d6e84657b9c082cab6",
+      "source": "tests/verification/test_research_revision.py",
+      "source_sha256": "e00cded696b40bcaa4074eb52ab987165e42525c63c469d6e84657b9c082cab6",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 27112,
+      "license": "Apache-2.0",
+      "path": "tests/verification/test_revision_guidance.py",
+      "public_path": "core/tests/verification/test_revision_guidance.py",
+      "role": "test",
+      "sha256": "93f02229c496e6d1f6601649b4e927108e54fb8e53ab211bb994ead4468f4fb4",
+      "source": "tests/verification/test_revision_guidance.py",
+      "source_sha256": "93f02229c496e6d1f6601649b4e927108e54fb8e53ab211bb994ead4468f4fb4",
+      "transform": "verbatim",
+      "transform_details": {}
+    },
+    {
+      "bytes": 5535,
+      "license": "Apache-2.0",
+      "path": "verify_release.py",
+      "public_path": "core/verify_release.py",
+      "role": "release-verifier",
+      "sha256": "7d19899ac2f9c85088103f7cd56a2d47b88c25408532b195d0d2de00b890de30",
+      "source": "package-templates/verify_release.py",
+      "source_sha256": "7d19899ac2f9c85088103f7cd56a2d47b88c25408532b195d0d2de00b890de30",
+      "transform": "template-version-substitution",
+      "transform_details": {}
+    },
+    {
+      "bytes": null,
+      "license": "Apache-2.0",
+      "path": "RELEASE-MANIFEST.json",
+      "public_path": "core/RELEASE-MANIFEST.json",
+      "role": "release-manifest",
+      "self_hashed": false,
+      "sha256": null,
+      "source": "generated:scripts/release/build_release.py",
+      "source_sha256": null,
+      "transform": "generated-manifest; self hash intentionally omitted",
+      "transform_details": {
+        "self_hashed": false
+      }
+    }
+  ],
+  "history_milestones": [
+    {
+      "conclusion": "项目需要明确的研究契约和案例边界。",
+      "date": "2026-10-02",
+      "design_effect": "建立 Harness 设计、研究流程、案例记录和检查脚本。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-02; docs/history/case-analysis.md",
+      "source_commit": "c503b24781606dd9e6acfff54b23658d2c1f2acb"
+    },
+    {
+      "conclusion": "首轮五个模型案例可以映射到共同对象，但领域步骤和交接检查过于概括。",
+      "date": "2026-10-12",
+      "design_effect": "增加方法卡、交接契约和独立材料边界。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-12; docs/history/case-analysis.md",
+      "source_commit": "28db95c"
+    },
+    {
+      "conclusion": "第二轮案例需要可独立引用的证据和有条件的方法观察。",
+      "date": "2026-10-13",
+      "design_effect": "增加定制步骤和引用账本，并保留早期基线与统计口径。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-13; docs/history/case-analysis.md",
+      "source_commit": "bf5cfad -> 8d3f2df"
+    },
+    {
+      "conclusion": "领域特例不能直接变成全局要求，声明的关系也不是运行证据。",
+      "date": "2026-10-14",
+      "design_effect": "引入条件指导、research-relations 契约，以及正常/错误/unknown/合法替代见证。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-14; docs/history/case-analysis.md",
+      "source_commit": "01dfc22"
+    },
+    {
+      "conclusion": "二十个案例反复表明，阶段选择、信息用途、消费证据和义务单位决定了指导能否落地。",
+      "date": "2026-10-14/15",
+      "design_effect": "形成 D27-D32 关系与指导层，并把真实 CPU 工作单独登记为一条流程。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-14/15; docs/history/case-analysis.md",
+      "source_commit": "35612c1"
+    },
+    {
+      "conclusion": "论文报告指导与回顾性评审/修订证据被混在了一起。",
+      "date": "2026-10-16",
+      "design_effect": "将稿件版本/评审 concern 对照与论文指导分开，并增加 D35-D38 验收记录。",
+      "private_source_locator": "CHANGELOG.md rows 2026-10-16; docs/history/case-analysis.md",
+      "source_commit": "35612c1"
+    },
+    {
+      "conclusion": "一次真实修订指导使用暴露出术语超出了实际取得的材料。",
+      "date": "2026-10-17",
+      "design_effect": "保留冻结版和首稿，修正 D39，并区分来源措辞、置信覆盖、后验概率和 unknown。",
+      "private_source_locator": "CHANGELOG.md row 2026-10-17; docs/history/case-analysis.md",
+      "source_commit": "8924eb0"
+    },
+    {
+      "conclusion": "交接评分、路线归属、来源身份和领域验证条件需要明确的操作锚点。",
+      "date": "2026-10-18",
+      "design_effect": "增加 D40-D44 操作交接和条件领域验证指导，同时保留早期快照与评分。",
+      "private_source_locator": "CHANGELOG.md rows 2026-10-18; docs/history/case-analysis.md",
+      "source_commit": "5ffce37; df8e640"
+    },
+    {
+      "conclusion": "真实工件消费和工具指导暴露出生产者身份、完整回合、证据覆盖和对象级交接的需要。",
+      "date": "2026-10-19",
+      "design_effect": "增加 D45-D46 操作支持、工件生产者/消费者接口、生物学交接指导和有界 Proto 指导。",
+      "private_source_locator": "CHANGELOG.md rows 2026-10-19; docs/history/case-analysis.md",
+      "source_commit": "c83fac4"
+    },
+    {
+      "conclusion": "公开 alpha 需要范围明确的研究原型、小型真实工件边界，以及证据与未来应用之间的明确区分。",
+      "date": "2026-10-20",
+      "design_effect": "记录 D47-D49 操作复用和研究面观察，形成公开 alpha 准备决定，不改变旧案例评分。",
+      "private_source_locator": "CHANGELOG.md rows 2026-10-20; docs/history/case-analysis.md",
+      "source_commit": "5c365b7"
+    },
+    {
+      "conclusion": "150 成员的 core alpha 已按明确范围和逐文件权利接受，完整研究档案仍保持私有。",
+      "date": "2026-10-21",
+      "design_effect": "为候选第二个提交提供冻结字节级 core；不把私有研究历史转成公开证据。",
+      "private_source_locator": "dist/bioinformatics-harness-0.1.0-alpha.1.zip; docs/reviews/2026-10-release-preparation/acceptance.json",
+      "source_commit": "accepted archive origin: a3dac424d2b6c6295f976c9eeba09bb05353c15c+working-tree-dirty"
+    }
+  ],
+  "publication_note": {
+    "changed_source_fields": 7,
+    "normalization": "Replace seven workstation-specific generated-source prefixes with repository-relative generator locators; other identity fields retain their original historical values.",
+    "original_index_sha256": "bb3bde9e0a2d0e5cfd83388db6bf6bff2a187ef72229929134a4864782d6b9d0",
+    "scope": "Historical alpha.1 preparation source index; not the current inventory. Unpublished preparation commits remain private."
+  },
+  "schema": "bioinformatics-harness-public-history-source-index/v1",
+  "source_policy": {
+    "accepted_core_source": {
+      "archive": "dist/bioinformatics-harness-0.1.0-alpha.1.zip",
+      "archive_bytes": 520185,
+      "archive_sha256": "052052df7b388cbec383908e0ed0075d8c5d084d7f124abcb8e5c00e9f6a9251",
+      "manifest_schema": "bioinformatics-harness-release-manifest/v1",
+      "manifest_source_revision": {
+        "head": "a3dac424d2b6c6295f976c9eeba09bb05353c15c",
+        "label": "a3dac424d2b6c6295f976c9eeba09bb05353c15c+working-tree-dirty",
+        "status_count": 3477,
+        "status_digest": "24ef62ebd064d496917f701a748162c386d746c42a9c15edcf52b3694fd052db",
+        "working_tree_dirty": true
+      },
+      "source_revision_note": "The dirty working-tree suffix is archive provenance, not a precise source commit."
+    },
+    "excluded": [
+      "private case-analysis files and original research archive",
+      "original conversations and session logs",
+      "unknown GEO rows and raw scientific inputs",
+      "trained weights and upstream implementation snapshots",
+      "the private source Git history"
+    ],
+    "history_sources": [
+      {
+        "path": "CHANGELOG.md",
+        "role": "dated change summaries and private commit locators"
+      },
+      {
+        "path": "docs/history/case-analysis.md",
+        "role": "case lineage, limitations, and reasons for D-series changes"
+      }
+    ]
+  }
+}

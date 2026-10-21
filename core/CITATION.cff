@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite this version and the original scientific works relevant to your study."
+type: software
+title: "BioInformaticsHarness: guidance and evidence tools for biological model research"
+version: 0.1.0-alpha.2
+date-released: "2026-10-22"
+authors:
+  - name: "BioInformaticsHarness contributors"
+repository-code: "https://github.com/vvcchh0/BioInformaticsHarness"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+abstract: >-
+  A research prototype checkpoint with conditional method guidance, artifact
+  and handoff tools, first-plan sealing, pre-execution code capture, and
+  CPU examples that consume saved states on open UCI data. Code, prose,
+  data, and trained parameter artifacts have explicit separate scopes
+  described in LICENSING.md. Full private research archives are not distributed.
+keywords:
+  - bioinformatics
+  - research methodology
+  - reproducibility
+  - research software
+  - provenance

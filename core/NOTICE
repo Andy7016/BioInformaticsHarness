@@ -1,0 +1,20 @@
+BioInformaticsHarness
+Copyright 2026 BioInformaticsHarness contributors.
+Maintainer: vvcchh0.
+
+Project-owned source code, tests, machine-readable templates and fictional
+demonstration fixtures are licensed under Apache-2.0. Project-owned prose and
+explanatory figures are licensed under CC-BY-4.0. See LICENSING.md and the
+release's per-file RELEASE-MANIFEST.json for scope and exceptions.
+
+The curated core release contains no third-party model code, trained weights,
+author measurement tables, biological sequence collections or article full text.
+Referenced works and separately acquired resources retain their own rights.
+References to tools, institutions and model names do not imply endorsement.
+
+The full research archive is broader than the curated release. Historical
+Optimus notebook code excerpts retain their upstream GNU GPL version 3 license;
+the stated FoldingDiff adaptation retains its MIT notice. See
+THIRD_PARTY_ARCHIVE.md for exact paths, source identities, and license scope.
+Some project-generated SVG figures embed DejaVu font outlines. Their upstream
+copyright and permission notices are retained in LICENSES/DejaVu-fonts.txt.

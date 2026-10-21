@@ -1,0 +1,10 @@
+unit_id	candidate_id	value
+u1	base	1
+u2	base	2.3
+u3	base	2.7
+u1	alternative	1.1
+u2	alternative	2
+u3	alternative	2.5
+u1	alias	1
+u2	alias	2.3
+u3	alias	2.7

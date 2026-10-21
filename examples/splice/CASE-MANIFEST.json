@@ -1,0 +1,224 @@
+{
+  "accepted_full_study": {
+    "acceptance_path": "docs/pilots/2026-10-public-applications/assessment/acceptance.json",
+    "claim_scope": "Fixed aligned historical splice-window classification; wider aligned context adds predictive association over the center-only representation.",
+    "metrics": {
+      "center_only_macro_f1": 0.881949,
+      "full_minus_center_macro_f1": 0.046461,
+      "oof_predictions_recomputed": 25520,
+      "primary_accuracy": 0.935423197492163,
+      "primary_macro_f1": 0.9284106993837771,
+      "rows": 3190
+    },
+    "summary_path": "docs/pilots/2026-10-public-applications/assessment/synthesis.zh.md",
+    "this_example": "One saved full-context model and 12 of its own fold-0 held-out OOF examples; the 12 rows are interface checks, not a performance estimate.",
+    "training_replayed_for_this_release": false
+  },
+  "artifacts": [
+    {
+      "license": "CC-BY-4.0",
+      "path": "README.md",
+      "published": {
+        "bytes": 4851,
+        "path": "splice/README.md",
+        "sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24"
+      },
+      "source": [
+        {
+          "bytes": 4851,
+          "path": "docs/reviews/2026-10-checkpoint-publication/studies/splice/README.md",
+          "sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24"
+        }
+      ],
+      "transformation": "Identity copy of newly authored study explanation and attribution."
+    },
+    {
+      "license": "Apache-2.0",
+      "path": "consume_saved_model.py",
+      "published": {
+        "bytes": 12367,
+        "path": "splice/consume_saved_model.py",
+        "sha256": "433217c7e416ed6a5d6155db2bcefdf7309df34c2f0869d95456308a405f6310"
+      },
+      "source": [
+        {
+          "bytes": 12367,
+          "path": "docs/reviews/2026-10-checkpoint-publication/studies/splice/consume_saved_model.py",
+          "sha256": "433217c7e416ed6a5d6155db2bcefdf7309df34c2f0869d95456308a405f6310"
+        }
+      ],
+      "transformation": "Identity copy of newly authored, fit-free saved-model reader."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/dataset.zip",
+      "published": {
+        "bytes": 167041,
+        "path": "splice/data/dataset.zip",
+        "sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e"
+      },
+      "source": [
+        {
+          "bytes": 167041,
+          "path": "references/pilots/2026-10-public-applications/packages/splice/inputs/dataset.zip",
+          "sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of the official UCI ZIP; original archive members are retained."
+    },
+    {
+      "license": "Apache-2.0",
+      "path": "model/combined-full-fold0.joblib",
+      "published": {
+        "bytes": 7480,
+        "path": "splice/model/combined-full-fold0.joblib",
+        "sha256": "388043c062a0918dacea15d7264d74a3ae05ab563c72d1d8b1929fb991eeeb95"
+      },
+      "source": [
+        {
+          "bytes": 7480,
+          "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/models/combined__full__fold0.joblib",
+          "sha256": "388043c062a0918dacea15d7264d74a3ae05ab563c72d1d8b1929fb991eeeb95"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of one already-trained first-party LogisticRegression state; its small aggregate fit counts are described and attributed in the README; no row identifiers or feature rows are embedded and no refit occurs."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/oof-expected.csv",
+      "published": {
+        "bytes": 1995,
+        "path": "splice/data/oof-expected.csv",
+        "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+      },
+      "source": [
+        {
+          "bytes": 1995,
+          "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/predictions.csv",
+          "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of the accepted 12-row fold-0 OOF prediction subset; contains UCI-derived truth labels."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/oof-input.csv",
+      "published": {
+        "bytes": 1684,
+        "path": "splice/data/oof-input.csv",
+        "sha256": "5dbb41865f820b540ab363de49c656d1eb85cf836064b0754f46a887d9f4aefd"
+      },
+      "source": [
+        {
+          "bytes": 167041,
+          "path": "references/pilots/2026-10-public-applications/packages/splice/inputs/dataset.zip",
+          "sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e"
+        },
+        {
+          "bytes": 1995,
+          "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/predictions.csv",
+          "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+        },
+        {
+          "bytes": 2310397,
+          "path": "docs/pilots/2026-10-public-applications/assessment/splice/new-root/results/main/model-index.json",
+          "sha256": "c1b67b92f3a5847b381322605e5bde35f4fbd5dbe3a15b89f2b5cfe3f3e973d3"
+        }
+      ],
+      "transformation": "Extract the 12 preselected fold-0 held-out row IDs from the byte-verified official ZIP; write original 60-nt sequences and true labels after matching each sequence SHA and label to the selected OOF table. Selection was fixed upstream as four ascending row IDs per class, without score-based selection."
+    }
+  ],
+  "case_id": "splice",
+  "dataset": {
+    "archive_path": "data/dataset.zip",
+    "archive_sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e",
+    "attribution": {
+      "archive_donors": [
+        "G. Towell",
+        "M. Noordewier",
+        "J. Shavlik"
+      ],
+      "changes": "Unmodified ZIP redistributed. The example includes a 12-row selected input slice and associated truth/prediction table; row selection and model predictions were added by the project.",
+      "doi": "10.24432/C5M888",
+      "download_url": "https://archive.ics.uci.edu/static/public/69/molecular%2Bbiology%2Bsplice-junction-gene-sequences.zip",
+      "page_creators": [],
+      "title": "Molecular Biology (Splice-junction Gene Sequences)",
+      "url": "https://archive.ics.uci.edu/dataset/69/molecular-biology-splice-junction-gene-sequences"
+    },
+    "doi": "10.24432/C5M888",
+    "license": "CC-BY-4.0",
+    "license_evidence": {
+      "path": "docs/reviews/2026-10-checkpoint-publication/rights/uci-license-observation.json",
+      "sha256": "792025da275a0fe3b382bd1f0e010df73a54c2fa527c8862d24a19fe02334909"
+    },
+    "title": "Molecular Biology (Splice-junction Gene Sequences)"
+  },
+  "expected_oof": {
+    "license": "CC-BY-4.0",
+    "path": "data/oof-expected.csv",
+    "rows": 12,
+    "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837",
+    "source": {
+      "bytes": 1995,
+      "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/predictions.csv",
+      "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+    }
+  },
+  "input": {
+    "license": "CC-BY-4.0",
+    "path": "data/oof-input.csv",
+    "rows": 12,
+    "sha256": "5dbb41865f820b540ab363de49c656d1eb85cf836064b0754f46a887d9f4aefd",
+    "source": [
+      {
+        "bytes": 167041,
+        "path": "references/pilots/2026-10-public-applications/packages/splice/inputs/dataset.zip",
+        "sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e"
+      },
+      {
+        "bytes": 1995,
+        "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/predictions.csv",
+        "sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+      },
+      {
+        "bytes": 2310397,
+        "path": "docs/pilots/2026-10-public-applications/assessment/splice/new-root/results/main/model-index.json",
+        "sha256": "c1b67b92f3a5847b381322605e5bde35f4fbd5dbe3a15b89f2b5cfe3f3e973d3"
+      }
+    ],
+    "source_oof_table_sha256": "81f542e2b8e9b7be8c7734b71d7e409ca03b85c04a453347a09197f76c479837"
+  },
+  "schema": "public-checkpoint.study-case.v1",
+  "state": {
+    "embedded_source_data": {
+      "feature_rows_included": false,
+      "fit_label_counts": {
+        "EI": 613,
+        "IE": 614,
+        "N": 1324
+      },
+      "kind": "aggregate training metadata described and attributed in the README",
+      "record_identifiers_included": false,
+      "source_dataset_doi": "10.24432/C5M888",
+      "test_n": 639,
+      "train_n": 2551
+    },
+    "fold": 0,
+    "kind": "one already-trained first-party scikit-learn LogisticRegression parameter state",
+    "license": "Apache-2.0",
+    "method": "full",
+    "path": "model/combined-full-fold0.joblib",
+    "privacy_scan": {
+      "scan": "raw payload plus recursively inspected serialized Python metadata",
+      "status": "no_absolute_path_or_session_id_patterns_detected"
+    },
+    "protocol": "combined",
+    "refit_for_release": false,
+    "sha256": "388043c062a0918dacea15d7264d74a3ae05ab563c72d1d8b1929fb991eeeb95",
+    "source": {
+      "bytes": 7480,
+      "path": "docs/pilots/2026-10-public-applications/assessment/splice/replay-r02/combined-full-fold0/run/models/combined__full__fold0.joblib",
+      "sha256": "388043c062a0918dacea15d7264d74a3ae05ab563c72d1d8b1929fb991eeeb95"
+    }
+  }
+}

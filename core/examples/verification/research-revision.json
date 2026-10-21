@@ -1,0 +1,122 @@
+{
+  "schema_version": "research-revision-v1",
+  "id": "revision-example",
+  "sources": [
+    {
+      "id": "source-request",
+      "path": "revision-fixtures/request.txt",
+      "sha256": "f6a73516d5b058cca463689712a78a1f9c3979d488e9a1c3ff2ccff37e2fe1b0",
+      "source_layer": "user_request",
+      "locator": "fixture line 1"
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-explain",
+      "text": "Explain the observed result and retain its stated limitation.",
+      "source_ids": ["source-request"],
+      "required": true
+    },
+    {
+      "id": "req-reanalyze",
+      "text": "Reanalyze the result if the explanation route is not selected.",
+      "source_ids": ["source-request"],
+      "required": true
+    }
+  ],
+  "response_groups": [
+    {
+      "id": "route-choice",
+      "alternatives": [
+        {"id": "explain", "request_ids": ["req-explain"]},
+        {"id": "reanalyze", "request_ids": ["req-reanalyze"]}
+      ],
+      "selected_alternative": "explain",
+      "reason": "The bounded explanation route is sufficient for this fictional example."
+    }
+  ],
+  "decisions": [
+    {
+      "request_id": "req-explain",
+      "route": "retain_limitation",
+      "reason": "The route records the explanation and keeps the unresolved limitation visible.",
+      "task_ids": ["task-explain"],
+      "unresolved": ["The explanation is not a scientific reanalysis."]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-explain",
+      "request_ids": ["req-explain"],
+      "input_uses": [
+        {"source_id": "source-request", "use": "read the bounded request context"}
+      ],
+      "artifact_ids": ["artifact-explanation"],
+      "status": "completed"
+    },
+    {
+      "id": "task-reanalyze-planned",
+      "request_ids": ["req-reanalyze"],
+      "input_uses": [],
+      "artifact_ids": [],
+      "status": "planned"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact-explanation",
+      "path": "revision-fixtures/explanation.md",
+      "sha256": "969479107f40b30a3557816a82bd2e650463bc1a4bccd3963bfebb5a1f48350e",
+      "kind": "bounded explanation text"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim-bounded",
+      "text": "The example records an explanation with a retained limitation.",
+      "request_ids": ["req-explain"],
+      "source_ids": ["source-request"],
+      "artifact_ids": ["artifact-explanation"],
+      "limits": ["This record does not establish scientific correctness."]
+    }
+  ],
+  "measurement_links": {
+    "applicable": false,
+    "reason": "The fictional explanation has no disputed measurement or proxy relation.",
+    "items": []
+  },
+  "acceptance_checks": [
+    {
+      "id": "check-record",
+      "request_ids": ["req-explain"],
+      "scope": "record_contract",
+      "mode": "automated",
+      "predicate": "All selected requests have closed decisions and completed task chains.",
+      "artifact_ids": [],
+      "implementation_id": "revision-records-v1"
+    },
+    {
+      "id": "check-artifact",
+      "request_ids": ["req-explain"],
+      "scope": "artifact_or_runtime",
+      "mode": "automated",
+      "predicate": "The declared explanation file has the recorded SHA-256.",
+      "artifact_ids": ["artifact-explanation"],
+      "implementation_id": "artifact-sha256-v1"
+    },
+    {
+      "id": "check-scientific-review",
+      "request_ids": ["req-explain"],
+      "scope": "scientific",
+      "mode": "manual",
+      "predicate": "A reviewer records whether the bounded explanation is scientifically acceptable.",
+      "artifact_ids": ["artifact-explanation"],
+      "manual_review": {
+        "reviewer": "fictional-reviewer",
+        "reported_result": "pass",
+        "review_artifact_id": "artifact-explanation",
+        "reason": "The fixture only demonstrates record handling; scientific acceptance remains outside the checker."
+      }
+    }
+  ]
+}

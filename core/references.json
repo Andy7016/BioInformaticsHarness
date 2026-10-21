@@ -1,0 +1,1330 @@
+{
+  "schema": "harness-release-bibliography.v1",
+  "as_of": "2026-10-21",
+  "scope": "Public citation catalog for the Harness core-alpha release preparation.",
+  "evidence_boundary": "Entries record locally available bibliographic metadata and the actual local reading scope. Metadata, candidate screening, a reference count, or a static case report is not treated as a new full-paper audit, a model run, or scientific acceptance.",
+  "network_policy": "No new paper download or online metadata refresh was performed for this catalog.",
+  "entries": [
+    {
+      "id": "optimus-2019",
+      "kind": "academic",
+      "category": "guided_reference",
+      "authors": [
+        "Paul J. Sample",
+        "Ban Wang",
+        "David W. Reid",
+        "Vlad Presnyak",
+        "Iain McFadyen",
+        "David R. Morris",
+        "Georg Seelig"
+      ],
+      "title": "Human 5' UTR design and variant effect prediction from a massively parallel translation assay",
+      "year": 2019,
+      "venue": "Nature Biotechnology",
+      "volume": "37",
+      "issue": "7",
+      "pages": "803-809",
+      "doi": "10.1038/s41587-019-0164-5",
+      "public_url": "https://doi.org/10.1038/s41587-019-0164-5",
+      "material_scope": "Local supplied author-manuscript XML and text; selected Results S2, S3, S5; Methods S19, S21, S37; Figures 1-3.",
+      "actual_reading_scope": "Selected local paper sections and figures listed above; no new full-article read or online metadata refresh by the citation compiler. The latest guided study actually trained the original three-layer CNN backbone as a modern CPU instance (260000 training rows, three epochs) and independently consumed its saved state; see EVIDENCE.zh.md. Original historical Keras numerical equivalence and the remaining paper experiments are separate scopes.",
+      "metadata_status": "complete_local_bibliography",
+      "source_ids": [
+        "corpus:optimus5prime",
+        "optimus:first-delivery-bibliography"
+      ]
+    },
+    {
+      "id": "gkm-svm-2014",
+      "kind": "academic",
+      "category": "guided_reference",
+      "authors": [
+        "Mikhail Ghandi",
+        "Dongwon Lee",
+        "Mehdi Mohammad-Noori",
+        "Michael A. Beer"
+      ],
+      "title": "Enhanced Regulatory Sequence Prediction Using Gapped k-mer Features",
+      "year": 2014,
+      "venue": "PLoS Computational Biology",
+      "volume": "10",
+      "issue": "7",
+      "pages": "e1003711",
+      "doi": "10.1371/journal.pcbi.1003711",
+      "public_url": "https://doi.org/10.1371/journal.pcbi.1003711",
+      "material_scope": "Local source ledger and guided-study notes.",
+      "actual_reading_scope": "Introduction; Results sections 2a-2c; Methods sections 4a-4c and 4h-4k; locally recorded findings and acceptance notes. Not every formula or supporting figure was independently checked by the citation compiler. The latest guided study uses the author native gapped-kernel/SVM implementation on all supplied 2500 positives and 2584 background sequences, new five folds, a fixed L10 comparison and controlled compatibility repairs; see EVIDENCE.zh.md. It is separate from the earlier small surrogate study and from exact historical or whole-paper reconstruction.",
+      "metadata_status": "complete_local_bibliography",
+      "source_ids": [
+        "corpus:gkm-svm",
+        "gkm:first-plan-sources",
+        "gkm:delivery-sources"
+      ]
+    },
+    {
+      "id": "gkm-svm-correction-2014",
+      "kind": "academic",
+      "category": "correction",
+      "authors": [
+        "The PLOS Computational Biology Staff"
+      ],
+      "title": "Correction: Enhanced Regulatory Sequence Prediction Using Gapped k-mer Features",
+      "year": 2014,
+      "venue": "PLoS Computational Biology",
+      "volume": "10",
+      "issue": "12",
+      "pages": "e1004035",
+      "doi": "10.1371/journal.pcbi.1004035",
+      "public_url": "https://doi.org/10.1371/journal.pcbi.1004035",
+      "material_scope": "Correction metadata and the reported figure/S5 issue.",
+      "actual_reading_scope": "Correction record only; it does not certify a full reread of the article or supporting information.",
+      "metadata_status": "complete_local_bibliography",
+      "source_ids": [
+        "gkm:first-plan-sources"
+      ]
+    },
+    {
+      "id": "s4pred-2021",
+      "kind": "academic",
+      "category": "guided_reference",
+      "authors": [
+        "Liam Moffat",
+        "David T. Jones"
+      ],
+      "title": "Increasing the accuracy of single sequence prediction methods using a deep semi-supervised learning framework",
+      "year": 2021,
+      "venue": "Bioinformatics",
+      "volume": "37",
+      "issue": "21",
+      "pages": "3744-3751",
+      "doi": "10.1093/bioinformatics/btab491",
+      "public_url": "https://doi.org/10.1093/bioinformatics/btab491",
+      "material_scope": "Local Europe PMC XML and supplementary package; published method, training/evaluation definitions, and the supplied real-weight CPU study.",
+      "actual_reading_scope": "Published paper materials available in the local pilot package. The CPU inference and structure panel use published weights and external labels; they are not retraining or a paper replication.",
+      "metadata_status": "complete_local_bibliography",
+      "source_ids": [
+        "corpus:s4pred",
+        "s4pred:published-weights-sources"
+      ]
+    },
+    {
+      "id": "dome-2021",
+      "kind": "academic",
+      "category": "validation_standard",
+      "authors": [
+        "Ian Walsh",
+        "Dmitry Fishman",
+        "David Garcia-Gasulla",
+        "Taneli Titma",
+        "Giorgio Pollastri",
+        "ELIXIR Machine Learning Focus Group",
+        "Janet Harrow",
+        "Fotis E. Psomopoulos",
+        "Silvio C. E. Tosatto"
+      ],
+      "title": "DOME: recommendations for supervised machine learning validation in biology",
+      "year": 2021,
+      "venue": "Nature Methods",
+      "volume": "18",
+      "issue": "10",
+      "pages": "1122-1127",
+      "doi": "10.1038/s41592-021-01205-4",
+      "public_url": "https://doi.org/10.1038/s41592-021-01205-4",
+      "material_scope": "Local README and Europe PMC metadata/design notes.",
+      "actual_reading_scope": "Identity, design, and limits were read from the local README/metadata. A registered full-text path was not reread as full text this round.",
+      "metadata_status": "complete_local_metadata; reading_partial",
+      "source_ids": [
+        "reference-map:l01-dome",
+        "literature:L01"
+      ]
+    },
+    {
+      "id": "reproducible-computational-research-2013",
+      "kind": "academic",
+      "category": "reproducibility",
+      "authors": [
+        "Geir Kjetil Sandve",
+        "Anton Nekrutenko",
+        "James Taylor",
+        "Eivind Hovig"
+      ],
+      "title": "Ten simple rules for reproducible computational research",
+      "year": 2013,
+      "venue": "PLoS Computational Biology",
+      "volume": "9",
+      "issue": "10",
+      "pages": "e1003285",
+      "doi": "10.1371/journal.pcbi.1003285",
+      "public_url": "https://doi.org/10.1371/journal.pcbi.1003285",
+      "material_scope": "Local README and Europe PMC metadata/design notes.",
+      "actual_reading_scope": "Bibliographic identity, design, and limits were read from local README/metadata; the registered full text was not reread as full text this round.",
+      "metadata_status": "complete_local_metadata; reading_partial",
+      "source_ids": [
+        "reference-map:l02-reproducible-computational-research",
+        "literature:L02"
+      ]
+    },
+    {
+      "id": "datasail-2025",
+      "kind": "academic",
+      "category": "leakage_control",
+      "authors": [
+        "Rosa Joeres",
+        "David B. Blumenthal",
+        "Olga V. Kalinina"
+      ],
+      "title": "Data splitting to avoid information leakage with DataSAIL",
+      "year": 2025,
+      "venue": "Nature Communications",
+      "volume": "16",
+      "issue": "1",
+      "pages": "3337",
+      "doi": "10.1038/s41467-025-58606-8",
+      "public_url": "https://doi.org/10.1038/s41467-025-58606-8",
+      "material_scope": "Local README and Europe PMC metadata/design notes.",
+      "actual_reading_scope": "Identity, design, and limits were read from the local README/metadata; the registered full text was not reread as full text this round.",
+      "metadata_status": "complete_local_metadata; reading_partial",
+      "source_ids": [
+        "reference-map:l05-datasail",
+        "literature:L05"
+      ]
+    },
+    {
+      "id": "datasail-addendum-2026",
+      "kind": "academic",
+      "category": "leakage_control",
+      "authors": [
+        "Rosa Joeres",
+        "David B. Blumenthal",
+        "Olga V. Kalinina"
+      ],
+      "title": "Addendum: Data splitting against information leakage with DataSAIL",
+      "year": 2026,
+      "venue": "Nature Communications",
+      "volume": "17",
+      "issue": "1",
+      "pages": "1597",
+      "doi": "10.1038/s41467-025-67495-w",
+      "public_url": "https://doi.org/10.1038/s41467-025-67495-w",
+      "material_scope": "Local addendum identity, version, and design metadata.",
+      "actual_reading_scope": "Addendum identity/design/version were read from local metadata; the registered full text was not reread as full text this round.",
+      "metadata_status": "complete_local_metadata; reading_partial",
+      "source_ids": [
+        "reference-map:l06-datasail-addendum",
+        "literature:L06"
+      ]
+    },
+    {
+      "id": "leakage-reproducibility-2023",
+      "kind": "academic",
+      "category": "leakage_control",
+      "authors": [
+        "Siddharth Kapoor",
+        "Arvind Narayanan"
+      ],
+      "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+      "year": 2023,
+      "venue": "Patterns",
+      "volume": "4",
+      "issue": "9",
+      "pages": "100804",
+      "doi": "10.1016/j.patter.2023.100804",
+      "public_url": "https://doi.org/10.1016/j.patter.2023.100804",
+      "material_scope": "Local README and Europe PMC metadata/design notes.",
+      "actual_reading_scope": "Identity, design, and limits were read from local README/metadata; the registered full text was not reread as full text this round.",
+      "metadata_status": "complete_local_metadata; reading_partial",
+      "source_ids": [
+        "reference-map:l07-leakage-reproducibility",
+        "literature:L07"
+      ]
+    },
+    {
+      "id": "ro-crate-2024",
+      "kind": "academic",
+      "category": "provenance",
+      "authors": [
+        "Silvio Leo et al."
+      ],
+      "title": "Recording provenance of workflow runs with RO-Crate",
+      "year": 2024,
+      "venue": "PLoS One",
+      "volume": "19",
+      "issue": "9",
+      "pages": "e0309210",
+      "doi": "10.1371/journal.pone.0309210",
+      "public_url": "https://doi.org/10.1371/journal.pone.0309210",
+      "material_scope": "Local README and Europe PMC metadata/design notes.",
+      "actual_reading_scope": "Identity, design, and limits were read from local README/metadata; the registered full text was not reread as full text this round. Author list remains partial in the local index.",
+      "metadata_status": "partial_authors; reading_partial",
+      "source_ids": [
+        "reference-map:l09-ro-crate",
+        "literature:L09"
+      ]
+    },
+    {
+      "id": "fair4rs-2022",
+      "kind": "academic",
+      "category": "public_readiness",
+      "authors": [
+        "Michelle Barker",
+        "Nicolas P. Chue Hong",
+        "Daniel S. Katz et al."
+      ],
+      "title": "Introducing the FAIR Principles for research software",
+      "year": 2022,
+      "venue": "Scientific Data",
+      "volume": "9",
+      "pages": "622",
+      "doi": "10.1038/s41597-022-01710-x",
+      "public_url": "https://www.nature.com/articles/s41597-022-01710-x",
+      "material_scope": "FAIR4RS principles and project-example framing used for public-readiness requirements.",
+      "actual_reading_scope": "F1.2, I1-I2, R1.1-R3 and project-example framing were read in the existing public-readiness source record. This entry does not certify a project or case against FAIR4RS.",
+      "metadata_status": "partial_authors; selected_principles_read",
+      "source_ids": [
+        "public-readiness:PUB-FAIR4RS"
+      ]
+    },
+    {
+      "id": "garnet-2024",
+      "kind": "academic",
+      "category": "D44_case",
+      "authors": [
+        "Yekaterina Shulgina",
+        "Marena I. Trinidad",
+        "Conner J. Langeberg",
+        "Hunter Nisonoff",
+        "Seyone Chithrananda",
+        "Petr Skopintsev",
+        "Amos J. Nissley",
+        "Jaymin Patel",
+        "Ron S. Boger",
+        "Honglue Shi",
+        "Peter H. Yoon",
+        "Erin E. Doherty",
+        "Tara Pande",
+        "Aditya M. Iyer",
+        "Jennifer A. Doudna",
+        "Jamie H. Cate"
+      ],
+      "title": "RNA language models predict mutations that improve RNA function",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": "15",
+      "pages": "10627",
+      "doi": "10.1038/s41467-024-54812-y",
+      "public_url": "https://doi.org/10.1038/s41467-024-54812-y",
+      "material_scope": "Published JATS and supplementary PDF used by the D44 case.",
+      "actual_reading_scope": "Front matter and abstract; body section headings; substantive paragraphs 5, 6, 17-21, 43-50; Figure 6 caption text only; supplementary text as recorded in the local reading log. Image pixels, remaining body/Methods/Discussion/References, and linked data/reviews were not read or visually inspected.",
+      "metadata_status": "complete_local_metadata; bounded_reading",
+      "source_ids": [
+        "corpus:garnet",
+        "D44:garnet-reading-log"
+      ]
+    },
+    {
+      "id": "deepseed-2023",
+      "kind": "academic",
+      "category": "D44_case",
+      "authors": [
+        "Pengcheng Zhang",
+        "Haochen Wang",
+        "Hanwen Xu",
+        "Lei Wei",
+        "Liyang Liu",
+        "Zhirui Hu",
+        "Xiaowo Wang"
+      ],
+      "title": "Deep flanking sequence engineering for efficient promoter design using DeepSEED",
+      "year": 2023,
+      "venue": "Nature Communications",
+      "volume": "14",
+      "pages": "6309",
+      "doi": "10.1038/s41467-023-41899-y",
+      "public_url": "https://doi.org/10.1038/s41467-023-41899-y",
+      "material_scope": "Published JATS and supplementary PDF used by the D44 case.",
+      "actual_reading_scope": "Front title/authors/DOI/abstract; body paragraphs P001-P103; Section 26 Eq17 and Section 27 Eq18 MathML; supplementary text pp.1-22 with detailed review of pp.3-7, 10-12, 14-21. Figures were not rendered/visually inspected; linked data and external links were not read.",
+      "metadata_status": "complete_local_metadata; bounded_reading",
+      "source_ids": [
+        "corpus:deepseed",
+        "D44:deepseed-reading-log"
+      ]
+    },
+    {
+      "id": "foldingdiff-2024",
+      "kind": "academic",
+      "category": "D44_case",
+      "authors": [
+        "Kevin E. Wu",
+        "Kevin K. Yang",
+        "Rianne van den Berg",
+        "Sarah Alamdari",
+        "James Y. Zou",
+        "Alex X. Lu",
+        "Ava P. Amini"
+      ],
+      "title": "Protein structure generation via folding diffusion",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": "15",
+      "pages": null,
+      "doi": "10.1038/s41467-024-45051-2",
+      "public_url": "https://doi.org/10.1038/s41467-024-45051-2",
+      "material_scope": "Published JATS XML and packaged supplementary PDF used by the D44 case.",
+      "actual_reading_scope": "The local reading log records the packaged published JATS and 19-page supplementary PDF, with selected body, MathML, supplementary text, and figure-caption material; no external lookup or image-pixel inspection. Exact article number/pages are unknown in the local record.",
+      "metadata_status": "partial_pages; bounded_reading",
+      "source_ids": [
+        "corpus:foldingdiff",
+        "D44:foldingdiff-reading-log"
+      ]
+    },
+    {
+      "id": "gears-2024",
+      "kind": "academic",
+      "category": "D48_common_signal",
+      "authors": [
+        "Yusuf Roohani",
+        "Kexin Huang",
+        "Jure Leskovec"
+      ],
+      "title": "Predicting transcriptional outcomes of novel multigene perturbations with GEARS",
+      "year": 2024,
+      "venue": "Nature Biotechnology",
+      "volume": "42",
+      "issue": "6",
+      "pages": "927-935",
+      "doi": "10.1038/s41587-023-01905-6",
+      "public_url": "https://doi.org/10.1038/s41587-023-01905-6",
+      "material_scope": "D48 worked example for shared signal and perturbation-response prediction.",
+      "actual_reading_scope": "Selected Results/Methods and local source-led case material; formal article acquisition was recorded, but no new model or biological run and no claim of a complete reread.",
+      "metadata_status": "complete_local_metadata; selected_case_read",
+      "source_ids": [
+        "D48:common-and-task-specific",
+        "D48:source-ledger"
+      ]
+    },
+    {
+      "id": "systema-2026",
+      "kind": "academic",
+      "category": "D48_common_signal",
+      "authors": [
+        "Ramon Viñas Torné",
+        "Maciej Wiatrak",
+        "Zoe Piran",
+        "Shuyang Fan",
+        "Liangze Jiang",
+        "Sarah A. Teichmann",
+        "Mor Nitzan",
+        "Maria Brbić"
+      ],
+      "title": "Systema: a framework for evaluating genetic perturbation response prediction beyond systematic variation",
+      "year": 2026,
+      "venue": "Nature Biotechnology",
+      "volume": "44",
+      "issue": "6",
+      "pages": "1050-1059",
+      "doi": "10.1038/s41587-025-02777-8",
+      "public_url": "https://doi.org/10.1038/s41587-025-02777-8",
+      "material_scope": "D48 worked example for common signal, benchmark design, and out-of-distribution evaluation.",
+      "actual_reading_scope": "Selected Results/Methods and local source-led case material; formal article acquisition was recorded, but no new model or biological run and no claim of a complete reread.",
+      "metadata_status": "complete_local_metadata; selected_case_read",
+      "source_ids": [
+        "D48:common-and-task-specific",
+        "D48:source-ledger"
+      ]
+    },
+    {
+      "id": "linear-baselines-2025",
+      "kind": "academic",
+      "category": "D48_common_signal",
+      "authors": [
+        "Constantin Ahlmann-Eltze",
+        "Wolfgang Huber",
+        "Simon Anders"
+      ],
+      "title": "Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines",
+      "year": 2025,
+      "venue": "Nature Methods",
+      "volume": "22",
+      "issue": "8",
+      "pages": "1657-1661",
+      "doi": "10.1038/s41592-025-02772-6",
+      "public_url": "https://doi.org/10.1038/s41592-025-02772-6",
+      "material_scope": "D48 worked example for baseline comparison and common-signal control.",
+      "actual_reading_scope": "Selected Results/Methods and local source-led case material; formal article acquisition was recorded, but no new model or biological run and no claim of a complete reread.",
+      "metadata_status": "complete_local_metadata; selected_case_read",
+      "source_ids": [
+        "D48:common-and-task-specific",
+        "D48:source-ledger"
+      ]
+    },
+    {
+      "id": "evidential-uq-2021",
+      "kind": "academic",
+      "category": "D48_confidence",
+      "authors": [
+        "Ava P. Soleimany",
+        "Alexander A. Amini",
+        "Samuel Goldman",
+        "Daniela Rus",
+        "Sangeeta N. Bhatia",
+        "Connor W. Coley"
+      ],
+      "title": "Evidential Deep Learning for Guided Molecular Property Prediction and Discovery",
+      "year": 2021,
+      "venue": "ACS Central Science",
+      "volume": "7",
+      "issue": "8",
+      "pages": "1356-1367",
+      "doi": "10.1021/acscentsci.1c00546",
+      "public_url": "https://doi.org/10.1021/acscentsci.1c00546",
+      "material_scope": "D48 worked example for uncertainty ranking, calibration, and decision use.",
+      "actual_reading_scope": "Selected uncertainty, calibration, active-learning, and retrospective-selection material in the worked example and local source ledger; not a new forward experiment or complete paper re-audit.",
+      "metadata_status": "complete_local_metadata; selected_case_read",
+      "source_ids": [
+        "D48:confidence-to-decision",
+        "D48:source-ledger"
+      ]
+    },
+    {
+      "id": "velovi-2024",
+      "kind": "academic",
+      "category": "D48_dynamic_process",
+      "authors": [
+        "Adam Gayoso",
+        "Philipp Weiler",
+        "Mohammad Lotfollahi",
+        "Dominik Klein",
+        "Justin Hong",
+        "Aaron Streets",
+        "Fabian J. Theis",
+        "Nir Yosef"
+      ],
+      "title": "Deep generative modeling of transcriptional dynamics for RNA velocity analysis in single cells",
+      "year": 2024,
+      "venue": "Nature Methods",
+      "volume": "21",
+      "issue": "1",
+      "pages": "50-59",
+      "doi": "10.1038/s41592-023-01994-w",
+      "public_url": "https://doi.org/10.1038/s41592-023-01994-w",
+      "material_scope": "D48 worked example for dynamic-process interpretation and diagnostics.",
+      "actual_reading_scope": "Selected methods, limits, dynamics, and diagnostics in the worked example and local source ledger; no new runtime. Dynamic quantities are interpretations from snapshot data, not a locally observed time course.",
+      "metadata_status": "complete_local_metadata; selected_case_read",
+      "source_ids": [
+        "D48:dynamic-process-interpretation",
+        "D48:source-ledger"
+      ]
+    },
+    {
+      "id": "foundation-models-bioinformatics-2025",
+      "kind": "academic",
+      "category": "sampling_context",
+      "authors": [
+        "Fei Guo",
+        "Renchu Guan",
+        "Yaohang Li",
+        "Qi Liu",
+        "Xiaowo Wang",
+        "Can Yang",
+        "Jianxin Wang"
+      ],
+      "title": "Foundation models in bioinformatics",
+      "year": 2025,
+      "venue": "National Science Review",
+      "volume": "12",
+      "issue": "4",
+      "pages": "nwaf028",
+      "doi": "10.1093/nsr/nwaf028",
+      "public_url": "https://doi.org/10.1093/nsr/nwaf028",
+      "material_scope": "Sampling/context reference for the model coverage assessment.",
+      "actual_reading_scope": "Article identity, abstract/headings, selected sections 9-10, protocol sampling, and local review notes; not a new exhaustive review of the article or all cited works.",
+      "metadata_status": "complete_local_metadata; selected_reading",
+      "source_ids": [
+        "reference-map:foundation-models-bioinformatics-original-sampling-review"
+      ]
+    },
+    {
+      "id": "gkm-biological-support-2010",
+      "kind": "academic",
+      "category": "supporting_reference",
+      "authors": [
+        "R. McDaniell",
+        "B. K. Lee",
+        "L. Song et al."
+      ],
+      "title": "Heritable Individual-Specific and Allele-Specific Chromatin Signatures in Humans",
+      "year": 2010,
+      "venue": "Science",
+      "volume": "328",
+      "pages": "235-239",
+      "doi": "10.1126/science.1184655",
+      "public_url": "https://doi.org/10.1126/science.1184655",
+      "material_scope": "Biological source cited in the gkm guided study.",
+      "actual_reading_scope": "Citation identity and its role in the local source record; original data were not reprocessed or independently reread here.",
+      "metadata_status": "partial_authors; citation_only",
+      "source_ids": [
+        "gkm:first-plan-sources"
+      ]
+    },
+    {
+      "id": "gkm-algorithm-support-2000",
+      "kind": "academic",
+      "category": "supporting_reference",
+      "authors": [
+        "Tommi Jaakkola",
+        "Mark Diekhans",
+        "David Haussler"
+      ],
+      "title": "A Discriminative Framework for Detecting Remote Protein Homologies",
+      "year": 2000,
+      "venue": "Journal of Computational Biology",
+      "volume": "7",
+      "pages": "95-114",
+      "doi": "10.1089/10665270050081405",
+      "public_url": "https://doi.org/10.1089/10665270050081405",
+      "material_scope": "Algorithmic source cited in the gkm guided study.",
+      "actual_reading_scope": "Recognized through the local source record and implementation lineage; not independently reread in full here.",
+      "metadata_status": "complete_local_metadata; citation_only",
+      "source_ids": [
+        "gkm:first-plan-sources"
+      ]
+    }
+  ],
+  "public_readiness_sources": [
+    {
+      "id": "osi-faq",
+      "kind": "official_guidance",
+      "title": "Open Source Initiative FAQ",
+      "year": null,
+      "venue": "Open Source Initiative",
+      "volume": null,
+      "pages": null,
+      "doi": null,
+      "public_url": "https://opensource.org/faq",
+      "material_scope": "Open-source naming and license guidance used by the public-readiness review.",
+      "actual_reading_scope": "Selected official FAQ sections only; not an academic paper and not a project certification.",
+      "metadata_status": "official_guidance"
+    },
+    {
+      "id": "github-visibility-docs",
+      "kind": "official_guidance",
+      "title": "GitHub repository visibility documentation",
+      "year": null,
+      "venue": "GitHub Docs",
+      "volume": null,
+      "pages": null,
+      "doi": null,
+      "public_url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+      "material_scope": "Public/private visibility consequences in the public-readiness review.",
+      "actual_reading_scope": "Selected visibility guidance checked in the existing source record; no private repository URL is included.",
+      "metadata_status": "official_guidance"
+    },
+    {
+      "id": "rcsb-data-policy",
+      "kind": "official_guidance",
+      "title": "RCSB PDB data and citation policy",
+      "year": null,
+      "venue": "RCSB Protein Data Bank",
+      "volume": null,
+      "pages": null,
+      "doi": null,
+      "public_url": "https://www.rcsb.org/pages/policies",
+      "material_scope": "Archive use, citation, and CC0 policy considered for structural outputs.",
+      "actual_reading_scope": "Selected official policy sections in the existing public-readiness record; no archive certification is implied.",
+      "metadata_status": "official_guidance"
+    },
+    {
+      "id": "s4pred-software",
+      "kind": "software",
+      "category": "implementation_reference",
+      "authors": [
+        "PSIPRED developers"
+      ],
+      "title": "S4PRED source repository",
+      "year": null,
+      "venue": "GitHub",
+      "volume": null,
+      "pages": null,
+      "doi": null,
+      "public_url": "https://github.com/psipred/s4pred/tree/7f309dfc9a8155efdf30113fb4cb0affb40aeb7e",
+      "material_scope": "Public software source and commit used to identify the S4PRED inference implementation.",
+      "actual_reading_scope": "Official repository/commit identity and inference components were used by the local pilot; weight-specific license status remains unknown.",
+      "metadata_status": "software_reference"
+    }
+  ],
+  "formal_case_index": [
+    {
+      "case_id": "dnabert2",
+      "title": "DNABERT-2: Efficient Foundation Model and Benchmark for Multi-Species Genomes",
+      "year": 2024,
+      "venue": "International Conference on Learning Representations (ICLR 2024)",
+      "volume": null,
+      "pages": null,
+      "doi": "10.48550/arXiv.2306.15006",
+      "public_url": "https://arxiv.org/abs/2306.15006v2",
+      "authors": [
+        "Zhihan Zhou et al."
+      ],
+      "metadata_status": "partial_author_display; corrected_in_current_index_only",
+      "material_scope": "Existing case report and selected linked manuscript; not a new full-paper audit. The effective identifier is arXiv 2306.15006v2; the original ledger is unchanged."
+    },
+    {
+      "case_id": "rna-fm",
+      "title": "Interpretable RNA Foundation Model from Unannotated Data for Highly Accurate RNA Structure and Function Predictions",
+      "year": 2022,
+      "venue": "arXiv preprint",
+      "volume": null,
+      "pages": null,
+      "doi": "10.48550/arXiv.2204.00300",
+      "public_url": "https://arxiv.org/abs/2204.00300v5",
+      "authors": [
+        "Chen Jiayang et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "esm2-esmfold",
+      "title": "Evolutionary-scale prediction of atomic-level protein structure with a language model",
+      "year": 2023,
+      "venue": "Science",
+      "volume": "379",
+      "pages": "1123-1130",
+      "doi": "10.1126/science.ade2574",
+      "public_url": "https://doi.org/10.1126/science.ade2574",
+      "authors": [
+        "Zeming Lin et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; final VoR body was not obtained in the local case record."
+    },
+    {
+      "case_id": "molclr",
+      "title": "Molecular contrastive learning of representations via graph neural networks",
+      "year": 2022,
+      "venue": "Nature Machine Intelligence",
+      "volume": "4",
+      "pages": "279-287",
+      "doi": "10.1038/s42256-022-00447-x",
+      "public_url": "https://doi.org/10.1038/s42256-022-00447-x",
+      "authors": [
+        "Yuyang Wang et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "scgpt",
+      "title": "scGPT: toward building a foundation model for single-cell multi-omics using generative AI",
+      "year": 2024,
+      "venue": "Nature Methods",
+      "volume": "21",
+      "pages": "1470-1480",
+      "doi": "10.1038/s41592-024-02201-0",
+      "public_url": "https://doi.org/10.1038/s41592-024-02201-0",
+      "authors": [
+        "Haotian Cui et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "nucleotide-transformer",
+      "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+      "year": 2025,
+      "venue": "Nature Methods",
+      "volume": "22",
+      "pages": "287-297",
+      "doi": "10.1038/s41592-024-02523-z",
+      "public_url": "https://doi.org/10.1038/s41592-024-02523-z",
+      "authors": [
+        "Hugo Dalla-Torre et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "rna-msm",
+      "title": "Multiple sequence alignment-based RNA language model and its application to structural inference",
+      "year": 2024,
+      "venue": "Nucleic Acids Research",
+      "volume": "52",
+      "pages": "e3",
+      "doi": "10.1093/nar/gkad1031",
+      "public_url": "https://doi.org/10.1093/nar/gkad1031",
+      "authors": [
+        "Yikun Zhang et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "alphafold3",
+      "title": "Accurate structure prediction of biomolecular interactions with AlphaFold 3",
+      "year": 2024,
+      "venue": "Nature",
+      "volume": "630",
+      "pages": "493-500",
+      "doi": "10.1038/s41586-024-07487-w",
+      "public_url": "https://doi.org/10.1038/s41586-024-07487-w",
+      "authors": [
+        "Josh Abramson et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "kpgt",
+      "title": "A knowledge-guided pre-training framework for improving molecular representation learning",
+      "year": 2023,
+      "venue": "Nature Communications",
+      "volume": "14",
+      "pages": "7568",
+      "doi": "10.1038/s41467-023-43214-1",
+      "public_url": "https://doi.org/10.1038/s41467-023-43214-1",
+      "authors": [
+        "Han Li et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "geneformer",
+      "title": "Transfer learning enables predictions in network biology",
+      "year": 2023,
+      "venue": "Nature",
+      "volume": "618",
+      "pages": "616-624",
+      "doi": "10.1038/s41586-023-06139-9",
+      "public_url": "https://doi.org/10.1038/s41586-023-06139-9",
+      "authors": [
+        "Christina V. Theodoris et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "enformer",
+      "title": "Effective gene expression prediction from sequence by integrating long-range interactions",
+      "year": 2021,
+      "venue": "Nature Methods",
+      "volume": "18",
+      "pages": "1196-1203",
+      "doi": "10.1038/s41592-021-01252-x",
+      "public_url": "https://doi.org/10.1038/s41592-021-01252-x",
+      "authors": [
+        "Avsec Žiga et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "esm3",
+      "title": "Simulating 500 million years of evolution with a language model",
+      "year": 2025,
+      "venue": "Science",
+      "volume": "387",
+      "pages": "850-858",
+      "doi": "10.1126/science.ads0018",
+      "public_url": "https://doi.org/10.1126/science.ads0018",
+      "authors": [
+        "Thomas Hayes et al."
+      ],
+      "metadata_status": "partial_author_display; final text not locally read",
+      "material_scope": "Existing case report and selected preprint material; not a new full-paper audit."
+    },
+    {
+      "case_id": "rnaernie",
+      "title": "Multi-purpose RNA language modelling with motif-aware pretraining and type-guided fine-tuning",
+      "year": 2024,
+      "venue": "Nature Machine Intelligence",
+      "volume": "6",
+      "pages": "548-557",
+      "doi": "10.1038/s42256-024-00836-4",
+      "public_url": "https://doi.org/10.1038/s42256-024-00836-4",
+      "authors": [
+        "Ning Wang et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "scfoundation",
+      "title": "Large-scale foundation model on single-cell transcriptomics",
+      "year": 2024,
+      "venue": "Nature Methods",
+      "volume": "21",
+      "pages": "1481-1491",
+      "doi": "10.1038/s41592-024-02305-7",
+      "public_url": "https://doi.org/10.1038/s41592-024-02305-7",
+      "authors": [
+        "Minsheng Hao et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "unimol",
+      "title": "Uni-Mol: A Universal 3D Molecular Representation Learning Framework",
+      "year": 2023,
+      "venue": "The Eleventh International Conference on Learning Representations (ICLR 2023)",
+      "volume": null,
+      "pages": null,
+      "doi": "10.26434/chemrxiv-2022-jjm0j-v4",
+      "public_url": "https://openreview.net/forum?id=6K2RM6wVqKu",
+      "authors": [
+        "Gengmo Zhou et al."
+      ],
+      "metadata_status": "partial; final publication DOI/pages unknown",
+      "material_scope": "Local identity has a ChemRxiv v4 version and an OpenReview ICLR record; no final journal DOI is asserted."
+    },
+    {
+      "case_id": "hyenadna",
+      "title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+      "year": 2023,
+      "venue": "Advances in Neural Information Processing Systems 36",
+      "volume": "36",
+      "pages": "43177-43201",
+      "doi": "10.52202/075280-1872",
+      "public_url": "https://doi.org/10.52202/075280-1872",
+      "authors": [
+        "Eric Nguyen et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "rfamgen",
+      "title": "Deep generative design of RNA family sequences",
+      "year": 2024,
+      "venue": "Nature Methods",
+      "volume": "21",
+      "pages": "435-443",
+      "doi": "10.1038/s41592-023-02148-8",
+      "public_url": "https://doi.org/10.1038/s41592-023-02148-8",
+      "authors": [
+        "Shunsuke Sumi et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "progen",
+      "title": "Large language models generate functional protein sequences across diverse families",
+      "year": 2023,
+      "venue": "Nature Biotechnology",
+      "volume": "41",
+      "pages": "1099-1106",
+      "doi": "10.1038/s41587-022-01618-2",
+      "public_url": "https://doi.org/10.1038/s41587-022-01618-2",
+      "authors": [
+        "Ali Madani et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "moleculestm",
+      "title": "Multi-modal molecule structure-text model for text-based retrieval and editing",
+      "year": 2023,
+      "venue": "Nature Machine Intelligence",
+      "volume": "5",
+      "pages": "1447-1457",
+      "doi": "10.1038/s42256-023-00759-6",
+      "public_url": "https://doi.org/10.1038/s42256-023-00759-6",
+      "authors": [
+        "Shengchao Liu et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "glue",
+      "title": "Multi-omics single-cell data integration and regulatory inference with graph-linked embedding",
+      "year": 2022,
+      "venue": "Nature Biotechnology",
+      "volume": "40",
+      "pages": "1458-1466",
+      "doi": "10.1038/s41587-022-01284-4",
+      "public_url": "https://doi.org/10.1038/s41587-022-01284-4",
+      "authors": [
+        "Zhi-Jie Cao; Ge Gao"
+      ],
+      "metadata_status": "complete_local_metadata",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "evo",
+      "title": "Sequence modeling and design from molecular to genome scale with Evo",
+      "year": null,
+      "venue": null,
+      "volume": null,
+      "pages": null,
+      "doi": "10.1126/science.ado9336",
+      "public_url": "https://doi.org/10.1126/science.ado9336",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local citation record lacks author/year/venue fields",
+      "material_scope": "Existing case report and selected linked material; DOI identity only in the local citation record."
+    },
+    {
+      "case_id": "splicebert",
+      "title": "Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing prediction",
+      "year": 2024,
+      "venue": "Briefings in Bioinformatics",
+      "volume": "25",
+      "pages": null,
+      "doi": "10.1093/bib/bbae163",
+      "public_url": "https://doi.org/10.1093/bib/bbae163",
+      "authors": [
+        "Ken Chen; Yue Zhou; Maolin Ding; Yu Wang; Zhixiang Ren; Yuedong Yang"
+      ],
+      "metadata_status": "complete_local_metadata; pages unknown",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "pesto",
+      "title": "PeSTo: parameter-free geometric deep learning for accurate prediction of protein binding interfaces",
+      "year": 2023,
+      "venue": "Nature Communications",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s41467-023-37701-8",
+      "public_url": "https://doi.org/10.1038/s41467-023-37701-8",
+      "authors": [
+        "Lucien F. Krapp et al."
+      ],
+      "metadata_status": "partial; volume/pages unknown in selected local entry",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "pmdm",
+      "title": "A dual diffusion model enables 3D molecule generation and lead optimization based on target pockets",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s41467-024-46569-1",
+      "public_url": "https://doi.org/10.1038/s41467-024-46569-1",
+      "authors": [
+        "Lei Huang et al."
+      ],
+      "metadata_status": "partial; volume/pages unknown in selected local entry",
+      "material_scope": "Local case record read the main scientific body Sections 1-26, figure/table text, metadata, and availability; references were index-only."
+    },
+    {
+      "case_id": "midas",
+      "title": "Mosaic integration and knowledge transfer of single-cell multimodal data with MIDAS",
+      "year": 2024,
+      "venue": "Nature Biotechnology",
+      "volume": "42",
+      "pages": "1594-1605",
+      "doi": "10.1038/s41587-023-02040-y",
+      "public_url": "https://doi.org/10.1038/s41587-023-02040-y",
+      "authors": [
+        "He et al."
+      ],
+      "metadata_status": "partial_authors",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "caduceus",
+      "title": "Caduceus: Bi-Directional Equivariant Long-Range DNA Sequence Modeling",
+      "year": 2024,
+      "venue": "Proceedings of Machine Learning Research",
+      "volume": "235",
+      "pages": null,
+      "doi": null,
+      "public_url": "https://arxiv.org/abs/2403.03234v2",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local source identifies PMLR 235/ICML 2024 and corpus has PMID/PMCID but no DOI",
+      "material_scope": "Existing case report and selected linked material; public versioned URL retained."
+    },
+    {
+      "case_id": "generrna",
+      "title": "GenerRNA",
+      "year": 2024,
+      "venue": "PLoS One",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1371/journal.pone.0310814",
+      "public_url": "https://doi.org/10.1371/journal.pone.0310814",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; title/authors/pages not expanded in corpus index",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "evolvepro",
+      "title": "Rapid protein evolution by few-shot learning with a protein language model",
+      "year": 2025,
+      "venue": "Science",
+      "volume": "387",
+      "pages": "eadr6006",
+      "doi": "10.1126/science.adr6006",
+      "public_url": "https://doi.org/10.1126/science.adr6006",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; author list unknown in selected corpus record",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "polygon",
+      "title": "De novo generation of multi-target compounds using deep generative chemistry",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": "15",
+      "pages": "3636",
+      "doi": "10.1038/s41467-024-47120-y",
+      "public_url": "https://doi.org/10.1038/s41467-024-47120-y",
+      "authors": [
+        "Brenton P. Munson et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "nicheformer",
+      "title": "Nicheformer: a foundation model for single-cell and spatial omics",
+      "year": 2025,
+      "venue": "Nature Methods",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s41592-025-02814-z",
+      "public_url": "https://doi.org/10.1038/s41592-025-02814-z",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local source identity has no expanded author/pages metadata",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "mrnabert",
+      "title": "mRNABERT",
+      "year": 2025,
+      "venue": "Nature Communications",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s41467-025-65340-8",
+      "public_url": "https://doi.org/10.1038/s41467-025-65340-8",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local corpus preserves DOI identity only",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "utr-lm",
+      "title": "UTR-LM",
+      "year": 2024,
+      "venue": "Nature Machine Intelligence",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s42256-024-00823-9",
+      "public_url": "https://doi.org/10.1038/s42256-024-00823-9",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; PMCID is recorded in the corpus and author/pages are unknown here",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "operon-te",
+      "title": "Operon/TE",
+      "year": 2017,
+      "venue": "eLife",
+      "volume": null,
+      "pages": null,
+      "doi": "10.7554/eLife.22037",
+      "public_url": "https://doi.org/10.7554/eLife.22037",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local corpus preserves DOI identity only",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "dmpfold",
+      "title": "DMPfold",
+      "year": 2019,
+      "venue": "Nature Communications",
+      "volume": null,
+      "pages": null,
+      "doi": "10.1038/s41467-019-11994-0",
+      "public_url": "https://doi.org/10.1038/s41467-019-11994-0",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local corpus preserves DOI identity only",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "islet-cnn",
+      "title": "Islet CNN",
+      "year": 2020,
+      "venue": "eLife",
+      "volume": null,
+      "pages": null,
+      "doi": "10.7554/eLife.51503",
+      "public_url": "https://doi.org/10.7554/eLife.51503",
+      "authors": [
+        "Wesolowska-Andersen et al."
+      ],
+      "metadata_status": "partial; title/pages unknown in selected corpus record",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "locator",
+      "title": "Locator",
+      "year": 2020,
+      "venue": "eLife",
+      "volume": null,
+      "pages": null,
+      "doi": "10.7554/eLife.54507",
+      "public_url": "https://doi.org/10.7554/eLife.54507",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local corpus preserves DOI identity only",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "ribozyme-cnn",
+      "title": "Ribozyme CNN",
+      "year": 2021,
+      "venue": "eLife",
+      "volume": null,
+      "pages": null,
+      "doi": "10.7554/eLife.59697",
+      "public_url": "https://doi.org/10.7554/eLife.59697",
+      "authors": [
+        "Calvin M. Schmidt; Christina D. Smolke"
+      ],
+      "metadata_status": "partial; title/pages unknown in selected corpus record",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "scanvi",
+      "title": "scANVI",
+      "year": 2021,
+      "venue": "Molecular Systems Biology",
+      "volume": null,
+      "pages": null,
+      "doi": "10.15252/msb.20209620",
+      "public_url": "https://doi.org/10.15252/msb.20209620",
+      "authors": [
+        "unknown"
+      ],
+      "metadata_status": "partial; local corpus preserves DOI identity only",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "protgpt2",
+      "title": "ProtGPT2 is a deep unsupervised language model for protein design",
+      "year": 2022,
+      "venue": "Nature Communications",
+      "volume": "13",
+      "pages": null,
+      "doi": "10.1038/s41467-022-32007-7",
+      "public_url": "https://doi.org/10.1038/s41467-022-32007-7",
+      "authors": [
+        "Noelia Ferruz et al."
+      ],
+      "metadata_status": "partial; article number/pages unknown in selected local entry",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "deepseed",
+      "title": "Deep flanking sequence engineering for efficient promoter design using DeepSEED",
+      "year": 2023,
+      "venue": "Nature Communications",
+      "volume": "14",
+      "pages": "6309",
+      "doi": "10.1038/s41467-023-41899-y",
+      "public_url": "https://doi.org/10.1038/s41467-023-41899-y",
+      "authors": [
+        "Pengcheng Zhang et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "D44 bounded reading entry; see the full D44 entry for the exact section and supplementary scope."
+    },
+    {
+      "case_id": "rinalmo",
+      "title": "RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks",
+      "year": 2025,
+      "venue": "Nature Communications",
+      "volume": "16",
+      "pages": null,
+      "doi": "10.1038/s41467-025-60872-5",
+      "public_url": "https://doi.org/10.1038/s41467-025-60872-5",
+      "authors": [
+        "Rafael Josip Penić et al."
+      ],
+      "metadata_status": "partial; article number/pages unknown in selected local entry",
+      "material_scope": "Existing case report and selected linked material; not a new full-paper audit."
+    },
+    {
+      "case_id": "garnet",
+      "title": "RNA language models predict mutations that improve RNA function",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": "15",
+      "pages": "10627",
+      "doi": "10.1038/s41467-024-54812-y",
+      "public_url": "https://doi.org/10.1038/s41467-024-54812-y",
+      "authors": [
+        "Yekaterina Shulgina et al."
+      ],
+      "metadata_status": "partial_author_display",
+      "material_scope": "D44 bounded reading entry; see the full D44 entry for the exact section and supplementary scope."
+    },
+    {
+      "case_id": "foldingdiff",
+      "title": "Protein structure generation via folding diffusion",
+      "year": 2024,
+      "venue": "Nature Communications",
+      "volume": "15",
+      "pages": null,
+      "doi": "10.1038/s41467-024-45051-2",
+      "public_url": "https://doi.org/10.1038/s41467-024-45051-2",
+      "authors": [
+        "Kevin E. Wu et al."
+      ],
+      "metadata_status": "partial; article number/pages unknown in selected local entry",
+      "material_scope": "D44 bounded reading entry; see the full D44 entry for the exact source and reading boundary."
+    }
+  ],
+  "counts": {
+    "core_entries": 22,
+    "public_readiness_sources": 4,
+    "formal_case_index": 43,
+    "formal_case_population_source": "corpus.json population: 43 formal case works plus 3 guided-study publication references"
+  },
+  "checkpoint_data_sources": [
+    {
+      "title": "Molecular Biology (Splice-junction Gene Sequences)",
+      "year": 1991,
+      "publisher": "UCI Machine Learning Repository",
+      "doi": "10.24432/C5M888",
+      "license": "CC-BY-4.0",
+      "official_citation_author_missing": true
+    },
+    {
+      "title": "Yeast",
+      "authors": [
+        "Kenta Nakai"
+      ],
+      "year": 1991,
+      "publisher": "UCI Machine Learning Repository",
+      "doi": "10.24432/C5KG68",
+      "license": "CC-BY-4.0",
+      "donated": "1996-08-31",
+      "archive_provider": "Paul Horton"
+    }
+  ]
+}

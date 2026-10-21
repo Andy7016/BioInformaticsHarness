@@ -1,0 +1,190 @@
+# 修订指导交接契约 `revision-guidance-v1`
+
+状态：2026-10-18，交接视图的实施契约。它承接已有 Review、Decision、Task、Artifact 关系，不改变 `research-revision-v1`、冻结案例或旧检查器。实现入口为 [`check_revision_guidance.py`](../../scripts/verification/check_revision_guidance.py)，主接口规格见 [`interface-spec.md`](../ARCHIVE_POINTERS.md#archive-pointer-07f38af69cd5aee0)。
+
+## 范围和边界
+
+这个视图回答一件窄问题：一个具体请求在一条明确路线下，指导来源、责任、输入用途、产物和验收记录是否可以交接。检查器只检查记录关系和显式本地小文件的身份；它不联网、不执行任意实现、不加载作者代码或权重、不重跑历史实验，也不解释自然语言是否真正覆盖某个领域动作。
+
+输出固定包含：
+
+```json
+{
+  "schema_version": "revision-guidance-v1",
+  "evidence_scope": "provided_manifest_and_explicit_local_file_identities",
+  "overall_scope": "guidance_handoff_records_and_file_identity",
+  "scientific_acceptance": "not_assessed",
+  "checks": [],
+  "guidance_assessments": [],
+  "acceptance_declarations": [],
+  "declared_results": [],
+  "source_version_warnings": [],
+  "manual_reviews": [],
+  "unresolved": [],
+  "overall": "pass"
+}
+```
+
+`overall` 只表示本检查器范围内的交接记录和文件身份。`scientific_acceptance` 恒为 `not_assessed`。报告中的 G 评分和验收结果是声明的独立记录；字段齐全、来源 hash 一致或本检查器通过，均不表示历史运行发生、实现被执行、算法正确或科学主张被接受。
+
+若某项 `exact` 仅有 `scope_relation=selected_route_only`，报告在 `scope_warnings` 中保留“原 request 的其余范围尚未评价”，并将 `full_request_resolution` 设为 `not_assessed`。这是范围提示，不会把诚实的路线交接记录误报为结构 unknown。
+
+状态合并为 `fail > unknown > pass`。显式错误引用、重复 ID、路线冲突、越界路径和已读取文件的错误 hash 是 `fail`。缺记录、缺文件、超出大小上限、缺输入用途、缺产物或缺必要回执是 `unknown`。`kind=guidance` 的必要来源，以及被选定实现使用的 implementation 来源，若版本为 `unknown`，仍是 `unknown`；已按 path/hash 验证、当前路线实际使用但属于其他 kind 的来源若版本为 `unknown`，只在 `source_version_warnings` 和 `unresolved` 中留下非阻断的诚实警示，不把未知版本写成已知历史版本。未选路线和历史对照的缺输入仍在报告中保留，但不阻断选定的 `current_work` 路线；显式错误引用和重复身份仍然是全局错误。
+
+## 顶层记录
+
+顶层字段为 `schema_version`、`id`、`requests`、`sources`、`routes`、`tasks`、`artifacts`、`implementations`、`acceptance_checks` 和 `guidance_assessments`。所有列表内的 `id` 必须在各自列表中唯一；不同列表之间可以使用相同的字符串。缺字段和缺列表产生 `unknown`；字段类型、枚举或 JSON 重复键（含大小写冲突）错误产生 `unknown` 并带 `error`。
+
+### `requests`
+
+```json
+{
+  "id": "req-q05",
+  "unit_key": "review-card-q05",
+  "text": "说明该预测区域如何被解释，并保留校准缺口。",
+  "source_refs": [{"source_id": "src-request", "locator": "card Q05"}]
+}
+```
+
+`source_refs` 是带定位的对象列表。它记录请求的出处，不能用一个复合字符串代替多个来源。
+
+### `sources`
+
+```json
+{
+  "id": "src-guidance",
+  "path": "revision-guidance-fixtures/guidance.md",
+  "sha256": "<64 hex characters>",
+  "version": "guidance-v1",
+  "kind": "guidance",
+  "source_layer": "frozen_existing",
+  "locator": "section 2",
+  "acquisition_status": "acquired"
+}
+```
+
+每条来源只有一个 `path` 和一个 `sha256` 字段。两者可以为 `null` 表示尚未取得，但不能用数组、复合 source ID 或另一个字段冒充文件身份。`version` 未知时必须写字符串 `unknown`，不能假装是历史版本。必要的 `kind=guidance` 来源和被选定实现绑定的 implementation 来源即使 path/hash 已验证，版本未知仍按 `unknown` 处理。对当前路线实际使用的 paper、review、ledger、receipt 或 other 来源，只有在 path/hash 已验证时，版本未知才产生非阻断的 `source_version_warnings`；这说明身份已绑定但历史/运行版本仍未知，不构成版本补全。`kind` 可为 `guidance`、`paper`、`review`、`ledger`、`implementation`、`receipt` 或 `other`。
+
+### `routes`
+
+```json
+{
+  "id": "route-explain",
+  "request_ids": ["req-q05"],
+  "perspective": "current_work",
+  "choice_group": "q05-response",
+  "owner": "review-owner",
+  "action": "explain",
+  "selection_status": "selected",
+  "reason": "当前输入足以澄清定义，尚不支持校准重分析。",
+  "unresolved": ["没有逐个体校准真值。"]
+}
+```
+
+`perspective` 是 `current_work` 或 `historical_author`。后者只描述作者路线和历史观察，不能替当前任务完成。`action` 为 `explain`、`reanalyze`、`validate`、`narrow_claim`、`retain_limitation` 或 `rebut`。同一个 `choice_group` 最多一个已选当前路线；请求没有已选当前路线是 `unknown`。未选路线的缺输入不阻断当前路线。
+
+### `tasks`
+
+```json
+{
+  "id": "task-q05-explanation",
+  "route_id": "route-explain",
+  "owner": "executor",
+  "assigned_by": "review-owner",
+  "inputs": [
+    {
+      "source_id": "src-guidance",
+      "locator": "section 2",
+      "use": "确定来源实际给出的分位标签和解释边界",
+      "required": true
+    }
+  ],
+  "artifact_ids": ["art-explanation"],
+  "status": "completed"
+}
+```
+
+`assigned_by` 必须等于路线 `owner`。`completed` 任务必须有非空输入用途和非空产物列表，且必要输入和产物的文件身份可用；缺任一项是 `unknown`。可选输入可以记录为 `required=false`，其缺失或超限身份以非阻断 unknown 保留；若该文件实际被读取但 hash 冲突，仍是全局 `fail`。`planned`、`blocked` 和 `unknown` 不能冒充完成。历史路线的 `completed` 任务属于明确冲突。
+
+### `artifacts`
+
+每项为 `{id, path, sha256, kind}`。文件只按显式路径读取一次，并最多读取 `max_bytes + 1` 字节以识别超限。解析后的路径必须位于 `root` 内；路径穿越、解析到 root 外的软链接和输出文件覆盖声明输入均被拒绝。缺失或超限是 `unknown`，实际 hash 不符是 `fail`。
+
+### `implementations`
+
+```json
+{
+  "id": "impl-record-check",
+  "mode": "automated",
+  "scope": "record_contract",
+  "source_id": "src-implementation",
+  "locator": "function check_manifest",
+  "capability": "检查 ID、引用、路线责任和状态关系"
+}
+```
+
+`mode` 为 `automated` 或 `manual`；`scope` 为 `record_contract`、`artifact_or_runtime` 或 `scientific`。自动实现不能声明 `scientific`。实现来源必须是有版本和 hash 的具体本地文件或人工审阅规程。注册实现只表示能力映射；检查器不会因为出现注册项就推断实现被运行。
+
+### `acceptance_checks`
+
+```json
+{
+  "id": "check-record",
+  "task_id": "task-q05-explanation",
+  "scope": "record_contract",
+  "predicate": "选定路线的输入用途、产物和责任闭合。",
+  "implementation_id": "impl-record-check",
+  "artifact_ids": ["art-explanation"],
+  "result": "pending",
+  "receipt_artifact_id": null,
+  "coverage_limit": "不判断科学语义和历史运行。"
+}
+```
+
+验收 scope 必须与实现 scope 相同。`pass` 或 `fail` 声明必须有可读取且 hash 匹配的 `receipt_artifact_id`；否则是 `unknown`。`pending`、`unknown` 和 `not_run` 可以是完整且诚实的交接记录，单独列在 `declared_results`，不会因为尚未完成科学审阅而把结构 `overall` 自动降为 `unknown`。缺必要字段、选中任务的必要输入缺失，或 pass/fail 缺回执，才会产生记录层 `unknown`。声明的 `fail` 仍按声明原样保留；本检查器不把它重写为科学结论。
+
+### `guidance_assessments`
+
+```json
+{
+  "id": "g-q05",
+  "request_id": "req-q05",
+  "route_id": "route-explain",
+  "assessor": "reviewer-1",
+  "required_scope": "该请求要求说明分位标签的来源、用途、下一动作和验收边界",
+  "scope_relation": "full_request",
+  "rating": "exact",
+  "reason": "同一版本指南覆盖五个维度。",
+  "guidance_source_ids": ["src-guidance"],
+  "dimensions": {
+    "procedure": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "§2.1"}], "note": "..."},
+    "input_use": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "§2.2"}], "note": "..."},
+    "next_action": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "§2.3"}], "note": "..."},
+    "output": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "§2.4"}], "note": "..."},
+    "acceptance": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "§2.5"}], "note": "..."}
+  },
+  "case_extension_source_ids": []
+}
+```
+
+`required_scope` 是本项实际评价的义务，不能为空。`scope_relation` 只有 `full_request` 和 `selected_route_only`：后者的 `exact` 只说明所选路线义务，不能当作原 request 的整体 G exact。维度固定为 `procedure`、`input_use`、`next_action`、`output`、`acceptance`；每项都要有 `status`、`source_refs` 和 `note`。
+
+每个已选 `current_work` route 的每个 `request_id` 都必须有对应的 `{route_id, request_id}` assessment；缺少某个原子 request 的记录是 `unknown`，但不要求缺失记录自动补成 `exact`。
+
+`guidance_source_ids` 只能指向 `kind=guidance` 且有已知版本的来源；case extension 来源单独放在 `case_extension_source_ids`，不能充当 exact 的冻结指南出处。`exact` 要求适用维度全部 `covered`，至少有一个适用的操作维度，并且每个 covered 维度有具体指南定位；五维全为 `not_applicable` 不能制造 exact。`partial` 至少覆盖 `procedure`、`next_action`、`output`、`acceptance` 中的一项；只有 `input_use` 不能算 partial。`topic_only` 不提供可采用的操作支持。自然语言是否真实覆盖由复核者判断，程序只检查这些声明与来源关系。
+
+`source_version_warnings` 是字符串警示列表，专门记录当前实际使用、path/hash 已验证但非 guidance/implementation 来源的 `version="unknown"`。这类警示的 `unresolved` 项带 `blocking=false`，不会把结构 `overall` 降为 `unknown`；它也不表示获得了历史论文或运行版本。
+
+## API 和 CLI
+
+```text
+check_manifest(manifest, root: Path, max_bytes=8*1024*1024) -> dict
+python scripts/verification/check_revision_guidance.py \
+  --manifest PATH --root ROOT [--out REPORT] [--max-bytes N]
+```
+
+退出码为 `pass=0`、`fail=1`、`unknown=2`。CLI 在读取输入前检查 `--out` 与 manifest、source、artifact 的解析别名是否重合；不会先覆盖输入再报告错误。API 和 CLI 都拒绝布尔 `max_bytes`、坏 JSON、重复键、大小写冲突、错误字段类型和不支持的 schema。
+
+## 验收范围
+
+测试应覆盖合法解释和 owner 委派、未选路线缺数据不阻断、选定路线必需输入缺失为 unknown、可选输入缺失非阻断但 hash 冲突 fail、每个 selected route×request 的 assessment 闭合、历史产物不能代当前完成、exact 缺验收维度为 fail、`topic_only` 不能伪造操作支持、复合 source/错误 hash、implementation scope 冲突、声明 pass 没有回执为 unknown、非 guidance/implementation 来源未知版本警示、输入输出覆盖、越界、重复键和大小超限。测试文件使用纯本地虚构小文件；不会联网、运行任意实现或读取下载资料。

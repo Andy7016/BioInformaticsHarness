@@ -1,0 +1,2 @@
+# Preserve byte identities recorded by the checkpoint manifests on every platform.
+* -text

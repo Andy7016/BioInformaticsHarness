@@ -1,0 +1,28 @@
+{
+  "fixture_kind": "reported_source_aggregate",
+  "mode": "reported_counts",
+  "clash_atom_scope": {
+    "name": "FoldingDiff-SI-nonadjacent-backbone-Bondi-0.63",
+    "definition": "As reported in the FoldingDiff supplementary information; this fixture does not reconstruct atom-level events."
+  },
+  "fold_threshold": 0.5,
+  "fold_threshold_reason": "The reported retained subset is carried as source aggregate arithmetic; no new threshold is applied.",
+  "source_identity": {
+    "path": "references/pilots/2026-10-revisor-expanded-five/foldingdiff/parent/supplementary-information.pdf",
+    "bytes": 17197032,
+    "sha256": "084b2a9da0cd91bb9fecb8dccfbeba70054f67111af2fa1aae4e8750ec5e998b",
+    "locator": "FoldingDiff supplementary information physical pages 5-6"
+  },
+  "reported_counts": {
+    "N": 780,
+    "retained": 455,
+    "all_clash_free": 733,
+    "retained_clash_free": 433
+  },
+  "declared_counts": {
+    "retained_over_n": 0.5833333333333334,
+    "all_clash_free_over_n": 0.9397435897435898,
+    "retained_clash_free_over_n": 0.5551282051282051,
+    "retained_clash_free_over_retained": 0.9516483516483516
+  }
+}

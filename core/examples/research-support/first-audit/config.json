@@ -1,0 +1,14 @@
+{
+  "schema": "uci-first-audit-config.v1",
+  "audit_scope": "read-only ZIP member census and record/field counts; no training or model fitting",
+  "dataset": {
+    "path": "dataset.zip",
+    "uci_dataset_id": 69,
+    "title": "Molecular Biology (Splice-junction Gene Sequences)",
+    "doi": "10.24432/C5M888",
+    "license": "CC BY 4.0",
+    "attribution": ["G. Towell", "M. Noordewier", "J. Shavlik"],
+    "official_instances": 3190,
+    "official_features": 60
+  }
+}

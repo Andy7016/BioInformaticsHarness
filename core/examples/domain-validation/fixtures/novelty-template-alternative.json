@@ -1,0 +1,25 @@
+{
+  "fixture_kind": "synthetic_fixture",
+  "alphabet": "DNA",
+  "direction_policy": "forward_only",
+  "reference_pool": {
+    "kind": "template",
+    "identity": "template-T0"
+  },
+  "candidates": [
+    {
+      "id": "q1",
+      "sequence": "ACGT"
+    }
+  ],
+  "references": [
+    {
+      "id": "r1",
+      "sequence": "ACGA"
+    },
+    {
+      "id": "r2",
+      "sequence": "ACGG"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+# 校准后的关系契约与条件指导
+
+日期：2026-10-14。来源：用户要求依据[本轮校准](../ARCHIVE_POINTERS.md#archive-pointer-1766dbe45fc04c0f)迭代Harness并提交。承接D18–D23，保留原决策和冻结案例，不改原评分。
+
+## 决策与范围
+
+保留研究问题、DataSnapshot、SplitPlan、MethodCard、Run、Artifact、ComparisonSpec与Review；补足这些对象之间有明确语义的关系。新增内容分为条件指导与可执行记录检查，不新建运行平台或统一生物模型算法。
+
+- **D24 条件指导**：联合坐标/单位/变换，任务相关几何参考系，指标数学事件到实际实现，组件角色与实际作用算子。补触发条件、必要证据、错误/unknown和合法替代。收紧atom14/37、GC和mask的适用措辞。
+- **D25 关系检查**：增加独立`research-relations-v1`接口，检查组件消费、选择历史与独立评价、标量线性聚合的输入贡献和数值结果。保留research-handoff-v1行为；新接口按任务激活，不要求每个研究填所有组。
+- **D26 验收**：正常、错误、证据不足、合法替代分别验证；校准原判保留。所有程序结果标明提供记录的边界，不冒充自动运行捕获或人的认可。
+
+与把每篇论文操作加入全局清单相比，关系约束允许不同算法、阈值、权重共享、scratch初始化和开发性反复选模；错误判据只在声明的研究义务触发时生效。当前不实现通用坐标解析、刚体对齐、同源聚类、梯度捕获或任意指标自动理解；其指导与后续适配需求分开交付。
+
+## D25冻结实现接口
+
+新入口`scripts/verification/check_research_relations.py`，函数`check_manifest(dict)->dict`；CLI `--manifest PATH [--out PATH]`，退出码pass=0/fail=1/unknown=2。禁止输出覆盖输入（包括可解析别名）。JSON错误、类型错误、未知schema以结构化unknown/error返回，不打印traceback。仅标准库。
+
+顶层：`schema_version="research-relations-v1"`，`sections`对象。仅接受下列三组名称，防止拼写错误静默跳过；额外顶层元数据可以保留但不作证据。每组含`applicable`布尔。false必须非空`reason`，该组not_applicable；缺组/缺证据为unknown。未触发组必须显式声明，否则不假定跳过。所有组不适用时overall=unknown（没有已执行检查），不能制造全通过。
+
+### components
+
+`required_bindings`与`observed_bindings`均为列表，各项含`role`、`stage_id`、`artifact_id`、`revision`。前两字段标识绑定键，后两字段标识期望/观察工件。键不能重复；空必需集合unknown。每个必需键必须有观察，工件ID或revision冲突fail，缺观察或缺身份unknown。额外观察列为辅助，不代替必需关系。不同角色可共享同一工件；scratch可用带运行身份的显式初始化revision，不强制预训练。
+
+### selection
+
+`partitions`为`{id,role}`列表，role取train/development/final_test；`events`为`{id,purpose,partition_ids}`列表，purpose取fit/tune/select/evaluate；`claims`为`{id,kind,evaluation_partition_ids}`列表，kind取independent_final/development/exploratory。ID各自唯一，引用须存在。`history_complete`布尔，缺失或false使无冲突记录unknown；已确认冲突仍fail。空partitions或claims为unknown，空events在history_complete=true时允许。
+
+final_test参与fit/tune/select为声明矛盾fail。independent_final主张至少有一个评价partition，必须均为final_test，必须有evaluate事件，且不能参与选择。development/exploratory不要求独立最终评价，但不允许继续将参与选择的partition角色标为final_test。重定为development可支持开发性结论；改名不能恢复对同一选择数据的独立性。
+
+### aggregation
+
+仅用于标量线性聚合或其可定位的小型数值见证，不要求任意模型是线性的。含`required_ids`、`inputs=[{id,value}]`、`outputs=[{id,value,terms:[{input_id,coefficient}]}]`、`excluded=[{id,reason}]`与`abs_tolerance`。全部数值须有限，bool不得当数字；容差非负。必需ID、input/output/excluded ID各自唯一，terms可重复input_id，按同一输出的系数和判断实际贡献；跨输出允许复用，不要求等权、正权或归一化。
+
+核对每个输出value与sum(input.value*coefficient)的绝对误差；未知引用、重复身份、越出必需集合、排除与有效贡献并存、超容差或必需输入无有效贡献且无理由排除为fail。缺input值/输出值/系数/容差等证据为unknown。每个必需输入必须在至少一项输出中有非零净系数，或有理由排除；有理由排除使accounting可pass、coverage仍unknown。空required_ids或outputs为unknown。零系数不算消费；允许重复项合并，但相消为零不算有效贡献。程序不证明这些数值来自真实模型、已声明权重合理或实际文件完整。
+
+实现验收补充：净系数和线性和以标准库Fraction对已解析的有限数值精确运算，避免普通浮点累加把零贡献算成非零或反向误拒；这是解析值的算术一致性，不宣称原始测量无限精确。超出浮点表示范围的诊断可用字符串，不输出NaN/Infinity。CLI现有文件别名同时检查samefile，覆盖输入保护包括硬链接。见本轮独立反例与修复记录，schema和上述义务不变。
+
+## 追溯与预期验收
+
+|决定|本轮依据|验收要点|
+|---|---|---|
+|D24|B01、F01裁决、F02、E01；十份综合中的三处条件措辞风险|指导可定位，触发与替代明确，公式原则不再借结构卡跨域套用。|
+|D25|C01、D02；RNAErnie/历史scGPT的实际消费与贡献问题|错角色、test选模、漏贡献/系数抵消被定位；共享权重、开发结论、非等权聚合可通过；资料缺失unknown。|
+|D26|三轴校准的证据层与边界|v1回归无变化，新检查只声明其可执行范围；验收报告绑定工件hash并记录未覆盖。|
+
+实现与父任务验收已记录于[本轮迭代记录](../ARCHIVE_POINTERS.md#archive-pointer-f30056e4b5505f1f)。本设计冻结接口后，如发现必要修改须保留理由，不凭实现方便静默改变科学义务。本次独立反例促成数值/缺证据/文件身份修复，未改schema；原始反例与最终复核均保留。
+
+后续：[20案例迭代D27–D29](14-twenty-case-relations-and-evidence.md)新增条件化的阶段选择、信息用途和真实工件证据接口。当前research-relations-v1及其历史行为继续保留，不将新schema字段倒灌为本设计已覆盖的能力。

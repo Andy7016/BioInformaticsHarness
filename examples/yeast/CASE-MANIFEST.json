@@ -1,0 +1,230 @@
+{
+  "accepted_full_study": {
+    "acceptance_path": "docs/pilots/2026-10-public-applications/assessment/acceptance.json",
+    "claim_scope": "Conditional prediction from eight supplied historical computational features; fixed RBF comparison, failure of the class-weighting recommendation, and joint mit/nuc predictive contribution.",
+    "metrics": {
+      "oof_predictions_recomputed": 17544,
+      "primary_accuracy": 0.5738714090287278,
+      "primary_macro_f1": 0.5597032469379007,
+      "raw_rows": 1484,
+      "unique_ids": 1462,
+      "unweighted_macro_f1": 0.569005,
+      "vac_predictions": 85,
+      "vac_support": 30,
+      "vac_true_positives": 3,
+      "weighted_minus_unweighted_macro_f1": -0.009302
+    },
+    "summary_path": "docs/pilots/2026-10-public-applications/assessment/synthesis.zh.md",
+    "this_example": "One saved balanced-RBF fold-0 model and its 293 held-out OOF inputs/outputs; this is conditional on historical precomputed features and does not assess new sequences.",
+    "training_replayed_for_this_release": false
+  },
+  "artifacts": [
+    {
+      "license": "CC-BY-4.0",
+      "path": "README.md",
+      "published": {
+        "bytes": 4806,
+        "path": "yeast/README.md",
+        "sha256": "59c4c7169b192f18c90958603d4429d384933ac657ec026943a94e820c30d2fa"
+      },
+      "source": [
+        {
+          "bytes": 4806,
+          "path": "docs/reviews/2026-10-checkpoint-publication/studies/yeast/README.md",
+          "sha256": "59c4c7169b192f18c90958603d4429d384933ac657ec026943a94e820c30d2fa"
+        }
+      ],
+      "transformation": "Identity copy of newly authored study explanation and attribution."
+    },
+    {
+      "license": "Apache-2.0",
+      "path": "consume_saved_model.py",
+      "published": {
+        "bytes": 13218,
+        "path": "yeast/consume_saved_model.py",
+        "sha256": "35bc474558498eef6ebb98bf1ba1d03614e3fe957c16b99c846053c83255e9b9"
+      },
+      "source": [
+        {
+          "bytes": 13218,
+          "path": "docs/reviews/2026-10-checkpoint-publication/studies/yeast/consume_saved_model.py",
+          "sha256": "35bc474558498eef6ebb98bf1ba1d03614e3fe957c16b99c846053c83255e9b9"
+        }
+      ],
+      "transformation": "Identity copy of newly authored, fit-free saved-model reader."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/dataset.zip",
+      "published": {
+        "bytes": 18938,
+        "path": "yeast/data/dataset.zip",
+        "sha256": "8fe9a4490edfa67532f1dee7ec11f1804437ad43f9f8b7536e32d5be8bce0bb5"
+      },
+      "source": [
+        {
+          "bytes": 18938,
+          "path": "references/pilots/2026-10-public-applications/packages/yeast/inputs/dataset.zip",
+          "sha256": "8fe9a4490edfa67532f1dee7ec11f1804437ad43f9f8b7536e32d5be8bce0bb5"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of the official UCI ZIP; original archive members are retained."
+    },
+    {
+      "license": "Apache-2.0 AND CC-BY-4.0",
+      "path": "model/rbf-balanced-seed-20261021-fold0.pkl",
+      "published": {
+        "bytes": 158178,
+        "path": "yeast/model/rbf-balanced-seed-20261021-fold0.pkl",
+        "sha256": "6e9f5546276f0ea7fb3c5e34b882519abf863eca20aaca1ddb65160ef39e2ab5"
+      },
+      "source": [
+        {
+          "bytes": 158178,
+          "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/models/rbf_balanced/rbf_balanced-seed-20261021-fold-0.pkl",
+          "sha256": "6e9f5546276f0ea7fb3c5e34b882519abf863eca20aaca1ddb65160ef39e2ab5"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of one already-trained first-party SVC state and source-derived ID/support-vector content; no refit."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/oof-input.tsv",
+      "published": {
+        "bytes": 14207,
+        "path": "yeast/data/oof-input.tsv",
+        "sha256": "8348095900b0dc4756af02b1df34dd35fa979a3566e0dbb3ea8eff3cee5aa307"
+      },
+      "source": [
+        {
+          "bytes": 14207,
+          "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/inputs/rbf_balanced/rbf_balanced-seed-20261021-fold-0.tsv",
+          "sha256": "8348095900b0dc4756af02b1df34dd35fa979a3566e0dbb3ea8eff3cee5aa307"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of one accepted held-out fold input table derived from the UCI record features."
+    },
+    {
+      "license": "CC-BY-4.0",
+      "path": "data/oof-expected.json",
+      "published": {
+        "bytes": 111796,
+        "path": "yeast/data/oof-expected.json",
+        "sha256": "8b8d508b0cc2fb77dbb3e775c80eb32a98be7c63d52d9e2812cf387f533451b0"
+      },
+      "source": [
+        {
+          "bytes": 111796,
+          "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/predictions/rbf_balanced/rbf_balanced-seed-20261021-fold-0.json",
+          "sha256": "8b8d508b0cc2fb77dbb3e775c80eb32a98be7c63d52d9e2812cf387f533451b0"
+        }
+      ],
+      "transformation": "Byte-for-byte copy of the matching accepted OOF predictions and UCI-derived truth labels."
+    }
+  ],
+  "case_id": "yeast",
+  "dataset": {
+    "archive_path": "data/dataset.zip",
+    "archive_sha256": "8fe9a4490edfa67532f1dee7ec11f1804437ad43f9f8b7536e32d5be8bce0bb5",
+    "attribution": {
+      "archive_creators_and_maintainers": [
+        "Kenta Nakai"
+      ],
+      "changes": "Unmodified ZIP redistributed. The example includes one 293-row held-out fold input and its associated truth/prediction/score table; the fold selection and model predictions were added by the project.",
+      "doi": "10.24432/C5KG68",
+      "download_url": "https://archive.ics.uci.edu/static/public/110/yeast.zip",
+      "page_creators": [
+        "Kenta Nakai"
+      ],
+      "reference_authors": [
+        "Paul Horton",
+        "Kenta Nakai",
+        "Minoru Kanehisa"
+      ],
+      "title": "Yeast",
+      "url": "https://archive.ics.uci.edu/dataset/110/yeast"
+    },
+    "doi": "10.24432/C5KG68",
+    "license": "CC-BY-4.0",
+    "license_evidence": {
+      "path": "docs/reviews/2026-10-checkpoint-publication/rights/uci-license-observation.json",
+      "sha256": "792025da275a0fe3b382bd1f0e010df73a54c2fa527c8862d24a19fe02334909"
+    },
+    "title": "Yeast"
+  },
+  "expected_oof": {
+    "license": "CC-BY-4.0",
+    "path": "data/oof-expected.json",
+    "rows": 293,
+    "sha256": "8b8d508b0cc2fb77dbb3e775c80eb32a98be7c63d52d9e2812cf387f533451b0",
+    "source": {
+      "bytes": 111796,
+      "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/predictions/rbf_balanced/rbf_balanced-seed-20261021-fold-0.json",
+      "sha256": "8b8d508b0cc2fb77dbb3e775c80eb32a98be7c63d52d9e2812cf387f533451b0"
+    }
+  },
+  "input": {
+    "license": "CC-BY-4.0",
+    "path": "data/oof-input.tsv",
+    "rows": 293,
+    "sha256": "8348095900b0dc4756af02b1df34dd35fa979a3566e0dbb3ea8eff3cee5aa307",
+    "source": {
+      "bytes": 14207,
+      "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/inputs/rbf_balanced/rbf_balanced-seed-20261021-fold-0.tsv",
+      "sha256": "8348095900b0dc4756af02b1df34dd35fa979a3566e0dbb3ea8eff3cee5aa307"
+    }
+  },
+  "run_manifest": {
+    "n_test": 293,
+    "n_train": 1169,
+    "oof": true,
+    "run_id": "rbf_balanced-seed-20261021-fold-0",
+    "source_manifest_sha256": "67c37934b7bb1589835520fbf2473f712be97aed58936972288c10d7dfa49546"
+  },
+  "schema": "public-checkpoint.study-case.v1",
+  "state": {
+    "condition": "rbf_balanced",
+    "embedded_source_data": {
+      "kind": "training-derived ID and standardized feature content",
+      "source_dataset_doi": "10.24432/C5KG68",
+      "support_vector_source_features": [
+        "mcg",
+        "gvh",
+        "alm",
+        "mit",
+        "erl",
+        "pox",
+        "vac",
+        "nuc"
+      ],
+      "support_vector_transform": "training-fold-scaled UCI feature vectors stored by the fitted SVC",
+      "support_vectors_shape": [
+        996,
+        8
+      ],
+      "train_id_count": 1169
+    },
+    "fold": 0,
+    "kind": "one already-trained first-party scikit-learn RBF SVM parameter state",
+    "license": "Apache-2.0 AND CC-BY-4.0",
+    "license_components": [
+      "Apache-2.0",
+      "CC-BY-4.0"
+    ],
+    "n_train": 1169,
+    "oof": true,
+    "path": "model/rbf-balanced-seed-20261021-fold0.pkl",
+    "privacy_scan": {
+      "scan": "raw payload plus recursively inspected serialized Python metadata",
+      "status": "no_absolute_path_or_session_id_patterns_detected"
+    },
+    "refit_for_release": false,
+    "seed": 20261021,
+    "sha256": "6e9f5546276f0ea7fb3c5e34b882519abf863eca20aaca1ddb65160ef39e2ab5",
+    "source": {
+      "bytes": 158178,
+      "path": "docs/pilots/2026-10-public-applications/assessment/yeast/new-root/results/main/models/rbf_balanced/rbf_balanced-seed-20261021-fold-0.pkl",
+      "sha256": "6e9f5546276f0ea7fb3c5e34b882519abf863eca20aaca1ddb65160ef39e2ab5"
+    }
+  }
+}

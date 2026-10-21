@@ -1,0 +1,26 @@
+{
+  "schema_version": "research-evidence-index-v1",
+  "id": "fictional-evidence",
+  "files": [
+    {
+      "id": "measurements",
+      "path": "examples/research-support/measurements.tsv",
+      "role": "input",
+      "required": true,
+      "use": "虚构数据演示路径和身份；无生物意义",
+      "bytes": 28,
+      "sha256": "f15f70f8052dfe528c646365e724ea9771ebe89690b6dc6b3fe103805a02f3af"
+    }
+  ],
+  "runs": [],
+  "narrative": {
+    "question": "这些虚构数值能否被明确定位？",
+    "findings": [
+      "本例只演示操作与记录。"
+    ],
+    "decision": "不生成科学结论。",
+    "next_actions": [
+      "真实任务应加入真实回执和解释。"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "fixture_kind": "synthetic_fixture",
+  "measurement_event": {
+    "name": "induced_over_basal",
+    "on_field": "induced",
+    "off_field": "basal"
+  },
+  "data_layer": "paired_observations",
+  "unit_policy": {
+    "unit_is_declared_independent": true,
+    "technical_replicates_already_collapsed": true
+  },
+  "basal_floor": 0,
+  "basal_floor_reason": "A non-positive basal mean is not an interpretable fold-change denominator.",
+  "metric_event": "ratio_of_means",
+  "observations": [
+    {
+      "construct_id": "A",
+      "unit_id": "A-1",
+      "induced": 12,
+      "basal": 1
+    },
+    {
+      "construct_id": "A",
+      "unit_id": "A-2",
+      "induced": 24
+    }
+  ]
+}

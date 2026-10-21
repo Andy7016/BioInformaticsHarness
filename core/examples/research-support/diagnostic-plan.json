@@ -1,0 +1,38 @@
+{
+  "schema_version": "finite-diagnostic-v1",
+  "id": "fictional-finite-matrix",
+  "units": [
+    {
+      "id": "u1",
+      "observed": 1.0,
+      "group": "a"
+    },
+    {
+      "id": "u2",
+      "observed": 2.0,
+      "group": "a"
+    },
+    {
+      "id": "u3",
+      "observed": 3.0,
+      "group": "b"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "base",
+      "meaning": "虚构基准"
+    },
+    {
+      "id": "alternative",
+      "meaning": "虚构另一事件"
+    },
+    {
+      "id": "alias",
+      "meaning": "来源声明的别名示例，仅核当前数值",
+      "alias_of": "base"
+    }
+  ],
+  "baseline_id": "base",
+  "absolute_tolerance": 0.05
+}

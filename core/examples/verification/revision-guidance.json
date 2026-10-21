@@ -1,0 +1,181 @@
+{
+  "schema_version": "revision-guidance-v1",
+  "id": "fictional-guidance-handoff",
+  "sources": [
+    {
+      "id": "src-request",
+      "path": "revision-guidance-fixtures/request.txt",
+      "sha256": "b3b957aa690c087bf29f148aeb3ffebb20110ce49c427434d29798a506242246",
+      "version": "request-v1",
+      "kind": "other",
+      "source_layer": "user_request",
+      "locator": "fixture line 1",
+      "acquisition_status": "acquired"
+    },
+    {
+      "id": "src-guidance",
+      "path": "revision-guidance-fixtures/guidance.md",
+      "sha256": "76532df5a19a29b8b85835e5c43f877ba58b6d8f5fc4c596005a91321a6b953b",
+      "version": "guidance-v1",
+      "kind": "guidance",
+      "source_layer": "frozen_existing",
+      "locator": "fixture section 1",
+      "acquisition_status": "acquired"
+    },
+    {
+      "id": "src-implementation",
+      "path": "revision-guidance-fixtures/implementation.py",
+      "sha256": "fa53fa043be6cbb20e776f117b975a503006767e62fcaa141d8fce365729dbf4",
+      "version": "implementation-v1",
+      "kind": "implementation",
+      "source_layer": "code_or_artifact_observation",
+      "locator": "fixture function documented_capability",
+      "acquisition_status": "acquired"
+    },
+    {
+      "id": "src-historical",
+      "path": null,
+      "sha256": null,
+      "version": "unknown",
+      "kind": "paper",
+      "source_layer": "author_reported",
+      "locator": "historical author route, not acquired",
+      "acquisition_status": "not_acquired"
+    }
+  ],
+  "requests": [
+    {
+      "id": "req-q05",
+      "unit_key": "fixture-q05",
+      "text": "Explain the reported quantile label and retain the calibration limitation.",
+      "source_refs": [
+        {"source_id": "src-request", "locator": "fixture line 1"}
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "id": "route-explain",
+      "request_ids": ["req-q05"],
+      "perspective": "current_work",
+      "choice_group": "q05-choice",
+      "owner": "review-owner",
+      "action": "explain",
+      "selection_status": "selected",
+      "reason": "The bounded fixture can explain the source wording without inventing calibration results.",
+      "unresolved": ["No individual calibration truth is available."]
+    },
+    {
+      "id": "route-historical",
+      "request_ids": ["req-q05"],
+      "perspective": "historical_author",
+      "choice_group": "q05-choice",
+      "owner": "historical-author",
+      "action": "retain_limitation",
+      "selection_status": "not_selected",
+      "reason": "Historical author reporting is retained for observation only.",
+      "unresolved": ["The historical source file was not acquired."]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-q05-explain",
+      "route_id": "route-explain",
+      "owner": "executor",
+      "assigned_by": "review-owner",
+      "inputs": [
+        {
+          "source_id": "src-request",
+          "locator": "fixture line 1",
+          "use": "identify the atomic request",
+          "required": true
+        },
+        {
+          "source_id": "src-guidance",
+          "locator": "fixture section 1",
+          "use": "bound the explanation to the recorded guidance wording",
+          "required": true
+        }
+      ],
+      "artifact_ids": ["art-explanation"],
+      "status": "completed"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "art-explanation",
+      "path": "revision-guidance-fixtures/explanation.md",
+      "sha256": "0588314777b4f6e00eb698fe57a4e34324b835f49e9e0f50b665565401a37c9e",
+      "kind": "explanation"
+    },
+    {
+      "id": "art-receipt",
+      "path": "revision-guidance-fixtures/receipt.json",
+      "sha256": "29e63aa46a5af604b1f599a1f3c1a2cd685839b08e9d1cdddabce9d2f1685a7c",
+      "kind": "acceptance_receipt"
+    }
+  ],
+  "implementations": [
+    {
+      "id": "impl-record",
+      "mode": "automated",
+      "scope": "record_contract",
+      "source_id": "src-implementation",
+      "locator": "fixture function documented_capability",
+      "capability": "checks bounded record relationships"
+    },
+    {
+      "id": "impl-file",
+      "mode": "automated",
+      "scope": "artifact_or_runtime",
+      "source_id": "src-implementation",
+      "locator": "fixture function documented_capability",
+      "capability": "checks declared fixture file identity"
+    }
+  ],
+  "acceptance_checks": [
+    {
+      "id": "check-record",
+      "task_id": "task-q05-explain",
+      "scope": "record_contract",
+      "predicate": "The selected route has an owner, input uses, and an explanation artifact.",
+      "implementation_id": "impl-record",
+      "artifact_ids": ["art-explanation"],
+      "result": "pending",
+      "receipt_artifact_id": null,
+      "coverage_limit": "Record closure only; no scientific interpretation."
+    },
+    {
+      "id": "check-file",
+      "task_id": "task-q05-explain",
+      "scope": "artifact_or_runtime",
+      "predicate": "The bounded receipt file has its declared SHA-256.",
+      "implementation_id": "impl-file",
+      "artifact_ids": ["art-receipt"],
+      "result": "pass",
+      "receipt_artifact_id": "art-receipt",
+      "coverage_limit": "File identity only; the receipt does not prove execution."
+    }
+  ],
+  "guidance_assessments": [
+    {
+      "id": "g-q05",
+      "request_id": "req-q05",
+      "route_id": "route-explain",
+      "assessor": "fictional-reviewer",
+      "required_scope": "Explain the source label, its input use, the next bounded action, output, and acceptance boundary.",
+      "scope_relation": "full_request",
+      "rating": "exact",
+      "reason": "The same versioned fictional guidance names all five handoff dimensions.",
+      "guidance_source_ids": ["src-guidance"],
+      "dimensions": {
+        "procedure": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "fixture procedure"}], "note": "Use the label as reported."},
+        "input_use": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "fixture input"}], "note": "State what source wording is being used."},
+        "next_action": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "fixture next action"}], "note": "Keep the next action bounded."},
+        "output": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "fixture output"}], "note": "Produce the explanation artifact."},
+        "acceptance": {"status": "covered", "source_refs": [{"source_id": "src-guidance", "locator": "fixture acceptance"}], "note": "Retain the calibration limitation."}
+      },
+      "case_extension_source_ids": []
+    }
+  ]
+}

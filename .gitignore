@@ -1,0 +1,5 @@
+# User-created run outputs and local environments
+.scratch/
+__pycache__/
+*.py[cod]
+.venv/

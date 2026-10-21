@@ -1,0 +1,28 @@
+{
+  "schema": "harness-checkpoint-evidence-summary/v1",
+  "version": "0.1.0-alpha.2",
+  "as_of": "2026-10-21",
+  "scope": "maintainer summary of accepted fixed-archive studies; public examples separately replay saved states",
+  "studies": [
+    {
+      "case": "splice",
+      "rows": 3190,
+      "oof_rows_independently_recomputed": 25520,
+      "main_macro_f1": 0.9284106993837771,
+      "main_accuracy": 0.935423197492163,
+      "scientific_scope": "fixed archive under declared proximity/name grouping"
+    },
+    {
+      "case": "yeast",
+      "raw_rows": 1484,
+      "unique_ids": 1462,
+      "oof_rows_independently_recomputed": 17544,
+      "main_macro_f1": 0.5597032469379007,
+      "main_accuracy": 0.5738714090287278,
+      "scientific_scope": "fixed archive precomputed features; upstream overlap unknown"
+    }
+  ],
+  "no_causal_harness_gain_estimate": true,
+  "public_current_training_rerun": false,
+  "future_priority": "new scientific design, real supplementary analysis, conclusion reassessment, second delivery"
+}

@@ -1,0 +1,276 @@
+{
+  "schema": "bioinformatics-harness-release-spec/v1",
+  "package": {
+    "name": "bioinformatics-harness",
+    "version": "0.1.0-alpha.2",
+    "manifest": "RELEASE-MANIFEST.json",
+    "archive_pointer_path": "docs/ARCHIVE_POINTERS.md"
+  },
+  "templates_dir": "docs/reviews/2026-10-checkpoint-publication/package-templates",
+  "build_evidence_dir": "docs/reviews/2026-10-checkpoint-publication/build-r02",
+  "source_rules": [
+    {
+      "glob": "scripts/research_support/*.py",
+      "source_prefix": "scripts/research_support",
+      "destination": "scripts/research_support",
+      "kind": "code",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    },
+    {
+      "glob": "scripts/verification/*.py",
+      "source_prefix": "scripts/verification",
+      "destination": "scripts/verification",
+      "kind": "code",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    },
+    {
+      "glob": "tests/research_support/*.py",
+      "source_prefix": "tests/research_support",
+      "destination": "tests/research_support",
+      "kind": "test",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    },
+    {
+      "glob": "tests/verification/*.py",
+      "source_prefix": "tests/verification",
+      "destination": "tests/verification",
+      "kind": "test",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    },
+    {
+      "glob": "examples/research-support/**/*",
+      "source_prefix": "examples/research-support",
+      "destination": "examples/research-support",
+      "kind": "operational-examples-and-fictional-fixtures",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "license_by_suffix": {
+        ".md": "CC-BY-4.0"
+      },
+      "required": true
+    },
+    {
+      "glob": "examples/verification/**/*",
+      "source_prefix": "examples/verification",
+      "destination": "examples/verification",
+      "kind": "fictional-fixture",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "license_by_suffix": {
+        ".md": "CC-BY-4.0"
+      },
+      "required": true
+    },
+    {
+      "glob": "examples/domain-validation/**/*",
+      "source_prefix": "examples/domain-validation",
+      "destination": "examples/domain-validation",
+      "kind": "fictional-domain-example",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "license_by_suffix": {
+        ".md": "CC-BY-4.0"
+      },
+      "required": true
+    },
+    {
+      "glob": "examples/s4pred/describe_entities.py",
+      "source_prefix": "examples/s4pred",
+      "destination": "examples/s4pred",
+      "kind": "metadata-parser",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    },
+    {
+      "glob": "docs/design/*.md",
+      "source_prefix": "docs/design",
+      "destination": "docs/design",
+      "kind": "normative-prose",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction",
+      "exclude": [
+        "docs/design/02-ambiguities-and-evidence.md",
+        "docs/design/04-user-confirmation.md",
+        "docs/design/09-biological-visual-explanations.md",
+        "docs/design/10-interactive-workbench.md",
+        "docs/design/workbench/**"
+      ],
+      "required": true
+    },
+    {
+      "glob": "docs/methods/**/*.md",
+      "source_prefix": "docs/methods",
+      "destination": "docs/methods",
+      "kind": "normative-prose",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction",
+      "required": true
+    },
+    {
+      "glob": "tests/test_*.py",
+      "source_prefix": "tests",
+      "destination": "tests",
+      "kind": "test",
+      "license": "Apache-2.0",
+      "transform": "verbatim",
+      "required": true
+    }
+  ],
+  "generated_files": [
+    {
+      "destination": "VERSION",
+      "source": "VERSION",
+      "kind": "release-metadata",
+      "license": "Apache-2.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "README.md",
+      "template": "README.md",
+      "kind": "release-entry",
+      "license": "CC-BY-4.0",
+      "transform": "template-version-substitution"
+    },
+    {
+      "destination": "QUICKSTART.md",
+      "template": "QUICKSTART.md",
+      "kind": "release-guide",
+      "license": "CC-BY-4.0",
+      "transform": "template-version-substitution"
+    },
+    {
+      "destination": "LICENSE",
+      "source": "LICENSE",
+      "kind": "upstream-license-text",
+      "license": "Apache-2.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "LICENSES/CC-BY-4.0.txt",
+      "source": "LICENSES/CC-BY-4.0.txt",
+      "kind": "upstream-license-text",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "LICENSING.md",
+      "source": "LICENSING.md",
+      "kind": "license-scope",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction"
+    },
+    {
+      "destination": "NOTICE",
+      "source": "NOTICE",
+      "kind": "notice",
+      "license": "Apache-2.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "CITATION.cff",
+      "source": "CITATION.cff",
+      "kind": "citation",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "THIRD_PARTY.md",
+      "source": "THIRD_PARTY.md",
+      "kind": "rights-boundary",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction"
+    },
+    {
+      "destination": "EVIDENCE.zh.md",
+      "source": "docs/reviews/2026-10-checkpoint-publication/public-evidence/EVIDENCE.zh.md",
+      "kind": "evidence-boundary",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction"
+    },
+    {
+      "destination": "evidence-summary.json",
+      "source": "docs/reviews/2026-10-checkpoint-publication/public-evidence/evidence-summary.json",
+      "kind": "evidence-summary",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "REFERENCES.md",
+      "source": "docs/reviews/2026-10-checkpoint-publication/bibliography/REFERENCES.md",
+      "kind": "reference-index",
+      "license": "CC-BY-4.0",
+      "transform": "markdown-links-and-local-redaction"
+    },
+    {
+      "destination": "REFERENCES.bib",
+      "source": "docs/reviews/2026-10-checkpoint-publication/bibliography/references.bib",
+      "kind": "reference-data",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "references.json",
+      "source": "docs/reviews/2026-10-checkpoint-publication/bibliography/references.json",
+      "kind": "reference-data",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "docs/ARCHIVE_POINTERS.md",
+      "template": "ARCHIVE_POINTERS.md",
+      "kind": "archive-navigation",
+      "license": "CC-BY-4.0",
+      "transform": "generated-archive-pointer-list"
+    },
+    {
+      "destination": "docs/reviews/2026-10-checkpoint-publication/release-spec.json",
+      "source": "docs/reviews/2026-10-checkpoint-publication/release-spec.json",
+      "kind": "release-spec",
+      "license": "CC-BY-4.0",
+      "transform": "verbatim"
+    },
+    {
+      "destination": "verify_release.py",
+      "template": "verify_release.py",
+      "kind": "release-verifier",
+      "license": "Apache-2.0",
+      "transform": "template-version-substitution"
+    }
+  ],
+  "exclusions": {
+    "never_include": [
+      "papers",
+      "raw-data",
+      "third-party-code",
+      "actual-first-deliveries",
+      "logs",
+      "old-git",
+      "config",
+      "proxy-config",
+      "history-trees",
+      "python-bytecode",
+      "ui-or-cjs-verification-scripts",
+      "external-author-weights",
+      "true-uci-examples-live-outside-core-with-own-manifest"
+    ],
+    "output_unknown_payload_is_error": true,
+    "verifier_only_ignored_directory": ".scratch"
+  },
+  "link_policy": {
+    "preserve_external": true,
+    "rewrite_included_relative_links": true,
+    "redirect_excluded_or_missing_relative_links": "docs/ARCHIVE_POINTERS.md",
+    "archive_pointer_is_navigation_only": true,
+    "redact_local_endpoints_and_absolute_paths": true,
+    "fail_on_unresolved_package_links": true
+  }
+}
