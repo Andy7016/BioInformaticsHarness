@@ -1,0 +1,483 @@
+{
+  "schema": "public-checkpoint.splice-resource-readiness-example.v1",
+  "case_id": "splice",
+  "purpose": "Assess whether the checked resources support gene/family evaluation units and consistent label interpretation; this is readiness evidence, not a model evaluation.",
+  "program": {
+    "path": "examples/splice/resource_readiness.py",
+    "license": "Apache-2.0",
+    "runtime": "Python 3.11 standard library",
+    "source_identity": {
+      "bytes": 31618,
+      "sha256": "23384f1b6394bbaede6e0b74cfc8d3a32e6804dc78bb1481c424ccc11a29b022"
+    },
+    "evaluation_role": "readiness"
+  },
+  "usage": {
+    "runner": "core/scripts/research_support/run_bounded.py",
+    "path_rule": "All paths other than --root are resolved relative to the supplied task root. The actual task-root argument is normalized to . below; other path values preserve the recorded root-relative values.",
+    "consumer_argv_after_program": [
+      "--root",
+      ".",
+      "--plan",
+      "output/plan-v1/gap-plan.json",
+      "--acquisition",
+      "preparation/resource-acquisition.json",
+      "--context",
+      "CURRENT-CONTEXT-r02.json",
+      "--out",
+      "output/readiness.json",
+      "--consumption",
+      "output/consumption.json",
+      "--run-receipt",
+      "output/run-r02.receipt.json"
+    ],
+    "input_meanings": {
+      "--root": "task root for path containment",
+      "--plan": "sealed research-support.resource-gap-plan.v1 JSON",
+      "--acquisition": "research-support.resource-acquisition.v1 JSON with source identities and acquired resources",
+      "--context": "task-bound context matching study, iteration, and task",
+      "--out": "new resource-readiness outcome JSON",
+      "--consumption": "new resource-consumption record JSON",
+      "--run-receipt": "future runner receipt path recorded by the consumer"
+    },
+    "bounded_runner_limits": {
+      "timeout_seconds": 60,
+      "memory_limit_mib": 256,
+      "threads": 1
+    },
+    "example_output_names": [
+      "output/readiness.json",
+      "output/consumption.json",
+      "output/run-r02.receipt.json"
+    ]
+  },
+  "sources": [
+    {
+      "resource_id": "uci_archive",
+      "url": "https://archive.ics.uci.edu/static/public/69/molecular%2Bbiology%2Bsplice%2Bjunction%2Bgene%2Bsequences.zip",
+      "version": "UCI dataset 69 snapshot retrieved 2026-10-22; archive notes GenBank 64.1",
+      "retrieved_at": "2026-10-22T10:34:27.469020+00:00",
+      "access": {
+        "route": "Direct; environment proxy explicitly disabled",
+        "result": "success",
+        "http_status": 200,
+        "bytes": 167041,
+        "sha256": "3e7ce5dcbeec8c221f57dda495611b9d6ec9525551f445419f5c74cc38067e4e"
+      },
+      "license": "CC BY 4.0",
+      "doi": "10.24432/C5M888",
+      "creators": [
+        "G. Towell",
+        "M. Noordewier",
+        "J. Shavlik"
+      ],
+      "published_archive_path": "examples/splice/data/dataset.zip"
+    },
+    {
+      "resource_id": "uci_page",
+      "url": "https://archive.ics.uci.edu/dataset/69/molecular-biology-splice-junction-gene-sequences",
+      "version": "UCI dataset 69 page retrieved 2026-10-22",
+      "retrieved_at": "2026-10-22T10:34:27.469020+00:00",
+      "access": {
+        "route": "Direct; environment proxy explicitly disabled",
+        "result": "success",
+        "http_status": 200,
+        "bytes": 193114,
+        "sha256": "ee87afb0445d8a96962b91df7b94448b68e6e9d35d72df3d5b3f6c5bd568a87d"
+      },
+      "html_redistribution_license": "unknown in the acquisition record; raw HTML remains private and is not published",
+      "visible_dataset_license_text": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "published_html_path": null
+    }
+  ],
+  "acquisition": {
+    "observed_usage": {
+      "official_sources": 2,
+      "download_bytes": 360155,
+      "rounds": 1
+    },
+    "limits": {
+      "official_sources": 3,
+      "download_bytes": 10485760,
+      "rounds": 1
+    },
+    "status": "within_limit",
+    "attempts": [
+      {
+        "resource_id": "uci_page",
+        "result": "success",
+        "http_status": 200,
+        "timeout_seconds": 30
+      },
+      {
+        "resource_id": "uci_archive",
+        "result": "success",
+        "http_status": 200,
+        "timeout_seconds": 30
+      }
+    ]
+  },
+  "observations": {
+    "archive": {
+      "members": [
+        "Index",
+        "splice.data",
+        "splice.data.Z",
+        "splice.names",
+        "splice.theory"
+      ],
+      "record_count": 3190,
+      "class_counts": {
+        "EI": 767,
+        "IE": 768,
+        "N": 1655
+      },
+      "sequence_length_counts": {
+        "60": 3190
+      },
+      "record_id_shape": {
+        "format": "alphanumeric-prefix / alphabetic-token / integer-token",
+        "records": 3190,
+        "examples": [
+          "ATRINS-DONOR-521",
+          "ATRINS-DONOR-905",
+          "BABAPOE-DONOR-30",
+          "BABAPOE-DONOR-867",
+          "BABAPOE-DONOR-2817",
+          "CHPIGECA-DONOR-378"
+        ]
+      },
+      "instance_names": {
+        "occurrences": 3190,
+        "unique_names": 3178,
+        "duplicate_name_groups": 12,
+        "duplicate_name_excess_rows": 12,
+        "duplicate_groups_same_class_and_sequence": true
+      },
+      "mechanical_prefixes": {
+        "distinct_count": 1475,
+        "definition": "substring before first hyphen; string statistic only"
+      },
+      "schema_evidence": [
+        {
+          "member": "splice.names",
+          "line": 82,
+          "text": "6. Number of Attributes: 62"
+        },
+        {
+          "member": "splice.names",
+          "line": 83,
+          "text": "-- class (one of n, ei, ie)"
+        },
+        {
+          "member": "splice.names",
+          "line": 84,
+          "text": "-- instance name"
+        },
+        {
+          "member": "splice.names",
+          "line": 85,
+          "text": "-- 60 sequential DNA nucleotide positions"
+        },
+        {
+          "member": "splice.names",
+          "line": 104,
+          "text": "2 The instance name."
+        }
+      ],
+      "source_history_evidence": [
+        {
+          "member": "splice.names",
+          "line": 7,
+          "text": "all examples taken from Genbank 64.1"
+        },
+        {
+          "member": "splice.names",
+          "line": 9,
+          "text": "for primates in Genbank 64.1"
+        }
+      ]
+    },
+    "page": {
+      "declared_instances": 3190,
+      "declared_sequence_features": 60,
+      "captured_variable_rows": 10,
+      "captured_field_names": [
+        "class",
+        "instancename",
+        "Base1",
+        "Base2",
+        "Base3",
+        "Base4",
+        "Base5",
+        "Base6",
+        "Base7",
+        "Base8"
+      ],
+      "visible_dataset_license": "CC BY 4.0",
+      "entity_related_fields_in_captured_metadata": []
+    },
+    "entity_linkage": {
+      "stable_accession_field": "not observed",
+      "gene_or_family_identifier": "not observed",
+      "assembly_locus_or_strand_fields": "not observed",
+      "authoritative_instance_to_entity_mapping": "not found in checked archive or page",
+      "prefix_interpretation": "name-string grouping only; do not label as gene or family"
+    },
+    "label_text_conflict": {
+      "archive": [
+        {
+          "member": "splice.names",
+          "lines": [
+            40,
+            40
+          ],
+          "class_label": "IE",
+          "alias": "donor"
+        },
+        {
+          "member": "splice.names",
+          "lines": [
+            41,
+            41
+          ],
+          "class_label": "EI",
+          "alias": "acceptor"
+        },
+        {
+          "member": "splice.names",
+          "lines": [
+            57,
+            58
+          ],
+          "class_label": "IE",
+          "alias": "acceptor"
+        },
+        {
+          "member": "splice.names",
+          "lines": [
+            58,
+            58
+          ],
+          "class_label": "EI",
+          "alias": "donor"
+        }
+      ],
+      "page": {
+        "location": "Dataset Information > Additional Information > Problem Description",
+        "wording": "IE acceptor; EI donor",
+        "agrees_with_archive_passage": "splice.names lines 57-58"
+      },
+      "archive_labels_retained": [
+        "EI",
+        "IE",
+        "N"
+      ]
+    }
+  },
+  "qualifications": [
+    {
+      "requirement_id": "biological_unit_linkage",
+      "status": "unmet",
+      "reason": "The declared page fields contain no accession/gene/family or locus key, and the checked page/archive provide no authoritative instance-to-entity mapping.",
+      "evidence": [
+        "UCI page Variables Table",
+        "splice.names lines 82-85 and 104; no explicit mapping lines"
+      ]
+    },
+    {
+      "requirement_id": "label_semantics_consistency",
+      "status": "unknown",
+      "reason": "The archive contains conflicting donor/acceptor wording; the current page agrees with one passage but does not resolve the archive internal conflict. EI/IE/N remain archive labels.",
+      "evidence": [
+        "splice.names lines 40-41 and 57-58",
+        "UCI page Problem Description"
+      ]
+    }
+  ],
+  "execution_history": {
+    "binding": {
+      "study_id": "splice",
+      "iteration_id": "resource-readiness-01",
+      "task_id": "qualify-biological-evaluation-units",
+      "gap_id": "biological-unit-linkage"
+    },
+    "attempts": [
+      {
+        "attempt_id": "r01",
+        "task_context": "CURRENT-CONTEXT.json",
+        "consumer_code_snapshot": {
+          "bytes": 29305,
+          "sha256": "72b10cde1407b6938f5c6750050e57c43122fa9f4f2e71267928e23b4b0e6682"
+        },
+        "consumer_argv_after_program": [
+          "--root",
+          ".",
+          "--plan",
+          "output/plan-v1/gap-plan.json",
+          "--acquisition",
+          "preparation/resource-acquisition.json",
+          "--context",
+          "CURRENT-CONTEXT.json",
+          "--out",
+          "output/readiness.json",
+          "--consumption",
+          "output/consumption.json",
+          "--run-receipt",
+          "output/run.receipt.json"
+        ],
+        "runner": {
+          "script": "core/scripts/research_support/run_bounded.py",
+          "out_prefix": "output/run",
+          "timeout_seconds": 60,
+          "memory_limit_mib": 256,
+          "threads": 1
+        },
+        "result": {
+          "status": "nonzero_exit",
+          "exit_code": 2,
+          "wall_seconds": 0.7329036000010092,
+          "reason": "initial consumer expected gap_id in task context; context supplied study_id and iteration_id only",
+          "stop_point": "before opening or parsing ZIP/HTML bytes",
+          "readiness_or_consumption_output_produced": false
+        }
+      },
+      {
+        "attempt_id": "r02",
+        "task_context": "CURRENT-CONTEXT-r02.json",
+        "consumer_code_snapshot": {
+          "bytes": 30095,
+          "sha256": "5cb6f508fc56f718fd8937ffcb0298d4e0704daa677465b8981206acb62814e0"
+        },
+        "consumer_argv_after_program": [
+          "--root",
+          ".",
+          "--plan",
+          "output/plan-v1/gap-plan.json",
+          "--acquisition",
+          "preparation/resource-acquisition.json",
+          "--context",
+          "CURRENT-CONTEXT-r02.json",
+          "--out",
+          "output/readiness.json",
+          "--consumption",
+          "output/consumption.json",
+          "--run-receipt",
+          "output/run-r02.receipt.json"
+        ],
+        "runner": {
+          "script": "core/scripts/research_support/run_bounded.py",
+          "out_prefix": "output/run-r02",
+          "timeout_seconds": 60,
+          "memory_limit_mib": 256,
+          "threads": 1,
+          "result": "success",
+          "exit_code": 0,
+          "wall_seconds": 0.33547990000079153
+        },
+        "result": "Raw UCI archive and page were parsed; readiness outcome was produced. Raw CON used an object keyed by requirement ID, before the published serializer fix."
+      }
+    ],
+    "published_source_after_r02": {
+      "source_identity": {
+        "bytes": 31618,
+        "sha256": "23384f1b6394bbaede6e0b74cfc8d3a32e6804dc78bb1481c424ccc11a29b022"
+      },
+      "serialization": "qualifications list[{requirement_id,status,reason,evidence_locator}]",
+      "validation": {
+        "kind": "metadata-only self-check against the sealed plan and recorded readiness outcome",
+        "status": "passed",
+        "raw_zip_or_html_opened": false,
+        "requirement_count": 2,
+        "status_and_reason_match_outcome": true
+      }
+    },
+    "representation_adapter": {
+      "kind": "task-bound metadata-only conversion after r02; not a third resource-consumer run",
+      "code_identity": {
+        "bytes": 11228,
+        "sha256": "40210d6b27c0c3050201a413d607b643c35eddccb81cbd699ba05944b7ea8a50"
+      },
+      "argv_after_program": [
+        "--root",
+        ".",
+        "--plan",
+        "output/plan-v1/gap-plan.json",
+        "--consumption",
+        "output/consumption.json",
+        "--outcome",
+        "output/readiness.json",
+        "--out",
+        "output/consumption-canonical.json",
+        "--adapter-code",
+        "output/code/normalize_consumption.py",
+        "--run-receipt",
+        "output/normalize.receipt.json"
+      ],
+      "runner": {
+        "script": "core/scripts/research_support/run_bounded.py",
+        "out_prefix": "output/normalize",
+        "timeout_seconds": 60,
+        "memory_limit_mib": 256,
+        "threads": 1,
+        "result": "success",
+        "exit_code": 0,
+        "wall_seconds": 0.3528151999998954
+      },
+      "transformation": "The adapter checked status/reason against readiness, changed qualifications from object to the required two-row list, and added representation_adapter provenance. All other CON fields were retained; CON.run_receipt still points to the actual r02 consumer receipt.",
+      "raw_consumption": {
+        "bytes": 6336,
+        "sha256": "58ddb7dc7e6ee11f08268bb951a99ef38bf4004ef1b125d8ad9584cd1567f6bd",
+        "qualification_representation": "object"
+      },
+      "readiness_outcome": {
+        "bytes": 19647,
+        "sha256": "eea60aeb660d0f5bc2d2bfae22c619feb2bc64214cc74584c266cdba63f42a59"
+      },
+      "canonical_consumption": {
+        "bytes": 2428,
+        "sha256": "34ed7fdae1a296686942c2250d16b17477a65538b4aff540c0d5644e204c93de",
+        "qualification_representation": "list"
+      }
+    },
+    "cumulative_runner_wall_seconds_including_r01_failure_r02_and_adapter": 1.4211987000016961,
+    "model_training_or_scoring": false
+  },
+  "loop_close": {
+    "overall": "pass",
+    "phase": "closed_after_consumption",
+    "decision_gate": "not_met",
+    "decision": "narrow_claim",
+    "qualifications": {
+      "biological_unit_linkage": "unmet",
+      "label_semantics_consistency": "unknown"
+    },
+    "claim_after": "Keep the accepted fixed UCI archive-label classification and explicitly named proxy groups; defer independent gene/family evaluation until a suitable entity-linked resource and a new plan are available.",
+    "reason": "The checked official records do not link windows to authoritative gene/family entities, and the label aliases conflict within the archive."
+  },
+  "overclaim_negative_test": {
+    "result": "expected_rejection",
+    "submitted_action": "retain_claim",
+    "submitted_claim": "The existing archive supports gene/family-independent generalization.",
+    "close_overall": "fail",
+    "failed_checks": [
+      {
+        "id": "decision.allowed_branch",
+        "detail": "decision action is not allowed for not_met gate"
+      },
+      {
+        "id": "decision.qualification_safety",
+        "detail": "unmet/unknown requirements cannot retain a claim"
+      }
+    ]
+  },
+  "next_eligible_use": {
+    "current_use": "Historical 60-nt window classification; sequence/name groups remain proxies.",
+    "gene_family_holdout_prerequisite": "A licensed/versioned resource with authoritative stable window-to-entity links, assembly, locus coordinates, and strand; preserve one-to-many mappings and unknowns.",
+    "preserve_archive_labels": [
+      "EI",
+      "IE",
+      "N"
+    ]
+  }
+}

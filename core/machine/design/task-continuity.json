@@ -1,0 +1,213 @@
+{
+  "schema": "harness.task-continuity-design/v1",
+  "decision_id": "D51",
+  "date": "2026-10-22",
+  "state": "implemented_and_locally_validated",
+  "trigger": "A followup task with prior deliveries, a context recovery, a new execution root, or multiple research iterations.",
+  "source_observation": {
+    "id": "case:yeast-vac-followup-recovery",
+    "availability": "private_archive",
+    "result": "A Stage B turn prepared followup code, then after context compaction rechecked the old first delivery and ended without the requested new computation.",
+    "record": "machine/reviews/2026-10-case-chat-archive/current-case-status.json"
+  },
+  "choice": "Optional explicit task context plus prelaunch and current-delivery checks.",
+  "alternatives": [
+    "A short handoff for a simple, single-use task.",
+    "An existing scheduler or research platform with equivalent task identity, provenance and completion handling."
+  ],
+  "binding_fields": [
+    "study_id",
+    "iteration_id",
+    "task_id",
+    "objective",
+    "phase",
+    "next_gate",
+    "work_root",
+    "entry",
+    "plan",
+    "output_root",
+    "completion"
+  ],
+  "interfaces": {
+    "module": "scripts.research_support.task_context",
+    "operations": [
+      "init",
+      "check",
+      "delivery"
+    ],
+    "runner_flags": [
+      "--task-root",
+      "--task-context",
+      "--study-id",
+      "--iteration-id"
+    ],
+    "backward_compatibility": "The runner's legacy interface and the existing plan_seal READY schema remain unchanged. All four task flags are used together.",
+    "version_change": "Context is a stable task contract, not a mutable progress log. Runs and progress reference the same context. A scope, plan or authority change creates a new context; historical runs become explicitly selected prior evidence rather than newly executed runs under the new context.",
+    "schemas": {
+      "spec": "research-support.task-spec.v1",
+      "context": "research-support.task-context.v1",
+      "check_report": "research-support.task-context-check.v1",
+      "delivery": "research-support.task-delivery.v1",
+      "delivery_report": "research-support.task-delivery-check.v1",
+      "bounded_run": "bounded-run-receipt.v1"
+    },
+    "cli": {
+      "init": "task_context.py init --root ROOT --spec SPEC --out CONTEXT",
+      "check": "task_context.py check --root ROOT --context CONTEXT --study-id ID --iteration-id ID [--out RECEIPT]",
+      "delivery": "task_context.py delivery --root ROOT --context CONTEXT --study-id ID --iteration-id ID [--out RECEIPT]"
+    },
+    "functions": {
+      "init_task_context": "init_task_context(root, spec_path, out_path)",
+      "check_task_context": "check_task_context(root, context_path, study_id, iteration_id, cwd=None, out_prefix=None)",
+      "check_task_delivery": "check_task_delivery(root, context_path, study_id, iteration_id)",
+      "check_bound_run_receipt": "check_bound_run_receipt(receipt_path, *, context_binding, expected_cwd)"
+    },
+    "spec_contract": {
+      "required_fields": [
+        "schema",
+        "study_id",
+        "iteration_id",
+        "task_id",
+        "objective",
+        "phase",
+        "next_gate",
+        "entry",
+        "output_root",
+        "completion"
+      ],
+      "optional_fields": [
+        "plan"
+      ],
+      "identity_text_fields": [
+        "study_id",
+        "iteration_id",
+        "task_id",
+        "objective",
+        "phase",
+        "next_gate"
+      ],
+      "entry_and_plan": "Root-relative paths to existing JSON files; plan may be omitted. Exact bytes and SHA-256 are frozen in the context.",
+      "output_root": "Root-relative directory; it may be created later.",
+      "completion": {
+        "delivery": "Root-relative future file path whose basename must be TASK-DELIVERY.json; it need not exist during init.",
+        "requirements": "{id,role,path,evidence_kind} entries with unique non-empty id, non-empty role, root-relative path inside output_root, and evidence_kind=file|bounded-run."
+      }
+    },
+    "context_snapshot": {
+      "fields": [
+        "schema",
+        "created_utc",
+        "work_root",
+        "study_id",
+        "iteration_id",
+        "task_id",
+        "objective",
+        "phase",
+        "next_gate",
+        "spec",
+        "spec_identity",
+        "declared_identity"
+      ],
+      "declared_identity": "Entry and optional plan path, byte count, and SHA-256; the JSON bytes are read once for parse and identity.",
+      "check": "Checks context schema and embedded spec consistency, stored work_root against the supplied root, independent expected study_id/iteration_id, and unchanged entry/plan identities."
+    },
+    "path_resolution": {
+      "relative_paths": "Every relative spec, context, entry, plan, output_root, delivery, requirement, and report path resolves from the supplied work_root, never from process cwd.",
+      "explicit_absolute_inputs": "Absolute spec and context inputs are accepted; an absolute context still must embed the same work_root. Absolute init/report outputs are accepted only when contained by work_root.",
+      "containment": "Root-bound paths reject traversal or symlink resolution outside work_root. init output and optional check/delivery --out are exclusive new files."
+    },
+    "state_model": {
+      "context": "Stable, immutable identity/scope snapshot. phase and next_gate are the values captured at init.",
+      "progress": "Run receipts, check receipts, delivery records, and resource-loop reports are separate records; they do not mutate or refresh the context.",
+      "revision": "A change to scope, plan, authority, phase, or next_gate requires a new context snapshot. Older run receipts remain historical evidence under their original binding."
+    },
+    "runner_binding": {
+      "flags": [
+        "--task-root",
+        "--task-context",
+        "--study-id",
+        "--iteration-id"
+      ],
+      "all_or_none": true,
+      "prelaunch": "The runner checks the context, cwd, and out_prefix before creating output directories, capturing assets, or launching the child.",
+      "child_environment": [
+        "HARNESS_STUDY_ID",
+        "HARNESS_ITERATION_ID",
+        "HARNESS_TASK_CONTEXT"
+      ],
+      "receipt_binding": [
+        "study_id",
+        "iteration_id",
+        "task_id",
+        "context_path",
+        "context_sha256"
+      ],
+      "bounded_run_check": "Requires bounded-run-receipt.v1, success with exit code zero, positive root_pid, command.cwd equal to work_root, and an exact current task/context binding."
+    },
+    "delivery_contract": {
+      "artifact_shape": "{requirement_id,path,bytes,sha256}, exactly one artifact per selected requirement and no unexpected requirement IDs.",
+      "file_evidence": "Current file bytes and SHA-256 must match the delivery declaration.",
+      "bounded_run_evidence": "The referenced current bounded-run receipt must satisfy the same success, PID, cwd, and task-binding checks.",
+      "result_fields": [
+        "delivery_ready",
+        "checks",
+        "identity",
+        "scientific_acceptance"
+      ],
+      "scientific_acceptance": "not_assessed"
+    }
+  },
+  "completion": {
+    "scope": "Only the requirements selected by the current task spec; roles remain task-specific.",
+    "real_execution": "A selected bounded-run requirement must bind a successful zero-exit run with a positive root PID and matching cwd/task context.",
+    "result": "delivery_ready with scientific_acceptance=not_assessed; scientific judgement is a separate review."
+  },
+  "limits": [
+    "This is an explicit tool contract, not an automatic Codex compaction hook.",
+    "Invocation with an incorrectly selected authority can still be wrong; the researcher must reconcile current authorization and entry at recovery.",
+    "Task-context checking does not validate biological semantics or establish a causal Harness benefit."
+  ],
+  "acceptance": {
+    "status": "implemented_and_locally_validated",
+    "evidence": [
+      {
+        "kind": "regression_tests",
+        "availability": "private_workspace_receipt; test modules are in the public tree",
+        "record": "machine/reviews/2026-10-resource-loop-iteration/implementation-tests.json",
+        "latest_run": {
+          "run_id": "2026-10-resource-loop-update-plan-policy",
+          "scope": [
+            "core/tests/test_task_context.py",
+            "core/tests/test_resource_loop.py"
+          ],
+          "counts": {
+            "total": 23,
+            "task_context": 8,
+            "resource_loop": 15
+          },
+          "result": "passed",
+          "real_bounded_child": true
+        }
+      },
+      {
+        "kind": "Splice_task_delivery",
+        "availability": "private_pilot_record",
+        "record": "references/pilots/2026-10-splice-resource-loop/output/task-delivery-check.json",
+        "schema": "research-support.task-delivery-check.v1",
+        "overall": "pass",
+        "delivery_ready": true,
+        "checks": {
+          "passed": 24,
+          "failed": 0
+        },
+        "binding": {
+          "study_id": "splice",
+          "iteration_id": "resource-readiness-01",
+          "task_id": "qualify-biological-evaluation-units"
+        },
+        "scientific_acceptance": "not_assessed"
+      }
+    ],
+    "scientific_acceptance": "not_assessed"
+  }
+}

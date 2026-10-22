@@ -1,0 +1,364 @@
+{
+  "schema": "harness.resource-gap-loop-design/v1",
+  "decision_id": "D52",
+  "date": "2026-10-22",
+  "state": "implemented_and_locally_validated",
+  "placement": {
+    "selected": "A conditional research-control capability within Harness.",
+    "reason": "It reuses Task, Artifact, Run and Decision, and current evidence is concentrated on model research. Keeping those objects together allows the first control policies to be tested before generalizing to an outer framework.",
+    "considered": "A broader methodology platform with the current Harness as an execution component.",
+    "future_extraction_condition": "Several research domains demonstrate reusable control semantics and independent maintenance needs.",
+    "host_interface": "An external workbench can call the same loop and task interfaces without moving their evidence contracts."
+  },
+  "roles": {
+    "theory_and_human": "Select question, intended use, resource value, acceptable cost, claim scope and scientific acceptance.",
+    "application": "Define resource requirements, source criteria, use point, selected checks, alternatives, conditions and next task.",
+    "execution": "Acquire bounded resources, preserve source identity, run declared consumers and return actual observations."
+  },
+  "stages": [
+    {
+      "id": "gap",
+      "output": "Affected claim or use; missing information and why it matters."
+    },
+    {
+      "id": "value",
+      "output": "Acquire/defer/narrow/stop choice, reason, alternatives and budget."
+    },
+    {
+      "id": "acquire",
+      "output": "Actual attempts, source/version/license, resources and failures."
+    },
+    {
+      "id": "qualify",
+      "output": "Purpose-specific met/unmet/unknown findings, coverage, ambiguity and conflicts."
+    },
+    {
+      "id": "consume",
+      "output": "Declared information use, real consumer, bound run, resource reads and output."
+    },
+    {
+      "id": "decide",
+      "output": "Retain/update/narrow/defer/stop, claim before/after, reasons and next gate."
+    }
+  ],
+  "policy": {
+    "conditional_trigger": true,
+    "universal_coverage_threshold": false,
+    "mapping_is_not_required_for_all_studies": true,
+    "unknown_is_not_negative": true,
+    "typed_entities": "Gene/transcript/protein/family/domain and name/similarity proxy groups remain distinct.",
+    "partial_coverage": "Inspect selection differences and compare grouping on common samples where appropriate.",
+    "post_result_acquisition": "Record prior result exposure and the actual timing of plan revisions; avoid treating adaptive changes as prospective choices.",
+    "stop": "Bound sources, download volume, runtime and number of attempts or rounds per study. Unknown cost stays unknown.",
+    "scientific_acceptance": "Separate purpose-specific scientific judgement from structural and execution checks.",
+    "plan_revision_after_unmet_gate": "Allowed only when the selected gate branch permits it, with explicit change reason, affected requirements and next validation. Qualification remains unmet/unknown. Unknown or exceeded cost additionally requires execution_authorized=false."
+  },
+  "minimal_implementation": {
+    "module": "scripts.research_support.resource_loop",
+    "function": "Connect the frozen gap/value plan, acquired resources, actual consumption and explicit decision; check identity, selected gates and budget accounting.",
+    "acquisition_adapter": "An explicitly selected database/client/download operation; no open-ended autonomous downloader.",
+    "task_interface": "Use D51 for current study/iteration/root and a real bounded consumer run.",
+    "early_exit": "A low-value/defer/stop choice may close before acquisition and is labeled separately from an executed resource-consumption loop."
+  },
+  "pilot": {
+    "case": "Splice resource readiness for gene/family-level evaluation",
+    "status": "closed_after_consumption",
+    "sources_checked": [
+      "https://archive.ics.uci.edu/dataset/69/molecular-biology-splice-junction-gene-sequences",
+      "https://archive.ics.uci.edu/static/public/69/molecular%2Bbiology%2Bsplice%2Bjunction%2Bgene%2Bsequences.zip"
+    ],
+    "question": "Can the inspected resource establish biological evaluation units, or should the task remain fixed-archive label prediction with proxy groups?",
+    "first_scope": "Readiness and claim-scope decision; no new model performance or biological mapping is implied.",
+    "evidence_availability": "Raw retrieval and execution evidence remain in the private research archive; a public reusable consumer and sourced summary will accompany acceptance.",
+    "observed_execution": {
+      "availability": "private_workspace_evidence",
+      "record": "machine/reviews/2026-10-resource-loop-iteration/splice-execution-r02.json",
+      "attempt_id": "r02",
+      "result": "success",
+      "root_exit_code": 0,
+      "task_binding": {
+        "study_id": "splice",
+        "iteration_id": "resource-readiness-01",
+        "task_id": "qualify-biological-evaluation-units"
+      },
+      "observations": {
+        "archive_record_count": 3190,
+        "page_declared_instance_count": 3190,
+        "page_declared_feature_count": 60,
+        "authoritative_instance_to_gene_family_or_locus_mapping_found": false,
+        "qualification_statuses": [
+          {
+            "requirement_id": "biological_unit_linkage",
+            "status": "unmet",
+            "basis": "The inspected page/archive did not provide an authoritative instance-to-entity mapping."
+          },
+          {
+            "requirement_id": "label_semantics_consistency",
+            "status": "unknown",
+            "basis": "The archive's donor/acceptor wording conflict remained unresolved; EI/IE/N were retained as archive labels."
+          }
+        ],
+        "boundary": "Readiness and claim scope only; no model training/scoring or biological mapping."
+      }
+    },
+    "representation_adapter": {
+      "availability": "private_workspace_evidence",
+      "record": "machine/reviews/2026-10-resource-loop-iteration/consumption-representation-adapter.json",
+      "operation": "Read-only metadata representation conversion, not a third resource-consumer run.",
+      "canonical_consumption": "references/pilots/2026-10-splice-resource-loop/output/consumption-canonical.json",
+      "lineage_preserved": [
+        "raw_consumption",
+        "outcome",
+        "adapter_code",
+        "adapter_run_receipt"
+      ],
+      "raw_consumption_unchanged": true,
+      "qualification_list_matches_outcome": true
+    },
+    "task_delivery": {
+      "availability": "private_pilot_record",
+      "record": "references/pilots/2026-10-splice-resource-loop/output/task-delivery-check.json",
+      "overall": "pass",
+      "delivery_ready": true,
+      "checks": {
+        "passed": 24,
+        "failed": 0
+      },
+      "scientific_acceptance": "not_assessed"
+    },
+    "loop_closure": {
+      "status": "closed_after_consumption",
+      "availability": "private_pilot_record",
+      "record": "references/pilots/2026-10-splice-resource-loop/output/loop-close.json",
+      "identity": {
+        "bytes": 17452,
+        "sha256": "d574d88d714aa264caa30c648a0a9f48a727275194fc09622ef68cedb01e58a3"
+      },
+      "created_utc": "2026-10-22T11:23:40.284+00:00",
+      "overall": "pass",
+      "decision_gate": "not_met",
+      "decision": "narrow_claim",
+      "checks": {
+        "passed": 59,
+        "failed": 0
+      },
+      "qualifications_remain": [
+        "biological_unit_linkage:unmet",
+        "label_semantics_consistency:unknown"
+      ],
+      "scientific_acceptance": "not_assessed"
+    },
+    "counterexample": {
+      "availability": "private_pilot_record",
+      "record": "references/pilots/2026-10-splice-resource-loop/output/loop-overclaim-rejected.json",
+      "overall": "fail",
+      "attempted_action": "retain_claim",
+      "rejected_checks": [
+        "decision.allowed_branch",
+        "decision.qualification_safety"
+      ],
+      "scientific_acceptance": "not_assessed"
+    }
+  },
+  "acceptance": {
+    "status": "implemented_and_locally_validated",
+    "implementation_test_evidence": {
+      "availability": "private_workspace_receipt; test modules are in the public tree",
+      "record": "machine/reviews/2026-10-resource-loop-iteration/implementation-tests.json",
+      "latest_run": {
+        "run_id": "2026-10-resource-loop-update-plan-policy",
+        "scope": [
+          "core/tests/test_resource_loop.py",
+          "core/tests/test_task_context.py"
+        ],
+        "counts": {
+          "total": 23,
+          "resource_loop": 15,
+          "task_context": 8
+        },
+        "result": "passed",
+        "real_bounded_child": true
+      }
+    },
+    "pilot_evidence": {
+      "task_delivery_ready": true,
+      "loop_close_overall": "pass",
+      "loop_close_phase": "closed_after_consumption",
+      "scientific_acceptance": "not_assessed"
+    }
+  },
+  "interfaces": {
+    "module": "scripts.research_support.resource_loop",
+    "cli": "resource_loop.py close --root ROOT --plan PLAN --context CONTEXT --study-id ID --iteration-id ID [--acquisition ACQ] [--consumption CON] --decision DEC --out REPORT",
+    "function": "evaluate_resource_loop(root, plan_path, context_path, study_id, iteration_id, acquisition_path=None, consumption_path=None, decision_path=None)",
+    "close_route_requirements": {
+      "acquire": "Acquisition and consumption records are both required; a bound successful consumer run is required by CON.run_receipt.",
+      "early_exit": "For value.action=defer|narrow_claim|stop, omit acquisition and consumption, provide DEC matching the selected action with consumption_sha256=null; report phase=closed_before_acquisition.",
+      "decision_cli": "--decision is always required by the CLI; --acquisition and --consumption are optional only for the early-exit route.",
+      "output": "--out is root-relative, root-contained, and exclusive."
+    },
+    "path_resolution": {
+      "plan_acquisition_consumption_decision_and_out": "Relative paths resolve from --root, not process cwd; these paths must remain root-contained. --out must be a new file.",
+      "context": "Relative context resolves from --root; an explicit absolute context is accepted only as a file whose embedded work_root matches --root.",
+      "json_identity": "Records are parsed together with their byte identity; current file identities are checked rather than refreshing frozen declarations."
+    },
+    "domain_identity": {
+      "generic_task_context": [
+        "study_id",
+        "iteration_id",
+        "task_id"
+      ],
+      "gap_id_source": "research-support.resource-gap-plan.v1.gap_id; gap_id is domain-specific and is not required in the generic task context.",
+      "related_record_ids": "Acquisition, consumption, and decision study_id/iteration_id/gap_id must match the plan; expected study_id/iteration_id are independently supplied to the checker."
+    },
+    "record_contracts": {
+      "plan": {
+        "schema": "research-support.resource-gap-plan.v1",
+        "fields": [
+          "study_id",
+          "iteration_id",
+          "gap_id",
+          "target_claim",
+          "gap",
+          "affected_use",
+          "value",
+          "budget_limits",
+          "resource_ids",
+          "requirements",
+          "allowed_decisions"
+        ],
+        "value": {
+          "action": [
+            "acquire",
+            "defer",
+            "narrow_claim",
+            "stop"
+          ],
+          "reason": "non-empty text",
+          "alternatives": "array of non-empty text items"
+        },
+        "budget_limits": "Named finite non-negative numeric metrics.",
+        "resource_ids": "Unique non-empty text IDs; acquire requires at least one.",
+        "requirements": "{id,description} with unique non-empty id and non-empty description; acquire requires at least one.",
+        "allowed_decisions": {
+          "all_met": "unique subset of retain_claim|update_plan|narrow_claim|defer|stop",
+          "not_met": "unique subset of retain_claim|update_plan|narrow_claim|defer|stop"
+        }
+      },
+      "acquisition": {
+        "schema": "research-support.resource-acquisition.v1",
+        "fields": [
+          "study_id",
+          "iteration_id",
+          "gap_id",
+          "plan_sha256",
+          "resources",
+          "observed_usage",
+          "attempts"
+        ],
+        "resources": "Exactly the plan-selected resource IDs, each with root-relative path, bytes, sha256, and source.url/version/license/retrieved_at.",
+        "source_unknowns": "Unknown source values must be explicit non-empty text.",
+        "observed_usage": "Metric names exactly match budget_limits; values are finite non-negative numbers or JSON null. Null remains unknown and is never converted to zero.",
+        "attempts": "Actual attempt records; recorded attempts are not inferred from null or missing accounting."
+      },
+      "consumption": {
+        "schema": "research-support.resource-consumption.v1",
+        "required_fields": [
+          "study_id",
+          "iteration_id",
+          "gap_id",
+          "plan_sha256",
+          "context_sha256",
+          "resource_reads",
+          "run_receipt",
+          "qualifications",
+          "evaluation_role",
+          "outputs"
+        ],
+        "qualifications": "A list of exactly one {requirement_id,status,reason,evidence_locator} per plan requirement; status is met|unmet|unknown and reason/evidence_locator are non-empty.",
+        "resource_reads": "Exactly one per selected resource, with acquisition-matching root-relative path, bytes, and sha256; current file identity must still match.",
+        "run_receipt": "Root-relative bounded-run-receipt.v1 that records success/exit 0, positive root PID, work-root cwd, and current task-context binding.",
+        "evaluation_role": [
+          "readiness",
+          "split",
+          "performance",
+          "interpretation"
+        ],
+        "outputs": "One or more root-relative output file identities {path,bytes,sha256}, checked against current bytes.",
+        "optional_representation_adapter": {
+          "field": "representation_adapter",
+          "required": false,
+          "when_present": {
+            "raw_consumption": "{path,bytes,sha256} for the unchanged source record",
+            "outcome": "{path,bytes,sha256} for the domain outcome retaining rich evidence",
+            "adapter_code": "{path,bytes,sha256}",
+            "adapter_run_receipt": "Root-relative receipt for the metadata conversion run"
+          },
+          "purpose": "Preserve the source-to-derived-record relationship when a domain record is converted to the generic qualification-list representation.",
+          "limits": "Keep the original record unchanged; keep CON.run_receipt bound to the actual consumer. The representation adapter is not a replacement consumer run and does not establish scientific acceptance.",
+          "generic_validation": "The generic loop validates the canonical CON bytes and its declared outputs/run binding; adapter-specific lineage is explicit producer metadata and is not independently interpreted as a scientific result."
+        }
+      },
+      "decision": {
+        "schema": "research-support.resource-decision.v1",
+        "required_fields": [
+          "study_id",
+          "iteration_id",
+          "gap_id",
+          "plan_sha256",
+          "consumption_sha256",
+          "action",
+          "reason",
+          "claim_before",
+          "claim_after",
+          "next_step"
+        ],
+        "consumption_sha256": "Exact CON bytes on acquire routes; JSON null for a validated early exit.",
+        "actions": [
+          "retain_claim",
+          "update_plan",
+          "narrow_claim",
+          "defer",
+          "stop"
+        ],
+        "gate": "The report selects all_met only when qualification records are complete/all met and budget is within limit or not declared; otherwise it selects not_met. The chosen action must be in that plan branch.",
+        "retain_claim": "Rejected when any required qualification is unmet/unknown or cost is unknown/over limit.",
+        "update_plan": {
+          "required": "Only when this action is selected.",
+          "plan_change": {
+            "reason": "non-empty text",
+            "affected_requirement_ids": "non-empty unique IDs from this plan's requirements",
+            "next_validation": "non-empty text",
+            "execution_authorized": "optional boolean; must be false when budget is unknown or over limit"
+          },
+          "gate_preservation": "A plan change leaves qualification statuses unchanged, reports outstanding unmet/unknown requirements, and marks requires_new_validation=true; it does not satisfy the gate.",
+          "cost_limit": "Unknown or over-limit cost permits only a non-executing plan revision with execution_authorized=false; it does not authorize more computation."
+        },
+        "other_actions": "narrow_claim, defer, and stop remain available only when the selected plan branch allows them."
+      },
+      "report": {
+        "schema": "research-support.resource-loop-report.v1",
+        "fields": [
+          "overall",
+          "phase",
+          "study_id",
+          "iteration_id",
+          "gap_id",
+          "decision_gate",
+          "checks",
+          "identities",
+          "qualifications",
+          "budget",
+          "decision",
+          "scientific_acceptance"
+        ],
+        "phases": [
+          "closed_before_acquisition",
+          "closed_after_consumption",
+          "incomplete"
+        ],
+        "scientific_acceptance": "Always not_assessed; a passing structural/execution report is not scientific acceptance."
+      }
+    }
+  }
+}

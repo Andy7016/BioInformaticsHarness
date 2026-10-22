@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-note/v1",
+  "human_path": "docs/REFERENCES-AND-DESIGN.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D51-D52",
+      "date": "2026-10-22",
+      "reason": "Adds recovery/source/endpoint relationships and a traceable implementation path.",
+      "new_sources_or_designs": [
+        "D51",
+        "D52"
+      ],
+      "technical_records": [
+        "core/machine/design/task-continuity.json",
+        "core/machine/design/resource-gap-loop.json"
+      ],
+      "acceptance": "local-interface-and-resource-readiness-validation"
+    }
+  ]
+}

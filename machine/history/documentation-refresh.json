@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-22",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+    "head": "1eab02afa9c503a74cb3b4005814e7c95b26e670",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 1246,
-      "current_sha256": "d9ad5e96c44229e6857d53514264150b45ca30c518eb764009b389a5278431fc"
+      "current_bytes": 1734,
+      "current_sha256": "deb383ac9f411fda9f53264a4b5310acdade0f4269b011ecfccab22d8dd8795d"
     },
     {
       "path": "LICENSING.md",
@@ -63,8 +63,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:ROADMAP.zh.md",
       "previous_sha256": "f3302d833b016dd8fe549b36a94a3d4adc88c241e78eb926cc381508844f15b4",
-      "current_bytes": 1236,
-      "current_sha256": "3dc818af50cc1934d15faa8ac3d11c66f7889f98b4560249ecfe5b2c92d29bbe"
+      "current_bytes": 2290,
+      "current_sha256": "7cca266f0dd063163ec850af6566b69836029bd3a3bb15b8f90b1f299e8468d2"
     },
     {
       "path": "core/EVIDENCE.zh.md",
@@ -99,8 +99,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/README.md",
       "previous_sha256": "c08f6f22d7102790d613cb0c5a1775a9130a6744a6f334d23ce6bd611d5c3fc3",
-      "current_bytes": 2373,
-      "current_sha256": "f37315d0f1049d429d14801e6cd0fe46c0d4d2b83206643e19ab4589f29bac3e"
+      "current_bytes": 2721,
+      "current_sha256": "bbfcdc3c330d05f46cca5035e6a998c7266349917f252ab06e63e5a6615423fc"
     },
     {
       "path": "core/REFERENCES.bib",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 167891,
-      "current_sha256": "6bb568c0244b9713353b96b98227b313a8d75a396485c07b232e53042cb7dbc3"
+      "current_bytes": 175420,
+      "current_sha256": "d073d1b3952d4f5ad1e5f256143bcbd9089564597c5bad4f122b4130a1a5522c"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -355,13 +355,27 @@
       "current_sha256": "bfef8cd47da272471e1d661422907e7d1e1adbf77bfb5acab342924dee9bf393"
     },
     {
+      "path": "core/docs/design/28-task-continuity-and-current-delivery.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2495,
+      "current_sha256": "f80cd19dd613160124addc76dac2d6deb5ac47ba7d1a172608815eebcefe5a46"
+    },
+    {
+      "path": "core/docs/design/29-evidence-gap-control.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3745,
+      "current_sha256": "3382a81e55b05b8ca8f1591eaae8184b96bee3f0ae083d74c61f621bec2c62b2"
+    },
+    {
       "path": "core/docs/methods/README.md",
       "change": "modified",
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 9394,
-      "current_sha256": "d2fb7ce8ad12743853161ad68af83b7c307beac9622b9611b637654e31c5028f"
+      "current_bytes": 9846,
+      "current_sha256": "eec30aaac2019de95ce3180100b3170ce3b2cd6d42d10ba354d2bcb6127d99ac"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -585,8 +599,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/receiving-research-work.md",
       "previous_sha256": "f1cdce601ce3f7bf9b4048dcdafeaf2dcf394b4954dcff86608ba2424f00f882",
-      "current_bytes": 6692,
-      "current_sha256": "98177b4bac1c582127b3cfa735c04d725a485860fe49514b641f2b66dc1e8638"
+      "current_bytes": 7013,
+      "current_sha256": "a4a1b66cf942469965523bf6a012d86951c68e85f06c8a5a19a02b01e6ac8c5e"
+    },
+    {
+      "path": "core/docs/methods/guides/resource-gap-loop.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2460,
+      "current_sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0"
     },
     {
       "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
@@ -625,6 +646,13 @@
       "current_sha256": "87830e215d281b0b9a8f02f0e1b178791fdb859ba4ea94c2f617ee49abfd7c33"
     },
     {
+      "path": "core/docs/methods/guides/task-continuity.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2573,
+      "current_sha256": "0c4d62c32cf4eaefbd8b70b15ddc7f5eb83d468bbc55546ff05c46142186f931"
+    },
+    {
       "path": "core/docs/methods/handoff-contract.md",
       "change": "modified",
       "baseline_revision": "764bd88",
@@ -657,8 +685,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/research-support-tools.md",
       "previous_sha256": "45a9622621b6f53303fd6432260868cd7cde59b844151fb6fa1d781d09e2fd9b",
-      "current_bytes": 7510,
-      "current_sha256": "74d92daab5d0fe0ec173788af6941e322caa3924ffd5347ca5f7163f2799275a"
+      "current_bytes": 8136,
+      "current_sha256": "f87fd5cde1fa5d7bbbde1c53bc1e9b617446c37dc91d8e9057a23a13f1b5e16f"
     },
     {
       "path": "core/docs/methods/review-receipt.md",
@@ -769,6 +797,20 @@
       "current_sha256": "5ce599d21c8c4d1161564a31c7342da477f5ec266de0872d15600266d73851d4"
     },
     {
+      "path": "core/machine/design/resource-gap-loop.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 18093,
+      "current_sha256": "f497db20d075fe31151f3d38b21add47952342ce73043cf3985ca5f01c376260"
+    },
+    {
+      "path": "core/machine/design/task-continuity.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9522,
+      "current_sha256": "975a95d461616e4fe02d8acefed51f2aebacda4f145e5ad6c8bf6d83594278eb"
+    },
+    {
       "path": "core/references.json",
       "change": "modified",
       "baseline_revision": "764bd88",
@@ -776,6 +818,43 @@
       "previous_sha256": "8318cb07560d6d55e8e00a501bd9c9bbf73483b0de9fb64909e1f0c3e6545eef",
       "current_bytes": 64341,
       "current_sha256": "3a0296ec6a36f24d034647040e1d9adb02810fb46a6c83e3eeb30ab009efbf5e"
+    },
+    {
+      "path": "core/scripts/research_support/resource_loop.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 49957,
+      "current_sha256": "c7811e1d9261e366b00cf6028aa5211b724b5249c938568a01b1a25f3fae817e"
+    },
+    {
+      "path": "core/scripts/research_support/run_bounded.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/run_bounded.py",
+      "previous_sha256": "fe8729458c65f293ccfdfec3435115790b09efe705e094fd0a85dfdebbed682c",
+      "current_bytes": 21574,
+      "current_sha256": "a0246bc3e285f8ea49fabd9aaefc4de65a04c76712bf423cf100e9302b11e2af"
+    },
+    {
+      "path": "core/scripts/research_support/task_context.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 29461,
+      "current_sha256": "e99543e449c9cfcbc4458ca25249d00e559c2f9643a044e862bdaadb0f162c92"
+    },
+    {
+      "path": "core/tests/test_resource_loop.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 26900,
+      "current_sha256": "fea6533e2f61d31485d335ac48f4354676138091c75d593ce524023fd3392a28"
+    },
+    {
+      "path": "core/tests/test_task_context.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 23116,
+      "current_sha256": "0c728c5be7b9ff09c6907b797e506c9c7170a7c3acb3d0c6538df70a7a8a3e10"
     },
     {
       "path": "docs/DOCUMENTATION.md",
@@ -788,8 +867,8 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 56054,
-      "current_sha256": "0393bdc4e7e698ad39da855f77edb249cd75605f741921451080407d2a547dc4"
+      "current_bytes": 57647,
+      "current_sha256": "b91ae2c85c9169c8d939d3f4dcc84b58bc4f13ae9cff1fe0b23096a65f931be1"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -797,8 +876,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:docs/history/EVOLUTION.zh.md",
       "previous_sha256": "6a03308d8feb858189981fb6c32221cd809c2a5950168f40bf36e5e55abc5823",
-      "current_bytes": 4280,
-      "current_sha256": "d95f9db5e5013545e53d350c623152a0ee5fab9643b3652e1ee0fb0eca14e1df"
+      "current_bytes": 5322,
+      "current_sha256": "ba5a0901d474b4074d7819b4d21982daae8bbfe2911506cfa1d8a973ae36e614"
+    },
+    {
+      "path": "docs/plans/RESOURCE-COMPLETION.zh.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3846,
+      "current_sha256": "ab0d034acd3ddb275d09db70f3ca6877215319160d3bf412769af95459591b22"
     },
     {
       "path": "examples/splice/CASE-MANIFEST.json",
@@ -806,8 +892,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:examples/splice/CASE-MANIFEST.json",
       "previous_sha256": "8ffeb3f7e193f5f6d0b63fcc7eac7224f731892afd12a42821b8fd262f71cc17",
-      "current_bytes": 9839,
-      "current_sha256": "948940b3a4d424c0c7978423caa3396b4a25e12766f7479b060d29a9082c29df"
+      "current_bytes": 10607,
+      "current_sha256": "77f2d473370048a668d6e4b0dac2549704b32ad0f79747db867185c9640aa193"
     },
     {
       "path": "examples/splice/README.md",
@@ -815,8 +901,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:examples/splice/README.md",
       "previous_sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24",
-      "current_bytes": 3092,
-      "current_sha256": "395c208a6a3f0a61bb0fe4e478308acb05efb6a4c98d7271e59073e68836241d"
+      "current_bytes": 5228,
+      "current_sha256": "426aa35d02251d81ce59dfdfacaa1ede78221e3caa3c345754b7c918bde99412"
+    },
+    {
+      "path": "examples/splice/resource_readiness.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 31618,
+      "current_sha256": "23384f1b6394bbaede6e0b74cfc8d3a32e6804dc78bb1481c424ccc11a29b022"
     },
     {
       "path": "examples/yeast/CASE-MANIFEST.json",
@@ -854,8 +947,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2089,
-      "current_sha256": "abd19581d2fb4b0e57ceeb140d1c2031c5342ac3b6bce563db9064ada5339ef1"
+      "current_bytes": 2583,
+      "current_sha256": "e4dc0adeb551d1eedd57f7d0b2f9bd9be6bbbd047d0c8e217d53cdb044986fbd"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -882,8 +975,8 @@
       "path": "machine/document-notes/ROADMAP.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2066,
-      "current_sha256": "094b967a03b748091e26d44efd99f6f6f6d80100c278e73f33a2aae8b34916f5"
+      "current_bytes": 2576,
+      "current_sha256": "927cf3ebafa75835a6e80eada0d78479e449a17d881ac35654c0c1d1e200e129"
     },
     {
       "path": "machine/document-notes/core/EVIDENCE.zh.md.json",
@@ -910,8 +1003,8 @@
       "path": "machine/document-notes/core/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2554,
-      "current_sha256": "addfc331f23d69879c57f858f566c983274ece3a8ca01ae384a5aba6779eb1eb"
+      "current_bytes": 3019,
+      "current_sha256": "17ebd12c9c67048f3685b5cef37bfdb2889717e03c16fdbbd2377ec810dbab92"
     },
     {
       "path": "machine/document-notes/core/REFERENCES.md.json",
@@ -1096,11 +1189,25 @@
       "current_sha256": "55744aa36b2b8389427c2b26b6bf57923f39ad27ef5c53d608124bfa06ae0af5"
     },
     {
+      "path": "machine/document-notes/core/docs/design/28-task-continuity-and-current-delivery.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 647,
+      "current_sha256": "4ac6910b6e34c5cb8e5921f2649ad6f17d8ffe9f9de0805394a7ae21f7229139"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/29-evidence-gap-control.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 627,
+      "current_sha256": "890bbb70c69df61810747687f3b90ab182aba3402334f6eef8f8d54e7d7a5b06"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 23548,
-      "current_sha256": "34f794f16b948837f17a5d6eb9db4fd7214fb2ca92ef73b27c0b6e96bbbd149d"
+      "current_bytes": 24048,
+      "current_sha256": "0a4f1f2f310a6b41d874d565ba7788753b2e9f6654f33da94a0c91eb4df319dd"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -1274,8 +1381,15 @@
       "path": "machine/document-notes/core/docs/methods/guides/receiving-research-work.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8866,
-      "current_sha256": "6dcd552316e24e670d0069719664131e219f6833c67019edafd05991df0e9a80"
+      "current_bytes": 9364,
+      "current_sha256": "d162555f7bd40b47e74884a0c8cc3133ce63168da07cb963c72b7ee2dbc020d7"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/resource-gap-loop.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 614,
+      "current_sha256": "afe15a93d5bc3e34e953508b99ceb4132fc4d5c0b424ff045f06b34a03d8498c"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
@@ -1306,6 +1420,13 @@
       "current_sha256": "29748db741f608ded1dbd9da7ca6ca215afbcbc0cd97332d6bfb18eddd1bafce"
     },
     {
+      "path": "machine/document-notes/core/docs/methods/guides/task-continuity.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 638,
+      "current_sha256": "fb4431f37f516caa6d6aa25a9b5d93c1fec7d851129e21fe3e5c9658ab13776f"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/handoff-contract.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1330,8 +1451,8 @@
       "path": "machine/document-notes/core/docs/methods/research-support-tools.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 12868,
-      "current_sha256": "335fdaa07caddada29f55839502a28c68dd913460b26be01d362890d40b73d34"
+      "current_bytes": 13346,
+      "current_sha256": "941d3fa8970f0d50258d844d64dc5545fb49153f688c753a4df2ada290e9ada7"
     },
     {
       "path": "machine/document-notes/core/docs/methods/review-receipt.md.json",
@@ -1418,18 +1539,32 @@
       "current_sha256": "ab12d95da5fb68c70399b3e199cba1b455c1894a1e9353ba8346c152b1590eaf"
     },
     {
+      "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 605,
+      "current_sha256": "bbd49d43183cae1f92481e05787c8ab9ef2e3999652d1cd1cf5adb341ab98540"
+    },
+    {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5137,
-      "current_sha256": "c90a7f7d4d8cb0141585fb83f30dd43e6c45bf94cc6819ac424a507db87b5b18"
+      "current_bytes": 5725,
+      "current_sha256": "e3698903a03fc6a072d2b5a6735c2cfeff46e8d34cd962d2f3f2cc7e4defc3e3"
+    },
+    {
+      "path": "machine/document-notes/docs/plans/RESOURCE-COMPLETION.zh.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 601,
+      "current_sha256": "915aa9718e94cb33d90ea4f154501c1e2dabd402e284036c61d522b3c238411a"
     },
     {
       "path": "machine/document-notes/examples/splice/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6941,
-      "current_sha256": "2797e0fd10a4bd054578080dfa8af0c69e0723b7a01effd91f85bbda8d7413e8"
+      "current_bytes": 7530,
+      "current_sha256": "0380efbd0ce448e8532bc589c07ecc8b25d4abd20a36ff9915b28ef178729c06"
     },
     {
       "path": "machine/document-notes/examples/yeast/README.md.json",
@@ -1449,8 +1584,29 @@
       "path": "machine/documentation-policy.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3460,
-      "current_sha256": "3667735ebb6127d6ebd85700404217e28e4f8815f548798d0b061b371035ded6"
+      "current_bytes": 4319,
+      "current_sha256": "a33ef07e51b1afe3b46e8d8ebddf0dfb1f5d4e6038da8bb44d4d126733c87c45"
+    },
+    {
+      "path": "machine/examples/splice-resource-readiness.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 16068,
+      "current_sha256": "7d6fd2a6c6083f2ec03545cad2a29ad710c7aba2e41a3f2e86ab6ecded2d9713"
+    },
+    {
+      "path": "machine/future-plans/resource-completion.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 15675,
+      "current_sha256": "75600091a44878538b4207f2bdea0d725cfad9afe3f0e0e20a4bcf48acee1119"
+    },
+    {
+      "path": "machine/history/resource-completion-before-D52.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 13614,
+      "current_sha256": "e37fb5c3361878ae7d467d0b784d9a292385d690ebe0b62dfd72958b0f123401"
     },
     {
       "path": "machine/reviews/documentation-2026-10-22.json",
@@ -1470,8 +1626,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 168435,
-      "current_sha256": "f63c07adb35343fce5a01499f57580261074aa36dcdca098229a7a9c6d567042"
+      "current_bytes": 179554,
+      "current_sha256": "d428317fa6e72b115fd762a5a050f6bbf18470a584fdd6b9ad163c69cec3b994"
     },
     {
       "path": "tests/test_documentation.py",

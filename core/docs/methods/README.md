@@ -17,6 +17,8 @@ Use the trigger that matches your research question. The table suggests a starti
 
 | 触发条件 | 先读 | 需要时再读 |
 |---|---|---|
+| 同一研究续跑、恢复会话或旧成果上开展补分析 | [当前任务与本轮交付](guides/task-continuity.md) | [接手研究](guides/receiving-research-work.md)、[操作工具](research-support-tools.md) |
+| 资源或实体关系的缺口影响下一评价与主张 | [证据缺口到下一步研究](guides/resource-gap-loop.md) | [信息用途](cards/information-use.md)、[统计单位](guides/statistical-units-and-selection.md) |
 | 需要调用Proto的生信工具或已有模型，并接入真实研究工件 | [Proto工具调用](guides/proto-tool-use.md) | [公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)、[生产—消费接口](guides/artifact-producer-consumer.md) |
 | 预测/距离/指标等工件将被另一程序消费，字段或ID对齐会影响结论 | [生产—消费接口](guides/artifact-producer-consumer.md) | [实际消费证据](cards/execution-evidence.md)、[研究操作工具](research-support-tools.md) |
 | 补目标标签、模型失准或校准/重拟合排序依赖表示 | [标签来源与模型更新](guides/label-source-and-update.md) | [统计单位](guides/statistical-units-and-selection.md)、[信息用途](guides/information-and-state-effects.md) |

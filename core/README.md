@@ -16,6 +16,8 @@ The core includes small fictional inputs for handoff, diagnostics, evidence inde
 
 ## Design and contribution
 
+For a followup study, use the [current-task guide](docs/methods/guides/task-continuity.md) to connect the active question, execution and delivery. When a missing resource affects a claim or evaluation unit, the [resource-gap guide](docs/methods/guides/resource-gap-loop.md) helps decide whether to acquire it, revise the plan or narrow the claim.
+
 The method cards keep scientific choices tied to their conditions: study unit, split, measurement, information use, and the result that would change the conclusion. The design notes explain why those choices are part of the Harness. Start with the public index above, then follow the links to a specific design or method page.
 
 To work on the core, run the tests described in [QUICKSTART](QUICKSTART.md), add or update the relevant method guidance, and include a small example when it clarifies a decision. See [LICENSING.md](LICENSING.md) before adding code, data, weights, or copied material.

@@ -106,6 +106,24 @@
     "tests/**": "Apache-2.0",
     "**/*.md": "CC-BY-4.0",
     "machine/**": "CC-BY-4.0",
-    "machine/documentation-operations.json": "Apache-2.0"
-  }
+    "machine/documentation-operations.json": "Apache-2.0",
+    "core/scripts/research_support/*.py": "Apache-2.0",
+    "core/tests/test_task_context.py": "Apache-2.0",
+    "core/tests/test_resource_loop.py": "Apache-2.0",
+    "core/machine/design/**": "CC-BY-4.0",
+    "examples/splice/resource_readiness.py": "Apache-2.0"
+  },
+  "license_scope_updates": [
+    {
+      "date": "2026-10-22",
+      "reason": "D51/D52 add first-party task/control code, tests, machine design documentation and a resource-readiness consumer; preserve existing project code and documentation licenses.",
+      "scopes": {
+        "core/scripts/research_support/*.py": "Apache-2.0",
+        "core/tests/test_task_context.py": "Apache-2.0",
+        "core/tests/test_resource_loop.py": "Apache-2.0",
+        "core/machine/design/**": "CC-BY-4.0",
+        "examples/splice/resource_readiness.py": "Apache-2.0"
+      }
+    }
+  ]
 }

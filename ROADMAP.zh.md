@@ -19,3 +19,9 @@
 ## 文献与工程
 
 按研究中出现的新问题补读文献，把经验整理到[参考与设计索引](docs/REFERENCES-AND-DESIGN.md)。方法指南保留各自的适用条件和选择理由；可迁移的工具通过小型应用逐步完善。
+
+## 把资源缺口纳入研究闭环
+
+Yeast 候选筛选补研究已形成封存首交，下一步复核结果与用途。Harness 已补齐[当前任务恢复和本轮交付](core/docs/design/28-task-continuity-and-current-delivery.md)，并把资源缺口组织为内部的[研究调控层](core/docs/design/29-evidence-gap-control.md)，Splice 的生物学评价单位准备已完成首个消费试点：所检查官方材料尚不能支撑新增的基因／家族评价，因此先保留档案分类范围。后续按补充价值选择新资源或新问题。
+
+按研究主张和评价单位决定是否需要实体映射、版本化注释或其他资源。只有缺口会影响结论时才启动获取与核查；资源不足时选择收窄或暂缓。本层保留供更大研究工作台调用的接口，现阶段继续在模型专题中积累具体控制经验。早期规划及其演进见[资源闭环设计](docs/plans/RESOURCE-COMPLETION.zh.md)和[结构化计划](machine/future-plans/resource-completion.json)。

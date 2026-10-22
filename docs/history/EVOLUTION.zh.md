@@ -28,6 +28,12 @@ CPU试点从读取公开材料发展到模型训练、保存状态读取、外�
 
 这一阶段增加了[工件生产与消费](../../core/docs/methods/guides/artifact-producer-consumer.md)、[研究接手](../../core/docs/methods/guides/receiving-research-work.md)以及[生物学解释与人读交接](../../core/docs/methods/guides/biological-explanation-and-handoff.md)。应用内容见[研究与应用](../../core/EVIDENCE.zh.md)。
 
+## 从后续任务到资源闭环
+
+同一课题开始补分析后，曾在会话恢复时重新交付旧成果。这一观察促成了[D51：当前任务与本轮交付](../../core/docs/design/28-task-continuity-and-current-delivery.md)：恢复、执行与验收共用明确的研究轮次和约定，进度另行接续。
+
+随后，Splice 的一个拟扩展问题需要把窗口与基因或家族对应起来。项目先核查官方资源并实际读取，发现所检查材料缺少可靠实体关系，标签说明也存在冲突，因而保留原档案任务并收窄扩展主张。[D52：研究调控层](../../core/docs/design/29-evidence-gap-control.md)把这条“缺口—价值—资源—消费—决定”路线接入 Harness。可复用程序和准备结果见[Splice 工作例](../../examples/splice/README.md)。
+
 ## 近期里程碑
 
 | 时段 | 发现的问题 | 形成的改进 |
@@ -38,6 +44,7 @@ CPU试点从读取公开材料发展到模型训练、保存状态读取、外�
 | 10月19日至20日 | 接手者需要实际可用的输入、程序和结果解释 | 工件工具、工作例与小型CPU研究 |
 | 10月21日至22日 | 公开应用需要更顺畅的首次方案、执行和许可交接 | 计划封存、首次审计留档，以及[Splice](../../examples/splice/README.md)和[Yeast](../../examples/yeast/README.md)应用 |
 | 10月22日 | 新读者需要容易使用和理解的文档入口 | 人机文档分层、统一来源与设计索引、独立可读的项目短史 |
+| 10月22日 | 后续任务需要保持当前轮次，资源缺口需要回到研究决定 | 当前任务接口、条件资源闭环与 Splice 准备工作例 |
 
 ## 接下来
 

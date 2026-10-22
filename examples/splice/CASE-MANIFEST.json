@@ -20,8 +20,8 @@
       "path": "README.md",
       "published": {
         "path": "splice/README.md",
-        "bytes": 3092,
-        "sha256": "395c208a6a3f0a61bb0fe4e478308acb05efb6a4c98d7271e59073e68836241d"
+        "bytes": 5228,
+        "sha256": "426aa35d02251d81ce59dfdfacaa1ede78221e3caa3c345754b7c918bde99412"
       },
       "source": [
         {
@@ -133,6 +133,23 @@
         }
       ],
       "transformation": "Extract the 12 preselected fold-0 held-out row IDs from the byte-verified official ZIP; write original 60-nt sequences and true labels after matching each sequence SHA and label to the selected OOF table. Selection was fixed upstream as four ascending row IDs per class, without score-based selection."
+    },
+    {
+      "path": "resource_readiness.py",
+      "license": "Apache-2.0",
+      "published": {
+        "path": "splice/resource_readiness.py",
+        "bytes": 31618,
+        "sha256": "23384f1b6394bbaede6e0b74cfc8d3a32e6804dc78bb1481c424ccc11a29b022"
+      },
+      "source": [
+        {
+          "path": "examples/splice/resource_readiness.py",
+          "bytes": 31618,
+          "sha256": "23384f1b6394bbaede6e0b74cfc8d3a32e6804dc78bb1481c424ccc11a29b022"
+        }
+      ],
+      "transformation": "First-party Python standard-library resource-readiness consumer. The published serializer received a metadata-only self-check after the recorded raw-resource run; see machine/examples/splice-resource-readiness.json for the execution-source distinction."
     }
   ],
   "case_id": "splice",

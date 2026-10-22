@@ -1,0 +1,235 @@
+{
+  "control_layers": {
+    "application": "Define entity semantics, intended unit, source criteria, acquisition budget, pipeline consumption point, acceptance checks, alternative branches, and stop rule.",
+    "execution": "Query or download the selected resource, preserve provenance and license, validate mappings, expose exact rows/relations used, and report failures or conflicts.",
+    "theory": "Decide whether the gap matters to the question and whether resource acquisition can change the evidence or use decision."
+  },
+  "current_state": {
+    "automatic_resource_completion_program_exists": false,
+    "new_mapping_results_exist": false,
+    "new_paper_or_review_case_study_performed": false,
+    "next_state": "planned_for_future model-topic iteration after current Yeast follow-up; use Splice only after its trigger is met",
+    "workflow_implemented": false,
+    "workflow_scientifically_validated": false
+  },
+  "entity_rules": {
+    "entity_types": [
+      "gene",
+      "transcript",
+      "protein",
+      "family",
+      "domain"
+    ],
+    "family_granularity": "Define for the target question and data source; a name, accession, or sequence cluster is not automatically a biological family.",
+    "proxy_labels": "Exact-sequence, similarity, or name-token groups remain labeled as proxies and do not become gene-independent groups by relabeling.",
+    "relation_cardinality": "Preserve one-to-many and many-to-many edges. Collapse only under an explicit, justified transformation that records discarded alternatives.",
+    "thresholds": "Coverage, conflict tolerance, and budget are instantiated per question before examining downstream model outcomes; no universal numeric cutoff is imposed.",
+    "unknowns": "Unmapped or ambiguous identifiers are unknown/ambiguous, never implicit negatives.",
+    "partial_mapping": "Report mapped and unmapped subgroup composition and any changed sample population; compare evaluation designs on common records where appropriate, keeping mapping selection effects distinct from grouping effects.",
+    "source_agreement": "Agreement between matching outputs is a consistency observation. Document the independent anchors, source evidence or manual checks supporting the biological relation under the selected use."
+  },
+  "evidence_binding": {
+    "decision_chain_fields": [
+      "motivation_or_condition",
+      "selected_action",
+      "considered_alternative_if_reported",
+      "input_information_and_its_role",
+      "operation_or_pipeline_stage",
+      "reported_result",
+      "continue_revise_backtrack_or_decision"
+    ],
+    "execution_states": [
+      "reported_in_article",
+      "reported_in_supplement",
+      "reviewer_requested",
+      "author_replied_or_decided",
+      "locally_observed",
+      "locally_executed",
+      "inferred",
+      "unknown"
+    ],
+    "mapping_record_fields": [
+      "source_record_id",
+      "source_release",
+      "retrieval_time",
+      "license",
+      "source_entity_namespace",
+      "target_entity_namespace",
+      "source_identifier",
+      "target_identifier",
+      "relation_type",
+      "cardinality",
+      "ambiguity_or_conflict_status",
+      "transformation_code_and_config",
+      "consumer_code_path",
+      "consumer_input_row_or_group",
+      "evaluation_unit"
+    ],
+    "paper_material_record_fields": [
+      "persistent_id_and_doi_or_url",
+      "version_or_date",
+      "material_kind: article/supplement/preprint/review/reviewer-comment/author-reply/decision",
+      "exact_section/page/figure/table locator",
+      "reported_statement",
+      "source_availability_and_license"
+    ],
+    "result_link": "source record -> typed mapping relation -> exact code/config consumer -> split/evaluation rows -> changed results -> decision/revision"
+  },
+  "future_model_topic_pilot": {
+    "case": "Splice gene/family mapping",
+    "current_result": "none",
+    "inputs_to_acquire": "A suitable versioned identifier/entity mapping and its provenance, coverage, and license; exact source remains unselected pending the question and source check.",
+    "legal_alternative": "If a reliable mapping is unavailable or too incomplete for the selected purpose, retain proxy language and narrow the claim, or stop the gene/family-level question.",
+    "planned_comparison": [
+      "retain existing sequence/name proxy split as the historical comparator",
+      "construct a biologically typed split only from verified mapping relations",
+      "report mapped, unmatched, ambiguous, and conflicting units",
+      "compare evaluation units and outcomes under a predeclared acceptance rule"
+    ],
+    "status": "planned_not_started",
+    "trigger": "A later research question claims gene-level or family-level generalization, or requires those entities as independent evaluation units."
+  },
+  "legal_alternatives": {
+    "mapping_unavailable": [
+      "Continue with existing proxy unit and narrow the claim.",
+      "Use a different versioned source if it resolves the same entity relation and passes the same acceptance checks.",
+      "Stop or reformulate when the intended biological unit cannot be established within budget."
+    ],
+    "multi_mapping": [
+      "Retain all supported relations and analyze an explicitly defined grouping rule.",
+      "Stratify or exclude ambiguous records only with a predeclared, documented reason and report their count."
+    ],
+    "resource_irrelevant": "Do not acquire or maintain mappings that cannot affect the selected claim, unit, or use decision."
+  },
+  "non_goals": [
+    "No universal gene/family mapping requirement.",
+    "No universal coverage or conflict threshold.",
+    "No automatic resource discovery/download/mapping program in this plan.",
+    "No current Yeast input or frozen Harness changes.",
+    "No new mapping result, new paper analysis, peer-review reanalysis, or scientific conclusion.",
+    "No inference of undocumented decisions or search history from published narratives."
+  ],
+  "paper_and_review_extraction": {
+    "evidence_boundary": "Reported protocol does not reveal unreported exploration history. Reviewer comments identify questions or requested changes; they do not by themselves prove that a workflow was executed.",
+    "method": "Extract condition/motivation, choice and alternatives, information use, operation, result, and next decision; do not reduce an article to a step list.",
+    "planned_materials": [
+      "published article",
+      "supplementary methods/data",
+      "available preprint or earlier manuscript version when needed",
+      "public reviewer comments",
+      "author responses",
+      "editorial decision where public"
+    ],
+    "synthesis_rule": "Only patterns repeated across independently documented cases may become shared guidance; retain task-specific steps as conditional branches and record conflicts. No numeric cross-case threshold is set in this plan.",
+    "decision_rule_origin": [
+      "author_explicit",
+      "reviewer_explicit",
+      "current_project_reconstruction",
+      "unknown"
+    ],
+    "global_control_fields": [
+      "research_goal",
+      "current_evidence_state",
+      "dependency_or_missing_input",
+      "branch_trigger",
+      "selected_action_and_owner",
+      "alternative_if_reported",
+      "budget_or_stop_rule_if_reported",
+      "observed_result",
+      "claim_update",
+      "decision_rule_origin",
+      "precise_source_locator"
+    ],
+    "reconstruction_acceptance": "A reconstructed control rule remains a candidate until applied and evaluated in a later research iteration; keep its source rationale and later contrary evidence. It does not retroactively describe the authors actual exploration history."
+  },
+  "plan_kind": "future design; no implementation or study execution",
+  "purpose": "Make resource gaps part of a conditional research self-check loop when they can affect the selected claim, evaluation unit, or use decision. Here self-check means the research process checking its own evidence path, not a model self-supervised objective.",
+  "recorded_at_utc": "2026-10-22T08:06:34.666936+00:00",
+  "schema": "harness.resource-completion-plan/v1",
+  "sequence_and_priority": {
+    "current_priority": {
+      "precedence": "first; do not change its frozen inputs or write into its work directory",
+      "status": "active_in_parent_thread",
+      "work": "continue the already dispatched Yeast VAC follow-up plan in its original thread and frozen Harness input"
+    },
+    "dependency": "Choose the research claim and target unit before searching for maps; run the resource loop only when the missing relation can affect the decision.",
+    "future_resource_work": {
+      "first_model_topic_pilot": "Splice gene/family mapping only if a later question makes gene/family-level independence part of the target claim or evaluation unit",
+      "later_scope": "after repeated model-topic cases, consider broader methods research",
+      "status": "planned"
+    }
+  },
+  "source_and_design_bindings": [
+    {
+      "path": "core/docs/design/21-domain-validation-guidance.md",
+      "role": "existing conditional guidance on target domain and validation unit; design reference only"
+    },
+    {
+      "path": "core/docs/methods/guides/sequence-novelty-and-background.md",
+      "role": "existing proxy/similarity and background guidance; not a biological gene map"
+    },
+    {
+      "path": "examples/splice/CASE-MANIFEST.json",
+      "role": "current public Splice case identity and scope; no new mapping evidence"
+    },
+    {
+      "path": "docs/REFERENCES-AND-DESIGN.md",
+      "role": "public source navigation; this plan does not append or rewrite the source index"
+    }
+  ],
+  "status": "planned",
+  "trigger": {
+    "examples": "Gene/family generalization needs suitable entity links; fixed-window archive prediction may stay at its current proxy unit.",
+    "not_triggered_when": "The study remains within a fixed archive unit and the proposed resource would not change its question, evaluation, or decision.",
+    "required": "A specific missing entity or annotation relation affects the stated claim, split/grouping unit, evaluation denominator, or intended use."
+  },
+  "workflow": [
+    {
+      "acceptance": "A concrete decision depends on the resource; otherwise record not triggered.",
+      "obligation": "Name the claim and current unit; state the missing entity relation and how it could change grouping, evaluation, interpretation, or use.",
+      "owner": "theory+application",
+      "stage": "gap_statement"
+    },
+    {
+      "acceptance": "The selected source is justified by entity semantics, scope, version, license, and intended evaluation.",
+      "alternatives": [
+        "Use a versioned primary/maintained mapping source.",
+        "Keep current proxy groups and narrow the claim.",
+        "Stop or reformulate if no source can resolve the intended unit within budget."
+      ],
+      "obligation": "Compare an appropriate authoritative/versioned source with legitimate alternatives; state permitted license, query scope, time/size budget, expected coverage evidence, and stop condition before acquisition.",
+      "owner": "application",
+      "stage": "source_choice_and_budget"
+    },
+    {
+      "acceptance": "Another reader can identify the exact resource snapshot and transformation.",
+      "obligation": "Save citation/URL, database or annotation release, retrieval date, license, query/API parameters, raw-response/file identity, and transformation code/config.",
+      "owner": "execution",
+      "stage": "acquire_and_preserve"
+    },
+    {
+      "acceptance": "Coverage and conflict criteria were selected for the question before outcome comparison; unknown mappings remain unknown, not negative.",
+      "obligation": "Distinguish gene, transcript, protein, family, and domain; retain one-to-many and many-to-many relations; inspect unmatched, duplicate, ambiguous, conflicting, and stale identifiers; quantify coverage against the intended denominator.",
+      "owner": "application+execution",
+      "stage": "semantic_and_coverage_check"
+    },
+    {
+      "acceptance": "Evidence shows mapped entities actually entered the split, grouping, or evaluation. An unused mapping table is not a scientific result.",
+      "obligation": "Bind every grouping or pairing used to source version, mapping row/relation, output entity, and exact consumer code/config; preserve the prior proxy/unit as comparison where feasible.",
+      "owner": "execution",
+      "stage": "consume_in_analysis"
+    },
+    {
+      "acceptance": "The evidence path connects mapping source to consumed identifiers, changed evaluation, and a stated decision; otherwise record limitation/unknown.",
+      "obligation": "Compare unit membership, coverage, leakage/overlap checks, performance or use counts, then apply the plan conditions for retaining, narrowing, changing, or stopping the claim.",
+      "owner": "application+theory",
+      "stage": "compare_and_revise"
+    },
+    {
+      "acceptance": "A successor can see what the relation means, where it came from, how it was used, and what it changed.",
+      "obligation": "Explain the biological entity and mapping relation in readable terms; separate source-reported facts, locally observed files, locally executed work, inference, and unknowns.",
+      "owner": "application",
+      "stage": "handoff"
+    }
+  ]
+}

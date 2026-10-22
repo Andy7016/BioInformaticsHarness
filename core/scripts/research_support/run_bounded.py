@@ -34,6 +34,7 @@ if __package__ in {None, ""}:
 
 from scripts.research_support._common import SupportError
 from scripts.research_support.execution_capture import CaptureResult, prepare_capture
+from scripts.research_support.task_context import check_task_context
 
 
 MEMORY_LIMIT_DEFAULT = 2 * 1024 * 1024 * 1024
@@ -179,7 +180,11 @@ def terminate_owned_tree(tracked: dict[tuple[int, float], dict[str, Any]], root_
     }
 
 
-def build_child_environment(cwd: Path, numeric_threads: int) -> tuple[dict[str, str], dict[str, Any]]:
+def build_child_environment(
+    cwd: Path,
+    numeric_threads: int,
+    task_environment: dict[str, str] | None = None,
+) -> tuple[dict[str, str], dict[str, Any]]:
     mpl_config = cwd / ".mplconfig"
     mpl_config.mkdir(parents=True, exist_ok=True)
     value = str(numeric_threads)
@@ -196,6 +201,8 @@ def build_child_environment(cwd: Path, numeric_threads: int) -> tuple[dict[str, 
         "PYTHONDONTWRITEBYTECODE": "1",
         "CUDA_VISIBLE_DEVICES": "",
     }
+    if task_environment is not None:
+        overrides.update(task_environment)
     environment = os.environ.copy()
     prior = {key: {"was_present": key in environment} for key in overrides}
     environment.update(overrides)
@@ -210,6 +217,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--capture-code", action="append", default=[], metavar="REL", help="Root-relative code file to preserve before launch; may be repeated")
     parser.add_argument("--capture-input", metavar="REL", help="Root-relative input to hash before launch without copying")
     parser.add_argument("--capture-config", metavar="REL", help="Root-relative configuration file to preserve before launch")
+    parser.add_argument("--task-root", help="Work root for an explicit task-context continuity check")
+    parser.add_argument("--task-context", help="Task-context snapshot JSON")
+    parser.add_argument("--study-id", help="Independent expected study ID")
+    parser.add_argument("--iteration-id", help="Independent expected iteration ID")
     parser.add_argument("--timeout-seconds", type=float, default=TIMEOUT_DEFAULT)
     parser.add_argument("--memory-limit-mib", type=float, default=2048.0)
     parser.add_argument("--threads", type=int, default=THREADS_DEFAULT, help="Numeric library thread count (1 or 2)")
@@ -225,6 +236,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         parser.error("--capture-root is required when any --capture-* asset is selected")
     if args.capture_root and not args.capture_code:
         parser.error("--capture-root requires at least one --capture-code path")
+    task_flags = (args.task_root, args.task_context, args.study_id, args.iteration_id)
+    if any(task_flags) and not all(task_flags):
+        parser.error("--task-root, --task-context, --study-id, and --iteration-id must be supplied together")
     if not math.isfinite(args.timeout_seconds) or args.timeout_seconds <= 0 or args.timeout_seconds > TIMEOUT_MAX:
         parser.error(f"timeout must be positive and <= {TIMEOUT_MAX:g} seconds")
     if not math.isfinite(args.sample_interval_seconds) or not math.isfinite(args.memory_limit_mib) or args.sample_interval_seconds <= 0 or args.memory_limit_mib <= 0:
@@ -245,6 +259,44 @@ def main(argv: list[str] | None = None) -> int:
     if not cwd.is_dir():
         raise SystemExit(f"child cwd does not exist or is not a directory: {cwd}")
     prefix = Path(args.out_prefix).expanduser().resolve()
+
+    task_context_record: dict[str, Any] | None = None
+    task_environment: dict[str, str] | None = None
+    if args.task_root:
+        try:
+            task_check = check_task_context(
+                root=args.task_root,
+                context_path=args.task_context,
+                study_id=args.study_id,
+                iteration_id=args.iteration_id,
+                cwd=cwd,
+                out_prefix=prefix,
+            )
+        except SupportError as exc:
+            print(f"task context check failed; child was not started: {exc}", file=sys.stderr)
+            return 2
+        if task_check["overall"] != "pass":
+            print(
+                "task context check failed; child was not started: "
+                + json.dumps(task_check, ensure_ascii=False, separators=(",", ":")),
+                file=sys.stderr,
+            )
+            return 2
+        task = task_check["task"]
+        context_identity = task_check["identity"]["context"]
+        task_context_record = {
+            "study_id": task["study_id"],
+            "iteration_id": task["iteration_id"],
+            "task_id": task["task_id"],
+            "context_path": context_identity["path"],
+            "context_sha256": context_identity["sha256"],
+        }
+        task_environment = {
+            "HARNESS_STUDY_ID": task["study_id"],
+            "HARNESS_ITERATION_ID": task["iteration_id"],
+            "HARNESS_TASK_CONTEXT": context_identity["path"],
+        }
+
     prefix.parent.mkdir(parents=True, exist_ok=True)
     output_paths = {
         "stdout": prefix.with_name(prefix.name + ".stdout"),
@@ -272,7 +324,7 @@ def main(argv: list[str] | None = None) -> int:
             print(f"execution capture failed; child was not started: {exc}", file=sys.stderr)
             return 2
 
-    child_env, env_record = build_child_environment(cwd, args.threads)
+    child_env, env_record = build_child_environment(cwd, args.threads, task_environment)
     memory_limit = int(args.memory_limit_mib * 1024 * 1024)
     start_wall = time.perf_counter()
     start_utc = utc_now()
@@ -397,6 +449,8 @@ def main(argv: list[str] | None = None) -> int:
     }
     if capture_record is not None:
         receipt["execution_capture"] = capture_record
+    if task_context_record is not None:
+        receipt["task_context"] = task_context_record
     json_dump(output_paths["receipt"], receipt)
     print(json.dumps(receipt, ensure_ascii=False, separators=(",", ":")))
     return 0 if exit_kind == "success" else 1

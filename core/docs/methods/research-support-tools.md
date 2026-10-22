@@ -55,6 +55,12 @@ API/字段见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DE
 
 [Proto工具调用指引](guides/proto-tool-use.md)说明从研究目标选择工具、取得schema/example/info、满足实际运行前提、回收资产及科学验收的步骤。[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)保留160项目录、10项能力卡和独立服务计费。Proto可承担具体分析或模型执行，以上研究操作工具则继续组织输入身份、消费证据与交接。当前接入已通过元数据查询，模型计算和部署另行验收。
 
+## 当前任务与资源缺口
+
+[任务连续性](guides/task-continuity.md)将研究、轮次、阶段和下一动作绑定到当前入口；运行器可以在启动前核对，本轮交付检查再核对选定产物与实际运行。精确接口见[任务上下文契约](../../machine/design/task-continuity.json)。
+
+[资源缺口闭环](guides/resource-gap-loop.md)连接补充价值、获取记录、用途资格、真实消费与主张决定。它按当前问题启动，由具体资源接口完成获取，调用现有有界任务执行。精确接口见[闭环契约](../../machine/design/resource-gap-loop.json)。
+
 ## 首次审计、封存与发行交接
 
 [计划封存与首次执行](guides/plan-seal-and-first-execution.md)给出触发、选择理由和替代路线。计划目录是唯一清单基准；使用生产助手生成清单，再送正式reader。实际审计影响样本或研究选择时，先保存列明代码/配置原字节，再启动子进程；新修订不刷新旧快照。[封存小例](../../examples/research-support/plan-seal/README.md)和[首次审计小例](../../examples/research-support/first-audit/README.md)可直接运行。

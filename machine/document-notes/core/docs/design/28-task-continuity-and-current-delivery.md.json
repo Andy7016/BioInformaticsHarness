@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-note/v1",
+  "human_path": "core/docs/design/28-task-continuity-and-current-delivery.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D51-D52",
+      "date": "2026-10-22",
+      "reason": "Task recovery drift and current-delivery requirements; stable context and separate progress.",
+      "new_sources_or_designs": [
+        "D51",
+        "D52"
+      ],
+      "technical_records": [
+        "core/machine/design/task-continuity.json",
+        "core/machine/design/resource-gap-loop.json"
+      ],
+      "acceptance": "local-interface-and-resource-readiness-validation"
+    }
+  ]
+}
