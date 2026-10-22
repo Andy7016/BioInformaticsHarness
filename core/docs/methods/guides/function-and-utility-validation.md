@@ -1,6 +1,6 @@
 # 功能与效用：从生物学目标设计最小验证
 
-版本：`domain-validation-v1.1`，2026-10-18。针对ProtGPT2的功能/统计效用、DeepSEED的表达与诱导、GARNET的精选RNA构建体问题细化。下面的选路和设计步骤是本轮方法建议；作者实际做法见末尾来源。初版与本次修订依据保存在[迭代记录](../../ARCHIVE_POINTERS.md#archive-pointer-668ed790dc01b2b1)。
+版本：`domain-validation-v1.1`，2026-10-18。针对ProtGPT2的功能/统计效用、DeepSEED的表达与诱导、GARNET的精选RNA构建体问题细化。下面的选路和设计步骤是本轮方法建议；作者实际做法见末尾来源。初版与本次修订依据保存在[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。
 
 ## 何时启用，先选择什么
 
@@ -51,7 +51,7 @@
 
 1. **功能存在/保持：** 对照与测量范围先有效，再以有生物意义的参考或功能界限判断。超过仪器背景只说明检测到信号，不自动等于达到应用要求。
 2. **效用提升：** 事先从用途决定最小有意义效应`δ`和可接受不确定性；可参考实际筛选预算、容许错误及先导数据，记录理由。用先导数据规划精度/样本，不把先导与封存评价混用。
-3. **采用区间的比较：** 若所选设计和估计方法适用，下界超过`δ`才支持相应提升；上界仍低于`δ`则撤回该幅度的提升主张；跨越`δ`时保持证据不足。未显著不等于等效，等效/非劣另定界限与设计。
+3. **采用区间的比较：** 若所选设计和估计方法适用，下界超过`δ`才支持相应提升；上界仍低于`δ`则撤回该幅度的提升主张；跨越`δ`时保持证据不足。非显著结果表示当前设计未分辨出差异；等效或非劣需要预先设定界限并采用相应设计。
 4. **机制：** 先列能同样解释结果的最重要替代，再要求控制/干预能把它们区分。无法区分时保留关联或系统效用主张。
 
 `δ`、区间方法、错误容许与样本量由具体用途决定；没有合理依据时先交付设计待决项，不套通用p值、固定三重复或统一功能阈值。
@@ -81,8 +81,9 @@ python examples/domain-validation/expression_events.py --input examples/domain-v
 
 ## 来源与推导
 
-- [ProtGPT2 M1与请求](../../ARCHIVE_POINTERS.md#archive-pointer-64eeb89884495f9e)：review物理pp2/5/9/11；正式Par15、22–25、30–31。作者的预测/模拟与评审允许的验证路线提供触发实例，没有通用功能assay。
-- [DeepSEED取舍](../../ARCHIVE_POINTERS.md#archive-pointer-2c1d1512dae3a343)：M-LEAK、M-TRANSFER，见逐案引用账本；±诱导、比值与迁移不能合并成一个事件。
-- [GARNET M3](../../ARCHIVE_POINTERS.md#archive-pointer-ebc5be1fd5dd1209)：review pp19–20，正式Par19–21、43–50/Fig6；assay方法精确入口是Par50，SI11–13只用于GenerRNA/突变图背景，不能代替纯化和翻译方法定位。
-- [纠正后的原件支持与方法建议分界](../../ARCHIVE_POINTERS.md#archive-pointer-66a64fa04ca068d3)。上面的前瞻对照、抽样和改判步骤为设计推导，不声称作者执行了它们；初始矩阵保留并单独勘误。
-- 联用[测量到主张](measurement-to-claim.md)、[统计单位与选择](statistical-units-and-selection.md)、[比较卡](../cards/benchmark-teacher-fairness.md)。
+- **ProtGPT2**：该案例把序列生成、预测/模拟结果和功能请求分开；本指南据此先明确要判断的是指定体系中的功能、外部任务效用，还是有限范围的解释。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- **DeepSEED**：案例分别涉及诱导条件、表达比值和跨条件迁移。按路线保留各自的条件、单位和比较，才能知道每个读数回答什么问题。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- **GARNET**：专家挑选的 RNA 构建体需要保留选择过程、构建体、位点和反应单位。若讨论纯化或翻译读出，应查看论文方法中的对应步骤；补充材料中的突变图只提供背景。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- 本指南提出的对照、抽样和改判规则是可用于新研究的前瞻设计。逐项页码、原文阅读更正与旧归档定位见[机器记录](../../../../machine/document-notes/core/docs/methods/guides/function-and-utility-validation.md.json)。
+
+联用[测量到主张](measurement-to-claim.md)、[统计单位与选择](statistical-units-and-selection.md)和[比较卡](../cards/benchmark-teacher-fairness.md)。

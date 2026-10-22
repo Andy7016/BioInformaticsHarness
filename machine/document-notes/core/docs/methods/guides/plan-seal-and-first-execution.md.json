@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/guides/plan-seal-and-first-execution.md",
+  "source_text": "# 从计划封存到首次真实执行\r\n\r\n版本 `plan-execution-v1`，2026-10-21。按交接和研究选择的需要使用，延续[真实生产—消费](artifact-producer-consumer.md)及[接手研究](receiving-research-work.md)。\r\n\r\n## 封存首次方案\r\n\r\n先明确计划根目录；清单中的 `path` 永远相对于该目录，不能把工作根的前缀再交给 plan-root reader。将科学计划与必要配置放入计划目录，用 `scripts.research_support.plan_seal` 生成 READY，再让正式封存端验证实际库存、长度和 SHA-256。只有校验和复制完成才有 ACK。默认标准协议；旧 `public-applications-v1` 只能显式选择。\r\n\r\n封存后保留原方案。新事实触发修订时用新的版本目录说明选择、依据及影响，不覆盖首次方案。成熟 Git 提交、带身份的预注册或等效封存系统可以替代该助手；工具拒绝当前目录并不表示科学设计被否决。\r\n\r\n## 把第一次数据审计也视为真实执行\r\n\r\n审计会决定纳入、去重、清洗或划分时，在启动前保存当次代码和配置原字节、列明输入的身份、命令、工作目录和环境版本。不要等到模型拟合才开始留档。`run_bounded` 的可选捕获参数提供这条小路径：\r\n\r\n```text\r\npython -B -m scripts.research_support.run_bounded --help\r\n```\r\n\r\n按实际参数明确 `--capture-root`、至少一个 `--capture-code`，需要时加 `--capture-config` 和 `--capture-input`。代码/配置保存字节；输入记录流式身份，适合大表或压缩归档。执行前失败应阻止子进程启动；执行后失败保留快照与回执。后续源代码变更另记，不刷新原快照。完整可运行命令见[小例](../../../examples/research-support/first-audit/README.md)。资源采样的 bounded runner 需要另装 psutil，其他核心工具继续只用标准库。\r\n\r\n## 选择最少但充分的范围\r\n\r\n| 情形 | 应保留的材料 | 可接受替代与解释 |\r\n| --- | --- | --- |\r\n| 直接运行 Python 脚本 | 实际脚本及会影响本次选择的本地模块/配置，输入身份 | 可信不可变工作树+明确入口亦可；不能只列未被执行的脚本 |\r\n| 运行模块、外部可执行程序或既有工作流 | 明确入口、版本、显式选取的代码/配置及输入 | 镜像 digest、锁定依赖或成熟运行平台可承担对应范围；不假定自动推导完整依赖闭包 |\r\n| 只读取已保存产物，生产端未变 | 当前 reader 与固定产物身份、实际消费结果 | 不必重跑昂贵生产；明确是保存状态的消费 |\r\n| 当前缺真实输入或必要环境 | 缺口、停止条件和首次可执行动作 | 先完成设计或格式例，实际执行保留待做 |\r\n\r\n这套工具证明列明资产与一次调用的绑定。若代码还读取未列文件、联网资源或动态依赖，应补实际作用记录；不要把“有快照”写成所有来源和生物学前提都已确认。\r\n\r\n## 向人交接\r\n\r\n用自然语言回答：这次审计改变了哪些样本或研究选择，为什么；哪份首次计划仍有效；运行采用什么字节；出现了什么实际结果；什么证据会改变下一步。需要分发时再按[发行交接](publication-handoff.md)交代代码、数据、参数与库的许可。\r\n\r\n当前有界CPU助手保留其小任务契约：最多两个数值线程、最长1800秒，RSS按采样值触发停止。它不是OS硬限制，也不是所有研究的统一预算；需要其他规模时可以选已有作业系统或适配runner并说明实际资源计量范围。\r\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 7,
+          "text": "先明确计划根目录；清单中的 `path` 永远相对于该目录，不能把工作根的前缀再交给 plan-root reader。将科学计划与必要配置放入计划目录，用 `scripts.research_support.plan_seal` 生成 READY，再让正式封存端验证实际库存、长度和 SHA-256。只有校验和复制完成才有 ACK。默认标准协议；旧 `public-applications-v1` 只能显式选择。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "eb68b72efaed19e3b123b22581d9ef9974f450ef2be2ec53942a870d8d93c9c4"
+}

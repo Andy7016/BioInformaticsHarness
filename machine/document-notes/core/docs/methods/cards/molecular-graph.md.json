@@ -1,0 +1,21 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/molecular-graph.md",
+  "source_text": "# 分子图变换与权重消费\n\n## 适用条件\n\n用于 SMILES、SDF 等分子输入转二维图，图对比学习/图增强、分子性质迁移和预训练 checkpoint 消费。若研究只处理已固定的图对象，可跳过转换小节，但仍登记图身份和版本。\n\n## 应记录\n\n- `DataSnapshot`：分子稳定 ID、原始记录与规范化/去盐/互变异构策略、解析器版本；原子顺序、元素/电荷/芳香性、显式/隐式氢、手性和键类型/方向。\n- `MethodCard`：节点/边特征词表；每种增强（节点遮蔽、删边、子图等）的输入输出 ID、节点映射和边集合定义；正负对的身份与生成轮次。\n- `SplitPlan`：按独立泛化目标选择分子 ID 层级的 train/valid/test 隔离或其它实体轴；记录 scaffold/random 规则、预训练与下游暴露和标签拟合范围。\n- 权重消费：checkpoint 来源 revision/hash、期望 encoder/head、实际加载/跳过的名称与形状、scratch 是否允许及对应 `Decision`；缺失权重不能仅打印后继续叫同一实验。\n- `ComparisonSpec`：任务列、单位、正类分数方向、过滤/归一化、有效分母、逐分子预测和缺失清单。\n\n## 可判断的检查\n\n1. 同一分子不同表示经规范化后能回到同一 ID；SMILES 原子次序可以不同，但显式 atom map/sidecar 能对齐原子和边。按 `SplitPlan` 的独立泛化目标核对同分子重复；预训练暴露另行登记。\n2. 用最小图核对增强前后节点和边集合。删节点是否连带边、删边是否保留节点、手性/键向是否应保持，必须与选择一致。\n3. 检查极小图、断连图和空边界；若某增强超出 encoder 输入范围，记录失败或合法替代，不静默修复。\n4. 正负对不能跨越错误的分子身份或 split；增强改变的语义要进入 `Claim` 的解释边界。\n5. 运行后核对 encoder/head 的载入名称、形状和来源 hash；预训练依赖未满足时暂停或记录改为 scratch 的新 `Decision`。\n6. 从逐分子预测重算 AUC/RMSE/MAE，核对任务数、单位、正类方向和被过滤项；单一总分不能掩盖分母差异。\n\n## 替代与不适用\n\nSMILES 或 SDF、显式或隐式氢、scaffold 或 random split、不同图增强都可以使用，前提是保存身份与语义。增强不必一概保证化学有效：只有主张涉及化学等价/性质保持时，才把该性质作为验收条件。分子级独立泛化需要按目标隔离；预训练暴露可另行审计，不一概禁止。没有预训练依赖时可从零训练；一旦比较预训练收益，scratch 退化必须显式改变比较规格。\n\n## 小型验收例\n\n- 正常：两种规范化 SMILES 原子次序不同但指向同一分子 ID，显式 atom map 对齐原子/手性/键向；增强后正对仍绑定该 ID，标记 `pass`。\n- 失败：实现声称“只删除被遮蔽原子间的边”，实际删除节点后连边界也消失；三节点小图应暴露边集合差异。\n- 正常：缺失 checkpoint 时 `Run` 状态为 `blocked`，新 scratch 运行有独立配置和 `Decision`；两者不共用“预训练”结果。\n- 失败：读取器跳过首行或丢弃全零目标后仍用原任务数作分母；行数守恒和任务对账应拒绝汇总。\n\n## 来源\n\n- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-589f0e378be471a6) §4.1–§4.4、§7：分子图语义 `G01/E03/E10/E11/E26`；权重消费 `G02/E14/E18/E26`。\n- 同报告的划分/分母发现：`G04/E06/E09/E12/E21/E22/E26`。这些是小型验收方向，不是已完成的通用 verifier。\n\n本卡允许合理替代，重点是保留化学身份、图变换语义和权重实际消费之间的可追问关系。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 37,
+          "text": "- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-589f0e378be471a6) §4.1–§4.4、§7：分子图语义 `G01/E03/E10/E11/E26`；权重消费 `G02/E14/E18/E26`。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Source details retained from the baseline case-analysis sections: MolCLR case sections 4.1-4.4 and 7 cover graph semantics, split/denominator and weight consumption."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "1cca5bb88cc854b3d59bba4b1bf1c9c48bba0947f6e4330dea035cd7c2605b06"
+}

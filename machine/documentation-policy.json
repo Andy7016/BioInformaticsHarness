@@ -1,0 +1,111 @@
+{
+  "schema": "harness.documentation-policy/v1",
+  "human": {
+    "include": [
+      "**/*.md"
+    ],
+    "exclude": [
+      "machine/**",
+      "LICENSES/**",
+      "core/LICENSES/**",
+      "core/examples/verification/**",
+      "core/examples/research-support/plan-seal/PLAN.md",
+      "AGENTS.md"
+    ],
+    "writing": [
+      "State purpose, installation, usage, examples, design choices and contribution paths in plain language.",
+      "Keep real scientific conditions and observed results; write useful scope positively.",
+      "Link file indexes where useful. Move integrity checks, raw identifiers, audit caveats and repetitive defensive claims into structured machine records."
+    ],
+    "forbidden_boilerplate": [
+      "不保证",
+      "不代表",
+      "不能据此",
+      "不构成",
+      "不等于",
+      "不意味着",
+      "does not guarantee",
+      "does not imply",
+      "does not constitute",
+      "not a claim",
+      "not a certification"
+    ],
+    "forbidden_verification_terms": [
+      "SHA-256",
+      "SHA256",
+      "checksum",
+      "哈希",
+      "校验和",
+      "verify_checkpoint.py",
+      "verify_release.py"
+    ],
+    "forbid_archive_pointer_targets": true,
+    "forbid_visible_hex_identifiers": true,
+    "forbidden_link_prefixes": [
+      "https://github.com/vvcchh0/BioInformaticsHarness-research-archive",
+      "https://chatgpt.com/c/",
+      "codex://",
+      "file://"
+    ]
+  },
+  "machine": {
+    "root": "machine/",
+    "preferred_formats": [
+      "json",
+      "jsonl"
+    ],
+    "historical_records": "Retain original frozen artifacts under their existing historical scope; new metadata explicitly records source, status and access.",
+    "source_index": "machine/source-design-index.jsonl",
+    "source_index_required": [
+      "id",
+      "sources",
+      "design",
+      "borrowing",
+      "implementation",
+      "acceptance"
+    ],
+    "legacy_fixtures": [
+      "core/examples/verification/**",
+      "core/examples/research-support/plan-seal/PLAN.md"
+    ],
+    "agent_entrypoint": "AGENTS.md",
+    "original_document_retention": {
+      "path": "machine/document-notes/",
+      "schema": "harness.document-notes/v1",
+      "original_fields": [
+        "source_text",
+        "source_commit",
+        "source_sha256"
+      ],
+      "later_revisions": "Append dated technical notes or use machine/history; preserve the original-source fields."
+    }
+  },
+  "legal": {
+    "preserve_verbatim": [
+      "LICENSE",
+      "LICENSES/**",
+      "NOTICE",
+      "core/LICENSE",
+      "core/LICENSES/**",
+      "core/NOTICE"
+    ],
+    "licensing_explanations": "State attribution, rights, and practical use in human prose; retain detailed license mappings in machine manifests."
+  },
+  "release": {
+    "frozen_tag": "v0.1.0-alpha.2",
+    "documentation_revision": "2026-10-22",
+    "new_docs_do_not_rewrite_published_assets": true
+  },
+  "new_file_licenses": {
+    "machine/document-notes/**": "CC-BY-4.0",
+    "machine/source-design-index.jsonl": "CC-BY-4.0",
+    "machine/history/**": "CC-BY-4.0",
+    "machine/documentation-policy.json": "Apache-2.0",
+    "machine/schemas/**": "Apache-2.0",
+    "tools/**": "Apache-2.0",
+    "tests/**": "Apache-2.0",
+    "**/*.md": "CC-BY-4.0",
+    "machine/**": "CC-BY-4.0",
+    "machine/documentation-operations.json": "Apache-2.0"
+  }
+}

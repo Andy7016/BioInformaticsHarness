@@ -1,0 +1,115 @@
+{
+  "schema": "harness.documentation-operations/v1",
+  "cwd": "repository_root",
+  "preconditions": {
+    "python": ">=3.11",
+    "bytecode": "disabled with -B",
+    "temporary_outputs": ".scratch/",
+    "inventory_refresh": "Run after all document writers stop.",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "TEMP_and_TMP": "Use an existing .scratch subdirectory for test and tool temporary files."
+    }
+  },
+  "commands": [
+    {
+      "id": "documentation-check",
+      "argv": [
+        "python",
+        "-B",
+        "tools/documentation.py",
+        "check",
+        "--root",
+        ".",
+        "--out",
+        ".scratch/documentation-check.json"
+      ],
+      "writes": [
+        ".scratch/documentation-check.json"
+      ],
+      "success_exit_code": 0,
+      "invalid_documentation_exit_code": 2
+    },
+    {
+      "id": "documentation-refresh",
+      "argv": [
+        "python",
+        "-B",
+        "tools/documentation.py",
+        "refresh",
+        "--root",
+        ".",
+        "--out",
+        ".scratch/documentation-refresh.json"
+      ],
+      "writes": [
+        "examples/splice/CASE-MANIFEST.json",
+        "examples/yeast/CASE-MANIFEST.json",
+        "core/RELEASE-MANIFEST.json",
+        "machine/history/documentation-refresh.json",
+        "CHECKPOINT-MANIFEST.json",
+        ".scratch/documentation-refresh.json"
+      ],
+      "preserves": [
+        "frozen release tag and assets",
+        "dataset and model-state bytes",
+        "original source identity and license fields"
+      ],
+      "success_exit_code": 0
+    },
+    {
+      "id": "checkpoint-verification",
+      "argv": [
+        "python",
+        "-B",
+        "verify_checkpoint.py",
+        "--root",
+        "."
+      ],
+      "output": "stdout JSON",
+      "success_exit_code": 0
+    },
+    {
+      "id": "core-verification",
+      "argv": [
+        "python",
+        "-B",
+        "core/verify_release.py",
+        "core"
+      ],
+      "output": "stdout JSON",
+      "success_exit_code": 0
+    },
+    {
+      "id": "tool-tests",
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_documentation.py",
+        "-v"
+      ],
+      "when": "Documentation checker or refresher behavior changes.",
+      "temporary_directory": "Set TEMP and TMP to an existing repository .scratch subdirectory.",
+      "success_exit_code": 0
+    }
+  ],
+  "editorial_acceptance": [
+    "Source relationships distinguish evaluated options, adopted principles, evaluation frameworks and demonstrated design changes.",
+    "Scientific conditions, alternative methods and observed negative results remain readable.",
+    "Public history and navigation resolve through public documents or original public sources.",
+    "Original technical records and frozen research artifacts remain recoverable."
+  ],
+  "records": {
+    "policy": "machine/documentation-policy.json",
+    "source_index": "machine/source-design-index.jsonl",
+    "original_documents": "machine/document-notes/",
+    "archived_locators": "machine/archive-pointers.jsonl",
+    "integrity_scope": "Manifests identify file bytes; scientific results use separately named research acceptance records."
+  }
+}

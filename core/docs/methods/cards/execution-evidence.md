@@ -10,7 +10,7 @@
 - `observed_binding`：实际加载/消费的组件、产物/版本、形状或接口、发生阶段和状态；共享权重、scratch 初始化、可选组件和合法跳过必须有明确理由。
 - `operator_receipt`：若主张配置生效，记录实际作用算子/调用事件、输入与输出贡献、参数和捕获范围。参数字段、配置文件或源码路径单独标为声明/源码证据。
 - `input_contribution`：每个必需输入进入至少一个输出或有理由排除；输出、失败、有理由排除和未观测要分开，不能用总文件数代替分母。
-- 证据层：至少标记 `declared`、`source_inspected` 或 `runtime_captured`，并给出来源、版本、hash、日志/回执定位。不同层不能互相冒充。
+- 证据层：标记 `declared`、`source_inspected` 或 `runtime_captured`，并给出来源、版本、日志或回执定位。每一层回答不同问题，按实际取得的证据记录。
 
 2026-10-14补充：[20例迭代D28](../../design/14-twenty-case-relations-and-evidence.md)细化局部证据为`artifact_checked`（采集工件身份）、`runtime_read`（指定上下文实际读取）及`parameters_applied`义务（参数载入/作用）。前两者不证明原模型使用了该文件；旧`runtime_captured`回执须说明捕获的算子/阶段，不能仅按名称升为最高等级。
 
@@ -35,10 +35,10 @@
 
 ## 来源
 
-- [E01 Enformer 实际算子锚点](../../ARCHIVE_POINTERS.md#archive-pointer-f7d76fa7d08adbf3)：`enformer:E28/E63`；配置存在不等于梯度裁剪实际作用。
-- [D02 Uni-Mol 组件消费锚点](../../ARCHIVE_POINTERS.md#archive-pointer-fd81d14045c8078f)：`unimol:E29/E61`；双编码器角色、权重和消费阶段需要联检。
-- [E02 Uni-Mol 评价对账锚点](../../ARCHIVE_POINTERS.md#archive-pointer-a2aee25d1fe537c8)：`unimol:E35/E36/E45/E46`；当前充分仅限给定 manifest 的三出口对账。
-- [校准后的关系契约](../../design/13-calibrated-relations-and-checks.md)：D25 `components`、`selection` 与 `aggregation` 的输入记录范围。
+- **Enformer**：配置记录可指出梯度裁剪的预期值；判断其是否生效，还要记录实际运行阶段和优化器调用。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- **Uni-Mol 组件消费**：双编码器角色、权重身份和消费阶段应相互对应；若组件共享，也记录共享关系。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- **Uni-Mol 评价对账**：把每个评价输入分到预测、失败或有理由排除，并保留覆盖范围；记录齐全与科学分母适当是两项判断。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)
+- [校准后的关系契约](../../design/13-calibrated-relations-and-checks.md)：D25 说明组件、选择和聚合贡献的记录范围。
 
 本卡描述证据等级和条件判别，不声称当前 Harness 已提供通用梯度捕获、任意组件追踪或磁盘级科学验证。
 

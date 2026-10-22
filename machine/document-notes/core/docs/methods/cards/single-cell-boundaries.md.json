@@ -1,0 +1,21 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/single-cell-boundaries.md",
+  "source_text": "# 单细胞表示与按任务的可见信息边界\n\n## 适用条件\n\n用于单细胞表达、扰动、注释、批次/多模态整合和基因程序或注意力关系解释。输入是基因身份及表达状态，不应直接套用序列语言模型的“相邻 token”假设。\n\n## 应记录\n\n- `DataSnapshot`：cell、donor、study、condition、组织与物种 ID；基因 ID/参考版本、模态列对齐、QC 和过滤；raw/log/normalized/bin 表示及转换版本。\n- 明确零值、未测、被 mask、padding 和缺失模态如何由值、mask 或元数据组合表示；记录基因集合抽样、分箱边界、随机种子和特征覆盖。\n- `SplitPlan` 按任务写可见的 `X/y/condition` 与验证单位：注释的 inductive 新细胞/供体/研究，扰动的未见干预/条件；reference mapping 可是固定 reference 映射新 query 的 inductive 目标，也可是共同拟合当前集合的 transductive 目标。\n- 记录 HVG/标准化/词表等拟合范围。整合若共同使用待整合细胞的 `X`，标为传导式目标；若声称未来供体泛化，须按该目标设置隔离轴。\n- 做基因程序/网络解释时，记录背景基因宇宙、参考版本、检验族和分辨率/秩探索；把预测边、结合证据和因果调控分层。\n\n## 可判断的检查\n\n1. 在 2×4 小矩阵中分别放“观测为零”“未测”“mask”“pad”；值结合 mask/元数据应能还原四种状态，编码不要求每种状态使用不同数值 sentinel。\n2. 检查 gene ID、模态行列和抽样覆盖；重复基因、错位模态和同值分箱要能定位到快照。\n3. 对每个任务列出可见信息和验证单位。随机拆细胞不能自动支持新供体/新研究结论；扰动标签和条件不能越过隔离边界。\n4. 传导式整合可以使用全集 `X`，固定 reference 映射新 query 则按 inductive 边界记录；比较规格必须写清目标，不把当前集合分数改称未来样本泛化。\n5. 对富集/网络结果核对背景、检验族、多重比较、边方向和外部参考；相容性或注意力高秩不自动等于结合或因果机制。\n\n## 替代与不适用\n\nraw、log、bin 或连续 delta 均可用，选择由目标决定；零值不强制解释为缺失，也不强制所有整合都做 inductive split。没有扰动或网络解释时跳过对应分支。全集 HVG 对传导式任务可以合理，但不能偷偷用于未来供体的泛化主张。\n\n## 小型验收例\n\n- 正常：小矩阵用值加 mask/元数据区分未测模态和观测零；重建后 cell/gene 对齐，标记 `pass`。\n- 失败：把 padding 和真实零合并，或分箱对相同值没有 ties 规则、导致同一输入因排序/抽样不同而落入不同箱；表示回放应拒绝并保留原因。\n- 正常：注释按 donor 分组，训练与独立 validation 供体标签可用于选模，最终测试供体无 `y` 暴露；可支持“新供体”目标。\n- 失败：整合在全集 `X` 上拟合后，直接把当前集合 NMI 写成未来供体泛化；应改写目标或补独立隔离。\n- 失败：注意力边与 ChIP 靶标重合就写成直接因果调控；证据层级和替代解释检查应阻止该主张。\n\n## 来源\n\n- [scGPT 报告](../../ARCHIVE_POINTERS.md#archive-pointer-b66d30cd5b503016) §1、§2、§4：表示状态 `G01/E06/E07/E14/E16`；任务边界 `G02/E11/E13/E14/E15/E20`。\n- 同报告 §4E 及建议：基因程序/网络 `G03/E22/E23/E24`；版本、覆盖和分母核对 `G04/E02/E03/E19/E27`。\n\n本卡把“可见信息”与“科学主张”连接起来；它不规定一种唯一的单细胞预处理或验证协议。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 37,
+          "text": "- [scGPT 报告](../../ARCHIVE_POINTERS.md#archive-pointer-b66d30cd5b503016) §1、§2、§4：表示状态 `G01/E06/E07/E14/E16`；任务边界 `G02/E11/E13/E14/E15/E20`。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Source details retained from the baseline case-analysis sections: scGPT case sections 1/2/4/4E cover representation, task boundaries, gene-program/network interpretation, version/coverage/denominator."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "c7e3c268d40969f6c7eba50c9a9bf65510276150bbad53443a6a5347f6e2b833"
+}

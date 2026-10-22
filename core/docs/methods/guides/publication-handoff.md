@@ -1,58 +1,32 @@
-# 研究发行交接：逐项记录许可、来源和替代路径
+# Prepare a research release
 
-本指南帮助整理可复核的研究发行清单。许可需要按实际文件和权利来源判断；项目策略、SPDX 标识或某个主许可证都不能自动覆盖同一包中的全部材料。遇到授权不明或条款冲突时，把具体文件和证据交给项目维护者/权利人进一步处理，并在清单中记录 `unknown`，不要猜。
+Before sharing a study, review every file in the proposed release. Record its source, version, license, attribution, transformation, and role in the study. Keep code, data, model states, results, documentation, and dependencies in separate rows so their terms remain clear.
 
-## 六类材料逐项说明
+## Review the materials
 
-| 材料 | 清单至少记录什么 | 常见边界 |
-|---|---|---|
-| 代码、测试、配置 | 文件路径、作者/来源、许可证、版本或 SHA-256、改写说明、必要的 NOTICE | 项目自有代码依项目决定授权；复制或改写的第三方代码另行核对。API 使用方式和算法描述与第三方实现代码是不同材料。 |
-| 文字、图表、报告 | 作者/来源、许可、引用、改编或翻译说明、外部材料的单独许可 | 论文全文、补充材料、网页图和截图不会因代码开源而自动开放；可改为引用和链接。 |
-| 数据和派生表 | 原始来源/DOI/版本、原许可、归属文本、下载文件 SHA-256、过滤/抽样/派生步骤、派生文件 SHA-256 | 记录是否含个人、受限、第三方或未知授权内容。派生文件仍可能受来源条件约束；不得把项目代码许可当作数据许可。 |
-| 已有模型权重 | 模型作者、确切文件/版本、权重来源、明确适用的许可或使用条款、大小和 SHA-256 | 代码、训练数据或模型卡的许可声明不一定覆盖参数工件。未知时不要分发权重或宣称它继承别的许可。 |
-| 新训练参数 | 训练者/项目、所用代码和数据版本、训练配置/命令、工件哈希、项目采用的参数工件政策 | 说明参数是本项目训练、预训练后续调优，还是外部权重。记录不能替代权利判断；按项目授权政策明确列出哪些新工件被覆盖。 |
-| 第三方库和二进制 | 包名、精确版本、来源、依赖许可、是否实际随包分发、NOTICE/归属要求 | 运行时依赖可由使用者安装，不必把库源码或 wheel 放进发行包。若不分发，仍应列出复现所需依赖和版本范围。 |
+| Material | Record | Check before sharing |
+| --- | --- | --- |
+| Code, tests, and configuration | Author, source, version, license, and changes | Check copied or adapted third-party code separately from algorithms and API descriptions. |
+| Data and derived tables | Dataset, DOI, source terms, attribution, filtering, sampling, and transformations | Identify personal, restricted, third-party, or unknown-license content. Derived tables can retain source-data terms. |
+| Existing model weights | Model author, version, source, license or use terms, and file size | A code license or model card may cover different material than the parameter file. Keep weights out when their terms are unclear. |
+| Newly trained parameters | Training project, code and data versions, configuration, and project policy | State whether the parameters are newly trained, fine-tuned, or supplied by another project. |
+| Images and documentation | Creator, source, license, and edits | Preserve attribution and indicate modifications where required. |
+| Dependencies | Package and version | Users install dependencies separately and follow each package's terms. |
 
-## 构建可审计的清单
+## Inspect saved states
 
-### 保存状态先做内容盘点
+Review a trusted copy of each serialized model before distribution. List fields such as support vectors, source or transformed features, training IDs, labels, lookup tables, metadata, and fitted parameters. Check metadata for local paths or session identifiers. If you remove embedded data, create a separate export and compare its predictions on the declared inputs before releasing it.
 
-不要只看文件扩展名、训练代码许可证或模型卡。打开一个副本/受控检查器，盘点序列化对象实际保存的字段：支持向量或其他原始/变换后特征、训练行 ID、标签/真值、索引或可逆查表、作者 metadata，以及只含拟合系数的新增参数。记录字段名、行列数、来源和转换；先检查绝对路径、会话标识等是否混入 metadata。源状态保持原字节只读；需要排除嵌入数据时，另生成新的明确导出，并重新检查预测一致性和 SHA-256。
+Create one manifest row per file. For a copied file, identify the source and release copy. For a filtered, sampled, transformed, or newly predicted file, describe the operation and its inputs. List excluded categories and give a reason so readers can see the release boundary.
 
-若状态只含项目新增参数/封装以及少量聚合说明，可按项目对新增参数的政策逐项记录，并说明摘要统计来自哪个数据集。若状态也含受来源条件约束的记录 ID、真值、支持向量或特征内容，则单独说明这些组成部分及其归属；在发行清单里用适当的复合 scope 标注整个工件，例如 `Apache-2.0 AND CC-BY-4.0`，而不是把数据许可隐去或把参数许可自动延伸到整个数据源。遇到兼容性或许可范围不清时暂停分发该状态，改为只发布 reader/代码并提供合法取得方式，或缩小/重新导出包。
+## When rights are unclear
 
-例如本轮检查到的 Yeast pickle 内含 1,169 个 UCI 训练 ID，且 Pipeline 中的 SVC 有 996×8 个经训练折缩放的支持向量，八列来自官方历史计算特征；其工件清单同时说明第一方参数/封装和嵌入数据部分。作为对照，Splice joblib wrapper 含 train/test 数量和三类训练标签计数，但检查未发现样本 ID、特征行或支持向量；README 说明这些计数来源，state 文件仍按该轮 first-party 参数政策列示。两例是具体工件盘点，不表示所有 `.pkl`、`.joblib` 或训练模型都适用相同结论。
+Choose an available route:
 
-### 逐文件来源和许可
+1. Leave the material out and provide its acquisition link.
+2. Replace it with an openly licensed source and document the transformation.
+3. Request permission from the rights holder before distributing it.
 
-每个公开文件都要在最终发行清单中有一行；不要用 `docs/**`、`models/*` 之类宽泛通配符代替逐项审阅。建议字段：
+For example, a reader can accept `--model PATH` while users obtain the weights from the rights holder. A UCI dataset distributed under CC BY 4.0 needs its DOI and contributor attribution in the data row. Those data terms remain separate from the license for model weights and software dependencies.
 
-```json
-{
-  "path": "studies/splice/model/combined-full-fold0.joblib",
-  "kind": "already-trained-model-parameters",
-  "source": {
-    "path": "assessment/splice/accepted-model-fold0.joblib",
-    "sha256": "..."
-  },
-  "published": {"bytes": 123456, "sha256": "..."},
-  "transformation": "Byte-for-byte copy; no refit",
-  "license": "Apache-2.0",
-  "attribution": [],
-  "notes": "First-party model parameters trained for this project"
-}
-```
-
-对 ZIP、派生输入/真值表、既有模型、新训练参数、说明文档和代码分别建行。对字节复制记录源与发布 SHA 相同；对过滤、抽样、转换或新推理输出说明具体步骤和两个文件的哈希。清单还应标明被排除的文件类别及原因，避免读者把未列出的历史文件当作许可范围。
-
-## 授权不明时的可用替代
-
-如果某个文件暂时不能确认是否可再分发，可以保留来源说明并选择更窄的发布范围：
-
-1. 不随包分发该文件，只提供官方 DOI、项目主页或权利人指向的获取方式；在本地清单中记下未包含原因。
-2. 用许可清楚、可替代的开放材料构造一个明确标注的新例，并保留替代来源、转换和哈希。
-3. 缩小示例，只发布已核清的代码、解释和本项目可公开的数据切片；删除对未知文件的运行依赖，或让使用者自行提供该文件。
-
-例如，一个模型文件的许可不明确时，可以不附权重，只发布 reader 和一条显示 `--model PATH` 的说明，同时指出该参数由使用者从模型权利人处取得；如果 reader 当前将路径写死，则先改为显式参数并验证。若 UCI ZIP 可按页面列出的 CC BY 4.0 条件再分发，则在数据行保留 DOI、贡献者归属、原 ZIP 哈希和派生说明；这不改变旁边外部模型权重或依赖库的许可状态。
-
-本项目 2026-10 的 public-checkpoint 采用逐文件审核：新写代码与测试、配置及项目新增参数/封装部分依本轮政策按 Apache-2.0 标注；状态内保留的源数据内容按实际复合 scope 登记；原创说明按 CC BY 4.0；经核实的 UCI ZIP 和带有其真值/特征的派生表保留 CC BY 4.0 归属及修改说明。该具体政策不扩展到他人权重、论文全文、第三方实现或库二进制，且不改写参与者旧首交中的历史许可声明。完整审阅记录见 `docs/reviews/2026-10-checkpoint-publication/first-party-license-policy.json` 及发行清单。
+See [LICENSING.md](../../../LICENSING.md) for this release's terms and [machine file manifests](../../../../machine/) for detailed per-file records.

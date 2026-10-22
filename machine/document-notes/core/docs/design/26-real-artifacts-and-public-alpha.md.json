@@ -1,0 +1,36 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/26-real-artifacts-and-public-alpha.md",
+  "source_text": "# D49：以真实小工件检验条件指导，并准备公开alpha\n\n2026-10-20。来源为用户要求记录推理强度观察、选真实小工件处理，并评估继续验证后的public条件。\n\n## 目标与选择理由\n\nD48已补三个研究面及具体判断层的推理强度观察。现在需要让新指导消费真实产物，观察能否从比较、数值到使用范围走通。S4PRED已有802行五成员CPU预测的三类概率、配对参考与资格、来源及接口；它比没有不确定性量的Optimus点预测更适合本次置信排序问题。\n\n父方在新数值计算前固定六实体、资格、排序、保留比例、两项参照与改判条件。控制预测类别构成是由当前替代解释触发的比较，不作为所有置信度研究的义务。已有S4PRED总体结果和项目历史可见，本轮记为父方设计、执行层实现的保存工件应用；不称独立关闭记忆、从头设计的研究，也不计作新模型或完整论文复现。\n\n## 推理强度观察怎样保留\n\n记录本轮可定位差异、材料范围和可改变判断的证据。常规medium、关键判断high、存在分歧的节点xhigh作为项目内调度假设；没有独立重复和完整成本计量，不建立总体档位排名或统计显著性。\n\n## 公开阶段怎样判断\n\n当前目标是范围明确、能引用和重跑的公开研究原型。科学覆盖、真实执行、使用者复现、许可和分发内容分别判断；没有一个论文数量可以代替这些验收。公开alpha可以持续接受案例和外部反馈；更广泛的研究收益主张仍须相应验证。\n\n先整理一个最小可运行例、相对路径和依赖入口，保留首次计划、失败修订及独立核对；再按实际候选确认自身许可、第三方资产和公开内容。当前private仓库兼任完整研究档案，优先制作干净、可版本化的公开候选，不自动切换可见性或重写历史。\n\n## 实现与接受入口\n\n- [推理强度观察](../ARCHIVE_POINTERS.md#archive-pointer-1f45a153fdfbba41)\n- [真实小工件的问题与首次计划](../ARCHIVE_POINTERS.md#archive-pointer-d7b975db46092099)\n- [冻结输入、协议和指南身份](../ARCHIVE_POINTERS.md#archive-pointer-cdcd259f1c158761)\n- [可重用的排序程序](../ARCHIVE_POINTERS.md#archive-pointer-1b52b07bea50bb33)\n- [公开准备评估与后续验证](../ARCHIVE_POINTERS.md#archive-pointer-efd7d946f821c119)\n\n本决策沿用当前核心对象。小例的特定PDB、标签、保留比例和预算保持实例范围，后续结果和修订在对应研究目录接受，不回写旧案例或冻结基线。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 23,
+          "text": "- [推理强度观察](../ARCHIVE_POINTERS.md#archive-pointer-1f45a153fdfbba41)"
+        },
+        {
+          "line": 24,
+          "text": "- [真实小工件的问题与首次计划](../ARCHIVE_POINTERS.md#archive-pointer-d7b975db46092099)"
+        },
+        {
+          "line": 25,
+          "text": "- [冻结输入、协议和指南身份](../ARCHIVE_POINTERS.md#archive-pointer-cdcd259f1c158761)"
+        },
+        {
+          "line": 26,
+          "text": "- [可重用的排序程序](../ARCHIVE_POINTERS.md#archive-pointer-1b52b07bea50bb33)"
+        },
+        {
+          "line": 27,
+          "text": "- [公开准备评估与后续验证](../ARCHIVE_POINTERS.md#archive-pointer-efd7d946f821c119)"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "f78cda08e32ca4550e07e7bd76a8d182884b5d81bdfdceaa0e6433fb5ec743b8"
+}

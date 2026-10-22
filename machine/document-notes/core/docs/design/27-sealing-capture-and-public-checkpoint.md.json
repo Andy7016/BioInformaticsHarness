@@ -1,0 +1,32 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/27-sealing-capture-and-public-checkpoint.md",
+  "source_text": "# D50：封存接缝、首次执行留档与公开 checkpoint\r\n\r\n2026-10-21。来源是 [Splice/Yeast 两案回收](../ARCHIVE_POINTERS.md#archive-pointer-77eff081f09b5a5a)及用户本轮发布安排。沿用已有 Artifact、Run、Task、Decision 和条件指导，不增设顶层研究阶段。\r\n\r\n## 问题与决定\r\n\r\n| 已观察到的工作问题 | 本轮工程决定 | 使用范围与合法替代 |\r\n| --- | --- | --- |\r\n| 计划生产者与封存 reader 采用不同路径基准，清单路径出现双重前缀 | `plan_seal` 从明确的 plan-root 生成规范相对清单，先核实际库存/字节，再封存并给 ACK；旧协议须显式选择 | 需保留首次方案或跨执行者冻结时使用；成熟版本库、预注册或既有封存服务可等效替代 |\r\n| 首次数据审计先于正式训练捕获，不能确认当时审计代码的精确字节 | `run_bounded` 可在启动子进程前捕获列明代码/配置，并绑定输入身份；失败也保留 | 第一次会影响清洗、纳入、划分或研究判断的真实审计即触发；已有可信执行快照可替代；不要求只读浏览都开运行包 |\r\n| 独立研究者完成了科学任务，却未获得发布方的文件授权上下文 | 发布者提供逐文件权利范围与修改说明，接收者按新的发布清单消费 | 对外分发时使用；不分发外部材料、给取得方式或换用开放数据都是可选路线 |\r\n\r\n科学首次计划与程序执行快照是两个对象：前者保留预定研究选择，后者说明某次调用实际采用的列明字节。封存通过不批准科学方法；快照哈希不证明输入资格或全部依赖已捕获。\r\n\r\n## 为什么先做这些\r\n\r\n两案已经完成给定规模的数据审计、划分、拟合、评价和可接手交付。缺口集中在已有指导怎样跨实际接口落实。用可调用助手和真实接缝验收，比再增加一张通用记录表更直接。原失败、原首交中的许可 unknown、旧回执和科学分数原样保留；新发布许可作为另一个明确时点的决定登记。\r\n\r\n## 发布与下一阶段\r\n\r\n公开的是可独立使用的研究原型 checkpoint。采用新筛选的 Git 历史；旧私有历史保留在研究档案。第一方代码/新训练参数、原创说明及开放数据各有逐文件许可范围。静态论文评议、真实研究与软件测试分别说明。\r\n\r\n下一阶段优先验证同一课题的连续科学迭代：具体疑问 → 选择新设计 → 真实补分析 → 重新判断主张 → 第二轮交付。保留首次方案、首交、修订和父方介入。科学上没有必要改变结论时，可以维持原判断并解释证据；不为凑齐流程制造改判。\r\n\r\n实现、真实应用和发布身份见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-470ff278b41a2473)。\r\n\r\n## 参数工件的内容分层\r\n\r\nRBF SVM保存状态可能包含从源数据直接取得/变换的支持向量或ID，因此“新训练模型”不等于整个封装都只有第一方内容。发布前检查真实字段：新增参数/封装采用第一方许可，保留的数据内容保持其来源许可和归属，必要时给整个文件登记混合scope。这个取舍按实际内容触发，不把所有学习参数统一判为数据副本。\r\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "2026-10-21。来源是 [Splice/Yeast 两案回收](../ARCHIVE_POINTERS.md#archive-pointer-77eff081f09b5a5a)及用户本轮发布安排。沿用已有 Artifact、Run、Task、Decision 和条件指导，不增设顶层研究阶段。"
+        },
+        {
+          "line": 13,
+          "text": "科学首次计划与程序执行快照是两个对象：前者保留预定研究选择，后者说明某次调用实际采用的列明字节。封存通过不批准科学方法；快照哈希不证明输入资格或全部依赖已捕获。"
+        },
+        {
+          "line": 25,
+          "text": "实现、真实应用和发布身份见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-470ff278b41a2473)。"
+        },
+        {
+          "line": 29,
+          "text": "RBF SVM保存状态可能包含从源数据直接取得/变换的支持向量或ID，因此“新训练模型”不等于整个封装都只有第一方内容。发布前检查真实字段：新增参数/封装采用第一方许可，保留的数据内容保持其来源许可和归属，必要时给整个文件登记混合scope。这个取舍按实际内容触发，不把所有学习参数统一判为数据副本。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "dfc744dda005eeea0139f40dac4fc3473b41d3bad82d82d8657c9d65172c4df3"
+}

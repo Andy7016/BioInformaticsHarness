@@ -1,0 +1,37 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/guides/measurement-to-claim.md",
+  "source_text": "# 从测量到目标与主张：修订指南 v1\n\n状态：2026-10-16，本轮五例指导迭代新增的可执行引导。它补充已有方法卡和修订记录，不改变旧单位、分母、信息用途或指标原则。\n\n## 何时使用\n\n当评审意见、结果表或作者回应把一个测量解释成另一个研究目标时，先使用本指南。常见触发包括：\n\n- 测量是代理、教师输出或预测量，却被写成直接真值；\n- 单位、窗口、区域、个体、构建体或结构域发生变化；\n- 指标名称相同，数学事件、过滤、分母或聚合不同；\n- 结果能回答关联/描述问题，却被扩写为因果、机制、校准或普遍泛化。\n\n旧责任仍由[指标语义与数学事件](../cards/metric-semantics.md)、[统计单位与选择后估计](statistical-units-and-selection.md)和[信息用途与状态效应](information-and-state-effects.md)承接。本指南新增的是条件触发、最小工作例、替代解释和残余问题。若只是展示已经由上游契约完整绑定的原始值，记录不适用及理由即可。\n\n## 执行者要形成的链\n\n将每个待回应问题写成下面四段。不要用一个宽泛的“结果支持”代替四段之间的连接。\n\n| 段 | 要回答什么 | 最小记录 |\n|---|---|---|\n| 直接测量 | 实际观测或计算的对象是什么？ | 来源文件、版本、单位、观测单位、过滤和缺失出口 |\n| 研究目标 | 研究要比较、预测、描述或校准什么？ | target、评价对象、独立性和必要的外部参考 |\n| 主张 | 依据当前测量能说到哪一步？ | claim、支持它的 measurement、限制和未决问题 |\n| 跨越步骤 | 从测量到目标还缺哪一步证据？ | 需要的输入、合法替代、owner 和 unknown 出口 |\n\n在修订记录中使用本轮 research-revision-v1 新增的 measurement_links 视图字段：每项至少给 source_ids、measurement、unit、proxy_role、target、evaluation、claim_ids 和 unresolved。这只是现有修订链中的关系记录，不追认成冻结能力，也不新增顶层领域对象。\n\n## 最小工作顺序\n\n1. **拆开请求。** 保留评审原意和来源定位；一个复合问题分别记录不同测量或不同主张。\n2. **写测量事件。** 记录实际输入、数学表达式或实现定位、单位、方向、有效分母、过滤和聚合。缺逐单位结果时标记范围未知，不用摘要反推。\n3. **写目标和代理角色。** 明确测量是直接观察、代理、教师/参考、预测输出还是评价量。说明它参与训练、选择还是独立评价。\n4. **绑定主张。** 让每句回应只使用它确实覆盖的测量和目标；把不能跨越的步骤写进 limits 或 unresolved。\n5. **交付最小产物。** 解释/限域路线至少交付一段带来源和边界的文字；补分析路线再交付规格、输入身份、结果和缺失处理。\n6. **验收语义。** 另一位审阅者应能指出哪份输入、哪项操作或哪种结果会改变当前主张。\n\n## 状态含义\n\n这些状态用于本指南的子项判断，并与修订记录契约一致：\n\n- **pass**：测量、目标、主张和限制已绑定，且路线需要的证据已到位。\n- **fail**：记录或文字含有明确的构念替换、分母冲突、错误单位或相互矛盾的主张。\n- **unknown**：需要的原始输入、版本、实现、逐单位结果或独立证据缺失；不能把缺失当成失败，也不能当成通过。\n- **NA**：该请求明确不涉及该测量/评价，且记录了理由；NA 不填补分母，也不制造科学通过。\n\npass 只表示本指南所列语义和记录条件通过。它不证明模型重跑、历史运行或生物学结论。\n\n## 可读工作例：Locator Q05/Q06 与 GC02\n\n来源入口：[Locator 请求记录](../../ARCHIVE_POINTERS.md#archive-pointer-ad641439cd176b0a)（Q05、Q06）和[指导卡 GC02](../../ARCHIVE_POINTERS.md#archive-pointer-e7f4d736e470cc09)。本例采用解释/限域路线，沿用作者已报告的窗口预测语境；它是本轮提炼的工作例，不是新的科学结果。\n\n| 项目 | 本例写法 |\n|---|---|\n| 直接测量 | 作者报告个体 × 窗口的位置预测及二维 KDE 分位等高线。窗口、坐标、分位到等高线的算法与峰/质心定义分别按来源记录；实现、带宽或包围质量未给出时保留 unknown。窗口不是独立个体。 |\n| 研究目标 | 先确定是描述预测区域，还是要声称对直接地点真值具有名义覆盖率。两者是不同评价事件。 |\n| 当前主张 | 解释/限域路线可说“作者标注为 95%、50%、10% 分位的描述性 KDE 等高线”。来源未说明具体计算规则时，不补成“恰好包围 95% 概率质量或预测点”；此标记也不自动建立真实地点的置信覆盖或后验可信解释。 |\n| 跨越步骤 | 若要主张重复抽样覆盖率，需要定义地点目标、评价单位和适配的真值/校准设计；贝叶斯可信区域则须说明后验目标、概率模型及相应推断，不能统一写成重复抽样覆盖。窗口权重也不能默认等于 DNA 长度比例。 |\n| 最小输入及用途 | 解释/限域路线可只使用已报告的方法与图注，记录已知窗口身份和作者定义；不要求原始逐窗口预测、KDE bandwidth/实现或地点真值作为前置。复算/校准路线才要求个体×窗口预测、窗口定义和 SNP 数、KDE 实现/带宽/等高线定义，以及直接地点真值和独立校准设计，并分别记录缺失出口。 |\n| 产物 | 解释/限域路线：claim-scope-response.md，并在修订记录中保留 unresolved。若选择校准路线，再按卡片规格形成 window-region-metric-contract.json 和 coverage-and-window-sensitivity-plan.json。 |\n| 验收 | **pass**：文字保持来源给出的分位标记及定义边界，区分预测分布、真值覆盖与后验概率，并绑定所选路线的输入与主张；**fail**：仅凭分位标记补出精确包围质量或名义真值覆盖，或混同置信与可信含义；**unknown**：解释/限域路线缺已报告方法、图注或窗口身份，或复算/校准路线缺原始逐窗口预测、KDE 实现/带宽或适配真值；**NA**：请求没有区间/覆盖解释且给出理由。 |\n\n解释路线没有被补实验路线的全量数据要求阻断：缺原始逐窗口预测、bandwidth/实现或地点真值时，可以保留已报告方法与图注并把“无法复算”写为限制；只有选择复算/校准路线才把相应原始数据、实现和真值列为 required input，缺失才记 unknown。\n\n2026-10-17 使用试验修正：冻结来源图注包含个体真实位置的红点，但本轮未取得用于校准的逐个体/祖先真值数据；不能因此写成“研究没有真值”。首次指南和执行结果保留在[试验基线与复核记录](../../ARCHIVE_POINTERS.md#archive-pointer-6a993af76a51ad55)。统计术语与百分位标签也须核对来源定义；指导例中的推断不能替代未读实现。\n\n## 错例：把代理当成目标\n\n来源入口：[Operon/TE 请求记录](../../ARCHIVE_POINTERS.md#archive-pointer-3f614437f2410a1e)（Q08）和[指导卡 GC02](../../ARCHIVE_POINTERS.md#archive-pointer-ecd8be708e6846fe)。评审问题涉及起始区域的配对/结构状态；作者回应使用区域 DMS/Gini。\n\n错误写法是：“Gini 较高，所以起始区域配对概率较低，进而证明结构机制导致 TE 变化。”这里至少发生三次未记录的替换：Gini 的不均匀度不是配对概率，DMS 约束的预测结构也不是独立结构真值，关联结果也不能自动成为机制证明。\n\n合格写法应当：\n\n1. 逐区域记录坐标、DMS 处理、Gini 或配对概率的数学事件、覆盖规则和 TE 单位；\n2. 如果只有 Gini，回应限于“所测结构反应不均匀度与 TE 的关联”，并明确它只部分回答 Q08；\n3. 如果补用模型配对输出，记录 DMS 约束、参考来源和非独立性；\n4. 若要回答配对概率或机制，另取适配的独立结构证据，或保留该问题未决。\n\n本错例应判 **fail**（主张把代理直接当成目标）；若逐碱基 DMS 或区域定义缺失，应另列 **unknown**，不能用它来替代 fail 的构念冲突。\n\n## 五例条件入口\n\n下表是本轮从案例卡提炼的触发器和合法替代。卡片中的算法、参数、assay、窗口和阈值只在对应研究问题和输入条件成立时使用。\n\n| 案例入口 | 触发与可交接产物 | 合法替代或边界 |\n|---|---|---|\n| Operon/TE GC01、GC03 | 同一 ORF 集合、目标、成员、fold 和选择历史；交付匹配集合、比较规格和分域预测范围。 | 可改用不同模型/预算，但差值归因需限域；具体 DMS/Gini 窗口不通用。 |\n| DMPfold GC-ECOD、GC-PROXY、GC-ABLATION | 触发于泛化分层、模板代理或跨系统比较；交付参考分层、泛化边界表或匹配消融规格。 | ECOD、模板/实验结构分层和 distance/contact 只回答对应结构问题；缺逐域工件时保留 reported/unknown。 |\n| Islet CNN GC01–GC03 | 触发于多标签输入输出、预测/实验测量或细胞混合替代路线；交付语义映射、比较表或 eQTL 规格。 | eQTL 路线不回答混合性能代价；LD、gene-variant 聚合和背景需单列。 |\n| Locator GC01–GC03 | 触发于采样空间、窗口相关性或位点/窗口解释；交付空间目标契约、区域解释和主张边界。 | KDE 解释与覆盖校准分开；bp/cM、窗口和祖先地点不能互换。 |\n| Ribozyme CNN GC01–GC03 | 触发于表达代理、结构编码或泛化/公平比较；交付标签语义、候选谱系、开关主张表或分域比较规格。 | FACS 训练标签不等于配体响应；候选、合成、测量和成功事件分别计账；具体阈值只在其来源和定义内使用。 |\n\n五例完整书目入口是[selection/references.bib](../../ARCHIVE_POINTERS.md#archive-pointer-432dbb3702cb7b2a)；逐项来源和请求定位保留在各 case 文件和[十五张卡复用目录](../../ARCHIVE_POINTERS.md#archive-pointer-bcac0dafacfa39d0)。\n\n## 交付前检查\n\n- [ ] 已写直接测量、目标、主张和未决跨越步骤。\n- [ ] 已绑定单位、分母、信息用途和指标事件；这些沿用旧指南，不在本指南重定义。\n- [ ] 代理/教师/外部参考与直接真值分开，且来源层和版本可定位。\n- [ ] 选解释/限域路线时，未把补实验路线的数据要求写成前置条件。\n- [ ] 每项缺失证据有 unknown 出口；明确不适用项有 NA 理由。\n- [ ] 已写出什么证据会改变主张或路线，且 owner 和下一步已记录；不要求当前已经取得反证。\n\n本指南只组织测量到主张的证据链；科学正确性由领域审阅和人的接受决定。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 51,
+          "text": "来源入口：[Locator 请求记录](../../ARCHIVE_POINTERS.md#archive-pointer-ad641439cd176b0a)（Q05、Q06）和[指导卡 GC02](../../ARCHIVE_POINTERS.md#archive-pointer-e7f4d736e470cc09)。本例采用解释/限域路线，沿用作者已报告的窗口预测语境；它是本轮提炼的工作例，不是新的科学结果。"
+        },
+        {
+          "line": 65,
+          "text": "2026-10-17 使用试验修正：冻结来源图注包含个体真实位置的红点，但本轮未取得用于校准的逐个体/祖先真值数据；不能因此写成“研究没有真值”。首次指南和执行结果保留在[试验基线与复核记录](../../ARCHIVE_POINTERS.md#archive-pointer-6a993af76a51ad55)。统计术语与百分位标签也须核对来源定义；指导例中的推断不能替代未读实现。"
+        },
+        {
+          "line": 69,
+          "text": "来源入口：[Operon/TE 请求记录](../../ARCHIVE_POINTERS.md#archive-pointer-3f614437f2410a1e)（Q08）和[指导卡 GC02](../../ARCHIVE_POINTERS.md#archive-pointer-ecd8be708e6846fe)。评审问题涉及起始区域的配对/结构状态；作者回应使用区域 DMS/Gini。"
+        },
+        {
+          "line": 92,
+          "text": "| Ribozyme CNN GC01–GC03 | 触发于表达代理、结构编码或泛化/公平比较；交付标签语义、候选谱系、开关主张表或分域比较规格。 | FACS 训练标签不等于配体响应；候选、合成、测量和成功事件分别计账；具体阈值只在其来源和定义内使用。 |"
+        },
+        {
+          "line": 94,
+          "text": "五例完整书目入口是[selection/references.bib](../../ARCHIVE_POINTERS.md#archive-pointer-432dbb3702cb7b2a)；逐项来源和请求定位保留在各 case 文件和[十五张卡复用目录](../../ARCHIVE_POINTERS.md#archive-pointer-bcac0dafacfa39d0)。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Removed Q/GC case request labels from Locator, Operon/TE, Islet CNN, DMPfold and Ribozyme prose. Their exact original labels and private source locators remain in source_text and machine/archive-pointers.jsonl. Locator example retains the reported KDE quantile labels, window-level dependence, and the requirement for matched individual/ancestral truth plus independent calibration before a coverage claim."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "92367a7be0f1befb88ce65acb2efc722883f353b994f7216891cbf1949666bed"
+}

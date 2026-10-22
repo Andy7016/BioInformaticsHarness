@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/guides/artifact-producer-consumer.md",
+  "source_text": "# 真实工件接口：让生产输出走通实际消费路径\n\n版本 `artifact-interface-v1.1`，2026-10-20；[v1原件](../../ARCHIVE_POINTERS.md#archive-pointer-e1292a0073261a28)保留。来源：[Optimus 回收 I01](../../ARCHIVE_POINTERS.md#archive-pointer-2b8f0be61ac5c14a)及[S4PRED I01](../../ARCHIVE_POINTERS.md#archive-pointer-88e4e60883bb86c0)。沿用 Artifact、Run、Task 与已有[接手操作](receiving-research-work.md)，不建立新的顶层对象。\n\n## 何时使用\n\n预测、距离、模型描述、选择集合或指标要跨程序/执行者交接，且字段或对齐错误可能改变研究结论时使用。已有成熟带索引表、共享读取函数或声明式接口可以直接复用；同一过程内无需落盘的简单计算不增加一套工件协议。\n\n## 从第一个真实工件开始\n\n1. **指出消费位置。** 写清哪个函数将读取哪份产物，读取哪些字段、身份和集合；这些值用于拟合、选择、计算指标还是解释。来源中的字段名不够清楚时，先读生产端和真实输出。\n2. **约定最少语义。** 保存格式/字段版本、唯一ID及命名空间、必要类型、null含义、嵌套路径、单位与集合关系。基准模型的 `seed=null` 可以表示“不涉及购买重复”，它与缺字段、seed=0分别处理。父集合可能由三个或更多子集组成，不能凭经验硬编码为两份。\n3. **运行最小生产—消费。** 主运行前，让生产端实际序列化的最小输出进入真正要使用的reader，再执行一次有辨识力的下游操作。只有手写JSON通过，不足以说明真实序列化相容；只有公式控制通过，也不足以说明字段和ID正确。\n4. **按ID连接。** 以消费目标的有序ID建立对齐，检查唯一性、覆盖和必要的父子关系。生产端与消费端同集合乱序应能正常工作；数组没有ID时，须取得明确的轴身份，不能由相同长度推定同序。\n5. **分开验收两类控制。** 一组检查真实读入、集合、null、嵌套和对齐；另一组检查数学事件、单位和数值容差。输入、解析和身份尽量来自同一字节缓冲；结果记录实际消费的版本。\n\n## 把检查放到会发生错误的接缝上\n\n在运行计划中给出一条可执行的小路径：**实际生产函数 → 落盘文件与版本 → 正式reader → 一项下游事件**。主运行依赖这条接缝时，先做这一步，再派发批量工作。下游事件可以是一个实体的计分、一次带ID的选择或一个明确值的变换；仅能解析JSON或完成公式fixture都没有走完该路径。\n\n先决定必要值放在哪里，再让两端采用同一个读取约定。序列可以保存在实体记录里，也可以由唯一序列表按ID连接，或由连续、唯一的位置行重建并核长度及序列身份。无需把同一sequence冗余写进每份文件；不能在reader缺键后默填空串。序列、残基、原子各有编号时，明确当前接缝使用哪一种。\n\n本轮[可运行S4PRED例](../../ARCHIVE_POINTERS.md#archive-pointer-fe63728d7ce47316)提取已接受的修复：原准备程序有意从`entities.json`省略sequence，评分器却仍索取它；新版小生产端从真实已保存的位置表建立序列记录，实际序列化后由共享reader重新打开，再按位置/AA连接真实保存预测并计数。它验证这条消费链，适合复用到同类型研究。\n\n### 按当前变更选择最小验证\n\n| 触发 | 首个真实动作及理由 | 合法替代/停止条件 |\n| --- | --- | --- |\n| 新生产端、序列化版本或跨程序字段改变 | 用一个实际对象让当前生产端写出，再由将要使用的reader完成下游事件 | 成熟共享表或共享reader可直接复用；必要字段、ID或值冲突先修接口 |\n| 只调整reader/adapter，已有固定真实输出 | 保留原字节，按其真实格式运行新消费端，检查具体修复及下游事件 | 不要求重跑昂贵的上游模型；记录这是保存产物的重用 |\n| 当前没有可消费真实产物/生产环境 | 保存契约、缺口及首次可执行动作 | 设计/fixture控制可以先做；真实接缝仍待执行，不填成通过 |\n| 接缝已验证且生产/消费版本及语义均未改变 | 引用同一身份的已有回执，继续所选任务 | 新事实或冲突触发重查；不为每轮交接重复整套计算 |\n\nS4PRED本例来自已知结果后的代码提炼；本次小运行不回填为原研究主运行前的成功预检。首次评分失败及另存修复继续保留。\n\n若生产端在元数据中声明输出路径、bytes或hash，消费方应把它们与实际打开的文件绑定核对；只记录当前文件的指纹，还没有检查“这是不是被声明的那份输出”。必要类型同样需要显式核对，不能由语言的相等运算把布尔值与整数seed混为一谈。空评价集合不支持一个已完成的MSE事件；嵌套子控制失败也必须进入上层结果。\n\n研究已结束才补接口时，记录为后补验证。原始错误、首次输出和修订依据保持；不得把新检查的时间写到历史运行之前。\n\n## 六种最低成本的辨识情景\n\n从真实最小工件派生以下情景；扰动件标明为测试副本，不修改原件。\n\n| 情景 | 接口应做什么 | 接受依据 |\n| --- | --- | --- |\n| 正常 | 读取必要字段并完成一个实际下游计算 | 原件身份、reader和结果均有定位 |\n| 同集合乱序 | 依据ID重新对齐 | 与原顺序的逐ID结果一致；不靠再次排序真值来掩盖错位 |\n| 缺ID/额外ID | 阻止被声明为完整的比较，报告具体差异 | 不静默 inner join，不补零，不把缺失项作为阴性 |\n| 重复ID | 报冲突或交回已明确的重复层级处理 | 不默取第一行，也不在无依据时求平均 |\n| 合法null/缺键/零 | 按显式字段语义分别处理 | 合法null可接受；缺键不被默认填null或零 |\n| 嵌套指标 | 从声明的嵌套位置读取，检查类型与事件 | `candidate.metrics.mse` 不被误读成顶层字段；未知不是0 |\n\n整个必要文件未取得时保留 unknown。已读内容与声明的唯一性/集合/类型明确矛盾时保留失败及反例；能否改选较窄消费范围由研究负责人决定。软件报错首先归到接口/实现，不直接归为科学假设失败。\n\n## 交付与修复边界\n\n最小交付可以是一个共享reader、一份带ID的小表和运行回执。说明修复影响读取/对齐、数学指标、模型预测还是研究规格；若改变受保护数据或选模条件，需另立研究修订，不能只称“修格式”。\n\n本轮[实现与真实应用](../../ARCHIVE_POINTERS.md#archive-pointer-60391b0cf172fe8e)消费已经保存的MRL输出，作为后补接口验证；没有重新拟合作者模型。通用助手只核声明的字段、集合和对齐，科学资格、独立性与用途另由[统计单位](statistical-units-and-selection.md)和[信息用途](information-and-state-effects.md)判断。\n\n## 计划清单也是一个真实接口\n\n计划生产端输出READY、封存端按plan-root读取时，同样先验证真实接缝。清单由`plan_seal`生成，不手写工作根前缀；源/目标实际字节和库存均通过后才写ACK。[操作指南](plan-seal-and-first-execution.md)给出选择与替代。Splice/Yeast旧失败及不改科学内容的修复另存，这次工具应用不回填成旧运行之前的成功。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "版本 `artifact-interface-v1.1`，2026-10-20；[v1原件](../../ARCHIVE_POINTERS.md#archive-pointer-e1292a0073261a28)保留。来源：[Optimus 回收 I01](../../ARCHIVE_POINTERS.md#archive-pointer-2b8f0be61ac5c14a)及[S4PRED I01](../../ARCHIVE_POINTERS.md#archive-pointer-88e4e60883bb86c0)。沿用 Artifact、Run、Task 与已有[接手操作](receiving-research-work.md)，不建立新的顶层对象。"
+        },
+        {
+          "line": 23,
+          "text": "本轮[可运行S4PRED例](../../ARCHIVE_POINTERS.md#archive-pointer-fe63728d7ce47316)提取已接受的修复：原准备程序有意从`entities.json`省略sequence，评分器却仍索取它；新版小生产端从真实已保存的位置表建立序列记录，实际序列化后由共享reader重新打开，再按位置/AA连接真实保存预测并计数。它验证这条消费链，适合复用到同类型研究。"
+        },
+        {
+          "line": 59,
+          "text": "本轮[实现与真实应用](../../ARCHIVE_POINTERS.md#archive-pointer-60391b0cf172fe8e)消费已经保存的MRL输出，作为后补接口验证；没有重新拟合作者模型。通用助手只核声明的字段、集合和对齐，科学资格、独立性与用途另由[统计单位](statistical-units-and-selection.md)和[信息用途](information-and-state-effects.md)判断。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "c23a2d3c10a551ecabca07f3abaedf6ddd5e04cb05140e74e943ffbb57bfb8f1"
+}

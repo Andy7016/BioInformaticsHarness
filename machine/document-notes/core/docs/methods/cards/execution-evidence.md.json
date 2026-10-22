@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/execution-evidence.md",
+  "source_text": "# 执行证据与实际消费\n\n## 适用条件\n\n当研究声明某个组件、权重、配置、mask、输入或中间产物被下游步骤实际消费，或需要解释失败/重试/缺失输出时启用。典型关系包括两个编码器的角色与消费阶段、预训练 checkpoint 的载入、梯度裁剪配置与实际作用算子、以及逐输入产物对账。单纯登记文件身份而不声称已运行时，可只保留声明层记录。\n\n## 最少必要材料\n\n- `expected_binding`：组件角色、`stage_id`、预期 `artifact_id`/revision、应消费的输入和预期算子或阶段。\n- `observed_binding`：实际加载/消费的组件、产物/版本、形状或接口、发生阶段和状态；共享权重、scratch 初始化、可选组件和合法跳过必须有明确理由。\n- `operator_receipt`：若主张配置生效，记录实际作用算子/调用事件、输入与输出贡献、参数和捕获范围。参数字段、配置文件或源码路径单独标为声明/源码证据。\n- `input_contribution`：每个必需输入进入至少一个输出或有理由排除；输出、失败、有理由排除和未观测要分开，不能用总文件数代替分母。\n- 证据层：至少标记 `declared`、`source_inspected` 或 `runtime_captured`，并给出来源、版本、hash、日志/回执定位。不同层不能互相冒充。\n\n2026-10-14补充：[20例迭代D28](../../design/14-twenty-case-relations-and-evidence.md)细化局部证据为`artifact_checked`（采集工件身份）、`runtime_read`（指定上下文实际读取）及`parameters_applied`义务（参数载入/作用）。前两者不证明原模型使用了该文件；旧`runtime_captured`回执须说明捕获的算子/阶段，不能仅按名称升为最高等级。\n\n## 可判断的检查\n\n1. 对组件绑定核对角色与阶段键；每个期望关系都要有观察，revision/工件身份冲突判 `fail`，缺观察或身份判 `unknown`。不同角色共享一个工件可以通过，只要共享关系明确。\n2. 对配置作用区分三层：声明“clip=1”只能证明意图；源码显示存在 clip 调用能提供源码证据；实际梯度/算子回执才支持“本次运行生效”。配置存在不能代替实际作用证据。\n3. 对输入贡献核对必需 ID、输出值、系数/消费边和排除理由；系数相消为零不算有效贡献，缺值或无理由缺失为 `unknown`/`fail`，视记录是否已作出矛盾声明而定。\n4. 对评价产物分别记录 predicted、failed、excluded-with-reason 和未观测；给定 manifest 的互斥/覆盖可以通过，但不证明磁盘文件存在、原模型确实运行或科学分母合理。\n5. 记录失败、重试、OOM 和 scratch/预训练切换的运行身份；后续结果不能继续沿用已改变运行性质的旧主张。\n\n## 合法替代与不适用\n\n可以共享编码器、使用不同角色命名、从 scratch 初始化、跳过可选模块、或使用替代执行环境；常规选择在 `Run`/`MethodCard` 记录角色、阶段和输入贡献即可，只有改变研究问题、重要方法或主张时才要求额外的 `Decision`。只有在比较预训练收益、声明某个组件必需或声称某参数生效时，才要求相应的期望/实际证据。没有运行或没有需要追踪的消费关系时记 `not-applicable`，不把缺日志自动判成作者错误。\n\n## 小型验收例\n\n- 正常：期望 `encoder_A@stage=fine_tune` 消费 revision `r1`，观察记录同一角色/阶段和 `r1`；另一个角色明确共享 `r1`，并保留共享决定。\n- 失败：配置声明 `clip_norm=1`，源码有参数但运行回执显示该优化器路径未调用裁剪算子；应限制为声明/源码证据，不能写成实际生效。\n- 正常：三个评价 ID 分别进入预测、失败或带理由排除之一；三出口对账可以完整，但只要存在 `failed`，旧交接检查的 overall 仍为 `fail`；有排除项时 accounting 可完整而 coverage 仍由 Review 判为 `unknown`。\n- 失败：缺少 checkpoint 后继续随机初始化，却仍把结果列为预训练收益；应建立新的 scratch 运行身份和比较主张。\n\n## 来源\n\n- [E01 Enformer 实际算子锚点](../../ARCHIVE_POINTERS.md#archive-pointer-f7d76fa7d08adbf3)：`enformer:E28/E63`；配置存在不等于梯度裁剪实际作用。\n- [D02 Uni-Mol 组件消费锚点](../../ARCHIVE_POINTERS.md#archive-pointer-fd81d14045c8078f)：`unimol:E29/E61`；双编码器角色、权重和消费阶段需要联检。\n- [E02 Uni-Mol 评价对账锚点](../../ARCHIVE_POINTERS.md#archive-pointer-a2aee25d1fe537c8)：`unimol:E35/E36/E45/E46`；当前充分仅限给定 manifest 的三出口对账。\n- [校准后的关系契约](../../design/13-calibrated-relations-and-checks.md)：D25 `components`、`selection` 与 `aggregation` 的输入记录范围。\n\n本卡描述证据等级和条件判别，不声称当前 Harness 已提供通用梯度捕获、任意组件追踪或磁盘级科学验证。\n\n新增[flow消费关系](../flow-contract.md)检查声明回执与要求是否一致，[小工件采集器](../../../scripts/verification/collect_artifact_evidence.py)可真实读取受限CSV/TSV并记录身份、ID及数值有效性。对大型/远程权重可以保留revision与外部回执，不强制下载；未核框架参数作用为unknown。采集器的读取上下文与历史训练/推理上下文分别记录。\n\n采集的read/parse完成状态与data_validation结果分开：缺失值不证明文件未读，读取完成也不能让缺失值变为有效观测。内容fail/unknown仍保留到下游检查。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 38,
+          "text": "- [E01 Enformer 实际算子锚点](../../ARCHIVE_POINTERS.md#archive-pointer-f7d76fa7d08adbf3)：`enformer:E28/E63`；配置存在不等于梯度裁剪实际作用。"
+        },
+        {
+          "line": 39,
+          "text": "- [D02 Uni-Mol 组件消费锚点](../../ARCHIVE_POINTERS.md#archive-pointer-fd81d14045c8078f)：`unimol:E29/E61`；双编码器角色、权重和消费阶段需要联检。"
+        },
+        {
+          "line": 40,
+          "text": "- [E02 Uni-Mol 评价对账锚点](../../ARCHIVE_POINTERS.md#archive-pointer-a2aee25d1fe537c8)：`unimol:E35/E36/E45/E46`；当前充分仅限给定 manifest 的三出口对账。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "22be892c50a592825a9a16d1bd270c8d395a68a1a338db877814fd5a5eb2b81c"
+}

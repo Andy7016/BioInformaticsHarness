@@ -19,7 +19,7 @@
 2. 把教师生成标签连接到 `Claim`。教师—学生一致性可以成立，但不升级为独立真值；实验参考和 teacher-derived 结果分列。
 3. 对齐基线的数据、后处理、训练/搜索预算和初始化；不同架构可以比较，但差值归因必须保留限制，不能把小模型对照自动叫公平因果基线。
 4. 从逐单位结果核对正类方向、NaN/全零跳过、任务计数和有效分母；汇总分数不能遮住被删样本。
-5. 对 checkpoint 消费验收来源、实际载入名称和形状；缺文件后继续随机初始化而标签仍写“预训练”应判失败。参数名或文件 hash 只能证明身份层证据，实际加载/作用算子按[执行证据卡](execution-evidence.md)区分。
+5. 对 checkpoint 消费验收来源、实际载入名称和形状；缺文件后继续随机初始化而标签仍写“预训练”应判失败。文件身份记录说明使用了哪个文件；实际加载和作用需要相应运行回执，见[执行证据卡](execution-evidence.md)。
 6. 将结构、序列或效率比较的代理真值与独立参考一并展示；不把教师一致性或演示图当生物机制证据。
 
 ## 替代与不适用
@@ -36,10 +36,11 @@
 
 ## 来源
 
-- [DNABERT-2 报告](../../ARCHIVE_POINTERS.md#archive-pointer-cf1ab603aacd2a59) §3.2、§5、§6：基准开发 `G02/E07/E08/E09/E40`。
-- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-7cdf7b5fba70871a) §3、§6：暴露与教师 `G01/E02/E03/E06/E07/E25/E27`；蒸馏质量 `G03/E06/E10/E25/E27`。
-- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-a112c1bc9d7860e9) §4.1–§4.4、§7：划分/指标/权重消费 `G02/E14/E18/E26`、`G04/E06/E09/E12/E21/E22/E26`。
+- **DNABERT-2 案例**：逐轮记录开发集曝光，避免用参与阈值或难例选择的数据继续报告最终测试成绩。
+- **ESM2/ESMFold 案例**：分别记录教师伪标签、结构参考和实验标签；它们对应不同真值与评价分母。
+- **MolCLR 案例**：沿分子身份核对数据划分、任务分母和 checkpoint 消费，再解释预训练与基线的差异。
 
+公开论文和方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例工程分析的精确定位与历史细节保存在[机器记录](../../../../machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json)。
 本卡要求把开发、教师依赖和公平比较的边界留下来，不把统一格式或教师一致性当作独立科学真值。
 
-本轮校准依据：[C01 scFoundation 独立测试选择锚点](../../ARCHIVE_POINTERS.md#archive-pointer-e2bf08813d2aad50)、[C02 Enformer 组件独立性锚点](../../ARCHIVE_POINTERS.md#archive-pointer-e8d1b6c61e3716ee)。已有选择指导不等于自动重建历史；跨物种或跨组件的具体构造仍需任务声明和适用证据。
+本轮校准依据见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。选择指导用于确定比较对象；跨物种或跨组件的构造仍需声明任务、对象和适用证据。

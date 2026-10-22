@@ -1,6 +1,6 @@
 # 联合几何误差：一个可运行研究的对照方法
 
-版本joint-geometry-example-v1，2026-10-19。用于根据单角/局部误差讨论整体结构，或不同几何终点出现不同方向时。接续[结构几何与扰动](structural-geometry-and-perturbation.md)的B1–B3，实例为[FoldingDiff联合探针](../../ARCHIVE_POINTERS.md#archive-pointer-b05f5084b1948edb)。它展示怎样展开原原则，未修改冻结v1.1。
+版本joint-geometry-example-v1，2026-10-19。用于根据单角/局部误差讨论整体结构，或不同几何终点出现不同方向时。接续[结构几何与扰动](structural-geometry-and-perturbation.md)的B1–B3，实例为[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。它展示怎样展开原原则，未修改冻结v1.1。
 
 ## 先选问题与信息
 

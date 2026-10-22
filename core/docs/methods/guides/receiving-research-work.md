@@ -1,6 +1,6 @@
 # 接手一项研究：从材料到第一个真实动作
 
-版本research-operations-v1.1，2026-10-20；[v1原件](../../ARCHIVE_POINTERS.md#archive-pointer-322163a5d3d09084)保留。适用于更换执行者、机器、工作目录、权限或工件封包的任务。来源为[三案接手](../../ARCHIVE_POINTERS.md#archive-pointer-4da096a855b31d01)与[S4PRED I03](../../ARCHIVE_POINTERS.md#archive-pointer-8fd20b8f1d9d296d)的真实交接问题。沿用已有Task、Artifact、Run与Decision；小改动仍可用简短文字交接。
+版本research-operations-v1.1，2026-10-20；[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)保留。适用于更换执行者、机器、工作目录、权限或工件封包的任务。来源为的真实交接问题。沿用已有Task、Artifact、Run与Decision；小改动仍可用简短文字交接。
 
 ## 先给一页可以行动的材料
 
@@ -14,7 +14,7 @@
 
 发布owner先结束本轮写入，把必要文件、用途和实际身份核清，再最后发布入口并派发。接收者打开明确交付的入口，核入口身份和必要payload，然后开始消费。若源manifest已有声明hash，冲突应交回核对或另立版本，不能按现状重算后悄悄把错误声明变正确。补料单独标明与哪个原入口组合生效。
 
-可选的[发布/接收工具](../research-support-tools.md)复用原handoff清单，采用单次、排他发布；[S4PRED组合例](../../ARCHIVE_POINTERS.md#archive-pointer-0cf1b8946affb2d9)将已完成的真实工件交到另一个root后再消费。writer完成是发布者的明确声明，工具只核当下字节和发布动作，不证明所有外部写入进程已经停止。数据库快照、内容寻址包或已有调度平台能提供等价的版本/消费保证时，直接使用即可。
+可选的[发布/接收工具](../research-support-tools.md)复用原handoff清单，采用单次、排他发布；[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)将已完成的真实工件交到另一个root后再消费。writer完成是发布者的明确声明，工具只核当下字节和发布动作，不证明所有外部写入进程已经停止。数据库快照、内容寻址包或已有调度平台能提供等价的版本/消费保证时，直接使用即可。
 
 | 观察 | 当前动作与理由 | 可接受替代 |
 | --- | --- | --- |

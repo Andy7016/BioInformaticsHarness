@@ -1,6 +1,6 @@
 # 共同信号与任务特异能力：先明确要辨认哪一种变化
 
-版本：`research-facets-v0.2`，2026-10-20。本例由文献综合及[medium/xhigh首稿回收](../../ARCHIVE_POINTERS.md#archive-pointer-774a9637463607b7)细化，high缺档与恢复记录另存。首稿使用原有34份冻结指导，未使用本工作例；本工作例自身的应用效果另验。没有运行新的扰动预测或生物实验。
+版本：`research-facets-v0.2`，2026-10-20。本例由文献综合及[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)细化，high缺档与恢复记录另存。首稿使用原有34份冻结指导，未使用本工作例；本工作例自身的应用效果另验。没有运行新的扰动预测或生物实验。
 
 ## 何时启用
 
@@ -77,4 +77,4 @@
 
 使用[信息用途](../guides/information-and-state-effects.md)锁定参照与额外信息；使用[指标语义](../cards/metric-semantics.md)记录事件；使用[统计单位](../guides/statistical-units-and-selection.md)及[测量到主张](../guides/measurement-to-claim.md)形成接受范围。新增的是上述条件取舍工作例，不新增顶层对象或自动科学判定器。
 
-完整书目、取得版本、实现快照与阅读范围见[本轮来源账本](../../ARCHIVE_POINTERS.md#archive-pointer-326f3f44ff2ec8c1)。
+完整书目、取得版本、实现快照与阅读范围见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。

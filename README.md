@@ -1,40 +1,43 @@
 # BioInformaticsHarness
 
-**生物模型研究的可用原型 · 0.1.0-alpha.2**
+BioInformaticsHarness 帮助研究者和 agent 开展生物模型研究：从问题、数据和方法选择开始，完成计算、评价、解释与交接。
 
-把研究问题、方法取舍、实际执行、证据和可接手交付连起来。Harness从模型文献与实现、同行评审对照，以及真实CPU小实验中积累条件指导，帮助研究者和agent把研究推进到可解释、可复核的结果。
+项目把模型论文、开源实现、同行评审和小型研究中的经验整理为方法指南，并提供处理研究工件的 Python 工具。当前公开原型包含两个可在 CPU 上运行的保存模型应用。
 
-## 从这里开始
+## 开始使用
 
-- **直接使用**：[core quickstart](core/QUICKSTART.md)，Python 3.11+。
-- **按问题找方法**：[领域方法入口](core/docs/methods/README.md)、[生物学解释与人读交接](core/docs/methods/guides/biological-explanation-and-handoff.md)。
-- **真实CPU消费例**：[Splice](examples/splice/README.md)（12条留出序列）、[Yeast](examples/yeast/README.md)（293条留出记录）。需另装科学计算依赖；各读取一个本项目训练的保存状态并核对固定输出。
-- **验证文件**：在仓库根运行 `python -B verify_checkpoint.py`；在 `core/` 运行 `python -B verify_release.py`。
-- **演进与证据**：[CHANGELOG](CHANGELOG.md)、[从案例到设计的历史](docs/history/EVOLUTION.zh.md)、[证据范围](core/EVIDENCE.zh.md)。
+准备 Python 3.11 或更新版本，然后取得项目：
 
-```mermaid
-flowchart LR
-  Q[问题与生物学对象] --> P[方法选择与首次方案]
-  P --> A[真实数据审计与执行]
-  A --> E[评价与主张]
-  E --> H[解释与可接手交付]
-  H --> R[评阅与新证据]
-  R --> P
+```sh
+git clone https://github.com/vvcchh0/BioInformaticsHarness.git
+cd BioInformaticsHarness
 ```
 
-方法卡按具体触发条件选择，保留理由、科学改判条件和可接受的替代路线。工具把明确的路径、字段、身份和消费操作落地；研究者继续负责方法前提和科学判断。
+按照 [快速入门](core/QUICKSTART.md) 试用交接、诊断和证据整理工具。运行真实模型应用时，按案例说明安装科学计算依赖。
 
-## 本 checkpoint 包含什么
+## 示例
 
-- 条件领域方法、逐阶段选择/信息用途、统计单位和修订路线指导。
-- 工件、handoff、有限诊断、证据索引和唯一交接入口等Python工具。
-- 规范计划清单与封存，以及首次审计前的代码/配置快照。
-- 两项开放UCI数据的真实保存状态消费例及逐文件来源/许可。
+- [Splice](examples/splice/README.md)：用 DNA 序列识别剪接边界，读取保存的模型并处理一组留出样本。
+- [Yeast](examples/yeast/README.md)：用蛋白质特征预测酵母蛋白的细胞定位，查看类别预测和决策分数。
+- [首次审计](core/examples/research-support/first-audit/README.md)：盘点一个公开数据归档，并保存执行时使用的程序和配置。
 
-原Splice/Yeast研究均完成给定规模的审计、划分、拟合、对照、评价和交付；精选例聚焦独立接手消费。全研究读出与范围见[证据说明](core/EVIDENCE.zh.md)，不从精选子集重新估计全研究性能。软件测试、静态论文分析和真实研究分别登记，尚未估计Harness相对无Harness的因果增益。
+## 文档
 
-## 许可与引用
+| 想了解什么 | 从这里读起 |
+| --- | --- |
+| 怎样选择研究方法 | [方法指南](core/docs/methods/README.md) |
+| 怎样向人解释结果 | [生物学解释与交接](core/docs/methods/guides/biological-explanation-and-handoff.md) |
+| 参考了哪些工作，怎样用于设计 | [参考来源与设计索引](docs/REFERENCES-AND-DESIGN.md) |
+| 项目怎样发展至今 | [项目短史](docs/history/EVOLUTION.zh.md)与[版本记录](CHANGELOG.md) |
+| 已完成哪些实际应用 | [研究与应用](core/EVIDENCE.zh.md) |
+| 怎样继续开发 | [下一阶段](ROADMAP.zh.md)与[文档约定](docs/DOCUMENTATION.md) |
 
-第一方代码、配置及本项目新增参数/封装采用 **Apache-2.0**；原创说明采用 **CC BY 4.0**。UCI原数据、派生表和状态内保留的数据内容（如支持向量）保留 **CC BY 4.0**与原归属，混合状态逐文件标明。逐文件以 [CHECKPOINT-MANIFEST.json](CHECKPOINT-MANIFEST.json)、core及案例清单为准，见[许可说明](LICENSING.md)、[引用格式](CITATION.cff)。外部库由使用者另行取得。
+## 参与
 
-这是采用筛选后新Git历史的公开checkpoint。完整私有研究档案未导入；早期alpha.1和筹备提交保留在私有研究档案，公开Git从本次独立checkpoint提交开始。范围见[PUBLICATION.md](PUBLICATION.md)。后续方向见[ROADMAP.zh.md](ROADMAP.zh.md)。
+欢迎提出研究问题、改进方法说明或提交小型应用。描述改动时，请说明要解决的问题、选择方法的理由，以及观察到的结果。
+
+## 许可与致谢
+
+代码采用 Apache-2.0，原创说明采用 CC BY 4.0。案例数据和模型文件的具体归属见[许可说明](LICENSING.md)；研究来源见[参考索引](docs/REFERENCES-AND-DESIGN.md)。
+
+已发布版本可从 [Releases](https://github.com/vvcchh0/BioInformaticsHarness/releases) 取得。面向开发工具和 agent 的结构化资料集中在 [machine](machine/) 目录。

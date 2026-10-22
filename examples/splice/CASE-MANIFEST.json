@@ -19,9 +19,9 @@
       "license": "CC-BY-4.0",
       "path": "README.md",
       "published": {
-        "bytes": 4851,
         "path": "splice/README.md",
-        "sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24"
+        "bytes": 3092,
+        "sha256": "395c208a6a3f0a61bb0fe4e478308acb05efb6a4c98d7271e59073e68836241d"
       },
       "source": [
         {
@@ -30,7 +30,14 @@
           "sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24"
         }
       ],
-      "transformation": "Identity copy of newly authored study explanation and attribution."
+      "transformation": "first-party-documentation-revision:2026-10-22",
+      "previous_published": {
+        "bytes": 4851,
+        "path": "splice/README.md",
+        "sha256": "d2dd4ea94522516790351523c826c61779773750931c07a95a378fa91e727b24",
+        "revision": "764bd88"
+      },
+      "previous_transformation": "Identity copy of newly authored study explanation and attribution."
     },
     {
       "license": "Apache-2.0",

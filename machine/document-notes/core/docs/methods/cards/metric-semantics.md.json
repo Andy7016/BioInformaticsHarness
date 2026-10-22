@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/metric-semantics.md",
+  "source_text": "# 指标语义与数学事件\n\n## 适用条件\n\n当指标的数学定义、真值类型、单位、有效分母、区间表达或聚合方式可能改变研究结论时启用。适用于单细胞表达分数、分类/回归、结构指标、相关系数、分位数区间、均值比例区间及跨任务宏/微平均。只有简单展示原始值且这些语义已由上游契约完整绑定时，才可记 `not-applicable`。\n\n本卡不要求所有任务采用同一指标、同一区间或同一方向；它要求同名数字不能掩盖不同的数学事件。任意论文公式不自动成为全局 Harness 规则。\n\n## 最少必要材料\n\n- `metric_event`：指标名称、数学表达式或可定位实现、输入单位、输出单位、方向（越大/越小/目标值）、真值/代理真值类型和比较对象。\n- `denominator`：评价单位、有效样本/任务/结构集合、过滤与缺失规则、每项的 `n`；区分“没有结果”“失败”“有理由排除”和真实零值。\n- `aggregation`：逐单位结果、宏/微/加权聚合、权重来源、归一化、区间/分位数定义和估计方法。跨任务聚合须保留任务 ID 与输入贡献。\n- `implementation`：计算实现、版本/commit、参数、数值精度和结果文件或可复算输入的身份。实现版本与数学事件不一致时要显式记录。\n- `claim_binding`：该指标支持哪个主张、依赖哪一种真值，不能把教师一致性、预测—预测一致性、实验准确性和外部泛化混写。\n\n当分母来自多阶段筛选或择优时，联用[逐阶段选择](stage-selection.md)绑定候选、入选、送测/有效项及单位变化；当真值/代理依赖先验、教师或评价器时，联用[信息用途](information-use.md)标明影响路径。若选择后估计涉及重复、嵌套或相关观测，另参阅[统计单位与选择后估计](../guides/statistical-units-and-selection.md)确定估计对象和区间单位。`research-flow-v1`能核声明集合与阶段，不代替本卡的数学定义或领域计分插件。\n\n## 可判断的检查\n\n1. 先按数学事件重算一个最小逐单位结果，再检查方向、单位、过滤和分母；只看汇总表不能证明分母一致。\n2. 区分宏/微/加权聚合。若任务 A 有 10/10、任务 B 有 0/1，宏平均为 0.5，按样本计的微平均为 10/11；两者都可合法，但不能使用同一个未标注的“平均准确率”。\n3. 区分区间事件。对手工例 `[1,1,1,1,9]`，指定分位数规则得到的分位区间与均值加减 5% 的比例区间表达的是不同事件；保留定义、规则和单位，不能因图形相似而互换。该例是语义验收例，不是论文结果复现。\n4. 已知实现与声明数学事件不一致，或把有效分母改变后仍沿用原主张，判 `fail`；缺实现版本、逐单位结果或过滤原因，判 `unknown`。数值恰好相同不消除语义差异。\n5. 当前 `research-relations-v1` 的 `aggregation` 只核对提供的标量线性项、系数和贡献账本；它不解析任意 metric callable、图像或科学真值。其 `pass` 只代表给定记录通过，不代表指标实现正确。\n\n## 合法替代与不适用\n\n均值、分位数、bootstrap 区间、任务宏平均、样本微平均和其他加权方案都可用，前提是与研究问题和真值类型绑定。不同任务可有不同单位和指标，但跨任务报告须保留任务边界；无法取得逐单位结果时可以报告摘要，须把可复核范围标为 `unknown`。没有比较或指标聚合时跳过，不要求为了填表制造公式。\n\n## 小型验收例\n\n- 正常：保存每个 cell 的预测、真值、有效状态和指标实现 revision；报告 median/quantile 时同时写分位数规则，报告均值比例区间时另列公式。\n- 失败：将分位区间改名为“均值 ± 5%”，或把任务 A/B 的微平均写成宏平均；最小数据例应暴露名称、分母或区间事件的差异。\n- 正常：失败输入有明确 `failed` 状态，带理由排除项不进入有效分母且仍在账本中；coverage 与 accounting 分开。\n- 失败：缺失预测的处理与已声明计分政策矛盾，或把未观测结果静默当作真实零值；用 teacher-derived 标签生成的高一致性直接声称实验准确率也应被拒绝。预先声明“失败计零、按全部任务作分母”的失败惩罚可以合法，但须保留失败状态、分母和政策，不能冒充观测值。\n\n## 来源\n\n- [F01 scFoundation 指标事件锚点](../../ARCHIVE_POINTERS.md#archive-pointer-312c94c77d4fc830)：`scfoundation:E31/E32/E33`；结构卡中的公式字段不能跨适用条件直接覆盖表达评价。\n- [评价口径校准](../../ARCHIVE_POINTERS.md#archive-pointer-fbeacef5b4e35c52)：表达/指导/自动检查三轴分开；已有比较指导不等于指标自动重算。\n- [校准后的关系契约](../../design/13-calibrated-relations-and-checks.md)：D24、D25 的数学事件和标量贡献范围。\n\n本卡补充指标的可解释语义和分母账本，不声称当前 Harness 已实现任意指标的自动理解或科学验收。\n\n遇到“测到的变量能否支持这句话”的具体争议，按[测量到主张](../guides/measurement-to-claim.md)形成最小工作例，再按[回应路线与验收](../guides/revision-responses-and-acceptance.md)选择所需证据。原有数学事件、单位、分母与主张责任保留；新修订检查器只核其记录关系及文件身份，不解析任意指标或自然语言。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 25,
+          "text": "5. 当前 `research-relations-v1` 的 `aggregation` 只核对提供的标量线性项、系数和贡献账本；它不解析任意 metric callable、图像或科学真值。其 `pass` 只代表给定记录通过，不代表指标实现正确。"
+        },
+        {
+          "line": 40,
+          "text": "- [F01 scFoundation 指标事件锚点](../../ARCHIVE_POINTERS.md#archive-pointer-312c94c77d4fc830)：`scfoundation:E31/E32/E33`；结构卡中的公式字段不能跨适用条件直接覆盖表达评价。"
+        },
+        {
+          "line": 41,
+          "text": "- [评价口径校准](../../ARCHIVE_POINTERS.md#archive-pointer-fbeacef5b4e35c52)：表达/指导/自动检查三轴分开；已有比较指导不等于指标自动重算。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "ee98fd41fd4505fa0b5e1a0900050f9e29ce96b4aead3244a822ab2993c79dc4"
+}

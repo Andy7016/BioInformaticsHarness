@@ -1,27 +1,44 @@
-# 从案例回收到公开候选：D 系列演进
+# 项目短史
 
-这份短史只回答一个问题：为什么 Harness 逐步形成今天的条件指导、工件交接和验收边界。它根据私有源仓库的 `CHANGELOG.md` 与 `docs/history/case-analysis.md` 整理；表中的提交号是私有 source locator，不是这个候选仓库的提交。原案例数量、分数、unknown 和局限不在这里重算。
+BioInformaticsHarness 从整理生物模型研究流程开始，逐步形成方法指南、研究工件工具和可运行的小型应用。推动它变化的主要问题是：怎样把读论文时理解的方法，变成研究者实际能选择、执行、解释和交接的工作。
 
-## 设计路线
+## 从研究流程到模型案例
 
-早期工作先建立研究契约和案例边界，再通过多轮静态案例暴露领域步骤、信息用途和交接条件。随后 D 系列把这些观察拆成条件方法、关系契约、版本化 revisor、从测量到主张的验收、路线归属和真实工件消费。每一步都保留原来的分母、冻结材料和未知项；一个案例中出现的做法不会自动成为所有任务的硬性要求。
+最初的设计把研究问题、数据、方法、计算、产物和结论连接起来。随后对模型论文和实现逐项分析，记录各阶段的输入、选择与输出，以及作者为什么采用某种做法。
 
-## 里程碑
+案例积累带来了两个变化。其一，流程需要说明信息在什么时候、以什么用途进入研究；其二，生物学目标不同，所需的对照和评价也不同。项目因此增加了[信息用途](../../core/docs/methods/cards/information-use.md)、[阶段选择](../../core/docs/methods/cards/stage-selection.md)和[指标语义](../../core/docs/methods/cards/metric-semantics.md)等方法卡。
 
-| 日期 | 私有 source locator | 当时结论 | 促成的设计 |
-| --- | --- | --- | --- |
-| 2026-10-02 | `c503b24781606dd9e6acfff54b23658d2c1f2acb`；CHANGELOG.md row 2026-10-02; docs/history/case-analysis.md | 项目需要明确的研究契约和案例边界。 | 建立 Harness 设计、研究流程、案例记录和检查脚本。 |
-| 2026-10-12 | `28db95c`；CHANGELOG.md row 2026-10-12; docs/history/case-analysis.md | 首轮五个模型案例可以映射到共同对象，但领域步骤和交接检查过于概括。 | 增加方法卡、交接契约和独立材料边界。 |
-| 2026-10-13 | `bf5cfad -> 8d3f2df`；CHANGELOG.md row 2026-10-13; docs/history/case-analysis.md | 第二轮案例需要可独立引用的证据和有条件的方法观察。 | 增加定制步骤和引用账本，并保留早期基线与统计口径。 |
-| 2026-10-14 | `01dfc22`；CHANGELOG.md row 2026-10-14; docs/history/case-analysis.md | 领域特例不能直接变成全局要求，声明的关系也不是运行证据。 | 引入条件指导、research-relations 契约，以及正常/错误/unknown/合法替代见证。 |
-| 2026-10-14/15 | `35612c1`；CHANGELOG.md row 2026-10-14/15; docs/history/case-analysis.md | 二十个案例反复表明，阶段选择、信息用途、消费证据和义务单位决定了指导能否落地。 | 形成 D27-D32 关系与指导层，并把真实 CPU 工作单独登记为一条流程。 |
-| 2026-10-16 | `35612c1`；CHANGELOG.md rows 2026-10-16; docs/history/case-analysis.md | 论文报告指导与回顾性评审/修订证据被混在了一起。 | 将稿件版本/评审 concern 对照与论文指导分开，并增加 D35-D38 验收记录。 |
-| 2026-10-17 | `8924eb0`；CHANGELOG.md row 2026-10-17; docs/history/case-analysis.md | 一次真实修订指导使用暴露出术语超出了实际取得的材料。 | 保留冻结版和首稿，修正 D39，并区分来源措辞、置信覆盖、后验概率和 unknown。 |
-| 2026-10-18 | `5ffce37; df8e640`；CHANGELOG.md rows 2026-10-18; docs/history/case-analysis.md | 交接评分、路线归属、来源身份和领域验证条件需要明确的操作锚点。 | 增加 D40-D44 操作交接和条件领域验证指导，同时保留早期快照与评分。 |
-| 2026-10-19 | `c83fac4`；CHANGELOG.md rows 2026-10-19; docs/history/case-analysis.md | 真实工件消费和工具指导暴露出生产者身份、完整回合、证据覆盖和对象级交接的需要。 | 增加 D45-D46 操作支持、工件生产者/消费者接口、生物学交接指导和有界 Proto 指导。 |
-| 2026-10-20 | `5c365b7`；CHANGELOG.md rows 2026-10-20; docs/history/case-analysis.md | 公开 alpha 需要范围明确的研究原型、小型真实工件边界，以及证据与未来应用之间的明确区分。 | 记录 D47-D49 操作复用和研究面观察，形成公开 alpha 准备决定，不改变旧案例评分。 |
-| 2026-10-21 | `accepted archive origin: a3dac424d2b6c6295f976c9eeba09bb05353c15c+working-tree-dirty`；dist/bioinformatics-harness-0.1.0-alpha.1.zip; docs/reviews/2026-10-release-preparation/acceptance.json | 150 成员的 core alpha 已按明确范围和逐文件权利接受，完整研究档案仍保持私有。 | 为候选第二个提交提供冻结字节级 core；不把私有研究历史转成公开证据。 |
+目前的正式模型案例索引包含43项工作；文献、用途及设计关系见[统一索引](../REFERENCES-AND-DESIGN.md)。
 
-## 读者应保留的边界
+## 把同行评审纳入流程
 
-这些里程碑说明设计为何变化，不证明论文作者历史上运行了同一代码，也不构成整篇论文、权重、原始数据或科学接受的复现。公开候选只带入已接受 core 的明确文件；新的两个应用仍待单独接受，候选中没有为它们编造结果。逐文件来源、SHA-256 和许可见 `docs/history/source-index.json`，core 的最终字节身份见 `core/RELEASE-MANIFEST.json`。
+后来的案例同时整理早期稿、评审意见、作者回复和发表版本，观察一个具体问题怎样推动补分析、修改解释或调整主张。
+
+这项工作形成了[同行评审对照](../../core/docs/methods/peer-review-comparison.md)与[修订指导](../../core/docs/methods/guides/revision-responses-and-acceptance.md)。指南进一步说明任务由谁接手、需要哪些来源、采用什么路线，以及怎样判断回应是否充分。
+
+## 从一般要求到条件方法
+
+领域验证逐步整理为三组可用指导：[功能与用途](../../core/docs/methods/guides/function-and-utility-validation.md)、[序列新颖性与背景](../../core/docs/methods/guides/sequence-novelty-and-background.md)、[结构几何与扰动](../../core/docs/methods/guides/structural-geometry-and-perturbation.md)。
+
+每组指导把问题、触发条件、选择理由、替代方法和判断标准放在一起。后来又补充了[共同信号与任务能力](../../core/docs/methods/worked-examples/common-and-task-specific.md)、[置信度与使用决定](../../core/docs/methods/worked-examples/confidence-to-decision.md)、[动态过程解释](../../core/docs/methods/worked-examples/dynamic-process-interpretation.md)三个工作例。
+
+## 用真实计算完善交接
+
+CPU试点从读取公开材料发展到模型训练、保存状态读取、外部评价和独立接手。Optimus、gkm-SVM与S4PRED等工作帮助项目把方法说明与实际工件连接起来；研究过程中的问题继续推动工具改进。
+
+这一阶段增加了[工件生产与消费](../../core/docs/methods/guides/artifact-producer-consumer.md)、[研究接手](../../core/docs/methods/guides/receiving-research-work.md)以及[生物学解释与人读交接](../../core/docs/methods/guides/biological-explanation-and-handoff.md)。应用内容见[研究与应用](../../core/EVIDENCE.zh.md)。
+
+## 近期里程碑
+
+| 时段 | 发现的问题 | 形成的改进 |
+| --- | --- | --- |
+| 2026年10月上旬 | 共同流程需要与具体领域步骤连接 | 方法卡、交接契约和案例记录 |
+| 10月中旬 | 阶段选择、信息用途和评价口径需要更具体 | 条件指导、关系说明与逐项引用 |
+| 10月16日至18日 | 评审问题需要转成有责任人和判断标准的研究任务 | 修订路线、来源用途和领域验证指导 |
+| 10月19日至20日 | 接手者需要实际可用的输入、程序和结果解释 | 工件工具、工作例与小型CPU研究 |
+| 10月21日至22日 | 公开应用需要更顺畅的首次方案、执行和许可交接 | 计划封存、首次审计留档，以及[Splice](../../examples/splice/README.md)和[Yeast](../../examples/yeast/README.md)应用 |
+| 10月22日 | 新读者需要容易使用和理解的文档入口 | 人机文档分层、统一来源与设计索引、独立可读的项目短史 |
+
+## 接下来
+
+下一步围绕同一课题推进新的验证设计和实际补分析，解释结果怎样影响原判断，再完成第二轮交付。具体方向见[下一阶段](../../ROADMAP.zh.md)，公开版本变化见[Changelog](../../CHANGELOG.md)。

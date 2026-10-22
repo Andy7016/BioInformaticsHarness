@@ -14,7 +14,6 @@ example file unchanged.
 
 ~~~python
 from pathlib import Path
-import hashlib
 import json
 import shutil
 import uuid
@@ -36,10 +35,7 @@ archive_root.relative_to(run_root)
 
 plan_root.mkdir(parents=True, exist_ok=False)
 archive_root.parent.mkdir(parents=True, exist_ok=True)
-source_bytes = source_plan.read_bytes()
 shutil.copyfile(source_plan, plan_root / "PLAN.md")
-assert (plan_root / "PLAN.md").read_bytes() == source_bytes
-assert source_plan.read_bytes() == source_bytes
 
 ready = build_ready(plan_root, "example", protocol="standard")
 dump_new(plan_root / "READY.json", ready)
@@ -56,8 +52,7 @@ receipt = {
     "case_id": "example",
     "source_plan": {
         "path": source_plan.relative_to(repo_root).as_posix(),
-        "bytes": len(source_bytes),
-        "sha256": hashlib.sha256(source_bytes).hexdigest(),
+        "bytes": source_plan.stat().st_size,
     },
     "ready_schema": ready["schema"],
     "validated_file_count": len(validated_files),
@@ -76,17 +71,14 @@ Manifest paths are sorted POSIX paths relative to the explicit plan root.
 READY.json and ARCHIVED.json are excluded from the file list. The archive
 contains READY.json and every file named by that list.
 
-Use --protocol public-applications-v1 only when producing the documented
-public-applications.first-plan-ready.v1 / public-applications.first-plan-archived.v1
-contract. The tool never infers that protocol or changes the path root.
+Choose the protocol explicitly. The manifest paths are interpreted relative to the
+plan root, so run sealing from the same root used to create READY.json.
 
-The archive acknowledgement records byte counts and SHA-256 identities. It
-confirms the copy and its identities; it does not approve the study method.
-For a changed plan, create a new plan directory and seal it separately.
+The acknowledgement lists the archived files and their sizes. Sealing records the selected plan files; review the study method separately. For a changed plan, create a new plan directory and seal it separately.
 
-The package is limited to 1,024 files, 64 MiB per file, and 256 MiB total to
-bound local review and copying. These limits apply to package transport only;
-they do not constrain scientific data or parameters.
+The package accepts up to 1,024 files, 64 MiB per file, and 256 MiB total. For
+larger research datasets, store the data separately and seal a manifest of the
+selected inputs and outputs.
 
 The adjacent PLAN.md is a small illustrative input. The code above operates on
 a copy so the source example remains unchanged.

@@ -1,6 +1,6 @@
 # 真实工件接口：让生产输出走通实际消费路径
 
-版本 `artifact-interface-v1.1`，2026-10-20；[v1原件](../../ARCHIVE_POINTERS.md#archive-pointer-e1292a0073261a28)保留。来源：[Optimus 回收 I01](../../ARCHIVE_POINTERS.md#archive-pointer-2b8f0be61ac5c14a)及[S4PRED I01](../../ARCHIVE_POINTERS.md#archive-pointer-88e4e60883bb86c0)。沿用 Artifact、Run、Task 与已有[接手操作](receiving-research-work.md)，不建立新的顶层对象。
+版本 `artifact-interface-v1.1`，2026-10-20；[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)保留。来源。沿用 Artifact、Run、Task 与已有[接手操作](receiving-research-work.md)，不建立新的顶层对象。
 
 ## 何时使用
 
@@ -20,7 +20,7 @@
 
 先决定必要值放在哪里，再让两端采用同一个读取约定。序列可以保存在实体记录里，也可以由唯一序列表按ID连接，或由连续、唯一的位置行重建并核长度及序列身份。无需把同一sequence冗余写进每份文件；不能在reader缺键后默填空串。序列、残基、原子各有编号时，明确当前接缝使用哪一种。
 
-本轮[可运行S4PRED例](../../ARCHIVE_POINTERS.md#archive-pointer-fe63728d7ce47316)提取已接受的修复：原准备程序有意从`entities.json`省略sequence，评分器却仍索取它；新版小生产端从真实已保存的位置表建立序列记录，实际序列化后由共享reader重新打开，再按位置/AA连接真实保存预测并计数。它验证这条消费链，适合复用到同类型研究。
+本轮[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)提取已接受的修复：原准备程序有意从`entities.json`省略sequence，评分器却仍索取它；新版小生产端从真实已保存的位置表建立序列记录，实际序列化后由共享reader重新打开，再按位置/AA连接真实保存预测并计数。它验证这条消费链，适合复用到同类型研究。
 
 ### 按当前变更选择最小验证
 
@@ -56,7 +56,7 @@ S4PRED本例来自已知结果后的代码提炼；本次小运行不回填为�
 
 最小交付可以是一个共享reader、一份带ID的小表和运行回执。说明修复影响读取/对齐、数学指标、模型预测还是研究规格；若改变受保护数据或选模条件，需另立研究修订，不能只称“修格式”。
 
-本轮[实现与真实应用](../../ARCHIVE_POINTERS.md#archive-pointer-60391b0cf172fe8e)消费已经保存的MRL输出，作为后补接口验证；没有重新拟合作者模型。通用助手只核声明的字段、集合和对齐，科学资格、独立性与用途另由[统计单位](statistical-units-and-selection.md)和[信息用途](information-and-state-effects.md)判断。
+本轮[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)消费已经保存的MRL输出，作为后补接口验证；没有重新拟合作者模型。通用助手只核声明的字段、集合和对齐，科学资格、独立性与用途另由[统计单位](statistical-units-and-selection.md)和[信息用途](information-and-state-effects.md)判断。
 
 ## 计划清单也是一个真实接口
 

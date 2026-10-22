@@ -1,47 +1,36 @@
-# Splice: consume one saved model
+# Splice: consume a saved model
 
-## 生物对象与标签
+This example runs inference with a saved logistic-regression state on twelve held-out UCI Splice sequences and records the predictions. The full training and evaluation design appears below.
 
-数据集是 UCI Molecular Biology (Splice-junction Gene Sequences)，DOI [10.24432/C5M888](https://doi.org/10.24432/C5M888)。每条记录是围绕已标注剪接位置对齐的 60 nt 序列窗口。标签 `EI`、`IE` 表示两种外显子/内含子边界方向；`N` 表示窗口中没有目标剪接边界。模型预测的是这个历史数据集的窗口标签，不是新基因组的剪接位点发现，也不是剪接机制或实验测量。
+## Study design and results
 
-## 特征、划分和所选状态
+The UCI Molecular Biology dataset contains 3,190 aligned windows of 60 nucleotides. Labels `EI` and `IE` mark two splice-boundary directions; `N` marks a window without the target boundary. The model predicts labels for these historical windows.
 
-读取器按原计划把每个核苷酸位置编码成 A/C/G/T 四通道，共 240 个位置特异特征。歧义符号按与符号相容的碱基平均分配权重（D=AGT、N=ACGT、S=CG、R=AG）；这是确定性编码规则，不把分数解释为真实碱基概率。主研究用固定 L2 逻辑回归（C=1），在 5 折分层分组划分中评价；分组连接前向字面 Hamming 距离不超过 6 的窗口和包含相同名称 token 的记录。
+The study encoded each position using four A/C/G/T channels, for 240 position-specific features. Ambiguous symbols were represented by deterministic weights over compatible bases: D=AGT, N=ACGT, S=CG, and R=AG. The main model used L2 logistic regression (`C=1`) and a five-fold grouped split. Groups joined windows with forward Hamming distance at most six or a shared name token.
 
-示例只分发预先接受的 `combined/full/fold-0` 模型。12 条输入来自该模型自己的折外行：每个真值类别取排序最前的四个 row ID，不按分数挑选。小样本是接口与可复现消费检查，不用于估算性能。训练没有为发行重新运行；读取器只调用 `predict` 和 `predict_proba`。
+The published example uses the accepted `combined/full/fold-0` state and twelve out-of-fold rows, four selected by row ID from each true class. The complete evaluation generated 25,520 out-of-fold predictions. On its main split, the full-length model reached macro-F1 0.928411 and accuracy 0.935423; the central four-nucleotide comparison reached macro-F1 0.881949. Wider context improved average prediction on this dataset and grouping, while each model was correct on some rows the other missed. To study other species or grouping schemes, define and evaluate those data separately.
 
-## 完整研究结果与限制
+The [evidence summary](../../core/EVIDENCE.zh.md) gives the accepted full-study results for both public cases.
 
-完整评估对 3,190 条窗口重算了 25,520 条折外预测；主划分 macro-F1 为 0.928411，accuracy 为 0.935423。中央 4 nt 对照的 macro-F1 为 0.881949，完整对齐上下文增加 0.046461；两模型也各自有单独正确的记录，因此结论是历史窗口中更宽上下文提供额外预测关联，同时会损失部分记录。科学接受限定在固定历史窗口学习过程。基因、家族或个体层面的独立性及外部基因组使用仍未知；近邻与名称 token 分组只阻断档案中可识别的关系。
+## Install and run
 
-完整评估及接受结论与局限的维护者全研究摘要见 [EVIDENCE.zh.md](../../core/EVIDENCE.zh.md)。CASE-MANIFEST.json 中 accepted_full_study.summary_path 与 acceptance_path 保留原维护仓库的 source locator，仅用于溯源；对应的 assessment 文件不随此公开案例发布，不应视为可点击的公开路径。
+A successful saved-state run was recorded with Python 3.11.2, NumPy 2.4.6, SciPy 1.17.1, scikit-learn 1.9.1, and joblib 1.6.0. Create an environment and install those versions if you want to reproduce that recorded software setup:
 
-## 已验证运行环境与安装
-
-已保留的成功消费 receipt 记录了 Python 3.11.2、NumPy 2.4.6、scikit-learn 1.9.1、joblib 1.6.0；Yeast receipt 另记录 threadpoolctl 3.7.0。本轮对同一科学环境的实际版本盘点还确认 SciPy 1.17.1。下方是按实际观察版本固定的最小运行依赖方案，不是版本下界或广泛兼容声明。空环境冷安装尚未验证；运行环境不随案例分发。
-
-~~~powershell
+```powershell
 py -3.11 -m venv .scratch/venv
-.\.scratch\venv\Scripts\python.exe -m pip install numpy==2.4.6 scipy==1.17.1 scikit-learn==1.9.1 joblib==1.6.0 threadpoolctl==3.7.0
-~~~
+.\.scratch\venv\Scripts\python.exe -m pip install numpy==2.4.6 scipy==1.17.1 scikit-learn==1.9.1 joblib==1.6.0
+```
 
-POSIX 环境可用 python3.11 -m venv .scratch/venv 创建环境，并通过 .scratch/venv/bin/python -m pip install 安装同一组固定版本。
+From the public checkpoint root, run:
 
-## 信任边界：先审阅再加载状态
-
-运行前先审阅 CASE-MANIFEST.json 的 state 来源与 SHA-256，并确认拿到的状态文件来自可信来源。读取器会在反序列化前与清单核对工件身份；joblib/pickle 反序列化仍可能执行代码，因此不要加载来历不明或清单与文件未经核对的状态。
-
-## 运行
-
-以下命令从公开 checkpoint 根目录执行（该目录应包含 core/ 和 examples/）。结果写入根目录下的 .scratch，不会在受清单保护的案例目录内新增文件。每条命令的输出目录均须为新的目录。
-~~~powershell
+```powershell
 .scratch\venv\Scripts\python.exe examples\splice\consume_saved_model.py --study-root examples\splice --out-dir .scratch\run-20261021\splice
-~~~
+```
 
-~~~sh
-.scratch/venv/bin/python examples/splice/consume_saved_model.py --study-root examples/splice --out-dir .scratch/run-20261021/splice
-~~~
+On POSIX, use `.scratch/venv/bin/python` and `.scratch/run-20261021/splice`. Choose a new output directory for each run. The script calls `predict` and `predict_proba` on the selected rows.
 
-## 归属和文件范围
+Only load joblib or pickle states from a source you trust. These formats can execute code when loaded. The `CASE-MANIFEST.json` lists the state source and file-level attribution.
 
-原始官方 ZIP 保持字节。官方 UCI 归档致谢记录数据集贡献者 G. Towell、M. Noordewier、J. Shavlik；UCI 页面没有列出 page creator，因此这里不把贡献者改称页面作者。12 行输入、真值及预测表是从该数据集和接受研究选出的派生记录，选择与预测由 BioInformaticsHarness 项目添加。归属、两侧 SHA-256、变换及逐文件许可见 `CASE-MANIFEST.json`。ZIP 与派生表按 CC BY 4.0 标注；本项目读取器和保存状态中的 sklearn 参数依本轮 first-party policy 按 Apache-2.0 标注。状态 wrapper 另含聚合训练/测试计数（train 2,551、test 639；训练标签计数 EI/IE/N 为 613/614/1,324），不含 row ID、样本特征行或支持向量；README 记录这些统计来自上述 UCI 标签。运行依赖见上文版本与安装方案，不随案例分发。
+## Attribution
+
+The dataset is UCI dataset 69, [Molecular Biology (Splice-junction Gene Sequences)](https://doi.org/10.24432/C5M888), by G. Towell, M. Noordewier, and J. Shavlik; UCI lists the dataset under CC BY 4.0. The project selected the twelve inputs and derived their labels and predictions. The dataset and derived tables retain CC BY 4.0 attribution. The project reader and saved model parameters use Apache-2.0. See `CASE-MANIFEST.json` and the [third-party inventory](../../core/THIRD_PARTY.md) for file-level details.

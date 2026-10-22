@@ -9,7 +9,7 @@
 - **独立统计单位**：在当前抽样/测量设计和主张下，可以合理假定彼此独立，或已明确处理其相关性的重复单位，例如供体、基因、染色体、蛋白复合物或一次实验批次。它不由行数、文件名或“层级越高越保守”自动决定；聚合/重采样还要另行说明所需的独立性或可交换性假设。
 - **主张对象**：估计量到底要描述谁，以及分母是输入总体、选中子集、可测子集还是未来外部对象。
 
-这四者可以相同，也经常不同。一帧不是一个独立蛋白，一条候选不是一个独立供体，一个fold也不自动是一个独立重复。用于阻断近邻或分配 holdout 的分组单位，也可以不同于最终聚合/重采样的统计单位；例如按基因组块阻断窗口，不等于把染色体当成一个生物学重复。选择后的估计量还必须带着选择条件：`E[Y | 入选规则、阶段、版本]` 与“所有合格输入的总体表现”是不同问题。
+观测单位、处理单位、采样单位和推断单位要按研究设计分别定义。一帧通常是同一蛋白的重复观测；候选、供体和fold分别按来源、随机化及采样结构确定单位。用于阻断近邻或分配holdout的分组单位可以不同于聚合或重采样单位，例如按基因组块阻断窗口，同时按实验样本定义生物学重复。选择后估计的目标是`E[Y | 入选规则、阶段、版本]`；它回答的是入选条件下的表现，区别于所有合格输入的总体表现。
 
 本指南是条件方法。它要求把单位、层级、相关性和估计对象写入研究记录，但不规定所有任务使用同一种bootstrap、湿实验或额外测试。当前五例的共同点是存在逐阶段选择，具体机制和证据层各不相同；这不是五次独立科学验证。
 
@@ -144,19 +144,18 @@ uncertainty: "8 个基因逐单位结果；AP按设计选择cluster重采样或�
 6. “成功”“失败”“排除”“未测”没有互换；文件名、split名称和静态源码没有被当成运行事实。
 7. `stage-selection`、`metric-semantics` 和 `flow-contract` 的字段已能表达记录，但契约通过只表示集合/关系声明满足，不证明规则科学合理或历史运行真实。
 
-程序可以检查 ID、出口、父子映射和声明分母；人仍需判断独立单位是否合理、选择后结果能否支持研究问题、候选总体是否有偏，以及区间方法是否符合领域设计。缺失历史运行、来源内容或真实独立性时，人工结论应保留 `unknown`，不能由文件 hash 或静态 pass 补上。
+程序可以检查ID、出口、父子映射和声明分母；研究者仍需判断独立单位是否合理、选择后结果能否支持研究问题、候选总体是否有偏，以及区间方法是否符合领域设计。缺少历史运行、来源内容或真实独立性时，人工结论保留`unknown`；文件来源记录和结构层结果不能替代这些证据。
 
-## 五案例证据导航
+## 五个案例中的单位和选择
 
-下面每一行把同一机制的作者/源码/审阅层放在一起。它是导航，不把五例合并成同口径实验；精确文字和证据账本仍以链接文件为准。
+以下案例显示，生成、筛选、测量和主张的单位可能不同。方法来源和公开证据入口见[统一索引](../../../../docs/REFERENCES-AND-DESIGN.md)。完整候选表或历史运行记录缺失时，保留该范围的未知状态。
 
-| 案例 | 作者报告的步骤与证据 | 固定源码/其他文件 | 相关 O 与审阅解释 |
-|---|---|---|---|
-| Evo | [S05/E05、S12/E12、S16–S18/E16–E18](../../ARCHIVE_POINTERS.md#archive-pointer-cc3092d886e840f6)；架构选择、候选出口与测试构建的作者叙述 | `../../pilots/2026-10-fifth-five-models/cases/evo/citations/evidence-ledger.json`、`../../../references/pilots/2026-10-fifth-five-models/evo/source-reconstruction.json`；完整候选表和执行回执未取得 | O12/O16/O17/O27/O32（[方法目录](../../ARCHIVE_POINTERS.md#archive-pointer-af07126337e13973)中的 CS-EVO-01/04/05；[独立审阅 IR03](../../ARCHIVE_POINTERS.md#archive-pointer-39a1f7bdddfef1b9)）；审阅推断是保留父子映射、人工选择和分母，不把实验子集推广到全部候选 |
-| SpliceBERT | [S10/E09](../../ARCHIVE_POINTERS.md#archive-pointer-396bdfb2cb7bbb57) 是论文 10-fold、8/1/1 与 validation epoch 选择的作者报告；[S16/E16–E25](../../ARCHIVE_POINTERS.md#archive-pointer-396bdfb2cb7bbb57) 是当前代码观察 | `../../../references/pilots/2026-10-fifth-five-models/splicebert/official-code/examples/05-bp-prediction/finetune_for_bp_prediction.py:118-123,139-152,251-258`；当前共享 mean-validation 路径与论文 protocol 身份分开 | O12/O13/O15/O17；[独立审阅 IR04](../../ARCHIVE_POINTERS.md#archive-pointer-39a1f7bdddfef1b9)指出共享选择是条件性推断，历史归属 unknown，不据静态路径宣称论文污染 |
-| PeSTo | [S03/E03、S07/E03、S10/E11/E18、S12/E14](../../ARCHIVE_POINTERS.md#archive-pointer-51bf1aebab96e98e)；同源簇、超参、MD轨迹和质量过滤 | [S16/E29–E30、S17/E23–E24、S19/E25/E31–E32](../../ARCHIVE_POINTERS.md#archive-pointer-51bf1aebab96e98e)；`../../../references/pilots/2026-10-fifth-five-models/pesto/code/model/main.py:42-58,220-255` 与数据 README | O03/O07/O10/O17/O20/O23；[独立审阅 IR05](../../ARCHIVE_POINTERS.md#archive-pointer-39a1f7bdddfef1b9)区分 test/validation 命名、loss状态和统计单位，未把当前静态路径升级为整篇研究缺陷 |
-| PMDM | [S10/E11/E14、S11/E12、S13–S15/E13–E16/E25](../../ARCHIVE_POINTERS.md#archive-pointer-e0f9b8f033ff799c)；生成、代理筛选、专家约束、assay 入口分开 | `../../pilots/2026-10-fifth-five-models/cases/pmdm/citations/evidence-ledger.json`；源码配置和原始 SourceData/完整候选账本未构成历史运行回执 | O06/O07/O12b/O14b/O19/O21；[独立审阅 IR06](../../ARCHIVE_POINTERS.md#archive-pointer-39a1f7bdddfef1b9)要求阶段分母和旧/新 assay 来源分开，不把四个精选化合物当总体命中率 |
-| MIDAS | [S08/E08、S13/E14–E15、S14/E10/E16、S15/E17](../../ARCHIVE_POINTERS.md#archive-pointer-3bd66bf68e71831d)；标准 batch、迁移/replay、标签迁移和 unknown 出口 | `../../pilots/2026-10-fifth-five-models/cases/midas/flow-analysis.json`、`../../pilots/2026-10-fifth-five-models/cases/midas/custom-steps.json`、`../../pilots/2026-10-fifth-five-models/cases/midas/audit.json`；实际 batch 候选和参数作用回执未取得 | O05/O07/O10/O14/O15/O21；[独立审阅 IR07](../../ARCHIVE_POINTERS.md#archive-pointer-39a1f7bdddfef1b9)指出 batch-level argmin 与模块角色需要单独记录，transductive/reference replay 可合法但不自动支持 donor 独立性 |
+| 案例 | 发生了什么选择 | 需要保留的单位或分母 |
+|---|---|---|
+| Evo | 架构、候选和测试构建经历多个阶段 | 为每个阶段列出输入、父子关系和测试分母；完整候选表与运行回执仍待取得。 |
+| SpliceBERT | 论文报告10-fold及8/1/1划分和validation epoch选择；当前代码观察到另一种共享验证路径 | 区分论文protocol、代码路径和历史运行；共享开发选择可回答CV开发问题，独立泛化主张需相应留出评价。 |
+| PeSTo | 同源簇、超参数、MD轨迹和质量过滤参与样本或模型选择 | 说明同源组、轨迹与结构的嵌套关系，并报告过滤前后的分母。 |
+| PMDM | 生成候选经代理筛选、专家约束后进入assay | 分别记录生成数、每轮筛选数和实测数；少量精选化合物的结果只描述该批样本。 |
+| MIDAS | batch级选择、迁移/replay和标签更新改变了进入评价的对象 | 记录选择发生在哪个batch、模块和标签阶段；transductive或reference replay可适用于开发目标，供体独立主张仍需独立单位和划分。 |
 
-五例综合和20例矩阵都只支持一条方法性结论：选择阶段会改变主张单位，且选择不是泄漏的同义词；合法性取决于用途、分母和主张。[第五轮 findings](../../ARCHIVE_POINTERS.md#archive-pointer-bad4228b8ae43bbe) 与[20例证据矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-25ffc50b51a1481e)同时保留这些边界。
-
+共同方法结论是：阶段选择会改变估计对象和分母。选择本身不能单独说明信息泄漏；判断取决于输入用途、评价单位和最终主张。

@@ -1,0 +1,29 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/structure-mapping-scoring.md",
+  "source_text": "# 结构映射与评分：RNA／蛋白条件分支\n\n## 适用条件\n\n用于 RNA 二级/三维结构、蛋白折叠、接触或复合物评分。先判断这是预测结构、教师伪标签还是实验/参考结构；三者可以比较，但不能在 `Claim` 中当成同一种真值。凡涉及坐标基准、自由构象与固定口袋 pose、或刚体变换，另启用[坐标与参考系变换卡](coordinate-transforms.md)。\n\n## 应记录\n\n- `DataSnapshot`：序列、残基、原子、链、assembly/model 的稳定 ID；坐标文件与版本；缺失残基/原子、修饰、altloc 和 mask。\n- 明确 sequence→residue→atom 的映射、重编号/插入码处理、裁剪区间和对齐单位；保存输入与输出 ID 清单。\n- `MethodCard`：解码、阈值、距离裁剪、无效值和后处理；说明哪些标签来自教师、哪些来自实验或独立参考。\n- `ComparisonSpec`：指标公式、方向/尺度、对齐与刚体变换、有效分母、覆盖率、链对/残基权重；按结构单位保留分维结果。\n\n## RNA 分支\n\n记录 CT、dot-bracket、pair matrix 的互转；canonical/noncanonical、假结、multiplet、短环和阈值选择。二级结构组装到三维、直接坐标预测和实验坐标比较是不同路径，应分别绑定产物与误差来源。RMSD/距离指标要写原子集合、缺失 mask 和对齐规则。\n\n## 蛋白分支\n\n以 assembly/model/chain/residue/insertion-code 为主键；只有实际输入或输出使用 atom14/atom37 表示时，才记录对应映射、缺失原子和转换版本。其余情况下记录实际原子/残基表示，不为填表虚构 atom14/atom37。另记录 altloc、linker、链对和对称置换；注明 pLDDT 等分数的尺度与聚合方式，链对评价不要把不接触链对或缺失区域悄悄移出分母。\n\n## 可判断的检查\n\n1. 小样本往返映射：序列、残基、原子和结构行能互相定位；重复编号、错链、缺失材料会被点名而非静默删除。\n2. 交换等价链或重编号后，若生物学等价结构的分数改变，检查主键/对齐；错链、漏 mask 应能产生可见失败。\n3. RNA 检查最终无向结构或规格规定的对称分数、解码规则和无效位置；若模型原始 logits 有方向性，按已记录的后处理再验收。蛋白只有在实际采用 atom14/37 表示时才检查相应映射，另检查 linker 和链对覆盖；两种分支不共用含糊的“坐标正确”结论。\n4. 将教师一致性、预测—预测一致性、实验准确性分别列出。教师产生的标签不能被写成独立真值。\n5. 从保存的逐结构结果重算指标，核对单位、方向、裁剪和有效分母；表格聚合不能掩盖缺失覆盖。\n\n## 替代与不适用\n\nCT 或 dot-bracket、pair matrix、实际使用的原子表示、单体或多聚体都可作为条件方案，但要记录转换和局限。没有三维结构时不强制造坐标；没有实验真值时可报告代理参考，但必须在 `Claim` 标出依赖。不能把结构可视化、预测一致性或等价链重命名直接解释成机制。atom14/atom37 只在任务实际采用这些表示时触发。\n\n## 小型验收例\n\n- 正常：RNA pair matrix 与 CT 按原序列索引往返，canonical/noncanonical 由原序列或 sidecar 规则判定，假结策略为显式 `excluded`，无效碱基不进分母；重算宏平均通过。\n- 失败：矩阵行列因 1-based/0-based 错位，或没有按规格把有向 logits 后处理为最终无向结构就直接阈值化；短例应被拒绝而不是产出“漂亮”结构。\n- 正常：蛋白等价链重命名后仍得到相同链对分数；缺失原子被 mask，覆盖率单列并可回到 residue ID。\n- 失败：把 AF2/教师一致性报告成实验准确率，或为提高分数删掉难评分链对；比较规格应标记依赖和分母改变。\n\n## 来源\n\n- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ee803291759c5107) §3.2、§4、§6：`G01/E09/E10/E12/E13/E30/E31/E37`。\n- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-607f472f437957e3) §3、§4、§6：结构映射与链对 `G02/E05/E12/E20/E21/E26`；教师/蒸馏 `G03/E06/E10/E25/E27`。\n\n本卡只补领域条件和验收样例；它不替代领域专家对结构真值、原子集合和外推范围的判断。\n\n本轮校准依据：[F02 Uni-Mol 参考系锚点](../../ARCHIVE_POINTERS.md#archive-pointer-0757bda99723cf45)、[B01 Enformer 联合坐标锚点](../../ARCHIVE_POINTERS.md#archive-pointer-6d7e4782a21903a3)。二维结构映射提示不自动补足三维几何判据；具体参考系与可接受不变量见[坐标卡](coordinate-transforms.md)。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 43,
+          "text": "- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ee803291759c5107) §3.2、§4、§6：`G01/E09/E10/E12/E13/E30/E31/E37`。"
+        },
+        {
+          "line": 44,
+          "text": "- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-607f472f437957e3) §3、§4、§6：结构映射与链对 `G02/E05/E12/E20/E21/E26`；教师/蒸馏 `G03/E06/E10/E25/E27`。"
+        },
+        {
+          "line": 48,
+          "text": "本轮校准依据：[F02 Uni-Mol 参考系锚点](../../ARCHIVE_POINTERS.md#archive-pointer-0757bda99723cf45)、[B01 Enformer 联合坐标锚点](../../ARCHIVE_POINTERS.md#archive-pointer-6d7e4782a21903a3)。二维结构映射提示不自动补足三维几何判据；具体参考系与可接受不变量见[坐标卡](coordinate-transforms.md)。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Source details retained from the baseline case-analysis sections: RNA-FM case sections 3.2/4/6; ESM2/ESMFold case sections 3/4/6; coordinate calibration anchors Uni-Mol and Enformer."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "4cadbf520b6916fb63d3ae85c0a3d169df04545fd29a6b3481d102ba565d1bbd"
+}

@@ -27,16 +27,16 @@
 
 ## 小型验收例
 
-- 正常：12 nt 字符 token，mask 的 token 区间可回到原序列，CLS/EOS 不计 loss；逐样本 ID 和目标长度对得上，标记 `pass`。
-- 失败：研究规格要求隐藏目标碱基，且禁止把同一碱基从重叠 token 直接暴露；未 mask 的邻 token 却仍唯一包含答案。即使 loss 正常，也按该禁止通路判目标泄漏 `fail`。允许的生物学上下文预测不属于此例。
-- 正常：长度 19 的序列按 8、stride 6 分窗，窗口是半开区间 `[0,8)`、`[6,14)`、`[12,19)`，末窗含 7 nt；覆盖量按坐标并集统计，表征聚合对重叠区的权重另行明确，覆盖账本通过。
+- 正常：12 nt 字符 token，mask 的 token 区间可回到原序列，CLS/EOS 不计 loss；逐样本 ID 和目标长度对得上，标记 pass。
+- 失败：研究规格要求隐藏目标碱基，且禁止把同一碱基从重叠 token 直接暴露；未 mask 的邻 token 却仍唯一包含答案。即使 loss 正常，也按该禁止通路判目标泄漏 fail。允许的生物学上下文预测不属于此例。
+- 正常：长度 19 的序列按 8、stride 6 分窗，窗口是半开区间 [0,8)、[6,14)、[12,19)，末窗含 7 nt；覆盖量按坐标并集统计，表征聚合对重叠区的权重另行明确。
 - 失败：L×L 张量把 padding 当有效 pair，或两轴坐标错位；短矩阵的对称/无效 mask 检查应拒绝结果。
 
-## 来源
+## 来源与推导
 
-- [DNABERT-2 报告](../../ARCHIVE_POINTERS.md#archive-pointer-0e56ba0999139057) §3.1、§6：`G01/E03/E04/E15/E32`；长序列与双臂输入 `G04/E13/E19/E29/E32/E41`。
-- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-7d34ae899557b993) §3.2、§4、§6：分窗 `G02/E14/E37`；一维到二维 `G04/E20/E41/E37`。
+- **DNABERT-2**：长序列和双臂输入需要把窗口边界、输入身份与输出覆盖一起记录。
+- **RNA-FM**：分窗输出连接到二维结构时，应保留一维序列坐标与 pair matrix 两轴之间的映射。
+- **RNAErnie**：按原坐标并集计算窗口覆盖，并单独说明重叠区如何计入表征；末端短窗仍是有效输入的一部分。
+- [校准后的关系契约](../../design/13-calibrated-relations-and-checks.md)：D24 说明按具体研究条件定义关系和覆盖义务。
 
-本卡给出记录与验收方向，不表示上述检查器已经交付，也不把资料未取得改写成原实验错误。
-
-本轮校准依据：[D01 RNAErnie 窗口覆盖锚点](../../ARCHIVE_POINTERS.md#archive-pointer-e8e31e377bd80d73)、[D24 条件关系设计](../../design/13-calibrated-relations-and-checks.md)。窗口覆盖已有具体指导，但实际覆盖检查仍属于待实现的 `V`；代码中出现的顺序依赖也不自动证明本卡缺少指导。
+公开论文与方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例的精确定位和历史细节见[机器记录](../../../../machine/document-notes/core/docs/methods/cards/sequence-representation.md.json)。

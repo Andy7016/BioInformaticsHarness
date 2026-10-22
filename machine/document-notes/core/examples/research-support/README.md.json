@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/examples/research-support/README.md",
+  "source_text": "# 研究操作支持最小示例\r\n\r\n这些输入全部虚构，用来试用路径、角色与有限矩阵整理，没有生物学结论。从仓库根目录运行；root是唯一的清单/输入/输出路径基准。输出新建，重跑请换名称。\r\n\r\n~~~text\r\npython -m scripts.research_support.handoff --root . --manifest examples/research-support/handoff.json --actor demo-producer --phase producer --out .scratch/research-support/producer.json\r\npython -m scripts.research_support.diagnostics --root . --plan examples/research-support/diagnostic-plan.json --matrix examples/research-support/diagnostic-matrix.tsv --out .scratch/research-support/diagnostic.json\r\npython -m scripts.research_support.evidence --root . --manifest examples/research-support/evidence.json --out-dir .scratch/research-support/evidence\r\n~~~\r\n\r\n诊断例预计base残差为u2/u3，u3无候选相容，u2有另一候选局部相容；没有共同全相容候选。base与alias当前面板向量相同，这不证明通用数学等价或历史机制。\r\n\r\n此handoff例没有环境要求。需要预检时填入真实environment：python绝对路径、root内cwd、imports、required=true和timeout_seconds，再加--probe。接手者自己另运行phase=receiver；不要为演示替其生成检查。\r\n\r\n真实[DeepSEED回归与mRNABERT迁移](../../docs/ARCHIVE_POINTERS.md#archive-pointer-d08da09bce056944)另存来源和实际运行，勿把这个虚构例当研究证据。\r\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 15,
+          "text": "真实[DeepSEED回归与mRNABERT迁移](../../docs/ARCHIVE_POINTERS.md#archive-pointer-d08da09bce056944)另存来源和实际运行，勿把这个虚构例当研究证据。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "7c3c6617a824206dbb1552648e2864a6ac2cb34847c815284449555ecb900791"
+}

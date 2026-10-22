@@ -1,6 +1,6 @@
 # 有界资料获取分流
 
-本方法卡实现 D43 的资料获取边界。入口是 [`scripts/acquisition/route_sources.py`](../ARCHIVE_POINTERS.md#archive-pointer-62b4be3cb68ea988)，配置是 [`config/source-routing.json`](../ARCHIVE_POINTERS.md#archive-pointer-24f2e487e1dd5521)。它只负责来源发现请求、运输路线、下载身份和有界回执；它不判断论文科学结论，也不把一次 HTTP 成功写成全文已读或作者实验已复现。
+用这张方法卡规划公开资料的发现与下载，并为每次请求留下有界回执。设计来源和配置入口见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。下载后阅读原件，再分别记录论文版本、实验执行和科学解释。
 
 ## 使用范围
 
@@ -31,7 +31,7 @@ python scripts/acquisition/route_sources.py `
 
 ## 路线与预算
 
-学术域使用一个 `requests.Session`，`trust_env=False` 且代理为空；这会阻断系统环境变量代理的继承。GitHub、raw、codeload、`githubusercontent.com` 及配置中的相关域使用显式 `<local endpoint omitted from release>`，不修改系统代理或其他项目配置。未知域按 Direct 处理，并在回执中保留服务键和主机。
+学术域使用独立的 `requests.Session`，不会继承环境代理。GitHub、raw、codeload、`githubusercontent.com` 及配置中的相关域走专用代理路线；其他域按 Direct 处理，并在回执中记录服务和主机。
 
 重定向不由客户端自动跟随。每次响应计入 HTTP 预算，最多跟随配置的 3 跳；每跳读取 `Location`、验证目标并根据新域重新选择 Direct 或 GitHub 代理。请求之间默认间隔 1 秒，arXiv 域默认间隔 3 秒。没有自动重试，也没有遇到 403/429 后盲试备用服务。403、429 或响应额度头为 0 会停止该服务的后续请求；预算耗尽会把剩余计划项标为 `budget_exhausted`。
 
@@ -39,7 +39,7 @@ python scripts/acquisition/route_sources.py `
 
 ## 回执和隐私边界
 
-计划和回执使用 `source-routing-v1`，每项至少记录请求 ID、脱敏 URL、来源类型、期望格式、服务、路线、代理、状态、HTTP 次数、重定向数、字节数、SHA-256、格式检查和最终状态。错误只保留有限长度的类型和文本。带签名参数的 URL 在计划、回执和重定向记录中只保留 scheme、主机、路径及 `[signed-query-redacted]`；签名原值仅在当前进程内用于路由，保存的计划不能重放它。
+计划和回执使用 `source-routing-v1`，每项记录请求 ID、脱敏 URL、来源类型、期望格式、服务、路线、代理、状态、HTTP 次数、重定向数、字节数、文件身份、格式检查和最终状态。错误只保留有限长度的类型和文本。带签名参数的 URL 在计划、回执和重定向记录中只保留 scheme、主机、路径及 `[signed-query-redacted]`；签名原值仅在当前进程内用于路由，保存的计划不能重放它。
 
 回执中的 `firecrawl_calls`、`api_keys_used`、`emails_used` 明确为 0/false。脚本不读取密钥、不调用 Firecrawl、不获取 GitHub API 配额，也不把有 `hasSuppl` 的元数据标记当作附件已下载。`downloaded` 只表示本脚本实际取得并通过格式身份检查的那个文件；解析、阅读、作者报告和科学验收仍需另行记录。
 
@@ -58,8 +58,8 @@ plan = build_plan(doi="10.1371/journal.pone.0310814", config=config)
 receipt = execute_plan(plan, "routing/example-run", max_requests=2, config=config)
 ```
 
-`build_plan` 只做输入校验和计划构造。`route_url` 返回 `mode`、`service`、`host`、`proxy`，可以单独用于检查重定向目标。`execute_plan` 接受 `session_factory(route)`，因此离线测试可以替换传输而不改变路线选择、预算和文件安全逻辑。缺失 `requests` 时计划仍可生成，执行回执会明确标记 `dependency_missing`；脚本不自动安装依赖。
+`build_plan` 读取参数并生成计划。`route_url` 返回路线模式、服务、主机和代理信息，可用于查看重定向目标。`execute_plan` 支持替换传输会话，便于在离线环境检查路线与预算逻辑。缺少 `requests` 时计划仍可生成，执行回执会标记依赖缺失；脚本不会自动安装依赖。
 
 ## 证据边界
 
-本方法卡的自动检查只证明运输和文件身份边界。HTTP 200、哈希、JSON/XML 可解析、PDF 文件头和缓存命中都不是论文内容正确、历史代码版本、运行配置或科学结论的证据。真实运行的来源原件放在本轮本地目录 `references/tools/source-routing-2026-10-18/`，该目录只作为忽略的原始材料保存；可审阅的计划和回执另存于 `routing/`，并记录实际请求数、状态、哈希和未覆盖项。
+运输记录帮助核对请求状态、文件身份和格式。研究者仍需阅读来源内容，并把论文版本、运行配置与研究结论分别交给相应分析。将下载原件保存在研究工作区的 `references/` 目录，将计划和回执保存在 `routing/`，并列出请求数、状态及未覆盖项。

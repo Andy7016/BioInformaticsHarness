@@ -31,4 +31,4 @@ reference→derived_graph→prior影响调控模型，而同reference又被宣�
 
 [flow契约information](../flow-contract.md)检查声明的阶段祖先、资产来源和禁止用途，不搜索序列同源、真实模型内部mask、未声明影响或语义相似性。领域方法可提供这些检查，固定适用条件和版本即可；mask、标签、replay和可变loss状态的条件记录见[信息用途与状态效应](../guides/information-and-state-effects.md)。
 
-[20例矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-984f5a76865bbc68)连接旧例的教师/蒸馏/预训练暴露、RNA-MSM同源先验、KPGT重叠修订、scFoundation选模，以及新例的CM先验、ATC过滤和GLUE调控参考。与[基准卡](benchmark-teacher-fairness.md)、[逐阶段选择](stage-selection.md)组合，不要求每个研究都进行独立final测试或重新预训练。
+[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)连接旧例的教师/蒸馏/预训练暴露、RNA-MSM同源先验、KPGT重叠修订、scFoundation选模，以及新例的CM先验、ATC过滤和GLUE调控参考。与[基准卡](benchmark-teacher-fairness.md)、[逐阶段选择](stage-selection.md)组合，不要求每个研究都进行独立final测试或重新预训练。

@@ -1,0 +1,29 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/cards/visualization-efficiency.md",
+  "source_text": "# 表征可视化与效率比较\n\n## 适用条件\n\n用于 UMAP、VIA、t-SNE、投影/检索、分子指纹解释、结构景观，以及速度、显存、精度或覆盖率比较。两个分支可独立使用；未触发的分支记 `not-applicable`。\n\n## 应记录\n\n### 表征与图形\n\n- `DataSnapshot`：样本/查询/背景 ID、模型 revision、层与 pooling/窗口聚合、标签和抽样；保留原始 embedding 或可复算的输入指纹。\n- `MethodCard`：距离/标准化、投影算法、seed、perplexity/邻居数、抽样、UMAP/VIA root/backbone、树或参考来源；检索要写 self-match 排除、候选背景和匹配条件。\n- `ComparisonSpec`：原空间距离/邻域或预测的定量检查、投影稳定性、长度、家族、物种、批次等与任务有关的分层；核酸或有明确核酸来源映射的对象，可在 GC 含量可能构成替代解释时加入该分层。注明图形是探索、代理参照还是确认性证据。\n\n### 效率\n\n- 硬件、驱动、软件、精度、batch/chunk、recycle/ensemble/candidate 数；计时边界（搜索、编译、warmup、传输、同步、forward、后处理）和重复统计。\n- 质量、显存、覆盖与失败状态同行报告；`Run` 保存每输入状态、OOM/retry 关系和缺失输出。区分单次 forward 与完整 workflow。\n\n## 可判断的检查\n\n1. 多 seed 或参数变化后，检查原空间邻域/距离和投影邻域保真；图上分群不能单独支持机制或独立泛化。\n2. 选择与对象、抽样和主张有关的混杂因素；长度、家族、物种和批次均是候选，不要求每项都填写。GC 需有核酸数据或明确来源映射，蛋白、分子图或其他对象不把 GC 当作默认变量。随机/one-hot/未训练骨干可作为合理对照，但不是强制方案。\n3. VIA 的 root、推断树和景观参照做敏感性记录；推断树是代理参照，不能把根或镜头旋转写成演化方向/动力学机制。\n4. 稳态 GPU 计时要用同步或适用 event 完成可靠的计时边界，并记录 warmup；CPU 不套用 GPU 同步规则，若刻意包含冷启动则把初始化单列。硬件/精度/候选数仍需可比；网络 forward 时间不能改名为端到端加速。\n5. 若某 batch OOM 后进程正常退出，按缺失 ID 把任务标为 `partial/failed`；只有完整输入覆盖和 manifest 对账后才可称完成。\n\n## 替代与不适用\n\nUMAP、VIA、检索或景观图都可作为探索工具；可以选择不同投影和背景，但凡图形影响主张就保存参数与原空间支持。效率可比较 forward 或全流程，不能混成一个数字。没有图形或效率问题时跳过，不要求每项研究制作可视化。\n\n## 小型验收例\n\n- 正常：核酸表征的三组投影 seed 与原 embedding 邻域定量检查相近，相关的长度/GC分层无明显替代解释；结论仍标为探索性。其他对象按其实际可得且相关的因素分层。\n- 失败：UMAP 只按物种/长度分开，却被写成新生物学类别；缺混杂分层时应限制主张。\n- 正常：在同硬件上同步 GPU，warmup 后分别报告 ESMFold forward、完整批处理、质量和覆盖；比较对象清楚。\n- 失败：OOM batch 被 `continue`，输出目录缺一部分 PDB 但退出码为零；manifest 检查应标记缺失，不得报告全成功。\n- 正常：分子检索排除查询自匹配，并用背景分子和原始距离复核；检索排名不被称作机制证据。\n\n## 来源\n\n- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-25b5e69ee2859224) §3.3、§4、§6：表征解释 `G03/E06/E14/E15/E37`。\n- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ca4626fc2e31b626) §4、§6：效率 `G04/E11/E14/E25`；批量失败与 manifest `G05/E19/E22/E25`。\n- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-77cfb8be76efa76d) §4.4、§7：投影/检索 `G03/E23/E27`。\n\n本卡把图形叙事、原空间证据和效率计时边界分开；它不声称这些检查器已实现。\n\n本轮校准依据：校准中将 GC 的适用范围收紧为有核酸含义或来源映射的相关对象，避免把一个常见核酸协变量扩大为所有生物模型的必查项。图形或效率分支仍按触发条件选择。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 42,
+          "text": "- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-25b5e69ee2859224) §3.3、§4、§6：表征解释 `G03/E06/E14/E15/E37`。"
+        },
+        {
+          "line": 43,
+          "text": "- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ca4626fc2e31b626) §4、§6：效率 `G04/E11/E14/E25`；批量失败与 manifest `G05/E19/E22/E25`。"
+        },
+        {
+          "line": 44,
+          "text": "- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-77cfb8be76efa76d) §4.4、§7：投影/检索 `G03/E23/E27`。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Source details retained from the baseline case-analysis sections: RNA-FM case sections 3.3/4/6; ESM2/ESMFold case sections 4/6; MolCLR case sections 4.4/7."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "6061d2865470875edb6fc8b61722e2f36ae5aafaf37f008ec9b48f0c168794aa"
+}

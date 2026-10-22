@@ -1,0 +1,24 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/24-production-consumption-and-handoff.md",
+  "source_text": "# D47：从真实产物到可接手的研究结果\n\n2026-10-20。承接[D46](23-real-artifacts-and-research-decisions.md)，依据[S4PRED真实权重研究](../ARCHIVE_POINTERS.md#archive-pointer-1dde547b20aac9a2)的I01、I03、I04。用户要求将三项经验落实为可复用工作例并commit。核心科学对象、原契约、冻结方案和旧评分继续保持。\n\n## 为什么作这次修改\n\n本例已经有字段/ID、权威交接和人读解释的要求，仍在实际评分与交接中发生返工。原因可定位：准备文件与评分reader没有在同一真实工件上贯通；发布和目录范围没有由一个明确owner收口；程序中的entity全长与人的天然蛋白概念没有在首稿交接中说清。本次把要求放到具体接缝上，提供可调用的已有修复，适合先于继续扩展静态案例。\n\n## 决定\n\n1. **真实序列化后再消费。** 小生产端从保存的真实实体/位置表建立序列记录，实际写出后由共享reader及下游计数读取。保留来源、ID、长度和序列身份；选择共享表、成熟reader或已有同版本真实回执均合法。适用条件与停止标准进入[接口指南v1.1](../methods/guides/artifact-producer-consumer.md)。\n2. **发布一个明确入口。** 用原handoff清单保存当前文件及用途，最后原子、排他发布入口；接收者只用显式入口和其root。工具增加当下观察与发布者声明，不认证他方进程停止，也不产生科学接受。旧清单仍可直接用原工具检查；已有不可变数据/平台发布可替代。本地实现和归档路径见[接手指南v1.1](../methods/guides/receiving-research-work.md)。\n3. **先解释分析的是谁。** 来源提取程序和人读工作例区分PDB提交构建体、参考蛋白映射、坐标覆盖及计分资格；再结合低分例和类别组成理解结果。只澄清名称/范围时不改原数据；需要改资格时走有理由的研究修订。其他领域沿用自己的操作单位，见[生物学交接v1.1](../methods/guides/biological-explanation-and-handoff.md)。\n\n## 取舍与接受\n\n三项均是按触发启用的操作支持。发布工作例不会成为每个单进程计算的发布协议；PDB字段不会成为每份生信报告的必填栏目。本例的全C、PROMOTIF、PyMOL及局部数值仍留在案例。\n\n使用保存工件让工具具有低成本、CPU可执行的实际消费路径；这次验证发生在结果已知后，不能回填为原研究的前瞻成功，也不估计Harness净收益。新发布/接收、对象说明和小计数的实际运行分别记录，原S4PRED推理、评审与结果保留。\n\n[实施方案](../ARCHIVE_POINTERS.md#archive-pointer-28b68631a8a75042)给出W01–W04的来源、owner和接受条件；[综合结果](../ARCHIVE_POINTERS.md#archive-pointer-4782cfdc36389291)链接实际代码、组合应用、测试、修复和本轮接受。三份旧指南另存[基线](../ARCHIVE_POINTERS.md#archive-pointer-f9cccad809f073d2)，以新提交承接历史。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "2026-10-20。承接[D46](23-real-artifacts-and-research-decisions.md)，依据[S4PRED真实权重研究](../ARCHIVE_POINTERS.md#archive-pointer-1dde547b20aac9a2)的I01、I03、I04。用户要求将三项经验落实为可复用工作例并commit。核心科学对象、原契约、冻结方案和旧评分继续保持。"
+        },
+        {
+          "line": 21,
+          "text": "[实施方案](../ARCHIVE_POINTERS.md#archive-pointer-28b68631a8a75042)给出W01–W04的来源、owner和接受条件；[综合结果](../ARCHIVE_POINTERS.md#archive-pointer-4782cfdc36389291)链接实际代码、组合应用、测试、修复和本轮接受。三份旧指南另存[基线](../ARCHIVE_POINTERS.md#archive-pointer-f9cccad809f073d2)，以新提交承接历史。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "9c2e45f67324b60135ccb2080aaa93ab138a83b4310fbf98d7d637e0eeb2136e"
+}

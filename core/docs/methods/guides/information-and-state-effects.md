@@ -6,7 +6,7 @@
 
 本指南同时记录**状态效应**：某个 mask、zero/padding 状态、seed、可变 loss 权重、共享分数、replay 样本、模型标签或配置算子是否影响了后续 loss、选择或输出。要回答的不是“某字段是否存在”，而是“哪一阶段、哪一版本、哪一个算子实际消费了什么，它改变了什么主张”。
 
-证据分成四层：`作者报告`（论文/案例叙述）、`固定源码`（指定版本的静态观察）、`审阅推断`（条件解释或拟议控制）、`未知`（历史运行、权重、输入或实际消费没有回执）。当前源码能显示路径，不等于发表运行走过该路径；采集器读到保存文件，也不等于模型参数已经作用。
+证据分成四层：`作者报告`（论文或案例叙述）、`固定源码`（指定版本的静态观察）、`审阅推断`（条件解释或拟议控制）、`未知`（历史运行、权重、输入或实际消费缺少回执）。源码说明有哪些路径；当次运行记录说明实际走过哪条路径。采集器读到保存文件，记录的是本次文件读取；参数是否生效要看相应运行回执。
 
 ## 什么时候触发
 
@@ -24,7 +24,7 @@
 
 ## 先问这些问题
 
-1. **资产是谁、来自哪里？** 写 `asset_id`、父资产、来源文件、版本/commit/hash、生成工具和是否派生；另起文件名不代表独立。
+1. **资产是谁、来自哪里？** 写 `asset_id`、父资产、来源文件、版本或提交、生成工具及派生关系。需要区分文件副本时，记录其来源和实际内容关系。
 2. **它在这一阶段做什么？** 明确是 `fit`、`tune`、`select`、`prior`、`condition`、`evaluator_fit`、`inference_input`、`evaluate` 还是 `interpret`。同一资产多次使用要逐阶段列出。
 3. **主张保护什么？** 是 y、外部参考、供体、染色体、候选、当前 X，还是某个独立 assay？保护资产和禁止用途必须写出来；不能只写“没有泄漏”。
 4. **状态怎样进入下游？** 哪个函数/算子读取它，输入和输出是什么，是否改变 loss、梯度、selection score、阈值、预测或分母？需要 before/after 或可复核的贡献记录。
@@ -73,7 +73,7 @@ information_event:
 |---|---|---|
 |当前 X 的使用|传导式整合/当前集合目标|可以拟合当前 X，但不能把同一 X/y 结果改写成未来供体预测；另建 Claim 说明目标|
 |参考 replay|抗遗忘、query/reference 传导式训练|replay 样本会进入可见信息范围；独立 donor/外部主张需明确保护或另设评价|
-|模型/atlas 标签|用于一致性、迁移或开发选择|与模型标签一致不等于独立生物真值；写清标签谱系和主张支持范围|
+|模型/atlas 标签|用于一致性、迁移或开发选择|标签一致可支持模型间对应关系；生物学主张还需独立证据，并写清标签谱系和适用范围|
 |zero 与 mask|观测零、缺失、padding、invalid分开编码|同一个数值可以有不同状态；mask 必须绑定 ID、shape 和 loss/attention 路径|
 |共享选择分数|开发性共同选择|若声称每 fold 独立最终评价，禁止路径要包含该共享分数的标签祖先；没有历史回执时保留 unknown|
 |可变 loss 状态|评价/开发函数更新后续会消费的状态|记录 before/after、更新算子、消费者和阶段；函数名 `eval` 不决定它是否只读|
@@ -165,17 +165,18 @@ historical_runtime: unknown
 7. 消费等级与事实匹配：声明/源码/工件读取/运行读取/参数作用逐级区分，未读、失败和内容验证失败不互换。
 8. 对“没有泄漏”“参数已生效”“模型使用了该权重”“标签是真值”等强句子，能给出相应运行或适配器证据；否则改写为静态观察、条件推断或 unknown。
 
-flow-contract 可以检查已声明的 stage、asset lineage、purpose 和保护关系；[执行证据卡](../cards/execution-evidence.md)补充实际消费分层。[20例证据矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-d21312c58952beae)指出，静态源码、保存分数或通过的 manifest 不能识别历史 runtime。人仍需判断信息用途是否科学适切、标签是否足以支持主张、mask/loss 设计是否合理，以及未声明路径的领域风险。
+flow-contract 可以检查已声明的 stage、asset lineage、purpose 和保护关系；[执行证据卡](../cards/execution-evidence.md)补充实际消费分层。[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)指出，静态源码、保存分数或通过的 manifest 不能识别历史 runtime。人仍需判断信息用途是否科学适切、标签是否足以支持主张、mask/loss 设计是否合理，以及未声明路径的领域风险。
 
-## 五案例证据导航
+## 五个案例中的信息用途
 
-| 案例 | 作者报告的步骤与证据 | 固定源码/文件与状态 | 相关 O 与审阅解释 |
-|---|---|---|---|
-| Evo | [S06–S08/E06–E08、S10/E09、S11/E10–E11、S19/E19–E20、S21/E22](../../ARCHIVE_POINTERS.md#archive-pointer-a98b79d9cd6c3963)；上下文、标签、条件提示、proxy和评价角色分开 | `../../pilots/2026-10-fifth-five-models/cases/evo/citations/evidence-ledger.json`、`../../../references/pilots/2026-10-fifth-five-models/evo/source-reconstruction.json`；上下文/标签的逐运行消费与完整 proxy 分母未取得 | O05/O06/O07/O19/O20/O21/O24/O25；[方法目录](../../ARCHIVE_POINTERS.md#archive-pointer-64eae77f4cdf40f3)中的 CS-EVO-06/08 是审阅导航，不把 proxy 或解释图升级为功能证据 |
-| SpliceBERT | [S03–S04/E04–E05、S08/E08、S09–S13/E09–E14](../../ARCHIVE_POINTERS.md#archive-pointer-c3c3f111cf5d888d)；作者的 MLM mask、reference/alternate、标签、BP/SS protocol 与外部测试 | [S16/E17–E25](../../ARCHIVE_POINTERS.md#archive-pointer-c3c3f111cf5d888d)；`../../../references/pilots/2026-10-fifth-five-models/splicebert/official-code/examples/05-bp-prediction/finetune_for_bp_prediction.py`、`../../../references/pilots/2026-10-fifth-five-models/splicebert/official-code/examples/04-splicesite-prediction/predict_by_splicebert.py` 和 `../../../references/pilots/2026-10-fifth-five-models/splicebert/official-code/examples/scripts/config.py` 的固定提交是源码观察；无历史参数作用回执 | O05/O06/O07/O12/O15/O16/O19；[独立审阅 IR04](../../ARCHIVE_POINTERS.md#archive-pointer-f540e6e763fe022e)明确共享选择是条件推断，O07/O15 也保留 mask/阈值/分母适配缺口 |
-| PeSTo | [S04/E05/E08、S07/E03、S08–S11/E08–E12、S13–S14/E13–E16](../../ARCHIVE_POINTERS.md#archive-pointer-1e4168b8211a5bf6)；标签通道、同源簇、参考类型、MD/预测参考角色由作者叙述 | [S16/E29–E30、S17/E23–E24、S18/E21/E22/E26/E34、S19/E25/E31–E32](../../ARCHIVE_POINTERS.md#archive-pointer-1e4168b8211a5bf6)；`../../../references/pilots/2026-10-fifth-five-models/pesto/code/model/main.py`、`../../../references/pilots/2026-10-fifth-five-models/pesto/code/data/datasets/README.md` 与 `../../../references/pilots/2026-10-fifth-five-models/pesto/code/interface_ppi_confidence.ipynb` 是固定源码/工件观察 | O09/O10/O14/O17/O20/O24/O25；[独立审阅 IR05](../../ARCHIVE_POINTERS.md#archive-pointer-f540e6e763fe022e)区分可变 loss state、开发标签和文件名，历史运行仍 unknown |
-| PMDM | [S04–S06/E03–E05、S07–S08/E06–E09、S10/E11/E14、S13–S15/E13–E16/E25](../../ARCHIVE_POINTERS.md#archive-pointer-4303423230b4bc84)；口袋、seed、扩散目标、Vina/MM-PBSA、assay 是不同用途 | 固定 HEAD [`sample_frag.py`](../../ARCHIVE_POINTERS.md#archive-pointer-60745dcc564bdd75)、[`sample_linker.py`](../../ARCHIVE_POINTERS.md#archive-pointer-7eaee7d4f858c81a)、[`evaluation/docking.py`](../../ARCHIVE_POINTERS.md#archive-pointer-d2bc04194feb2cc8) 等只提供静态路径；[S16/E27–E29](../../ARCHIVE_POINTERS.md#archive-pointer-4303423230b4bc84) 的 metadata/README 不证明实际模型消费 | O04/O07/O12b/O14b/O16/O19/O21；[方法目录](../../ARCHIVE_POINTERS.md#archive-pointer-64eae77f4cdf40f3)中的 CS-PMDM-02/03/04 把 seed/选择/assay 分层，不升为通用扩散或湿实验要求 |
-| MIDAS | [S03/E04–E05、S04/E10、S06/E07、S08/E08、S10/E09–E10、S13–S16/E10/E14–E20](../../ARCHIVE_POINTERS.md#archive-pointer-1c363924ffed17ff)；mask、label、reference replay、batch noise、GMM unknown和atlas解释各有用途 | [S18/E21–E28](../../ARCHIVE_POINTERS.md#archive-pointer-1c363924ffed17ff)、[`flow-analysis.json`](../../ARCHIVE_POINTERS.md#archive-pointer-c28a99e8babe2567)、[`custom-steps.json`](../../ARCHIVE_POINTERS.md#archive-pointer-59697f21b0c4e807) 与固定 main/repro 源码；实际 mask/参数/模块消费未捕获 | O05/O06/O07/O08/O09/O10/O14/O15/O20/O21；[独立审阅 IR07](../../ARCHIVE_POINTERS.md#archive-pointer-f540e6e763fe022e)支持角色/版本/argmin记录，[方法目录](../../ARCHIVE_POINTERS.md#archive-pointer-64eae77f4cdf40f3)中的 CS-MIDAS-01/02/03 明确零值、batch选择和 replay 的条件边界 |
+这些案例说明输入角色会随研究问题变化。公开来源和项目背景见[统一索引](../../../../docs/REFERENCES-AND-DESIGN.md)；这里的操作重点是如何为当前任务记录数据用途和证据范围。
 
-第五轮 findings 的信息段落把 PeSTo 的开发标签/可变 loss、SpliceBERT 的共享选择和 MIDAS 的 replay/模型标签并列为机制观察；它没有把这些观察合并为统一缺陷，也没有扩张顶层对象。[第五轮 findings](../../ARCHIVE_POINTERS.md#archive-pointer-f267cd09ea250adb) 与[独立审阅](../../ARCHIVE_POINTERS.md#archive-pointer-f540e6e763fe022e)保留作者事实、源码观察、审阅推断和未知历史运行的区别。
+| 案例 | 需要区分的信息 | 交接时要说明什么 |
+|---|---|---|
+| Evo | 上下文、标签、条件提示、代理指标和评价目标 | 逐阶段说明各输入的用途；完整代理分母和逐运行消费记录仍需相应材料支持。 |
+| SpliceBERT | MLM遮蔽、参考/替代序列、标签、BP/SS任务与外部测试 | 论文所述protocol、当前可读代码和实际运行分别说明；共享验证选择支持开发阶段的条件性结论。 |
+| PeSTo | 开发标签、同源簇、参考结构、MD轨迹和可变损失状态 | 记录训练、筛选和解释中各项信息的角色；历史运行采用的状态需要当次回执。 |
+| PMDM | 口袋条件、seed、扩散目标、Vina/MM-PBSA代理和assay | 将条件输入、代理筛选、专家选择和实验测量分开记录；按具体路线说明实际消费。 |
+| MIDAS | mask、标签迁移、reference replay、batch噪声、GMM和atlas解释 | 记录batch级选择和模块角色；零值、缺失与unknown分别处理。 |
 
+这些案例支持一个直接做法：先标明输入在每个阶段的角色，再按目标主张检查其使用范围。论文报告、固定源码观察和实际运行各有自己的证据，分别记录后再解释。

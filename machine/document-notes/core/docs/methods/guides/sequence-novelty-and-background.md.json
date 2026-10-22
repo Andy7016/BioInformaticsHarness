@@ -1,0 +1,39 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/guides/sequence-novelty-and-background.md",
+  "source_text": "# 序列新颖性与匹配背景：先确定比较世界\n\n版本：`domain-validation-v1.1`，2026-10-18。针对DeepSEED最近天然序列与GARNET精选位点/构建体背景。下面是源文问题引出的条件方法，原论文结果与新增建议分别记录。\n\n## 触发与路线\n\n当研究称“序列是新的、没有复制、离天然序列很远、重叠超出偶然”，或以此支持模型优势时启用。先把问题分开：\n\n| 所问问题 | 比较对象/事件 | 选择理由与替代 |\n| --- | --- | --- |\n| 相对某天然池的全长新颖性 | 固定候选到版本化天然参考池的最近全长关系 | 对象长度/生物范围可比较时选择；只计算模板距离可作为更窄答案。 |\n| 是否复制训练材料 | 候选到实际训练资产及其派生/同源集合 | 需要训练身份与暴露；外部天然库不能代替历史训练池。缺历史时不判无复制。 |\n| 局部片段或基因组匹配 | 固定局部/窗口/链方向、覆盖与比对事件 | 合适的局部搜索可以回答片段问题；e-value不是百分比差异，全长距离也不是局部同源检验。 |\n| 某模式/位点/性质是否超出背景 | 明确的统计量与满足假设的条件背景 | 背景保留哪些属性取决于所排除的解释；没有合理零假设时只描述观察。 |\n\n距离、新颖性、功能与机制分别判断；没有参考池的“无命中”不是无限新颖性。\n\n## A. 最近参考关系：逐候选执行\n\n### 1. 固定对象、窗口和参考池\n\n先列全部候选ID及来源、送测/筛选状态、母体/模板、固定片段与生成片段坐标。最近关系必须回到所声称的分母：所有生成物、送测构建体或有效结果，不只保留最远的几个。\n\n为参考池写一张明确规格：数据库/版本/取得日期；天然promoter、整段基因组或蛋白家族的资格；是否含候选的训练来源和模板；重复/近重复处理；对象长度/窗口与方向。**最近天然promoter**需要可比较的promoter对象，拿任意基因组局部片段替代会改变问题。DNA反向互补是否等价由任务的方向意义决定；RNA/蛋白不机械套同一政策。\n\n固定seed的设计同时报告全序列及生成部分的事件。保留固定片段的作用：它可能必然提高与模板/天然对象的相似性，但删掉它也会改变原全长问题，不能只挑有利视图。\n\n### 2. 根据问题选比对方法，写清数学事件\n\n- **可穷举的小池、全长差异：** 可使用全局编辑距离；设替换/插入/删除代价并保留全部并列最近。`distance/max(lengths)`只叫归一化编辑差异，不直接叫identity。\n- **百分比identity：** 另外声明比对规则、gap政策及分母（比对列/参考长/查询长），保存可重算的比对。不同定义不能只用一个“相似度”字段混写。\n- **局部同源/大库检索：** 先选能覆盖目标的搜索与候选召回政策，再对召回对象做声明的比对。若检索不保证穷尽，只报告“实际检索候选中最近”，保留召回/覆盖限制；无命中不能转写成全库不存在相似对象。\n- **复制或家族新颖性：** 在序列事件之上连接训练暴露/家族定义。低identity不自动意味着新结构/新功能；所需结构/功能证据另选路线。\n\n代价、阈值、比对算法和参考选择均要写理由，不能因工具有默认值就把它当生物学标准。缺原始序列时停止数值比较；可继续写已报告模板距离或BLAST的范围说明。\n\n### 3. 输出并审阅最近关系\n\n逐候选保存：参考池身份、最近ID（含ties）、原始距离/单位、查询/参考/对齐覆盖、全长或片段标签、固定seed处理及未知/排除原因。另列有效查询数、无可比较参考数、未检索数和失败数，不静默改变分母。\n\n质量检查至少覆盖完全相同序列、单替换、插缺、不同长度、并列最近、错误字母、空参考与方向例。对已知例手工核算；长序列/大库验证另外登记，不能由小例推及搜索性能。\n\n## B. 匹配背景：判断“超出偶然”之前\n\n### 1. 先定义零假设和统计量\n\n把原句改写为“在保留哪些约束的候选中，观察到的什么事件是否特殊？”统计量可为最近距离、某位点重叠数或逐构建体功能差值，但要在看背景结果前确定方向和聚合。若目标是算法实用性，功能读出与候选选择都必须进入比较，不能拿距离背景代替功能成功率。\n\n### 2. 选最接近替代解释的背景\n\n| 要区分的解释 | 可选背景 | 保留什么；为何这样选 |\n| --- | --- | --- |\n| 距离只来自长度/碱基组成 | 分层匹配天然对象或保持组成的随机序列 | 匹配长度、组成和相关来源；只作为该零假设，不代表天然可功能空间。 |\n| 固定seed/编辑预算造成差异 | 保持固定区和编辑数量/类型，只变允许区域 | 保持生成约束与母体；若连固定功能motif也打乱，回答的是另一种问题。 |\n| RNA结构限制导致位点/突变偏好 | 按配对状态、结构域、可变性或可编辑集合匹配/随机化 | 约束需来自独立定义或开发材料，避免根据当前成功结果挑背景；是否需要保留二核苷酸/共变由假设决定。 |\n| 专家/模型选择形成富集 | 匹配完整选择策略的背景，或重放整个选择过程 | 若只在已精选对象内随机化，结论只能条件于该面板；不能估计所有候选/整策略的功能命中率。 |\n\n每种背景会改变问题。过度匹配可能固定住真正感兴趣的因素；匹配不足会留下替代解释。先列最重要的一两个因素及保留/放松理由，再作敏感性比较；不强制每个研究做所有背景。\n\n### 3. 同一测量与预算作用于观察和背景\n\n固定参考池、搜索范围、筛选预算、评分/测量流程及停止规则。母体、位点、家族、同一构建体的多反应存在依赖时，按相应单位配对或分层。未知制备/选择历史时不能把位点数或反应数直接塞进独立二项模型。\n\n若采用Monte Carlo随机化检验，先说明在零假设下什么对象可交换、怎样采样及条件化范围。以统计量越大越特殊为例，在观察与`B`次零假设抽样可交换的设计下，尾部计数为`p=(1+sum(T_b >= T_observed))/(B+1)`；越小越特殊则事先改尾部方向。包含ties，报告次数、seed、重复背景和分辨率`1/(B+1)`；未得到超越样本也不能报p=0。模拟次数不是新的生物样本量。**可交换性没有依据时，停止显著性结论，保留描述/条件模拟。** 小p值也不独立证明功能或机制。\n\n## 结果怎样改变决定\n\n- 模板被称作最近天然，却找到任何更近的合格参考：撤回该最近身份主张，更新逐候选证据；差异大小及生物意义另判，不需要统计显著性才修正确定性的最近关系。\n- 更换同样合理的参考池/窗口/方向或背景后结论改变：说明依赖哪一选择，收窄总体或暂不作稳健的新颖/富集主张。\n- 差异只在破坏固定motif/结构的背景下成立：不能用于原约束问题的优势主张；改选适配背景或保留未知。\n- 观察与背景均按同一设计取得、覆盖与依赖明确，并达到预定的实用/统计判据：可支持所定义参考世界内的差异；还不能跳到独立功能/机制。\n\n没有通用“编辑距离大于X就是新颖”规则。最小产物是`nearest-reference-spec.md`、逐候选最近关系表，以及有需要才添加的背景设计/结果表；它们可合在同一个案例文件，交接到现有ComparisonSpec/Artifact/Claim。\n\n## 一个能直接运行的小例\n\n```powershell\npython examples/domain-validation/nearest_reference.py --input examples/domain-validation/fixtures/novelty-normal.json --output .scratch/domain-validation/novelty.json\n```\n\n它只穷举声明池中的全长Levenshtein距离。合成例保留ties；空池为unknown，非法字母为fail；池明标template是合法窄比较。[说明与真实运行](../../../examples/domain-validation/README.md)明确覆盖、预算及不检查的背景假设。该程序没有实现局部比对、大库召回或背景检验。\n\n## 来源与推导\n\n- [DeepSEED M-NEAREST](../../ARCHIVE_POINTERS.md#archive-pointer-af0be516e484e4af)：review物理p2 R1.1、pp7–8回应，正式XML Par63–65；最近天然请求、模板差异与BLAST的区别。\n- [GARNET M3](../../ARCHIVE_POINTERS.md#archive-pointer-bb1b5f0e58a01534)：review pp19–20、正式Fig6及Par43–50；专家精选、位点/构建体/反应单位与背景问题。\n- 全长/局部的选路、背景假设与改判步骤是本轮方法建议，原件支持及边界见[纠正支持矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-25642bc6873f482a)。没有新增天然库或运行原作者检索。\n- 联用[序列卡](../cards/sequence-representation.md)、[指标卡](../cards/metric-semantics.md)、[选择后统计](statistical-units-and-selection.md)。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 32,
+          "text": "- **局部同源/大库检索：** 先选能覆盖目标的搜索与候选召回政策，再对召回对象做声明的比对。若检索不保证穷尽，只报告“实际检索候选中最近”，保留召回/覆盖限制；无命中不能转写成全库不存在相似对象。"
+        },
+        {
+          "line": 53,
+          "text": "| 距离只来自长度/碱基组成 | 分层匹配天然对象或保持组成的随机序列 | 匹配长度、组成和相关来源；只作为该零假设，不代表天然可功能空间。 |"
+        },
+        {
+          "line": 85,
+          "text": "- [DeepSEED M-NEAREST](../../ARCHIVE_POINTERS.md#archive-pointer-af0be516e484e4af)：review物理p2 R1.1、pp7–8回应，正式XML Par63–65；最近天然请求、模板差异与BLAST的区别。"
+        },
+        {
+          "line": 86,
+          "text": "- [GARNET M3](../../ARCHIVE_POINTERS.md#archive-pointer-bb1b5f0e58a01534)：review pp19–20、正式Fig6及Par43–50；专家精选、位点/构建体/反应单位与背景问题。"
+        },
+        {
+          "line": 87,
+          "text": "- 全长/局部的选路、背景假设与改判步骤是本轮方法建议，原件支持及边界见[纠正支持矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-25642bc6873f482a)。没有新增天然库或运行原作者检索。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
+    "Citation detail moved from human prose: DeepSEED M-NEAREST review physical page 2, R1.1 and response pages 7-8; formal XML paragraphs 63-65.",
+    "Citation detail moved from human prose: GARNET M3 review pages 19-20, Fig. 6, and formal paragraphs 43-50.",
+    "The full/local choice, reference-pool assumptions, sensitivity comparisons and decision rules are this guide's prospective method design; original source locations remain in source_text and machine/archive-pointers.jsonl."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "4ce66c3cb298e05ee812a47d31195d1cadb2f31377e3c8f1cc57ca072e779572"
+}

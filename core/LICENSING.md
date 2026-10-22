@@ -1,26 +1,21 @@
-# 项目许可与适用范围
+# Project license and use
 
-当前版本为 `0.1.0-alpha.2` 研究原型 checkpoint。公开的是精选内容；完整研究档案另存。旧 alpha.1 ZIP、旧许可快照与原研究首交不被本次整理覆盖。
+BioInformaticsHarness 0.1.0-alpha.2 is a research prototype. This guide describes the material included in the current public release. Individual files and examples retain the licenses and attributions listed in their manifests.
 
-## 第一方材料
+## Project material
 
-- **原创程序、测试、机器可读模板及虚构夹具：Apache-2.0。** 完整原文见 [LICENSE](LICENSE)。
-- **本项目从零训练并明确列入公开案例清单的 sklearn 参数工件：Apache-2.0。** 这是发布者对本项目新增参数/封装的明确许可，不由数据或第三方库许可自动推导，也不覆盖其他作者的权重。状态内保留的源数据、支持向量及其直接变换继续保留数据许可；混合封装按实际内容标为 `Apache-2.0 AND CC-BY-4.0`。
-- **原创说明、方法指南和项目自行绘制的说明图：CC BY 4.0。** 完整原文见 [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt)。文档中的可执行代码示例也可按 Apache-2.0 使用。
-- 署名使用“BioInformaticsHarness contributors”，维护者为 `vvcchh0`。项目引用格式见 [CITATION.cff](CITATION.cff)。保留适用的许可、来源和修改说明。
+- **Core code, tests, templates, and fictional fixtures:** Apache-2.0. See [LICENSE](LICENSE).
+- **Project-authored documentation and diagrams:** CC BY 4.0. See [LICENSES/CC-BY-4.0.txt](LICENSES/CC-BY-4.0.txt). Executable code examples in documentation may also be used under Apache-2.0.
+- **Project-trained model states listed in the public case manifests:** Apache-2.0 covers the project's new parameters and packaging. Some states also contain source-data-derived features or training IDs; those fields retain their original data attribution and terms. A case manifest identifies mixed scopes where a file contains both kinds of material.
 
-核心包以自己的 `RELEASE-MANIFEST.json` 逐文件说明范围；源与发布派生规则见 [alpha.2 发行规格](docs/reviews/2026-10-checkpoint-publication/release-spec.json)。公开真实案例有各自的文件许可/来源账本，不能将 core 清单外的原始档案视为一并授权。根 LICENSE 不把论文、外部源码、数据、权重或聊天档案重新许可。
+Attribute the project as “BioInformaticsHarness contributors” and retain relevant license, source, and change notices. The recommended citation is in [CITATION.cff](CITATION.cff). Project licenses do not change the terms for papers, external code, datasets, or model weights.
 
-## 开放数据与外部软件
+## Data and dependencies
 
-精选 Splice 与 Yeast 消费案例使用 UCI 官方归档；源数据及包含其真值/特征的派生表保留 **CC-BY-4.0**、原作者归属、DOI 和修改说明。具体行选择、原件身份与派生过程由案例账本给出。本项目新训练状态的来源及发布许可单独登记。
+The public Splice and Yeast cases use the UCI archives listed in their `CASE-MANIFEST.json` files. Their data and derived tables retain CC BY 4.0 attribution, DOI information, and transformation details. See the [public third-party inventory](THIRD_PARTY.md) and each case manifest for file-level terms.
 
-Python、NumPy、SciPy、scikit-learn、joblib 和可选资源采样库 psutil 由使用者另行取得，不随包分发，保留各自许可。模型 pickle/joblib 只应从可信发布来源加载；先核发布清单和来源，再在适当环境中消费。
+Python, NumPy, SciPy, scikit-learn, joblib, and optional `psutil` are installed separately by the user and retain their own licenses. Only load pickle or joblib files from a source you trust; these formats can execute code when loaded.
 
-完整私有档案中的 Optimus notebook 摘录、FoldingDiff 改编和其他外部材料继续适用原条款，见 [档案归属](docs/ARCHIVE_POINTERS.md#archive-pointer-6b53a968ae7b6194)。这些材料及许可未核清的 GEO 行数据均不进入本次干净公开历史。公开范围内的第三方材料见 [THIRD_PARTY.md](THIRD_PARTY.md)。
+## Reusing material
 
-## 发布者与接手者
-
-原始研究首交中当时缺少的许可信息保持 `unknown`；本次发布者另行提供明确范围。接手者无需猜测整目录的权利，也不能把学术引用或可公开下载等同于再分发授权。需要外部分发时，按 [发行交接指南](docs/methods/guides/publication-handoff.md)逐项绑定来源、许可、变换和最终字节；不分发、仅链接取得方式或换用开放材料都可作为替代。
-
-许可选择依据为 [Apache 官方原文](https://www.apache.org/licenses/LICENSE-2.0)、[CC BY 4.0 法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.en)及 [Creative Commons 软件许可说明](https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software)。本说明给出本次发行范围，不是对所有历史档案的统一权利结论。
+Before redistributing a file, check its case manifest or license notice and retain the listed attribution and change information. If rights for an input or weight are unclear, leave it out of the release, link to its source, or replace it with an openly licensed alternative. The [publication handoff guide](docs/methods/guides/publication-handoff.md) gives a practical file-by-file review process.

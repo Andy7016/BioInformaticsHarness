@@ -1,18 +1,25 @@
-# Public checkpoint history
+# Changelog
+
+## 文档整理 — 2026-10-22
+
+- 建立统一的参考来源、设计、借鉴、实现和验收索引，补入早期工程框架与基础方法资料。
+- 将面向使用者的说明与结构化技术记录分开，整理 README、方法指南和应用说明。
+- 重写项目短史，使读者可以沿公开的设计、方法和应用文档了解演进过程。
+- 增加文档写作约定和维护工具。
 
 ## 0.1.0-alpha.2 — 2026-10-22
 
-- Added canonical first-plan production/checking/sealing and an explicit compatibility route for the earlier public-applications protocol.
-- Added selected code/config byte capture before the first audit command starts, input identity binding, immutable snapshots and post-execution change observations.
-- Added licensing handoff guidance that separates code, prose, data, author weights, newly fitted states and external runtime libraries.
-- Published two portable UCI CPU saved-state consumers after fresh-root replay: Splice 12 held-out rows and Yeast one 293-row held-out fold. No retraining for this release.
-- Fixed explicit UTF-8 decoding in CLI contract tests after a CP936/non-ASCII TEMP receiver exposed the environment mismatch. Runtime checker semantics and scientific results are unchanged.
-- Kept earlier source failures and first deliveries in the private archive; published a curated new Git history at the project's canonical address.
+- 加入首次研究方案的清单生成、检查和封存工具。
+- 在首次审计开始前保存所用代码与配置，记录输入来源。
+- 补充代码、说明、数据及保存模型的许可交接指导。
+- 加入 Splice 和 Yeast 两个 CPU 保存模型应用。
+- 改进中文 Windows 环境下的命令行测试。
+- 在项目正式地址发布可独立使用的原型。
 
-## Earlier alpha.1 preparation — 2026-10-21
+## 早期设计与试点
 
-Three reviewed curation commits introduced publication scope, a 150-file frozen core, and the original evolution/source summary. Those unpublished commits remain in the private archive; the public Git history starts at this checkpoint. See [evolution](docs/history/EVOLUTION.zh.md). They summarize earlier D-series development without importing the private archive.
+项目先整理研究流程和文献，再逐步增加模型案例分析、同行评审对照、条件方法与真实计算应用。各阶段遇到的问题和形成的设计见[项目短史](docs/history/EVOLUTION.zh.md)。
 
-## Next
+## 接下来
 
-Prioritize same-study scientific revision: a concrete new question, method selection, actual supplementary analysis, conclusion reassessment and a second delivery. See [roadmap](ROADMAP.zh.md).
+围绕同一课题推进新的验证设计、实际补分析、结果解释和第二轮交付，见[下一阶段](ROADMAP.zh.md)。

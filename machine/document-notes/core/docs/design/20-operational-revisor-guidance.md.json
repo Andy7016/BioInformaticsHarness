@@ -1,0 +1,24 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/20-operational-revisor-guidance.md",
+  "source_text": "# D40–D43：把修订指导交给下一位执行者\n\n2026-10-18。根据用户“启用分流、按三项校准迭代、先复盘再扩展”的决定实施。直接依据为[五案回收](../ARCHIVE_POINTERS.md#archive-pointer-ac76cd4d8317e4e4)及F01–F07；承接[D35–D39](19-revision-guidance-and-acceptance.md)。旧决策、原始评分和冻结案例保留。\n\n## D40：评分以具体义务和版本为锚点\n\n评价单位固定为 **请求 × 所评范围 × 路线 × 指南版本**。G exact需要可定位的过程、输入用途、下一动作、产物和验收；partial、topic_only、absent和unknown分别保留。该五维是判断依据，不能只凭五个字段齐全作语义结论。领域实例化与执行结果另列：没有重跑作者实验并不自动降低G，新设计的领域算法也不计入冻结指南已有能力。\n\n若只检验解释/限域路线，明确标记 `selected_route_only`，保留原请求的剩余问题；不能通过缩小路线把整体请求记为已解决。E仍衡量表达/追溯，V分别写能力、实现/人工规程和实际结果。[校准指南](../methods/guides/guidance-calibration-and-handoff.md)给工作顺序和错例。\n\n## D41：路线的选择、输入和完成对象属于同一责任链\n\n现有Review/Decision/Task/Artifact关系保持。增加条件使用的[revision-guidance-v1](../methods/revision-guidance-contract.md)交接视图，补全当前工作和历史作者的不同视角、路线owner、任务执行者与派发者、必要输入和产物。它与原[research-revision-v1](../methods/revision-contract.md)并行使用，不重写旧契约。\n\n历史作者的“报告已做”只能作为来源观察；本次执行者若选择解释，需要自己交付解释文本。OR未选分支的缺输入不阻断所选路线；所选路线缺必需材料则保留unknown/blocked。下游执行者依据这条局部责任链接手，不需要继承整个项目聊天。\n\n## D42：来源、实现与回执分别落到文件\n\n一个source对应一个文件身份和版本，多个原文定位可以复用同一文件；输入逐条写用途。实现记录指向具体代码或人工审阅规程，注明它能判断的范围。实际检查的结果再指向回执；“实现已注册”和“本次已经执行”分开。涉及科学含义的复核仍需来源与领域判断。\n\nPMDM的四来源共用单hash问题促成这项细化，而环统计、IC50单位换算及其它领域算法保持条件实例，没有被升级为所有论文的必做步骤。新检查器检查交接记录、引用和文件身份，不执行登记实现。\n\n## D43：启用按资料任务分流的获取入口\n\n常规发现采用原生搜索；元数据按Crossref/Europe PMC/NCBI核对，已知OA全文与附件优先Direct原件，OpenAlex单DOI为补充；GitHub显式7890代理。Firecrawl只在渲染/交互/批量整理收益明确时按任务使用。本次没有注册服务、查询密钥或修改全局代理。\n\n落地为[获取约定](../methods/source-acquisition-routing.md)、配置和有界计划/执行程序。每次请求有预算、格式与字节检查、hash和停止出口；“已定位”“已取得”“已解析”“已阅读”分别记录。它不能通过换工具把权限问题变成公开材料，也不能把hasSuppl标记当作附件已经取得。\n\n## 先复盘，再决定扩展\n\n本轮先冻结新规则/实现和旧输入的身份，再核对已有15张卡、构造五份具体交接记录、复查评分分歧和错误见证。局部模板/程序缺陷直接修复并保留首轮结果。只有来源、路线、评分理由和实际验收的关系均清楚，才进入新案例扩展；这次不新增案例会话。\n\n实施、复盘范围和最终决定见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-330d695c540973f3)。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "2026-10-18。根据用户“启用分流、按三项校准迭代、先复盘再扩展”的决定实施。直接依据为[五案回收](../ARCHIVE_POINTERS.md#archive-pointer-ac76cd4d8317e4e4)及F01–F07；承接[D35–D39](19-revision-guidance-and-acceptance.md)。旧决策、原始评分和冻结案例保留。"
+        },
+        {
+          "line": 33,
+          "text": "实施、复盘范围和最终决定见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-330d695c540973f3)。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "dd887ad378cf2b251cc7c88ac5800be64f602d61160797c805821ba361024207"
+}

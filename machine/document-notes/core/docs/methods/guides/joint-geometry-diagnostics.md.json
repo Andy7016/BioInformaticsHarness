@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/guides/joint-geometry-diagnostics.md",
+  "source_text": "# 联合几何误差：一个可运行研究的对照方法\r\n\r\n版本joint-geometry-example-v1，2026-10-19。用于根据单角/局部误差讨论整体结构，或不同几何终点出现不同方向时。接续[结构几何与扰动](structural-geometry-and-perturbation.md)的B1–B3，实例为[FoldingDiff联合探针](../../ARCHIVE_POINTERS.md#archive-pointer-b05f5084b1948edb)。它展示怎样展开原原则，未修改冻结v1.1。\r\n\r\n## 先选问题与信息\r\n\r\n- 实际模型风险：取得同ID、阶段、mask和角定义的参考/预测周期残差向量，保留跨角与跨位置关系。\r\n- 几何方法例：没有真实残差时，可在同一真实对象、零点和映射上做明确的确定性探针或人造有限权重。\r\n- 足够小变化的局部响应：可以选有独立有限差分控制的Jacobian。\r\n- 已有匹配处理前后坐标：可以直接配对评价；需要讨论精修对象保留时再核raw/packed/relaxed谱系。\r\n\r\n这些路线的输入和结论不同。选择理由是要获得什么信息，未选分支不自动成为欠账。\r\n\r\n## 一个有区分力的最小对照\r\n\r\n1. 核原子/残基映射、单位、周期差及表示零点；有损表示误差与目标扰动分开。\r\n2. 固定对象、角对、幅度及每个单角的边际。改变两角的联合符号：同号++/--各1/2，反号+-/-+各1/2，独立四态各1/4。\r\n3. 用同一基准重建，先验证当前轴旋转/未改参数及数值控制，再解释几何。\r\n4. 选择要保护的关系：proper Kabsch后的Cα坐标误差，或非局部Cα对距离误差。每态先平方再加权，分别保存Σw r²、其平方根和Σw r。\r\n5. 保留全部预定对象/角对/幅度和失败；对比同号与反号，不按最大差挑展示对象。计算分辨预算来自数值控制，生物用途界限另定。\r\n\r\n本轮已有公开代码样例三对象、72条件与18个对比可运行/复查。保存坐标、源映射、程序、执行回执及独立重评分已在实例目录；[统一证据工具](../research-support-tools.md)可以整理身份、回执和导航。工具没有实现通用结构科学验收器。\r\n\r\n## 怎样解释观察\r\n\r\n相同单角边际不固定联合关系。即使位移可以线性叠加，平方损失仍有交叉项，联合权重就可能改变损失。有限位移叠加残差是另一个问题：应在共同seed系比较Δjoint与Δ1+Δ2，不相加各自独立全局拟合后的向量。\r\n\r\n实例中两主量的18组同号/反号比较均数值可辨；四组整体拟合与内部距离的方向相反。因此下一位应说明所选损失保护什么，不合并成一个普遍“更好/更坏”。约25的5°/1°有限叠加误差比与混合二阶项相容，两个幅度不足以确立普遍渐近阶数。\r\n\r\n没有差异时保留该结果及覆盖范围；出现差异时也不能把人造四态换算为实际模型风险。要改变用途判断，下一研究须消费真实残差/配对信息和用途容限。固定角网格、数值门或精修不是每个结构任务的必做步骤。\r\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "版本joint-geometry-example-v1，2026-10-19。用于根据单角/局部误差讨论整体结构，或不同几何终点出现不同方向时。接续[结构几何与扰动](structural-geometry-and-perturbation.md)的B1–B3，实例为[FoldingDiff联合探针](../../ARCHIVE_POINTERS.md#archive-pointer-b05f5084b1948edb)。它展示怎样展开原原则，未修改冻结v1.1。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "cfc86e7888014bdb7bcad90dfec2580d86f2e302428b8560a7bec2240b65160b"
+}

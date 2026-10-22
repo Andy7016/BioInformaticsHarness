@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/QUICKSTART.md",
+  "source_text": "# Quickstart\r\n\r\n解压后在包根目录运行（Python 3.11+）。核心入口只使用 Python 标准库；不安装依赖、不\r\n联网、不需要 GPU、账号、论文全文、模型权重或私有研究档案。下面的输入\r\n来自 `examples/research-support/`，全部是虚构数据。\r\n\r\n## 三个最小操作入口\r\n\r\n```text\r\npython -B -m scripts.research_support.handoff --root . --manifest examples/research-support/handoff.json --actor demo-producer --phase producer --out .scratch/research-support/producer.json\r\npython -B -m scripts.research_support.diagnostics --root . --plan examples/research-support/diagnostic-plan.json --matrix examples/research-support/diagnostic-matrix.tsv --out .scratch/research-support/diagnostic.json\r\npython -B -m scripts.research_support.evidence --root . --manifest examples/research-support/evidence.json --out-dir .scratch/research-support/evidence\r\n```\r\n\r\n预期范围：handoff 会记录虚构 producer 的当前观察；diagnostics 会报告\r\n`u2/u3` 残差、局部候选相容与没有共同全相容候选；evidence 会按显式文件\r\n生成同源索引。输出目录必须是新的；`.scratch/` 是用户自己的临时输出，\r\n不要把它当作包内证据。\r\n\r\n## 独立 receiver 重跑\r\n\r\n生产者命令结束后，接收者应自行从同一份显式清单重跑：\r\n\r\n```text\r\npython -B -m scripts.research_support.handoff --root . --manifest examples/research-support/handoff.json --actor demo-receiver --phase receiver --out .scratch/research-support/receiver.json\r\n```\r\n\r\n这两个输出分别代表两个实际观察；第一个命令不会替接收者生成签字或\r\n证明历史消费已经完成。需要环境预检时，按 handoff 的 `environment` 契约\r\n提供包内 root 相对 cwd、明确解释器和有限超时，不自动安装或重试。\r\n\r\n## 指纹反例与证据边界\r\n\r\n文件 SHA-256 或工具 fingerprint 只说明被读取的字节身份。两个语义等价\r\n但字节排版不同的表可以有不同指纹；一个指纹相同也不说明样本独立、标签\r\n正确、模型等价或论文结果已经复现。因此应同时检查输入用途、统计单位、\r\n测量定义、真实消费和科学改判条件。任何 CLI `pass` 都只表示本工具范围\r\n的检查通过，不是科学接受。\r\n\r\n## 验证发布包\r\n\r\n```text\r\npython -B verify_release.py\r\n```\r\n\r\n验证器会核对清单中的每个文件、拒绝路径穿越和符号链接，并拒绝清单外\r\n的未知 payload；清单本身只标记为 `self_hashed: false`，不对自己做循环\r\n哈希。\r\n\r\n## 标准库核心测试\r\n\r\n包内测试也只使用标准库。请让 `PYTHONDONTWRITEBYTECODE=1` 传递到整个测试\r\n进程树，避免测试或其子进程在受清单保护的源码树中写入 `__pycache__/`；这项\r\n环境设置只用于本次测试。两个测试目录需分别发现；Python 3.11不会自动递归\r\n这里没有`__init__.py`的命名空间子目录，直接使用`-s tests`会漏测。POSIX shell 示例：\r\n\r\n```text\r\nPYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests/research_support -p 'test_*.py' -v\r\nPYTHONDONTWRITEBYTECODE=1 python -B -m unittest discover -s tests/verification -p 'test_*.py' -v\r\n```\r\n\r\nPowerShell 示例（命令结束后恢复当前进程环境）：\r\n\r\n```powershell\r\n$harnessPreviousBytecode = $env:PYTHONDONTWRITEBYTECODE\r\ntry {\r\n    $env:PYTHONDONTWRITEBYTECODE = \"1\"\r\n    python -B -m unittest discover -s tests/research_support -p \"test_*.py\" -v\r\n    python -B -m unittest discover -s tests/verification -p \"test_*.py\" -v\r\n} finally {\r\n    if ($null -eq $harnessPreviousBytecode) {\r\n        Remove-Item Env:PYTHONDONTWRITEBYTECODE -ErrorAction SilentlyContinue\r\n    } else {\r\n        $env:PYTHONDONTWRITEBYTECODE = $harnessPreviousBytecode\r\n    }\r\n}\r\n```\r\n\r\n\r\n## 封存和首次审计\r\n\r\n- [计划封存小例](examples/research-support/plan-seal/README.md)：从明确plan-root生产READY，再按相同契约检查和封存，修订使用新目录。\r\n- [首次审计小例](examples/research-support/first-audit/README.md)：显式列明代码/配置/输入，在子进程启动前保存快照。实际资源采样需另备psutil；不捆绑环境或自动安装。\r\n\r\n上述新增工具的测试另在`tests/`根下发现：\r\n\r\n```text\r\npython -B -m unittest discover -s tests -p 'test_*.py' -v\r\n```\r\n\r\n同样向子进程传递`PYTHONDONTWRITEBYTECODE=1`。缺可选资源采样库时，相关测试应列出skip，不能记为实际资源采样通过。根目录发现不会替代上面两组子目录的测试。\r\n\r\n真实UCI例在公开仓库`examples/`另行说明，消费已训练参数并与固定留出输出比较。本core包不包含其依赖或实际数据。\r\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 34,
+          "text": "文件 SHA-256 或工具 fingerprint 只说明被读取的字节身份。两个语义等价"
+        },
+        {
+          "line": 43,
+          "text": "python -B verify_release.py"
+        },
+        {
+          "line": 48,
+          "text": "哈希。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "c15eedc79a66fe5c8eef7eafdec686e78bcc5d680ab9a8229ff25a9adeea5906"
+}

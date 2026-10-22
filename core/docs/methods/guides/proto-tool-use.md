@@ -1,6 +1,6 @@
 # Proto工具调用：从研究问题到可消费工件
 
-版本 `proto-tool-use-v1`，2026-10-19。本指南按需要选用，不新增所有研究都必须执行的步骤。适用于从Proto查询数据库、运行序列/结构分析或接入已有生物模型；依据为[本轮实时盘点](../../ARCHIVE_POINTERS.md#archive-pointer-d64b5272f6d14523)、[能力卡](../../ARCHIVE_POINTERS.md#archive-pointer-3d22f2ea2ebd35c3)和[计费调查](../../ARCHIVE_POINTERS.md#archive-pointer-85f8d10df06e293a)。
+版本 `proto-tool-use-v1`，2026-10-19。本指南按需要选用，不新增所有研究都必须执行的步骤。适用于从Proto查询数据库、运行序列/结构分析或接入已有生物模型；依据为[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。
 
 ## 先判断它在研究中承担什么
 
@@ -20,7 +20,7 @@ Harness继续负责研究目标、方法选择理由、信息用途、验证与�
 
 ## 目录存在、可调度和跑过分别记录
 
-本轮成功调用 `workspace_info()`、完整与当前可运行的 `list_tools()`。返回160项操作、17类：33项 `ready_to_run`、114项 `needs_deploy`、13项 `local_only`。这是2026-10-19当前连接的快照，详见[目录与分母](../../ARCHIVE_POINTERS.md#archive-pointer-8abaa04795f07edc)。
+本轮成功调用 `workspace_info()`、完整与当前可运行的 `list_tools()`。返回160项操作、17类：33项 `ready_to_run`、114项 `needs_deploy`、13项 `local_only`。这是2026-10-19当前连接的快照，详见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。
 
 - `ready_to_run`：当前服务认为有可用路线；继续核输入、第三方服务凭据/限额和schema的前提。仅凭此标志不能记为实际运行成功或免费。
 - `needs_deploy`：当前远程路线需要先满足部署条件。CPU也可能有这一状态；本轮有29项非GPU工具需要部署。
@@ -68,7 +68,7 @@ flowchart TD
 
 为当前任务写明对象数/长度、链/原子选择、数据库和参数、输出位置、时间/计算预算及失败出口。先选能回答当前问题的最小工件；单结构或小序列面板是可选起步方法，不成为所有任务的固定规模。
 
-按[计费调查](../../ARCHIVE_POINTERS.md#archive-pointer-85f8d10df06e293a)区分ChatGPT访问、Proto托管、Modal计算/存储和第三方服务。当前无付费部署或模型运行验收。Proto的 `deploy_tool` 明示会在用户Modal账户构建并产生费用，需要在该实际部署步骤获得确认；目录/schema/example/info查询不需要这项部署确认。
+按[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)区分ChatGPT访问、Proto托管、Modal计算/存储和第三方服务。当前无付费部署或模型运行验收。Proto的 `deploy_tool` 明示会在用户Modal账户构建并产生费用，需要在该实际部署步骤获得确认；目录/schema/example/info查询不需要这项部署确认。
 
 截至本次公开调查，没有取得Proto独立月费或托管试用的金额/周期。Modal Starter公示无月费、每月含30美元compute额度，使用其workspace预算控制消费；environment级预算是更高计划的功能。该额度不覆盖所有Modal产品，标准Functions的单价也不能直接套给Sandboxes/Notebooks。HF账号、权重许可和HF PRO分别判断，不把PRO当作所有模型的下载前提。
 
@@ -78,7 +78,7 @@ flowchart TD
 
 使用 `run_tool(tool_key, inputs, config, ...)` 或声明的标准例子运行。保存实际输入、配置、响应与后端信息。调用包含的科学输入须属于当前研究任务允许交给该服务处理的材料。
 
-- 结果若是 `pending`，保存 **tool_key和job_id**；后续用 `get_run_status` 回收。连接超时不等于远端已停止，也不因超时重复提交原运行。
+- 结果若是 `pending`，保存 **tool_key和job_id**，再用 `get_run_status` 查询同一次运行。连接超时后先查远端状态，避免重复提交。
 - 部署若异步或超时，用 `get_deploy_status(tool_key)` 查已发起的部署。`tracked=false` 只说明追踪记录未保留，是否已部署另查当前目录。
 - 轮询按任务给定间隔、上限和停止条件进行，保留失败和未知出口。轮询到期后先登记当前状态，不重复部署或计算来“确认结果”。
 
@@ -98,13 +98,13 @@ Proto[当前隐私政策](https://proto.evodesign.org/privacy)将外部插件中
 
 先取 `pdb-fetch-entry` 的准确schema，查询条目标题、方法和分辨率；它只返回条目元数据，**不提供坐标文件**。然后从RCSB条目的来源链接另取真实PDB/mmCIF原件，记录下载身份，并检查实际model/assembly和格式。若改用`alphafold-db-fetch`获取预测结构，需相应改变来源和解释。取得并保存真正的结构内容后，才按 `structure-metrics` 的输入对象构造调用；元数据JSON不能直接当结构传入。
 
-检查链数、缺失、指标单位与异常值。需要展示时采用本项目[可视化入口](../../ARCHIVE_POINTERS.md#archive-pointer-b9113a2d42b56212)和[设计说明](../../ARCHIVE_POINTERS.md#archive-pointer-28da96fe3d15c8e5)。已有PyMOL安装的历史验证继续作为那一版本的记录，实际执行时重新检查当前环境即可。
+检查链数、缺失、指标单位与异常值。需要展示时采用本项目[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。已有PyMOL安装的历史验证继续作为那一版本的记录，实际执行时重新检查当前环境即可。
 
 图注回答：这是实验结构还是预测模型、看哪个区域、做了什么处理、哪些部分省略。三维旋转是观察视角，不写成分子动态；单个几何摘要也不直接解释功能。
 
 ### B. 两个结构 → 对应/叠合 → 比较解释
 
-适用：比较同一生物单位、构象或预测与参考。先写清比较对象和链映射，再选TM-align、US-align或PyMOL方法；具体规范化、方法参数、selection和叠合输出见[实时能力卡](../../ARCHIVE_POINTERS.md#archive-pointer-3d22f2ea2ebd35c3)。本轮三类对齐目录项需要部署，现有本地PyMOL是可考虑的独立路线，不能把远程候选写成已运行。
+适用：比较同一生物单位、构象或预测与参考。先写清比较对象和链映射，再选TM-align、US-align或PyMOL方法；具体规范化、方法参数、selection和叠合输出见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。本轮三类对齐目录项需要部署，现有本地PyMOL是可考虑的独立路线，不能把远程候选写成已运行。
 
 保存两份输入、对齐覆盖、对应/变换、两种归一化分数（工具返回时）及可选叠合PDB。出图前检查实际保留的原子和残基，图中文字与被比较区域一致。若研究问题是复合物结合质量，则另判断pdockq2/ipSAE所需置信信息和适用体系，不能将任意PDB的B-factor默认为pLDDT。
 
@@ -112,7 +112,7 @@ Proto[当前隐私政策](https://proto.evodesign.org/privacy)将外部插件中
 
 适用：ORF、序列比对、RNA二级结构或具体变异注释。
 
-- ORF检测需要说明完整转录本/片段、链方向、遗传密码表、起止与partial规则；变量区出现AUG不等于已定义并发生翻译的uORF。
+- ORF检测要说明使用完整转录本还是片段、链方向、遗传密码表及起止和partial规则。变量区出现AUG是序列特征；判断uORF需结合这些边界与翻译证据。
 - 比对时保存序列ID和原序列到带gap序列的位置映射；核酸与蛋白不能只按字符串相似而混用参数。
 - ViennaRNA分析保存温度、能量模型等当前schema所支持的参数，以及dot-bracket和对应序列；绘图工具负责呈现，结构预测与真实构象的证据类别仍保留。
 - VEP等变异注释应绑定物种、参考组装、参考/替代等位及转录本选择，先检查参考匹配再解释后果。
@@ -125,4 +125,4 @@ Proto[当前隐私政策](https://proto.evodesign.org/privacy)将外部插件中
 
 将工具执行成功、工件正确消费、研究验证和科学结论分别记录。工具分数若用于选择候选，应写清选取规则、比较基准、排除项和什么结果会改变结论；需要进一步展开时选用[功能/效用](function-and-utility-validation.md)、[序列新颖性](sequence-novelty-and-background.md)或[结构几何](structural-geometry-and-perturbation.md)指导，不因调用Proto统一追加所有验证。
 
-当前接受范围：连接、目录与代表工具契约的真实查询；未运行标准例子、研究模型、付费部署或湿实验。具体字段、查询失败和计费未知项以[本轮接受记录](../../ARCHIVE_POINTERS.md#archive-pointer-576ecaef0ab169de)为准。
+当前接受范围：连接、目录与代表工具契约的真实查询；未运行标准例子、研究模型、付费部署或湿实验。具体字段、查询失败和计费未知项以[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)为准。

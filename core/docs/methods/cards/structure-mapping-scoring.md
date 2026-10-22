@@ -40,9 +40,10 @@ CT 或 dot-bracket、pair matrix、实际使用的原子表示、单体或多聚
 
 ## 来源
 
-- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ee803291759c5107) §3.2、§4、§6：`G01/E09/E10/E12/E13/E30/E31/E37`。
-- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-607f472f437957e3) §3、§4、§6：结构映射与链对 `G02/E05/E12/E20/E21/E26`；教师/蒸馏 `G03/E06/E10/E25/E27`。
+- **RNA-FM**：RNA结构评价要把序列位置、结构表示和无效位置映射起来，并按目标规则确定分母。
+- **ESM2/ESMFold**：蛋白结构比较要保留链/残基身份、缺失原子覆盖和评价参考；教师一致性与实验准确性分开报告。
 
+公开论文与方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例工程分析及其精确定位保存在[机器记录](../../../../machine/document-notes/core/docs/methods/cards/structure-mapping-scoring.md.json)。
 本卡只补领域条件和验收样例；它不替代领域专家对结构真值、原子集合和外推范围的判断。
 
-本轮校准依据：[F02 Uni-Mol 参考系锚点](../../ARCHIVE_POINTERS.md#archive-pointer-0757bda99723cf45)、[B01 Enformer 联合坐标锚点](../../ARCHIVE_POINTERS.md#archive-pointer-6d7e4782a21903a3)。二维结构映射提示不自动补足三维几何判据；具体参考系与可接受不变量见[坐标卡](coordinate-transforms.md)。
+本轮校准依据：[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。二维结构映射提示不自动补足三维几何判据；具体参考系与可接受不变量见[坐标卡](coordinate-transforms.md)。

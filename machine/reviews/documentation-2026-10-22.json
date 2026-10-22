@@ -1,0 +1,135 @@
+{
+  "schema": "harness.documentation-review/v1",
+  "as_of": "2026-10-22T06:14:45.375117+00:00",
+  "status": "accepted",
+  "change": "Unified source/design/borrowing/implementation/acceptance index and maintained human/machine documentation separation.",
+  "source_index": {
+    "relationships": 91,
+    "source_identifiers": 79,
+    "formal_cases": 43,
+    "design_relation_types": {
+      "resulting_design": 55,
+      "evaluation_framework": 58,
+      "reference_context": 4
+    }
+  },
+  "bibliography": {
+    "citation_entries": 26,
+    "original_records": {
+      "entries": {
+        "baseline": 22,
+        "current": 26,
+        "original_records_equal": true
+      },
+      "formal_case_index": {
+        "baseline": 43,
+        "current": 43,
+        "original_records_equal": true
+      },
+      "public_readiness_sources": {
+        "baseline": 4,
+        "current": 4,
+        "original_records_equal": true
+      },
+      "checkpoint_data_sources_unchanged": true
+    },
+    "actual_open_problems_reading_version": {
+      "doi": "10.21203/rs.3.rs-4181617/v1",
+      "year": 2024,
+      "version": "v1"
+    },
+    "related_journal_version": "10.1038/s41587-025-02694-w"
+  },
+  "human_documentation": {
+    "maintained_markdown_files": 86,
+    "checked_links": 953,
+    "policy_findings": 0,
+    "originals_retained_verbatim": 84,
+    "original_records": "machine/document-notes/",
+    "private_archive_locator_records": 251,
+    "public_history_dependency": "Public history is self-contained; original private source locators remain machine records."
+  },
+  "tool_tests": {
+    "status": "pass",
+    "tests_run": 8,
+    "exit_code": 0,
+    "tested_files": [
+      {
+        "path": "tools/documentation.py",
+        "bytes": 65402,
+        "sha256": "e39783dded058fc65f34bcc7cceafa5eed4f108d9d1be786491138726392c285"
+      },
+      {
+        "path": "tests/test_documentation.py",
+        "bytes": 23619,
+        "sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9"
+      }
+    ]
+  },
+  "saved_model_consumption": [
+    {
+      "case": "splice",
+      "rows": 12,
+      "predicted_labels_equal_expected": true,
+      "max_abs_difference": 0.0,
+      "model_fit_calls": 0
+    },
+    {
+      "case": "yeast",
+      "rows": 293,
+      "predicted_labels_equal_expected": true,
+      "max_abs_difference": 0.0,
+      "model_fit_calls": 0
+    }
+  ],
+  "protected_existing_files": {
+    "count": 104,
+    "changed": []
+  },
+  "case_manifest_changes": [
+    {
+      "case": "splice",
+      "changed_artifacts": [
+        "README.md"
+      ],
+      "only_readme_metadata_changed": true,
+      "previous_publication_identity_and_transformation_preserved": true,
+      "top_level_except_artifacts_unchanged": true
+    },
+    {
+      "case": "yeast",
+      "changed_artifacts": [
+        "README.md"
+      ],
+      "only_readme_metadata_changed": true,
+      "previous_publication_identity_and_transformation_preserved": true,
+      "top_level_except_artifacts_unchanged": true
+    }
+  ],
+  "privacy_scan": {
+    "local_absolute_paths": 0,
+    "chat_or_session_exports": 0,
+    "credential_markers": 0
+  },
+  "inventory_checks": {
+    "status": "pass",
+    "observation_stage": "Before adding this review record to the payload.",
+    "checked_checkpoint_files": 289,
+    "checked_core_files": 164,
+    "current_payload_inventory": "CHECKPOINT-MANIFEST.json",
+    "core_inventory": "core/RELEASE-MANIFEST.json"
+  },
+  "frozen_release": {
+    "tag": "v0.1.0-alpha.2",
+    "tag_object": "d3204db4196dd09a35fae0deecf2502c6aeb9496",
+    "tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+    "assets_unchanged": true
+  },
+  "scope": {
+    "scientific_code_changed": false,
+    "datasets_or_saved_states_changed": false,
+    "new_training": false,
+    "external_url_availability": "The documentation checker is offline; remote source URLs are not probed by it.",
+    "current_documentation_source": "main repository tree; existing tagged release assets retain their original documentation."
+  }
+}

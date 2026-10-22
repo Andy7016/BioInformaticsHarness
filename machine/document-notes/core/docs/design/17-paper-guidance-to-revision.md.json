@@ -1,0 +1,20 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/17-paper-guidance-to-revision.md",
+  "source_text": "# 从论文报告指导转向同行评审与修订\n\n日期：2026-10-15。来源：用户确认将 CPU 暴露的交接与资源计量问题作为执行经验保留；再扩展5项模型工作，检验论文报告层面的指导稳定性，随后以早期稿件、发表版本、同行评审意见和作者问答完善 revisor 端，最后集中完善实际工程引导。新增案例优先较近期论文。\n\n承接[具体义务与使用指南 D30–D32](15-obligations-guidance-and-prospective-use.md)和[同行评审与修订 D33](16-peer-review-and-revision-comparison.md)。\n\n## D34：按研究用途推进三个阶段\n\n| 阶段 | 主要问题 | 产出与后续用途 |\n|---|---|---|\n| 第六轮模型工作 | 冻结的 Harness 能否指导论文所涉及的主要研究选择，是否仍有核心遗漏？ | 五项独立解读、具体义务、选择关系、引文与方法取舍；父任务据此决定是否转阶段 |\n| 评审与修订 | 对当时稿件提出的具体问题，框架能否帮助理解双方依据、安排补证或修订并接受再审？ | 早期稿—发表稿—评审—回应的版本链与 concern 账本，完善 revisor 端 |\n| 具体工程引导 | 已有研究要求怎样在真实环境交接、执行、失败恢复与资源约束中落实？ | 结合 CPU 等实际使用经验形成可执行交接、过程记录与有界验证 |\n\nCPU 的环境交接、路径搜索偏离、门槛作用范围误读及全过程资源计量继续保留在[回收结论](../ARCHIVE_POINTERS.md#archive-pointer-5f3c1a488c5eb936)。本轮先记录其来源和改进方向，避免只因一次执行现象就扩大为所有研究必须采用的具体操作。\n\n## 近期工作怎样增加检验价值\n\n沿用原综述的模型谱系，优先较新的工作，并核对其后来正式发表版。预印本与发表版作为同一工作的版本，不增加案例数。时间较近是选样偏好；材料完整性、研究路线差异以及实际报告的设计取舍共同决定分析价值。\n\n关注论文如何处理数据治理、表示与先验、规模和预算、筛选与泛化评价、反例及结论边界。工程经验可能体现在这些选择中，也可能没有写进论文：只依据已报告内容和官方实现登记，不从发表年份推定成熟度。\n\n## 何时转向 revisor 阶段\n\n“引导充分”在这里限定为：论文报告与官方实现可重建的主要研究责任和选择，已有足够明确的框架与指南承接。它由父任务结合逐项证据判断，不用一个 E/G/V 平均分决定。\n\n1. **材料足够**：主文与影响主要选择的补充/代码可定位，缺失材料对判断的影响已标明。不能判断的选择进入 unknown，不作为覆盖成功或失败。\n2. **关键选择可指导**：对真实的主要选择，能说明触发条件、所需输入、合理路线与取舍、产出及验收依据。只是能填写一个对象或提到相同术语，只算表达关系。\n3. **核心遗漏已收敛**：有充分证据支持、会改变核心对象、关系或研究责任的遗漏若仍未解决，先作针对性迭代；领域专用方法和实现适配继续单列，不自动扩大为通用义务。\n4. **判断边界清楚**：有意义的科学取舍可以需要领域知识与人的判断。框架应组织依据、替代和下一步，不要求把科学判断全部自动化。\n\n每例新增轻量 `paper-report-guidance.json`，直接从主要选择出发记录已有可用指导、需领域适配、核心缺口、人工判断与未知；保留与来源、步骤、具体义务和冻结指南的链接。回收时分别统计这些类别、受影响的案例和研究阶段，并对核心缺口给出反例审阅。冻结评分与旧案例结果不回写。\n\n## 评审材料在本轮的位置\n\n本轮盘点评审材料存在性与版本入口，保留内容未读状态；逐 concern 判定、作者问答与修订对照留给下一阶段。该阶段沿用[D33 协议](../methods/peer-review-comparison.md)，优先材料完整的案例；历史版本的受限材料评阅与真实时间上的前瞻评阅分别登记。\n\n本轮独立会话沿用 GPT-6.1-Sol / xhigh 和自足输入包。官方材料、补充与引文逐项登记；来自旧指南的历史示例照实说明。研究工作之间的相似性用于提炼条件化指导，不用案例数量自动推出框架完整。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 15,
+          "text": "CPU 的环境交接、路径搜索偏离、门槛作用范围误读及全过程资源计量继续保留在[回收结论](../ARCHIVE_POINTERS.md#archive-pointer-5f3c1a488c5eb936)。本轮先记录其来源和改进方向，避免只因一次执行现象就扩大为所有研究必须采用的具体操作。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "24e8aafeb855b2ce496723d8b9ee9f6d86ab227505a9c64b5abc44e5affdb24d"
+}

@@ -1,47 +1,34 @@
-# Yeast: consume one saved model
+# Yeast: consume a saved model
 
-## 生物对象与测量含义
+This example runs inference with a saved weighted RBF SVM state on 293 held-out UCI Yeast proteins and records predictions and decision scores.
 
-数据集是 UCI Yeast，DOI [10.24432/C5KG68](https://doi.org/10.24432/C5KG68)。历史记录以蛋白质 ID 对应十个亚细胞定位标签之一。这个例子没有氨基酸序列输入；它消费的是原研究已提供的八个计算特征：`mcg` 和 `gvh` 是信号序列识别分数，`alm` 是跨膜区预测分数，`mit` 根据 N 端 20 个氨基酸区分线粒体与非线粒体蛋白，`erl` 检查 HDEL 子串，`pox` 表示 C 端过氧化物酶体靶向信号，`vac` 与 `nuc` 分别是液泡/胞外和核定位信号判别分数。它们是历史计算代理，不是本案例重新生成的序列特征或新的定位实验。
+## Study design and results
 
-## 划分、模型选择和实际消费
+UCI Yeast has 1,484 rows and eight precomputed features describing protein-localization signals. The features include signal-sequence, transmembrane, mitochondrial, HDEL, peroxisomal, vacuolar, and nuclear indicators. They are historical computed proxies, not sequence inputs or new localization experiments.
 
-接受研究将相同 ID 的重复行合并为 1,462 个唯一 ID，并按完整八维特征向量分组，以避免相同向量跨训练和测试折。预设主方法是训练折内缩放后拟合的加权 RBF SVM。此案例携带 seed 20261021、fold 0 的已有状态：1,169 个训练 ID 和 293 个折外输入 ID；读取器检查输入特征与官方 ZIP 一致、训练 ID 与测试 ID 不重叠，再计算实际预测和决策分数。原研究没有在发行中重新训练。
+The study combined exact duplicate rows by protein ID, leaving 1,462 unique IDs. It grouped identical eight-feature vectors across folds, then fit feature scaling on each training fold before the weighted RBF SVM. The saved example state is seed 20261021, fold 0: 1,169 training IDs and 293 held-out IDs. The reader checks the supplied features and the split before producing predictions and decision scores.
 
-## 完整研究结果与限制
+Across two fixed grouped splits, the full study generated 17,544 out-of-fold predictions. The main split reached macro-F1 0.559703 and accuracy 0.573871. The weighted RBF setting did not improve macro-F1 over the unweighted comparison: the main-split difference was -0.009302. VAC matched only 3 of 30 true cases and was predicted 85 times, with 82 errors. The accepted study therefore withdrew its recommendation for class weighting and reported poor coverage for some classes.
 
-完整接受研究从两个固定分组划分重算了 17,544 条折外预测。主划分 macro-F1 为 0.559703、accuracy 为 0.573871。固定 RBF 设置优于预设线性比较，但加权 RBF 没有达到预定的优于不加权条件：主划分 F1 差为 -0.009302。VAC 仅命中 30 个真值中的 3 个，却预测 85 次，82 次错误；因此接受记录撤回了加权更优的推荐，并指出这些方法不能可靠覆盖所有定位类别。
+These results describe predictions from the eight historical features. Whether their original feature-generation data overlapped with this evaluation is unknown. Assessing that upstream process requires its training records or a separate evaluation. The [evidence summary](../../core/EVIDENCE.zh.md) gives the accepted full-study results for both cases.
 
-结论是对历史八特征的条件预测。特征生成器训练样本是否与数据重叠、蛋白质家族关系及现代实验定位证据均未知。这个保存状态不能用于声称新序列上已验证的定位性能，也不评估上游特征生成质量。
+## Install and run
 
-完整评估及接受结论与局限的维护者全研究摘要见 [EVIDENCE.zh.md](../../core/EVIDENCE.zh.md)。CASE-MANIFEST.json 中 accepted_full_study.summary_path 与 acceptance_path 保留原维护仓库的 source locator，仅用于溯源；对应的 assessment 文件不随此公开案例发布，不应视为可点击的公开路径。
+A successful saved-state run was recorded with Python 3.11.2, NumPy 2.4.6, SciPy 1.17.1, scikit-learn 1.9.1, joblib 1.6.0, and threadpoolctl 3.7.0. Create an environment and install those versions to reproduce that recorded software setup:
 
-## 已验证运行环境与安装
-
-已保留的成功消费 receipt 记录了 Python 3.11.2、NumPy 2.4.6、scikit-learn 1.9.1、joblib 1.6.0；Yeast receipt 另记录 threadpoolctl 3.7.0。本轮对同一科学环境的实际版本盘点还确认 SciPy 1.17.1。下方是按实际观察版本固定的最小运行依赖方案，不是版本下界或广泛兼容声明。空环境冷安装尚未验证；运行环境不随案例分发。
-
-~~~powershell
+```powershell
 py -3.11 -m venv .scratch/venv
 .\.scratch\venv\Scripts\python.exe -m pip install numpy==2.4.6 scipy==1.17.1 scikit-learn==1.9.1 joblib==1.6.0 threadpoolctl==3.7.0
-~~~
+```
 
-POSIX 环境可用 python3.11 -m venv .scratch/venv 创建环境，并通过 .scratch/venv/bin/python -m pip install 安装同一组固定版本。
+From the public checkpoint root, run:
 
-## 信任边界：先审阅再加载状态
-
-运行前先审阅 CASE-MANIFEST.json 的 state 来源与 SHA-256，并确认拿到的状态文件来自可信来源。读取器会在反序列化前与清单核对工件身份；joblib/pickle 反序列化仍可能执行代码，因此不要加载来历不明或清单与文件未经核对的状态。
-
-## 运行
-
-以下命令从公开 checkpoint 根目录执行（该目录应包含 core/ 和 examples/）。结果写入根目录下的 .scratch，不会在受清单保护的案例目录内新增文件。每条命令的输出目录均须为新的目录。
-~~~powershell
+```powershell
 .scratch\venv\Scripts\python.exe examples\yeast\consume_saved_model.py --study-root examples\yeast --out-dir .scratch\run-20261021\yeast
-~~~
+```
 
-~~~sh
-.scratch/venv/bin/python examples/yeast/consume_saved_model.py --study-root examples/yeast --out-dir .scratch/run-20261021/yeast
-~~~
+On POSIX, use `.scratch/venv/bin/python` and `.scratch/run-20261021/yeast`. Choose a new output directory for each run. Only load joblib or pickle states from a source you trust; these formats can execute code when loaded. The `CASE-MANIFEST.json` lists the state source and file-level attribution.
 
-## 归属和文件范围
+## Attribution
 
-原 UCI ZIP 保持字节。UCI 对该数据集列示 Kenta Nakai；相关文献作者为 Paul Horton、Kenta Nakai、Minoru Kanehisa。293 行输入与对应真值/预测/分数由项目从接受研究选出和派生。归属、两侧 SHA-256、变换及逐文件许可见 `CASE-MANIFEST.json`。ZIP、特征输入和含真值派生表按 CC BY 4.0 标注。保存状态同时包含 1,169 个官方训练 ID 和 996×8 个训练折缩放后的支持向量；这些特征值来自 UCI 的八个历史计算特征。故状态在清单中按复合 scope `Apache-2.0 AND CC-BY-4.0` 标注：前者覆盖本项目参数/封装部分，后者覆盖状态内的数据来源部分及其归属。运行依赖见上文版本与安装方案，不随案例分发。
+The dataset is UCI Yeast, [DOI 10.24432/C5KG68](https://doi.org/10.24432/C5KG68). UCI lists Kenta Nakai; the related paper authors are Paul Horton, Kenta Nakai, and Minoru Kanehisa. The project selected the 293 held-out rows and derived their predictions and scores. The ZIP, feature inputs, and derived tables retain CC BY 4.0 attribution. The saved state combines project-trained parameters with features derived from the UCI data, so its manifest records both Apache-2.0 and CC BY 4.0 scopes. See `CASE-MANIFEST.json` and the [third-party inventory](../../core/THIRD_PARTY.md) for file-level details.

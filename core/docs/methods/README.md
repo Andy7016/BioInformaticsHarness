@@ -1,40 +1,23 @@
-# 条件化领域方法卡
+# Domain method guides
 
-2026-10-21：[计划封存与首次真实执行](guides/plan-seal-and-first-execution.md)把规范路径、先捕获代码再执行和失败保留接到可调用助手；[发行交接](guides/publication-handoff.md)说明逐文件许可。只在冻结、真实执行或外部分发被触发时使用，已有成熟平台可等效替代。[D50](../design/27-sealing-capture-and-public-checkpoint.md)记录来源与理由。
+Choose a guide when a research decision needs a concrete measure, comparison, or handoff. The cards focus on conditions and actions: define the biological target, choose the study unit, state what each input is used for, and decide which result would change the conclusion.
 
-2026-10-20新增[三个研究面工作例](worked-examples/README.md)：共同信号与任务特异能力、置信度到使用决定、动态过程解释。按具体问题选择比较、合法替代和科学改判；[D48](../design/25-research-facets-and-effort-comparison.md)保存理由。当前为文献支撑v0.1；[本轮独立验证](../ARCHIVE_POINTERS.md#archive-pointer-3b5a6ba75fc269f2)使用此前34文件冻结指导，不将新工作例回填进首稿。
+## How to use the cards
 
-2026-10-19：[Proto工具调用](guides/proto-tool-use.md)补上外部工具的选择、实时前提、输入/输出衔接、计算费用和人读交接。[160项目录与10项能力卡](../ARCHIVE_POINTERS.md#archive-pointer-4545aa351cc1b25e)区分目录/调度/实际运行；按需要采用，不扩大为每个研究的固定流程。
+1. Start from the question or workflow stage that triggered the work.
+2. Read the matching card and name the measurement, unit, split, and comparison that fit your study.
+3. Record the chosen method, a suitable alternative, and the condition that would change your decision.
+4. Use a tool only when it answers that question. The cards do not make every check mandatory for every study.
 
-2026-10-19新增D46：[真实生产—消费接口](guides/artifact-producer-consumer.md)、[标签来源与模型更新](guides/label-source-and-update.md)、[生物学解释与人读交接](guides/biological-explanation-and-handoff.md)把真实研究中的接口返工和领域取舍接到具体首动作及改判。实施/应用与工具调研见[本轮入口](../ARCHIVE_POINTERS.md#archive-pointer-6b87165cdce34891)，设计理由见[D46](../design/23-real-artifacts-and-research-decisions.md)。
+Use [worked examples](worked-examples/README.md) to see how method choices change a decision. The [research-support tools](research-support-tools.md) help with file handoff and limited diagnostics. For public references and design reasons, see the [combined source and design index](../../../docs/REFERENCES-AND-DESIGN.md) and [research history](../../../docs/history/EVOLUTION.zh.md).
 
-2026-10-19：[研究操作工具](research-support-tools.md)补上交接支持、有限诊断和同源证据导航。[接手操作](guides/receiving-research-work.md)强调实际接收环境与逐项交付对账；[有限诊断](guides/finite-diagnostics.md)及[联合几何例](guides/joint-geometry-diagnostics.md)按具体问题触发。[D45](../design/22-research-operational-support.md)和[真实工件复盘](../ARCHIVE_POINTERS.md#archive-pointer-c4f1aaf30e79eb7c)保存来源与验收。
+## Choose a guide by research question
 
-2026-10-18：[功能与效用验证](guides/function-and-utility-validation.md)、[序列新颖性与匹配背景](guides/sequence-novelty-and-background.md)、[结构几何与扰动](guides/structural-geometry-and-perturbation.md)补充三组可交接小指导。先确定具体生物目标、比较与测量，再写会改变结论的证据；每组保留条件触发、取舍及合法替代。[D44](../design/21-domain-validation-guidance.md)和[已填应用/验收](../ARCHIVE_POINTERS.md#archive-pointer-b401e5471f5bdc96)保存来源、初版及修订，不改变核心对象或旧评分。
-
-2026-10-18：[具体义务校准与任务交接](guides/guidance-calibration-and-handoff.md)统一G的五维锚点，按当前路线指定owner、输入用途和验收；[revision-guidance-v1](revision-guidance-contract.md)提供条件使用的可检查记录。[资料获取分流](source-acquisition-routing.md)将常规检索、元数据、原件与渲染任务分开。设计与本地复盘见[D40–D43](../design/20-operational-revisor-guidance.md)。
-
-2026-10-16修订指导迭代：[测量到主张](guides/measurement-to-claim.md)用最小工作例解释代理、目标和结论的距离；[回应路线与验收](guides/revision-responses-and-acceptance.md)把补解释、补分析、限域或反驳接到对应输入、产物及复核。[research-revision-v1](revision-contract.md)是已有对象链的独立记录视图，按所选路线核引用与显式小文件身份。领域方法与人工科学判断另行记录。来源与实施状态见[D35–D38](../design/19-revision-guidance-and-acceptance.md)。
-
-2026-10-15新增[同行评审与修订对照](peer-review-comparison.md)：后续案例按具体concern和稿件版本，比较已有指导、实际检查、作者回应与修订。复用原案例来源账本，材料盘点先行，覆盖与未提及分别记录；设计理由见[D33](../design/16-peer-review-and-revision-comparison.md)。
-
-2026-10-15新增两组可直接用于研究决策的指导：[统计单位与选择后的评价](guides/statistical-units-and-selection.md)、[信息与状态的作用](guides/information-and-state-effects.md)。从触发问题进入，选择合适的划分、估计、用途与状态记录，再回到方法卡保存具体决定。[本轮具体义务校准](../ARCHIVE_POINTERS.md#archive-pointer-d193637059755f84)将人的判断、记录约束与实际执行分别比较。
-
-2026-10-13补充：[案例细分观察与引文积累](../design/12-case-observations-and-citations.md)。新的专门操作先进入[第二轮观察目录](../ARCHIVE_POINTERS.md#archive-pointer-42e1b3edc8382b57)，记录问题、作者理由、审阅者推断及迁移边界；候选共性经后续检验再提升为方法提示，不将每个特例变成全局必做项。
-
-2026-10-14校准迭代：依据[校准后的关系契约](../design/13-calibrated-relations-and-checks.md)补充坐标/参考系、指标语义和执行证据三张条件卡。它们只在相应关系被研究任务触发时启用；卡片提供 `E`（表达与追溯）、`G`（具体指导）和 `V`（自动检查）三轴的记录边界，不把已有文档或声明写成已实现的运行捕获。区域统计和16项锚点评议见[评价口径校准](../ARCHIVE_POINTERS.md#archive-pointer-f09858a69352a58d)。
-
-三组关系的声明式入口见[研究关系检查契约](relations-contract.md)；该入口只处理 `components`、`selection` 和标量 `aggregation` 的已提供记录，领域方法卡仍负责触发条件、反例和人工科学判断。
-
-这些卡片把案例中反复出现、但通用契约还不够具体的步骤写成可选的操作提示。它们沿用 [设计支撑中的对象与证据边界](../ARCHIVE_POINTERS.md#archive-pointer-2d7937611380e197) 以及 `MethodCard`、`DataSnapshot`、`SplitPlan`、`Run`、`Artifact` 和 `ComparisonSpec`：方法卡记录选择与理由，数据快照记录身份，划分计划记录可见范围，运行与产物记录期望/实际证据，比较规格记录单位、方向、覆盖和分母。卡片不是新的顶层对象，也不是已实现的通用科学检查器。
-
-## 按研究路径选择
-
-2026-10-20：[D47](../design/24-production-consumption-and-handoff.md)把真实接口、唯一生效入口与生物学对象解释补为v1.1操作，并提供[S4PRED可运行工作例](../ARCHIVE_POINTERS.md#archive-pointer-812436cd785b867c)。从下面的触发条件选择，不要求每项研究运行全部工具；原指南与评分保留。
+Use the trigger that matches your research question. The table suggests a starting guide and related reading; each study uses only the methods that apply to its data and decision.
 
 | 触发条件 | 先读 | 需要时再读 |
 |---|---|---|
-| 需要调用Proto的生信工具或已有模型，并接入真实研究工件 | [Proto工具调用](guides/proto-tool-use.md) | [实时能力/计费](../ARCHIVE_POINTERS.md#archive-pointer-4545aa351cc1b25e)、[生产—消费接口](guides/artifact-producer-consumer.md) |
+| 需要调用Proto的生信工具或已有模型，并接入真实研究工件 | [Proto工具调用](guides/proto-tool-use.md) | [公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)、[生产—消费接口](guides/artifact-producer-consumer.md) |
 | 预测/距离/指标等工件将被另一程序消费，字段或ID对齐会影响结论 | [生产—消费接口](guides/artifact-producer-consumer.md) | [实际消费证据](cards/execution-evidence.md)、[研究操作工具](research-support-tools.md) |
 | 补目标标签、模型失准或校准/重拟合排序依赖表示 | [标签来源与模型更新](guides/label-source-and-update.md) | [统计单位](guides/statistical-units-and-selection.md)、[信息用途](guides/information-and-state-effects.md) |
 | 需要解释生物学原因、提出下一证据或向人交接研究决定 | [生物学解释与人读交接](guides/biological-explanation-and-handoff.md) | [功能与效用](guides/function-and-utility-validation.md)、[可读过程](../design/06-readable-process.md) |
@@ -55,20 +38,20 @@
 | SMILES/SDF到分子图、图增强或图模型迁移 | [分子图变换与权重消费](cards/molecular-graph.md) | [表征可视化与效率比较](cards/visualization-efficiency.md) |
 | 单细胞表达、扰动、注释、整合或基因关系 | [单细胞表示与可见信息边界](cards/single-cell-boundaries.md) | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
 | 指标、区间、分位数、宏/微平均、有效分母或数学聚合改变研究结论 | [指标语义与数学事件](cards/metric-semantics.md) | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
-| checkpoint/encoder/组件消费、配置实际作用、输入贡献或失败产物追踪 | [执行证据与实际消费](cards/execution-evidence.md) | [交接契约](handoff-contract.md)和[基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
+| 模型组件的实际消费、配置作用、输入贡献或失败产物追踪 | [执行证据与实际消费](cards/execution-evidence.md) | [交接契约](handoff-contract.md)和[基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
 | 自适应负例、教师标签、蒸馏、基线或跨模型比较 | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) | [表征可视化与效率比较](cards/visualization-efficiency.md) |
 | UMAP/VIA/检索解释，或速度、显存、质量比较 | [表征可视化与效率比较](cards/visualization-efficiency.md) | 由任务卡补充输入与真值条件 |
 
-不要求每项研究填写全部卡片。没有触发条件时记 `not-applicable` 并写一句理由；资料尚未取得时保留 `unknown`，不要用教程默认值补齐论文实验。
+Use only the cards that apply to the study. Mark an unrelated card `not-applicable` with a short reason; mark a required source `unknown` until it is available.
 
 ## 最小使用步骤
 
-1. 在 `DataSnapshot` 中锁定样本/分子/细胞/链的稳定 ID、来源版本和表示状态。
-2. 只选择会改变研究判断的卡，在 `MethodCard` 中记录输入身份、具体参数、选择理由和可接受替代。
-3. 用 `SplitPlan` 写清拟合范围、实体隔离、阶段可见的 `X/y/condition` 及最终封存边界。
-4. 若触发坐标或参考系关系，按[坐标卡](cards/coordinate-transforms.md)记录源/目标身份、单位、边界、变换阶段和可逆性；若触发指标关系，按[指标卡](cards/metric-semantics.md)记录数学事件、真值、分母、聚合和实现版本。
-5. 若配置应被组件消费，按[执行证据卡](cards/execution-evidence.md)分开记录声明、源码依据、捕获的实际作用和输入贡献；不要用参数存在或文件hash冒充运行回执。
-6. 运行卡片中的小例子，分别标记执行、产物、方法前提和主张支持状态。这里的例子是建议的验收材料；三张新卡对应的通用关系检查接口已在设计中声明，但当前不声称已有通用坐标、几何、梯度捕获或任意指标 verifier。
+1. Record stable sample, molecule, cell, or chain IDs, source version, and representation.
+2. Choose methods that can affect the research decision; record their inputs, parameters, selection reasons, and suitable alternatives.
+3. Describe the fitting range, entity separation, and which `X`, `y`, and condition data are visible at each stage.
+4. For coordinate changes, record source and target, units, boundaries, stage, and reversibility using the [coordinate guide](cards/coordinate-transforms.md). For metrics, define the mathematical event, reference labels, denominator, aggregation, and implementation using the [metric guide](cards/metric-semantics.md).
+5. When a component should use a setting, record the declared value, source-code path, observed effect, and input contribution using the [execution evidence guide](cards/execution-evidence.md).
+6. Run a small example suited to the question. Record the execution, output, method assumptions, and how the result supports the claim.
 
 ## 组合示例
 
@@ -79,8 +62,8 @@
 - MolCLR性质迁移：分子图卡 + 基准卡；需要降维或检索时再加可视化卡。
 - scGPT注释与传导式整合：单细胞卡 + 基准卡；做基因程序解释时仍需保留证据级别。
 
-来源编号沿用各案例的 `audit.json`。每张卡同时给出案例 `E` 证据定位、校准锚点或设计决定；详见相应案例报告和[校准锚点评议](../ARCHIVE_POINTERS.md#archive-pointer-ee95e3f8f9e36bb0)。五例的静态审计只说明“需要这种方法提示”，不证明作者实际遗漏，也不证明卡片已经提升研究质量。方法卡的 `E/G/V` 不是对论文作者或执行者的单一分数：`E` 只说明能否表达和追溯，`G` 只说明触发后能否指导判别，`V` 只说明已声明范围内是否有可执行谓词。
+案例资料和方法选择理由见相关案例报告与[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。这些来源解释了每份指南的设计理由和适用条件。
 
-交接时可结合[交接契约](handoff-contract.md)与[简短复核回执](review-receipt.md)记录材料状态、子项缺口和人工判断；它们与方法卡同样不把文档完整度当作科学正确性。
+交接时使用[交接指南](handoff-contract.md)和[复核回执](review-receipt.md)，记录材料、未完成事项和复核决定。
 
-2026-10-14新增[流程关系契约research-flow-v1](flow-contract.md)，按需核阶段选择/分母、信息用途及消费证据等级；[真实工件采集器](../../scripts/verification/collect_artifact_evidence.py)另读小文件，采集上下文与原模型上下文分开。依据与验收见[20案例迭代](../ARCHIVE_POINTERS.md#archive-pointer-d52726da83e1da4d)。旧接口、原评分与冻结基线保留。
+研究跨越多个阶段、数据用途和保存工件时，参阅[研究流程指南](flow-contract.md)。[工件采集器](../../scripts/verification/collect_artifact_evidence.py)可读取指定的小型文件并生成采集回执。

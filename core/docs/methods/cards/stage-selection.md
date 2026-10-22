@@ -28,4 +28,4 @@
 
 [flow契约selection](../flow-contract.md)实现声明出口、父子、转移流失与指定分母检查；它不执行候选排序或科学计分。[指标语义](metric-semantics.md)负责数学事件，[信息用途](information-use.md)负责选择信息边界；选择后单位、层级和主张条件见[统计单位与选择后估计](../guides/statistical-units-and-selection.md)。
 
-跨工作依据见[20例矩阵](../../ARCHIVE_POINTERS.md#archive-pointer-248074a7e9048e48)。可追问的实例包括第一轮scGPT输入贡献、第二轮AF3按评价单位选优与RNA-MSM选头、第三轮ESM3候选/偏好与scFoundation选模、第四轮ProGen筛选链和MoleculeSTM多lambda/组合编辑。来源和限制以各案例原S/E/O为准，收录不等于这些作者均有缺陷。
+跨工作依据见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。可追问的实例包括第一轮scGPT输入贡献、第二轮AF3按评价单位选优与RNA-MSM选头、第三轮ESM3候选/偏好与scFoundation选模、第四轮ProGen筛选链和MoleculeSTM多lambda/组合编辑。案例用于提出可核对的问题；作者报告、固定源码观察和审阅判断应分别引用。

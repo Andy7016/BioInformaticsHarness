@@ -1,0 +1,32 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/23-real-artifacts-and-research-decisions.md",
+  "source_text": "# D46：真实工件消费、领域取舍与生物学交接\n\n2026-10-19。用户要求先提交[研究插件审计](../ARCHIVE_POINTERS.md#archive-pointer-e705e0814bb21ac7)，再实施真实工件接口检查、领域取舍工作例、生物学解释与人读交接，并调研Proto等可调用工具。审计已提交为 `e976bd33415160a2b713229fd4cb01e96828273b`；本轮迭代另立记录。\n\n## 依据与选择\n\n[Optimus 首次真实CPU研究](../ARCHIVE_POINTERS.md#archive-pointer-b4c2d12b69acc157)已接受有限结果，暴露的主要返工发生于真实工件接口；标签来源与更新方式、表示敏感性和源域损失也提供了可迁移的研究选择。[I01–I04](../ARCHIVE_POINTERS.md#archive-pointer-ea24ba20437af327)及插件审计支持进一步具体化指导，未构成增加顶层对象的依据。\n\n## 本轮决定\n\n1. [生产—消费接口](../methods/guides/artifact-producer-consumer.md)从真实序列化和reader进入，验证ID、null、嵌套和多部分集合；与数学控制分别验收。提供有限助手，成熟表接口和共享reader为合法替代。\n2. [标签来源与更新取舍](../methods/guides/label-source-and-update.md)把获取标签与更新方式分开，比较保持用途、表示和预算条件；允许简单校准优于重拟合，保留绝对基准及源域代价。\n3. [生物学解释与人读交接](../methods/guides/biological-explanation-and-handoff.md)先定少量假设、预测与改判，再运行廉价诊断；将测量、关联、候选解释、机制及下一证据分层交付。\n\n## 实施与验收边界\n\n[本轮规格](../ARCHIVE_POINTERS.md#archive-pointer-0975f5b6c2019002)固定所有权和接受条件。保存预测再消费用于后补应用；新增描述诊断有自己的事前计划，不改原研究或原评分。具体的B200、seed、特征分箱、ridge和模型维数均保留为案例选择。\n\n工具调研优先Proto第一方接口及实际可见状态，分别记录远程插件、本地Python/CLI与云环境。OAuth问题只读定位；工具目录存在、源码可读、实际可调用和科学适用分别判断。学术Direct、GitHub指定代理继续按项目路由执行。\n\n实际实现、验证、独立复核和剩余问题见[本轮入口](../ARCHIVE_POINTERS.md#archive-pointer-1aad2c6bcb61a99a)。只有完成并核验的动作记为已接受，不以新指南字段数或样例数代表净收益。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "2026-10-19。用户要求先提交[研究插件审计](../ARCHIVE_POINTERS.md#archive-pointer-e705e0814bb21ac7)，再实施真实工件接口检查、领域取舍工作例、生物学解释与人读交接，并调研Proto等可调用工具。审计已提交为 `e976bd33415160a2b713229fd4cb01e96828273b`；本轮迭代另立记录。"
+        },
+        {
+          "line": 7,
+          "text": "[Optimus 首次真实CPU研究](../ARCHIVE_POINTERS.md#archive-pointer-b4c2d12b69acc157)已接受有限结果，暴露的主要返工发生于真实工件接口；标签来源与更新方式、表示敏感性和源域损失也提供了可迁移的研究选择。[I01–I04](../ARCHIVE_POINTERS.md#archive-pointer-ea24ba20437af327)及插件审计支持进一步具体化指导，未构成增加顶层对象的依据。"
+        },
+        {
+          "line": 17,
+          "text": "[本轮规格](../ARCHIVE_POINTERS.md#archive-pointer-0975f5b6c2019002)固定所有权和接受条件。保存预测再消费用于后补应用；新增描述诊断有自己的事前计划，不改原研究或原评分。具体的B200、seed、特征分箱、ridge和模型维数均保留为案例选择。"
+        },
+        {
+          "line": 21,
+          "text": "实际实现、验证、独立复核和剩余问题见[本轮入口](../ARCHIVE_POINTERS.md#archive-pointer-1aad2c6bcb61a99a)。只有完成并核验的动作记为已接受，不以新指南字段数或样例数代表净收益。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "4aa0c444d8776e2bf34945c1892eb665e4cdb3819e9b5b1802aeafa85e21538f"
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/design/21-domain-validation-guidance.md",
+  "source_text": "# D44：把科学验证设计写成条件方法\n\n2026-10-18。承接[D40–D43](20-operational-revisor-guidance.md)。直接来源为[新五案回收](../ARCHIVE_POINTERS.md#archive-pointer-949c5b7fa9213e10)：输入用途/输出指导相对充分，具体领域程序与科学验收仍需细化。用户指定目标是“针对具体生物学目标，怎样设计足够的验证，以及什么结果足以改变结论”。\n\n## 决定与理由\n\n保留现有ResearchQuestion、MethodCard、ComparisonSpec、Decision、Task、Run/Artifact和Claim关系；新增三个条件指导入口：\n\n- [功能与效用验证](../methods/guides/function-and-utility-validation.md)：目标构念与读出、对照、独立单位、实用界限和不确定性，决定功能/效用/机制能分别支持到哪里。\n- [序列新颖性与匹配背景](../methods/guides/sequence-novelty-and-background.md)：相对哪个参考世界、全长/局部/模板/训练暴露事件，以及满足何种条件背景才能解释“超出偶然”。\n- [结构几何与扰动](../methods/guides/structural-geometry-and-perturbation.md)：原子范围、装配/精修改变对象、条件分母与角误差传播。\n\n新增内容承担实际领域判断，不能只增加记录字段。每组给选路顺序、最小输入用途、首任务、产物、会改变行动的结果和缺失出口；数字阈值、assay、参考池或工具仍由目标决定。先保证测量/设计能回答问题，再解释结果方向与范围。\n\n## 保留条件和合法替代\n\n直接功能、计算效用、机制、解释/限域分别选择；全长最近天然、局部同源和模板距离可以各自成立；过滤、精修、有限敏感性或保留局限均有适用范围。未选OR路线不累计成欠账；AND事件仍分别保存。没有相关主张就不启用对应领域方法。\n\n领域取舍先进入本次guide和应用记录，不增加顶层对象或改写共同契约，不给所有模型统一加功能实验、随机化背景、全原子精修或联合扰动要求。原稿/旧guide/旧评分保留；本轮新建议不回填为作者已执行的方法。\n\n## 怎样判断本次实施是否完成\n\n1. 三份可读小指导能从具体目标走到比较设计、首动作、产物和科学改判条件。\n2. 以GARNET/ProtGPT2、DeepSEED和FoldingDiff形成[填好的应用](../ARCHIVE_POINTERS.md#archive-pointer-826062b1c965e473)，明确当前已有与缺失输入。已知案例用于定向使用检查，不计算盲迁移或净增益。\n3. [三个局部CPU例](../../examples/domain-validation/README.md)核算比值、给定池最近关系和结构集合；正常、明确错误、缺失及合法替代真实运行。它们没有实现通用生物科学验收器。\n4. 独立方法审阅检查反例、合法替代与来源/建议边界；自动记录检查和科学接受分开。\n\n本次方法与应用设计由root整合，执行层负责有界例子、原件身份与真实回执；研究负责人仍负责具体科学目标和结果的接受。完整依据、冻结版本、实施及验收见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-ee60dbc8f5b173c6)。\n",
+  "technical_notes": [
+    {
+      "kind": "moved-or-preserved-original-detail",
+      "detail": "Complete pre-edit source text is preserved in source_text; selected verification, boilerplate, and archive-locator lines are indexed here when present.",
+      "excerpts": [
+        {
+          "line": 3,
+          "text": "2026-10-18。承接[D40–D43](20-operational-revisor-guidance.md)。直接来源为[新五案回收](../ARCHIVE_POINTERS.md#archive-pointer-949c5b7fa9213e10)：输入用途/输出指导相对充分，具体领域程序与科学验收仍需细化。用户指定目标是“针对具体生物学目标，怎样设计足够的验证，以及什么结果足以改变结论”。"
+        },
+        {
+          "line": 24,
+          "text": "2. 以GARNET/ProtGPT2、DeepSEED和FoldingDiff形成[填好的应用](../ARCHIVE_POINTERS.md#archive-pointer-826062b1c965e473)，明确当前已有与缺失输入。已知案例用于定向使用检查，不计算盲迁移或净增益。"
+        },
+        {
+          "line": 28,
+          "text": "本次方法与应用设计由root整合，执行层负责有界例子、原件身份与真实回执；研究负责人仍负责具体科学目标和结果的接受。完整依据、冻结版本、实施及验收见[本轮记录](../ARCHIVE_POINTERS.md#archive-pointer-ee60dbc8f5b173c6)。"
+        }
+      ]
+    },
+    "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
+  ],
+  "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+  "source_sha256": "3dc300fe2d6961d252f22f0d09f30340a7f615cc26af0f9dcef2c99b48d956c7"
+}

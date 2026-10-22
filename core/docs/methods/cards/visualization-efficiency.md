@@ -39,10 +39,11 @@ UMAP、VIA、检索或景观图都可作为探索工具；可以选择不同投�
 
 ## 来源
 
-- [RNA-FM 报告](../../ARCHIVE_POINTERS.md#archive-pointer-25b5e69ee2859224) §3.3、§4、§6：表征解释 `G03/E06/E14/E15/E37`。
-- [ESM2/ESMFold 报告](../../ARCHIVE_POINTERS.md#archive-pointer-ca4626fc2e31b626) §4、§6：效率 `G04/E11/E14/E25`；批量失败与 manifest `G05/E19/E22/E25`。
-- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-77cfb8be76efa76d) §4.4、§7：投影/检索 `G03/E23/E27`。
+- **RNA-FM**：表征投影应保留 seed、原空间邻域和适用的核酸分层，图形仍按探索结果解读。
+- **ESM2/ESMFold**：效率比较区分单次 forward 与完整流程，并报告硬件、warmup、质量、覆盖和失败输入。
+- **MolCLR**：分子检索排除查询自匹配，并用背景分子和原始距离复核排名的含义。
 
+公开论文与方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例工程分析的精确定位和历史细节保存在[机器记录](../../../../machine/document-notes/core/docs/methods/cards/visualization-efficiency.md.json)。
 本卡把图形叙事、原空间证据和效率计时边界分开；它不声称这些检查器已实现。
 
 本轮校准依据：校准中将 GC 的适用范围收紧为有核酸含义或来源映射的相关对象，避免把一个常见核酸协变量扩大为所有生物模型的必查项。图形或效率分支仍按触发条件选择。

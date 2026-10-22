@@ -1,6 +1,6 @@
 # 遇到指标冲突时，怎样做有限诊断
 
-版本finite-diagnostics-v1，2026-10-19。触发条件是：同一对象的报告值与当前复算不同，或多个定义会改变结论。正常一致的结果无需为了符合流程再制造候选。本指南承接[指标语义卡](../cards/metric-semantics.md)、[测量到主张](measurement-to-claim.md)和[DeepSEED续作](../../ARCHIVE_POINTERS.md#archive-pointer-703098764cfcb4a4)。
+版本finite-diagnostics-v1，2026-10-19。触发条件是：同一对象的报告值与当前复算不同，或多个定义会改变结论。正常一致的结果无需为了符合流程再制造候选。本指南承接[指标语义卡](../cards/metric-semantics.md)、[测量到主张](measurement-to-claim.md)和[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。
 
 ## 1. 先确定比的是同一个事件
 

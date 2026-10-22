@@ -77,4 +77,4 @@ python scripts/verification/check_research_relations.py --manifest PATH --out RE
 
 条件指导入口为[方法卡目录](README.md)：坐标/几何变换、指标语义与实际执行证据分别选择。上述三组记录检查不包括通用坐标变换、刚体对齐、梯度裁剪捕获、实际窗口覆盖或任意指标公式解释。
 
-验收采用正常、错误、unknown和合法替代四类，见[测试](../../tests/verification/test_research_relations.py)及[本轮验收记录](../ARCHIVE_POINTERS.md#archive-pointer-182b7dbec48aa5e2)。测试通过只证明这些谓词的实现满足所列输入例，未测得陌生agent迁移效果，也未自动产生人的科学接受。
+验收采用正常、错误、unknown和合法替代四类，见[测试](../../tests/verification/test_research_relations.py)及[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。测试通过只证明这些谓词的实现满足所列输入例，未测得陌生agent迁移效果，也未自动产生人的科学接受。

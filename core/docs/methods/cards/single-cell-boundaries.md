@@ -34,7 +34,7 @@ raw、log、bin 或连续 delta 均可用，选择由目标决定；零值不强
 
 ## 来源
 
-- [scGPT 报告](../../ARCHIVE_POINTERS.md#archive-pointer-b66d30cd5b503016) §1、§2、§4：表示状态 `G01/E06/E07/E14/E16`；任务边界 `G02/E11/E13/E14/E15/E20`。
-- 同报告 §4E 及建议：基因程序/网络 `G03/E22/E23/E24`；版本、覆盖和分母核对 `G04/E02/E03/E19/E27`。
+- **scGPT**：把零值、未测、mask 和 padding 的表示，与训练/验证可见信息及基因程序解释分开；新供体、扰动和共同拟合当前细胞集是不同评价目标。
 
+公开论文与方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例分析的精确定位和历史细节保存在[机器记录](../../../../machine/document-notes/core/docs/methods/cards/single-cell-boundaries.md.json)。
 本卡把“可见信息”与“科学主张”连接起来；它不规定一种唯一的单细胞预处理或验证协议。

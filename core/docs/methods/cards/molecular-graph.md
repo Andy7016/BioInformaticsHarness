@@ -9,7 +9,7 @@
 - `DataSnapshot`：分子稳定 ID、原始记录与规范化/去盐/互变异构策略、解析器版本；原子顺序、元素/电荷/芳香性、显式/隐式氢、手性和键类型/方向。
 - `MethodCard`：节点/边特征词表；每种增强（节点遮蔽、删边、子图等）的输入输出 ID、节点映射和边集合定义；正负对的身份与生成轮次。
 - `SplitPlan`：按独立泛化目标选择分子 ID 层级的 train/valid/test 隔离或其它实体轴；记录 scaffold/random 规则、预训练与下游暴露和标签拟合范围。
-- 权重消费：checkpoint 来源 revision/hash、期望 encoder/head、实际加载/跳过的名称与形状、scratch 是否允许及对应 `Decision`；缺失权重不能仅打印后继续叫同一实验。
+- 权重消费：checkpoint来源和版本、期望encoder/head、实际加载或跳过的名称与形状、是否允许scratch及相应`Decision`；缺少权重时暂停，或记录切换scratch的新决定。
 - `ComparisonSpec`：任务列、单位、正类分数方向、过滤/归一化、有效分母、逐分子预测和缺失清单。
 
 ## 可判断的检查
@@ -18,7 +18,7 @@
 2. 用最小图核对增强前后节点和边集合。删节点是否连带边、删边是否保留节点、手性/键向是否应保持，必须与选择一致。
 3. 检查极小图、断连图和空边界；若某增强超出 encoder 输入范围，记录失败或合法替代，不静默修复。
 4. 正负对不能跨越错误的分子身份或 split；增强改变的语义要进入 `Claim` 的解释边界。
-5. 运行后核对 encoder/head 的载入名称、形状和来源 hash；预训练依赖未满足时暂停或记录改为 scratch 的新 `Decision`。
+5. 运行后核对encoder/head的载入名称、形状和来源；预训练依赖未满足时暂停，或记录改为scratch的新`Decision`。
 6. 从逐分子预测重算 AUC/RMSE/MAE，核对任务数、单位、正类方向和被过滤项；单一总分不能掩盖分母差异。
 
 ## 替代与不适用
@@ -34,7 +34,7 @@ SMILES 或 SDF、显式或隐式氢、scaffold 或 random split、不同图增�
 
 ## 来源
 
-- [MolCLR 报告](../../ARCHIVE_POINTERS.md#archive-pointer-589f0e378be471a6) §4.1–§4.4、§7：分子图语义 `G01/E03/E10/E11/E26`；权重消费 `G02/E14/E18/E26`。
-- 同报告的划分/分母发现：`G04/E06/E09/E12/E21/E22/E26`。这些是小型验收方向，不是已完成的通用 verifier。
+- **MolCLR**：按分子身份串起图表示、数据划分、增强方式、checkpoint 消费和逐任务指标；这些环节共同决定一个分数回答什么问题。
 
+公开论文与方法入口见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。案例报告的精确定位和历史细节保存在[机器记录](../../../../machine/document-notes/core/docs/methods/cards/molecular-graph.md.json)。
 本卡允许合理替代，重点是保留化学身份、图变换语义和权重实际消费之间的可追问关系。

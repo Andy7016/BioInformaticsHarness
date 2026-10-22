@@ -1,23 +1,21 @@
-# Public checkpoint scope
+# 版本与项目资料
 
-## Identity and history
+## 公开版本
 
-This repository starts with the public `0.1.0-alpha.2` prototype checkpoint. Earlier unpublished curation commits and full research history remain in the private archive; they are not ancestors of this public Git repository.
+公开仓库从 0.1.0-alpha.2 原型开始维护。发布包保留对应版本的程序与说明，主线文档继续更新。
 
-The dated evolution summary and historical alpha.1 source index preserve the development trail. Seven generated-source locators in that historical index were normalized from workstation-specific absolute paths to repository-relative locators. That index describes the earlier alpha.1 preparation, not the current inventory; current files are governed by `CHECKPOINT-MANIFEST.json`.
+| 目录或资料 | 内容 |
+| --- | --- |
+| [core](core/) | 研究方法、工件工具、测试和操作示例 |
+| [Splice](examples/splice/README.md)与[Yeast](examples/yeast/README.md) | 开放数据、保存模型、读取程序及使用说明 |
+| [参考来源与设计](docs/REFERENCES-AND-DESIGN.md) | 文献和开源工作的用途、借鉴及落地位置 |
+| [项目短史](docs/history/EVOLUTION.zh.md) | 研究经验怎样推动设计演进 |
+| [machine](machine/) | 面向工具和 agent 的技术资料 |
 
-## Included
+## 研究档案
 
-- `core/`: allowlisted first-party tools, tests, operational/fictional examples and normative method/design text, with `RELEASE-MANIFEST.json`.
-- `examples/splice/` and `examples/yeast/`: official UCI archives, selected source-derived held-out tables, one first-party fitted state per case, a portable consumer and explanatory material. Their `CASE-MANIFEST.json` files describe scope, attribution and transformations. This release replays saved states; it does not retrain the original complete studies.
-- current publication metadata, original history summaries, legal texts and a standard-library checkpoint verifier.
+完整的文献阅读笔记、试点过程、首次交付与修订记录由维护者保存在研究档案。公开短史直接叙述各阶段的发现与改动，并链接到本仓库中的方法和应用。
 
-## Excluded
+## 使用与引用
 
-The private Git history; original chats and session logs; papers and supplements; copied third-party model implementations and library binaries; other authors' weights; unreviewed GEO rows and their truth-bearing derivatives; the complete private first deliveries. No optional history pointer is a runtime dependency.
-
-## Rights and acceptance
-
-Code, original explanation, source data, derived tables, fitted parameters and external runtime libraries are separately described in `LICENSING.md` and per-file manifests. UCI source pages explicitly state CC BY 4.0. This project's additional parameter/packaging material is released by an explicit first-party Apache-2.0 policy; retained UCI-derived content inside bundles keeps CC-BY-4.0 attribution and a mixed scope is recorded. No third-party material is relicensed by a project-wide label.
-
-Byte/structure checks and selected model replay validate their stated scope. Earlier full-study metrics are maintainer acceptance summaries, with fixed-archive limitations in `core/EVIDENCE.zh.md`; the small examples do not independently establish every earlier claim. Future scientific iterations will retain first plans, first deliveries, revision reasons, actual analyses, and conclusion decisions.
+使用工具从[快速入门](core/QUICKSTART.md)开始；复用方法时请引用相关原始工作和[本项目](CITATION.cff)。代码、说明和案例材料的许可见[许可说明](LICENSING.md)。

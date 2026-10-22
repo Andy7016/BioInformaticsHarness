@@ -144,24 +144,17 @@ Review；此时必须提供非空 `rationale`。缺少 split 证据时为 `unkno
 [`examples/verification/research-handoff.json`](../../examples/verification/research-handoff.json).
 它没有真实训练或推理记录。
 
-## 五案例来源
+## 案例经验如何进入交接记录
 
-契约来自五案例中已记录的工程缺口：
+这份交接表把五类常见缺口变成可执行的记录项：
 
-- [DNABERT-2 案例报告](../ARCHIVE_POINTERS.md#archive-pointer-4a70315eb14fd9a7)：
-  R09/R12/R16 与 G03，涉及有效参数、选模、产物和交接检查。
-- [RNA-FM 案例报告](../ARCHIVE_POINTERS.md#archive-pointer-c8f895ceaa2d8625)：
-  G05，要求按 split 保留 ID、预测、真值、checkpoint 和指标覆盖。
-- [ESM2/ESMFold 案例报告](../ARCHIVE_POINTERS.md#archive-pointer-1e428072c3ab0e02)：
-  G05，要求逐输入记录推理状态并核对缺失输出。
-- [MolCLR 案例报告](../ARCHIVE_POINTERS.md#archive-pointer-929a19a8a7c9d4b4)：
-  G02/G04，涉及权重消费及可复核的评价/产物。
-- [scGPT 案例报告](../ARCHIVE_POINTERS.md#archive-pointer-c4408111f8468123)：
-  G04，涉及身份、配置和覆盖率检查。
+- **DNABERT-2**：保留有效参数、模型选择、关键产物和指标覆盖，交接时说明每项对应的运行与评价阶段。
+- **RNA-FM**：按 split 保存样本 ID、预测、真值、checkpoint 身份和指标覆盖，便于复核分母与输出。
+- **ESM2/ESMFold**：逐输入记录推理状态，并核对失败、缺失和已产出的结果。
+- **MolCLR**：记录组件/权重在哪个阶段实际被消费，并把评价输入与结果产物对应起来。
+- **scGPT**：把输入身份、配置和结果覆盖放在同一交接中，便于定位版本与范围。
 
-引入这份最小检查器的设计决策见
-[五案例驱动的工程指导](../design/11-case-driven-engineering-guidance.md)。
-
+公开论文及方法背景可从[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)进入。这里的检查项是项目对案例经验的工程整理；案例原始定位和细节保存在[机器记录](../../../machine/document-notes/core/docs/methods/handoff-contract.md.json)，旧归档指针也集中在[机器索引](../../../machine/archive-pointers.jsonl)。
 ## 2026-10-14：关系检查的独立扩展
 
 [research-relations-v1](relations-contract.md)补充角色/阶段到工件、选择事件到评价角色、标量线性聚合贡献的检查。旧research-handoff-v1的schema和行为保持不变；其额外字段仍不属于自动核验范围。两个检查器均只判断提交记录，不捕获真实运行或认证科学结论。设计演进见[D24–D26](../design/13-calibrated-relations-and-checks.md)。

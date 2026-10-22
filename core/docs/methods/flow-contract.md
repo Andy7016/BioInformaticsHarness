@@ -1,69 +1,35 @@
-# 研究流程关系契约 v1
+# 研究流程：从阶段选择到实际消费
 
-schema：`research-flow-v1`。来源：[D27–D29](../design/14-twenty-case-relations-and-evidence.md)。本接口是既有Run、Artifact、Decision、SplitPlan与Claim的关系视图；与[relations-v1](relations-contract.md)及[handoff-v1](handoff-contract.md)并列，旧清单不会因加入新字段自动触发它。
+当一项研究包含多个阶段、筛选结果、复用数据或模型工件时，用流程视图说明材料如何从输入走到主张。它帮助团队回答三个问题：哪些对象进入下一阶段、每项数据在哪个阶段被怎样使用、最终结果是否由预期程序实际读取。
 
-```powershell
-python scripts/verification/check_research_flow.py --manifest PATH --out REPORT
-```
+[研究关系示例](../../examples/verification/research-flow.json)展示这些关系如何组合。[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)解释设计来源；精确字段和状态定义保存在[机器记录](../../../machine/document-notes/core/docs/methods/flow-contract.md.json)。
 
-纯虚构例见[research-flow.json](../../examples/verification/research-flow.json)。三组按需启用，不要求每项研究都填全部组。报告检查已提供的记录，始终注明`evidence_scope=provided_manifest_only`、`scientific_acceptance=not_assessed`。回执字段存在不是对其真实性的独立认证。
+## 先画出阶段和选择
 
-## 公共字段与状态
+按实际顺序列出阶段、输入、选中对象、排除对象和执行失败。每个输入对象都要有去向：进入下一步、被排除、执行失败，或尚未观察。排除原因、失败原因和未观察状态分别记录，因为它们对研究结论的含义不同。
 
-- `stages=[{id,depends_on:[id]}]`：声明的阶段依赖DAG。
-- `assets=[{id,kind,derived_from:[id]}]`：资产及派生来源DAG。kind为data/labels/weights/prior/teacher/evaluator/text/other。
-- `sections`仅接受selection/information/consumption。每组`applicable=false`须非空`reason`；缺组或必要证据为unknown。
-- ID唯一、引用存在、无循环；明确矛盾fail，类型错误以结构化unknown/error处理。空的必要证据不能产生pass，但未触发组不要求凭空登记资产。
-- 整体fail优先于unknown；全部组NA时overall unknown。CLI pass/fail/unknown对应0/1/2。输入路径的别名或hardlink不能作为输出覆盖。
+每个阶段说明筛选规则和统计分母。阶段之间对象类型相同时，可以直接追踪保留的子集；单位发生变化时，为每个新单位写明它对应的前级对象。例如一个样本产生多个片段时，逐个列出父子关系。不能说明去向的对象保留为未知，避免把它算进成功或失败分母。
 
-## selection：出口、阶段转移与分母
+执行失败属于流程状态。功能阴性、合法零值和未达到目标的观测仍是研究结果，应留在评价结果中。
 
-每条record含：
+## 记录信息用途
 
-`stage_id,unit,rule_ref,input_ids,selected_ids,excluded:[{id,reason}],failed:[{id,reason}],unobserved_ids`。
+为数据、标签、权重、先验、教师信号和评价参考记录来源及用途，例如拟合、调参、筛选、解释或最终评价。独立评价主张要提前列出受保护的数据，以及开发阶段禁止使用的用途；再检查目标阶段及其前序阶段的信息流。
 
-每阶段各出口须唯一、互斥且属于输入。全出口形成对账；未观测或未解释的缺项为unknown，越界/双出口为fail。`failed`仅指执行/产物失败，功能阴性或合法零值不是执行失败。执行失败单列，完整对账不消除失败。全部排除可对账，但空评价分母为unknown。
+共享数据库或共同父来源本身不足以判定泄漏。按真实的数据划分和派生关系检查：训练与测试的独立样本可以共享上游数据库；若受保护样本参与了禁止的拟合、调参或筛选，则需要解释其影响。来源关系不足以判定时保留未知，继续人工审阅。
 
-`predecessor_stage_id`可指向声明祖先中的另一选择阶段。同单位可保留子集；跨单位必须有`parent_links=[{parent_id,child_id}]`，允许一对多。每个child输入须对应前级selected的父ID；缺映射unknown，非法父子fail。前级selected中未转入本阶段的父ID由`not_forwarded=[{id,reason}]`解释，分支和全部不再转入均允许。遗漏去向unknown，同时被转入和未转入fail。
+开发性或传导式任务可以使用当前输入进行拟合或选择；要把这种任务目标与独立评价主张分开写。流程记录依赖已声明的资产和历史，未登记的事件、内容重复或模型内部语义需要其他检查。
 
-`claims=[{id,stage_id,denominator_role,denominator_ids}]`，denominator_role为input或selected。程序比较集合与指定阶段，不证明规则科学合法、候选总体无偏或AND/OR谓词已正确实现。更复杂的有效分母由版本化领域方法提供，本接口不强制替换其定义。
+## 记录程序实际消费
 
-## information：用途、来源与独立性
+先说明研究结论依赖哪些工件，以及使用它们的阶段和角色。根据问题标明所需证据：文件是否存在、程序是否读过、或参数是否在目标组件中生效。团队可共享同一工件，但每个阶段都应保留自己的消费记录。
 
-`uses=[{stage_id,asset_id,purpose}]`；purpose为fit/tune/select/prior/condition/evaluator_fit/inference_input/evaluate/interpret。
+文件采集、格式解析、模型运行和内容验证是不同事件。读取文件的回执说明该采集过程读到了它；模型是否使用了该文件，要看目标运行的回执。发现缺列、重复ID或无效数值时，保留这个内容问题，即使文件读取本身成功。
 
-`claims=[{id,stage_id,kind,protected_asset_ids,prohibited_purposes}]`，kind为independent/development/transductive；另有`history_complete`布尔。
+参数是否加载或作用，取决于具体程序和研究接口。若没有能观察该行为的回执，保留未知，并选择可以检查的替代路径，例如读取实际输出、运行小型对照，或收窄主张。
 
-独立主张须明确受保护资产与禁止用途，并绑定目标阶段的评价用途。程序在该阶段及其声明祖先中检查：使用资产的来源链若涉及protected资产，且用途被禁止，则为已知冲突fail。之后阶段的使用不反向污染先前主张。history_complete非true时，无冲突仍unknown；已知冲突不被历史缺口掩盖。
+## 解释结果
 
-受保护资产的严格祖先若先被禁止用途使用，当前来源粒度不足以判断继承了哪些信息，记unknown交Review；评价可通过已声明的派生资产连接受保护来源。同数据库下合法train/test兄弟资产不能只因共享祖先就判泄漏。该范围由本轮独立反例补充，初始行为与修正理由保留在验收目录。
+流程记录可帮助发现缺少输入、引用错误、去向不明和已知冲突。它不能代替规则是否科学合理、测量是否有效或结果是否支持主张的判断。记录范围不完整时使用“未知”；缺少必要步骤时补齐数据或调整研究路线，再决定是否可以继续解释。
 
-开发性或传导式目标可以反复选择、拟合当前X或使用相关先验，不要求额外final测试。资产应按主张区分X/y/condition/参考；保护范围不能仅由文件名决定。程序不发现未声明事件、跨ID内容重复、同源性、模型内部mask或语义泄漏，也不验证history_complete自述真实。
-
-## consumption：要求、回执与等级
-
-`required=[{stage_id,role,artifact_id,expected_sha256,required_level}]`，required_level为artifact_checked/runtime_read/parameters_applied。
-
-`receipts=[{stage_id,role,artifact_id,sha256,evidence_level,status,bytes_read?,collector_ref?,source_path?}]`；evidence_level为declared/source_inspected/artifact_checked/runtime_read，status为completed/failed/not_read。
-
-键为stage+role+artifact；每个要求须对应同键回执，辅助角色不能替代。允许共享工件。局部SHA检查需要64位hex身份，缺失unknown，冲突fail；声明和源码证据不能升级为runtime_read。runtime_read还需正的bytes_read、completed和collector_ref。失败或明确未读不能称完成。
-
-真实采集回执另外区分read_status、parse_status、data_validation_status。已读且解析完成不因缺失值改称“未读”；数值/ID等内容验证仍可fail或unknown，并传递到流程报告。执行事实与内容结论分开保留，不能用读取完成抹去数据问题。
-
-parameters_applied需要框架参数载入/作用适配器，本版不提供：即便字节身份和读入均正确，仍unknown。远程revision、不可访问或大工件可用其它版本化适配路径；本接口不强制所有研究把大型权重下载后哈希。
-
-## 真实文件采集
-
-```powershell
-python scripts/verification/collect_artifact_evidence.py --help
-```
-
-采集器只读显式指定文件，标准库实现，默认20MiB上限。binary只输出artifact_checked；CSV/TSV实际解析后输出属于采集器上下文的runtime_read。SHA与解析来自同一份有界读取字节；不加载权重、不执行文件内容、不联网。
-
-表格回执包括行数、列名、ID/文件行定位器、唯一性/空ID和指定数值列的finite/non_numeric/missing计数，不输出标签/预测原值。无稳定ID或只有split内行号时，保留文件内身份范围，不能据此证明跨文件生物样本对应。缺列/重复ID/非finite等错误与空表/资料不足分别报告，不静默补0或过滤。
-
-`execution_context=artifact_collector_only`：它证明本次采集器读了保存工件，不证明原模型生成了该预测、历史权重被加载或数据无泄漏。真实TE试用与来源身份见[本轮验收](../ARCHIVE_POINTERS.md#archive-pointer-876e52e98aa27960)。
-
-## 方法与验收入口
-
-[逐阶段选择](cards/stage-selection.md)、[信息用途](cards/information-use.md)、[消费证据](cards/execution-evidence.md)提供触发与允许替代；[指标语义](cards/metric-semantics.md)处理有效数学事件。[实施边界](../ARCHIVE_POINTERS.md#archive-pointer-bb55eea21bee3c0c)保留具体判据与设计补充；[测试](../../tests/verification/test_research_flow.py)和[采集器测试](../../tests/verification/test_artifact_evidence.py)区分正确、错误、unknown与合法替代。
+[逐阶段选择](cards/stage-selection.md)、[信息用途](cards/information-use.md)和[执行证据](cards/execution-evidence.md)分别指导这些判断；[指标语义](cards/metric-semantics.md)帮助确认数学事件、分母和聚合。

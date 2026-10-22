@@ -1,6 +1,6 @@
 # 从模型现象到生物学解释，再到人可以接手的决定
 
-版本 `biological-handoff-v1.1`，2026-10-20；[v1原件](../../ARCHIVE_POINTERS.md#archive-pointer-7a07761538779c2c)保留。来源为[Optimus I03/I04](../../ARCHIVE_POINTERS.md#archive-pointer-5fb676b7713e553a)及[S4PRED I04/P-C01](../../ARCHIVE_POINTERS.md#archive-pointer-665687661f2347ad)，并连接[可读过程](../../design/06-readable-process.md)、[功能与效用](function-and-utility-validation.md)和[生物学可视化](../../ARCHIVE_POINTERS.md#archive-pointer-609451a158fcd4cf)。
+版本 `biological-handoff-v1.1`，2026-10-20。Optimus 与 S4PRED 案例用于说明对象身份和输入范围；相关研究与方法见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。实施步骤参见[可读过程](../../design/06-readable-process.md)和[功能与效用](function-and-utility-validation.md)。
 
 ## 什么时候需要展开解释
 
@@ -14,7 +14,7 @@
 
 PDB场景中，“提交polymer entity序列全长”说明输入序列包含哪些位置；天然参考映射说明对应哪个参考区间；实验坐标覆盖说明哪些位置有结构观测；计分mask再决定哪些位置进入分母。四者不能只用一个“完整蛋白”名称带过。表达标签、截短、突变和设计身份可能帮助读者理解面板，但仅凭名称或并列分数不能判断它们造成了模型误差。
 
-[S4PRED对象工作例](../../ARCHIVE_POINTERS.md#archive-pointer-d5e7d517fc7a8054)及[来源提取程序](../../../examples/s4pred/describe_entities.py)复用本轮已核字段：LC3B的提交截短记录与标签、HRP2的C64S和标签、nsp1的参考片段、ABLE的设计身份等。程序提取来源并计算明确的区间端点；文字说明这些字段用于辨认对象与解释范围。没有映射或字段为空时保留未知，不从缺字段推出天然完整，也不自动重建“正确天然序列”。
+[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)及[来源提取程序](../../../examples/s4pred/describe_entities.py)复用本轮已核字段：LC3B的提交截短记录与标签、HRP2的C64S和标签、nsp1的参考片段、ABLE的设计身份等。程序提取来源并计算明确的区间端点；文字说明这些字段用于辨认对象与解释范围。没有映射或字段为空时保留未知，不从缺字段推出天然完整，也不自动重建“正确天然序列”。
 
 | 当前需求 | 为什么选择 | 合法替代与改判 |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ PDB场景中，“提交polymer entity序列全长”说明输入序列包含哪
 
 Sample 等2019年的 S5 与 Fig.3 将设计域偏离联系到随机库中稀少的同聚物组成；Fig.1及 S29又涉及上游AUG与设计限制。这提供了两个可检验方向，不能直接解释本项目保存的ridge模型。
 
-本轮先冻结 `max-U-run` 与变量区AUG两项描述诊断，再读取新的分层结果。存储序列采用DNA字母，变量区连续T映射为RNA连续U；ATG映射为该区的AUG motif。出现AUG不等于证明发生翻译起始，也不等于已经定义完整uORF、阅读框或Kozak效应。固定展示分箱只用于本例，不是通用生物阈值。
+本轮先固定 `max-U-run` 与变量区AUG两项描述诊断，再读取新的分层结果。存储序列采用DNA字母，变量区连续T转为RNA连续U；ATG对应该区的AUG motif。这个motif描述局部序列；判断uORF还需确定转录本范围、阅读框、起止规则及相关证据。固定展示分箱仅服务本例，其他数据应按研究问题选择。
 
 | 新观察 | 对解释采取什么动作 | 下一步可以是什么 |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Sample 等2019年的 S5 与 Fig.3 将设计域偏离联系到随机库中稀少�
 | 方向与假设相反或没有可见差异 | 放弃原方向或保留证据不足 | 研究校准/表示等其他解释，不挑新阈值挽救原说法 |
 | 关键分层为空或很稀疏 | 显示计数并保留缺口 | 获取合适对象；不把空格画成零效应 |
 
-原文/补充阅读范围和书目见[论文定位](../../ARCHIVE_POINTERS.md#archive-pointer-1f7a18354b3a6a88)。本轮[冻结计划和实际诊断](../../ARCHIVE_POINTERS.md#archive-pointer-a655bc7276d96671)分别保存已知结果、预定新分析和新观察。
+原文/补充阅读范围和书目见[公开研究设计与方法索引](../../../../docs/REFERENCES-AND-DESIGN.md)。本轮分别保存已知结果、预定新分析和新观察。
 
 ## 怎样交给人
 
