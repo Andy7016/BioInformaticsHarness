@@ -60,6 +60,7 @@ _ROUTES = {
 }
 _ACTION_STATUSES = {"planned", "completed", "blocked", "not_pursued"}
 _DECISIONS = {"in_progress", "deliver", "continue_targeted", "discuss", "defer", "stop"}
+_SCOPE_APPRAISAL_STATUSES = {"pending", "completed", "not_applicable"}
 _LOCATOR_FIELDS = {
     "block",
     "chapter",
@@ -106,6 +107,7 @@ def _error_report(status: str, detail: str) -> dict[str, Any]:
         "identities": {},
         "declared_input_paths": [],
         "scientific_acceptance": "not_assessed",
+        "scope_appraisal": {"status": "unavailable"},
     }
 
 
@@ -322,6 +324,11 @@ def _declared_input_paths(
     if isinstance(record, dict):
         for key in ("source_ledger_ref", "evidence_map_ref", "report_ref", "previous_map_ref"):
             add(record.get(key), key)
+        scope_appraisal = record.get("scope_appraisal")
+        basis_refs = scope_appraisal.get("basis_refs") if isinstance(scope_appraisal, dict) else None
+        if isinstance(basis_refs, list):
+            for index, ref in enumerate(basis_refs):
+                add(ref, f"scope_appraisal.basis_refs[{index}]")
         actions = record.get("actions")
         if isinstance(actions, list):
             for index, action in enumerate(actions):
@@ -657,6 +664,94 @@ def _gap_reason(branch: dict[str, Any]) -> str:
     return state
 
 
+def _validate_scope_appraisal(
+    root: Path,
+    record: dict[str, Any],
+    branch_map: dict[str, dict[str, Any]],
+    findings: list[dict[str, str]],
+    identities: dict[str, Any],
+) -> dict[str, Any]:
+    value = record.get("scope_appraisal")
+    if value is None:
+        return {"status": "not_declared"}
+    if not isinstance(value, dict):
+        raise SupportError("scope_appraisal must be an object or null", "fail")
+
+    status = _text(value.get("status"), "scope_appraisal.status")
+    if status not in _SCOPE_APPRAISAL_STATUSES:
+        raise SupportError("scope_appraisal.status is unknown", "fail")
+    owner = _text(value.get("owner"), "scope_appraisal.owner")
+    trigger = _text(value.get("trigger"), "scope_appraisal.trigger")
+    conclusion = _text(value.get("conclusion"), "scope_appraisal.conclusion")
+    basis_refs = _unique_text_ids(
+        value.get("basis_refs"), "scope_appraisal.basis_refs", allow_empty=True
+    )
+    if status == "completed" and not basis_refs:
+        raise SupportError("completed scope_appraisal needs at least one basis_ref", "fail")
+
+    normalized_refs: list[str] = []
+    seen_paths: set[str] = set()
+    for index, reference in enumerate(basis_refs):
+        label = f"scope_appraisal.basis_refs[{index}]"
+        path = _resolve_ref(root, reference, label)
+        path_key = os.path.normcase(os.path.normpath(str(path)))
+        if path_key in seen_paths:
+            raise SupportError("scope_appraisal.basis_refs contains duplicate file references", "fail")
+        seen_paths.add(path_key)
+        normalized_refs.append(path.relative_to(root).as_posix())
+        _check_file_reference(root, reference, label, findings, identities)
+
+    candidate_branch_ids = _unique_text_ids(
+        value.get("candidate_branch_ids"),
+        "scope_appraisal.candidate_branch_ids",
+        allow_empty=True,
+    )
+    unknown_branches = set(candidate_branch_ids).difference(branch_map)
+    if unknown_branches:
+        raise SupportError(
+            "scope_appraisal.candidate_branch_ids contains unknown branch IDs: "
+            + ", ".join(sorted(unknown_branches)),
+            "fail",
+        )
+
+    _finding(
+        findings,
+        "scope_appraisal.declaration",
+        "pass",
+        "scope appraisal status and scope decision are recorded; substantive adequacy remains application-level",
+    )
+    if not candidate_branch_ids:
+        _finding(
+            findings,
+            "scope_appraisal.candidates",
+            "pass",
+            "no candidate branches are listed; the conclusion is recorded, while its rationale remains application-level",
+        )
+    else:
+        _finding(
+            findings,
+            "scope_appraisal.candidates",
+            "pass",
+            "candidate IDs resolve to existing branches; branch coverage and delivery rules still apply",
+        )
+    if status == "not_applicable":
+        _finding(
+            findings,
+            "scope_appraisal.not_applicable",
+            "pass",
+            "non-applicability is explicitly declared; whether the task is sufficiently limited remains application-level",
+        )
+
+    return {
+        "status": status,
+        "owner": owner,
+        "trigger": trigger,
+        "conclusion": conclusion,
+        "basis_refs": normalized_refs,
+        "candidate_branch_ids": candidate_branch_ids,
+    }
+
+
 def check_review_coverage(
     root: Path | str | os.PathLike[str],
     record: Path | str | os.PathLike[str],
@@ -688,6 +783,7 @@ def check_review_coverage(
     branch_map: dict[str, dict[str, Any]] = {}
     decision: dict[str, Any] | None = None
     declaration_status: dict[str, Any] = {}
+    scope_appraisal_summary: dict[str, Any] = {"status": "not_declared"}
     source_map: dict[str, dict[str, Any]] | None = None
     finding_map: dict[str, dict[str, Any]] | None = None
     report_text: str | None = None
@@ -699,7 +795,10 @@ def check_review_coverage(
 
     try:
         if not isinstance(review_map, dict):
+            scope_appraisal_summary = {"status": "unavailable"}
             raise SupportError("record must be a JSON object", "fail")
+        if review_map.get("scope_appraisal") is not None:
+            scope_appraisal_summary = {"status": "unavailable"}
         _, ledger_payload = _read_json_reference(
             work_root,
             review_map.get("source_ledger_ref"),
@@ -730,6 +829,11 @@ def check_review_coverage(
         _text(purpose.get("audience"), "purpose.audience")
 
         branches, branch_map = _validate_branch_records(review_map)
+        scope_value = review_map.get("scope_appraisal")
+        scope_appraisal_summary = {"status": "not_declared"} if scope_value is None else {"status": "invalid"}
+        scope_appraisal_summary = _validate_scope_appraisal(
+            work_root, review_map, branch_map, findings, identities
+        )
         _, evidence_map = _read_json_reference(
             work_root,
             review_map.get("evidence_map_ref"),
@@ -882,6 +986,13 @@ def check_review_coverage(
         decision_action = decision.get("action")
         if decision_action not in _DECISIONS:
             raise SupportError("decision.action is unknown", "fail")
+        if decision_action == "deliver" and scope_appraisal_summary.get("status") == "pending":
+            _finding(
+                findings,
+                "decision.scope_appraisal_pending",
+                "fail",
+                "delivery is blocked while the declared scope appraisal is pending",
+            )
         _text(decision.get("reason"), "decision.reason")
         remaining = _unique_text_ids(
             decision.get("remaining_branch_ids"), "decision.remaining_branch_ids"
@@ -1033,6 +1144,7 @@ def check_review_coverage(
         "identities": identities,
         "declared_input_paths": sorted(path.relative_to(work_root).as_posix() for path in declared_paths),
         "scientific_acceptance": "not_assessed",
+        "scope_appraisal": scope_appraisal_summary,
     }
 
 

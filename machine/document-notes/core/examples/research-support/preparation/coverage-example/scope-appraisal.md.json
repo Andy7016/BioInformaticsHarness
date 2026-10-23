@@ -1,0 +1,13 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/coverage-example/scope-appraisal.md",
+  "updated_at_utc": "2026-10-23T09:19:05.348427+00:00",
+  "current_identity": {
+    "bytes": 1170,
+    "sha256": "af9dce8feaed4fec04fe09c1a4970316919a6034f3f7847f754c457a17d775bd"
+  },
+  "current_technical_records": [
+    "core/machine/design/review-scope-appraisal.json"
+  ],
+  "document_role": "first_party_fictional_runnable_fixture_and_usage"
+}

@@ -14,15 +14,28 @@
         "machine/history/review-coverage-iteration.json"
       ],
       "previous_document_snapshot": null
+    },
+    {
+      "id": "2026-10-23-D56",
+      "date": "2026-10-23",
+      "reason": "Recover the first D55 independent review and add a conditional scope challenge, keeping original scores, prior records and bounded alternatives.",
+      "new_sources_or_designs": [
+        "D56"
+      ],
+      "technical_records": [
+        "core/machine/design/review-scope-appraisal.json",
+        "machine/history/review-scope-appraisal.json"
+      ],
+      "previous_document_snapshot": null
     }
   ],
-  "updated_at_utc": "2026-10-23T05:49:05.511223+00:00",
+  "updated_at_utc": "2026-10-23T09:23:42.789593+00:00",
   "current_identity": {
-    "bytes": 3171,
-    "sha256": "f8b94c92cbc2b411f998c51d252adf76a74845ee9cf11c33cc941067b0417286"
+    "bytes": 3291,
+    "sha256": "c9bf624967c0f45a21679e95017169f2318cd4b0c3cfa8f3f41d5f092fe982a1"
   },
   "current_technical_records": [
-    "core/machine/design/review-coverage.json",
-    "machine/history/review-coverage-iteration.json"
+    "core/machine/design/review-scope-appraisal.json",
+    "machine/history/review-scope-appraisal.json"
   ]
 }

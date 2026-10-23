@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-23",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "0e66fe0ea3cd04a75493ee98d157749f0debaf1a",
+    "head": "38e3d4a1e3fba971c67ccbb5452ba320ae492cc5",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 3563,
-      "current_sha256": "4c91a600698e5271702fa00768fdb004c28f260fa47fb82559aa0a5d3cfc1ea2"
+      "current_bytes": 4120,
+      "current_sha256": "0b1883150a6f6c4d6278ff4980834c8ffccc8a962bdc7d2dd65d2d3983c7c1c2"
     },
     {
       "path": "LICENSING.md",
@@ -63,8 +63,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:ROADMAP.zh.md",
       "previous_sha256": "f3302d833b016dd8fe549b36a94a3d4adc88c241e78eb926cc381508844f15b4",
-      "current_bytes": 3908,
-      "current_sha256": "7245472c2987776c3c2404ac24c0c305b8a19adb3f3baed02bfab60bfde0f77f"
+      "current_bytes": 4090,
+      "current_sha256": "1969b2bfdc1d2a5fcd12e103ed5c0504c27cbfaaa4ab3bb52a50389af6d10d31"
     },
     {
       "path": "core/EVIDENCE.zh.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 218167,
-      "current_sha256": "e433af2567399d3d1a4917ca414c65a650feb448d788b45be6dea66adeb407a0"
+      "current_bytes": 226106,
+      "current_sha256": "719db37e2c8b573c95152fd3ba69859be7d95c07451127d5502aa7b1ddf80555"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -393,8 +393,15 @@
       "path": "core/docs/design/32-review-coverage-and-closure.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3171,
-      "current_sha256": "f8b94c92cbc2b411f998c51d252adf76a74845ee9cf11c33cc941067b0417286"
+      "current_bytes": 3291,
+      "current_sha256": "c9bf624967c0f45a21679e95017169f2318cd4b0c3cfa8f3f41d5f092fe982a1"
+    },
+    {
+      "path": "core/docs/design/33-review-map-scope-appraisal.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2456,
+      "current_sha256": "fdaa128c0d2484d0cc01bf3b249892c11e3061edb31c22c12a1ea3b7b549d79d"
     },
     {
       "path": "core/docs/methods/README.md",
@@ -655,8 +662,8 @@
       "path": "core/docs/methods/guides/review-coverage-and-closure.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7349,
-      "current_sha256": "9827aa279d5c697288200fb02bea6868d16c9b5e9a7e369889f78ad909989c08"
+      "current_bytes": 9936,
+      "current_sha256": "50b752f1a1150de13095dd0a1c6046332c3071d4189bfadefe4f00d4616b7c0c"
     },
     {
       "path": "core/docs/methods/guides/review-first-preparation.md",
@@ -944,6 +951,27 @@
       "current_sha256": "b25eb3da615f578549a78420744c0c81f5d9e84290d2af159f4047ef89500758"
     },
     {
+      "path": "core/examples/research-support/preparation/coverage-example/scope-appraisal-basis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 481,
+      "current_sha256": "bdc37fe5522d8ad4b280dd31b1b4708ee72d6f44d1e30fec9c592af15b557444"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/scope-appraisal-map.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3742,
+      "current_sha256": "bdf4f0ff92991da40810ca1273c261fa4beb02e2f2b636629385b3f2291bf011"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/scope-appraisal.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1170,
+      "current_sha256": "af9dce8feaed4fec04fe09c1a4970316919a6034f3f7847f754c457a17d775bd"
+    },
+    {
       "path": "core/examples/research-support/preparation/coverage-example/source-ledger.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -982,8 +1010,8 @@
       "path": "core/examples/research-support/preparation/review-map.template.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 943,
-      "current_sha256": "eb7adbc56cc733dbd33ff83b1b6a94041774ec8a9630b41dee26e32bc0795019"
+      "current_bytes": 971,
+      "current_sha256": "d1494edda8f6d6c4cc6170daef2c2d2ab028b4866820ab641b84c5a0c8720da0"
     },
     {
       "path": "core/examples/research-support/preparation/source-ledger.template.json",
@@ -1115,8 +1143,15 @@
       "path": "core/machine/design/review-coverage.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9646,
-      "current_sha256": "b5953c9e370efe40de8135fc320cc015fb0e6ac04b68380354fe5e971a348085"
+      "current_bytes": 13113,
+      "current_sha256": "ddbba7cc51e63130e03895e9fec3d59c3982ac3d59ac304a8eb039ca2e4f6140"
+    },
+    {
+      "path": "core/machine/design/review-scope-appraisal.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4991,
+      "current_sha256": "22faff68182529476cf83bd6cfc64794276eeedf896b29d9bb63985f9c5b859c"
     },
     {
       "path": "core/machine/design/task-continuity.json",
@@ -1166,8 +1201,8 @@
       "path": "core/scripts/research_support/review_coverage.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 50253,
-      "current_sha256": "5c27c91ee633cbdd1f8c5009ad9c6bf0e12e337707aaa8d030d0d946d1d74aed"
+      "current_bytes": 55101,
+      "current_sha256": "881b7fabe5751f387f374cb5b54ecbd5a5964a46ff4298e9baa9ec640bafce77"
     },
     {
       "path": "core/scripts/research_support/run_bounded.py",
@@ -1203,8 +1238,8 @@
       "path": "core/tests/research_support/test_review_coverage.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 31686,
-      "current_sha256": "d28ec498d908fd0170e743ae572bba470bf6dbfdf67964e97dbe47c13e1bdf8f"
+      "current_bytes": 38497,
+      "current_sha256": "094ced1300784baf77288c9ef76df289f7f3d2667596826ae11c87dcccf78e11"
     },
     {
       "path": "core/tests/test_resource_loop.py",
@@ -1231,8 +1266,8 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 60636,
-      "current_sha256": "0a93d31bb2f2d9660b5b2bc5211307c7fa430a44dc7f452dfd56725277af6467"
+      "current_bytes": 61500,
+      "current_sha256": "a05921b78e12ce72d6424e2cf8d630061e5b79e32537c8e31bdaae230132bb40"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -1240,8 +1275,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:docs/history/EVOLUTION.zh.md",
       "previous_sha256": "6a03308d8feb858189981fb6c32221cd809c2a5950168f40bf36e5e55abc5823",
-      "current_bytes": 7989,
-      "current_sha256": "b9437208eaa1903e0f2f190fcf7348cdc5b7e1f0d9cf5573248b082ea1f83da0"
+      "current_bytes": 8798,
+      "current_sha256": "29b02b16f0994f417e3fe171f7163b0a5e1d89151e25d8ea342f0f7f3f348547"
     },
     {
       "path": "docs/plans/RESOURCE-COMPLETION.zh.md",
@@ -1311,8 +1346,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4775,
-      "current_sha256": "19f8cb43bf50883d82234be5ad99dfbdeea147330fdd74bf68cae1ddbfd9268f"
+      "current_bytes": 5276,
+      "current_sha256": "dbcb177af82d257b37c52c616600357402dc4f7c0a617eef8ea130704095cc97"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1339,8 +1374,8 @@
       "path": "machine/document-notes/ROADMAP.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4769,
-      "current_sha256": "769e3b9bf5244f8e8f1d9419cca074099428e3442b5ce953658ea2969a865bfa"
+      "current_bytes": 5270,
+      "current_sha256": "f969ba54b502cc0d0b5ab24ba1f424c641393d37e9ed26fb27d524af8a098e35"
     },
     {
       "path": "machine/document-notes/core/EVIDENCE.zh.md.json",
@@ -1584,8 +1619,15 @@
       "path": "machine/document-notes/core/docs/design/32-review-coverage-and-closure.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1004,
-      "current_sha256": "c7e2eb2f1006e134c1af7c21727c368d6175d874f7aa8aa49a1ce48ca3127931"
+      "current_bytes": 1505,
+      "current_sha256": "7efc4214ebba7fea28cc9503fcde7730bcfdfd771276083d1f7aec52be0665da"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/33-review-map-scope-appraisal.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 984,
+      "current_sha256": "e7656e5e367d2fb8e17b663ad5bd85f13f2b5541c0f54a178699e4df621b2527"
     },
     {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
@@ -1794,8 +1836,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1009,
-      "current_sha256": "1dccb701db619dbe901321e30e0cbcdc5ed92cf55d0f583577e1d9c335d47669"
+      "current_bytes": 1510,
+      "current_sha256": "4177e968f784721476afae6f331afd127a94a8c63ee458eb33d734846056fc21"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
@@ -2001,6 +2043,20 @@
       "current_sha256": "431672407b7c935c6bf41254eff418b5c16044a22d9ac42b09102463bb50e7ce"
     },
     {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/scope-appraisal-basis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 508,
+      "current_sha256": "8889474ce1e1d0eabd1a353f23332d795e6b2ced78b63d7a8993dae52a4f803e"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/scope-appraisal.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 503,
+      "current_sha256": "4af59ef7ab1da0d8d611ea61c3f01ca3346dfccd3af3de7fd96750317503c31c"
+    },
+    {
       "path": "machine/document-notes/core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2046,15 +2102,15 @@
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2815,
-      "current_sha256": "0773a1fc43664d5190711acc1372cb315b5a4b56deea89b634a1936518f4793d"
+      "current_bytes": 3316,
+      "current_sha256": "acb088f386262d076963600ba82f00fcabb83ee8fd46d8ae358d723363e84924"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7933,
-      "current_sha256": "0b3783bc34cad0a53926c712bb1f2e02486aa75f6407fe41abc1b82c0bc5ee99"
+      "current_bytes": 8434,
+      "current_sha256": "7ad30dd5d1dba070cf13c6547e1479a8191033340e50ae48ee4b532c391d210d"
     },
     {
       "path": "machine/document-notes/docs/plans/RESOURCE-COMPLETION.zh.md.json",
@@ -2123,8 +2179,15 @@
       "path": "machine/history/review-coverage-iteration.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6181,
-      "current_sha256": "9e976ccbb4f592f20f1c26f2e8909729ce1a075c37074c878abd1a0ea1e34049"
+      "current_bytes": 8300,
+      "current_sha256": "150ac9a42fc551d45a61fe5442a070c357d60edd6f7c1a260f19ace2aa64f92c"
+    },
+    {
+      "path": "machine/history/review-scope-appraisal.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3816,
+      "current_sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302"
     },
     {
       "path": "machine/reviews/documentation-2026-10-22.json",
@@ -2144,8 +2207,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 184178,
-      "current_sha256": "0a3c27ca69f506632679417d04fcdf5fab7296b959227058d570ceb88c5c2bc0"
+      "current_bytes": 189501,
+      "current_sha256": "10f868cd2b90698bd7ec6b457ac9aeb32805626ef6fe9de95594fff55ddfc8ca"
     },
     {
       "path": "tests/test_documentation.py",

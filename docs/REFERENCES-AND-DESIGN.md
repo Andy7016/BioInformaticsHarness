@@ -176,3 +176,11 @@ The [core bibliography](../core/REFERENCES.md) is the reader-facing citation lis
 | 项目对完整研究推进与人的解释讨论的需求；既有准备、任务连续性、资源缺口和生物学交接方法 | [D54：条件性研究指导闭环](../core/docs/design/31-research-guidance-cycle.md) | [推进指南](../core/docs/methods/guides/research-guidance-cycle.md)、[讨论与阶段模板](../core/examples/research-support/research-cycle/README.md)、[接口与验收记录](../machine/history/research-guidance-cycle.json) |
 
 本次把已有组件接成可讨论、可执行和可返回的研究路线。两份已有研究用于回看阶段之间的关系；三份独立综述在原冻结条件下完成并比较；新的跨阶段科学应用另行检验。
+
+## 地图范围的独立检验
+
+| 来源与观察 | 形成的设计 | 实现与验收 |
+|---|---|---|
+| 同题独立调研的首次地图、初稿、补查和首交；与原始来源及冻结九项关系比较，六项达到实质覆盖。已读材料的选择条件仍有遗漏。 | [D56：范围评议](../core/docs/design/33-review-map-scope-appraisal.md)，在 D55 的收束节点挑战地图边界。 | [操作指南](../core/docs/methods/guides/review-coverage-and-closure.md)、[范围评议例](../core/examples/research-support/preparation/coverage-example/scope-appraisal.md)、[实现与验收记录](../core/machine/design/review-scope-appraisal.json)。 |
+
+这项改进来自项目自身的过程比较。相关论文作为评议参照，完整书目信息和借鉴关系继续在[来源账本](../machine/source-design-index.jsonl)保存。

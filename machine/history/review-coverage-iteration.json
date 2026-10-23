@@ -114,5 +114,45 @@
     "original_medium_comparison": "docs/pilots/2026-10-review-first-medium-comparison/assessment/comparison-r1-medium.json"
   },
   "publication_boundary": "Only first-party code/guidance, deidentified process summary and fictional runnable fixtures in public tree. No private paper bodies, source raw tables or research session transcripts exported.",
-  "validated_at_utc": "2026-10-23T05:49:05.511223+00:00"
+  "validated_at_utc": "2026-10-23T05:49:05.511223+00:00",
+  "prospective_application_2026_10_23": {
+    "kind": "same_question_independent_context_workflow_development_case",
+    "target_reference": {
+      "title": "Libbrecht MW, Noble WS. Machine learning applications in genetics and genomics. Nat Rev Genet.2015;16:321–332.",
+      "doi": "10.1038/nrg3920",
+      "url": "https://doi.org/10.1038/nrg3920"
+    },
+    "configuration": "GPT-6.1 Sol/medium/memory disabled verified",
+    "frozen_gate": ">=8 of9 score>=2 plus>=2 of3 prior thin relationships repaired, with source/argument quality retained",
+    "old_medium_substantive": "6/9",
+    "d55_draft_substantive": "6/9",
+    "d55_first_delivery_substantive": "6/9",
+    "prior_thin_repaired": 0,
+    "gate_met": false,
+    "positive_observation": "Actual bounded followups improved selected network, process interpretation and evaluation conditions; per-branch closure did not discover off-map choice conditions, including already-read primary material.",
+    "original_scores_unchanged": true,
+    "source_record_counts": {
+      "records": 23,
+      "work_families": 21,
+      "retrieved_with_selected_body_visible": 19,
+      "linked_in_final_claim_map": 17
+    },
+    "wall_seconds": 4702.269,
+    "tool_connection_event_silence_seconds": 2187.311,
+    "event_silence_classification": "Not isolated pure network wait; retained in wall time",
+    "usage": {
+      "input_tokens": 7957821,
+      "cached_input_tokens_included_in_input": 7716736,
+      "noncached_input_tokens": 241085,
+      "output_tokens": 63194,
+      "reasoning_output_subset": 9401
+    },
+    "causal_boundary": "D55 was designed after prior same-topic and cross-topic results. This is fresh-context debugging, not unseen-topic external validation or a causal workflow/effort effect estimate.",
+    "archive_locator": "machine/reviews/2026-10-review-coverage-prospective/assessment/parent/comparison-r1-d55.json"
+  },
+  "supplemented_by": {
+    "decision_id": "D56",
+    "path": "core/docs/design/33-review-map-scope-appraisal.md",
+    "record": "core/machine/design/review-scope-appraisal.json"
+  }
 }

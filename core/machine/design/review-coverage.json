@@ -17,6 +17,7 @@
       "source_ledger_ref",
       "evidence_map_ref",
       "report_ref",
+      "scope_appraisal",
       "branches",
       "actions",
       "decision"
@@ -114,7 +115,31 @@
     "revision_rule": "previous_map_ref retains prior ID, distinct version and nonempty change_reason; retain old branch IDs, including deliberately excluded ones. No silent deletion.",
     "source_window": "Uses declared selected versions and source records; date/eligibility judgment is not automatically inferred by the coverage checker. Use existing acquisition/version guard and reading process.",
     "artifact_path": "Native D53 acquisition.artifact_path; legacy top-level alias allowed only if absent or the same resolved path. Conflicting aliases fail.",
-    "parts_read": "Nonempty string locators or objects with specific locator/pages/block/section values. Empty locators fail."
+    "parts_read": "Nonempty string locators or objects with specific locator/pages/block/section values. Empty locators fail.",
+    "scope_appraisal": {
+      "optional": true,
+      "statuses": [
+        "pending",
+        "completed",
+        "not_applicable"
+      ],
+      "fields": [
+        "status",
+        "owner",
+        "trigger",
+        "conclusion",
+        "basis_refs",
+        "candidate_branch_ids"
+      ],
+      "basis_refs": "Unique root-relative file references. Every declared reference is checked as a bounded readable file and reserved against CLI output collision, including currently missing paths. Completed requires at least one readable basis file.",
+      "candidate_branch_ids": "Unique IDs already present in branches; empty is allowed when the recorded conclusion explains why no new branch is proposed, with rationale assessed by the application reviewer.",
+      "decision_interaction": [
+        "pending blocks deliver",
+        "completed does not upgrade branch coverage; existing critical-gap rules still block deliver",
+        "not_applicable is allowed with a recorded task-limiting conclusion; its appropriateness is not machine-scored"
+      ],
+      "semantic_boundary": "The checker validates fields, file identities, and branch-ID joins only. It does not assess whether appraisal reasoning is scientifically adequate or whether a proposed candidate deserves a branch."
+    }
   },
   "checker": {
     "module": "scripts.research_support.review_coverage",
@@ -207,5 +232,45 @@
       "id": "three-review-cases-and-one-medium-repeat",
       "public_summary": "../../../machine/history/review-coverage-iteration.json"
     }
-  ]
+  ],
+  "prospective_application_2026_10_23": {
+    "kind": "same_question_independent_context_workflow_development_case",
+    "target_reference": {
+      "title": "Libbrecht MW, Noble WS. Machine learning applications in genetics and genomics. Nat Rev Genet.2015;16:321–332.",
+      "doi": "10.1038/nrg3920",
+      "url": "https://doi.org/10.1038/nrg3920"
+    },
+    "configuration": "GPT-6.1 Sol/medium/memory disabled verified",
+    "frozen_gate": ">=8 of9 score>=2 plus>=2 of3 prior thin relationships repaired, with source/argument quality retained",
+    "old_medium_substantive": "6/9",
+    "d55_draft_substantive": "6/9",
+    "d55_first_delivery_substantive": "6/9",
+    "prior_thin_repaired": 0,
+    "gate_met": false,
+    "positive_observation": "Actual bounded followups improved selected network, process interpretation and evaluation conditions; per-branch closure did not discover off-map choice conditions, including already-read primary material.",
+    "original_scores_unchanged": true,
+    "source_record_counts": {
+      "records": 23,
+      "work_families": 21,
+      "retrieved_with_selected_body_visible": 19,
+      "linked_in_final_claim_map": 17
+    },
+    "wall_seconds": 4702.269,
+    "tool_connection_event_silence_seconds": 2187.311,
+    "event_silence_classification": "Not isolated pure network wait; retained in wall time",
+    "usage": {
+      "input_tokens": 7957821,
+      "cached_input_tokens_included_in_input": 7716736,
+      "noncached_input_tokens": 241085,
+      "output_tokens": 63194,
+      "reasoning_output_subset": 9401
+    },
+    "causal_boundary": "D55 was designed after prior same-topic and cross-topic results. This is fresh-context debugging, not unseen-topic external validation or a causal workflow/effort effect estimate.",
+    "archive_locator": "machine/reviews/2026-10-review-coverage-prospective/assessment/parent/comparison-r1-d55.json"
+  },
+  "supplemented_by": {
+    "decision_id": "D56",
+    "path": "core/docs/design/33-review-map-scope-appraisal.md",
+    "record": "core/machine/design/review-scope-appraisal.json"
+  }
 }

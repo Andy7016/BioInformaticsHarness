@@ -44,6 +44,23 @@ def _branch(
     }
 
 
+def _scope_appraisal(
+    status: str = "completed",
+    *,
+    basis_refs: list[str] | None = None,
+    candidate_branch_ids: list[str] | None = None,
+    conclusion: str = "The stated purpose and represented branches capture the decision-relevant scope.",
+) -> dict:
+    return {
+        "status": status,
+        "owner": "fictional reviewer",
+        "trigger": "Review the map for omitted decision-changing conditions.",
+        "conclusion": conclusion,
+        "basis_refs": basis_refs if basis_refs is not None else ["scope-basis.md"],
+        "candidate_branch_ids": candidate_branch_ids if candidate_branch_ids is not None else [],
+    }
+
+
 def _action(
     action_id: str = "a1",
     *,
@@ -236,7 +253,125 @@ class ReviewCoverageTests(unittest.TestCase):
         self.assertEqual(report["overall"], "pass")
         self.assertEqual(report["status"], "ready_to_deliver")
         self.assertEqual(report["scientific_acceptance"], "not_assessed")
+        self.assertEqual(report["scope_appraisal"], {"status": "not_declared"})
         self.assertIn("report_ref", report["identities"])
+
+    def test_declared_scope_summary_is_unavailable_on_earlier_branch_failure(self) -> None:
+        self.record["scope_appraisal"] = _scope_appraisal()
+        self.record["branches"][0].pop("question")
+        report = self._check()
+        self.assertEqual(report["overall"], "fail")
+        self.assertEqual(report["scope_appraisal"], {"status": "unavailable"})
+
+    def test_pending_scope_appraisal_blocks_delivery(self) -> None:
+        self.record["scope_appraisal"] = _scope_appraisal(
+            "pending",
+            basis_refs=[],
+            conclusion="The initial map is awaiting a check for omitted decision-changing conditions.",
+        )
+        report = self._check()
+        self.assertEqual(report["overall"], "fail")
+        self.assertEqual(report["status"], "needs_work")
+        self.assertEqual(report["scope_appraisal"]["status"], "pending")
+        self.assertTrue(any(item["id"] == "decision.scope_appraisal_pending" for item in report["findings"]))
+
+    def test_completed_scope_appraisal_with_real_basis_can_deliver(self) -> None:
+        (self.root / "scope-basis.md").write_text(
+            "First-party fictional scope appraisal note; no scientific result is asserted.\n",
+            encoding="utf-8",
+        )
+        self.record["scope_appraisal"] = _scope_appraisal(
+            conclusion="No new condition changes the stated purpose; no additional branch is proposed and any remaining optional work stays disclosed in the map."
+        )
+        report = self._check()
+        self.assertEqual(report["overall"], "pass")
+        self.assertEqual(report["status"], "ready_to_deliver")
+        self.assertEqual(report["scope_appraisal"]["status"], "completed")
+        self.assertEqual(report["scope_appraisal"]["basis_refs"], ["scope-basis.md"])
+        self.assertEqual(report["scope_appraisal"]["candidate_branch_ids"], [])
+        self.assertIn("scope_appraisal.basis_refs[0]", report["identities"])
+        self.assertEqual(report["scientific_acceptance"], "not_assessed")
+
+    def test_scope_appraisal_cannot_override_a_new_critical_gap(self) -> None:
+        (self.root / "scope-basis.md").write_text("Fictional scope appraisal basis.\n", encoding="utf-8")
+        self.record = self._record(
+            branches=[
+                _branch("b1"),
+                _branch("new-critical", state="not_searched", essential=True),
+            ],
+            decision={
+                "action": "deliver",
+                "reason": "The new issue must remain visible until addressed.",
+                "remaining_branch_ids": ["new-critical"],
+                "next_owner": "reviewer",
+                "next_action": "Address the critical branch.",
+            },
+        )
+        self.record["scope_appraisal"] = _scope_appraisal(candidate_branch_ids=["new-critical"])
+        report = self._check()
+        self.assertEqual(report["overall"], "fail")
+        self.assertEqual(report["status"], "needs_work")
+        self.assertTrue(any(item["id"] == "decision.deliver_critical_gap" for item in report["findings"]))
+
+    def test_not_applicable_scope_appraisal_allows_a_limited_task(self) -> None:
+        self.record["purpose"]["objective"] = "Answer only whether the stated task requires the named input."
+        self.record["scope_appraisal"] = _scope_appraisal(
+            "not_applicable",
+            basis_refs=[],
+            conclusion="This bounded task asks only about one specified input; a broader review scope is outside its stated purpose and no additional branch is proposed.",
+        )
+        report = self._check()
+        self.assertEqual(report["overall"], "pass")
+        self.assertEqual(report["status"], "ready_to_deliver")
+        self.assertEqual(report["scope_appraisal"]["status"], "not_applicable")
+
+    def test_scope_appraisal_rejects_unknown_branches_duplicate_refs_and_escape(self) -> None:
+        (self.root / "scope-basis.md").write_text("Fictional scope appraisal basis.\n", encoding="utf-8")
+        cases = [
+            ("unknown branch", _scope_appraisal(candidate_branch_ids=["missing"])),
+            ("completed without basis", _scope_appraisal(basis_refs=[])),
+            ("duplicate candidates", _scope_appraisal(candidate_branch_ids=["b1", "b1"])),
+            ("duplicate basis", _scope_appraisal(basis_refs=["scope-basis.md", "./scope-basis.md"])),
+            ("escaped basis", _scope_appraisal(basis_refs=["../outside.md"])),
+        ]
+        for label, appraisal in cases:
+            with self.subTest(case=label):
+                self.record = self._record()
+                self.record["scope_appraisal"] = appraisal
+                report = self._check()
+                self.assertEqual(report["overall"], "fail")
+                self.assertEqual(report["status"], "needs_work")
+
+    def test_missing_scope_basis_is_unknown_and_cli_output_is_protected(self) -> None:
+        self.record["scope_appraisal"] = _scope_appraisal(basis_refs=["missing-scope-basis.md"])
+        report = self._check()
+        self.assertEqual(report["overall"], "unknown")
+        self.assertEqual(report["status"], "needs_work")
+        self.assertIn("missing-scope-basis.md", report["declared_input_paths"])
+
+        output = self.root / "missing-scope-basis.md"
+        self.assertFalse(output.exists())
+        result = subprocess.run(
+            [
+                sys.executable,
+                "-B",
+                "-m",
+                "scripts.research_support.review_coverage",
+                "--root",
+                str(self.root),
+                "--record",
+                "review-map.json",
+                "--out",
+                "missing-scope-basis.md",
+            ],
+            cwd=self.core,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("declared input path", result.stderr)
+        self.assertFalse(output.exists())
 
     def test_empty_branch_map_cannot_be_declared_complete(self) -> None:
         self.record = self._record(branches=[])

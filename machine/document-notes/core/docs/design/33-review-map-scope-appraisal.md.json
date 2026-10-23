@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/design/33-review-map-scope-appraisal.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-23-D56",
+      "date": "2026-10-23",
+      "reason": "Recover the first D55 independent review and add a conditional scope challenge, keeping original scores, prior records and bounded alternatives.",
+      "new_sources_or_designs": [
+        "D56"
+      ],
+      "technical_records": [
+        "core/machine/design/review-scope-appraisal.json",
+        "machine/history/review-scope-appraisal.json"
+      ],
+      "previous_document_snapshot": null
+    }
+  ],
+  "updated_at_utc": "2026-10-23T09:07:33.485828+00:00",
+  "current_identity": {
+    "bytes": 2456,
+    "sha256": "fdaa128c0d2484d0cc01bf3b249892c11e3061edb31c22c12a1ea3b7b549d79d"
+  },
+  "current_technical_records": [
+    "core/machine/design/review-scope-appraisal.json",
+    "machine/history/review-scope-appraisal.json"
+  ]
+}

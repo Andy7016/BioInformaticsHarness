@@ -1,0 +1,94 @@
+{
+  "schema": "harness.review-scope-appraisal.design/v1",
+  "decision_id": "D56",
+  "date": "2026-10-23",
+  "status": "implemented_locally_validated",
+  "supplements": "D55; original records and native schema remain valid",
+  "requirement": "Challenge whether the purpose-specific question map omits choice-changing conditions before closure; reuse already-read sources and existing bounded routes.",
+  "triggered_use": [
+    "broad orientation or method map",
+    "source reveals an unrepresented choice-changing condition",
+    "scope adequacy is material to stopping"
+  ],
+  "legal_alternatives": [
+    "existing concise table with evidence and rationale",
+    "merge condition into existing branch",
+    "reasoned exclusion or narrowing",
+    "human direction discussion",
+    "not_applicable for bounded task"
+  ],
+  "interface": "review-map.v1 optional scope_appraisal, detailed in review-coverage.json",
+  "source_attribution": "Separate individual author report from cross-source synthesis; measure change against actual draft.",
+  "anti_overfitting": [
+    "No R1-specific universal topic checklist",
+    "No branch/paper quota",
+    "No required new document when existing source/decision records suffice",
+    "No automatic scientific completeness verdict"
+  ],
+  "implementation": [
+    "core/docs/design/33-review-map-scope-appraisal.md",
+    "core/docs/methods/guides/review-coverage-and-closure.md",
+    "core/scripts/research_support/review_coverage.py",
+    "core/tests/research_support/test_review_coverage.py",
+    "core/examples/research-support/preparation/review-map.template.json",
+    "core/examples/research-support/preparation/coverage-example/scope-appraisal.md",
+    "core/examples/research-support/preparation/coverage-example/scope-appraisal-map.json",
+    "core/examples/research-support/preparation/coverage-example/scope-appraisal-basis.md",
+    "core/machine/design/review-coverage.json"
+  ],
+  "validation": {
+    "initial_executor_targeted_tests": 30,
+    "initial_executor_research_support_tests": 110,
+    "final_parent_research_support_tests": 111,
+    "all_exit_codes": 0,
+    "relocated_fictional_cli": {
+      "status": "pass",
+      "result": "ready_to_deliver",
+      "scientific_acceptance": "not_assessed"
+    },
+    "independent_engineering_review": "accept; no blocking findings",
+    "post_review_parent_patch": "OBS-01: declared appraisal summarized unavailable rather than not_declared if earlier field validation aborts; regression111 passed",
+    "archive_records": [
+      "machine/reviews/2026-10-review-scope-iteration/executor/receipt.json",
+      "machine/reviews/2026-10-review-scope-iteration/independent-review/report.json",
+      "machine/reviews/2026-10-review-scope-iteration/parent/final-tests.json"
+    ],
+    "scientific_effect_of_scope_appraisal": "not_yet_tested_in_new_topic"
+  },
+  "empirical_basis": {
+    "kind": "same_question_independent_context_workflow_development_case",
+    "target_reference": {
+      "title": "Libbrecht MW, Noble WS. Machine learning applications in genetics and genomics. Nat Rev Genet.2015;16:321–332.",
+      "doi": "10.1038/nrg3920",
+      "url": "https://doi.org/10.1038/nrg3920"
+    },
+    "configuration": "GPT-6.1 Sol/medium/memory disabled verified",
+    "frozen_gate": ">=8 of9 score>=2 plus>=2 of3 prior thin relationships repaired, with source/argument quality retained",
+    "old_medium_substantive": "6/9",
+    "d55_draft_substantive": "6/9",
+    "d55_first_delivery_substantive": "6/9",
+    "prior_thin_repaired": 0,
+    "gate_met": false,
+    "positive_observation": "Actual bounded followups improved selected network, process interpretation and evaluation conditions; per-branch closure did not discover off-map choice conditions, including already-read primary material.",
+    "original_scores_unchanged": true,
+    "source_record_counts": {
+      "records": 23,
+      "work_families": 21,
+      "retrieved_with_selected_body_visible": 19,
+      "linked_in_final_claim_map": 17
+    },
+    "wall_seconds": 4702.269,
+    "tool_connection_event_silence_seconds": 2187.311,
+    "event_silence_classification": "Not isolated pure network wait; retained in wall time",
+    "usage": {
+      "input_tokens": 7957821,
+      "cached_input_tokens_included_in_input": 7716736,
+      "noncached_input_tokens": 241085,
+      "output_tokens": 63194,
+      "reasoning_output_subset": 9401
+    },
+    "causal_boundary": "D55 was designed after prior same-topic and cross-topic results. This is fresh-context debugging, not unseen-topic external validation or a causal workflow/effort effect estimate.",
+    "archive_locator": "machine/reviews/2026-10-review-coverage-prospective/assessment/parent/comparison-r1-d55.json"
+  },
+  "publication_scope": "First-party code/guidance, deidentified case/process summary and fictional fixtures only; no raw paper text or unpublished new research idea."
+}

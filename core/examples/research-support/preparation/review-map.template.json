@@ -12,6 +12,7 @@
   "source_ledger_ref": "source-ledger.json",
   "evidence_map_ref": "evidence-map.json",
   "report_ref": "REVIEW.md",
+  "scope_appraisal": null,
   "branches": [
     {
       "branch_id": "B01",
