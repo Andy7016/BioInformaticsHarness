@@ -1,0 +1,100 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "fictional-review-coverage",
+  "version": "map-v2",
+  "previous_map_ref": "review-map-v1.json",
+  "change_reason": "Fictional synthesis update; initial map retained.",
+  "purpose": {
+    "kind": "method_map",
+    "objective": "说明目标、评价与缺失输入处理的选择关系。",
+    "audience": "准备选择方法的研究者。"
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map-v2.json",
+  "report_ref": "report-v2.md",
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "不同目标怎样改变标签和评价？",
+      "why_it_matters": "先确定研究目标再选择评价。",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S01"
+      ],
+      "finding_ids": [
+        "F01"
+      ],
+      "synthesis_locator": {
+        "excerpt": "先区分发现未知分组与预测指定类别，再让标签和评价与目标相符。"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B02",
+      "question": "缺失输入时怎样选择处理与评价？",
+      "why_it_matters": "这是本轮方法地图希望解释的另一项关系。",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S02"
+      ],
+      "finding_ids": [
+        "F02"
+      ],
+      "synthesis_locator": {
+        "excerpt": "对缺失输入，先比较原因和用途；用目标相关验证选择填补、保留或收窄范围。"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B03",
+      "question": "选择哪个具体软件实现？",
+      "why_it_matters": "本轮先建立方法关系，具体实现可随后选择。",
+      "essential_for_purpose": false,
+      "coverage_state": "not_searched",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "A01",
+      "branch_ids": [
+        "B02"
+      ],
+      "route": "synthesize_existing",
+      "owner": "example_reviewer",
+      "reason": "相关材料已存在，先整理条件与用途。",
+      "expected_decision_change": "确定是否填补所需的评价，而不是只增加方法名。",
+      "budget": {
+        "max_minutes": 20,
+        "max_sources": 0
+      },
+      "status": "completed",
+      "result_refs": [
+        "report-v2.md",
+        "evidence-map-v2.json"
+      ],
+      "result_summary": "虚构修订已将已有材料连到选择关系；新增来源为零。",
+      "observation": {
+        "elapsed_minutes": 9,
+        "new_sources": 0,
+        "receipt_refs": [
+          "fixture-observation.json"
+        ]
+      }
+    }
+  ],
+  "decision": {
+    "action": "deliver",
+    "reason": "本例关键关系已进入主文，软件实现作为非关键开放分支保留。",
+    "remaining_branch_ids": [
+      "B03"
+    ],
+    "next_owner": "example_reviewer",
+    "next_action": "人工评议主文是否充分支持方法选择。"
+  }
+}

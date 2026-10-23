@@ -1,0 +1,667 @@
+{
+  "schema": "harness.research-preparation-design/v1",
+  "decision_id": "D53",
+  "date": "2026-10-22",
+  "state": "implemented_guidance_and_record_contract",
+  "placement": "A conditional preparation route in the existing methods layer; it reuses the source, measurement, resource-gap, plan-seal, study-unit and producer-consumer guides.",
+  "routes": {
+    "question_led": {
+      "start": "A question is sufficiently formed to guide source selection.",
+      "required": [
+        "question_or_topic",
+        "biological_object",
+        "intended_use",
+        "initial_scope"
+      ],
+      "may_end": [
+        "review_delivered",
+        "continue_targeted_reading",
+        "defer",
+        "stop",
+        "transition_to_study"
+      ]
+    },
+    "review_first": {
+      "start": "The field's concepts, evidence relations or method choices need clarification before a focused study question is selected.",
+      "required": [
+        "initial_focus",
+        "biological_object_or_topic",
+        "review_purpose",
+        "initial_scope"
+      ],
+      "may_end": [
+        "review_delivered",
+        "continue_targeted_reading",
+        "defer",
+        "stop",
+        "transition_to_study"
+      ],
+      "exploration": "Search, reading and synthesis may iteratively focus. Record initial scope and concerns; version material changes to scope, selection rules or interpretation with their reasons; freeze the actual coverage snapshot at delivery."
+    }
+  },
+  "shared_records": {
+    "preparation_plan": {
+      "template": "examples/research-support/preparation/preparation-plan.template.json",
+      "required_fields": [
+        "schema",
+        "preparation_id",
+        "version",
+        "route",
+        "purpose",
+        "scope",
+        "starting_point",
+        "search_intent",
+        "reading_scope",
+        "review_exit",
+        "revision"
+      ],
+      "field_shapes": {
+        "scope": [
+          "biological_object",
+          "system_or_population",
+          "level_or_scale",
+          "intended_use",
+          "initial_focus",
+          "key_terms",
+          "boundaries.include",
+          "boundaries.exclude"
+        ],
+        "starting_point": [
+          "question_or_topic",
+          "current_understanding",
+          "uncertainties",
+          "hypothesis_policy"
+        ],
+        "search_intent": [
+          "platforms",
+          "planned_queries",
+          "date_or_time_range",
+          "selection_rules.include",
+          "selection_rules.exclude"
+        ],
+        "reading_scope": [
+          "expected_source_kinds",
+          "materials_to_read_when_relevant",
+          "scope_notes"
+        ],
+        "review_exit": [
+          "goal",
+          "readiness_conditions",
+          "possible_decisions",
+          "decision",
+          "decision_reason",
+          "coverage_snapshot"
+        ],
+        "revision": [
+          "supersedes_version",
+          "change_reason"
+        ]
+      },
+      "route_conditionals": {
+        "question_led": [
+          "starting_point.question_or_topic"
+        ],
+        "review_first": [
+          "scope.initial_focus",
+          "review_exit.goal"
+        ]
+      },
+      "route_values": [
+        "question_led",
+        "review_first"
+      ],
+      "review_decisions": [
+        "review_delivered",
+        "continue_targeted_reading",
+        "defer",
+        "stop",
+        "transition_to_study"
+      ],
+      "hypothesis_policy_values": [
+        "as_applicable",
+        "not_applicable_with_reason"
+      ],
+      "identity_policy": "Keep preparation_id stable within one preparation record family. Increment version and set supersedes_version/change_reason when a material scope, selection-rule or interpretation change creates a revised record. A route change requires a versioned reason."
+    },
+    "source_ledger": {
+      "template": "examples/research-support/preparation/source-ledger.template.json",
+      "required_top_level": [
+        "schema",
+        "preparation_id",
+        "search_runs",
+        "sources",
+        "coverage_snapshot"
+      ],
+      "search_run_fields": [
+        "search_id",
+        "platform",
+        "query",
+        "executed_on",
+        "date_or_time_range",
+        "filters",
+        "status"
+      ],
+      "search_run_optional_fields": [
+        "records_returned",
+        "failure_or_limit"
+      ],
+      "search_status_values": [
+        "planned",
+        "executed",
+        "failed",
+        "no_results",
+        "limited"
+      ],
+      "source_fields": [
+        "source_id",
+        "work_id",
+        "version_family_id",
+        "kind",
+        "bibliography",
+        "relation_to_work",
+        "selection",
+        "acquisition",
+        "reading",
+        "found_by_search_ids"
+      ],
+      "bibliography_fields": [
+        "authors",
+        "title",
+        "venue_or_repository",
+        "year",
+        "doi_or_identifier",
+        "url",
+        "version_or_release",
+        "published_or_updated_on"
+      ],
+      "selection_fields": [
+        "status",
+        "reason"
+      ],
+      "acquisition_fields": [
+        "status",
+        "license_or_access_terms",
+        "artifact_path",
+        "receipt_path"
+      ],
+      "reading_fields": [
+        "status",
+        "parts_read",
+        "locator_notes"
+      ],
+      "evidence_relationship_fields": [
+        "same_work_or_version_family",
+        "shared_dataset_or_cohort",
+        "independence_note"
+      ],
+      "coverage_snapshot_fields": [
+        "fixed_on",
+        "scope_version",
+        "included_source_ids",
+        "excluded_source_ids",
+        "unavailable_or_unread_source_ids",
+        "remaining_gaps"
+      ],
+      "source_kind_values": [
+        "research_article",
+        "review",
+        "preprint",
+        "supplement",
+        "protocol",
+        "code",
+        "dataset",
+        "other"
+      ],
+      "selection_status_values": [
+        "included",
+        "excluded",
+        "pending"
+      ],
+      "acquisition_status_values": [
+        "not_attempted",
+        "attempted",
+        "retrieved",
+        "unavailable",
+        "restricted",
+        "unknown"
+      ],
+      "reading_status_values": [
+        "not_read",
+        "metadata_only",
+        "partial",
+        "main_text_read",
+        "supporting_material_read",
+        "code_or_data_inspected"
+      ],
+      "coverage_snapshot_required_at_delivery": true,
+      "identity_rules": [
+        "work_id groups versions and associated materials from one research work.",
+        "version_family_id groups versions of the same work; versions are not independent evidence.",
+        "Use evidence_relationship to record shared datasets, cohorts and other dependence between distinct works.",
+        "Record actual reading locators; retrieval or metadata access alone does not mean full text was read."
+      ],
+      "found_by_search_ids_rule": "Reference recorded search_run.search_id values when found through that run; an empty array is allowed for a declared seed/known-source acquisition."
+    },
+    "evidence_map": {
+      "template": "examples/research-support/preparation/evidence-map.template.json",
+      "required_top_level": [
+        "schema",
+        "preparation_id",
+        "definitions",
+        "findings",
+        "disagreements",
+        "method_candidates",
+        "questions",
+        "hypothesis_review",
+        "narrative",
+        "review_decision"
+      ],
+      "definition_fields": [
+        "term",
+        "meaning_in_this_review",
+        "object_or_measurement",
+        "source_refs"
+      ],
+      "finding_fields": [
+        "finding_id",
+        "finding_type",
+        "claim_or_observation",
+        "scope_conditions",
+        "author_reports",
+        "cross_source_synthesis",
+        "researcher_inference",
+        "evidence"
+      ],
+      "finding_type_values": [
+        "shared_observation",
+        "condition_bounded_agreement",
+        "disagreement",
+        "unresolved"
+      ],
+      "author_report_fields": [
+        "source_id",
+        "locator",
+        "summary"
+      ],
+      "evidence_item_fields": [
+        "source_id",
+        "work_id",
+        "evidence_unit_id",
+        "relation",
+        "basis"
+      ],
+      "finding_distinctions": [
+        "author_reports",
+        "cross_source_synthesis",
+        "researcher_inference"
+      ],
+      "evidence_relations": [
+        "supports",
+        "contradicts",
+        "qualifies",
+        "context"
+      ],
+      "disagreement_fields": [
+        "topic",
+        "data_or_population_differences",
+        "measurement_differences",
+        "implementation_or_information_use_differences",
+        "evaluation_unit_or_denominator_differences",
+        "remaining_question",
+        "status",
+        "source_refs"
+      ],
+      "disagreement_status_values": [
+        "resolved_by_conditions",
+        "unresolved",
+        "unknown",
+        "not_applicable"
+      ],
+      "disagreement_axes": [
+        "data_or_population_differences",
+        "measurement_differences",
+        "implementation_or_information_use_differences",
+        "evaluation_unit_or_denominator_differences"
+      ],
+      "method_candidate_fields": [
+        "method_id",
+        "motivated_by_finding_ids",
+        "intended_use",
+        "preconditions",
+        "information_requirements",
+        "costs",
+        "failure_modes",
+        "alternatives",
+        "selection",
+        "selection_reason",
+        "change_condition",
+        "source_refs"
+      ],
+      "method_selection_values": [
+        "candidate",
+        "selected",
+        "selected_within_scope",
+        "rejected",
+        "deferred"
+      ],
+      "method_candidate_required_fields": [
+        "motivated_by_finding_ids",
+        "intended_use",
+        "preconditions",
+        "information_requirements",
+        "costs",
+        "failure_modes",
+        "alternatives",
+        "selection_reason",
+        "change_condition"
+      ],
+      "question_fields": [
+        "question_id",
+        "question",
+        "motivated_by_finding_ids",
+        "candidate_method_ids",
+        "biological_or_practical_significance",
+        "relation_to_existing_work",
+        "evidence_gap",
+        "discriminating_evidence",
+        "novelty_search_scope",
+        "status"
+      ],
+      "novelty_search_scope_fields": [
+        "status",
+        "coverage_snapshot_ref",
+        "search_ids",
+        "seen_work_ids",
+        "unfound_topics",
+        "limitation"
+      ],
+      "novelty_search_scope_status_values": [
+        "not_applicable",
+        "bounded_search"
+      ],
+      "hypothesis_status_values": [
+        "not_applicable",
+        "considered_not_selected",
+        "recorded"
+      ],
+      "hypothesis_fields": [
+        "question_ref",
+        "prediction",
+        "competing_explanations",
+        "discriminating_evidence",
+        "result_that_changes_judgment"
+      ],
+      "question_status_values": [
+        "candidate",
+        "selected_for_study",
+        "deferred",
+        "not_pursued"
+      ],
+      "narrative_fields": [
+        "main_line",
+        "outline",
+        "figure_or_table_ideas",
+        "glossary"
+      ],
+      "review_decision_fields": [
+        "status",
+        "reason",
+        "unresolved_questions",
+        "next_action"
+      ],
+      "evidence_appraisal_guidance": "For each material finding, assess whether measurement, controls/baselines, units, selection, uncertainty and available provenance support its intended scope. Use existing domain guides as relevant; record critical gaps and how they could change the synthesis, without assigning a universal quality score."
+    },
+    "review_report": {
+      "template": "examples/research-support/preparation/REVIEW.template.md",
+      "required_for": "independent review handoff; including review_first review_delivered",
+      "data_or_experiment_required": false,
+      "required_contents": [
+        "coherent argument and main judgments",
+        "object/measurement definitions and actual coverage",
+        "supported findings and conditions with source locators",
+        "competing evidence, supported explanations and working hypotheses kept separate",
+        "method choices and candidate questions; optional hypotheses when appropriate",
+        "reasoned next decision and bibliography/material versions"
+      ],
+      "template_sections_are_adaptable": true
+    }
+  },
+  "study_transition": {
+    "explicit_decision_required": true,
+    "bridge_template": "examples/research-support/preparation/study-bridge.template.json",
+    "first_plan_template": "examples/research-support/preparation/FIRST-STUDY-PLAN.template.md",
+    "required_bridge_fields": [
+      "schema",
+      "preparation_id",
+      "review_version",
+      "transition",
+      "study",
+      "selected_approach",
+      "data_requirements",
+      "evaluation_design",
+      "resource_gap",
+      "first_plan",
+      "first_audit",
+      "first_artifact_seam",
+      "budget_and_acceptance"
+    ],
+    "bridge_field_shapes": {
+      "transition": [
+        "decision",
+        "decided_on",
+        "reason",
+        "alternatives_considered",
+        "source_ledger_ref",
+        "evidence_map_ref",
+        "selected_question_ids",
+        "selected_finding_ids"
+      ],
+      "transition_ref_fields": [
+        "path",
+        "version"
+      ],
+      "transition_id_constraints": {
+        "selected_question_ids": {
+          "min_items": 1,
+          "references": "question_id values in evidence_map_ref",
+          "required_question_status": "selected_for_study"
+        },
+        "selected_finding_ids": {
+          "min_items": 1,
+          "references": "finding_id values in evidence_map_ref",
+          "support_selected_question_ids_through": "motivated_by_finding_ids"
+        },
+        "selected_approach.method_id": {
+          "references": "method_candidate.method_id in evidence_map_ref",
+          "required_selection_values": [
+            "selected",
+            "selected_within_scope"
+          ]
+        }
+      },
+      "study": [
+        "study_id",
+        "iteration_id",
+        "objective",
+        "research_question",
+        "owner",
+        "work_root"
+      ],
+      "selected_approach": [
+        "method_id",
+        "reason",
+        "alternatives",
+        "change_condition"
+      ],
+      "data_requirement": [
+        "requirement_id",
+        "source_criteria",
+        "version_or_release",
+        "license_or_access_terms",
+        "availability",
+        "entity_and_measurement_semantics",
+        "required_fields_and_ids",
+        "coverage_and_denominator",
+        "information_use",
+        "qualification_condition"
+      ],
+      "evaluation_design": [
+        "claim_object",
+        "observed_unit",
+        "independent_unit",
+        "selection_and_split_rule",
+        "protected_evaluation_boundary",
+        "unresolved_unit_or_leakage_questions"
+      ],
+      "resource_gap": [
+        "status",
+        "reference",
+        "next_decision"
+      ],
+      "first_plan": [
+        "path",
+        "version",
+        "seal_status",
+        "acceptance_gates"
+      ],
+      "first_audit": [
+        "required_before_execution",
+        "reason",
+        "captured_code_config_and_input",
+        "inclusion_cleaning_split_effects_to_record"
+      ],
+      "first_artifact_seam": [
+        "producer",
+        "saved_artifact_and_version",
+        "reader",
+        "downstream_event",
+        "status"
+      ],
+      "budget_and_acceptance": [
+        "budget_or_limit",
+        "stop_conditions",
+        "acceptance_conditions",
+        "next_unmet_gate"
+      ]
+    },
+    "transition_decision": "transition_to_study",
+    "must_record": [
+      "reason and alternatives for the transition",
+      "source-ledger and evidence-map versions",
+      "selected question IDs and supporting finding IDs",
+      "selected method ID linked to a method candidate in the evidence map",
+      "data source criteria, version, access/license, entity and measurement semantics, availability, coverage and denominator",
+      "information use and protected evaluation boundary",
+      "owner, budget, stop and acceptance conditions",
+      "first plan version and next unmet gate"
+    ],
+    "traceability_rules": [
+      "Question IDs are unique within an evidence-map version.",
+      "motivated_by_finding_ids reference finding_id values in the same evidence map.",
+      "candidate_method_ids and selected_approach.method_id reference method_candidate.method_id values in that evidence map.",
+      "Hypothesis question_ref values reference question_id values.",
+      "Novelty scope references the coverage snapshot and search IDs used to bound any seen/unfound statement.",
+      "A bridge records source_ledger_ref and evidence_map_ref as path/version pairs. Each selected_question_id references a question_id marked selected_for_study; selected_finding_ids reference finding_ids that motivate those questions; selected_approach.method_id references a selected method candidate in the referenced evidence-map version."
+    ],
+    "first_plan_required_sections": [
+      "research identity and question",
+      "selected method, assumptions, alternatives and change conditions",
+      "data and evaluation requirements",
+      "first actual action, audit and artifact seam",
+      "resources, owner and stop conditions"
+    ],
+    "audit_rule": "If the first audit can change inclusion, deduplication, cleaning or split, seal the plan before that audit and capture the actual code/config/input and invocation using the existing first-execution guidance.",
+    "seam_rule": "When a result will cross a program or person boundary, identify a real producer, saved artifact/version, formal reader and one downstream event; a fixture alone is not a completed seam."
+  },
+  "review_exit_policy": {
+    "universal_paper_count_threshold": false,
+    "exhaustive_search_required": false,
+    "quantitative_synthesis_required": false,
+    "causal_hypothesis_required": false,
+    "readiness_basis": [
+      "scope and actual coverage are clear",
+      "critical sources and disagreements are covered enough for the stated review purpose",
+      "remaining unknowns are visible",
+      "additional evidence is judged by whether it could change the current synthesis or route"
+    ],
+    "review_may_be_delivered_without_study_transition": true
+  },
+  "interpretation_rules": {
+    "templates_are_records_not_results": true,
+    "retrieval_is_not_reading": true,
+    "metadata_only_is_not_full_text_reading": true,
+    "author_report_is_not_independent_acceptance": true,
+    "publication_count_is_not_consensus": true,
+    "shared_version_or_data_is_not_independent_replication": true,
+    "unknown_is_not_negative": true,
+    "no_automatic_scientific_acceptance": true
+  },
+  "related_guides": [
+    "docs/methods/source-acquisition-routing.md",
+    "docs/methods/peer-review-comparison.md",
+    "docs/methods/guides/resource-gap-loop.md",
+    "docs/methods/guides/plan-seal-and-first-execution.md",
+    "docs/methods/guides/statistical-units-and-selection.md",
+    "docs/methods/guides/artifact-producer-consumer.md"
+  ],
+  "non_goals": [
+    "A literature search engine or automatic review scorer.",
+    "A universal systematic-review or meta-analysis protocol.",
+    "A mandatory causal hypothesis for descriptive or exploratory work.",
+    "A scientific acceptance decision based on template completion."
+  ],
+  "template_portability": {
+    "narrative_templates_use": "self-contained prompts; the first-plan helper link is an absolute public URL so copies retain their entry",
+    "study_paths": "Fill referenced source, evidence-map and actual plan paths/versions for the new study workspace."
+  },
+  "validation": {
+    "status": "local_guidance_and_interface_checks_completed",
+    "offline_acquisition_tests": 15,
+    "live_metadata_requests": {
+      "count": 2,
+      "successful": 2,
+      "route": "academic-direct"
+    },
+    "independent_walkthrough": {
+      "total": 19,
+      "passed": 17,
+      "limitations_observed": 2,
+      "record": "machine/reviews/2026-10-research-preparation/preparation-walkthrough.json",
+      "availability": "private_archive"
+    },
+    "parent_repairs": {
+      "both_limitations_addressed": true,
+      "portable_first_plan_copy_check": true,
+      "human_review_template_integrated": true,
+      "record": "machine/reviews/2026-10-research-preparation/parent-repairs.json",
+      "availability": "private_archive"
+    },
+    "scientific_review_quality_or_guidance_effect": "not_assessed",
+    "next_validation": "A real review-first study with full reading, competing evidence, candidate questions and an optional later research bridge.",
+    "live_fulltext_requests": {
+      "count": 1,
+      "successful": 1,
+      "article_doi_verified": true,
+      "full_article_reading_completed": false
+    }
+  },
+  "related_guidance": {
+    "research_guidance_cycle": "docs/methods/guides/research-guidance-cycle.md",
+    "design_decision": "D54",
+    "relationship": "Conditional explanation, actual direction choice and later revision reuse the D53 study bridge; preparation routes and required fields remain unchanged.",
+    "optional_bridge_links": [
+      "direction_discussion_ref",
+      "direction_id"
+    ],
+    "human_choice": "Use the real discussion/authorization source when a new direction requires human choice; prepared material alone is not a recorded choice."
+  },
+  "optional_extensions": {
+    "review_coverage": {
+      "design": "machine/design/review-coverage.json",
+      "record_schema": "research-support.review-map.v1",
+      "template": "examples/research-support/preparation/review-map.template.json",
+      "attachment": "review_exit.coverage_snapshot may reference the versioned review map; source ledger and evidence map retain their original fields.",
+      "backward_compatibility": "Optional; existing v1 records remain valid and the D54 checker is unchanged."
+    }
+  }
+}

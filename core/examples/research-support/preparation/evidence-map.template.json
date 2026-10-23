@@ -1,0 +1,112 @@
+{
+  "schema": "harness.research-preparation-evidence-map/v1",
+  "preparation_id": "",
+  "definitions": [
+    {
+      "term": "",
+      "meaning_in_this_review": "",
+      "object_or_measurement": "",
+      "source_refs": []
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "",
+      "finding_type": "",
+      "claim_or_observation": "",
+      "scope_conditions": [],
+      "author_reports": [
+        {
+          "source_id": "",
+          "locator": "",
+          "summary": ""
+        }
+      ],
+      "cross_source_synthesis": "",
+      "researcher_inference": "",
+      "evidence": [
+        {
+          "source_id": "",
+          "work_id": "",
+          "evidence_unit_id": "",
+          "relation": "",
+          "basis": ""
+        }
+      ]
+    }
+  ],
+  "disagreements": [
+    {
+      "topic": "",
+      "data_or_population_differences": "",
+      "measurement_differences": "",
+      "implementation_or_information_use_differences": "",
+      "evaluation_unit_or_denominator_differences": "",
+      "remaining_question": "",
+      "status": "",
+      "source_refs": []
+    }
+  ],
+  "method_candidates": [
+    {
+      "method_id": "",
+      "motivated_by_finding_ids": [],
+      "intended_use": "",
+      "preconditions": [],
+      "information_requirements": [],
+      "costs": [],
+      "failure_modes": [],
+      "alternatives": [],
+      "selection": "",
+      "selection_reason": "",
+      "change_condition": "",
+      "source_refs": []
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "",
+      "question": "",
+      "motivated_by_finding_ids": [],
+      "candidate_method_ids": [],
+      "biological_or_practical_significance": "",
+      "relation_to_existing_work": "",
+      "evidence_gap": "",
+      "discriminating_evidence": [],
+      "novelty_search_scope": {
+        "status": "",
+        "coverage_snapshot_ref": "",
+        "search_ids": [],
+        "seen_work_ids": [],
+        "unfound_topics": [],
+        "limitation": ""
+      },
+      "status": ""
+    }
+  ],
+  "hypothesis_review": {
+    "status": "",
+    "reason": "",
+    "hypotheses": [
+      {
+        "question_ref": "",
+        "prediction": "",
+        "competing_explanations": [],
+        "discriminating_evidence": [],
+        "result_that_changes_judgment": ""
+      }
+    ]
+  },
+  "narrative": {
+    "main_line": "",
+    "outline": [],
+    "figure_or_table_ideas": [],
+    "glossary": []
+  },
+  "review_decision": {
+    "status": "",
+    "reason": "",
+    "unresolved_questions": [],
+    "next_action": ""
+  }
+}

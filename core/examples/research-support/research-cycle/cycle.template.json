@@ -1,0 +1,52 @@
+{
+  "schema": "research-support.research-cycle.v1",
+  "cycle_id": "",
+  "version": "v1",
+  "previous_version": null,
+  "stage": "synthesis",
+  "task": {
+    "study_id": "",
+    "iteration_id": "",
+    "task_id": "",
+    "objective": ""
+  },
+  "synthesis": {
+    "source_ledger_ref": "",
+    "evidence_map_ref": "",
+    "report_ref": "",
+    "question_ids": [],
+    "time_scope": {
+      "mode": "current",
+      "as_of": "",
+      "refresh_before_study": false,
+      "refresh_record_ref": null,
+      "study_target": "current",
+      "historical_scope_reason": null
+    }
+  },
+  "direction": {
+    "discussion_ref": null,
+    "requires_human_choice": true,
+    "selected_direction_id": null
+  },
+  "study": {
+    "bridge_ref": null,
+    "task_context_ref": null,
+    "first_plan_ref": null,
+    "first_plan_seal_ref": null
+  },
+  "execution": {
+    "run_receipt_refs": [],
+    "evaluation_ref": null,
+    "evidence_refs": [],
+    "delivery_ref": null
+  },
+  "revision": {
+    "decision_ref": null,
+    "next_cycle_ref": null
+  },
+  "next_action": {
+    "owner": "",
+    "action": ""
+  }
+}

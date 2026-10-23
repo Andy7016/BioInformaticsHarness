@@ -93,7 +93,7 @@
   },
   "release": {
     "frozen_tag": "v0.1.0-alpha.2",
-    "documentation_revision": "2026-10-22",
+    "documentation_revision": "2026-10-23",
     "new_docs_do_not_rewrite_published_assets": true
   },
   "new_file_licenses": {
@@ -111,7 +111,20 @@
     "core/tests/test_task_context.py": "Apache-2.0",
     "core/tests/test_resource_loop.py": "Apache-2.0",
     "core/machine/design/**": "CC-BY-4.0",
-    "examples/splice/resource_readiness.py": "Apache-2.0"
+    "examples/splice/resource_readiness.py": "Apache-2.0",
+    "core/scripts/acquisition/**": "Apache-2.0",
+    "core/config/source-routing.json": "Apache-2.0",
+    "core/tests/acquisition/**": "Apache-2.0",
+    "core/machine/tools/**": "Apache-2.0",
+    "core/examples/research-support/preparation/*.template.json": "Apache-2.0",
+    "core/examples/research-support/preparation/*.example.json": "CC-BY-4.0",
+    "core/tests/research_support/test_research_cycle.py": "Apache-2.0",
+    "core/examples/research-support/research-cycle/*.template.json": "Apache-2.0",
+    "core/examples/research-support/research-cycle/fixtures/**": "Apache-2.0",
+    "core/examples/research-support/research-cycle/offline-fixture/*.json": "Apache-2.0",
+    "core/tests/research_support/test_review_coverage.py": "Apache-2.0",
+    "core/examples/research-support/preparation/coverage-example/*.json": "Apache-2.0",
+    "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0"
   },
   "license_scope_updates": [
     {
@@ -123,6 +136,37 @@
         "core/tests/test_resource_loop.py": "Apache-2.0",
         "core/machine/design/**": "CC-BY-4.0",
         "examples/splice/resource_readiness.py": "Apache-2.0"
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "reason": "D53 first-party acquisition transport and editable machine record templates, narrative plan/review documentation kept under CC BY 4.0.",
+      "scopes": {
+        "core/scripts/acquisition/**": "Apache-2.0",
+        "core/config/source-routing.json": "Apache-2.0",
+        "core/tests/acquisition/**": "Apache-2.0",
+        "core/machine/tools/**": "Apache-2.0",
+        "core/examples/research-support/preparation/*.template.json": "Apache-2.0",
+        "core/examples/research-support/preparation/*.example.json": "CC-BY-4.0"
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "reason": "D54 adds first-party cycle/discussion machine templates, a native readiness checker and fictional offline test fixtures. Human guidance and design narrative remain CC BY 4.0.",
+      "scopes": {
+        "core/tests/research_support/test_research_cycle.py": "Apache-2.0",
+        "core/examples/research-support/research-cycle/*.template.json": "Apache-2.0",
+        "core/examples/research-support/research-cycle/fixtures/**": "Apache-2.0",
+        "core/examples/research-support/research-cycle/offline-fixture/*.json": "Apache-2.0"
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "reason": "D55 adds first-party optional coverage checker, record template and explicitly fictional example inputs; no external paper bodies or third-party rows redistributed.",
+      "scopes": {
+        "core/tests/research_support/test_review_coverage.py": "Apache-2.0",
+        "core/examples/research-support/preparation/coverage-example/*.json": "Apache-2.0",
+        "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0"
       }
     }
   ]

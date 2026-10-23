@@ -1,0 +1,211 @@
+{
+  "schema": "harness.review-coverage.design/v1",
+  "decision_id": "D55",
+  "date": "2026-10-23",
+  "status": "implemented_and_locally_native_retrospective_validated",
+  "placement": "Optional operation within D53 review preparation, connected to D54 discussion and D52 bounded resource work. Existing D53 records and D54 checker remain backward compatible; no required migration.",
+  "requirement": "Question map -> coverage check -> bounded followup -> closure, after same-topic Medium observation.",
+  "native_record": {
+    "schema": "research-support.review-map.v1",
+    "template": "examples/research-support/preparation/review-map.template.json",
+    "fields": [
+      "preparation_id",
+      "version",
+      "previous_map_ref",
+      "change_reason",
+      "purpose",
+      "source_ledger_ref",
+      "evidence_map_ref",
+      "report_ref",
+      "branches",
+      "actions",
+      "decision"
+    ],
+    "purpose_kinds": [
+      "orientation",
+      "decision_support",
+      "method_map"
+    ],
+    "branch_fields": [
+      "branch_id",
+      "question",
+      "why_it_matters",
+      "essential_for_purpose",
+      "coverage_state",
+      "source_ids",
+      "finding_ids",
+      "synthesis_locator",
+      "exclusion_reason"
+    ],
+    "coverage_states": [
+      "not_searched",
+      "metadata_only",
+      "source_unavailable",
+      "read_not_synthesized",
+      "synthesized",
+      "deliberately_excluded"
+    ],
+    "branch_unit": "An information condition, modeling assumption and evaluation/use relationship that changes understanding or choice. Papers, names and variants are not universal branch units.",
+    "synthesis_locator": {
+      "excerpt": "Exact nonempty excerpt in report_ref; located against the same read buffer used for report identity. Semantic support still needs human appraisal."
+    },
+    "synthesized_requirements": [
+      "Nonempty finding_ids resolve to evidence-map findings",
+      "All declared source IDs and finding source references resolve in source ledger; branch source IDs cover finding references",
+      "Required support records declare included/retrieved, nonempty artifact_path, actual reading status/parts and an accessible bounded source artifact",
+      "Branch excerpt exists in report; source existence alone cannot upgrade a branch"
+    ],
+    "read_statuses": [
+      "partial",
+      "main_text_read",
+      "supporting_material_read",
+      "code_or_data_inspected"
+    ],
+    "action_fields": [
+      "action_id",
+      "branch_ids",
+      "route",
+      "owner",
+      "reason",
+      "expected_decision_change",
+      "budget",
+      "status",
+      "result_refs",
+      "result_summary",
+      "observation"
+    ],
+    "action_routes": [
+      "synthesize_existing",
+      "search_other_sources",
+      "retrieve_version",
+      "consult_human",
+      "narrow_scope",
+      "defer"
+    ],
+    "action_statuses": [
+      "planned",
+      "completed",
+      "blocked",
+      "not_pursued"
+    ],
+    "budget": {
+      "max_minutes": "positive integer; boolean is invalid",
+      "max_sources": "nonnegative integer; zero legal for synthesis of existing material",
+      "new_source_unit": "new source/material records within this bounded action, declared consistently in its observation, not all search hits"
+    },
+    "observation": {
+      "planned": null,
+      "completed": {
+        "elapsed_minutes": "nonnegative finite number",
+        "new_sources": "nonnegative integer",
+        "receipt_refs": "nonempty root-relative readable execution/observation file references"
+      },
+      "boundary": "Measured values are provider declarations linked to actual receipt bytes; this checker does not execute the followup or infer true usage from prose."
+    },
+    "decision_actions": [
+      "in_progress",
+      "deliver",
+      "continue_targeted",
+      "discuss",
+      "defer",
+      "stop"
+    ],
+    "remaining_branch_ids_rule": "Exact set of non-synthesized branches except deliberately_excluded and nonessential branches. Every nonessential open gap is still listed; essential gaps block deliver.",
+    "revision_rule": "previous_map_ref retains prior ID, distinct version and nonempty change_reason; retain old branch IDs, including deliberately excluded ones. No silent deletion.",
+    "source_window": "Uses declared selected versions and source records; date/eligibility judgment is not automatically inferred by the coverage checker. Use existing acquisition/version guard and reading process.",
+    "artifact_path": "Native D53 acquisition.artifact_path; legacy top-level alias allowed only if absent or the same resolved path. Conflicting aliases fail.",
+    "parts_read": "Nonempty string locators or objects with specific locator/pages/block/section values. Empty locators fail."
+  },
+  "checker": {
+    "module": "scripts.research_support.review_coverage",
+    "api": "check_review_coverage(root, record, *, max_json_bytes=8388608)",
+    "cli": [
+      "python",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "scripts.research_support.review_coverage",
+      "--root",
+      "ROOT",
+      "--record",
+      "review-map.json",
+      "--out",
+      "NEW-CHECK.json"
+    ],
+    "schema": "research-support.review-coverage-check.v1",
+    "overall_values": [
+      "pass",
+      "fail",
+      "unknown"
+    ],
+    "statuses": [
+      "ready_to_deliver",
+      "continue_targeted",
+      "waiting_human",
+      "deferred",
+      "needs_work"
+    ],
+    "exit_codes": {
+      "0": "ready_to_deliver",
+      "1": "valid record that is continuing/waiting/deferred",
+      "2": "needs_work, fail or unknown"
+    },
+    "path_policy": "Explicit root-relative paths; containment after resolution; no whole-drive discovery; bounded reads; same-buffer identity; exclusive new output.",
+    "scientific_acceptance": "not_assessed",
+    "budget_policy": "Over-limit observation yields needs_work and explicit budget_exceeded; completed status does not silently upgrade coverage.",
+    "semantic_boundary": "Exact excerpt presence and declared finding/source/reading links are structural checks, not evidence entailment. A mislabeled name-only excerpt can pass them. Application/theory reviewer appraises substantive conditions, alternatives and choice before scientific closure.",
+    "input_output_boundary": "The new output must differ from every declared input path, including currently missing report/ledger/source/result/receipt paths.",
+    "continue_policy": "At least one bounded planned/blocked action targets a remaining gap; it may be nonessential. Other unresolved critical branches stay visible and still block deliver. No requirement to schedule all gaps in this round.",
+    "needs_synthesis_policy": "read_not_synthesized remains a diagnostic gap, not a mandatory route. The application reviewer chooses synthesis, version/counterevidence work or an explicit stop/defer based on the current purpose.",
+    "source_receipt_path": "Optional acquisition.receipt_path is validated as root-relative and reserved against output aliases; it is not inferred as scientific evidence."
+  },
+  "effort_policy": {
+    "draft_model_example": "gpt-6.1-sol",
+    "draft_effort": "medium",
+    "basis": "One same-topic natural-completion observation:6/9 in both runs; shorter Medium runtime/output.",
+    "critical_appraisal": "Allocate verification to consequential conflicts/version/method decisions; compare specific nodes before a general model assignment.",
+    "scope": "Project provisional operating preference; no global Codex configuration or agent role mutation."
+  },
+  "conditional_alternatives": [
+    "Existing table or research platform with equivalent recorded relations and real evidence",
+    "Narrow/defer/stop with reason instead of mandatory gap completion",
+    "Systematic reviews retain their own specific protocol",
+    "No fixed topic list, universal percentage or paper quota"
+  ],
+  "public_example": "examples/research-support/preparation/coverage-example/README.md",
+  "acceptance": {
+    "program_checks": {
+      "targeted_tests": 24,
+      "research_support_regression": 104,
+      "example_cli_runs": 6,
+      "relocated_example_verdicts": "equal after sorting branch-keyed gap collections",
+      "independent_review": "Four initial issues and residual IR04 repaired; limited final recheck accepted."
+    },
+    "retrospective_four_case_mapping": {
+      "cases": 4,
+      "positive_cli": 4,
+      "forced_deliver_negative_cli": 4,
+      "all_expected_outcomes": true,
+      "actual_material": "2,963,110 bytes of selected prior source artifacts copied with byte identity; original reports/excerpts retained",
+      "parent_clarification": "R2 platform means analysis software ecosystem, not sequencing/capture platform; R2 representative excerpt and derived finding scope narrowed.",
+      "scope": "Representative saved-artifact application and bounded plans, not prospective coverage efficacy."
+    },
+    "prospective_scientific_effect": "not_assessed",
+    "final_code_identity": {
+      "bytes": 50253,
+      "sha256": "5c27c91ee633cbdd1f8c5009ad9c6bf0e12e337707aaa8d030d0d946d1d74aed"
+    }
+  },
+  "sources": [
+    {
+      "kind": "first_party_requirement",
+      "id": "user-review-loop-2026-10-23"
+    },
+    {
+      "kind": "first_party_observation",
+      "id": "three-review-cases-and-one-medium-repeat",
+      "public_summary": "../../../machine/history/review-coverage-iteration.json"
+    }
+  ]
+}

@@ -17,6 +17,10 @@ Use the trigger that matches your research question. The table suggests a starti
 
 | 触发条件 | 先读 | 需要时再读 |
 |---|---|---|
+| 需要把调研、人的方向选择与后续研究连成一条主线 | [研究推进与共同取舍](guides/research-guidance-cycle.md) | [讨论模板](../../examples/research-support/research-cycle/README.md)、[当前任务](guides/task-continuity.md) |
+| 新主题或具体问题需要串起文献、方法与首计划 | [研究前期准备](guides/research-preparation.md) | [资料获取](source-acquisition-routing.md)、[资源缺口](guides/resource-gap-loop.md) |
+| 综述已有主线，需要检查遗漏、补查价值和何时结束 | [问题地图与收束](guides/review-coverage-and-closure.md) | [可运行例](../../examples/research-support/preparation/coverage-example/README.md)、[综述优先](guides/review-first-preparation.md) |
+| 希望先完成详实综述，再选择是否开展研究 | [综述优先](guides/review-first-preparation.md) | [准备模板](../../examples/research-support/preparation/README.md)、[统计单位](guides/statistical-units-and-selection.md) |
 | 同一研究续跑、恢复会话或旧成果上开展补分析 | [当前任务与本轮交付](guides/task-continuity.md) | [接手研究](guides/receiving-research-work.md)、[操作工具](research-support-tools.md) |
 | 资源或实体关系的缺口影响下一评价与主张 | [证据缺口到下一步研究](guides/resource-gap-loop.md) | [信息用途](cards/information-use.md)、[统计单位](guides/statistical-units-and-selection.md) |
 | 需要调用Proto的生信工具或已有模型，并接入真实研究工件 | [Proto工具调用](guides/proto-tool-use.md) | [公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)、[生产—消费接口](guides/artifact-producer-consumer.md) |

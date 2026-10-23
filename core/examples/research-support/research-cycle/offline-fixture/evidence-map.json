@@ -1,0 +1,80 @@
+{
+  "schema": "harness.research-preparation-evidence-map/v1",
+  "preparation_id": "synthetic-preparation-001",
+  "definitions": [],
+  "findings": [
+    {
+      "finding_id": "synthetic-finding-001",
+      "finding_type": "fixture_link",
+      "claim_or_observation": "Invented structural-test finding.",
+      "scope_conditions": [],
+      "author_reports": [],
+      "cross_source_synthesis": "No synthesis is represented.",
+      "researcher_inference": "No scientific inference is represented.",
+      "evidence": [
+        {
+          "source_id": "synthetic-source-001",
+          "work_id": "synthetic-work-001",
+          "evidence_unit_id": "synthetic-unit-001",
+          "relation": "fixture_reference",
+          "basis": "Tests that source IDs resolve."
+        }
+      ]
+    }
+  ],
+  "disagreements": [],
+  "method_candidates": [
+    {
+      "method_id": "synthetic-method-001",
+      "motivated_by_finding_ids": ["synthetic-finding-001"],
+      "intended_use": "Exercise ID links only.",
+      "preconditions": [],
+      "information_requirements": [],
+      "costs": [],
+      "failure_modes": [],
+      "alternatives": [],
+      "selection": "candidate",
+      "selection_reason": "No method is selected by this fixture.",
+      "change_condition": "Replace with real records before any real use.",
+      "source_refs": ["synthetic-source-001"]
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "synthetic-question-001",
+      "question": "Which invented branch should a human discuss?",
+      "motivated_by_finding_ids": ["synthetic-finding-001"],
+      "candidate_method_ids": ["synthetic-method-001"],
+      "biological_or_practical_significance": "None; placeholder only.",
+      "relation_to_existing_work": "No existing work is represented.",
+      "evidence_gap": "Fixture is intentionally non-evidentiary.",
+      "discriminating_evidence": [],
+      "novelty_search_scope": {
+        "status": "not_searched",
+        "coverage_snapshot_ref": null,
+        "search_ids": [],
+        "seen_work_ids": [],
+        "unfound_topics": [],
+        "limitation": "No search was performed."
+      },
+      "status": "candidate"
+    }
+  ],
+  "hypothesis_review": {
+    "status": "not_assessed",
+    "reason": "Synthetic fixture only.",
+    "hypotheses": []
+  },
+  "narrative": {
+    "main_line": "No scientific narrative.",
+    "outline": [],
+    "figure_or_table_ideas": [],
+    "glossary": []
+  },
+  "review_decision": {
+    "status": "needs_human_review",
+    "reason": "Structural fixture only.",
+    "unresolved_questions": ["No scientific content is supplied."],
+    "next_action": "Replace the fixture with reviewed evidence before use."
+  }
+}

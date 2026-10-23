@@ -1,0 +1,54 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/methods/guides/research-preparation.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D53",
+      "date": "2026-10-22",
+      "reason": "Connect question-led and review-first preparation, conditionally bridge to data/first plan, and expose the independent acquisition tool.",
+      "new_sources_or_designs": [
+        "D53"
+      ],
+      "technical_records": [
+        "core/machine/design/research-preparation.json",
+        "core/machine/tools/source-acquisition.json"
+      ],
+      "acceptance": "local transport tests, bounded live metadata/fullTextXML and preparation interface walkthrough; literature synthesis quality not newly validated"
+    },
+    {
+      "id": "2026-10-22-D54",
+      "date": "2026-10-22",
+      "reason": "Connect evidence synthesis, a real human discussion and direction choice, data/first plan, execution/evaluation and evidence revision through conditional existing interfaces.",
+      "new_sources_or_designs": [
+        "D54"
+      ],
+      "technical_records": [
+        "core/machine/design/research-guidance-cycle.json",
+        "machine/history/research-guidance-cycle.json"
+      ],
+      "acceptance": "Parent interface and documentation acceptance recorded in the linked machine history; actual new scientific direction remains to be discussed."
+    },
+    {
+      "id": "2026-10-23-D55",
+      "date": "2026-10-23",
+      "reason": "Add purpose-specific question maps, declared reading/synthesis states, bounded actions and conditional closure. Keep scientific appraisal separate from native link checks.",
+      "new_sources_or_designs": [
+        "D55"
+      ],
+      "technical_records": [
+        "core/machine/design/review-coverage.json",
+        "machine/history/review-coverage-iteration.json"
+      ],
+      "previous_document_snapshot": "machine/reviews/2026-10-review-coverage-iteration/before/public/core/docs/methods/guides/research-preparation.md"
+    }
+  ],
+  "updated_at_utc": "2026-10-23T05:49:05.511223+00:00",
+  "current_identity": {
+    "bytes": 6460,
+    "sha256": "1c131303f92e8a19df20f0350b9932a6c56f617e1a7a066aee53a1cfad87e94e"
+  },
+  "current_technical_records": [
+    "core/machine/design/review-coverage.json",
+    "machine/history/review-coverage-iteration.json"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D54",
+      "date": "2026-10-22",
+      "reason": "Connect evidence synthesis, a real human discussion and direction choice, data/first plan, execution/evaluation and evidence revision through conditional existing interfaces.",
+      "new_sources_or_designs": [
+        "D54"
+      ],
+      "technical_records": [
+        "core/machine/design/research-guidance-cycle.json",
+        "machine/history/research-guidance-cycle.json"
+      ],
+      "acceptance": "Parent interface and documentation acceptance recorded in the linked machine history; actual new scientific direction remains to be discussed."
+    }
+  ]
+}

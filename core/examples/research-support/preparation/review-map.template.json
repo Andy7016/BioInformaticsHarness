@@ -1,0 +1,38 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "",
+  "version": "map-v1",
+  "previous_map_ref": null,
+  "change_reason": "Initial problem map; revise material scope and choice changes in a new snapshot.",
+  "purpose": {
+    "kind": "method_map",
+    "objective": "",
+    "audience": ""
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map.json",
+  "report_ref": "REVIEW.md",
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "",
+      "why_it_matters": "",
+      "essential_for_purpose": true,
+      "coverage_state": "not_searched",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [],
+  "decision": {
+    "action": "in_progress",
+    "reason": "",
+    "remaining_branch_ids": [
+      "B01"
+    ],
+    "next_owner": "",
+    "next_action": ""
+  }
+}

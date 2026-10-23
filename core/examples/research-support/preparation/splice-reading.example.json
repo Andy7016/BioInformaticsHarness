@@ -1,0 +1,297 @@
+{
+  "schema": "harness.research-preparation-example/v1",
+  "preparation_id": "splice-resource-readiness-retrospective",
+  "purpose": "Retrospective example of recording an accepted resource-readiness result. It is not a new literature review, scientific validation, or gene/family mapping.",
+  "route": "review_first",
+  "version": "v1",
+  "scope": {
+    "biological_object": "Splice-junction sequence windows in UCI dataset 69",
+    "system_or_population": "The checked UCI dataset record and its downloadable archive; the archive describes examples from GenBank 64.1.",
+    "level_or_scale": "Historical 60-nucleotide sequence windows and archive class labels",
+    "intended_use": "Decide whether the inspected resource supports gene- or family-level holdout evaluation and stable interpretation of the EI/IE labels.",
+    "initial_focus": "Clarify whether the official page and archive identify biological evaluation entities and agree on label wording.",
+    "key_terms": ["archive instance", "gene", "family", "EI", "IE", "N"],
+    "boundaries": {
+      "include": ["The official UCI dataset page", "The downloadable archive for the same UCI dataset record"],
+      "exclude": ["A broad review of splice biology", "External gene or family mapping not present in the inspected resources", "New model training or evaluation"]
+    }
+  },
+  "source_ledger": {
+    "schema": "harness.research-preparation-source-ledger/v1",
+    "preparation_id": "splice-resource-readiness-retrospective",
+    "search_runs": [],
+    "sources": [
+      {
+        "source_id": "uci69-page",
+        "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+        "version_family_id": "uci-dataset-69-current-record",
+        "kind": "dataset",
+        "bibliography": {
+          "authors": ["G. Towell", "M. Noordewier", "J. Shavlik"],
+          "title": "Molecular Biology (Splice-junction Gene Sequences)",
+          "venue_or_repository": "UCI Machine Learning Repository, dataset 69",
+          "year": "Not stated in the cited materials",
+          "doi_or_identifier": "10.24432/C5M888",
+          "url": "https://archive.ics.uci.edu/dataset/69/molecular-biology-splice-junction-gene-sequences",
+          "version_or_release": "UCI dataset 69 page snapshot retrieved 2026-10-22",
+          "published_or_updated_on": ""
+        },
+        "relation_to_work": "Official dataset landing page; belongs to the same dataset work as the archive below.",
+        "found_by_search_ids": [],
+        "selection": {
+          "status": "included",
+          "reason": "The official page declares the dataset fields and provides the stated dataset DOI and license text."
+        },
+        "acquisition": {
+          "status": "retrieved",
+          "license_or_access_terms": "The page displayed the dataset license as CC BY 4.0. Redistribution terms for a copy of the page HTML were not established; this example does not include that HTML.",
+          "artifact_path": "",
+          "receipt_path": ""
+        },
+        "reading": {
+          "status": "partial",
+          "parts_read": ["Variables Table", "Dataset Information > Additional Information > Problem Description"],
+          "locator_notes": "The page declared 3,190 instances and 60 sequence features; its Problem Description called IE acceptor and EI donor."
+        },
+        "evidence_relationship": {
+          "same_work_or_version_family": "The corresponding UCI dataset 69 record and downloadable archive; not two independent studies.",
+          "shared_dataset_or_cohort": "The page describes the archive offered by this same dataset record.",
+          "independence_note": "Page and archive are two materials for one dataset work, not independent biological evidence."
+        }
+      },
+      {
+        "source_id": "uci69-archive",
+        "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+        "version_family_id": "uci-dataset-69-current-record",
+        "kind": "dataset",
+        "bibliography": {
+          "authors": ["G. Towell", "M. Noordewier", "J. Shavlik"],
+          "title": "Molecular Biology (Splice-junction Gene Sequences)",
+          "venue_or_repository": "UCI Machine Learning Repository, dataset 69 downloadable archive",
+          "year": "Not stated in the cited materials",
+          "doi_or_identifier": "10.24432/C5M888",
+          "url": "https://archive.ics.uci.edu/static/public/69/molecular%2Bbiology%2Bsplice%2Bjunction%2Bgene%2Bsequences.zip",
+          "version_or_release": "UCI dataset 69 archive snapshot retrieved 2026-10-22; archive notes GenBank 64.1",
+          "published_or_updated_on": ""
+        },
+        "relation_to_work": "Downloadable archive for the same UCI dataset record as the page above.",
+        "found_by_search_ids": [],
+        "selection": {
+          "status": "included",
+          "reason": "The archive contains the record and schema files needed to check the declared dataset structure and label wording."
+        },
+        "acquisition": {
+          "status": "retrieved",
+          "license_or_access_terms": "The dataset acquisition record states CC BY 4.0. DOI 10.24432/C5M888; attribute G. Towell, M. Noordewier, and J. Shavlik.",
+          "artifact_path": "",
+          "receipt_path": ""
+        },
+        "reading": {
+          "status": "code_or_data_inspected",
+          "parts_read": ["splice.names lines 40-41", "splice.names lines 57-58", "splice.names lines 82-85 and 104", "splice.data record census"],
+          "locator_notes": "The two label passages conflict internally. The schema describes class, instance name and 60 nucleotide positions. The archive census found 3,190 records, matching the page count."
+        },
+        "evidence_relationship": {
+          "same_work_or_version_family": "The downloadable archive associated with the UCI dataset 69 page.",
+          "shared_dataset_or_cohort": "Same dataset and archive record as uci69-page.",
+          "independence_note": "Do not count the page and its archive as independent evidence or replication."
+        }
+      }
+    ],
+    "coverage_snapshot": {
+      "fixed_on": "2026-10-22",
+      "scope_version": "v1",
+      "included_source_ids": ["uci69-page", "uci69-archive"],
+      "excluded_source_ids": [],
+      "unavailable_or_unread_source_ids": [],
+      "remaining_gaps": ["No authoritative instance-to-gene/family mapping was found in the inspected page or archive.", "The archive's internal donor/acceptor wording conflict remains unresolved.", "This is a bounded resource review, not a broad literature search."]
+    }
+  },
+  "evidence_map": {
+    "schema": "harness.research-preparation-evidence-map/v1",
+    "preparation_id": "splice-resource-readiness-retrospective",
+    "definitions": [
+      {
+        "term": "instance",
+        "meaning_in_this_review": "One record or 60-nucleotide sequence window in the checked UCI archive.",
+        "object_or_measurement": "The archive has class, instance name and sequence positions; the inspected resources do not establish a stable gene or family identity for each instance.",
+        "source_refs": ["uci69-page", "uci69-archive"]
+      },
+      {
+        "term": "mechanical prefix group",
+        "meaning_in_this_review": "A string grouping made from the part of an instance name before the first hyphen.",
+        "object_or_measurement": "A name-based proxy only; it is not treated as gene or family identity.",
+        "source_refs": ["uci69-archive"]
+      }
+    ],
+    "findings": [
+      {
+        "finding_id": "archive-scope",
+        "finding_type": "condition_bounded_agreement",
+        "claim_or_observation": "The inspected dataset is a fixed archive of 3,190 labeled 60-nucleotide sequence windows; the archive census matches the page's declared instance count.",
+        "scope_conditions": ["The two checked materials for UCI dataset 69 only."],
+        "author_reports": [
+          {
+            "source_id": "uci69-page",
+            "locator": "Dataset Information > Variables Table",
+            "summary": "The page declares 3,190 instances and 60 sequence features."
+          },
+          {
+            "source_id": "uci69-archive",
+            "locator": "splice.names lines 82-85; splice.data record census",
+            "summary": "The schema describes class, instance name and 60 sequential nucleotide positions."
+          }
+        ],
+        "cross_source_synthesis": "A retrospective census of the archive found 3,190 records, matching the page count; this is a resource-preparation observation, not an author-reported biological result.",
+        "researcher_inference": "This supports a bounded description of the archived classification data, not a gene/family holdout claim.",
+        "evidence": [
+          {
+            "source_id": "uci69-page",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "context",
+            "basis": "Dataset declaration for the same archive work."
+          },
+          {
+            "source_id": "uci69-archive",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "supports",
+            "basis": "Archive census and schema for the page's declared dataset."
+          }
+        ]
+      },
+      {
+        "finding_id": "label-wording",
+        "finding_type": "disagreement",
+        "claim_or_observation": "The archive's donor/acceptor wording conflicts internally; the page agrees with the later archive passage but does not resolve the earlier conflict.",
+        "scope_conditions": ["Wording in the inspected dataset page and splice.names file."],
+        "author_reports": [
+          {
+            "source_id": "uci69-archive",
+            "locator": "splice.names lines 40-41 and 57-58",
+            "summary": "The two passages assign donor/acceptor descriptions to IE and EI in opposite ways."
+          },
+          {
+            "source_id": "uci69-page",
+            "locator": "Dataset Information > Additional Information > Problem Description",
+            "summary": "The page's displayed wording agrees with the later archive passage."
+          }
+        ],
+        "cross_source_synthesis": "The page and one archive passage agree, but the archive itself contains a contradictory description.",
+        "researcher_inference": "Keep EI, IE and N as archive labels; do not claim that the inspected materials establish a consistent biological alias mapping.",
+        "evidence": [
+          {
+            "source_id": "uci69-archive",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "contradicts",
+            "basis": "Conflicting descriptions occur within one archive version."
+          },
+          {
+            "source_id": "uci69-page",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "qualifies",
+            "basis": "The page agrees with one passage but is not an independent resolution."
+          }
+        ]
+      },
+      {
+        "finding_id": "entity-linkage",
+        "finding_type": "unresolved",
+        "claim_or_observation": "The inspected page and archive do not provide an authoritative instance-to-gene/family mapping.",
+        "scope_conditions": ["This is limited to the two inspected official materials; it does not establish that no mapping exists elsewhere."],
+        "author_reports": [],
+        "cross_source_synthesis": "The page's variable list and the archive schema expose instance names and sequence fields but no stable accession, gene/family key or authoritative linkage.",
+        "researcher_inference": "Gene/family-independent evaluation is not qualified by these resources. Prefix grouping remains a name-string statistic.",
+        "evidence": [
+          {
+            "source_id": "uci69-page",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "qualifies",
+            "basis": "Variables Table has no entity-linkage field."
+          },
+          {
+            "source_id": "uci69-archive",
+            "work_id": "uci-dataset-69-molecular-biology-splice-junction-gene-sequences",
+            "evidence_unit_id": "uci69-dataset-record",
+            "relation": "qualifies",
+            "basis": "The inspected archive schema describes class, instance name and sequence positions without an authoritative entity mapping."
+          }
+        ]
+      }
+    ],
+    "disagreements": [
+      {
+        "topic": "Whether EI and IE correspond consistently to donor and acceptor labels.",
+        "data_or_population_differences": "No population difference explains the conflict; the passages are in the same archive version.",
+        "measurement_differences": "The conflict concerns label wording; preserve the archive's EI/IE/N values as recorded.",
+        "implementation_or_information_use_differences": "The page repeats one archive passage and does not resolve the conflicting passage.",
+        "evaluation_unit_or_denominator_differences": "Not applicable to this wording conflict.",
+        "remaining_question": "Which donor/acceptor wording is authoritative for EI and IE in this archive?",
+        "status": "unresolved",
+        "source_refs": ["uci69-page", "uci69-archive"]
+      }
+    ],
+    "method_candidates": [
+      {
+        "method_id": "fixed-window-archive-label-description",
+        "motivated_by_finding_ids": ["archive-scope", "label-wording", "entity-linkage"],
+        "intended_use": "Describe or retain the historical fixed-window classification task using the archive's class labels.",
+        "preconditions": ["Keep the conclusion within the checked archive's sequence-window and label scope."],
+        "information_requirements": ["The UCI dataset 69 archive and its class/sequence fields."],
+        "costs": ["Does not answer biological gene/family generalization."],
+        "failure_modes": ["Interpreting the unresolved EI/IE aliases as settled biological meaning."],
+        "alternatives": ["Defer target evaluation until a versioned source supplies stable biological entity links and the label conflict is addressed."],
+        "selection": "selected_within_scope",
+        "selection_reason": "This is the only use directly supported by the checked page and archive; it preserves the original labels.",
+        "change_condition": "Reconsider gene/family evaluation only when a suitable licensed/versioned source provides authoritative mappings and the required evaluation units.",
+        "source_refs": ["uci69-page", "uci69-archive"]
+      }
+    ],
+    "questions": [
+      {
+        "question_id": "gene-family-unit-qualification",
+        "question": "Can the inspected UCI dataset support an evaluation that holds out biological genes or families?",
+        "motivated_by_finding_ids": ["entity-linkage", "label-wording"],
+        "candidate_method_ids": ["fixed-window-archive-label-description"],
+        "biological_or_practical_significance": "The answer determines whether the evaluation unit can support the proposed generalization claim.",
+        "relation_to_existing_work": "The current dataset exposes instance names and fixed sequence windows; it does not establish authoritative gene/family identity.",
+        "evidence_gap": "A licensed, versioned source with stable entity identifiers and a verifiable instance-to-entity relation is not present in the inspected materials.",
+        "discriminating_evidence": ["An authoritative mapping with documented version and entity semantics, including any one-to-many relationships."],
+        "novelty_search_scope": {
+          "status": "not_applicable",
+          "coverage_snapshot_ref": "",
+          "search_ids": [],
+          "seen_work_ids": [],
+          "unfound_topics": [],
+          "limitation": "This is a resource-qualification question rather than a claim about novelty across the field."
+        },
+        "status": "deferred"
+      }
+    ],
+    "hypothesis_review": {
+      "status": "not_applicable",
+      "reason": "This bounded resource-qualification question does not require a causal hypothesis or model prediction.",
+      "hypotheses": []
+    },
+    "narrative": {
+      "main_line": "The two official materials establish a bounded archived sequence-classification resource, but they do not qualify biological gene/family holdout and leave an internal label wording conflict unresolved.",
+      "outline": ["Resource identity and declared scope", "Archive-to-page count agreement", "Entity-linkage gap", "Unresolved label wording", "Supported narrow use and deferred target evaluation"],
+      "figure_or_table_ideas": ["A source-family map showing the page and archive as two materials for one dataset work."],
+      "glossary": ["instance", "archive label", "name-string prefix", "gene/family mapping"]
+    },
+    "review_decision": {
+      "status": "review_delivered",
+      "reason": "This bounded resource review can close: the checked materials answer whether they establish the required entity link, and remaining label ambiguity is explicitly preserved. No study question is selected; the gene/family unit-qualification question remains deferred.",
+      "unresolved_questions": ["The donor/acceptor alias conflict remains unknown.", "A suitable gene/family mapping source has not been identified in this bounded review."],
+      "next_action": "Defer gene/family holdout evaluation. A later study iteration may resume if a licensed, versioned authoritative mapping is obtained; retain fixed-window archive labels in the current narrow scope."
+    }
+  },
+  "example_boundary": {
+    "evidence_origin": "A retrospective, self-contained illustration of the accepted UCI resource-readiness observations recorded above.",
+    "not_claimed": ["A new literature search", "A comprehensive splice-biology review", "Independent replication from the page and archive", "A validated gene/family mapping", "Resolved biological label semantics", "A new model evaluation or scientific acceptance"]
+  }
+}

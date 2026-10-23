@@ -1,0 +1,40 @@
+{
+  "SPDX-License-Identifier": "Apache-2.0",
+  "schema_version": "source-routing-v1",
+  "request_budget": 8,
+  "max_file_bytes": 8388608,
+  "connect_timeout_seconds": 5,
+  "read_timeout_seconds": 15,
+  "stream_wall_timeout_seconds": 30,
+  "max_redirects": 3,
+  "request_interval_seconds": 1.0,
+  "arxiv_interval_seconds": 3.0,
+  "arxiv_domains": ["arxiv.org", "export.arxiv.org"],
+  "redirect_delay_seconds": 0.0,
+  "github_proxy": "http://127.0.0.1:7890",
+  "github_domains": [
+    "github.com",
+    "api.github.com",
+    "raw.githubusercontent.com",
+    "githubusercontent.com",
+    "codeload.github.com",
+    "objects.githubusercontent.com",
+    "gist.github.com"
+  ],
+  "service_domains": {
+    "crossref": ["api.crossref.org"],
+    "europepmc": ["www.ebi.ac.uk", "europepmc.org", "www.europepmc.org"],
+    "ncbi": ["eutils.ncbi.nlm.nih.gov", "www.ncbi.nlm.nih.gov"],
+    "openalex": ["api.openalex.org"],
+    "github": [
+      "github.com",
+      "api.github.com",
+      "raw.githubusercontent.com",
+      "githubusercontent.com",
+      "codeload.github.com",
+      "objects.githubusercontent.com",
+      "gist.github.com"
+    ]
+  },
+  "user_agent": "BioInformaticsHarness-source-routing/1.0"
+}

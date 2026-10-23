@@ -1,6 +1,22 @@
 # Quickstart
 
-Run these commands from the core directory with Python 3.11 or newer. The inputs under `examples/research-support/` are fictional, and the core commands use only the Python standard library. Each command writes to a new directory under your own `.scratch/` folder.
+Run these commands from the core directory with Python 3.11 or newer. The three tool examples below use fictional inputs and the Python standard library. Preparation templates and the Splice reading example have their own descriptions. Each command writes to a new directory under your own `.scratch/` folder.
+
+## Prepare a question or a review
+
+Use the [preparation guide](docs/methods/guides/research-preparation.md) to choose a question-led or review-first route. Copy its [starter records](examples/research-support/preparation/README.md) to your study directory. A review may be delivered before selecting any data or model experiment.
+
+To plan acquisition for a selected paper:
+
+```text
+python -B scripts/acquisition/route_sources.py --doi 10.1371/journal.pone.0310814 --out .scratch/preparation/doi-plan.json
+```
+
+The plan command stays offline. Follow the [acquisition guide](docs/methods/source-acquisition-routing.md) to install optional `requests` and explicitly download selected sources.
+
+## Move from a review to a study
+
+Use the [research guidance cycle](docs/methods/guides/research-guidance-cycle.md) to explain the biological problem and technical routes, compare feasible directions, and record the actual choice. The [discussion templates](examples/research-support/research-cycle/README.md) connect that choice to the study bridge and later evaluation. Continue with the data and first-plan steps when a study direction has been selected.
 
 ## Run three small tools
 
@@ -29,7 +45,7 @@ The producer and receiver outputs record separate observations. When a task need
 
 ## Run the core tests
 
-The tests use Python's standard library. For the test session, set `$env:PYTHONDONTWRITEBYTECODE = "1"` in PowerShell or `export PYTHONDONTWRITEBYTECODE=1` on POSIX. This also configures the Python processes started by the tests. Run each test directory explicitly:
+The test commands below use Python's standard library. For the test session, set `$env:PYTHONDONTWRITEBYTECODE = "1"` in PowerShell or `export PYTHONDONTWRITEBYTECODE=1` on POSIX. This also configures the Python processes started by the tests. Run each test directory explicitly:
 
 ```text
 python -B -m unittest discover -s tests/research_support -p 'test_*.py' -v
@@ -37,7 +53,13 @@ python -B -m unittest discover -s tests/verification -p 'test_*.py' -v
 python -B -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-The last command also discovers tests for the newer plan-seal and capture tools.
+The last command also discovers tests for the newer plan-seal and capture tools. With optional `requests` installed, run the acquisition tests separately:
+
+```text
+python -B -m unittest discover -s tests/acquisition -p 'test_*.py' -v
+```
+
+These tests use offline responses and check plan creation from a relocated core directory.
 
 ## Try the saved-state examples
 

@@ -1,0 +1,109 @@
+{
+  "schema": "harness.research-preparation-source-ledger/v1",
+  "preparation_id": "fictional-review-coverage",
+  "search_runs": [],
+  "sources": [
+    {
+      "source_id": "S01",
+      "work_id": "WS01",
+      "version_family_id": "WS01",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "虚构方法说明：用途与测量",
+        "venue_or_repository": "Fictional local example",
+        "year": "2026",
+        "doi_or_identifier": "example:S01",
+        "url": "",
+        "version_or_release": "example-v1",
+        "published_or_updated_on": "2026-10-23"
+      },
+      "relation_to_work": "First-party fictional snippet, not a scientific publication.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Fictional input for interface demonstration."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "Apache-2.0; first-party fictional fixture.",
+        "artifact_path": "source-one.txt",
+        "receipt_path": "fixture-observation.json"
+      },
+      "reading": {
+        "status": "partial",
+        "parts_read": [
+          {
+            "locator": "entire fictional paragraph"
+          }
+        ],
+        "locator_notes": "This is supplied fictional evidence; no live retrieval or scientific reading experiment."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "",
+        "shared_dataset_or_cohort": "",
+        "independence_note": ""
+      }
+    },
+    {
+      "source_id": "S02",
+      "work_id": "WS02",
+      "version_family_id": "WS02",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "虚构方法说明：不完整输入",
+        "venue_or_repository": "Fictional local example",
+        "year": "2026",
+        "doi_or_identifier": "example:S02",
+        "url": "",
+        "version_or_release": "example-v1",
+        "published_or_updated_on": "2026-10-23"
+      },
+      "relation_to_work": "First-party fictional snippet, not a scientific publication.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Fictional input for interface demonstration."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "Apache-2.0; first-party fictional fixture.",
+        "artifact_path": "source-two.txt",
+        "receipt_path": "fixture-observation.json"
+      },
+      "reading": {
+        "status": "partial",
+        "parts_read": [
+          {
+            "locator": "entire fictional paragraph"
+          }
+        ],
+        "locator_notes": "This is supplied fictional evidence; no live retrieval or scientific reading experiment."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "",
+        "shared_dataset_or_cohort": "",
+        "independence_note": ""
+      }
+    }
+  ],
+  "coverage_snapshot": {
+    "fixed_on": "2026-10-23",
+    "scope_version": "example-v1",
+    "included_source_ids": [
+      "S01",
+      "S02"
+    ],
+    "excluded_source_ids": [],
+    "unavailable_or_unread_source_ids": [],
+    "remaining_gaps": [
+      "B02:read but not yet synthesized",
+      "B03:optional future implementation branch"
+    ]
+  }
+}

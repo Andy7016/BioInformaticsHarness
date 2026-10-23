@@ -1,0 +1,66 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "fictional-review-coverage",
+  "version": "map-narrow",
+  "previous_map_ref": "review-map-v1.json",
+  "change_reason": "Fictional alternative: choose a smaller goal within the example; retain excluded branch IDs.",
+  "purpose": {
+    "kind": "decision_support",
+    "objective": "只解释目标、标签与评价，暂缓缺失处理与软件实现。",
+    "audience": "当前只需澄清任务定义的研究者。"
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map-v1.json",
+  "report_ref": "report-narrow.md",
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "不同目标怎样改变标签和评价？",
+      "why_it_matters": "先确定研究目标再选择评价。",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S01"
+      ],
+      "finding_ids": [
+        "F01"
+      ],
+      "synthesis_locator": {
+        "excerpt": "先区分发现未知分组与预测指定类别，再让标签和评价与目标相符。"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B02",
+      "question": "缺失输入时怎样选择处理与评价？",
+      "why_it_matters": "这是本轮方法地图希望解释的另一项关系。",
+      "essential_for_purpose": false,
+      "coverage_state": "deliberately_excluded",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": "较窄目标本轮只澄清任务定义；缺失处理待后续用途需要时恢复。"
+    },
+    {
+      "branch_id": "B03",
+      "question": "选择哪个具体软件实现？",
+      "why_it_matters": "本轮先建立方法关系，具体实现可随后选择。",
+      "essential_for_purpose": false,
+      "coverage_state": "not_searched",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [],
+  "decision": {
+    "action": "deliver",
+    "reason": "本例选择较窄用途并保留原地图，不把排除分支称为已解决。",
+    "remaining_branch_ids": [
+      "B03"
+    ],
+    "next_owner": "example_reviewer",
+    "next_action": "按较窄用途评议交付，并保留未来恢复位置。"
+  }
+}

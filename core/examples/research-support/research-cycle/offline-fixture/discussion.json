@@ -1,0 +1,40 @@
+{
+  "schema": "research-support.direction-discussion.v1",
+  "discussion_id": "synthetic-discussion-001",
+  "cycle_id": "synthetic-cycle-001",
+  "version": "discussion-v1",
+  "status": "prepared",
+  "brief_ref": "brief.md",
+  "technical_route_ref": "technical-route.md",
+  "directions": [
+    {
+      "direction_id": "synthetic-direction-001",
+      "intent": "study",
+      "question_ids": ["synthetic-question-001"],
+      "method_ids": ["synthetic-method-001"],
+      "reason": "Structural placeholder for a human-readable branch.",
+      "cost_and_dependencies": "None; no work is proposed by this fixture.",
+      "alternative": "Leave the direction unselected.",
+      "change_condition": "Replace all placeholder content before use."
+    }
+  ],
+  "recommendation": {
+    "direction_id": "synthetic-direction-001",
+    "reason": "A recommendation field is required to test the schema."
+  },
+  "discussion": {
+    "held_at": null,
+    "human_input_ref": null,
+    "points_raised": [],
+    "unresolved": []
+  },
+  "decision": {
+    "status": "pending",
+    "authority": null,
+    "selected_direction_id": null,
+    "source_ref": null,
+    "made_at": null,
+    "reason": null,
+    "constraints": []
+  }
+}

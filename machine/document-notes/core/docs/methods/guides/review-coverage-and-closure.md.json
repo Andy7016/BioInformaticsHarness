@@ -1,0 +1,28 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/methods/guides/review-coverage-and-closure.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-23-D55",
+      "date": "2026-10-23",
+      "reason": "Add purpose-specific question maps, declared reading/synthesis states, bounded actions and conditional closure. Keep scientific appraisal separate from native link checks.",
+      "new_sources_or_designs": [
+        "D55"
+      ],
+      "technical_records": [
+        "core/machine/design/review-coverage.json",
+        "machine/history/review-coverage-iteration.json"
+      ],
+      "previous_document_snapshot": null
+    }
+  ],
+  "updated_at_utc": "2026-10-23T05:49:05.511223+00:00",
+  "current_identity": {
+    "bytes": 7349,
+    "sha256": "9827aa279d5c697288200fb02bea6868d16c9b5e9a7e369889f78ad909989c08"
+  },
+  "current_technical_records": [
+    "core/machine/design/review-coverage.json",
+    "machine/history/review-coverage-iteration.json"
+  ]
+}

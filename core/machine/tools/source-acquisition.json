@@ -1,0 +1,158 @@
+{
+  "schema": "harness.source-acquisition-interface/v1",
+  "state": "implemented_and_locally_validated",
+  "root": "core",
+  "implementation": "scripts/acquisition/route_sources.py",
+  "configuration": "config/source-routing.json",
+  "tests": "tests/acquisition/test_source_routing.py",
+  "entry": {
+    "cwd": "independent core root",
+    "cli": [
+      "python",
+      "-B",
+      "scripts/acquisition/route_sources.py",
+      "--doi",
+      "10.1371/journal.pone.0310814",
+      "--out",
+      ".scratch/preparation/doi-plan.json"
+    ],
+    "execute_cli": [
+      "python",
+      "-B",
+      "scripts/acquisition/route_sources.py",
+      "--doi",
+      "10.1371/journal.pone.0310814",
+      "--execute",
+      "--max-requests",
+      "2",
+      "--out-dir",
+      ".scratch/preparation/doi-run-01"
+    ],
+    "api_module": "scripts.acquisition.route_sources",
+    "api": [
+      "build_plan",
+      "execute_plan",
+      "load_config",
+      "route_url"
+    ],
+    "planning_dependency": "Python 3.11+ standard library, optional import of requests",
+    "execute_dependency": {
+      "package": "requests",
+      "tested_version": "2.31.0",
+      "distribution_license": "Apache 2.0",
+      "license_evidence": "installed requests-2.31.0 distribution METADATA observed locally",
+      "vendored": false
+    }
+  },
+  "inputs": {
+    "subject": "exactly one of --doi, --pmcid, --url",
+    "url_kind": [
+      "metadata",
+      "fulltext",
+      "supplement",
+      "review",
+      "repository"
+    ],
+    "url_formats": [
+      "json",
+      "xml",
+      "pdf",
+      "html",
+      "text"
+    ],
+    "optional": [
+      "--config",
+      "--max-bytes",
+      "--max-requests",
+      "--out",
+      "--out-dir"
+    ]
+  },
+  "outputs": {
+    "schema_version": "source-routing-v1",
+    "plan": "plan.json or explicit --out",
+    "execution_receipt": "receipts.json or fresh receipt name",
+    "raw": "raw/ only for downloaded, format-checked files",
+    "required_reading_records": "examples/research-support/preparation/source-ledger.template.json",
+    "result_states": [
+      "downloaded",
+      "cache_hit",
+      "existing_file_preserved",
+      "budget_exhausted",
+      "format_invalid",
+      "signed_query_not_replayable",
+      "other explicitly recorded request failure"
+    ],
+    "exit_policy": "Exit 0 means the command produced its plan/receipt; inspect every request outcome before claiming retrieval success."
+  },
+  "routing": {
+    "academic": "explicit Direct sessions, trust_env=false",
+    "github": "per-hop github-proxy from configuration, current default http://127.0.0.1:7890",
+    "global_proxy_mutation": false,
+    "redirects": "manual, destination validated and route recomputed each hop",
+    "live_github_probe_performed": false
+  },
+  "limits": {
+    "default_http_budget": 8,
+    "http_budget_hard_max": 8,
+    "default_file_bytes": 8388608,
+    "file_bytes_hard_max": 8388608,
+    "max_redirects": 3,
+    "automatic_retries": 0,
+    "overwrite_existing_files": false,
+    "private_destination": "blocked by default; hidden override is for tests",
+    "signed_query": "redacted in saved plan/receipt; live in-process signed URL cannot be replayed from sanitized saved plan",
+    "credentials_or_paid_services": "No API key/email read; no Firecrawl call"
+  },
+  "validation": {
+    "offline_tests": {
+      "count": 15,
+      "result": "passed",
+      "includes": [
+        "actual CLI under core root",
+        "actual CLI after relocation",
+        "DNS and socket blocked in planning subprocess"
+      ],
+      "evidence_availability": "private_archive",
+      "record": "machine/reviews/2026-10-research-preparation/acquisition-port.json"
+    },
+    "live_metadata": {
+      "http_budget": 2,
+      "requests_used": 2,
+      "successes": [
+        {
+          "service": "crossref",
+          "status": 200,
+          "bytes": 22291,
+          "route": "academic-direct"
+        },
+        {
+          "service": "europepmc",
+          "status": 200,
+          "bytes": 5103,
+          "route": "academic-direct"
+        }
+      ],
+      "unexecuted": "NCBI and OpenAlex requests marked budget_exhausted",
+      "firecrawl_calls": 0,
+      "api_keys_used": false,
+      "evidence_availability": "private_archive",
+      "record": "machine/reviews/2026-10-research-preparation/acquisition-live-smoke.json"
+    },
+    "live_fulltext": {
+      "identifier": "PMC11444397",
+      "identifier_source": "previous Europe PMC metadata result for DOI 10.1371/journal.pone.0310814",
+      "http_budget": 1,
+      "requests_used": 1,
+      "status": 200,
+      "bytes": 131383,
+      "route": "academic-direct",
+      "format": "XML parsed, article root and body present, DOI matches target",
+      "supplementary_files_downloaded": false,
+      "evidence_availability": "private_archive",
+      "record": "machine/reviews/2026-10-research-preparation/acquisition-fulltext-smoke.json",
+      "scope": "Material transport and identifier check, not a full-paper reading or review."
+    }
+  },
+  "scope": "Known-identifier/URL acquisition and transport validation; topic discovery and scholarly synthesis are performed by the researcher with the preparation guides. No new model, biological result, or completed literature review."
+}

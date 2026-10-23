@@ -1,0 +1,323 @@
+{
+  "schema": "harness.research-guidance-cycle.design/v1",
+  "decision_id": "D54",
+  "title": "Conditional research-guidance cycle from synthesis through evidence revision",
+  "status": "implemented_and_locally_interface_validated",
+  "placement": "An optional connection in the existing methods layer. It reuses D53 preparation records, D51 task continuity, D52 resource-gap control, plan sealing, statistical-unit guidance, biological explanation, and real producer-consumer interfaces.",
+  "problem": "A literature synthesis or execution result must be explained in terms a person can use, discussed where goals or constraints need human direction, and connected to the next data, plan, execution, and evidence update. A review can also be a complete independent deliverable.",
+  "decision": "Use six conditional stages. A prepared brief is ready to discuss; only an actual discussion source can support a joint direction choice. Routine work covered by existing authorization may continue without creating an unnecessary human gate.",
+  "stage_values": [
+    "synthesis",
+    "human_discussion",
+    "direction_choice",
+    "data_and_plan",
+    "execution_evaluation",
+    "evidence_revision"
+  ],
+  "version_families": {
+    "families": [
+      "research_cycle",
+      "source_ledger",
+      "evidence_map",
+      "direction_discussion",
+      "first_plan"
+    ],
+    "alignment_rule": "Each record family maintains its own version sequence and path. References identify the version used; numeric version values do not have to match across families.",
+    "stage_only_transition": "When research scope and D51 task binding are unchanged, retain the existing discussion and first-plan version and path; a stage change alone does not create a new version in those families."
+  },
+  "stage_contract": [
+    {
+      "stage": "synthesis",
+      "input": "D53 source-ledger and evidence-map versions, coverage snapshot, and current research purpose. Include cycle.synthesis.time_scope with study_target=current by default; same_historical_window records its cutoff/as_of and reason.",
+      "output": "A readable synthesis connecting objects, measurements, use, method motivations, conditional consensus, open disagreements, competing explanations, candidate questions, methods, and remaining uncertainty.",
+      "next": [
+        "independent_review_delivery",
+        "human_discussion",
+        "continue_targeted_reading"
+      ]
+    },
+    {
+      "stage": "human_discussion",
+      "input": "The synthesis brief, current options and recommendation, evidence locations, and decision questions.",
+      "output": "A separate direction-discussion record with actual source, date, participant, human goals or constraints, and discussion state. A prepared brief is ready-to-discuss.",
+      "next": [
+        "direction_choice"
+      ],
+      "pending_behavior": "If a new human choice is required and still pending, report waiting_human."
+    },
+    {
+      "stage": "direction_choice",
+      "input": "A completed discussion when required, current authorization, D53 evidence-map references, and valid options.",
+      "output": "A reasoned selected option, human source when required, selected question and method references, and the next unmet gate.",
+      "next": [
+        "independent_review_delivery",
+        "continue_targeted_reading",
+        "data_and_plan",
+        "defer",
+        "stop"
+      ]
+    },
+    {
+      "stage": "data_and_plan",
+      "input": "The selected question, findings and method from the referenced D53 evidence-map version, and the direction decision.",
+      "output": "D53 study bridge, D51 study/iteration/task context, data and evaluation requirements, resource-gap disposition, first-plan version, required audit, and first real artifact seam.",
+      "next": [
+        "execution_evaluation"
+      ],
+      "conditions": [
+        "In the Harness-native workflow, the D53 study-bridge fields, D51 task identities, plan version and standard archived plan-seal ACK are consistent.",
+        "For mode=historical_window and study_target=current, refresh_before_study=true and a readable refresh_record_ref are required; targeted retrieval or a reasoned applicability review can satisfy the refresh without a new-paper quota.",
+        "For study_target=same_historical_window, historical_scope_reason and as_of or the original cutoff are required; window-external sources are not required.",
+        "Equivalent platform records may be handled by the matching adapter or human review."
+      ]
+    },
+    {
+      "stage": "execution_evaluation",
+      "input": "The current bound task, sealed plan, declared producer-consumer seam, actual bounded-run receipt, and evaluation design.",
+      "output": "References to an actual execution with PID, cwd and current task binding, plus evaluation, evidence and delivery artifacts. The same task-bound run may continue to be referenced during evidence revision.",
+      "next": [
+        "evidence_revision"
+      ],
+      "run_reuse_rule": "A change of cycle stage or cycle-record version alone does not require a new run when scope and D51 task binding remain unchanged.",
+      "checker_boundary": "Check existence and identity relationships; research interpretation remains with the scientific reviewer."
+    },
+    {
+      "stage": "evidence_revision",
+      "input": "Observed outputs and evaluation artifacts compared with the current plan, units, denominator and predeclared criteria.",
+      "output": "A versioned update to claims, uncertainty, route, or next gate, with links to the evidence and prior decision.",
+      "next": [
+        "direction_choice",
+        "human_discussion",
+        "continue_targeted_reading",
+        "data_and_plan",
+        "defer",
+        "stop"
+      ],
+      "discussion_trigger": "A material change in research meaning, budget boundary, or route priority returns the result to explanation and human discussion before the next direction choice.",
+      "version_rule": "Research-cycle, source-ledger, evidence-map, discussion and first-plan versions are independent record families. After results, scope, inclusion, cleaning, split or selection changes use a new applicable plan/version and D51 task binding where scope, objective or iteration changes; preserve the original first plan and protected evaluation set.",
+      "run_reuse_rule": "The evidence revision for the same study may reference the same actual run used during execution_evaluation; stage progression does not trigger a rerun.",
+      "task_binding_rule": "When research scope, objective or iteration changes, validate the new current D51 binding. A run whose recorded task identity does not match the current binding remains historical evidence and cannot satisfy current-task execution evidence.",
+      "decision_view": {
+        "schema": "research-support.research-cycle-decision.v1",
+        "role": "A serialization view of the existing Decision object; it adds no domain object.",
+        "fields": [
+          "cycle_id",
+          "version",
+          "action",
+          "reason",
+          "evidence_refs",
+          "observed_findings_ref",
+          "next_action"
+        ],
+        "actions": [
+          "keep",
+          "revise",
+          "narrow",
+          "defer",
+          "stop"
+        ],
+        "evidence_support": "Provide evidence_refs or observed_findings_ref to support the recorded action; rationale text alone does not identify the evidence.",
+        "revision_link": "revise creates a new cycle version whose previous_version points to the current version.",
+        "other_actions": "keep, narrow, defer, and stop may close the current cycle or leave a stated continuation action; they do not require a new cycle version."
+      }
+    }
+  ],
+  "human_guidance": {
+    "explanation_elements": [
+      "research object, measured quantity and intended use",
+      "a relationship map explaining why methods evolved and which need each method addresses",
+      "source-supported consensus with conditions",
+      "open disagreements and one or two competing explanations",
+      "usually two or three feasible directions and a recommendation; one direction is acceptable when its constraints are explained",
+      "required data and information, cost, owner, alternatives, and conditions that would change the recommendation",
+      "one or two concrete questions for the person to decide"
+    ],
+    "evidence_language": "Separate author-reported findings, cross-source synthesis, and working hypotheses. Describe novelty and coverage within the recorded search scope.",
+    "requires_human_choice_when": [
+      "research objective or intended use changes",
+      "direction priority changes materially",
+      "a measurement essential to the claim is missing",
+      "a diagnostic reaches its declared budget boundary",
+      "the synthesis reveals a choice outside the existing authorization"
+    ],
+    "existing_authorization": "Routine bounded repairs and continuation within the current objective may proceed under the existing task context. If requires_human_choice is true, existing_authorization cannot substitute for a real current discussion and choice.",
+    "choice_source": "A direction choice requires a valid option and a readable source for the actual human selection whenever the human-choice condition applies. Preparation alone records no agreement."
+  },
+  "routing": {
+    "review_can_end_independently": true,
+    "study_transition_requires_explicit_direction": true,
+    "valid_nonstudy_exits": [
+      "independent_review_delivery",
+      "continue_targeted_reading",
+      "defer",
+      "stop",
+      "remain_within_existing_authorization"
+    ],
+    "resource_gaps": "Use D52 only when a missing source, identity relation, measurement, coverage, or evaluation input can change the selected claim or use.",
+    "task_restoration": "Use D51 to bind study_id, iteration_id, active entry, work root, current phase and next unmet gate; restore and delivery checks refer to the same current task context.",
+    "versioning_policy": "Research-cycle, source-ledger, evidence-map, direction-discussion and first-plan records are distinct version families. A stage-only transition with unchanged research scope and D51 task binding retains the existing discussion and first-plan version/path. References record the exact family and version used; cross-family version numbers are not synchronized.",
+    "historical_review": "A historical review may seed a new current question or support reconstruction of the same historical window. For current work, the default time scope is current and a readable refresh record is required before data_and_plan; targeted retrieval or a reasoned applicability review may supply it without a paper-count target. For same_historical_window, retain the original cutoff/as_of and reason; window-external sources are optional."
+  },
+  "record_and_check_interface": {
+    "cycle_template": "examples/research-support/research-cycle/cycle.template.json",
+    "discussion_template": "examples/research-support/research-cycle/discussion.template.json",
+    "discussion_record_schema": "research-support.direction-discussion.v1",
+    "human_readable_template": "examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md",
+    "checker": "scripts/research_support/research_cycle.py",
+    "cli": "research_cycle.py check --record PATH --root ROOT --out PATH",
+    "report_schema": "research-support.research-cycle-check.v1",
+    "report_fields": [
+      "overall",
+      "stage",
+      "status",
+      "findings",
+      "next_action",
+      "identities",
+      "scientific_acceptance"
+    ],
+    "overall_values": [
+      "pass",
+      "fail"
+    ],
+    "status_values": [
+      "ready",
+      "waiting_human",
+      "needs_work"
+    ],
+    "status_meanings": {
+      "ready": "Declared stage inputs, references and required decision records meet structural conditions; scientific adequacy is reviewed separately.",
+      "waiting_human": "A required genuine human choice has not yet been recorded.",
+      "needs_work": "A referenced input, identity, path, stage prerequisite or required link is missing or inconsistent."
+    },
+    "reference_rules": "Every record reference is a root-relative path or null. Resolve it from the supplied work root; reject paths that escape the root. Parse each file and calculate its identity from the same read.",
+    "direction_binding": "Direction choice and later stages require a valid selected option mapped to question and method identities in the referenced D53 evidence-map version.",
+    "study_binding": "For the Harness-native workflow, data_and_plan checks D53 study-bridge fields and consistent D51 task identities, plan version and standard archived plan-seal ACK. Equivalent task and decision records from an existing platform use its adapter or human review.",
+    "execution_binding": "For the Harness-native workflow, execution_evaluation checks a real bounded run with PID, cwd and current D51 task binding, and readable evaluation/evidence/delivery references. The same actual run may be referenced from execution_evaluation into evidence_revision when the study scope and task binding remain unchanged; a cycle-version or stage change alone does not require another run. When scope, objective or iteration changes, validate the new D51 binding and do not use a run with a mismatched task identity as current execution evidence. Equivalent run evidence from another platform uses its adapter or human review.",
+    "science_boundary": "scientific_acceptance is always not_assessed by the structural checker.",
+    "revision_decision_schema": "research-support.research-cycle-decision.v1",
+    "revision_actions": [
+      "keep",
+      "revise",
+      "narrow",
+      "defer",
+      "stop"
+    ],
+    "revision_evidence_link": "A decision carries evidence_refs or observed_findings_ref; revise points to a new cycle version whose previous_version identifies the current version.",
+    "decision_model_note": "Serialization view of the existing Decision; no new top-level research object.",
+    "revision_decision_fields": [
+      "cycle_id",
+      "version",
+      "action",
+      "reason",
+      "evidence_refs",
+      "observed_findings_ref",
+      "next_action"
+    ],
+    "revision_decision_previous_version_required_when": "action=revise; the new cycle version previous_version points to the current version.",
+    "revision_decision_action_semantics": {
+      "keep": "close or continue the current cycle under the current direction",
+      "revise": "create a new cycle version whose previous_version points to the current version",
+      "narrow": "close or continue with a narrower claim or scope",
+      "defer": "close or leave a stated continuation action",
+      "stop": "close the current branch or leave an explicit recovery condition"
+    },
+    "native_checker_support_scope": {
+      "task_and_decision": "D51 task-context and existing Decision serialization view",
+      "preparation": "D53 preparation and study-bridge references",
+      "plan_seal": "Harness standard archived plan-seal ACK",
+      "execution": "Harness bounded-run receipt with PID, cwd and current task binding",
+      "other_platforms": "Equivalent existing platforms remain valid. Use their native records with an appropriate adapter or human review; the native checker does not require conversion to the Harness-native seal or runner."
+    },
+    "historical_window_policy": {
+      "time_scope_location": "cycle.synthesis.time_scope",
+      "time_scope_required_fields": [
+        "mode",
+        "as_of",
+        "study_target",
+        "refresh_before_study"
+      ],
+      "time_scope_conditional_fields": {
+        "refresh_record_ref": "required and readable when a current-target historical window reaches data_and_plan with refresh_before_study=true; a current-target historical window at data_and_plan cannot proceed without it",
+        "historical_scope_reason": "required for study_target=same_historical_window"
+      },
+      "study_target_values": [
+        "current",
+        "same_historical_window"
+      ],
+      "default_study_target": "current",
+      "historical_window_current_target": {
+        "mode": "historical_window",
+        "study_target": "current",
+        "required_for": "data_and_plan",
+        "refresh_before_study": true,
+        "refresh_record_ref": "required and readable",
+        "valid_refresh": "targeted evidence retrieval or a reasoned applicability review explaining why existing evidence still applies",
+        "minimum_new_paper_count": null,
+        "boolean_false_bypass": "not_allowed"
+      },
+      "same_historical_window_target": {
+        "study_target": "same_historical_window",
+        "required": [
+          "historical_scope_reason",
+          "as_of or original cutoff"
+        ],
+        "window_outside_sources_required": false
+      },
+      "same_historical_window_in_current_mode": "not_applicable"
+    },
+    "revision_decision_evidence_requirement": "At least one evidence_refs entry or a readable observed_findings_ref supports the action.",
+    "direction_intents": {
+      "default": "study",
+      "values": [
+        "study",
+        "review_delivery",
+        "continue_reading",
+        "retain",
+        "defer",
+        "stop"
+      ],
+      "study": "Non-empty question and method IDs resolve to the evidence map and align with one another.",
+      "nonstudy": "Question/method arrays may be empty; any supplied IDs still resolve. Keep reasons, alternatives, dependencies and change conditions.",
+      "next_stage": "Only a selected study intent enters data_and_plan or later computational stages; other intents can independently close or continue the review route."
+    },
+    "version_families": {
+      "cycle": "Coordination record version, independent of the versions of referenced inputs.",
+      "discussion": "Retain the original real discussion/version during same-scope stage advancement.",
+      "source_and_evidence": "Use the referenced material own version labels and record byte identities; do not derive them from the cycle version.",
+      "first_plan": "Keep the actual sealed plan/version while stage records advance. New scope/plan versions follow the original seal and D51 continuity rules."
+    },
+    "same_task_evidence_reuse": "Evaluation and evidence revision may use the same actual run bound to the same D51 task/iteration/context. A stage-record update alone does not require rerunning. Changed task identity, scope or plan requires appropriate new task binding; retained historical evidence stays explicitly historical.",
+    "native_adapter_scope": "The first checker consumes native D53 source/evidence/bridge, D51 task/context/delivery, standard plan seals and successful bounded-run completion evidence. Other platform formats and failed/incomplete computational paths remain with their explicit adapter or human review; a structural needs_work report is not a direction to rerun."
+  },
+  "existing_public_interfaces": [
+    "docs/methods/guides/research-preparation.md",
+    "docs/methods/guides/task-continuity.md",
+    "docs/methods/guides/resource-gap-loop.md",
+    "docs/methods/guides/plan-seal-and-first-execution.md",
+    "docs/methods/guides/artifact-producer-consumer.md",
+    "docs/methods/guides/statistical-units-and-selection.md",
+    "docs/methods/guides/biological-explanation-and-handoff.md",
+    "machine/design/research-preparation.json",
+    "machine/design/task-continuity.json",
+    "machine/design/resource-gap-loop.json"
+  ],
+  "example_boundary": "The existing D53 Splice preparation example may be used as a retrospective input. It is not a new discussion, experiment, mapping, or scientific validation. Fixtures used by the checker are synthetic program data.",
+  "implementation_and_acceptance": {
+    "native_checker": "scripts/research_support/research_cycle.py",
+    "tests": "tests/research_support/test_research_cycle.py",
+    "synthetic_test_result": {
+      "passed": 12,
+      "exit_code": 0
+    },
+    "actual_material_walkthrough": "Prepared Splice brief -> ready; pending actual choice -> waiting_human. No human choice was manufactured.",
+    "documentation_validation": "Current documentation and inventory receipt is maintained at repository machine/history/documentation-refresh.json.",
+    "public_summary": "machine/history/research-guidance-cycle.json at repository root",
+    "scientific_acceptance": "not_assessed"
+  },
+  "limits": [
+    "A completed discussion record captures an actual human input, but the reasonableness of a choice is reviewed in its research context.",
+    "Structural and identity checks do not validate the synthesis, data semantics, causal interpretation, or scientific conclusion.",
+    "Not every research task needs all six stages; route through only the stages required by its decision and authorization.",
+    "The native checker supports D51/D53 records, the Harness standard archived seal, and bounded-run receipts; other equivalent platforms remain valid through an appropriate adapter or human review."
+  ]
+}

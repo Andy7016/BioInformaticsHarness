@@ -12,4 +12,6 @@ In the diagnostic example, the base residual reports `u2` and `u3`; `u3` has no 
 
 The handoff example has no environment probe. For a real preflight, provide the interpreter path, a working directory under the project root, required imports, and a finite timeout. After the producer finishes, a receiver should run the receiver phase independently.
 
+To connect a literature synthesis with direction choices and later work, use the [research-cycle records](research-cycle/README.md). Their discussion template starts with a pending choice; an actual conversation supplies the decision and constraints.
+
 For a research case with a real producer and consumer, see the [artifact handoff guide](../../docs/methods/guides/artifact-producer-consumer.md) and [public case examples](../../../examples/).

@@ -1,0 +1,87 @@
+{
+  "schema": "harness.research-preparation-study-bridge/v1",
+  "preparation_id": "",
+  "review_version": "",
+  "transition": {
+    "decision": "",
+    "decided_on": "",
+    "reason": "",
+    "alternatives_considered": [],
+    "source_ledger_ref": {
+      "path": "",
+      "version": ""
+    },
+    "evidence_map_ref": {
+      "path": "",
+      "version": ""
+    },
+    "selected_question_ids": [],
+    "selected_finding_ids": []
+  },
+  "study": {
+    "study_id": "",
+    "iteration_id": "",
+    "objective": "",
+    "research_question": "",
+    "owner": "",
+    "work_root": ""
+  },
+  "selected_approach": {
+    "method_id": "",
+    "reason": "",
+    "alternatives": [],
+    "change_condition": ""
+  },
+  "data_requirements": [
+    {
+      "requirement_id": "",
+      "source_criteria": "",
+      "version_or_release": "",
+      "license_or_access_terms": "",
+      "availability": "",
+      "entity_and_measurement_semantics": "",
+      "required_fields_and_ids": [],
+      "coverage_and_denominator": "",
+      "information_use": [],
+      "qualification_condition": ""
+    }
+  ],
+  "evaluation_design": {
+    "claim_object": "",
+    "observed_unit": "",
+    "independent_unit": "",
+    "selection_and_split_rule": "",
+    "protected_evaluation_boundary": "",
+    "unresolved_unit_or_leakage_questions": []
+  },
+  "resource_gap": {
+    "status": "",
+    "reference": "",
+    "next_decision": ""
+  },
+  "first_plan": {
+    "path": "",
+    "version": "",
+    "seal_status": "",
+    "acceptance_gates": []
+  },
+  "first_audit": {
+    "required_before_execution": "",
+    "reason": "",
+    "captured_code_config_and_input": [],
+    "inclusion_cleaning_split_effects_to_record": []
+  },
+  "first_artifact_seam": {
+    "producer": "",
+    "saved_artifact_and_version": "",
+    "reader": "",
+    "downstream_event": "",
+    "status": ""
+  },
+  "budget_and_acceptance": {
+    "budget_or_limit": "",
+    "stop_conditions": [],
+    "acceptance_conditions": [],
+    "next_unmet_gate": ""
+  }
+}

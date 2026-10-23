@@ -1,0 +1,79 @@
+{
+  "schema": "harness.research-preparation-evidence-map/v1",
+  "preparation_id": "fictional-review-coverage",
+  "definitions": [],
+  "findings": [
+    {
+      "finding_id": "F01",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "选择评价方式前，先说明矩阵中的对象和预测事件。",
+      "scope_conditions": [
+        "Fictional example only"
+      ],
+      "author_reports": [
+        {
+          "source_id": "S01",
+          "locator": "entire fictional paragraph",
+          "summary": "目标不同需要不同标签和评价。"
+        }
+      ],
+      "cross_source_synthesis": "本例先确定要发现未知分组还是预测指定类别。",
+      "researcher_inference": "",
+      "evidence": [
+        {
+          "source_id": "S01",
+          "work_id": "WS01",
+          "evidence_unit_id": "example-source-one",
+          "relation": "supports",
+          "basis": "Supplied fictional text."
+        }
+      ]
+    },
+    {
+      "finding_id": "F02",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "缺失处理需联系原因与用途评价，再选择是否补充或收窄。",
+      "scope_conditions": [
+        "Fictional example only"
+      ],
+      "author_reports": [
+        {
+          "source_id": "S02",
+          "locator": "entire fictional paragraph",
+          "summary": "缺失原因和目标用途改变处理选择。"
+        }
+      ],
+      "cross_source_synthesis": "本例比较不填补与填补的目标相关验证，再决定流程。",
+      "researcher_inference": "",
+      "evidence": [
+        {
+          "source_id": "S02",
+          "work_id": "WS02",
+          "evidence_unit_id": "example-source-two",
+          "relation": "supports",
+          "basis": "Supplied fictional text."
+        }
+      ]
+    }
+  ],
+  "disagreements": [],
+  "method_candidates": [],
+  "questions": [],
+  "hypothesis_review": {
+    "status": "not_applicable",
+    "reason": "Fictional interface demonstration",
+    "hypotheses": []
+  },
+  "narrative": {
+    "main_line": "A fictional map demonstration",
+    "outline": [],
+    "figure_or_table_ideas": [],
+    "glossary": []
+  },
+  "review_decision": {
+    "status": "review_delivered",
+    "reason": "Fictional state only",
+    "unresolved_questions": [],
+    "next_action": "Human semantic appraisal"
+  }
+}

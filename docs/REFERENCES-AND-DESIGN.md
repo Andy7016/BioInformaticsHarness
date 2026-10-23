@@ -148,6 +148,31 @@ The observations below describe organization choices in versioned first-party RE
 | [UCI Molecular Biology (Splice-junction Gene Sequences), dataset 69, DOI 10.24432/C5M888](https://archive.ics.uci.edu/dataset/69/molecular-biology-splice-junction-gene-sequences). | [D52](../core/docs/design/29-evidence-gap-control.md) separates available records from the biological relations required for an evaluation unit. | [Resource-gap guide](../core/docs/methods/guides/resource-gap-loop.md); Splice preparation checks the actual archive and source definitions. |
 | [Theodoris CV, Xiao L, Chopra A, et al. Transfer learning enables predictions in network biology. Nature. 2023;618:616–624](https://doi.org/10.1038/s41586-023-06139-9). The inspected author manuscript and supplement distinguish directional outputs and functional endpoints. | The selected evidence endpoint must fit the claim. The resource-control architecture is this project's design. | [Resource-gap guide](../core/docs/methods/guides/resource-gap-loop.md); exact reading scope and source relationships remain in the [source ledger](../machine/source-design-index.jsonl). |
 
+## Review coverage and closure
+
+| Source and observation | Design use | Implementation and acceptance |
+|---|---|---|
+| Three independent review tasks and one same-question Medium repeat. Both same-question deliveries covered 6/9 frozen relationships; Medium delivered earlier with less output. | [D55](../core/docs/design/32-review-coverage-and-closure.md) connects purpose-specific maps, gap value, bounded followup and stopping decisions. | [Guide](../core/docs/methods/guides/review-coverage-and-closure.md), [native interface](../core/machine/design/review-coverage.json), [example](../core/examples/research-support/preparation/coverage-example/README.md), [iteration evidence](../machine/history/review-coverage-iteration.json). |
+
+The review tasks used published review questions as held-out context. Their identities, exact reading boundaries and original scores remain in the [source ledger](../machine/source-design-index.jsonl). This workflow is a project design derived from those observations.
+
 ## Citation and evidence records
 
 The [core bibliography](../core/REFERENCES.md) is the reader-facing citation list; [BibTeX](../core/REFERENCES.bib) supplies full citation metadata. The [machine bibliography](../core/references.json) keeps source versions and reading scopes. The [source-design ledger](../machine/source-design-index.jsonl) records relation type, acceptance status, and private archive locators for each row.
+
+## 研究前期准备
+
+| 来源与动机 | 形成的设计 | 可用实现与验收入口 |
+|---|---|---|
+| 既有论文案例、阅读范围与条件方法指导；本轮综述优先需求 | [D53：前期准备的两条路线](../core/docs/design/30-research-preparation-routes.md) | [研究入口](../core/docs/methods/guides/research-preparation.md)、[综述路线](../core/docs/methods/guides/review-first-preparation.md)、[模板与填写例](../core/examples/research-support/preparation/README.md) |
+| 既有资料分流实现和公开包入口清点 | [资料获取](../core/docs/methods/source-acquisition-routing.md) | [公开脚本](../core/scripts/acquisition/route_sources.py)、[配置](../core/config/source-routing.json)、[工具与实际测试记录](../core/machine/tools/source-acquisition.json) |
+
+本轮整合已有指导和项目需求。Splice 填写例沿用此前核查结果，帮助解释记录之间的关系；正式文献案例数量沿用原索引。
+
+## 从综合到共同选择与后续研究
+
+| 来源与动机 | 形成的设计 | 可用实现与验收入口 |
+|---|---|---|
+| 项目对完整研究推进与人的解释讨论的需求；既有准备、任务连续性、资源缺口和生物学交接方法 | [D54：条件性研究指导闭环](../core/docs/design/31-research-guidance-cycle.md) | [推进指南](../core/docs/methods/guides/research-guidance-cycle.md)、[讨论与阶段模板](../core/examples/research-support/research-cycle/README.md)、[接口与验收记录](../machine/history/research-guidance-cycle.json) |
+
+本次把已有组件接成可讨论、可执行和可返回的研究路线。两份已有研究用于回看阶段之间的关系；三份独立综述在原冻结条件下完成并比较；新的跨阶段科学应用另行检验。

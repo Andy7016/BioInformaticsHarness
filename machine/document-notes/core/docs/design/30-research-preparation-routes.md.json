@@ -1,0 +1,19 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/design/30-research-preparation-routes.md",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D53",
+      "date": "2026-10-22",
+      "reason": "Connect question-led and review-first preparation, conditionally bridge to data/first plan, and expose the independent acquisition tool.",
+      "new_sources_or_designs": [
+        "D53"
+      ],
+      "technical_records": [
+        "core/machine/design/research-preparation.json",
+        "core/machine/tools/source-acquisition.json"
+      ],
+      "acceptance": "local transport tests, bounded live metadata/fullTextXML and preparation interface walkthrough; literature synthesis quality not newly validated"
+    }
+  ]
+}

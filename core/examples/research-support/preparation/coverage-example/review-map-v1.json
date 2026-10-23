@@ -1,0 +1,88 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "fictional-review-coverage",
+  "version": "map-v1",
+  "previous_map_ref": null,
+  "change_reason": "Initial fictional map.",
+  "purpose": {
+    "kind": "method_map",
+    "objective": "说明目标、评价与缺失输入处理的选择关系。",
+    "audience": "准备选择方法的研究者。"
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map-v1.json",
+  "report_ref": "report-v1.md",
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "不同目标怎样改变标签和评价？",
+      "why_it_matters": "先确定研究目标再选择评价。",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S01"
+      ],
+      "finding_ids": [
+        "F01"
+      ],
+      "synthesis_locator": {
+        "excerpt": "先区分发现未知分组与预测指定类别，再让标签和评价与目标相符。"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B02",
+      "question": "缺失输入时怎样选择处理与评价？",
+      "why_it_matters": "这是本轮方法地图希望解释的另一项关系。",
+      "essential_for_purpose": true,
+      "coverage_state": "read_not_synthesized",
+      "source_ids": [
+        "S02"
+      ],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B03",
+      "question": "选择哪个具体软件实现？",
+      "why_it_matters": "本轮先建立方法关系，具体实现可随后选择。",
+      "essential_for_purpose": false,
+      "coverage_state": "not_searched",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "A01",
+      "branch_ids": [
+        "B02"
+      ],
+      "route": "synthesize_existing",
+      "owner": "example_reviewer",
+      "reason": "相关材料已存在，先整理条件与用途。",
+      "expected_decision_change": "确定是否填补所需的评价，而不是只增加方法名。",
+      "budget": {
+        "max_minutes": 20,
+        "max_sources": 0
+      },
+      "status": "planned",
+      "result_refs": [],
+      "result_summary": "",
+      "observation": null
+    }
+  ],
+  "decision": {
+    "action": "continue_targeted",
+    "reason": "关键分支B02尚未形成综合，先整理已有材料。",
+    "remaining_branch_ids": [
+      "B02",
+      "B03"
+    ],
+    "next_owner": "example_reviewer",
+    "next_action": "在给定边界内完成B02，再复核地图。"
+  }
+}

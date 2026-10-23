@@ -1,0 +1,57 @@
+{
+  "schema": "harness.research-preparation-plan/v1",
+  "preparation_id": "",
+  "version": "",
+  "route": "",
+  "purpose": "",
+  "scope": {
+    "biological_object": "",
+    "system_or_population": "",
+    "level_or_scale": "",
+    "intended_use": "",
+    "initial_focus": "",
+    "key_terms": [],
+    "boundaries": {
+      "include": [],
+      "exclude": []
+    }
+  },
+  "starting_point": {
+    "question_or_topic": "",
+    "current_understanding": "",
+    "uncertainties": [],
+    "hypothesis_policy": ""
+  },
+  "search_intent": {
+    "platforms": [],
+    "planned_queries": [],
+    "date_or_time_range": "",
+    "selection_rules": {
+      "include": [],
+      "exclude": []
+    }
+  },
+  "reading_scope": {
+    "expected_source_kinds": [],
+    "materials_to_read_when_relevant": [],
+    "scope_notes": ""
+  },
+  "review_exit": {
+    "goal": "",
+    "readiness_conditions": [],
+    "possible_decisions": [
+      "review_delivered",
+      "continue_targeted_reading",
+      "defer",
+      "stop",
+      "transition_to_study"
+    ],
+    "decision": "",
+    "decision_reason": "",
+    "coverage_snapshot": ""
+  },
+  "revision": {
+    "supersedes_version": "",
+    "change_reason": ""
+  }
+}

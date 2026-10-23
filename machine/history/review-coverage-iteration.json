@@ -1,0 +1,118 @@
+{
+  "schema": "harness.review-coverage-iteration/v1",
+  "decision_id": "D55",
+  "date": "2026-10-23",
+  "status": "native_and_known_case_application_accepted",
+  "basis": {
+    "kind": "first_party_research_process_observation",
+    "reviews": [
+      {
+        "id": "review:libbrecht-noble-2015",
+        "kind": "held_out_review_context",
+        "title": "Libbrecht MW, Noble WS. Machine learning applications in genetics and genomics. Nature Reviews Genetics. 2015;16:321–332. DOI10.1038/nrg3920.",
+        "url": "https://doi.org/10.1038/nrg3920"
+      },
+      {
+        "id": "review:luecken-theis-2019",
+        "kind": "held_out_review_context",
+        "title": "Luecken MD, Theis FJ. Current best practices in single-cell RNA-seq analysis: a tutorial. Molecular Systems Biology. 2019;15:e8746. DOI10.15252/msb.20188746.",
+        "url": "https://doi.org/10.15252/msb.20188746"
+      },
+      {
+        "id": "review:torrisi-2020",
+        "kind": "held_out_review_context",
+        "title": "Torrisi M, Pollastri G, Le Q. Deep learning methods in protein structure prediction. Computational and Structural Biotechnology Journal. 2020;18:1301–1310. DOI10.1016/j.csbj.2019.12.011.",
+        "url": "https://doi.org/10.1016/j.csbj.2019.12.011"
+      }
+    ],
+    "experiment": "Three D53-frozen independent review tasks; one same-question R1 Medium repeat. Parent targets held out during research; exposure/date details in private evidence.",
+    "original_substantive_scores": {
+      "r1_xhigh": "6/9",
+      "r2_xhigh": "7/10",
+      "r3_xhigh": "8/10",
+      "r1_medium": "6/9"
+    },
+    "r1_durations_seconds": {
+      "xhigh": 5466.736,
+      "medium": 3927.036
+    },
+    "r1_output_tokens": {
+      "xhigh": 116018,
+      "medium": 70250
+    },
+    "r1_case_gate": "Medium did not meet predeclared >=8/9 plus two formerly thin points repaired; efficiency-only observation.",
+    "causal_boundary": "Single same-topic repeat with CLI/search/date/tool covariates. R2/R3 are cross-topic context. No no-Harness comparison."
+  },
+  "design_borrowing": "Operationalize existing D53 coverage/scope/stopping obligations; reuse source/evidence records and D54/D52 decisions. Published reviews supply held-out questions, not an author-endorsed control algorithm.",
+  "implementation": [
+    "core/docs/design/32-review-coverage-and-closure.md",
+    "core/docs/methods/guides/review-coverage-and-closure.md",
+    "core/machine/design/review-coverage.json",
+    "core/scripts/research_support/review_coverage.py",
+    "core/examples/research-support/preparation/review-map.template.json",
+    "core/examples/research-support/preparation/coverage-example/README.md"
+  ],
+  "validation": {
+    "program_tests": {
+      "targeted": 24,
+      "research_support_regression": 104,
+      "status": "pass",
+      "archive_evidence": "machine/reviews/2026-10-review-coverage-iteration/parent-tests/final-after-receipt-guard.json"
+    },
+    "independent_review": {
+      "initial": "request_changes",
+      "recheck": "needs_changes",
+      "final": "accept_current_bounded_scope",
+      "issues_closed": [
+        "D53 nested artifact field",
+        "empty map readiness",
+        "missing-input output alias",
+        "noncritical targeted work",
+        "optional read gap and terminal choices"
+      ],
+      "archive_evidence": "machine/reviews/2026-10-review-coverage-iteration/independent-review/final-recheck/report.json"
+    },
+    "four_case_application": {
+      "cases": 4,
+      "native_positive": 4,
+      "forced_delivery_negative": 4,
+      "all_expected_verdicts": true,
+      "artifacts_copied_bytes": 2963110,
+      "source": "Selected actual original source bytes, recorded reading locators and unmodified original reports; explicit adapters preserve originals.",
+      "archive_evidence": "machine/reviews/2026-10-review-coverage-iteration/application-parent-acceptance.json",
+      "parent_repairs": [
+        "Clarify R2 software-platform meaning against the original evaluation question",
+        "Narrow representative R2 excerpt to its actually bound source set"
+      ],
+      "evidence_scope": "Post-hoc known-gap mapping and new bounded plans; no new literature retrieval or execution of the followup plans."
+    },
+    "scientific_effect_of_new_workflow": "not_assessed",
+    "native_examples": {
+      "cli_runs": 6,
+      "status": "pass",
+      "fresh_and_relocated_roots": true,
+      "source": "first-party fictional fixtures",
+      "archive_evidence": "machine/reviews/2026-10-review-coverage-iteration/parent-tests/example-final-acceptance.json"
+    },
+    "parent_execution_notes": [
+      "Initial example stdout capture used Windows default child encoding; new explicit UTF8 capture succeeded. Original attempts retained.",
+      "Gap array order varies by process; relocation compared branch-keyed semantic content, not raw ordering."
+    ],
+    "final_code_identity": {
+      "bytes": 50253,
+      "sha256": "5c27c91ee633cbdd1f8c5009ad9c6bf0e12e337707aaa8d030d0d946d1d74aed"
+    },
+    "parent_final_input_guard": {
+      "scope": "Reserve optional D53 acquisition.receipt_path as a declared input/output-alias guard. Scientific/state logic unchanged.",
+      "archive_evidence": "machine/reviews/2026-10-review-coverage-iteration/parent-final-patch/scope.json",
+      "regression": "104 tests passed against final code; this small post-independent patch is parent-validated."
+    }
+  },
+  "archive_evidence": {
+    "scope": "machine/reviews/2026-10-review-coverage-iteration/scope.json",
+    "initial_independent_review": "machine/reviews/2026-10-review-coverage-iteration/independent-review/report.json",
+    "original_medium_comparison": "docs/pilots/2026-10-review-first-medium-comparison/assessment/comparison-r1-medium.json"
+  },
+  "publication_boundary": "Only first-party code/guidance, deidentified process summary and fictional runnable fixtures in public tree. No private paper bodies, source raw tables or research session transcripts exported.",
+  "validated_at_utc": "2026-10-23T05:49:05.511223+00:00"
+}

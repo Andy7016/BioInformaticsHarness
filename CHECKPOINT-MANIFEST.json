@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 1734,
+      "bytes": 3563,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "deb383ac9f411fda9f53264a4b5310acdade0f4269b011ecfccab22d8dd8795d",
+      "sha256": "4c91a600698e5271702fa00768fdb004c28f260fa47fb82559aa0a5d3cfc1ea2",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -167,10 +167,10 @@
       }
     },
     {
-      "bytes": 2399,
+      "bytes": 3191,
       "license": "CC-BY-4.0",
       "path": "README.md",
-      "sha256": "694f579f2babd05a4e9a6d9a8a37c362d5a0b467f2d6c33a61ca0bdfc470a1c0",
+      "sha256": "3bf06598287eaaecc5528dc3c6a6d006177c33757b18774d91310b6c5d26274a",
       "source": {
         "bytes": 3112,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/README.md",
@@ -190,10 +190,10 @@
       }
     },
     {
-      "bytes": 2290,
+      "bytes": 3908,
       "license": "CC-BY-4.0",
       "path": "ROADMAP.zh.md",
-      "sha256": "7cca266f0dd063163ec850af6566b69836029bd3a3bb15b8f90b1f299e8468d2",
+      "sha256": "7245472c2987776c3c2404ac24c0c305b8a19adb3f3baed02bfab60bfde0f77f",
       "source": {
         "bytes": 1604,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/ROADMAP.zh.md",
@@ -287,10 +287,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 2190,
+      "bytes": 2268,
       "license": "CC-BY-4.0",
       "path": "core/LICENSING.md",
-      "sha256": "661624d9e6573d3a2a12fd2619f72cc77fb30c71e4f3834aed0a92f9432a8958",
+      "sha256": "49a998e6014e859892c7ce5b0bdc33f060c6dce6e82004f870ff859d8d86fc6e",
       "source": {
         "path": "LICENSING.md",
         "release_manifest": {
@@ -331,10 +331,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 3223,
+      "bytes": 4703,
       "license": "CC-BY-4.0",
       "path": "core/QUICKSTART.md",
-      "sha256": "171fea85b25b6929136943986e790df0bce929ba2fc39f7ad20a265c5e317948",
+      "sha256": "aeba8004cbf9850d552db911ccbcc4b03a99c563929812463033670b0503085e",
       "source": {
         "path": "package-templates/QUICKSTART.md",
         "release_manifest": {
@@ -360,10 +360,10 @@
       }
     },
     {
-      "bytes": 2721,
+      "bytes": 4008,
       "license": "CC-BY-4.0",
       "path": "core/README.md",
-      "sha256": "bbfcdc3c330d05f46cca5035e6a998c7266349917f252ab06e63e5a6615423fc",
+      "sha256": "9e96dec44eb3efd532a222f5bfc3149f8b4c67fad93139a5049a6686979714e8",
       "source": {
         "path": "package-templates/README.md",
         "release_manifest": {
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 175420,
+      "bytes": 218167,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "d073d1b3952d4f5ad1e5f256143bcbd9089564597c5bad4f122b4130a1a5522c",
+      "sha256": "e433af2567399d3d1a4917ca414c65a650feb448d788b45be6dea66adeb407a0",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -476,10 +476,10 @@
       }
     },
     {
-      "bytes": 7866,
+      "bytes": 8613,
       "license": "CC-BY-4.0",
       "path": "core/THIRD_PARTY.md",
-      "sha256": "6b7bde4001da6a6c028cec813bf7c1d45cabaabd78e90823297b8fa8a994eb7f",
+      "sha256": "15ccc296b0994200491e6b433f5f5b9486249f41be08362467b4afad6c8da2d5",
       "source": {
         "path": "THIRD_PARTY.md",
         "release_manifest": {
@@ -518,6 +518,18 @@
         "sha256": "ced6174bfe0e82b7b7dcd221ac46a379ce5f9c2b185873486b5837f35bbfb4c2"
       },
       "transform": "verbatim"
+    },
+    {
+      "path": "core/config/source-routing.json",
+      "bytes": 1200,
+      "sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/config/source-routing.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
     },
     {
       "bytes": 1008,
@@ -1240,10 +1252,46 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 9846,
+      "path": "core/docs/design/30-research-preparation-routes.md",
+      "bytes": 2888,
+      "sha256": "bd4ed3d707d555e2fdd7530feb58ee3e9605a25346763fc3c38d1add7edc793e",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/design/30-research-preparation-routes.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/design/31-research-guidance-cycle.md",
+      "bytes": 5059,
+      "sha256": "09e10980e1d3f96461f7e412e8a26837b8f249f29f070bd22265525ad8fa8258",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/design/31-research-guidance-cycle.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/design/32-review-coverage-and-closure.md",
+      "bytes": 3171,
+      "sha256": "f8b94c92cbc2b411f998c51d252adf76a74845ee9cf11c33cc941067b0417286",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/design/32-review-coverage-and-closure.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "bytes": 10926,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/README.md",
-      "sha256": "eec30aaac2019de95ce3180100b3170ce3b2cd6d42d10ba354d2bcb6127d99ac",
+      "sha256": "de3dd641a3950b0d1731d32406dbe4e9595bc8519d46bc45de4fd25c9fbd5349",
       "source": {
         "path": "docs/methods/README.md",
         "release_manifest": {
@@ -1994,6 +2042,52 @@
       }
     },
     {
+      "path": "core/docs/methods/guides/research-guidance-cycle.md",
+      "bytes": 9093,
+      "sha256": "b98819035c400485398a64e9da53503959bdddaeee532be7579b1d5189761523",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/guides/research-guidance-cycle.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/docs/methods/guides/research-guidance-cycle.md",
+        "sha256": "c654453cf70a44d5ebc498ab4978ccb87157e61c769360017b394a5a4985f566",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/docs/methods/guides/research-guidance-cycle.md",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "core/docs/methods/guides/research-preparation.md",
+      "bytes": 6460,
+      "sha256": "1c131303f92e8a19df20f0350b9932a6c56f617e1a7a066aee53a1cfad87e94e",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/guides/research-preparation.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/docs/methods/guides/research-preparation.md",
+        "sha256": "885aad50964e4ecd25b0d4b673079e578ad2425fa4fcc288e3d21f61ca46082a",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/docs/methods/guides/research-preparation.md",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
       "path": "core/docs/methods/guides/resource-gap-loop.md",
       "bytes": 2460,
       "sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0",
@@ -2004,6 +2098,41 @@
         "revision": "2026-10-22"
       },
       "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/guides/review-coverage-and-closure.md",
+      "bytes": 7349,
+      "sha256": "9827aa279d5c697288200fb02bea6868d16c9b5e9a7e369889f78ad909989c08",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/guides/review-coverage-and-closure.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/guides/review-first-preparation.md",
+      "bytes": 10343,
+      "sha256": "d07991b456773c173b6745401ebcca7447e52e98ae681b1eb559f2fd3157fb06",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/guides/review-first-preparation.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/docs/methods/guides/review-first-preparation.md",
+        "sha256": "e87c9b41edbba5c50ba37f9e1c9cfc90f3c2610063e9dd6d53f1a9a6c8b69f6e",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/docs/methods/guides/review-first-preparation.md",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "bytes": 10492,
@@ -2221,10 +2350,10 @@
       }
     },
     {
-      "bytes": 8136,
+      "bytes": 9288,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/research-support-tools.md",
-      "sha256": "f87fd5cde1fa5d7bbbde1c53bc1e9b617446c37dc91d8e9057a23a13f1b5e16f",
+      "sha256": "3a03aa5a6982e4c18b34816a688976b2e823f92735c86ac44d1d113e046a62ab",
       "source": {
         "path": "docs/methods/research-support-tools.md",
         "release_manifest": {
@@ -2337,10 +2466,10 @@
       }
     },
     {
-      "bytes": 5098,
+      "bytes": 3600,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/source-acquisition-routing.md",
-      "sha256": "5759bd30086b39bb2c67dd0bf910e155be1de6c66fe124af981a4271b91a92f4",
+      "sha256": "4a9e2f6f240513d6d1bf439c4ac8893f8bda12754414e6ee059a3a83d8de4167",
       "source": {
         "path": "docs/methods/source-acquisition-routing.md",
         "release_manifest": {
@@ -2871,10 +3000,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 1606,
+      "bytes": 1875,
       "license": "CC-BY-4.0",
       "path": "core/examples/research-support/README.md",
-      "sha256": "5f3731080f57cafec2f137f57bc842dfa6565657cb251f80a6f0373b7ad83818",
+      "sha256": "5b430bcc7e6cf8d70a86d8c45eb8941d463f9072b5914890b0a41708e5f2c3a2",
       "source": {
         "path": "examples/research-support/README.md",
         "release_manifest": {
@@ -3093,6 +3222,436 @@
       }
     },
     {
+      "path": "core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md",
+      "bytes": 1915,
+      "sha256": "8a5908369b89eff996ef22d2e8f6f3a4743e305601c0ce2460413d069c93d71a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/README.md",
+      "bytes": 4688,
+      "sha256": "fb4116d218ba446a9ebc807eb11a13c87543db0b8a826d320e3d9bcfe5793bba",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/README.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/examples/research-support/preparation/README.md",
+        "sha256": "0ad067857b72bc59c53c4586b38f72ccb4c2a2ac3944f552df907c94a8c6c8c3",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/examples/research-support/preparation/README.md",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "core/examples/research-support/preparation/REVIEW.template.md",
+      "bytes": 3505,
+      "sha256": "47d072149765923d342fd1cec5bcbbdeebf3694207976e9f8f0cc2032e94b2ce",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/REVIEW.template.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/examples/research-support/preparation/REVIEW.template.md",
+        "sha256": "8e5c0320189720374828c7c8dd601f3c4842ea640bded830a745b6799661f5ee",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/examples/research-support/preparation/REVIEW.template.md",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/README.md",
+      "bytes": 2380,
+      "sha256": "a321e8966af362e414db34baefddd8aab151a6f51a3f79b517dc0c2ba1759b3d",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/README.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v1.json",
+      "bytes": 1579,
+      "sha256": "6326a2fe601e3251ed722918cc220987eeda1ea730040ab734720a344f02f534",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v1.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v2.json",
+      "bytes": 2460,
+      "sha256": "071fb2966424841e030ecd9419103d1f108a83a56859a564ef034acf56baf51f",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v2.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/fixture-observation.json",
+      "bytes": 301,
+      "sha256": "a728d87171dcbfcaeff9af1e3e464a34b546bb40590213d9cf0ef283ab4c9d4e",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/fixture-observation.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-narrow.md",
+      "bytes": 253,
+      "sha256": "34d3e891b5918f5dc4324a154356b2570bf27f5771d6a58295c13afa27ebaae2",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/report-narrow.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-v1.md",
+      "bytes": 253,
+      "sha256": "8a6a5c24aadbe2418438187b89fbfc86bd9d8af391917912ec9caf515692490b",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/report-v1.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-v2.md",
+      "bytes": 332,
+      "sha256": "d408a81bbe6cfc7134ab9437e1a778ef41fd84274a8bd58bb584c64207d6bb4e",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/report-v2.md",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-narrow.json",
+      "bytes": 2400,
+      "sha256": "4cc7ac3ba65948d6c500ee18b1dcde8bc00d22c062aea99c7254c63e13a6ce75",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/review-map-narrow.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-v1.json",
+      "bytes": 2739,
+      "sha256": "a715bf7f428e076996697772e8e34d667427124e7151916d111be8999162a109",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/review-map-v1.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-v2.json",
+      "bytes": 3212,
+      "sha256": "b25eb3da615f578549a78420744c0c81f5d9e84290d2af159f4047ef89500758",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/review-map-v2.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-ledger.json",
+      "bytes": 3523,
+      "sha256": "3ba9aaa8714067f08b5b56a507cffda5fa1dfcd8a471bb373541218e39b3032e",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/source-ledger.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-one.txt",
+      "bytes": 203,
+      "sha256": "ac3d79d8e6b53ecc6067b1286ce792e2ac285f5f0301ff99a6f55b72f78773b4",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/source-one.txt",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-two.txt",
+      "bytes": 248,
+      "sha256": "7579e1fd67deb37971fa87bf5c70a3f2164d9d0e5977303b2abf5cca4f810b81",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/coverage-example/source-two.txt",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/evidence-map.template.json",
+      "bytes": 2516,
+      "sha256": "ab3f71c46c7d766dc47557a562b8e27c72cd3f24b3a79527ed31088e11cea390",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/evidence-map.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/preparation-plan.template.json",
+      "bytes": 1187,
+      "sha256": "1e6903a088148aee951918deb08e57d19bb9feea6f165c5dbc5d6b0ab441185f",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/preparation-plan.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/review-map.template.json",
+      "bytes": 943,
+      "sha256": "eb7adbc56cc733dbd33ff83b1b6a94041774ec8a9630b41dee26e32bc0795019",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/review-map.template.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/source-ledger.template.json",
+      "bytes": 1479,
+      "sha256": "7c379991dd4e227804c4a6cee4a59c3ab89d64d729cb8595bf1dcbf386ea5514",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/source-ledger.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/splice-reading.example.json",
+      "bytes": 18412,
+      "sha256": "7d1bb8b7e2b0cb8e917da3079222007c79cb748d07116d81c071e20bc212251a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/splice-reading.example.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/preparation/study-bridge.template.json",
+      "bytes": 1986,
+      "sha256": "3038774bb587abf3fa583226200c02077760f92d93d05816021143fe626e95b5",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/preparation/study-bridge.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md",
+      "bytes": 3071,
+      "sha256": "092ed621f6b46d3a039d983556790e1d62b1f103b28e916eff7fad1fa2df5057",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/README.md",
+      "bytes": 4433,
+      "sha256": "59e448b19e67640add6793c0621267385f9efcafc7039513f68e1bbfafdc651a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/README.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md",
+      "bytes": 4061,
+      "sha256": "382cb94e9f164f11102c314844980f2bbd71cf61dad59625ad769256b9a3ae65",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/cycle.template.json",
+      "bytes": 1090,
+      "sha256": "16cde0d2d3b8398f1e82261f6854c008adde4d2522872f9c4abc5d1a936aa4bd",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/cycle.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/discussion.template.json",
+      "bytes": 825,
+      "sha256": "192907d9361fd10567dd5d2aa0d76d2d3159610f802f581505e5524ea41825ab",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/discussion.template.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/README.md",
+      "bytes": 734,
+      "sha256": "a5cbf8b34975b5727d8e5d549fd27a76cca283fabfab322f39be247dac4c5abc",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/README.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/brief.md",
+      "bytes": 221,
+      "sha256": "3a9c3e6e292fa81983637d3d2279870ff22c6d8b7f6cfee06c0fb39d68e57451",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/brief.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/cycle.json",
+      "bytes": 1479,
+      "sha256": "7c6e9dc641c7be9fc666582a82891e3a54efdca216ebbe252ed0a92407755a0e",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/cycle.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/discussion.json",
+      "bytes": 1207,
+      "sha256": "a4d22331d96f3a89673f31873d5c28fe1032a39d74789f10bd9846bf3f5c9fab",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/discussion.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/evidence-map.json",
+      "bytes": 2672,
+      "sha256": "22bb4718da4dc4793ec8b3aaae1162cacc0dba75ece40c4d5fa2d0c7dd67b973",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/evidence-map.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/source-ledger.json",
+      "bytes": 1792,
+      "sha256": "74ae4895fa183fa4b32030cd49277f332086abb9c8fdb93aca901f57d126ca44",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/source-ledger.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/technical-route.md",
+      "bytes": 146,
+      "sha256": "9774318d9ae945fad5bfb6e7983c648798f7566d973c14c24125194e56f5de2b",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/examples/research-support/research-cycle/offline-fixture/technical-route.md",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "bytes": 26766,
       "license": "Apache-2.0",
       "path": "core/examples/s4pred/describe_entities.py",
@@ -3288,6 +3847,41 @@
       "transform": "verbatim"
     },
     {
+      "path": "core/machine/design/research-guidance-cycle.json",
+      "bytes": 21475,
+      "sha256": "1c3b7db8609384a871cab13a0467075543a47f136fc90d626524c0f067bce308",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/machine/design/research-guidance-cycle.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/machine/design/research-preparation.json",
+      "bytes": 22714,
+      "sha256": "4eb04a4042b7d3b355b403c705a6e84e976a502991fef44fe71b9362b416edf8",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/machine/design/research-preparation.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/machine/design/research-preparation.json",
+        "sha256": "04698318360910b171e8a1eaace9262c38635c6db9bdbc7c515b309260c06da5",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/machine/design/research-preparation.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
       "path": "core/machine/design/resource-gap-loop.json",
       "bytes": 18093,
       "sha256": "f497db20d075fe31151f3d38b21add47952342ce73043cf3985ca5f01c376260",
@@ -3296,6 +3890,18 @@
         "kind": "first-party-documentation-revision",
         "path": "core/machine/design/resource-gap-loop.json",
         "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/machine/design/review-coverage.json",
+      "bytes": 9646,
+      "sha256": "b5953c9e370efe40de8135fc320cc015fb0e6ac04b68380354fe5e971a348085",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/machine/design/review-coverage.json",
+        "revision": "2026-10-23"
       },
       "transform": "first-party-documentation-revision"
     },
@@ -3310,6 +3916,29 @@
         "revision": "2026-10-22"
       },
       "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/machine/tools/source-acquisition.json",
+      "bytes": 5415,
+      "sha256": "6b41dcad8c999ff1ae51a77ca7cc7a66f45d80a79afc0872f362f0594411cd5f",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/machine/tools/source-acquisition.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/machine/tools/source-acquisition.json",
+        "sha256": "4ef105cdc9a42621204d8ef16d248258071ff5edf8b3395d11890479a74ca556",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/machine/tools/source-acquisition.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "bytes": 64341,
@@ -3339,6 +3968,18 @@
         },
         "transform": "verbatim"
       }
+    },
+    {
+      "path": "core/scripts/acquisition/route_sources.py",
+      "bytes": 44905,
+      "sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/scripts/acquisition/route_sources.py",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
     },
     {
       "bytes": 649,
@@ -3476,6 +4117,18 @@
       "transform": "verbatim"
     },
     {
+      "path": "core/scripts/research_support/research_cycle.py",
+      "bytes": 68115,
+      "sha256": "e57b9055960e0b78b3539797540fa23b18eb1e3405eded34852803c3a7ab5fb0",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/scripts/research_support/research_cycle.py",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "core/scripts/research_support/resource_loop.py",
       "bytes": 49957,
       "sha256": "c7811e1d9261e366b00cf6028aa5211b724b5249c938568a01b1a25f3fae817e",
@@ -3484,6 +4137,18 @@
         "kind": "first-party-documentation-revision",
         "path": "core/scripts/research_support/resource_loop.py",
         "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/scripts/research_support/review_coverage.py",
+      "bytes": 50253,
+      "sha256": "5c27c91ee633cbdd1f8c5009ad9c6bf0e12e337707aaa8d030d0d946d1d74aed",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/scripts/research_support/review_coverage.py",
+        "revision": "2026-10-23"
       },
       "transform": "first-party-documentation-revision"
     },
@@ -3634,6 +4299,18 @@
       "transform": "verbatim"
     },
     {
+      "path": "core/tests/acquisition/test_source_routing.py",
+      "bytes": 17821,
+      "sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/tests/acquisition/test_source_routing.py",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "bytes": 4089,
       "license": "Apache-2.0",
       "path": "core/tests/research_support/portable_fixtures.py",
@@ -3737,6 +4414,30 @@
         "sha256": "0d0e90d08b6090573967dbb795319f65a21d3c00e89ca71c8c61f827938a743a"
       },
       "transform": "verbatim"
+    },
+    {
+      "path": "core/tests/research_support/test_research_cycle.py",
+      "bytes": 25467,
+      "sha256": "ab08640c9abc09bb8787b155c635bd2a08165b59d64e19807a2ac3d6ef5f4aad",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/tests/research_support/test_research_cycle.py",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/tests/research_support/test_review_coverage.py",
+      "bytes": 31686,
+      "sha256": "d28ec498d908fd0170e743ae572bba470bf6dbfdf67964e97dbe47c13e1bdf8f",
+      "license": "Apache-2.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/tests/research_support/test_review_coverage.py",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
     },
     {
       "bytes": 8856,
@@ -3941,8 +4642,8 @@
     },
     {
       "path": "docs/REFERENCES-AND-DESIGN.md",
-      "bytes": 57647,
-      "sha256": "b91ae2c85c9169c8d939d3f4dcc84b58bc4f13ae9cff1fe0b23096a65f931be1",
+      "bytes": 60636,
+      "sha256": "0a93d31bb2f2d9660b5b2bc5211307c7fa430a44dc7f452dfd56725277af6467",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -3963,10 +4664,10 @@
       }
     },
     {
-      "bytes": 5322,
+      "bytes": 7989,
       "license": "CC-BY-4.0",
       "path": "docs/history/EVOLUTION.zh.md",
-      "sha256": "ba5a0901d474b4074d7819b4d21982daae8bbfe2911506cfa1d8a973ae36e614",
+      "sha256": "b9437208eaa1903e0f2f190fcf7348cdc5b7e1f0d9cf5573248b082ea1f83da0",
       "source": {
         "bytes": 4655,
         "path": "docs/history/EVOLUTION.zh.md",
@@ -4410,8 +5111,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 2583,
-      "sha256": "e4dc0adeb551d1eedd57f7d0b2f9bd9be6bbbd047d0c8e217d53cdb044986fbd",
+      "bytes": 4775,
+      "sha256": "19f8cb43bf50883d82234be5ad99dfbdeea147330fdd74bf68cae1ddbfd9268f",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -4457,20 +5158,31 @@
     },
     {
       "path": "machine/document-notes/README.md.json",
-      "bytes": 3588,
-      "sha256": "c488f5601b6c46cfa9830fe658746230ccf539b031d08a14fb4f20de47f8965e",
+      "bytes": 4886,
+      "sha256": "9890de744ec899141aed854dd26a664fd012bef342aef04bb8038fc11e6d2647",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/README.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/README.md.json",
+        "sha256": "c488f5601b6c46cfa9830fe658746230ccf539b031d08a14fb4f20de47f8965e",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/README.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
-      "bytes": 2576,
-      "sha256": "927cf3ebafa75835a6e80eada0d78479e449a17d881ac35654c0c1d1e200e129",
+      "bytes": 4769,
+      "sha256": "769e3b9bf5244f8e8f1d9419cca074099428e3442b5ce953658ea2969a865bfa",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -4504,32 +5216,54 @@
     },
     {
       "path": "machine/document-notes/core/LICENSING.md.json",
-      "bytes": 4584,
-      "sha256": "e890357ee5a5823a2c92c4e8577b02a2127f4512d7def1b9b4af4fcf4ed5caee",
+      "bytes": 5229,
+      "sha256": "8e46a6058c2578dfc6a51d651c894e31b0b0364c1be64747f763c9829a6395c2",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/LICENSING.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/LICENSING.md.json",
+        "sha256": "e890357ee5a5823a2c92c4e8577b02a2127f4512d7def1b9b4af4fcf4ed5caee",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/LICENSING.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/QUICKSTART.md.json",
-      "bytes": 5982,
-      "sha256": "836307a3efd87344bc1c544f7b2d34b95bab0c5ef230f68f03ba9a49aa1b6776",
+      "bytes": 7280,
+      "sha256": "259545ad17bf0779bc62e55c811adf69ed46a92f7e986445bee86321611b2614",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/QUICKSTART.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/QUICKSTART.md.json",
+        "sha256": "836307a3efd87344bc1c544f7b2d34b95bab0c5ef230f68f03ba9a49aa1b6776",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/QUICKSTART.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/README.md.json",
-      "bytes": 3019,
-      "sha256": "17ebd12c9c67048f3685b5cef37bfdb2889717e03c16fdbbd2377ec810dbab92",
+      "bytes": 5213,
+      "sha256": "ac0af474bf6c7b23019140a897d3a016a424aef29e90043ab41908a3f92f06e5",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -4563,15 +5297,26 @@
     },
     {
       "path": "machine/document-notes/core/THIRD_PARTY.md.json",
-      "bytes": 7016,
-      "sha256": "8879f56dc2a1835c62b3841fdcfc7a46e2ee4e9d7fae66ba5da652b062f525e7",
+      "bytes": 7661,
+      "sha256": "854d71bf82ba8b36a26d50ddbf8a320cfea3abc92724800d1238ed441304f6cc",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/THIRD_PARTY.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/THIRD_PARTY.md.json",
+        "sha256": "8879f56dc2a1835c62b3841fdcfc7a46e2ee4e9d7fae66ba5da652b062f525e7",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/THIRD_PARTY.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/docs/ARCHIVE_POINTERS.md.json",
@@ -4886,9 +5631,56 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/document-notes/core/docs/design/30-research-preparation-routes.md.json",
+      "bytes": 763,
+      "sha256": "d83a85c0498ab5d7481cfc45704470b876955c29c457a4c32e8e17a61ef7ce61",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/design/30-research-preparation-routes.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/design/30-research-preparation-routes.md.json",
+        "sha256": "7a78c5c812ad43902bf1b2eef51975f949bb807c2f727fbf243a84253ac9e7b0",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/design/30-research-preparation-routes.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/31-research-guidance-cycle.md.json",
+      "bytes": 800,
+      "sha256": "ed6c4072a6cc8801c38d22cbe1ab249c7fb2684465b08371e288c3308582bbb0",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/design/31-research-guidance-cycle.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/32-review-coverage-and-closure.md.json",
+      "bytes": 1004,
+      "sha256": "c7e2eb2f1006e134c1af7c21727c368d6175d874f7aa8aa49a1ce48ca3127931",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/design/32-review-coverage-and-closure.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
-      "bytes": 24048,
-      "sha256": "0a4f1f2f310a6b41d874d565ba7788753b2e9f6654f33da94a0c91eb4df319dd",
+      "bytes": 26256,
+      "sha256": "709c77cfe4edb64b808be513179b9418bd7a566d478c1a094194c15caf3e94fa",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5220,6 +6012,52 @@
       }
     },
     {
+      "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
+      "bytes": 1771,
+      "sha256": "fa23bbf07772928c034c2cd4e43eb97a6d98795e960780e70cf24b581bbc1e44",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
+        "sha256": "4f93b39abd6b9527e416019b24e7adfd3c0fa841e4d845c0160c426d318de886",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/research-preparation.md.json",
+      "bytes": 2377,
+      "sha256": "3d7485723b1f0082bbf2e8f004a5e19cac1cfd13ba7d1b78601fb46d42678784",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/guides/research-preparation.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/guides/research-preparation.md.json",
+        "sha256": "a62375e0f6450d3ac9b44752b1a58fb8f3ea65f510579b696c8a220ef32fee6c",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/guides/research-preparation.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/guides/resource-gap-loop.md.json",
       "bytes": 614,
       "sha256": "afe15a93d5bc3e34e953508b99ceb4132fc4d5c0b424ff045f06b34a03d8498c",
@@ -5230,6 +6068,41 @@
         "revision": "2026-10-22"
       },
       "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
+      "bytes": 1009,
+      "sha256": "1dccb701db619dbe901321e30e0cbcdc5ed92cf55d0f583577e1d9c335d47669",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
+      "bytes": 2386,
+      "sha256": "83dcdd2fd148496a232dd3dd4ad6f8b204bbaeffdaac62a926dfadd1b479dd08",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
+        "sha256": "bb6ab5ac72fe66401453446798950e13d1b7f7809333812f60ddaebd2661bc71",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
@@ -5329,8 +6202,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/research-support-tools.md.json",
-      "bytes": 13346,
-      "sha256": "941d3fa8970f0d50258d844d64dc5545fb49153f688c753a4df2ada290e9ada7",
+      "bytes": 14957,
+      "sha256": "d57bedbcd50a7c61f2645714f9818b44e1a00fa94026ec3e6624ef505143710e",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5388,15 +6261,26 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
-      "bytes": 8529,
-      "sha256": "61c88da69d955bc4ed6277d71bac5a62b951cd7b94346bc645acae68753acf86",
+      "bytes": 9174,
+      "sha256": "4bc07673859067f6c177b9ddc6e6bfa559e39c09736761fce41be985acf165e9",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
+        "sha256": "61c88da69d955bc4ed6277d71bac5a62b951cd7b94346bc645acae68753acf86",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
@@ -5460,15 +6344,26 @@
     },
     {
       "path": "machine/document-notes/core/examples/research-support/README.md.json",
-      "bytes": 2474,
-      "sha256": "f9a19148fbcd47d5846b3f11de2414a8cb6a3d1f57ac634c6e7aafc7920edc0b",
+      "bytes": 3160,
+      "sha256": "10ddc9f67493fc2d0e8dcc638dd8770396303a61dead794338953afd7a269d13",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/examples/research-support/README.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/examples/research-support/README.md.json",
+        "sha256": "f9a19148fbcd47d5846b3f11de2414a8cb6a3d1f57ac634c6e7aafc7920edc0b",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/examples/research-support/README.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/examples/research-support/first-audit/README.md.json",
@@ -5495,21 +6390,221 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/document-notes/core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md.json",
+      "bytes": 784,
+      "sha256": "763ebe979f395af2f3c60978b8f6d734df1a970628264d56c271885e5670ee86",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md.json",
+        "sha256": "22e17707b5b468571c581c31d3a521165fbd99fc65f85f14ca0a25c9d13b9f40",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
+      "bytes": 2385,
+      "sha256": "0aa4707544c6acb9e800c3c2125a312d8fb03af6214fd70af6756640bb8b0cb8",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
+        "sha256": "7b7ed239d301c4772074ce545c99149ca1d89a80fba3be0536630e2a149ff293",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
+      "bytes": 1750,
+      "sha256": "7bacbb0720c2ce1a5bfa0514bd2f9f0d02c7c51819426d8d83e76c867bfae9ab",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
+        "sha256": "354ef923062601f158ea1758922ff448d1c72b4a434a02c7e70afc1c439924e0",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/README.md.json",
+      "bytes": 1023,
+      "sha256": "6645382b3cf7a19e8aaa783a6040592c68220f6d04a0db33f3b70dd2a8a37675",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/README.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-narrow.md.json",
+      "bytes": 1029,
+      "sha256": "09aa9ffadd2672ff6a9f74cc43e5601e0b7651bb5579d0d56896fb1f59cadd81",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-narrow.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v1.md.json",
+      "bytes": 1025,
+      "sha256": "f99d9fa504daea9c2f5af67e17e9074762bbe6c40fb941453538665414d1ff8a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v1.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v2.md.json",
+      "bytes": 1025,
+      "sha256": "431672407b7c935c6bf41254eff418b5c16044a22d9ac42b09102463bb50e7ce",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v2.md.json",
+        "revision": "2026-10-23"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md.json",
+      "bytes": 828,
+      "sha256": "437ad4d13b212fbabdac764160819f1ca04ebab7bc5a7bdd94119791169e39f6",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/README.md.json",
+      "bytes": 809,
+      "sha256": "fc92978e2e3358b8edc528024a451177737b09669d9c2fdd525add0ae7eb6fa6",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/README.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md.json",
+      "bytes": 1165,
+      "sha256": "e1709c88ac53af7e36a9ae84d24ef52691632e86c5cd482617e68775514d03d3",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/README.md.json",
+      "bytes": 825,
+      "sha256": "856c26398dc2575474664d4aae624e3413f93b7906c89fa830f6dffc88688401",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/README.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/brief.md.json",
+      "bytes": 824,
+      "sha256": "8eb9678f2c11f38cf6b577d78da2238cf467165faa2a41959cc21710db2f198a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/brief.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/technical-route.md.json",
+      "bytes": 834,
+      "sha256": "783ed766287648cc6f4d847fe1402b5a7c8b862d9550bbeb527a0ca8e9cbd945",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/technical-route.md.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
-      "bytes": 605,
-      "sha256": "bbd49d43183cae1f92481e05787c8ab9ef2e3999652d1cd1cf5adb341ab98540",
+      "bytes": 2815,
+      "sha256": "0773a1fc43664d5190711acc1372cb315b5a4b56deea89b634a1936518f4793d",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
+        "sha256": "bbd49d43183cae1f92481e05787c8ab9ef2e3999652d1cd1cf5adb341ab98540",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
-      "bytes": 5725,
-      "sha256": "e3698903a03fc6a072d2b5a6735c2cfeff46e8d34cd962d2f3f2cc7e4defc3e3",
+      "bytes": 7933,
+      "sha256": "0b3783bc34cad0a53926c712bb1f2e02486aa75f6407fe41abc1b82c0bc5ee99",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5590,8 +6685,8 @@
     },
     {
       "path": "machine/documentation-policy.json",
-      "bytes": 4319,
-      "sha256": "a33ef07e51b1afe3b46e8d8ebddf0dfb1f5d4e6038da8bb44d4d126733c87c45",
+      "bytes": 6989,
+      "sha256": "cca0a1bc5ce94cac76a563dedbfafca16e92af13ecf1fb938b1ade9999ac5909",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5648,8 +6743,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 72289,
-      "sha256": "c2d617a577163f7f888c1a57fd4785484a97e9faf151345fc5b32337832f56ef",
+      "bytes": 93307,
+      "sha256": "56fb57d20be5f6e1d0519a664d6534d14125ddf7a5856498e107b3d088d1815c",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5670,6 +6765,18 @@
       }
     },
     {
+      "path": "machine/history/research-guidance-cycle.json",
+      "bytes": 2789,
+      "sha256": "928aa939c6cf4c58cac9e48fbfc92468f7002e2ca840ef5289cd2b85a365cfe0",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/history/research-guidance-cycle.json",
+        "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/history/resource-completion-before-D52.json",
       "bytes": 13614,
       "sha256": "e37fb5c3361878ae7d467d0b784d9a292385d690ebe0b62dfd72958b0f123401",
@@ -5678,6 +6785,18 @@
         "kind": "first-party-documentation-revision",
         "path": "machine/history/resource-completion-before-D52.json",
         "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/history/review-coverage-iteration.json",
+      "bytes": 6181,
+      "sha256": "9e976ccbb4f592f20f1c26f2e8909729ce1a075c37074c878abd1a0ea1e34049",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/history/review-coverage-iteration.json",
+        "revision": "2026-10-23"
       },
       "transform": "first-party-documentation-revision"
     },
@@ -5707,8 +6826,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 179554,
-      "sha256": "d428317fa6e72b115fd762a5a050f6bbf18470a584fdd6b9ad163c69cec3b994",
+      "bytes": 184178,
+      "sha256": "0a3c27ca69f506632679417d04fcdf5fab7296b959227058d570ceb88c5c2bc0",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

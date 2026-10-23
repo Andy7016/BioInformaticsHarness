@@ -61,3 +61,9 @@
 | [Scholium](https://github.com/Aaronlves/Scholium) | 固定版本与 GPL-3.0 见 [`references.json`](references.json) | 采纳研究文档为权威记录的原则；未复制代码 |
 
 CPython 3.7.6、scikit-learn 0.21.3 和 NumPy 1.17.0 的第一方 README 仅作为结构写作参考。公开文档保留链接、版本和原创风格观察，不收录上游 README 正文。
+
+## 研究准备工具的可选依赖
+
+资料获取工具使用项目自身的路由代码和配置。计划生成使用标准库；显式执行 HTTP 获取时使用者另行安装 Requests。已测试的 Requests 2.31.0 分发元数据标示 Apache-2.0；本包提供调用代码，依赖库由使用者环境提供。配置、源码来源和实际测试范围见[获取接口记录](machine/tools/source-acquisition.json)。
+
+前期准备的机器记录模板采用 Apache-2.0；叙述式研究计划模板、指南和 Splice 资源阅读说明采用 CC BY 4.0。填写例保留 UCI Dataset 69 的署名和来源定位，原网页与学术原文由使用者从来源取得。

@@ -1,0 +1,9 @@
+{
+  "schema": "harness.fictional-observation/v1",
+  "fictional": true,
+  "status": "provided_example",
+  "elapsed_minutes": 9,
+  "new_sources": 0,
+  "scientific_execution": "not_performed",
+  "purpose": "Prewritten fixture for completed-action interface; no actual timed research claimed."
+}

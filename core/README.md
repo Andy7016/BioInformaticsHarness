@@ -4,11 +4,16 @@ BioInformaticsHarness is a small research toolkit for bioinformatics model studi
 
 ## Start here
 
-1. Read the [quickstart](QUICKSTART.md) and run one of its examples from the core directory.
-2. Choose a relevant topic from the [method guide](docs/methods/README.md). Each card explains when to use a method, what to measure, and which alternatives are appropriate.
-3. For project context, see the [public design and source index](../docs/REFERENCES-AND-DESIGN.md) and the [research history](../docs/history/EVOLUTION.zh.md).
+1. Start a new topic with the [research preparation guide](docs/methods/guides/research-preparation.md). Choose a focused question or a [review-first route](docs/methods/guides/review-first-preparation.md) that develops the evidence and method landscape before deciding on a study.
+2. Read the [quickstart](QUICKSTART.md) and run one of its examples from the core directory. The [acquisition guide](docs/methods/source-acquisition-routing.md) provides the entry for selected DOI, PMCID and source URLs.
+3. Choose a relevant topic from the [method guide](docs/methods/README.md). Each card explains when to use a method, what to measure, and which alternatives are appropriate.
+4. For project context, see the [public design and source index](../docs/REFERENCES-AND-DESIGN.md) and the [research history](../docs/history/EVOLUTION.zh.md).
 
-Most core commands use Python 3.11 or newer and the standard library. The bounded runner uses the optional `psutil` package when you need process-tree CPU and memory observations. Core commands do not install dependencies or download data.
+Most core commands use Python 3.11 or newer and the standard library. The bounded runner uses the optional `psutil` package when you need process-tree CPU and memory observations. The acquisition tool uses optional `requests` for explicitly requested downloads; its default mode creates a plan with the standard library. Install dependencies in your chosen environment.
+
+For a study that moves from a review to a new direction, follow the [research guidance cycle](docs/methods/guides/research-guidance-cycle.md): explain the evidence, discuss the choice with the researcher, connect the selected question to data and a plan, then revisit the choice after evaluation.
+
+For a review that needs a wider methods map or a clear stopping decision, use the [coverage and closure guide](docs/methods/guides/review-coverage-and-closure.md) and its [small runnable example](examples/research-support/preparation/coverage-example/README.md). Begin with a question map, inspect remaining gaps, and choose bounded followup or a reasoned scope.
 
 ## Examples
 
@@ -24,4 +29,4 @@ To work on the core, run the tests described in [QUICKSTART](QUICKSTART.md), add
 
 ## Evidence and license
 
-[Evidence summary](EVIDENCE.zh.md) reports the completed Splice and Yeast studies and explains what the public examples contain. First-party code and templates use Apache-2.0; project documentation uses CC BY 4.0. The [license guide](LICENSING.md) explains attribution and how to handle data, dependencies, and model states.
+[Evidence summary](EVIDENCE.zh.md) reports the completed Splice and Yeast studies and explains what the public examples contain. First-party code, machine record templates and fixtures use Apache-2.0; project documentation and narrative plan templates use CC BY 4.0. The [license guide](LICENSING.md) explains attribution and how to handle data, dependencies, and model states.

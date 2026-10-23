@@ -1,0 +1,53 @@
+{
+  "schema": "harness.research-preparation-source-ledger/v1",
+  "preparation_id": "synthetic-preparation-001",
+  "search_runs": [],
+  "sources": [
+    {
+      "source_id": "synthetic-source-001",
+      "work_id": "synthetic-work-001",
+      "version_family_id": "synthetic-work-001-family",
+      "kind": "synthetic fixture",
+      "bibliography": {
+        "authors": [],
+        "title": "Invented source for structural testing",
+        "venue_or_repository": "Fixture only",
+        "year": "2026",
+        "doi_or_identifier": "fixture:synthetic-source-001",
+        "url": "",
+        "version_or_release": "fixture-v1",
+        "published_or_updated_on": "2026-10-22"
+      },
+      "relation_to_work": "No real work is represented.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "selected",
+        "reason": "Needed only to test the evidence-map reference path."
+      },
+      "acquisition": {
+        "status": "metadata_only",
+        "license_or_access_terms": "not applicable to invented fixture text",
+        "artifact_path": null,
+        "receipt_path": null
+      },
+      "reading": {
+        "status": "not_read",
+        "parts_read": [],
+        "locator_notes": "Synthetic fixture; no paper exists."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "single invented record",
+        "shared_dataset_or_cohort": "not applicable",
+        "independence_note": "not scientific evidence"
+      }
+    }
+  ],
+  "coverage_snapshot": {
+    "fixed_on": "2026-10-22",
+    "scope_version": "fixture-v1",
+    "included_source_ids": ["synthetic-source-001"],
+    "excluded_source_ids": [],
+    "unavailable_or_unread_source_ids": [],
+    "remaining_gaps": ["All content is invented and has no scientific meaning."]
+  }
+}

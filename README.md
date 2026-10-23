@@ -13,7 +13,9 @@ git clone https://github.com/vvcchh0/BioInformaticsHarness.git
 cd BioInformaticsHarness
 ```
 
-按照 [快速入门](core/QUICKSTART.md) 试用交接、诊断和证据整理工具。运行真实模型应用时，按案例说明安装科学计算依赖。
+从新主题开始时，先选择[研究前期准备路线](core/docs/methods/guides/research-preparation.md)。希望先看清领域时，可按[综述优先](core/docs/methods/guides/review-first-preparation.md)梳理证据、分歧和问题，再决定下一步。
+
+按照 [快速入门](core/QUICKSTART.md) 试用资料获取、交接、诊断和证据整理工具。运行真实模型应用时，按案例说明安装科学计算依赖。
 
 ## 示例
 
@@ -25,6 +27,10 @@ cd BioInformaticsHarness
 
 | 想了解什么 | 从这里读起 |
 | --- | --- |
+| 怎样把综述推进到研究与后续决定 | [研究推进主线](core/docs/methods/guides/research-guidance-cycle.md) |
+| 怎样准备一个新课题 | [前期准备与模板](core/docs/methods/guides/research-preparation.md) |
+| 怎样先完成一份详实综述 | [综述优先路线](core/docs/methods/guides/review-first-preparation.md) |
+| 怎样取得已选文献与原件 | [资料获取入口](core/docs/methods/source-acquisition-routing.md) |
 | 怎样选择研究方法 | [方法指南](core/docs/methods/README.md) |
 | 怎样向人解释结果 | [生物学解释与交接](core/docs/methods/guides/biological-explanation-and-handoff.md) |
 | 参考了哪些工作，怎样用于设计 | [参考来源与设计索引](docs/REFERENCES-AND-DESIGN.md) |

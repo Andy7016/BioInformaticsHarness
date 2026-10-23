@@ -1,0 +1,40 @@
+{
+  "schema": "research-support.direction-discussion.v1",
+  "discussion_id": "",
+  "cycle_id": "",
+  "version": "discussion-v1",
+  "status": "prepared",
+  "brief_ref": "",
+  "technical_route_ref": "",
+  "directions": [
+    {
+      "direction_id": "",
+      "intent": "study",
+      "question_ids": [],
+      "method_ids": [],
+      "reason": "",
+      "cost_and_dependencies": "",
+      "alternative": "",
+      "change_condition": ""
+    }
+  ],
+  "recommendation": {
+    "direction_id": "",
+    "reason": ""
+  },
+  "discussion": {
+    "held_at": null,
+    "human_input_ref": null,
+    "points_raised": [],
+    "unresolved": []
+  },
+  "decision": {
+    "status": "pending",
+    "authority": null,
+    "selected_direction_id": null,
+    "source_ref": null,
+    "made_at": null,
+    "reason": null,
+    "constraints": []
+  }
+}

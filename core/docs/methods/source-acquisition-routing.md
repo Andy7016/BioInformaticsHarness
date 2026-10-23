@@ -1,65 +1,51 @@
-# 有界资料获取分流
+# 查找之后：取得原件并保留来源
 
-用这张方法卡规划公开资料的发现与下载，并为每次请求留下有界回执。设计来源和配置入口见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。下载后阅读原件，再分别记录论文版本、实验执行和科学解释。
+先按[研究前期准备](guides/research-preparation.md)或[综述优先](guides/review-first-preparation.md)确定问题和检索范围。主题检索可使用文献数据库、已有搜索工具和参考文献追踪，并保存实际检索式与筛选理由。本工具接收已经选定的 DOI、PMCID 或原件地址，生成获取计划，或按预算取回文件。
 
-## 使用范围
+## 从 core 目录开始
 
-默认命令只生成计划，不联网：
+公开仓库中的脚本、配置和离线测试都随核心包提供。以下命令从 `core` 目录运行；单独取得核心包时，从其根目录运行。
 
-```powershell
-python scripts/acquisition/route_sources.py --doi 10.1371/journal.pone.0310814 --out routing/doi-plan.json
+生成 DOI 获取计划：
+
+```text
+python -B scripts/acquisition/route_sources.py --doi 10.1371/journal.pone.0310814 --out .scratch/preparation/doi-plan.json
 ```
 
-计划入口有三种：
+计划模式使用 Python 标准库。需要实际下载时，在自己的环境安装可选依赖：
 
-- `--doi DOI`：依次列出 Crossref、Europe PMC 元数据，以及 NCBI 元数据和 OpenAlex 单 DOI 备用路线；备用路线只是计划记录，不由本轮公开额度自动触发。
-- `--pmcid PMCID`：列出 Europe PMC `fullTextXML` 原件请求。
-- `--url URL --kind metadata|fulltext|supplement|review|repository --format json|xml|pdf|html|text`：为已知原件创建一条请求。URL 必须是 HTTP(S)，不得含用户信息或普通凭据 query，不得指向回环或私网地址；可解析主机也会检查其地址。签名 query 可以在内存中用于一次执行，但会被脱敏且不能从保存计划重放。
-
-显式 `--execute` 才发起请求。执行结果和原件写入新的 `--out-dir`；存在的原件、计划和回执都不会被覆盖。示例：
-
-```powershell
-python scripts/acquisition/route_sources.py `
-  --doi 10.1371/journal.pone.0310814 `
-  --execute --max-requests 2 `
-  --out-dir references/tools/source-routing-2026-10-18
+```text
+python -m pip install requests
 ```
 
-本轮真实学术 smoke 显式把 `--max-requests` 限为 2；Crossref 和 Europe PMC 是推荐的两个请求。一般执行只受配置的总预算（默认 8，重定向也计入）和单文件上限（默认 8 MiB）约束。测试通过 `session_factory` 注入离线会话，不需要安装新包或连接 GitHub。
+再选择一个新的输出目录，显式执行：
 
-计划阶段只读取配置并构造 URL，不解析主机名、不打开 HTTP；主机名的私网解析检查只在显式执行阶段进行。
-
-## 路线与预算
-
-学术域使用独立的 `requests.Session`，不会继承环境代理。GitHub、raw、codeload、`githubusercontent.com` 及配置中的相关域走专用代理路线；其他域按 Direct 处理，并在回执中记录服务和主机。
-
-重定向不由客户端自动跟随。每次响应计入 HTTP 预算，最多跟随配置的 3 跳；每跳读取 `Location`、验证目标并根据新域重新选择 Direct 或 GitHub 代理。请求之间默认间隔 1 秒，arXiv 域默认间隔 3 秒。没有自动重试，也没有遇到 403/429 后盲试备用服务。403、429 或响应额度头为 0 会停止该服务的后续请求；预算耗尽会把剩余计划项标为 `budget_exhausted`。
-
-响应以流式方式读取，连接、读取和总流式用时分别有配置上限。`Content-Length` 或流式字节数超过上限会停止且不留下原件。JSON/XML 解析失败、PDF 头不匹配或文本无法按 UTF-8 解码会记为 `format_invalid`，不会标为 `downloaded`。成功文件先写随机临时文件，再在确认目标仍不存在时原子落盘；既有文件只能得到 `cache_hit`（有匹配旧回执）或 `existing_file_preserved`。
-
-## 回执和隐私边界
-
-计划和回执使用 `source-routing-v1`，每项记录请求 ID、脱敏 URL、来源类型、期望格式、服务、路线、代理、状态、HTTP 次数、重定向数、字节数、文件身份、格式检查和最终状态。错误只保留有限长度的类型和文本。带签名参数的 URL 在计划、回执和重定向记录中只保留 scheme、主机、路径及 `[signed-query-redacted]`；签名原值仅在当前进程内用于路由，保存的计划不能重放它。
-
-回执中的 `firecrawl_calls`、`api_keys_used`、`emails_used` 明确为 0/false。脚本不读取密钥、不调用 Firecrawl、不获取 GitHub API 配额，也不把有 `hasSuppl` 的元数据标记当作附件已下载。`downloaded` 只表示本脚本实际取得并通过格式身份检查的那个文件；解析、阅读、作者报告和科学验收仍需另行记录。
-
-## Python 接口
-
-```python
-from scripts.acquisition.route_sources import (
-    build_plan,
-    execute_plan,
-    load_config,
-    route_url,
-)
-
-config = load_config()
-plan = build_plan(doi="10.1371/journal.pone.0310814", config=config)
-receipt = execute_plan(plan, "routing/example-run", max_requests=2, config=config)
+```text
+python -B scripts/acquisition/route_sources.py --doi 10.1371/journal.pone.0310814 --execute --max-requests 2 --out-dir .scratch/preparation/doi-run-01
 ```
 
-`build_plan` 读取参数并生成计划。`route_url` 返回路线模式、服务、主机和代理信息，可用于查看重定向目标。`execute_plan` 支持替换传输会话，便于在离线环境检查路线与预算逻辑。缺少 `requests` 时计划仍可生成，执行回执会标记依赖缺失；脚本不会自动安装依赖。
+这条命令最多发起两次 HTTP 请求。计划列有 Crossref、Europe PMC、NCBI 与 OpenAlex 元数据路线；执行时按顺序和实际预算处理。输出目录保存获取计划、逐项回执和实际取得的原件。查看逐项结果后，把文件加入来源账本，再阅读与本轮判断有关的内容。
 
-## 证据边界
+## 选择资料入口
 
-运输记录帮助核对请求状态、文件身份和格式。研究者仍需阅读来源内容，并把论文版本、运行配置与研究结论分别交给相应分析。将下载原件保存在研究工作区的 `references/` 目录，将计划和回执保存在 `routing/`，并列出请求数、状态及未覆盖项。
+| 已有信息 | 用法与下一步 |
+|---|---|
+| DOI | 使用 `--doi` 取得书目与原件线索，核对标题和工作版本 |
+| PMCID | 使用 `--pmcid` 规划 Europe PMC 全文 XML 请求 |
+| 正文、补充材料、评审、代码或数据的具体地址 | 使用 `--url`，并给出 `--kind` 与 `--format`；补充材料选择具体附件地址 |
+| 原件超过本次体量或资源预算 | 选用适合该资源的受控下载器或工作流，保留来源、预算与实际获取记录 |
+| 页面需要交互、登录或渲染 | 按任务选择浏览器、出版方下载或渲染工具，保留取得步骤和实际文件 |
+
+多篇文献可按来源和问题分批获取，汇总到同一来源账本。附件按文件分别获取和阅读。正文、补充材料、预印本、终版以及相关实现通过同一工作与版本关系连接，阅读位置写入[来源账本](../../examples/research-support/preparation/source-ledger.template.json)。
+
+## 路线、预算和已有文件
+
+学术资源采用 Direct；GitHub 及其原件域采用配置的代理，本机配置为 `127.0.0.1:7890`。需要其他本机代理时，复制[配置文件](../../config/source-routing.json)，通过 `--config` 选择它。程序按每次请求和重定向的目标重新选择路线。
+
+预算同时限定请求数、单文件体量和等待时间。服务拒绝、限流、格式问题和预算耗尽分别进入回执，供下一步选择。已有文件和回执保留原状；新尝试使用新目录。
+
+## 取得之后怎样使用
+
+记录实际来源、日期、版本、访问条件、文件和阅读位置。引用应回到支持该句的原文、表格、补充材料或代码。对分歧、方法候选与新问题的综合，继续按[综述优先指南](guides/review-first-preparation.md)展开；涉及数据和评价单位的资格问题，转到[资源缺口闭环](guides/resource-gap-loop.md)。
+
+完整参数、Python 接口、回执字段、限制和测试范围见[工具接口记录](../../machine/tools/source-acquisition.json)。

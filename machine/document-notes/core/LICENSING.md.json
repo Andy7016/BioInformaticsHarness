@@ -16,5 +16,20 @@
     "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
   ],
   "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "source_sha256": "19c2fba03971b0aa483c2bf610466f5c7ffe1b825d3671c15f231d4888bf17b7"
+  "source_sha256": "19c2fba03971b0aa483c2bf610466f5c7ffe1b825d3671c15f231d4888bf17b7",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-22-D53",
+      "date": "2026-10-22",
+      "reason": "Connect question-led and review-first preparation, conditionally bridge to data/first plan, and expose the independent acquisition tool.",
+      "new_sources_or_designs": [
+        "D53"
+      ],
+      "technical_records": [
+        "core/machine/design/research-preparation.json",
+        "core/machine/tools/source-acquisition.json"
+      ],
+      "acceptance": "local transport tests, bounded live metadata/fullTextXML and preparation interface walkthrough; literature synthesis quality not newly validated"
+    }
+  ]
 }

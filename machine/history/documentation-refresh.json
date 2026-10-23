@@ -4,10 +4,10 @@
   "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
   "frozen_tag": "v0.1.0-alpha.2",
   "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "documentation_revision": "2026-10-22",
+  "documentation_revision": "2026-10-23",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "1eab02afa9c503a74cb3b4005814e7c95b26e670",
+    "head": "0e66fe0ea3cd04a75493ee98d157749f0debaf1a",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 1734,
-      "current_sha256": "deb383ac9f411fda9f53264a4b5310acdade0f4269b011ecfccab22d8dd8795d"
+      "current_bytes": 3563,
+      "current_sha256": "4c91a600698e5271702fa00768fdb004c28f260fa47fb82559aa0a5d3cfc1ea2"
     },
     {
       "path": "LICENSING.md",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 2399,
-      "current_sha256": "694f579f2babd05a4e9a6d9a8a37c362d5a0b467f2d6c33a61ca0bdfc470a1c0"
+      "current_bytes": 3191,
+      "current_sha256": "3bf06598287eaaecc5528dc3c6a6d006177c33757b18774d91310b6c5d26274a"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -63,8 +63,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:ROADMAP.zh.md",
       "previous_sha256": "f3302d833b016dd8fe549b36a94a3d4adc88c241e78eb926cc381508844f15b4",
-      "current_bytes": 2290,
-      "current_sha256": "7cca266f0dd063163ec850af6566b69836029bd3a3bb15b8f90b1f299e8468d2"
+      "current_bytes": 3908,
+      "current_sha256": "7245472c2987776c3c2404ac24c0c305b8a19adb3f3baed02bfab60bfde0f77f"
     },
     {
       "path": "core/EVIDENCE.zh.md",
@@ -81,8 +81,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/LICENSING.md",
       "previous_sha256": "19c2fba03971b0aa483c2bf610466f5c7ffe1b825d3671c15f231d4888bf17b7",
-      "current_bytes": 2190,
-      "current_sha256": "661624d9e6573d3a2a12fd2619f72cc77fb30c71e4f3834aed0a92f9432a8958"
+      "current_bytes": 2268,
+      "current_sha256": "49a998e6014e859892c7ce5b0bdc33f060c6dce6e82004f870ff859d8d86fc6e"
     },
     {
       "path": "core/QUICKSTART.md",
@@ -90,8 +90,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/QUICKSTART.md",
       "previous_sha256": "c15eedc79a66fe5c8eef7eafdec686e78bcc5d680ab9a8229ff25a9adeea5906",
-      "current_bytes": 3223,
-      "current_sha256": "171fea85b25b6929136943986e790df0bce929ba2fc39f7ad20a265c5e317948"
+      "current_bytes": 4703,
+      "current_sha256": "aeba8004cbf9850d552db911ccbcc4b03a99c563929812463033670b0503085e"
     },
     {
       "path": "core/README.md",
@@ -99,8 +99,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/README.md",
       "previous_sha256": "c08f6f22d7102790d613cb0c5a1775a9130a6744a6f334d23ce6bd611d5c3fc3",
-      "current_bytes": 2721,
-      "current_sha256": "bbfcdc3c330d05f46cca5035e6a998c7266349917f252ab06e63e5a6615423fc"
+      "current_bytes": 4008,
+      "current_sha256": "9e96dec44eb3efd532a222f5bfc3149f8b4c67fad93139a5049a6686979714e8"
     },
     {
       "path": "core/REFERENCES.bib",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 175420,
-      "current_sha256": "d073d1b3952d4f5ad1e5f256143bcbd9089564597c5bad4f122b4130a1a5522c"
+      "current_bytes": 218167,
+      "current_sha256": "e433af2567399d3d1a4917ca414c65a650feb448d788b45be6dea66adeb407a0"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -135,8 +135,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/THIRD_PARTY.md",
       "previous_sha256": "e3fa23a6cdb05bff4941573d66c4696b35233e36e6b6cd64c5b92ac93730dcf7",
-      "current_bytes": 7866,
-      "current_sha256": "6b7bde4001da6a6c028cec813bf7c1d45cabaabd78e90823297b8fa8a994eb7f"
+      "current_bytes": 8613,
+      "current_sha256": "15ccc296b0994200491e6b433f5f5b9486249f41be08362467b4afad6c8da2d5"
+    },
+    {
+      "path": "core/config/source-routing.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1200,
+      "current_sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb"
     },
     {
       "path": "core/docs/ARCHIVE_POINTERS.md",
@@ -369,13 +376,34 @@
       "current_sha256": "3382a81e55b05b8ca8f1591eaae8184b96bee3f0ae083d74c61f621bec2c62b2"
     },
     {
+      "path": "core/docs/design/30-research-preparation-routes.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2888,
+      "current_sha256": "bd4ed3d707d555e2fdd7530feb58ee3e9605a25346763fc3c38d1add7edc793e"
+    },
+    {
+      "path": "core/docs/design/31-research-guidance-cycle.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5059,
+      "current_sha256": "09e10980e1d3f96461f7e412e8a26837b8f249f29f070bd22265525ad8fa8258"
+    },
+    {
+      "path": "core/docs/design/32-review-coverage-and-closure.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3171,
+      "current_sha256": "f8b94c92cbc2b411f998c51d252adf76a74845ee9cf11c33cc941067b0417286"
+    },
+    {
       "path": "core/docs/methods/README.md",
       "change": "modified",
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 9846,
-      "current_sha256": "eec30aaac2019de95ce3180100b3170ce3b2cd6d42d10ba354d2bcb6127d99ac"
+      "current_bytes": 10926,
+      "current_sha256": "de3dd641a3950b0d1731d32406dbe4e9595bc8519d46bc45de4fd25c9fbd5349"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -603,11 +631,39 @@
       "current_sha256": "a4a1b66cf942469965523bf6a012d86951c68e85f06c8a5a19a02b01e6ac8c5e"
     },
     {
+      "path": "core/docs/methods/guides/research-guidance-cycle.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9093,
+      "current_sha256": "b98819035c400485398a64e9da53503959bdddaeee532be7579b1d5189761523"
+    },
+    {
+      "path": "core/docs/methods/guides/research-preparation.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6460,
+      "current_sha256": "1c131303f92e8a19df20f0350b9932a6c56f617e1a7a066aee53a1cfad87e94e"
+    },
+    {
       "path": "core/docs/methods/guides/resource-gap-loop.md",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 2460,
       "current_sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0"
+    },
+    {
+      "path": "core/docs/methods/guides/review-coverage-and-closure.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7349,
+      "current_sha256": "9827aa279d5c697288200fb02bea6868d16c9b5e9a7e369889f78ad909989c08"
+    },
+    {
+      "path": "core/docs/methods/guides/review-first-preparation.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 10343,
+      "current_sha256": "d07991b456773c173b6745401ebcca7447e52e98ae681b1eb559f2fd3157fb06"
     },
     {
       "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
@@ -685,8 +741,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/research-support-tools.md",
       "previous_sha256": "45a9622621b6f53303fd6432260868cd7cde59b844151fb6fa1d781d09e2fd9b",
-      "current_bytes": 8136,
-      "current_sha256": "f87fd5cde1fa5d7bbbde1c53bc1e9b617446c37dc91d8e9057a23a13f1b5e16f"
+      "current_bytes": 9288,
+      "current_sha256": "3a03aa5a6982e4c18b34816a688976b2e823f92735c86ac44d1d113e046a62ab"
     },
     {
       "path": "core/docs/methods/review-receipt.md",
@@ -721,8 +777,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/source-acquisition-routing.md",
       "previous_sha256": "3f731303cdc2f205214cd57fc4534a72bde2d2c08696e85588e403b0d68c6f12",
-      "current_bytes": 5098,
-      "current_sha256": "5759bd30086b39bb2c67dd0bf910e155be1de6c66fe124af981a4271b91a92f4"
+      "current_bytes": 3600,
+      "current_sha256": "4a9e2f6f240513d6d1bf439c4ac8893f8bda12754414e6ee059a3a83d8de4167"
     },
     {
       "path": "core/docs/methods/worked-examples/README.md",
@@ -775,8 +831,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/examples/research-support/README.md",
       "previous_sha256": "7c3c6617a824206dbb1552648e2864a6ac2cb34847c815284449555ecb900791",
-      "current_bytes": 1606,
-      "current_sha256": "5f3731080f57cafec2f137f57bc842dfa6565657cb251f80a6f0373b7ad83818"
+      "current_bytes": 1875,
+      "current_sha256": "5b430bcc7e6cf8d70a86d8c45eb8941d463f9072b5914890b0a41708e5f2c3a2"
     },
     {
       "path": "core/examples/research-support/first-audit/README.md",
@@ -797,6 +853,258 @@
       "current_sha256": "5ce599d21c8c4d1161564a31c7342da477f5ec266de0872d15600266d73851d4"
     },
     {
+      "path": "core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1915,
+      "current_sha256": "8a5908369b89eff996ef22d2e8f6f3a4743e305601c0ce2460413d069c93d71a"
+    },
+    {
+      "path": "core/examples/research-support/preparation/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4688,
+      "current_sha256": "fb4116d218ba446a9ebc807eb11a13c87543db0b8a826d320e3d9bcfe5793bba"
+    },
+    {
+      "path": "core/examples/research-support/preparation/REVIEW.template.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3505,
+      "current_sha256": "47d072149765923d342fd1cec5bcbbdeebf3694207976e9f8f0cc2032e94b2ce"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2380,
+      "current_sha256": "a321e8966af362e414db34baefddd8aab151a6f51a3f79b517dc0c2ba1759b3d"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v1.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1579,
+      "current_sha256": "6326a2fe601e3251ed722918cc220987eeda1ea730040ab734720a344f02f534"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/evidence-map-v2.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2460,
+      "current_sha256": "071fb2966424841e030ecd9419103d1f108a83a56859a564ef034acf56baf51f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/fixture-observation.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 301,
+      "current_sha256": "a728d87171dcbfcaeff9af1e3e464a34b546bb40590213d9cf0ef283ab4c9d4e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-narrow.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 253,
+      "current_sha256": "34d3e891b5918f5dc4324a154356b2570bf27f5771d6a58295c13afa27ebaae2"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-v1.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 253,
+      "current_sha256": "8a6a5c24aadbe2418438187b89fbfc86bd9d8af391917912ec9caf515692490b"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/report-v2.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 332,
+      "current_sha256": "d408a81bbe6cfc7134ab9437e1a778ef41fd84274a8bd58bb584c64207d6bb4e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-narrow.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2400,
+      "current_sha256": "4cc7ac3ba65948d6c500ee18b1dcde8bc00d22c062aea99c7254c63e13a6ce75"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-v1.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2739,
+      "current_sha256": "a715bf7f428e076996697772e8e34d667427124e7151916d111be8999162a109"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/review-map-v2.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3212,
+      "current_sha256": "b25eb3da615f578549a78420744c0c81f5d9e84290d2af159f4047ef89500758"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-ledger.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3523,
+      "current_sha256": "3ba9aaa8714067f08b5b56a507cffda5fa1dfcd8a471bb373541218e39b3032e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-one.txt",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 203,
+      "current_sha256": "ac3d79d8e6b53ecc6067b1286ce792e2ac285f5f0301ff99a6f55b72f78773b4"
+    },
+    {
+      "path": "core/examples/research-support/preparation/coverage-example/source-two.txt",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 248,
+      "current_sha256": "7579e1fd67deb37971fa87bf5c70a3f2164d9d0e5977303b2abf5cca4f810b81"
+    },
+    {
+      "path": "core/examples/research-support/preparation/evidence-map.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2516,
+      "current_sha256": "ab3f71c46c7d766dc47557a562b8e27c72cd3f24b3a79527ed31088e11cea390"
+    },
+    {
+      "path": "core/examples/research-support/preparation/preparation-plan.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1187,
+      "current_sha256": "1e6903a088148aee951918deb08e57d19bb9feea6f165c5dbc5d6b0ab441185f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/review-map.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 943,
+      "current_sha256": "eb7adbc56cc733dbd33ff83b1b6a94041774ec8a9630b41dee26e32bc0795019"
+    },
+    {
+      "path": "core/examples/research-support/preparation/source-ledger.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1479,
+      "current_sha256": "7c379991dd4e227804c4a6cee4a59c3ab89d64d729cb8595bf1dcbf386ea5514"
+    },
+    {
+      "path": "core/examples/research-support/preparation/splice-reading.example.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 18412,
+      "current_sha256": "7d1bb8b7e2b0cb8e917da3079222007c79cb748d07116d81c071e20bc212251a"
+    },
+    {
+      "path": "core/examples/research-support/preparation/study-bridge.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1986,
+      "current_sha256": "3038774bb587abf3fa583226200c02077760f92d93d05816021143fe626e95b5"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3071,
+      "current_sha256": "092ed621f6b46d3a039d983556790e1d62b1f103b28e916eff7fad1fa2df5057"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4433,
+      "current_sha256": "59e448b19e67640add6793c0621267385f9efcafc7039513f68e1bbfafdc651a"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4061,
+      "current_sha256": "382cb94e9f164f11102c314844980f2bbd71cf61dad59625ad769256b9a3ae65"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/cycle.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1090,
+      "current_sha256": "16cde0d2d3b8398f1e82261f6854c008adde4d2522872f9c4abc5d1a936aa4bd"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/discussion.template.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 825,
+      "current_sha256": "192907d9361fd10567dd5d2aa0d76d2d3159610f802f581505e5524ea41825ab"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 734,
+      "current_sha256": "a5cbf8b34975b5727d8e5d549fd27a76cca283fabfab322f39be247dac4c5abc"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/brief.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 221,
+      "current_sha256": "3a9c3e6e292fa81983637d3d2279870ff22c6d8b7f6cfee06c0fb39d68e57451"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/cycle.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1479,
+      "current_sha256": "7c6e9dc641c7be9fc666582a82891e3a54efdca216ebbe252ed0a92407755a0e"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/discussion.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1207,
+      "current_sha256": "a4d22331d96f3a89673f31873d5c28fe1032a39d74789f10bd9846bf3f5c9fab"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/evidence-map.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2672,
+      "current_sha256": "22bb4718da4dc4793ec8b3aaae1162cacc0dba75ece40c4d5fa2d0c7dd67b973"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/source-ledger.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1792,
+      "current_sha256": "74ae4895fa183fa4b32030cd49277f332086abb9c8fdb93aca901f57d126ca44"
+    },
+    {
+      "path": "core/examples/research-support/research-cycle/offline-fixture/technical-route.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 146,
+      "current_sha256": "9774318d9ae945fad5bfb6e7983c648798f7566d973c14c24125194e56f5de2b"
+    },
+    {
+      "path": "core/machine/design/research-guidance-cycle.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 21475,
+      "current_sha256": "1c3b7db8609384a871cab13a0467075543a47f136fc90d626524c0f067bce308"
+    },
+    {
+      "path": "core/machine/design/research-preparation.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 22714,
+      "current_sha256": "4eb04a4042b7d3b355b403c705a6e84e976a502991fef44fe71b9362b416edf8"
+    },
+    {
       "path": "core/machine/design/resource-gap-loop.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -804,11 +1112,25 @@
       "current_sha256": "f497db20d075fe31151f3d38b21add47952342ce73043cf3985ca5f01c376260"
     },
     {
+      "path": "core/machine/design/review-coverage.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9646,
+      "current_sha256": "b5953c9e370efe40de8135fc320cc015fb0e6ac04b68380354fe5e971a348085"
+    },
+    {
       "path": "core/machine/design/task-continuity.json",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 9522,
       "current_sha256": "975a95d461616e4fe02d8acefed51f2aebacda4f145e5ad6c8bf6d83594278eb"
+    },
+    {
+      "path": "core/machine/tools/source-acquisition.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5415,
+      "current_sha256": "6b41dcad8c999ff1ae51a77ca7cc7a66f45d80a79afc0872f362f0594411cd5f"
     },
     {
       "path": "core/references.json",
@@ -820,11 +1142,32 @@
       "current_sha256": "3a0296ec6a36f24d034647040e1d9adb02810fb46a6c83e3eeb30ab009efbf5e"
     },
     {
+      "path": "core/scripts/acquisition/route_sources.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 44905,
+      "current_sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a"
+    },
+    {
+      "path": "core/scripts/research_support/research_cycle.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 68115,
+      "current_sha256": "e57b9055960e0b78b3539797540fa23b18eb1e3405eded34852803c3a7ab5fb0"
+    },
+    {
       "path": "core/scripts/research_support/resource_loop.py",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 49957,
       "current_sha256": "c7811e1d9261e366b00cf6028aa5211b724b5249c938568a01b1a25f3fae817e"
+    },
+    {
+      "path": "core/scripts/research_support/review_coverage.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 50253,
+      "current_sha256": "5c27c91ee633cbdd1f8c5009ad9c6bf0e12e337707aaa8d030d0d946d1d74aed"
     },
     {
       "path": "core/scripts/research_support/run_bounded.py",
@@ -841,6 +1184,27 @@
       "baseline_revision": "764bd88",
       "current_bytes": 29461,
       "current_sha256": "e99543e449c9cfcbc4458ca25249d00e559c2f9643a044e862bdaadb0f162c92"
+    },
+    {
+      "path": "core/tests/acquisition/test_source_routing.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 17821,
+      "current_sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362"
+    },
+    {
+      "path": "core/tests/research_support/test_research_cycle.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 25467,
+      "current_sha256": "ab08640c9abc09bb8787b155c635bd2a08165b59d64e19807a2ac3d6ef5f4aad"
+    },
+    {
+      "path": "core/tests/research_support/test_review_coverage.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 31686,
+      "current_sha256": "d28ec498d908fd0170e743ae572bba470bf6dbfdf67964e97dbe47c13e1bdf8f"
     },
     {
       "path": "core/tests/test_resource_loop.py",
@@ -867,8 +1231,8 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 57647,
-      "current_sha256": "b91ae2c85c9169c8d939d3f4dcc84b58bc4f13ae9cff1fe0b23096a65f931be1"
+      "current_bytes": 60636,
+      "current_sha256": "0a93d31bb2f2d9660b5b2bc5211307c7fa430a44dc7f452dfd56725277af6467"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -876,8 +1240,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:docs/history/EVOLUTION.zh.md",
       "previous_sha256": "6a03308d8feb858189981fb6c32221cd809c2a5950168f40bf36e5e55abc5823",
-      "current_bytes": 5322,
-      "current_sha256": "ba5a0901d474b4074d7819b4d21982daae8bbfe2911506cfa1d8a973ae36e614"
+      "current_bytes": 7989,
+      "current_sha256": "b9437208eaa1903e0f2f190fcf7348cdc5b7e1f0d9cf5573248b082ea1f83da0"
     },
     {
       "path": "docs/plans/RESOURCE-COMPLETION.zh.md",
@@ -947,8 +1311,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2583,
-      "current_sha256": "e4dc0adeb551d1eedd57f7d0b2f9bd9be6bbbd047d0c8e217d53cdb044986fbd"
+      "current_bytes": 4775,
+      "current_sha256": "19f8cb43bf50883d82234be5ad99dfbdeea147330fdd74bf68cae1ddbfd9268f"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -968,15 +1332,15 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3588,
-      "current_sha256": "c488f5601b6c46cfa9830fe658746230ccf539b031d08a14fb4f20de47f8965e"
+      "current_bytes": 4886,
+      "current_sha256": "9890de744ec899141aed854dd26a664fd012bef342aef04bb8038fc11e6d2647"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2576,
-      "current_sha256": "927cf3ebafa75835a6e80eada0d78479e449a17d881ac35654c0c1d1e200e129"
+      "current_bytes": 4769,
+      "current_sha256": "769e3b9bf5244f8e8f1d9419cca074099428e3442b5ce953658ea2969a865bfa"
     },
     {
       "path": "machine/document-notes/core/EVIDENCE.zh.md.json",
@@ -989,22 +1353,22 @@
       "path": "machine/document-notes/core/LICENSING.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4584,
-      "current_sha256": "e890357ee5a5823a2c92c4e8577b02a2127f4512d7def1b9b4af4fcf4ed5caee"
+      "current_bytes": 5229,
+      "current_sha256": "8e46a6058c2578dfc6a51d651c894e31b0b0364c1be64747f763c9829a6395c2"
     },
     {
       "path": "machine/document-notes/core/QUICKSTART.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5982,
-      "current_sha256": "836307a3efd87344bc1c544f7b2d34b95bab0c5ef230f68f03ba9a49aa1b6776"
+      "current_bytes": 7280,
+      "current_sha256": "259545ad17bf0779bc62e55c811adf69ed46a92f7e986445bee86321611b2614"
     },
     {
       "path": "machine/document-notes/core/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3019,
-      "current_sha256": "17ebd12c9c67048f3685b5cef37bfdb2889717e03c16fdbbd2377ec810dbab92"
+      "current_bytes": 5213,
+      "current_sha256": "ac0af474bf6c7b23019140a897d3a016a424aef29e90043ab41908a3f92f06e5"
     },
     {
       "path": "machine/document-notes/core/REFERENCES.md.json",
@@ -1017,8 +1381,8 @@
       "path": "machine/document-notes/core/THIRD_PARTY.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7016,
-      "current_sha256": "8879f56dc2a1835c62b3841fdcfc7a46e2ee4e9d7fae66ba5da652b062f525e7"
+      "current_bytes": 7661,
+      "current_sha256": "854d71bf82ba8b36a26d50ddbf8a320cfea3abc92724800d1238ed441304f6cc"
     },
     {
       "path": "machine/document-notes/core/docs/ARCHIVE_POINTERS.md.json",
@@ -1203,11 +1567,32 @@
       "current_sha256": "890bbb70c69df61810747687f3b90ab182aba3402334f6eef8f8d54e7d7a5b06"
     },
     {
+      "path": "machine/document-notes/core/docs/design/30-research-preparation-routes.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 763,
+      "current_sha256": "d83a85c0498ab5d7481cfc45704470b876955c29c457a4c32e8e17a61ef7ce61"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/31-research-guidance-cycle.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 800,
+      "current_sha256": "ed6c4072a6cc8801c38d22cbe1ab249c7fb2684465b08371e288c3308582bbb0"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/32-review-coverage-and-closure.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1004,
+      "current_sha256": "c7e2eb2f1006e134c1af7c21727c368d6175d874f7aa8aa49a1ce48ca3127931"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 24048,
-      "current_sha256": "0a4f1f2f310a6b41d874d565ba7788753b2e9f6654f33da94a0c91eb4df319dd"
+      "current_bytes": 26256,
+      "current_sha256": "709c77cfe4edb64b808be513179b9418bd7a566d478c1a094194c15caf3e94fa"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -1385,11 +1770,39 @@
       "current_sha256": "d162555f7bd40b47e74884a0c8cc3133ce63168da07cb963c72b7ee2dbc020d7"
     },
     {
+      "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1771,
+      "current_sha256": "fa23bbf07772928c034c2cd4e43eb97a6d98795e960780e70cf24b581bbc1e44"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/research-preparation.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2377,
+      "current_sha256": "3d7485723b1f0082bbf2e8f004a5e19cac1cfd13ba7d1b78601fb46d42678784"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/guides/resource-gap-loop.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 614,
       "current_sha256": "afe15a93d5bc3e34e953508b99ceb4132fc4d5c0b424ff045f06b34a03d8498c"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1009,
+      "current_sha256": "1dccb701db619dbe901321e30e0cbcdc5ed92cf55d0f583577e1d9c335d47669"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2386,
+      "current_sha256": "83dcdd2fd148496a232dd3dd4ad6f8b204bbaeffdaac62a926dfadd1b479dd08"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
@@ -1451,8 +1864,8 @@
       "path": "machine/document-notes/core/docs/methods/research-support-tools.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 13346,
-      "current_sha256": "941d3fa8970f0d50258d844d64dc5545fb49153f688c753a4df2ada290e9ada7"
+      "current_bytes": 14957,
+      "current_sha256": "d57bedbcd50a7c61f2645714f9818b44e1a00fa94026ec3e6624ef505143710e"
     },
     {
       "path": "machine/document-notes/core/docs/methods/review-receipt.md.json",
@@ -1479,8 +1892,8 @@
       "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8529,
-      "current_sha256": "61c88da69d955bc4ed6277d71bac5a62b951cd7b94346bc645acae68753acf86"
+      "current_bytes": 9174,
+      "current_sha256": "4bc07673859067f6c177b9ddc6e6bfa559e39c09736761fce41be985acf165e9"
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
@@ -1521,8 +1934,8 @@
       "path": "machine/document-notes/core/examples/research-support/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2474,
-      "current_sha256": "f9a19148fbcd47d5846b3f11de2414a8cb6a3d1f57ac634c6e7aafc7920edc0b"
+      "current_bytes": 3160,
+      "current_sha256": "10ddc9f67493fc2d0e8dcc638dd8770396303a61dead794338953afd7a269d13"
     },
     {
       "path": "machine/document-notes/core/examples/research-support/first-audit/README.md.json",
@@ -1539,18 +1952,109 @@
       "current_sha256": "ab12d95da5fb68c70399b3e199cba1b455c1894a1e9353ba8346c152b1590eaf"
     },
     {
+      "path": "machine/document-notes/core/examples/research-support/preparation/FIRST-STUDY-PLAN.template.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 784,
+      "current_sha256": "763ebe979f395af2f3c60978b8f6d734df1a970628264d56c271885e5670ee86"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2385,
+      "current_sha256": "0aa4707544c6acb9e800c3c2125a312d8fb03af6214fd70af6756640bb8b0cb8"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1750,
+      "current_sha256": "7bacbb0720c2ce1a5bfa0514bd2f9f0d02c7c51819426d8d83e76c867bfae9ab"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1023,
+      "current_sha256": "6645382b3cf7a19e8aaa783a6040592c68220f6d04a0db33f3b70dd2a8a37675"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-narrow.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1029,
+      "current_sha256": "09aa9ffadd2672ff6a9f74cc43e5601e0b7651bb5579d0d56896fb1f59cadd81"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v1.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1025,
+      "current_sha256": "f99d9fa504daea9c2f5af67e17e9074762bbe6c40fb941453538665414d1ff8a"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/report-v2.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1025,
+      "current_sha256": "431672407b7c935c6bf41254eff418b5c16044a22d9ac42b09102463bb50e7ce"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/HUMAN-DISCUSSION.template.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 828,
+      "current_sha256": "437ad4d13b212fbabdac764160819f1ca04ebab7bc5a7bdd94119791169e39f6"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 809,
+      "current_sha256": "fc92978e2e3358b8edc528024a451177737b09669d9c2fdd525add0ae7eb6fa6"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/SPLICE-DISCUSSION.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1165,
+      "current_sha256": "e1709c88ac53af7e36a9ae84d24ef52691632e86c5cd482617e68775514d03d3"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 825,
+      "current_sha256": "856c26398dc2575474664d4aae624e3413f93b7906c89fa830f6dffc88688401"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/brief.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 824,
+      "current_sha256": "8eb9678f2c11f38cf6b577d78da2238cf467165faa2a41959cc21710db2f198a"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/research-cycle/offline-fixture/technical-route.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 834,
+      "current_sha256": "783ed766287648cc6f4d847fe1402b5a7c8b862d9550bbeb527a0ca8e9cbd945"
+    },
+    {
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 605,
-      "current_sha256": "bbd49d43183cae1f92481e05787c8ab9ef2e3999652d1cd1cf5adb341ab98540"
+      "current_bytes": 2815,
+      "current_sha256": "0773a1fc43664d5190711acc1372cb315b5a4b56deea89b634a1936518f4793d"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5725,
-      "current_sha256": "e3698903a03fc6a072d2b5a6735c2cfeff46e8d34cd962d2f3f2cc7e4defc3e3"
+      "current_bytes": 7933,
+      "current_sha256": "0b3783bc34cad0a53926c712bb1f2e02486aa75f6407fe41abc1b82c0bc5ee99"
     },
     {
       "path": "machine/document-notes/docs/plans/RESOURCE-COMPLETION.zh.md.json",
@@ -1584,8 +2088,8 @@
       "path": "machine/documentation-policy.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4319,
-      "current_sha256": "a33ef07e51b1afe3b46e8d8ebddf0dfb1f5d4e6038da8bb44d4d126733c87c45"
+      "current_bytes": 6989,
+      "current_sha256": "cca0a1bc5ce94cac76a563dedbfafca16e92af13ecf1fb938b1ade9999ac5909"
     },
     {
       "path": "machine/examples/splice-resource-readiness.json",
@@ -1602,11 +2106,25 @@
       "current_sha256": "75600091a44878538b4207f2bdea0d725cfad9afe3f0e0e20a4bcf48acee1119"
     },
     {
+      "path": "machine/history/research-guidance-cycle.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2789,
+      "current_sha256": "928aa939c6cf4c58cac9e48fbfc92468f7002e2ca840ef5289cd2b85a365cfe0"
+    },
+    {
       "path": "machine/history/resource-completion-before-D52.json",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 13614,
       "current_sha256": "e37fb5c3361878ae7d467d0b784d9a292385d690ebe0b62dfd72958b0f123401"
+    },
+    {
+      "path": "machine/history/review-coverage-iteration.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6181,
+      "current_sha256": "9e976ccbb4f592f20f1c26f2e8909729ce1a075c37074c878abd1a0ea1e34049"
     },
     {
       "path": "machine/reviews/documentation-2026-10-22.json",
@@ -1626,8 +2144,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 179554,
-      "current_sha256": "d428317fa6e72b115fd762a5a050f6bbf18470a584fdd6b9ad163c69cec3b994"
+      "current_bytes": 184178,
+      "current_sha256": "0a3c27ca69f506632679417d04fcdf5fab7296b959227058d570ceb88c5c2bc0"
     },
     {
       "path": "tests/test_documentation.py",

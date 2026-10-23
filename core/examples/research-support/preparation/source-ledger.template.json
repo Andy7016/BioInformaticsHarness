@@ -1,0 +1,65 @@
+{
+  "schema": "harness.research-preparation-source-ledger/v1",
+  "preparation_id": "",
+  "search_runs": [
+    {
+      "search_id": "",
+      "platform": "",
+      "query": "",
+      "executed_on": "",
+      "date_or_time_range": "",
+      "filters": [],
+      "status": "",
+      "records_returned": null,
+      "failure_or_limit": ""
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "",
+      "work_id": "",
+      "version_family_id": "",
+      "kind": "",
+      "bibliography": {
+        "authors": [],
+        "title": "",
+        "venue_or_repository": "",
+        "year": "",
+        "doi_or_identifier": "",
+        "url": "",
+        "version_or_release": "",
+        "published_or_updated_on": ""
+      },
+      "relation_to_work": "",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "",
+        "reason": ""
+      },
+      "acquisition": {
+        "status": "",
+        "license_or_access_terms": "",
+        "artifact_path": "",
+        "receipt_path": ""
+      },
+      "reading": {
+        "status": "",
+        "parts_read": [],
+        "locator_notes": ""
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "",
+        "shared_dataset_or_cohort": "",
+        "independence_note": ""
+      }
+    }
+  ],
+  "coverage_snapshot": {
+    "fixed_on": "",
+    "scope_version": "",
+    "included_source_ids": [],
+    "excluded_source_ids": [],
+    "unavailable_or_unread_source_ids": [],
+    "remaining_gaps": []
+  }
+}

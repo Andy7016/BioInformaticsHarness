@@ -1,0 +1,52 @@
+{
+  "schema": "research-support.research-cycle.v1",
+  "cycle_id": "synthetic-cycle-001",
+  "version": "cycle-v1",
+  "previous_version": null,
+  "stage": "human_discussion",
+  "task": {
+    "study_id": "synthetic-study-001",
+    "iteration_id": "synthetic-iteration-001",
+    "task_id": "synthetic-task-001",
+    "objective": "Exercise continuity structure without science."
+  },
+  "synthesis": {
+    "source_ledger_ref": "source-ledger.json",
+    "evidence_map_ref": "evidence-map.json",
+    "report_ref": "brief.md",
+    "question_ids": ["synthetic-question-001"],
+    "time_scope": {
+      "mode": "historical_window",
+      "as_of": "fixture cutoff 2026-10-22",
+      "refresh_before_study": false,
+      "refresh_record_ref": null,
+      "study_target": "same_historical_window",
+      "historical_scope_reason": "This is a synthetic historical reconstruction fixture."
+    }
+  },
+  "direction": {
+    "discussion_ref": "discussion.json",
+    "requires_human_choice": true,
+    "selected_direction_id": null
+  },
+  "study": {
+    "bridge_ref": null,
+    "task_context_ref": null,
+    "first_plan_ref": null,
+    "first_plan_seal_ref": null
+  },
+  "execution": {
+    "run_receipt_refs": [],
+    "evaluation_ref": null,
+    "evidence_refs": [],
+    "delivery_ref": null
+  },
+  "revision": {
+    "decision_ref": null,
+    "next_cycle_ref": null
+  },
+  "next_action": {
+    "owner": "human",
+    "action": "Review the placeholder brief and replace it before any real use."
+  }
+}

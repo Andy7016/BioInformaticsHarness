@@ -1,9 +1,11 @@
 # 研究操作支持工具
 
-版本research-operations-v1.2，2026-10-21。这组可选工具将已有Artifact/Run/Task/Decision整理为可用入口，旧契约和检查器继续有效。D45初版的设计与实际应用见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)；D47新增。
+版本research-operations-v1.3，2026-10-23。这组可选工具将已有Artifact/Run/Task/Decision整理为可用入口，旧契约和检查器继续有效。D45初版的设计与实际应用见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)；D47新增。
 
 | 入口 | 输入→输出 | 适用时解决什么 |
 | --- | --- | --- |
+| `scripts.research_support.review_coverage` | 问题地图、来源账本、证据图和主文→缺口、实际动作与当前收束状态 | [覆盖与收束](guides/review-coverage-and-closure.md)的可选检查，区分提名、取得、选读和已综合 |
+| `scripts.research_support.research_cycle` | 证据图、方向讨论与后续阶段引用→当前衔接状态和下一动作 | [综述到后续研究](guides/research-guidance-cycle.md)的可选检查，分开待讨论、已选择和已执行 |
 | `scripts.research_support.handoff` | 必要文件/用途及可选环境→producer或receiver当前观察 | 工件身份、root路径和实际最小启动预检 |
 | `scripts.research_support.diagnostics` | 预定单位/候选/容差与CSV/TSV矩阵→完整性及有限相容汇总 | 指标冲突的有限候选、经验等值和未解释出口 |
 | `scripts.research_support.evidence` | 显式文件、typed回执与提供的解释→同源JSON索引和README | cache、历史失败、资源缺测、重复回执及导航口径 |
@@ -15,7 +17,7 @@
 
 ## 路径与产物
 
-所有清单内路径及CLI的manifest/plan/matrix/out均采用显式`--root`基准；解析后须留在root内。可使用root内绝对路径。输出新建，拒覆盖已有文件或输入；重试用新目录/文件，保留首次结果。工具只读显式文件，不扫描全硬盘。
+所有清单内路径及CLI的manifest/plan/matrix/out均采用显式`--root`基准；解析后须留在root内。既有工具可使用root内绝对路径；研究周期记录采用相对路径，具体见其契约。输出新建，拒覆盖已有文件或输入；重试用新目录/文件，保留首次结果。工具只读显式文件，不扫描全硬盘。
 
 必要输入缺失或超限是unknown；明确hash冲突、非法路径、重复身份是fail。cache必须明确为非研究证据且required=false，可选缺失单列。工具不替人决定资料资格、独立单位或用途。
 
@@ -54,6 +56,10 @@ API/字段见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DE
 ## 外部生信工具：Proto
 
 [Proto工具调用指引](guides/proto-tool-use.md)说明从研究目标选择工具、取得schema/example/info、满足实际运行前提、回收资产及科学验收的步骤。[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)保留160项目录、10项能力卡和独立服务计费。Proto可承担具体分析或模型执行，以上研究操作工具则继续组织输入身份、消费证据与交接。当前接入已通过元数据查询，模型计算和部署另行验收。
+
+## 从调研到共同选择与后续评价
+
+[研究推进主线](guides/research-guidance-cycle.md)将解释、方向选择、研究桥接、执行和证据修订连接起来。[讨论与阶段记录](../../examples/research-support/research-cycle/README.md)用于保存已准备材料、实际人的意见和下一动作；机器接口与具体检查范围见[契约](../../machine/design/research-guidance-cycle.json)。各阶段按当前问题选择，综述也可作为独立成果结束。
 
 ## 当前任务与资源缺口
 

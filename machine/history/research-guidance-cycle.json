@@ -1,0 +1,66 @@
+{
+  "schema": "harness.research-guidance-cycle-acceptance/v1",
+  "decision_id": "D54",
+  "date": "2026-10-22",
+  "status": "locally_interface_validated",
+  "method": "local structural/interface tests and retrospective evidence mapping; no new biological computation",
+  "human_discussion": {
+    "project_framework": "requested by the user",
+    "new_scientific_direction": "not_yet_chosen"
+  },
+  "frozen_review_trial": {
+    "cases": 3,
+    "guidance_baseline": "D53 frozen before D54",
+    "new_guidance_exposure": false
+  },
+  "scientific_acceptance": "not_assessed",
+  "validated_at_utc": "2026-10-22T14:40:03.133614+00:00",
+  "native_interface_tests": {
+    "passed": 12,
+    "result": "pass",
+    "evidence_kind": "synthetic program integration/negative cases; includes a real synthetic child process",
+    "archive_receipt": "machine/reviews/2026-10-research-guidance-cycle/parent-tests/receipt.json"
+  },
+  "actual_material_interface": {
+    "source": "First-party retrospective UCI Splice resource observations already indexed under D52/D53",
+    "results": [
+      {
+        "stage": "human_discussion",
+        "status": "ready",
+        "exit_code": 0,
+        "pass": true
+      },
+      {
+        "stage": "direction_choice",
+        "status": "waiting_human",
+        "exit_code": 1,
+        "pass": true
+      }
+    ],
+    "archive_receipt": "machine/reviews/2026-10-research-guidance-cycle/actual-material-walkthrough/receipt.json",
+    "human_discussion": "prepared; actual new direction remains pending"
+  },
+  "retrospective_cases": {
+    "count": 2,
+    "cases": [
+      "Optimus data-supplement decision path",
+      "Splice resource qualification and narrowed claim"
+    ],
+    "purpose": "Read existing source-linked records to check stage relationships and missing human discussion; not a new D54-guided scientific experiment."
+  },
+  "parent_review_repairs": [
+    "Future historical refresh becomes due at the study gate.",
+    "Source, discussion, plan and coordination versions remain independent.",
+    "Successive stages may use the same real current-task run.",
+    "Nonstudy intents can close or continue a review.",
+    "Question-to-method links allow a reasoned many-to-many mapping."
+  ],
+  "documentation_receipt": "machine/history/documentation-refresh.json",
+  "archive_acceptance": "machine/reviews/2026-10-research-guidance-cycle/acceptance.json",
+  "remaining_validation": [
+    "Actual human explanation/understanding and research-direction choice.",
+    "Prospective multi-stage study from that choice.",
+    "Scientific adequacy of subsequent evidence and decisions.",
+    "Non-native platform adapters and failed/incomplete computational branches use their own review."
+  ]
+}
