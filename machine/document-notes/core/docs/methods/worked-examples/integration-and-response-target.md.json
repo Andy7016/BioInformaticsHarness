@@ -1,0 +1,22 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/worked-examples/integration-and-response-target.md",
+  "source_text": "# 多组学整合：先明确要预测谁的哪种响应\n\n这是文献启发的假设设计例。目标是在固定药物集合中，对未见过的细胞系预测药物响应。输入为匹配的组学、细胞系和药物身份、响应测量及实验来源；组学资源的存在与相应响应标签的存在分别核对。\n\n## 先把标签、分数和用途接起来\n\nIC50、剂量反应曲线的 AUC、指定条件下的存活率是不同标签；ROC AUC 则是分类评价指标。每个字段保留单位、方向、测量条件、拟合和删失规则，以及药物—细胞系配对关系。\n\nR05 表1的部分摘要行把回归任务与分类指标并列，足以提示回看原始方法和标签定义。本例根据综述筛选路线；确定实现时再核对所选原研究、数据说明和实际字段。\n\n## 先选部署轴，再选整合方式\n\n本例按细胞系及其相关组留出，药物集合保持固定。若问题改为预测未见药物，就需要能表示新药的、部署时可获得的输入，例如结构、靶点、机制或其他有依据的特征，并按新药或目标新颖性轴留出。化学家族留出适合相应的新颖性问题，表示和留出方式都随用途选择。\n\n| 条件 | 可选路线 | 取舍与需要固定的内容 |\n|---|---|---|\n| 对象充分配对、模态尺度可处理、样本量允许 | 早期融合 | 训练内完成预处理与特征选择；检查维数、噪声及缺失带来的选择 |\n| 跨模态关系是问题核心，配对数据和资源足够 | 中间表示或联合模型 | 用单模态和较简单融合检验增加的复杂度是否有价值 |\n| 模态可独立预测，部署时存在缺失模式 | 晚期融合或退回可用单模态 | 在训练内固定可用组件、缺失模式、权重或退回规则；无法支持的模式明确退出 |\n| 多模态未提供稳定的增益或额外测量难取得 | 单模态路线 | 保留可解释、可部署的基线，说明何种证据再考虑整合 |\n\n上述训练内处理对应本例的新细胞系部署。若改为传导式目标，需重新规定可见对象和评价问题。缺失模态的支持是模型和合并规则的具体能力，不能只由“晚期融合”这个名称判断。\n\n## 用共同对象比较，把新增覆盖另报\n\n先在共同可评价的药物—细胞系对象上配对比较单模态与融合，再另报因缺失处理而新增的覆盖及条件表现。原始候选分母、模态齐备情况、失败和退出均保留。配对重复、来源批次与相关细胞系按其依赖关系组织评价和不确定性。\n\n本例把 TCGA 用作组学背景候选；R05 表2未提供本问题所需的配套药物响应数据。若另获匹配的治疗或响应资料，按其实际来源、终点和连接质量判断用途。细胞系响应向患者使用的迁移还需相应患者结局证据。\n\n## 什么结果改变选择，怎样向人交接\n\n若增益在共同对象上消失，把优势解释为覆盖变化；若只在同来源随机划分上成立，优先核查批次和相关对象；若多模态增益不稳定而成本上升，退回较简路线。若标签混合了响应曲线 AUC 与分类分数，先修正任务定义和评价。\n\n交接表列出目标对象、响应单位、可见模态、部署缺失模式、单模态与融合的共同域结果、额外覆盖及测量成本。推荐方案同时写出继续整合、退回单模态或补标签的触发条件。\n\n## 文献与相关指南\n\n- Guna Gouru (2025). [Precision oncology: Computational methods for multi-omics data integration to improve drug response prediction](https://doi.org/10.1017/pcm.2025.10003).\n\n这些综述提供问题与方法关系；本页的组合方案、取舍条件和交接形式由 Harness 整理。各来源的阅读范围见[书目](../../../REFERENCES.md)。相关指导：[统计单位与选择](../guides/statistical-units-and-selection.md)、[信息与状态影响](../guides/information-and-state-effects.md)、[功能与用途验证](../guides/function-and-utility-validation.md)。\n标签与评价字段可联用[指标语义](../cards/metric-semantics.md)。\n",
+  "source_commit": null,
+  "source_sha256": "fcb79cca051025e0ad6ef5ef5210d7d773ed5468109b5617e934102d812aca60",
+  "revisions": [
+    {
+      "date": "2026-10-24",
+      "reason": "Review-derived conditional worked examples and source/use index.",
+      "current_identity": {
+        "bytes": 4150,
+        "sha256": "fcb79cca051025e0ad6ef5ef5210d7d773ed5468109b5617e934102d812aca60"
+      },
+      "technical_refs": [
+        "machine/history/review-derived-worked-examples.json",
+        "core/machine/design/review-derived-worked-examples.json"
+      ],
+      "scientific_execution": false
+    }
+  ]
+}

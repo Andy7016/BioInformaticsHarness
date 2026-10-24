@@ -77,5 +77,20 @@
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",
     "machine/history/review-scope-appraisal.json"
+  ],
+  "revisions": [
+    {
+      "date": "2026-10-24",
+      "reason": "Review-derived conditional worked examples and source/use index.",
+      "current_identity": {
+        "bytes": 63530,
+        "sha256": "424edf44e46d9388bfc46cd7eda4665f3b97aecbc20f319c0ab2ac10d6abd0ff"
+      },
+      "technical_refs": [
+        "machine/history/review-derived-worked-examples.json",
+        "core/machine/design/review-derived-worked-examples.json"
+      ],
+      "scientific_execution": false
+    }
   ]
 }

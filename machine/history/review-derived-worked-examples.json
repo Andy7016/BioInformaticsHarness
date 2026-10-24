@@ -1,0 +1,61 @@
+{
+  "schema": "harness.review-learning-history/v1",
+  "date": "2026-10-24",
+  "baseline_public_commit": "e03d8bdb027db99e15d43285f54868a3b1ef7a28",
+  "population": {
+    "reviews_and_method_guides": 11,
+    "background_articles": 1,
+    "new_conditional_examples": 7,
+    "formal_model_case_increment": 0,
+    "scientific_runs": 0
+  },
+  "reading_register": "core/machine/design/review-derived-worked-examples.json",
+  "source_design_index_rows": [
+    "review-example:measurement-design-and-replication",
+    "review-example:spatial-signal-and-capture",
+    "review-example:representation-and-reference-bias",
+    "review-example:integration-and-response-target",
+    "review-example:history-and-state-inference",
+    "review-example:causal-instruments-and-identifiability",
+    "review-example:sampling-scoring-and-use",
+    "review-learning:reproducibility-background"
+  ],
+  "independent_review": {
+    "initial_verdict": "revise_before_merge",
+    "initial_counts": {
+      "blocker": 0,
+      "should_modify": 6,
+      "can_improve": 3
+    },
+    "resolved_findings": [
+      "IR-01",
+      "IR-02",
+      "IR-03",
+      "IR-04",
+      "IR-05",
+      "IR-06",
+      "IR-07",
+      "IR-08",
+      "IR-09"
+    ],
+    "final_verdict": "accept_for_hypothetical_design_examples_with_minor_clarifications",
+    "parent_post_review_clarifications": [
+      "Separate direct tracking from collection-time-only observations.",
+      "Scoring rank is defined by the prespecified score direction."
+    ]
+  },
+  "evidence_layers": {
+    "review_authors": "Attributed method relationships; original cited studies not independently validated.",
+    "project": "Conditional workflow design and editorial integration.",
+    "scientific_execution": "None in this batch.",
+    "prospective_guidance_effect": "Pending actual application."
+  },
+  "rights": {
+    "public_materials": "Original prose, citation metadata and method-choice records.",
+    "excluded": "Full texts, figures, source tables, third-party software/data and private study outputs."
+  },
+  "documentation_acceptance": {
+    "status": "pass",
+    "receipt": "machine/history/review-derived-worked-examples-validation.json"
+  }
+}

@@ -184,3 +184,19 @@ The [core bibliography](../core/REFERENCES.md) is the reader-facing citation lis
 | 同题独立调研的首次地图、初稿、补查和首交；与原始来源及冻结九项关系比较，六项达到实质覆盖。已读材料的选择条件仍有遗漏。 | [D56：范围评议](../core/docs/design/33-review-map-scope-appraisal.md)，在 D55 的收束节点挑战地图边界。 | [操作指南](../core/docs/methods/guides/review-coverage-and-closure.md)、[范围评议例](../core/examples/research-support/preparation/coverage-example/scope-appraisal.md)、[实现与验收记录](../core/machine/design/review-scope-appraisal.json)。 |
 
 这项改进来自项目自身的过程比较。相关论文作为评议参照，完整书目信息和借鉴关系继续在[来源账本](../machine/source-design-index.jsonl)保存。
+
+## 从横向综述到条件工作例
+
+本轮阅读11篇综述与方法导读，另读1篇可重复计算背景文章。把已有测量、统计单位、信息用途与科学验收原则，展开为七类可选择的方法关系。
+
+| 来源主题 | 借鉴的选择关系 | 可用工作例 |
+|---|---|---|
+| Heumos等单细胞最佳实践；差异表达与RNA-seq设计导读 | 重复、目标细胞覆盖和深度分别增加什么信息 | [测量设计](../core/docs/methods/worked-examples/measurement-design-and-replication.md) |
+| 空间测量、差异表达与RNA捕获综述 | 每面积信号、细胞组成与细胞内变化怎样区分 | [空间信号](../core/docs/methods/worked-examples/spatial-signal-and-capture.md) |
+| 泛基因组图与非编码变异预测综述 | 表示、共同可评价域与功能迁移怎样连接 | [表示选择](../core/docs/methods/worked-examples/representation-and-reference-bias.md) |
+| 多组学药物响应预测综述 | 标签、部署轴和融合/缺失规则怎样决定比较 | [响应整合](../core/docs/methods/worked-examples/integration-and-response-target.md) |
+| 细胞谱系追踪综述 | 克隆归属、历史边和状态推断分别需要什么观察 | [历史与状态](../core/docs/methods/worked-examples/history-and-state-inference.md) |
+| 经典MR与生物系统不确定性综述 | 个体/汇总输入、工具条件与识别约束怎样选择 | [工具变量](../core/docs/methods/worked-examples/causal-instruments-and-identifiability.md) |
+| 经典分子对接综述 | 生成集合、评分选择与最终用途怎样分别验收 | [采样与评分](../core/docs/methods/worked-examples/sampling-scoring-and-use.md) |
+
+完整作者、出处和阅读范围见[书目](../core/REFERENCES.md)；逐项借鉴、实现与验收见[来源账本](../machine/source-design-index.jsonl)。本轮增加方法指导的具体用法，正式模型案例统计沿用既有口径。接下来选择具有真实材料的工作例检验其研究指导效果。

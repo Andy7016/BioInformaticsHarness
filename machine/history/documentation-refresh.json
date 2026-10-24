@@ -4,10 +4,10 @@
   "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
   "frozen_tag": "v0.1.0-alpha.2",
   "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "documentation_revision": "2026-10-23",
+  "documentation_revision": "2026-10-24",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "38e3d4a1e3fba971c67ccbb5452ba320ae492cc5",
+    "head": "e03d8bdb027db99e15d43285f54868a3b1ef7a28",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 4120,
-      "current_sha256": "0b1883150a6f6c4d6278ff4980834c8ffccc8a962bdc7d2dd65d2d3983c7c1c2"
+      "current_bytes": 4741,
+      "current_sha256": "d404a42fde52123e9e5d45e58bacfa6b1a6c070a28ec04276a830f0f781b7b0b"
     },
     {
       "path": "LICENSING.md",
@@ -108,8 +108,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/REFERENCES.bib",
       "previous_sha256": "dd1e06e1d270704cf073ff4b3ae9a08d28d07430562474341861980b4fb6b25f",
-      "current_bytes": 32023,
-      "current_sha256": "2ca67751b37b3d4bff269669963d494f0a91acec6c38c1b1df6447d165e5e1e4"
+      "current_bytes": 36348,
+      "current_sha256": "db365188e4ff984ca108f276936dada9dbb018a0d126fbcbd42625b5dcb452b0"
     },
     {
       "path": "core/REFERENCES.md",
@@ -117,8 +117,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/REFERENCES.md",
       "previous_sha256": "f6ae034fc1983e8ef0e6bb65087cd4b3b74f456fa517618d34f287aa91197566",
-      "current_bytes": 18430,
-      "current_sha256": "ea04b173618f17e368b930fb36d47200ef54c84257cfb5ba229be61303650809"
+      "current_bytes": 22966,
+      "current_sha256": "adcd2ca562e4abe4bc48fa008f85273dc1b1cbdf60a3e0e991419f23a76a0ff8"
     },
     {
       "path": "core/RELEASE-MANIFEST.json",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 226106,
-      "current_sha256": "719db37e2c8b573c95152fd3ba69859be7d95c07451127d5502aa7b1ddf80555"
+      "current_bytes": 232589,
+      "current_sha256": "063e488eb70d7b031b00f6c94ff905f65605e89db3c03f3e34d0dd6f4f3c9dcd"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -793,8 +793,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/worked-examples/README.md",
       "previous_sha256": "6661b6468da0bde40b284258f14c24ec279d8d474de3695173b360b88018fdff",
-      "current_bytes": 1105,
-      "current_sha256": "0fa81bc5c1e58fa8d412cd1eb284ee872ea35a2296dec79689e7483a5176858d"
+      "current_bytes": 2952,
+      "current_sha256": "b242dfdf71ae8803d8d2a567537daa28fbecc84769002a9fab732b95c0fdae8b"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/causal-instruments-and-identifiability.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3937,
+      "current_sha256": "a2750c8b7c2537d1527bb31b2b736ed644712375435732edc897d796716080d6"
     },
     {
       "path": "core/docs/methods/worked-examples/common-and-task-specific.md",
@@ -822,6 +829,48 @@
       "previous_sha256": "b993dda6ca68162a0627fe2264f940a47fc1c84addbe080b786b5a5e2d10b922",
       "current_bytes": 13766,
       "current_sha256": "e1b4c76d0644f5f8aba2d589c65a6f1e9bd6e4670ef5f3a887a6f0455651c692"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/history-and-state-inference.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3710,
+      "current_sha256": "724907cc33c3e93796cd7d749500dcf2572ab8f6b75e19d8ef443c85c0d0fe15"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/integration-and-response-target.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4150,
+      "current_sha256": "fcb79cca051025e0ad6ef5ef5210d7d773ed5468109b5617e934102d812aca60"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/measurement-design-and-replication.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4248,
+      "current_sha256": "00cf991f6c6d387a7d38e54315805ee899cd5ba66db87e005b1715f6d8ddde2e"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/representation-and-reference-bias.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3984,
+      "current_sha256": "e7b535c5d040e044ae1d3d87620ab9168eddbebac82b8ed37c2f205776a581e0"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/sampling-scoring-and-use.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3713,
+      "current_sha256": "eab1aeffd1a285f7f0b6b5b9d4f48e79d3fe78148f4bcac3120341becdcdabc1"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/spatial-signal-and-capture.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4268,
+      "current_sha256": "103d7d49244c93ecf40d5b3125e1f13ba523b084d6ea6b1ba2adc80bac9cb175"
     },
     {
       "path": "core/examples/domain-validation/README.md",
@@ -1147,6 +1196,13 @@
       "current_sha256": "ddbba7cc51e63130e03895e9fec3d59c3982ac3d59ac304a8eb039ca2e4f6140"
     },
     {
+      "path": "core/machine/design/review-derived-worked-examples.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 36406,
+      "current_sha256": "dfe4d70b6be633b806a7607cfb228545f7abb49b3c022802a34a69fa1b156124"
+    },
+    {
       "path": "core/machine/design/review-scope-appraisal.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1173,8 +1229,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/references.json",
       "previous_sha256": "8318cb07560d6d55e8e00a501bd9c9bbf73483b0de9fb64909e1f0c3e6545eef",
-      "current_bytes": 64341,
-      "current_sha256": "3a0296ec6a36f24d034647040e1d9adb02810fb46a6c83e3eeb30ab009efbf5e"
+      "current_bytes": 78560,
+      "current_sha256": "87ed6d0279fc228c505427a95a4af02787786aaa1e46c321ad92774de5939458"
     },
     {
       "path": "core/scripts/acquisition/route_sources.py",
@@ -1266,8 +1322,8 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 61500,
-      "current_sha256": "a05921b78e12ce72d6424e2cf8d630061e5b79e32537c8e31bdaae230132bb40"
+      "current_bytes": 63530,
+      "current_sha256": "424edf44e46d9388bfc46cd7eda4665f3b97aecbc20f319c0ab2ac10d6abd0ff"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -1346,8 +1402,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5276,
-      "current_sha256": "dbcb177af82d257b37c52c616600357402dc4f7c0a617eef8ea130704095cc97"
+      "current_bytes": 5680,
+      "current_sha256": "81f588a31c4024fd2526edb5162b53fc108c582f85861084d10804de24e2c487"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1409,8 +1465,8 @@
       "path": "machine/document-notes/core/REFERENCES.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 23994,
-      "current_sha256": "642c03c2fa8238f71feec5ce3bb637c7dcc4180fbddbba1fe8373631b8d94aa8"
+      "current_bytes": 24475,
+      "current_sha256": "23247645382cc1957e393df18cfe431ce1a440de6766a50bac4808b03ff07e57"
     },
     {
       "path": "machine/document-notes/core/THIRD_PARTY.md.json",
@@ -1941,8 +1997,15 @@
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2981,
-      "current_sha256": "c7414e5be7737a09a5f0879e105ebfce56f6ce4fdec4fbf7fa750e1ffc8588c7"
+      "current_bytes": 3452,
+      "current_sha256": "6553809efe443fc9115fd3a486602765cf0204fa09a0f4df2721841175df2ca0"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/causal-instruments-and-identifiability.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4736,
+      "current_sha256": "77e0d7de29db5cf49688626554c0488c50ed27ac9bbe3ccc7b84c8af5f00dd49"
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/common-and-task-specific.md.json",
@@ -1964,6 +2027,48 @@
       "baseline_revision": "764bd88",
       "current_bytes": 18408,
       "current_sha256": "d529df529571e2638e60d712ef25063eddf6802f534d4fe11c56f45b016ecf1b"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/history-and-state-inference.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4496,
+      "current_sha256": "cf7fc681ebfaa5659c6b073303555c125e2f6e3147af8b5e2b91e5b23f257344"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/integration-and-response-target.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4945,
+      "current_sha256": "a646e10280e793fd82badf2a224aa6913cd7c97e8438406d9d4cac66bb196c10"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/measurement-design-and-replication.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5043,
+      "current_sha256": "fdba044afd1b12bbc37ba1b7cec74f4e925bf71f9dbff8afaedce1a96ac2e8b5"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/representation-and-reference-bias.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4781,
+      "current_sha256": "8632d17cd4ea03f99e0879bd9453b434b0a87b420a017ce2f91cb11636060579"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/sampling-scoring-and-use.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4495,
+      "current_sha256": "823b557f70527dfa1bf93dd518c70a8ade141239377c15c39bd1b6c49f032748"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/spatial-signal-and-capture.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5057,
+      "current_sha256": "07c153aaa2d8c9edc2918fef2363b49b5f9726930c8721f5d0bbc31f44588a12"
     },
     {
       "path": "machine/document-notes/core/examples/domain-validation/README.md.json",
@@ -2102,8 +2207,8 @@
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3316,
-      "current_sha256": "acb088f386262d076963600ba82f00fcabb83ee8fd46d8ae358d723363e84924"
+      "current_bytes": 3727,
+      "current_sha256": "d9d12bd89e75f66c093ece593a3f974373e2c1f9333e513f36300bc128ca2795"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
@@ -2144,8 +2249,8 @@
       "path": "machine/documentation-policy.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6989,
-      "current_sha256": "cca0a1bc5ce94cac76a563dedbfafca16e92af13ecf1fb938b1ade9999ac5909"
+      "current_bytes": 6816,
+      "current_sha256": "b9c75ecff1f88400c6676b650a80bb20df9a15ffbbd3a32fe8df158e89694b74"
     },
     {
       "path": "machine/examples/splice-resource-readiness.json",
@@ -2183,6 +2288,20 @@
       "current_sha256": "150ac9a42fc551d45a61fe5442a070c357d60edd6f7c1a260f19ace2aa64f92c"
     },
     {
+      "path": "machine/history/review-derived-worked-examples-validation.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2682,
+      "current_sha256": "93a0d123240512a4ebc63bbb12b2c528809708d8a069c9878eea5cc3faca428c"
+    },
+    {
+      "path": "machine/history/review-derived-worked-examples.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2185,
+      "current_sha256": "4e9a06e7fa8c769ba3105bb907b381575fae94a2079735ead8019305a221787a"
+    },
+    {
       "path": "machine/history/review-scope-appraisal.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2207,8 +2326,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 189501,
-      "current_sha256": "10f868cd2b90698bd7ec6b457ac9aeb32805626ef6fe9de95594fff55ddfc8ca"
+      "current_bytes": 222439,
+      "current_sha256": "43476be7a7f6fa180e0963d12559b04dfe5e6928611c4678a79b46f01d7a30e8"
     },
     {
       "path": "tests/test_documentation.py",

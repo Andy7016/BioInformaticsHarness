@@ -1,6 +1,6 @@
 {
   "schema": "harness-release-bibliography.v1",
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-24",
   "scope": "Public bibliography for the source/design crosswalk, including version-specific academic, engineering, and documentation-writing references.",
   "evidence_boundary": "Bibliographic metadata and recorded reading scopes identify sources; static case analysis, selected reading, source comparison, and model execution remain separate evidence types. Acceptance results are attached to their actual analysis or application records.",
   "network_policy": "No new paper download or academic-metadata refresh was performed for this catalog. Historical README style observations came from read-only first-party GitHub raw URLs through the configured proxy; upstream README bodies are not redistributed.",
@@ -162,6 +162,14 @@
       "source_ids": [
         "reference-map:l02-reproducible-computational-research",
         "literature:L02"
+      ],
+      "additional_reading_uses": [
+        {
+          "date": "2026-10-24",
+          "batch": "review-learning-horizontal-01",
+          "role": "reproducibility background; excluded from review count",
+          "actual_reading_scope": "Read all ten Rules and all article body paragraphs; no tables/figures. Cited references were not followed."
+        }
       ]
     },
     {
@@ -660,6 +668,14 @@
       "metadata_status": "local_metadata_and_reading_scope_recorded",
       "source_ids": [
         "literature:L04"
+      ],
+      "additional_reading_uses": [
+        {
+          "date": "2026-10-24",
+          "batch": "review-learning-horizontal-01",
+          "role": "review-derived conditional method learning; counted among 11 review/method guides",
+          "actual_reading_scope": "Read the abstract and selected main-body sections for count generation/QC, normalization, DGE, cell identity and spatial measurements. Other modality-specific chapters and bibliography were not read in depth; cited primary studies were not opened."
+        }
       ]
     },
     {
@@ -774,6 +790,277 @@
         "literature:L08"
       ],
       "related_preprint_version": "luecken-2024-preprint"
+    },
+    {
+      "id": "review-learning-r02",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Xiaoyu Wang",
+        "Fuyi Li",
+        "Yiwen Zhang",
+        "Seiya Imoto",
+        "Hsin-Hui Shen",
+        "Shanshan Li",
+        "Yuming Guo",
+        "Jian Yang",
+        "Jiangning Song"
+      ],
+      "title": "Deep learning approaches for non-coding genetic variant effect prediction: current progress and future prospects",
+      "year": 2024,
+      "venue": "Briefings in bioinformatics",
+      "volume": "25",
+      "issue": "5",
+      "pages": "bbae446",
+      "doi": "10.1093/bib/bbae446",
+      "public_url": "https://doi.org/10.1093/bib/bbae446",
+      "pmid": "39276327",
+      "pmcid": "PMC11401448",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography. Table rows read: R02.TAB4. Tables caption-only: R02.TAB1.CAP, R02.TAB2.CAP, R02.TAB3.CAP, R02.TAB5.CAP, R02.TAB6.CAP, R02.TAB7.CAP.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R02"
+      ]
+    },
+    {
+      "id": "review-learning-r03",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Maryam Kalantari-Dehaghi",
+        "Neda Ghohabi-Esfahani",
+        "Modjtaba Emadi-Baygi"
+      ],
+      "title": "From bulk RNA sequencing to spatial transcriptomics: a comparative review of differential gene expression analysis methods",
+      "year": 2025,
+      "venue": "Human genomics",
+      "volume": "20",
+      "issue": "1",
+      "pages": "9",
+      "doi": "10.1186/s40246-025-00884-w",
+      "public_url": "https://doi.org/10.1186/s40246-025-00884-w",
+      "pmid": "41353326",
+      "pmcid": "PMC12797438",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read the abstract and main body S01–S19, including modality-specific methods, single-cell model comparisons, spatial transcriptomics challenges and conclusion. Read Tables 1–4 rows and Figures 1–2 captions. The bibliography and cited primary benchmarks were not read.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R03"
+      ]
+    },
+    {
+      "id": "review-learning-r04",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Qinyu Ge",
+        "Yuqi Sheng",
+        "Yuting Shan",
+        "Yuwei Yang",
+        "Haohan Jiang",
+        "Ruyue Wang"
+      ],
+      "title": "Enhancing RNA Capture Efficiency in Spatial Transcriptomics: A Review of Innovative Technologies and Strategies",
+      "year": 2025,
+      "venue": "International journal of molecular sciences",
+      "volume": "26",
+      "issue": "22",
+      "pages": "11076",
+      "doi": "10.3390/ijms262211076",
+      "public_url": "https://doi.org/10.3390/ijms262211076",
+      "pmid": "41303559",
+      "pmcid": "PMC12652657",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read the abstract and all paragraphs in S01–S06 on capture-efficiency concepts, platform and probe mechanisms, tissue/RNA quality, resolution, computational approaches, comparison limits and outlook. Read Fig. 1–5 captions, Tables 1–3 rows and the Table 3 footnote. Platform papers, benchmarks, vendor materials and software were not independently checked; no experiment was performed.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R04"
+      ]
+    },
+    {
+      "id": "review-learning-r05",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Guna Gouru"
+      ],
+      "title": "Precision oncology: Computational methods for multi-omics data integration to improve drug response prediction",
+      "year": 2025,
+      "venue": "Cambridge prisms. Precision medicine",
+      "volume": "3",
+      "issue": null,
+      "pages": "e6",
+      "doi": "10.1017/pcm.2025.10003",
+      "public_url": "https://doi.org/10.1017/pcm.2025.10003",
+      "pmid": "41816503",
+      "pmcid": "PMC12973241",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography. Table rows read: R05.TAB1, R05.TAB2. Tables caption-only: none.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R05"
+      ]
+    },
+    {
+      "id": "review-learning-r06",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Shanjun Mao",
+        "Chenyang Zhang",
+        "Runjiu Chen",
+        "Shan Tang",
+        "Xiaodan Fan",
+        "Jie Hu"
+      ],
+      "title": "Cell lineage tracing: Methods, applications, and challenges",
+      "year": 2025,
+      "venue": "Quantitative biology (Beijing, China)",
+      "volume": "13",
+      "issue": "4",
+      "pages": "e70006",
+      "doi": "10.1002/qub2.70006",
+      "public_url": "https://doi.org/10.1002/qub2.70006",
+      "pmid": "41674713",
+      "pmcid": "PMC12806085",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read article body P01–P67, Introduction through Discussion; inspected Figures 1–2 captions and Tables 1–3. Cited primary articles were not opened.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R06"
+      ]
+    },
+    {
+      "id": "review-learning-r07",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Zhigui Bao",
+        "Detlef Weigel"
+      ],
+      "title": "Complexity welcome: Pangenome graphs for comprehensive population genomics",
+      "year": 2025,
+      "venue": "Quantitative plant biology",
+      "volume": "6",
+      "issue": null,
+      "pages": "e43",
+      "doi": "10.1017/qpb.2025.10028",
+      "public_url": "https://doi.org/10.1017/qpb.2025.10028",
+      "pmid": "41445923",
+      "pmcid": "PMC12722059",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography. Table rows read: none. Tables caption-only: none.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R07"
+      ]
+    },
+    {
+      "id": "review-learning-r09",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Rashi Verma",
+        "Amanda Savaria-Butler",
+        "Francisco J Enguita",
+        "Robert Meller"
+      ],
+      "title": "Commentary: a review of technical considerations for planning an RNA-Sequencing experiment",
+      "year": 2025,
+      "venue": "BMC genomics",
+      "volume": "26",
+      "issue": "1",
+      "pages": "918",
+      "doi": "10.1186/s12864-025-12094-8",
+      "public_url": "https://doi.org/10.1186/s12864-025-12094-8",
+      "pmid": "41087878",
+      "pmcid": "PMC12522984",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read the abstract; S01–S03.7 on question, RNA biotype, library preparation, read type, batching and depth; key count/normalization passages in S04.1; batch discussion S04.2; S05.1–S05.2 on power, biological replication and depth; and S06. Fig. 1, 2 and 4 captions were read; Fig. 3 was registered only as an aligner-comparison figure. S05.3 and cited sample-size/power primary studies were not read in depth.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R09"
+      ]
+    },
+    {
+      "id": "review-learning-r10",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Louise M Kimpton",
+        "L Mihaela Paun",
+        "Mitchel J Colebank",
+        "Victoria Volodina"
+      ],
+      "title": "Challenges and opportunities in uncertainty quantification for healthcare and biological systems",
+      "year": 2025,
+      "venue": "Philosophical transactions. Series A, Mathematical, physical, and engineering sciences",
+      "volume": "383",
+      "issue": "2292",
+      "pages": "20240232",
+      "doi": "10.1098/rsta.2024.0232",
+      "public_url": "https://doi.org/10.1098/rsta.2024.0232",
+      "pmid": "40078151",
+      "pmcid": "PMC11904623",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read body P01–P62, Motivation through conclusions; inspected Figures 1–2 captions. No tables. Cited primary articles were not opened.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R10"
+      ]
+    },
+    {
+      "id": "review-learning-r13",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "George Davey Smith",
+        "Gibran Hemani"
+      ],
+      "title": "Mendelian randomization: genetic anchors for causal inference in epidemiological studies",
+      "year": 2014,
+      "venue": "Human molecular genetics",
+      "volume": "23",
+      "issue": "R1",
+      "pages": "R89-R98",
+      "doi": "10.1093/hmg/ddu328",
+      "public_url": "https://doi.org/10.1093/hmg/ddu328",
+      "pmid": "25064373",
+      "pmcid": "PMC4170722",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read body P01–P24; inspected Box 1–4, Tables 1–2, Figures 1–2. Cited primary articles were not opened.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R13"
+      ]
+    },
+    {
+      "id": "review-learning-r14",
+      "kind": "academic",
+      "category": "review_or_method_guide",
+      "authors": [
+        "Xuan-Yu Meng",
+        "Hong-Xing Zhang",
+        "Mihaly Mezei",
+        "Meng Cui"
+      ],
+      "title": "Molecular Docking: A powerful approach for structure-based drug discovery",
+      "year": 2011,
+      "venue": "Current Computer-Aided Drug Design",
+      "volume": "7",
+      "issue": "2",
+      "pages": "146-157",
+      "doi": "10.2174/157340911795677602",
+      "public_url": "https://doi.org/10.2174/157340911795677602",
+      "pmid": "21534921",
+      "pmcid": "PMC3151162",
+      "material_scope": "Citation and original first-party synthesis only; full texts, figures and tables excluded.",
+      "actual_reading_scope": "Read HTML paragraphs P1–P47: abstract, introduction, theory, sampling, scoring, docking methods, LMMC, applications and conclusion; inspected Tables 1–3 and Figures 1–4 captions. References were not individually followed.",
+      "metadata_status": "local_JATS_or_HTML_and_saved_PubMed_checked",
+      "source_ids": [
+        "review-learning:R14"
+      ]
     }
   ],
   "public_readiness_sources": [
@@ -1486,7 +1773,7 @@
     }
   ],
   "counts": {
-    "core_entries": 26,
+    "core_entries": 36,
     "public_readiness_sources": 4,
     "formal_case_index": 43,
     "formal_case_population_source": "Source corpus formal_case_index deduplicates work identities; bibliography references are separate and may point to the same work.",
@@ -1506,9 +1793,10 @@
     "s4pred_saved_artifact_replay_independent_study_increment": 0,
     "engineering_sources": 4,
     "documentation_style_sources": 3,
-    "source_design_index_records": 91,
-    "unique_source_identifiers": 79,
-    "additional_relationship_rows_from_source_reuse": 13
+    "source_design_index_records": 107,
+    "unique_source_identifiers": 105,
+    "additional_relationship_rows_from_source_reuse": 18,
+    "source_design_counting_method": "Rows: JSONL records. Identifiers: distinct sources[].id strings, not deduplicated works. Reuse: source appearances beyond the first for each identifier. Formal case and experiment populations are counted separately."
   },
   "checkpoint_data_sources": [
     {
@@ -1609,6 +1897,31 @@
       "version": "v1.17.0",
       "acquisition": "read_only_first_party_github_raw_via_configured_proxy",
       "style_observation": "A one-line project description and first-party link set precede a short capabilities and testing overview."
+    }
+  ],
+  "review_learning_batches": [
+    {
+      "id": "review-learning-horizontal-01",
+      "date": "2026-10-24",
+      "sources": 12,
+      "reviews_and_method_guides": 11,
+      "background": 1,
+      "worked_examples": 7,
+      "formal_case_population_increment": 0,
+      "scientific_experiment_increment": 0,
+      "reading_scope_record": "machine/design/review-derived-worked-examples.json"
+    }
+  ],
+  "count_revision_history": [
+    {
+      "date": "2026-10-24",
+      "reason": "Refresh inherited source-index identifier/reuse bookkeeping after this batch; scientific case populations unchanged.",
+      "previous_recorded_source_counts": {
+        "source_design_index_records": 107,
+        "unique_source_identifiers": 79,
+        "additional_relationship_rows_from_source_reuse": 13
+      },
+      "current_source_relationship_appearances": 123
     }
   ]
 }

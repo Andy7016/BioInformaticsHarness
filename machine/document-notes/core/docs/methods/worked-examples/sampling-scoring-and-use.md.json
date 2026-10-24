@@ -1,0 +1,22 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/worked-examples/sampling-scoring-and-use.md",
+  "source_text": "# 分子对接：把采样、评分与使用决定分开\n\n这是文献启发的经典方法设计例。研究希望判断候选姿态和排序能否服务一个明确的后续用途。R14 将构象生成与评分区分开；它发表于 2011 年，这里借用问题结构，具体软件选择另按当前工具和任务核查。\n\n## 先选择要回答的问题\n\n| 目标与可用参照 | 合法路线 | 实际读出 |\n|---|---|---|\n| 有可信结合姿态，想诊断搜索与选择 | 在相同输入条件下生成候选并固定评分排序 | 生成集合是否包含合格参考近邻；top-1/top-k 是否选中参考近邻 |\n| 需要对已知活性/非活性参考筛选候选 | 固定候选池、活性定义、排序与入选预算 | 同一分母下的入选命中或富集，另报无法处理和退出对象 |\n| 希望预测绝对亲和力 | 另选与测量条件和单位匹配的响应及校准评价 | 亲和力误差及相应使用范围；对接分数先按其实际定义解释 |\n| 固定受体的适用性不足，且有相关构象 | 有依据的构象集合，或明确收窄到固定构象 | 记录额外信息、构象选取与成本，在对应条件下评价 |\n\n受体、配体状态和准备规则应适合当前问题；选择多构象的理由与额外信息随结果保留。引入参考姿态做诊断时，将其与未知姿态任务分开，便于理解这次比较回答了什么。\n\n## 一个能区分失败位置的配对读出\n\n对每个有参考的复合物，先在全部生成姿态中找离参考最近者，再检查固定评分按预定方向排序的首位及 top-k。可用经原子对应、受体对齐和配体对称处理后的重原子 RMSD 作为距离；映射、对齐、单位及合格阈值由本任务预先定义。读出采用每复合物的集合覆盖和 top-k 成功，报告共同可评价范围及退出原因。\n\n若候选集合中没有合格近邻，说明当前生成流程覆盖不足，再诊断搜索设置、输入状态或评分引导的搜索行为；若集合有近邻但排序未选中，先检查评分和选择。首位姿态失败本身无法定位到采样。\n\n对筛选任务，先固定候选总数和已知活性参照，再在固定入选数量下比较命中。参考中未标注活性或未被检测的对象按其真实状态处理。姿态恢复、候选富集和绝对亲和力分别评价，避免用一种参照替另一种用途验收。\n\n## 什么结果改变路线，怎样向人交接\n\n若覆盖不足而增加候选确有收益，可在预算内调整生成；若覆盖已有而 top-k 不佳，转向评分/选择诊断；若只在加入参考信息后改善，说明额外信息的作用。若筛选命中随候选池和活性定义变化，先核对用途与参照构成。\n\n交接用一张流程图标出“输入状态 → 候选集合 → 评分/选择 → 使用决定”，在对应环节放入实际观察及成本。推荐改变生成、改变评分、补用途验证或收窄主张，并说明改变推荐的结果。\n\n## 文献与相关指南\n\n- Xuan-Yu Meng, Hong-Xing Zhang, Mihaly Mezei et al. (2011). [Molecular Docking: A powerful approach for structure-based drug discovery](https://doi.org/10.2174/157340911795677602).\n\n这些综述提供问题与方法关系；本页的组合方案、取舍条件和交接形式由 Harness 整理。各来源的阅读范围见[书目](../../../REFERENCES.md)。相关指导：[功能与用途验证](../guides/function-and-utility-validation.md)、[统计单位与选择](../guides/statistical-units-and-selection.md)。\n结构对应与分数接口可联用[结构映射与评分](../cards/structure-mapping-scoring.md)和[指标语义](../cards/metric-semantics.md)。\n",
+  "source_commit": null,
+  "source_sha256": "eab1aeffd1a285f7f0b6b5b9d4f48e79d3fe78148f4bcac3120341becdcdabc1",
+  "revisions": [
+    {
+      "date": "2026-10-24",
+      "reason": "Review-derived conditional worked examples and source/use index.",
+      "current_identity": {
+        "bytes": 3713,
+        "sha256": "eab1aeffd1a285f7f0b6b5b9d4f48e79d3fe78148f4bcac3120341becdcdabc1"
+      },
+      "technical_refs": [
+        "machine/history/review-derived-worked-examples.json",
+        "core/machine/design/review-derived-worked-examples.json"
+      ],
+      "scientific_execution": false
+    }
+  ]
+}

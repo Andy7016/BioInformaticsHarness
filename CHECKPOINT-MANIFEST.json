@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 4120,
+      "bytes": 4741,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "0b1883150a6f6c4d6278ff4980834c8ffccc8a962bdc7d2dd65d2d3983c7c1c2",
+      "sha256": "d404a42fde52123e9e5d45e58bacfa6b1a6c070a28ec04276a830f0f781b7b0b",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -389,10 +389,10 @@
       }
     },
     {
-      "bytes": 32023,
+      "bytes": 36348,
       "license": "CC-BY-4.0",
       "path": "core/REFERENCES.bib",
-      "sha256": "2ca67751b37b3d4bff269669963d494f0a91acec6c38c1b1df6447d165e5e1e4",
+      "sha256": "db365188e4ff984ca108f276936dada9dbb018a0d126fbcbd42625b5dcb452b0",
       "source": {
         "path": "docs/reviews/2026-10-checkpoint-publication/bibliography/references.bib",
         "release_manifest": {
@@ -418,10 +418,10 @@
       }
     },
     {
-      "bytes": 18430,
+      "bytes": 22966,
       "license": "CC-BY-4.0",
       "path": "core/REFERENCES.md",
-      "sha256": "ea04b173618f17e368b930fb36d47200ef54c84257cfb5ba229be61303650809",
+      "sha256": "adcd2ca562e4abe4bc48fa008f85273dc1b1cbdf60a3e0e991419f23a76a0ff8",
       "source": {
         "path": "docs/reviews/2026-10-checkpoint-publication/bibliography/REFERENCES.md",
         "release_manifest": {
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 226106,
+      "bytes": 232589,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "719db37e2c8b573c95152fd3ba69859be7d95c07451127d5502aa7b1ddf80555",
+      "sha256": "063e488eb70d7b031b00f6c94ff905f65605e89db3c03f3e34d0dd6f4f3c9dcd",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -2529,10 +2529,10 @@
       }
     },
     {
-      "bytes": 1105,
+      "bytes": 2952,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/worked-examples/README.md",
-      "sha256": "0fa81bc5c1e58fa8d412cd1eb284ee872ea35a2296dec79689e7483a5176858d",
+      "sha256": "b242dfdf71ae8803d8d2a567537daa28fbecc84769002a9fab732b95c0fdae8b",
       "source": {
         "path": "docs/methods/worked-examples/README.md",
         "release_manifest": {
@@ -2556,6 +2556,18 @@
         },
         "transform": "markdown-links-and-local-redaction"
       }
+    },
+    {
+      "path": "core/docs/methods/worked-examples/causal-instruments-and-identifiability.md",
+      "bytes": 3937,
+      "sha256": "a2750c8b7c2537d1527bb31b2b736ed644712375435732edc897d796716080d6",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/causal-instruments-and-identifiability.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
     },
     {
       "bytes": 10764,
@@ -2643,6 +2655,78 @@
         },
         "transform": "markdown-links-and-local-redaction"
       }
+    },
+    {
+      "path": "core/docs/methods/worked-examples/history-and-state-inference.md",
+      "bytes": 3710,
+      "sha256": "724907cc33c3e93796cd7d749500dcf2572ab8f6b75e19d8ef443c85c0d0fe15",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/history-and-state-inference.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/integration-and-response-target.md",
+      "bytes": 4150,
+      "sha256": "fcb79cca051025e0ad6ef5ef5210d7d773ed5468109b5617e934102d812aca60",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/integration-and-response-target.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/measurement-design-and-replication.md",
+      "bytes": 4248,
+      "sha256": "00cf991f6c6d387a7d38e54315805ee899cd5ba66db87e005b1715f6d8ddde2e",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/measurement-design-and-replication.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/representation-and-reference-bias.md",
+      "bytes": 3984,
+      "sha256": "e7b535c5d040e044ae1d3d87620ab9168eddbebac82b8ed37c2f205776a581e0",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/representation-and-reference-bias.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/sampling-scoring-and-use.md",
+      "bytes": 3713,
+      "sha256": "eab1aeffd1a285f7f0b6b5b9d4f48e79d3fe78148f4bcac3120341becdcdabc1",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/sampling-scoring-and-use.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "core/docs/methods/worked-examples/spatial-signal-and-capture.md",
+      "bytes": 4268,
+      "sha256": "103d7d49244c93ecf40d5b3125e1f13ba523b084d6ea6b1ba2adc80bac9cb175",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/docs/methods/worked-examples/spatial-signal-and-capture.md",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
     },
     {
       "bytes": 8279,
@@ -3998,6 +4082,18 @@
       }
     },
     {
+      "path": "core/machine/design/review-derived-worked-examples.json",
+      "bytes": 36406,
+      "sha256": "dfe4d70b6be633b806a7607cfb228545f7abb49b3c022802a34a69fa1b156124",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "core/machine/design/review-derived-worked-examples.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "core/machine/design/review-scope-appraisal.json",
       "bytes": 4991,
       "sha256": "22faff68182529476cf83bd6cfc64794276eeedf896b29d9bb63985f9c5b859c",
@@ -4045,10 +4141,10 @@
       }
     },
     {
-      "bytes": 64341,
+      "bytes": 78560,
       "license": "CC-BY-4.0",
       "path": "core/references.json",
-      "sha256": "3a0296ec6a36f24d034647040e1d9adb02810fb46a6c83e3eeb30ab009efbf5e",
+      "sha256": "87ed6d0279fc228c505427a95a4af02787786aaa1e46c321ad92774de5939458",
       "source": {
         "path": "docs/reviews/2026-10-checkpoint-publication/bibliography/references.json",
         "release_manifest": {
@@ -4768,8 +4864,8 @@
     },
     {
       "path": "docs/REFERENCES-AND-DESIGN.md",
-      "bytes": 61500,
-      "sha256": "a05921b78e12ce72d6424e2cf8d630061e5b79e32537c8e31bdaae230132bb40",
+      "bytes": 63530,
+      "sha256": "424edf44e46d9388bfc46cd7eda4665f3b97aecbc20f319c0ab2ac10d6abd0ff",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5237,8 +5333,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 5276,
-      "sha256": "dbcb177af82d257b37c52c616600357402dc4f7c0a617eef8ea130704095cc97",
+      "bytes": 5680,
+      "sha256": "81f588a31c4024fd2526edb5162b53fc108c582f85861084d10804de24e2c487",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -5411,15 +5507,26 @@
     },
     {
       "path": "machine/document-notes/core/REFERENCES.md.json",
-      "bytes": 23994,
-      "sha256": "642c03c2fa8238f71feec5ce3bb637c7dcc4180fbddbba1fe8373631b8d94aa8",
+      "bytes": 24475,
+      "sha256": "23247645382cc1957e393df18cfe431ce1a440de6766a50bac4808b03ff07e57",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/REFERENCES.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/REFERENCES.md.json",
+        "sha256": "642c03c2fa8238f71feec5ce3bb637c7dcc4180fbddbba1fe8373631b8d94aa8",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/REFERENCES.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/THIRD_PARTY.md.json",
@@ -6444,13 +6551,36 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
-      "bytes": 2981,
-      "sha256": "c7414e5be7737a09a5f0879e105ebfce56f6ce4fdec4fbf7fa750e1ffc8588c7",
+      "bytes": 3452,
+      "sha256": "6553809efe443fc9115fd3a486602765cf0204fa09a0f4df2721841175df2ca0",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
         "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
+        "sha256": "c7414e5be7737a09a5f0879e105ebfce56f6ce4fdec4fbf7fa750e1ffc8588c7",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/causal-instruments-and-identifiability.md.json",
+      "bytes": 4736,
+      "sha256": "77e0d7de29db5cf49688626554c0488c50ed27ac9bbe3ccc7b84c8af5f00dd49",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/causal-instruments-and-identifiability.md.json",
+        "revision": "2026-10-24"
       },
       "transform": "first-party-documentation-revision"
     },
@@ -6487,6 +6617,78 @@
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/docs/methods/worked-examples/dynamic-process-interpretation.md.json",
         "revision": "2026-10-22"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/history-and-state-inference.md.json",
+      "bytes": 4496,
+      "sha256": "cf7fc681ebfaa5659c6b073303555c125e2f6e3147af8b5e2b91e5b23f257344",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/history-and-state-inference.md.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/integration-and-response-target.md.json",
+      "bytes": 4945,
+      "sha256": "a646e10280e793fd82badf2a224aa6913cd7c97e8438406d9d4cac66bb196c10",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/integration-and-response-target.md.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/measurement-design-and-replication.md.json",
+      "bytes": 5043,
+      "sha256": "fdba044afd1b12bbc37ba1b7cec74f4e925bf71f9dbff8afaedce1a96ac2e8b5",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/measurement-design-and-replication.md.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/representation-and-reference-bias.md.json",
+      "bytes": 4781,
+      "sha256": "8632d17cd4ea03f99e0879bd9453b434b0a87b420a017ce2f91cb11636060579",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/representation-and-reference-bias.md.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/sampling-scoring-and-use.md.json",
+      "bytes": 4495,
+      "sha256": "823b557f70527dfa1bf93dd518c70a8ade141239377c15c39bd1b6c49f032748",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/sampling-scoring-and-use.md.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/worked-examples/spatial-signal-and-capture.md.json",
+      "bytes": 5057,
+      "sha256": "07c153aaa2d8c9edc2918fef2363b49b5f9726930c8721f5d0bbc31f44588a12",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/core/docs/methods/worked-examples/spatial-signal-and-capture.md.json",
+        "revision": "2026-10-24"
       },
       "transform": "first-party-documentation-revision"
     },
@@ -6764,8 +6966,8 @@
     },
     {
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
-      "bytes": 3316,
-      "sha256": "acb088f386262d076963600ba82f00fcabb83ee8fd46d8ae358d723363e84924",
+      "bytes": 3727,
+      "sha256": "d9d12bd89e75f66c093ece593a3f974373e2c1f9333e513f36300bc128ca2795",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6869,8 +7071,8 @@
     },
     {
       "path": "machine/documentation-policy.json",
-      "bytes": 6989,
-      "sha256": "cca0a1bc5ce94cac76a563dedbfafca16e92af13ecf1fb938b1ade9999ac5909",
+      "bytes": 6816,
+      "sha256": "b9c75ecff1f88400c6676b650a80bb20df9a15ffbbd3a32fe8df158e89694b74",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6927,8 +7129,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 95910,
-      "sha256": "a321773500027c6abf0f3a6b2ce110f4aabd547127fe49e69d53f7591904a95d",
+      "bytes": 100857,
+      "sha256": "10ed964ea8809406ae5144d61fe1d509c032920e95ea889ca102c7383047c62f",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6996,6 +7198,41 @@
       }
     },
     {
+      "path": "machine/history/review-derived-worked-examples-validation.json",
+      "bytes": 2682,
+      "sha256": "93a0d123240512a4ebc63bbb12b2c528809708d8a069c9878eea5cc3faca428c",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/history/review-derived-worked-examples-validation.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/history/review-derived-worked-examples.json",
+      "bytes": 2185,
+      "sha256": "4e9a06e7fa8c769ba3105bb907b381575fae94a2079735ead8019305a221787a",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/history/review-derived-worked-examples.json",
+        "revision": "2026-10-24"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/history/review-derived-worked-examples.json",
+        "sha256": "c7704d1b0c4863f276204579212c93fee9a05215c385c1a7e237222365a75c46",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/history/review-derived-worked-examples.json",
+          "revision": "2026-10-24"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
       "path": "machine/history/review-scope-appraisal.json",
       "bytes": 3816,
       "sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302",
@@ -7033,8 +7270,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 189501,
-      "sha256": "10f868cd2b90698bd7ec6b457ac9aeb32805626ef6fe9de95594fff55ddfc8ca",
+      "bytes": 222439,
+      "sha256": "43476be7a7f6fa180e0963d12559b04dfe5e6928611c4678a79b46f01d7a30e8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

@@ -1,0 +1,911 @@
+{
+  "schema": "harness.review-derived-worked-examples/v1",
+  "date": "2026-10-24",
+  "counts": {
+    "reviews_and_method_guides": 11,
+    "background_articles": 1,
+    "worked_examples": 7,
+    "scientific_runs": 0,
+    "formal_case_increment": 0
+  },
+  "sources": [
+    {
+      "source_id": "R01",
+      "bibliography_id": "heumos-2023",
+      "title": "Best practices for single-cell analysis across modalities",
+      "doi": "10.1038/s41576-023-00586-w",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10066026/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read the abstract and selected main-body sections for count generation/QC, normalization, DGE, cell identity and spatial measurements. Other modality-specific chapters and bibliography were not read in depth; cited primary studies were not opened.",
+        "locators": [
+          "Abstract",
+          "S01 P001–P003",
+          "S02 P004–P005; Fig. 2",
+          "S02.1 P006",
+          "S02.1.1 P007–P010",
+          "S02.1.2 P011",
+          "S02.1.3 P012–P014",
+          "S02.1.4 P015",
+          "S02.2.2 P018",
+          "S02.2.3 P019–P022",
+          "S02.3 P023",
+          "S02.3.1 P024–P026",
+          "S02.3.2 P027",
+          "S02.3.3 P028–P029",
+          "S06 P063–P071; Fig. 6",
+          "S07 P072–P075; Fig. 1"
+        ],
+        "caption_scope": [
+          "Fig. 1",
+          "Fig. 2",
+          "Fig. 6"
+        ],
+        "table_scope": "No relevant table body was used; the selected arguments are in the cited paragraphs and figure captions.",
+        "locator_convention": "Section/paragraph labels and global P numbers match the locally indexed R01 text in measurement/indexed-text/R01.indexed.txt; figure captions are in figure-table-captions.txt."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R02",
+      "bibliography_id": "review-learning-r02",
+      "title": "Deep learning approaches for non-coding genetic variant effect prediction: current progress and future prospects",
+      "doi": "10.1093/bib/bbae446",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11401448/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "read_method": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography.",
+        "reading_positions": [
+          {
+            "section": "Introduction",
+            "paragraph_ids": [
+              "R02.P0001",
+              "R02.P0002",
+              "R02.P0003"
+            ]
+          },
+          {
+            "section": "Non-coding region, gene regulation, and epigenetic modification",
+            "paragraph_ids": [
+              "R02.P0004",
+              "R02.P0005",
+              "R02.P0006",
+              "R02.P0007",
+              "R02.P0008"
+            ]
+          },
+          {
+            "section": "Experimental technologies for interpretation of non-coding variants",
+            "paragraph_ids": [
+              "R02.P0009",
+              "R02.P0010",
+              "R02.P0011",
+              "R02.P0012",
+              "R02.P0013"
+            ]
+          },
+          {
+            "section": "Experimental technologies for interpretation of non-coding variants > Single-cell sequencing technologies",
+            "paragraph_ids": [
+              "R02.P0014",
+              "R02.P0015",
+              "R02.P0016",
+              "R02.P0017"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants",
+            "paragraph_ids": [
+              "R02.P0018",
+              "R02.P0019",
+              "R02.P0020",
+              "R02.P0021",
+              "R02.P0022",
+              "R02.P0023",
+              "R02.P0024"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > Peak-based binary classification approaches",
+            "paragraph_ids": [
+              "R02.P0025",
+              "R02.P0026"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > Genetic tracks-based regression approaches",
+            "paragraph_ids": [
+              "R02.P0027",
+              "R02.P0028",
+              "R02.P0029",
+              "R02.P0030"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > 3D genome structure prediction",
+            "paragraph_ids": [
+              "R02.P0031"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > Cis-regulatory element prediction",
+            "paragraph_ids": [
+              "R02.P0032"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > Phenotypic variant effect prediction",
+            "paragraph_ids": [
+              "R02.P0033"
+            ]
+          },
+          {
+            "section": "Deep learning approaches for analyzing the effects of non-coding variants > Predicting with the single-cell sequencing technologies",
+            "paragraph_ids": [
+              "R02.P0034"
+            ]
+          },
+          {
+            "section": "Interpretation and Down-stream tasks; model-based and downstream subsections",
+            "paragraph_ids": [
+              "R02.P0035",
+              "R02.P0036",
+              "R02.P0037",
+              "R02.P0038",
+              "R02.P0039",
+              "R02.P0040",
+              "R02.P0041"
+            ]
+          },
+          {
+            "section": "Conclusions and future perspectives",
+            "paragraph_ids": [
+              "R02.P0042",
+              "R02.P0043",
+              "R02.P0044"
+            ]
+          }
+        ],
+        "captions_read": [
+          "R02.FIG1.CAP",
+          "R02.FIG2.CAP",
+          "R02.FIG3.CAP",
+          "R02.FIG4.CAP",
+          "R02.TAB1.CAP",
+          "R02.TAB2.CAP",
+          "R02.TAB3.CAP",
+          "R02.TAB4.CAP",
+          "R02.TAB5.CAP",
+          "R02.TAB6.CAP",
+          "R02.TAB7.CAP"
+        ],
+        "tables_read": [
+          {
+            "table_id": "R02.TAB4",
+            "row_ids": [
+              "R02.TAB4.ROW01",
+              "R02.TAB4.ROW02",
+              "R02.TAB4.ROW03",
+              "R02.TAB4.ROW04",
+              "R02.TAB4.ROW05",
+              "R02.TAB4.ROW06",
+              "R02.TAB4.ROW07",
+              "R02.TAB4.ROW08",
+              "R02.TAB4.ROW09",
+              "R02.TAB4.ROW10",
+              "R02.TAB4.ROW11",
+              "R02.TAB4.ROW12",
+              "R02.TAB4.ROW13",
+              "R02.TAB4.ROW14",
+              "R02.TAB4.ROW15",
+              "R02.TAB4.ROW16",
+              "R02.TAB4.ROW17"
+            ],
+            "reading_focus": "Peak versus genetic-track target labels, input length, target assays, model families, species and cell-type coverage."
+          }
+        ],
+        "tables_caption_only": [
+          "R02.TAB1.CAP",
+          "R02.TAB2.CAP",
+          "R02.TAB3.CAP",
+          "R02.TAB5.CAP",
+          "R02.TAB6.CAP",
+          "R02.TAB7.CAP"
+        ],
+        "extent": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R03",
+      "bibliography_id": "review-learning-r03",
+      "title": "From bulk RNA sequencing to spatial transcriptomics: a comparative review of differential gene expression analysis methods",
+      "doi": "10.1186/s40246-025-00884-w",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12797438/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read the abstract and main body S01–S19, including modality-specific methods, single-cell model comparisons, spatial transcriptomics challenges and conclusion. Read Tables 1–4 rows and Figures 1–2 captions. The bibliography and cited primary benchmarks were not read.",
+        "locators": [
+          "Abstract",
+          "S01 P001–P007; Fig. 1; Tables 1–2",
+          "S02 P008",
+          "S03 P009–P011",
+          "S04 P012–P017",
+          "S05 P018–P021; Table 3",
+          "S06 P022–P024",
+          "S07 P025–P029",
+          "S08–S10 P030–P036",
+          "S11 P037–P038",
+          "S12 P039–P050; Table 4",
+          "S13 P051–P053",
+          "S14 P054–P056",
+          "S15–S19 P057–P067; Fig. 2"
+        ],
+        "caption_scope": [
+          "Fig. 1",
+          "Fig. 2"
+        ],
+        "table_scope": [
+          "Table 1",
+          "Table 2",
+          "Table 3",
+          "Table 4"
+        ],
+        "locator_convention": "Section-local P labels and global P numbers follow the locally indexed R03 text in measurement/indexed-text/R03.indexed.txt; numbered table rows are in measurement/indexed-text/tables.txt."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R04",
+      "bibliography_id": "review-learning-r04",
+      "title": "Enhancing RNA Capture Efficiency in Spatial Transcriptomics: A Review of Innovative Technologies and Strategies",
+      "doi": "10.3390/ijms262211076",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12652657/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read the abstract and all paragraphs in S01–S06 on capture-efficiency concepts, platform and probe mechanisms, tissue/RNA quality, resolution, computational approaches, comparison limits and outlook. Read Fig. 1–5 captions, Tables 1–3 rows and the Table 3 footnote. Platform papers, benchmarks, vendor materials and software were not independently checked; no experiment was performed.",
+        "locators": [
+          "Abstract",
+          "S01 P001–P004",
+          "S02 P005–P021; Table 1",
+          "S03 P022–P039; Table 2; Fig. 1–5",
+          "S04 P040–P047; Table 3 and footnote",
+          "S05–S06 P048–P060"
+        ],
+        "caption_scope": [
+          "Fig. 1",
+          "Fig. 2",
+          "Fig. 3",
+          "Fig. 4",
+          "Fig. 5"
+        ],
+        "table_scope": [
+          "Table 1",
+          "Table 2",
+          "Table 3 and footnote"
+        ],
+        "locator_convention": "Section/global paragraph labels follow the locally indexed R04 text in measurement/indexed-text/R04.indexed.txt; table rows are in tables.txt and figure/table captions in figure-table-captions.txt. The scope is the completed human extraction's recorded reading extent."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R05",
+      "bibliography_id": "review-learning-r05",
+      "title": "Precision oncology: Computational methods for multi-omics data integration to improve drug response prediction",
+      "doi": "10.1017/pcm.2025.10003",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12973241/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "read_method": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography.",
+        "reading_positions": [
+          {
+            "section": "Impact statement",
+            "paragraph_ids": [
+              "R05.P0001"
+            ]
+          },
+          {
+            "section": "Introduction and background",
+            "paragraph_ids": [
+              "R05.P0002",
+              "R05.P0003",
+              "R05.P0004",
+              "R05.P0005"
+            ]
+          },
+          {
+            "section": "Methodology",
+            "paragraph_ids": [
+              "R05.P0006",
+              "R05.P0007",
+              "R05.P0008",
+              "R05.P0009",
+              "R05.P0010",
+              "R05.P0011"
+            ]
+          },
+          {
+            "section": "Results: predominant omics, computational methods, task definitions and workflow",
+            "paragraph_ids": [
+              "R05.P0012",
+              "R05.P0013",
+              "R05.P0014",
+              "R05.P0015",
+              "R05.P0016"
+            ]
+          },
+          {
+            "section": "Results > Computational methods used for DRP > Supervised learning",
+            "paragraph_ids": [
+              "R05.P0017",
+              "R05.P0018"
+            ]
+          },
+          {
+            "section": "Results > Computational methods used for DRP > Deep learning",
+            "paragraph_ids": [
+              "R05.P0019",
+              "R05.P0020",
+              "R05.P0021"
+            ]
+          },
+          {
+            "section": "Results > Computational methods used for DRP > Feature selection",
+            "paragraph_ids": [
+              "R05.P0022"
+            ]
+          },
+          {
+            "section": "Results > Computational methods used for DRP > Multimodal integration approach",
+            "paragraph_ids": [
+              "R05.P0023",
+              "R05.P0024",
+              "R05.P0025",
+              "R05.P0026"
+            ]
+          },
+          {
+            "section": "Discussion: omics, methods, data heterogeneity, interpretability and cross-cohort generalizability",
+            "paragraph_ids": [
+              "R05.P0027",
+              "R05.P0028",
+              "R05.P0029",
+              "R05.P0030",
+              "R05.P0031",
+              "R05.P0032",
+              "R05.P0033",
+              "R05.P0034",
+              "R05.P0035",
+              "R05.P0036"
+            ]
+          },
+          {
+            "section": "Future directions and Conclusion",
+            "paragraph_ids": [
+              "R05.P0037",
+              "R05.P0038",
+              "R05.P0039",
+              "R05.P0040"
+            ]
+          }
+        ],
+        "captions_read": [
+          "R05.FIG2.CAP",
+          "R05.FIG3.CAP",
+          "R05.FIG4.CAP",
+          "R05.FIG5.CAP",
+          "R05.TAB1.CAP",
+          "R05.TAB2.CAP"
+        ],
+        "tables_read": [
+          {
+            "table_id": "R05.TAB1",
+            "row_ids": [
+              "R05.TAB1.ROW01",
+              "R05.TAB1.ROW02",
+              "R05.TAB1.ROW03",
+              "R05.TAB1.ROW04",
+              "R05.TAB1.ROW05",
+              "R05.TAB1.ROW06",
+              "R05.TAB1.ROW07",
+              "R05.TAB1.ROW08",
+              "R05.TAB1.ROW09",
+              "R05.TAB1.ROW10"
+            ],
+            "reading_focus": "Study/model, response target, modalities, integration strategy and metrics summarized by the review."
+          },
+          {
+            "table_id": "R05.TAB2",
+            "row_ids": [
+              "R05.TAB2.ROW01",
+              "R05.TAB2.ROW02",
+              "R05.TAB2.ROW03",
+              "R05.TAB2.ROW04",
+              "R05.TAB2.ROW05"
+            ],
+            "reading_focus": "Review summary of GDSC, TCGA, CCLE and DepMap scope/limitations."
+          }
+        ],
+        "tables_caption_only": [],
+        "extent": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R06",
+      "bibliography_id": "review-learning-r06",
+      "title": "Cell lineage tracing: Methods, applications, and challenges",
+      "doi": "10.1002/qub2.70006",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12806085/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read article body P01–P67, Introduction through Discussion; inspected Figures 1–2 captions and Tables 1–3. Cited primary articles were not opened.",
+        "locators": [
+          "Introduction P01–P06",
+          "Definition P07; benchmark datasets P08; evaluation metrics P09",
+          "Experimental and computational methods P10–P38",
+          "Applications/interdisciplinary insights P39–P51",
+          "Challenges P52–P57; Discussion P58–P64",
+          "Tables 1–3; Figures 1–2"
+        ],
+        "locator_convention": "P numbers count article-body paragraphs in order in this exact catalog-matched XML; section path and printed table/figure label disambiguate."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R07",
+      "bibliography_id": "review-learning-r07",
+      "title": "Complexity welcome: Pangenome graphs for comprehensive population genomics",
+      "doi": "10.1017/qpb.2025.10028",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12722059/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "read_method": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography.",
+        "reading_positions": [
+          {
+            "section": "Introduction",
+            "paragraph_ids": [
+              "R07.P0001",
+              "R07.P0002",
+              "R07.P0003",
+              "R07.P0004",
+              "R07.P0005"
+            ]
+          },
+          {
+            "section": "The evolution of building pangenome graphs",
+            "paragraph_ids": [
+              "R07.P0006"
+            ]
+          },
+          {
+            "section": "The evolution of building pangenome graphs > Variation-first: Augmenting the reference",
+            "paragraph_ids": [
+              "R07.P0007",
+              "R07.P0008",
+              "R07.P0009"
+            ]
+          },
+          {
+            "section": "The evolution of building pangenome graphs > The alignment-first paradigm: Towards unbiased representation",
+            "paragraph_ids": [
+              "R07.P0010",
+              "R07.P0011",
+              "R07.P0012",
+              "R07.P0013"
+            ]
+          },
+          {
+            "section": "The evolution of building pangenome graphs > Scalable alternatives to whole-genome alignments",
+            "paragraph_ids": [
+              "R07.P0014",
+              "R07.P0015",
+              "R07.P0016"
+            ]
+          },
+          {
+            "section": "Variant calling in the graph era",
+            "paragraph_ids": [
+              "R07.P0017",
+              "R07.P0018",
+              "R07.P0019",
+              "R07.P0020",
+              "R07.P0021"
+            ]
+          },
+          {
+            "section": "Functional pangenomics: Linking variation to mechanism",
+            "paragraph_ids": [
+              "R07.P0022",
+              "R07.P0023",
+              "R07.P0024",
+              "R07.P0025"
+            ]
+          },
+          {
+            "section": "Navigating the tangled graph: visualisation, comparison and scalability",
+            "paragraph_ids": [
+              "R07.P0026",
+              "R07.P0027",
+              "R07.P0028",
+              "R07.P0029"
+            ]
+          },
+          {
+            "section": "Conclusion and perspectives",
+            "paragraph_ids": [
+              "R07.P0030",
+              "R07.P0031",
+              "R07.P0032",
+              "R07.P0033",
+              "R07.P0034",
+              "R07.P0035",
+              "R07.P0036"
+            ]
+          }
+        ],
+        "captions_read": [
+          "R07.FIG2.CAP",
+          "R07.FIG3.CAP",
+          "R07.FIG4.CAP"
+        ],
+        "tables_read": [],
+        "tables_caption_only": [],
+        "extent": "Complete XML body paragraphs were parsed into numbered paragraph blocks in document order and read by bounded section chunks. Figure/table captions were numbered by source order; key table rows are separately numbered. This is full-text reading of the review, not of its bibliography."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R09",
+      "bibliography_id": "review-learning-r09",
+      "title": "Commentary: a review of technical considerations for planning an RNA-Sequencing experiment",
+      "doi": "10.1186/s12864-025-12094-8",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12522984/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read the abstract; S01–S03.7 on question, RNA biotype, library preparation, read type, batching and depth; key count/normalization passages in S04.1; batch discussion S04.2; S05.1–S05.2 on power, biological replication and depth; and S06. Fig. 1, 2 and 4 captions were read; Fig. 3 was registered only as an aligner-comparison figure. S05.3 and cited sample-size/power primary studies were not read in depth.",
+        "locators": [
+          "Abstract",
+          "S01 P001–P002",
+          "S02.1–S02.2 P003–P006",
+          "S03.1–S03.7 P007–P022; Fig. 1–3",
+          "S04.1 P023–P034",
+          "S04.2 P035–P036",
+          "S05.1 P037–P040",
+          "S05.2 P041–P043; Fig. 4",
+          "S06 P044–P046"
+        ],
+        "caption_scope": [
+          "Fig. 1",
+          "Fig. 2",
+          "Fig. 3 registered as aligner comparison only",
+          "Fig. 4"
+        ],
+        "table_scope": "No table body formed the basis of the selected relations.",
+        "locator_convention": "Section/global paragraph labels follow measurement/indexed-text/R09.indexed.txt; captions are in figure-table-captions.txt. Detailed scope follows the completed human extraction; S05.3 and cited primary studies were not deeply read."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R10",
+      "bibliography_id": "review-learning-r10",
+      "title": "Challenges and opportunities in uncertainty quantification for healthcare and biological systems",
+      "doi": "10.1098/rsta.2024.0232",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11904623/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read body P01–P62, Motivation through conclusions; inspected Figures 1–2 captions. No tables. Cited primary articles were not opened.",
+        "locators": [
+          "Motivation P01–P04",
+          "Modelling/simulation context P05–P16",
+          "UQ pipeline P17–P32: forward/inverse UQ, emulators",
+          "Current gaps/opportunities P33–P54: credibility, discrepancy, identifiability, complexity, data, emulators, population",
+          "Conclusions P55–P62; Figures 1–2"
+        ],
+        "locator_convention": "P numbers count body paragraph elements in order within this exact catalog-matched XML."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R12",
+      "bibliography_id": "reproducible-computational-research-2013",
+      "title": "Ten Simple Rules for Reproducible Computational Research",
+      "doi": "10.1371/journal.pcbi.1003285",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3812051/",
+      "counts_as_review": false,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read all ten Rules and all article body paragraphs; no tables/figures. Cited references were not followed.",
+        "locators": [
+          "Rules 1–10; paragraph locators are rule-local P1, with Rule 1 P1–P3, Rule 4 P1–P3, Rule 9 P1–P4 and Rule 10 P1–P2"
+        ],
+        "locator_convention": "Rule heading is the section locator; P numbers count paragraph elements inside that rule."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R13",
+      "bibliography_id": "review-learning-r13",
+      "title": "Mendelian randomization: genetic anchors for causal inference in epidemiological studies",
+      "doi": "10.1093/hmg/ddu328",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4170722/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read body P01–P24; inspected Box 1–4, Tables 1–2, Figures 1–2. Cited primary articles were not opened.",
+        "locators": [
+          "Introduction P01; principles P02–P03; Figure 1",
+          "RCT analogy P04–P06; Tables 1–2; Boxes 1–3",
+          "Multiple variants P07–P11; Figure 2",
+          "Two-sample P12–P13",
+          "Bidirectional/network P14–P17",
+          "Mediation/two-step P18–P19; Box 4",
+          "Factorial/multiphenotype/hypothesis-free P20–P22; conclusion P23"
+        ],
+        "locator_convention": "P numbers count body paragraphs in order in this exact catalog-matched XML; boxes/tables/figures use printed labels."
+      },
+      "cited_primary_articles_read": false
+    },
+    {
+      "source_id": "R14",
+      "bibliography_id": "review-learning-r14",
+      "title": "Molecular Docking: A powerful approach for structure-based drug discovery",
+      "doi": "10.2174/157340911795677602",
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3151162/",
+      "counts_as_review": true,
+      "reading_scope": {
+        "status": "source_inspected",
+        "extent": "Read HTML paragraphs P1–P47: abstract, introduction, theory, sampling, scoring, docking methods, LMMC, applications and conclusion; inspected Tables 1–3 and Figures 1–4 captions. References were not individually followed.",
+        "locators": [
+          "Abstract/Introduction P1–P6",
+          "Theory P7; sampling P8–P16; Table 1",
+          "Scoring P17–P25; Table 2",
+          "Rigid/flexible ligand/receptor methods P26–P40; Table 3; Figures 1–4",
+          "Applications P42–P45",
+          "Conclusion P46–P47"
+        ],
+        "locator_convention": "P numbers are the existing HTML paragraph IDs; tables and figures use the printed labels."
+      },
+      "cited_primary_articles_read": false
+    }
+  ],
+  "cases": [
+    {
+      "id": "review-example:measurement-design-and-replication",
+      "path": "docs/methods/worked-examples/measurement-design-and-replication.md",
+      "title": "测量设计、重复与可推广的表达差异",
+      "source_ids": [
+        "R01",
+        "R03",
+        "R09"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/statistical-units-and-selection.md",
+        "docs/methods/guides/measurement-to-claim.md"
+      ],
+      "method_choices": {
+        "trigger": "cross-donor expression claim under finite assay/read budget",
+        "choices": [
+          "sample-aware pseudobulk",
+          "cell-level mixed model",
+          "sample-local description",
+          "bulk after tissue-average question change"
+        ],
+        "change_evidence": [
+          "target-cell coverage",
+          "depth marginal gain",
+          "donor heterogeneity"
+        ],
+        "unit": "donor/sample for cross-donor claim; cells for within-sample description"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:spatial-signal-and-capture",
+      "path": "docs/methods/worked-examples/spatial-signal-and-capture.md",
+      "title": "空间梯度：捕获了什么，推断了什么",
+      "source_ids": [
+        "R01",
+        "R03",
+        "R04"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/measurement-to-claim.md",
+        "docs/methods/guides/statistical-units-and-selection.md",
+        "docs/methods/guides/information-and-state-effects.md"
+      ],
+      "method_choices": {
+        "trigger": "gradient mixes capture, composition and cell-intrinsic expression",
+        "choices": [
+          "assay matched to tissue/capture/panel",
+          "composition-aware interpretation",
+          "prediction with matched measured validation or unresolved hypothesis"
+        ],
+        "change_evidence": [
+          "composition adjustment",
+          "raw versus imputed gradient",
+          "patient and measurement sensitivity"
+        ],
+        "unit": "area/distance, cells or patients according to target"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:representation-and-reference-bias",
+      "path": "docs/methods/worked-examples/representation-and-reference-bias.md",
+      "title": "参考表示：覆盖增加之后，怎样作公平比较",
+      "source_ids": [
+        "R02",
+        "R07"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/measurement-to-claim.md",
+        "docs/methods/guides/statistical-units-and-selection.md"
+      ],
+      "method_choices": {
+        "trigger": "representation changes observable/evaluable events",
+        "choices": [
+          "variation-first",
+          "alignment-first",
+          "task-suitable k-mer or gene representation"
+        ],
+        "change_evidence": [
+          "common-event comparison",
+          "new-coverage truth",
+          "species/context transfer evidence"
+        ],
+        "unit": "mapped biological event; newly covered domain separately"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:integration-and-response-target",
+      "path": "docs/methods/worked-examples/integration-and-response-target.md",
+      "title": "多组学整合：先明确要预测谁的哪种响应",
+      "source_ids": [
+        "R05"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/statistical-units-and-selection.md",
+        "docs/methods/guides/information-and-state-effects.md",
+        "docs/methods/guides/function-and-utility-validation.md"
+      ],
+      "method_choices": {
+        "trigger": "response prediction with deployment/missingness choices",
+        "choices": [
+          "early/intermediate/late fusion",
+          "single-modality fallback",
+          "deployable new-drug representation if required"
+        ],
+        "change_evidence": [
+          "same-object paired gain",
+          "extra-coverage gain",
+          "batch or related-object dependence"
+        ],
+        "unit": "drug-cell-line response pair with deployment-related grouping"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:history-and-state-inference",
+      "path": "docs/methods/worked-examples/history-and-state-inference.md",
+      "title": "从细胞标签与状态推断哪一层历史",
+      "source_ids": [
+        "R06"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/measurement-to-claim.md",
+        "docs/methods/guides/information-and-state-effects.md",
+        "docs/methods/guides/statistical-units-and-selection.md"
+      ],
+      "method_choices": {
+        "trigger": "state/label observations interpreted as history",
+        "choices": [
+          "clone assignment",
+          "record-supported partial/order/tree relation",
+          "state trajectory",
+          "conditional velocity"
+        ],
+        "change_evidence": [
+          "record resolution and collisions",
+          "unobserved edges",
+          "independent timing/direction"
+        ],
+        "unit": "observable clone or historical relation matched to claim"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:causal-instruments-and-identifiability",
+      "path": "docs/methods/worked-examples/causal-instruments-and-identifiability.md",
+      "title": "工具变量：从可用数据到可识别的因果问题",
+      "source_ids": [
+        "R13",
+        "R10"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/measurement-to-claim.md",
+        "docs/methods/guides/information-and-state-effects.md",
+        "docs/methods/guides/statistical-units-and-selection.md"
+      ],
+      "method_choices": {
+        "trigger": "genetic associations proposed as causal instruments",
+        "choices": [
+          "individual-level route with joint inputs",
+          "summary-statistic ratio/combined estimator",
+          "obtain identification evidence or defer causal claim"
+        ],
+        "change_evidence": [
+          "invalid bypass path",
+          "weak/incompatible instruments",
+          "sensitivity to prior/external constraints"
+        ],
+        "unit": "defined genetic-proxy exposure effect and outcome scale"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    },
+    {
+      "id": "review-example:sampling-scoring-and-use",
+      "path": "docs/methods/worked-examples/sampling-scoring-and-use.md",
+      "title": "分子对接：把采样、评分与使用决定分开",
+      "source_ids": [
+        "R14"
+      ],
+      "existing_guidance": [
+        "docs/methods/guides/function-and-utility-validation.md",
+        "docs/methods/guides/statistical-units-and-selection.md"
+      ],
+      "method_choices": {
+        "trigger": "score used for pose, screening or affinity",
+        "choices": [
+          "pool coverage and top-k diagnostics",
+          "matched-reference screening",
+          "separate affinity evaluation",
+          "conditional conformer ensemble"
+        ],
+        "change_evidence": [
+          "pool near-reference versus selected pose",
+          "reference-information change",
+          "candidate and active-reference composition"
+        ],
+        "unit": "complex/pose for recovery; fixed pool and selection budget for screening"
+      },
+      "relation": "project-authored conditional instantiation of existing guidance",
+      "status": "source_and_editorial_review; prospective_application_pending",
+      "scientific_execution": false,
+      "process_background": "R12"
+    }
+  ],
+  "scope": "Source-guided hypothetical study designs. Reviews support attributed method relations; the project combines conditional workflows. Cited primary studies/implementations not newly read or executed.",
+  "requirements_policy": "Optional, target-dependent choices; no blanket pseudobulk, graph, MR, docking or multimodal requirement added.",
+  "acceptance": {
+    "source_reading": "12 individually scoped records and stable source bytes",
+    "editorial_review": "Independent findings dispositioned; parent accepted final examples.",
+    "documentation": "Root machine/history/review-derived-worked-examples-validation.json",
+    "prospective_scientific_application": "pending"
+  }
+}

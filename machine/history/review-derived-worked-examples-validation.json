@@ -1,0 +1,61 @@
+{
+  "schema": "harness.review-derived-worked-examples-validation/v1",
+  "date": "2026-10-24",
+  "status": "pass",
+  "public_baseline_commit": "e03d8db027db99e15d43285f54868a3b1ef7a28",
+  "scope": {
+    "new_first_party_worked_examples": 7,
+    "documentation_check": {
+      "command": "python -B -X utf8 tools/documentation.py check --root . --out .scratch/documentation-check.json",
+      "exit_code": 0,
+      "stdout": "{\"findings\": 0, \"report\": \"documentation-check.json\", \"status\": \"pass\"}",
+      "checked_markdown": 121,
+      "checked_links": 1256,
+      "checked_case_artifacts": 13,
+      "source_index_records": 107,
+      "findings": 0,
+      "unassessed_items": 12,
+      "unassessed_breakdown": {
+        "borrowing_locators_not_online_checked": 5,
+        "acceptance_items_not_run": 7
+      }
+    },
+    "documentation_refresh": {
+      "command": "python -B -X utf8 tools/documentation.py refresh --root . --out .scratch/documentation-refresh.json",
+      "exit_code": 0,
+      "stdout": "{\"findings\": 0, \"report\": \"documentation-refresh.json\", \"status\": \"pass\"}",
+      "findings": 0,
+      "checkpoint_entries_before_receipt": 411,
+      "core_release_entries_before_receipt": 240,
+      "derived_change_count": 306
+    },
+    "checkpoint_verification_before_receipt": {
+      "command": "python -B -X utf8 verify_checkpoint.py --root .",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"pass\", \"checked_files\": 410, \"manifest_self_hashed\": false, \"scope\": \"file identities and inventory; scientific acceptance is separate\"}",
+      "checked_files": 410,
+      "status": "pass"
+    },
+    "core_release_verification_before_receipt": {
+      "command": "python -B -X utf8 core/verify_release.py core",
+      "exit_code": 0,
+      "stdout": "{\"checked_files\": 239, \"manifest_self_hashed\": false, \"status\": \"pass\"}",
+      "checked_files": 239,
+      "status": "pass"
+    }
+  },
+  "frozen_release_check": {
+    "tag": "v0.1.0-alpha.2",
+    "peeled_target": "764bd88b090439c8fe0d1646826d23865dc5c20b",
+    "peeled_target_matches_refresh_receipt": true,
+    "release_manifest_fields_equal_git_head": [
+      "package",
+      "source_revision",
+      "spec",
+      "verification"
+    ]
+  },
+  "scientific_execution_count": 0,
+  "prospective_application": "pending",
+  "boundary": "Documentation structure, links, indexes, checkpoint inventory and core release-manifest integrity were checked. Scientific validity and application to a prospective study were not evaluated here; the documentation checker reports 12 explicitly unassessed locator/acceptance items."
+}

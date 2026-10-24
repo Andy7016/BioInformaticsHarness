@@ -1,0 +1,22 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "core/docs/methods/worked-examples/causal-instruments-and-identifiability.md",
+  "source_text": "# 工具变量：从可用数据到可识别的因果问题\n\n这是文献启发的假设设计例。拟研究遗传代理的暴露 X 与结局 Y 的关系，先检查工具和输入数据，再决定估计路线。R13 提供经典 Mendelian randomization 框架；方法的选择须匹配数据形式和目标效应。\n\n## 先检查工具支持的因果问题\n\n逐项说明工具与暴露相关、工具与共同原因的关系，以及工具经暴露作用于结局的条件。相关性可用数据检验；后两项需要生物学、设计和额外证据共同支持。效应精度提高与识别假设成立是两条不同的论证。\n\n多效性也按路径区分：暴露下游的中介作用可以属于目标机制；绕过暴露直接作用于结局的路径则威胁排除限制。不能只按“存在多个关联”决定工具有效或无效。\n\n## 依据数据形式选择估计路线\n\n| 输入条件 | 可选路线 | 最少应说清楚的接口 |\n|---|---|---|\n| 同一研究有个体层 G、X、Y 及所需协变量 | 在明确的结构/统计模型下考虑两阶段最小二乘等方法 | 第一阶段预测 X、第二阶段估计 Y 对遗传代理 X 的关系；记录尺度、工具强度与模型条件 |\n| 有相容的暴露与结局 GWAS 汇总统计 | 单工具效应比值，或在相应假设下的多工具汇总估计 | 每个工具的 beta、SE、效应等位基因、单位、方向、群体与样本关系；先对齐再估计 |\n| 关键效应、方向或工具有效性缺乏依据 | 补齐资料、改用可识别的研究设计，或暂缓因果估计 | 保留具体缺口及其如何改变结论，已有遗传关联可单独描述 |\n\n对汇总路线，单工具比值的目标可写成 beta(G→Y)/beta(G→X)。先定义结果是每单位或每 SD 遗传代理 X 对应的 Y 尺度；效应单位及其向实际干预的解释另有条件。工具间相关、样本重叠、弱工具和不确定性按所选估计方法处理。多工具汇总需要相容的效应定义与权重/相关结构，工具增加本身不会解决无效路径。\n\n个体级两阶段输入与两样本汇总输入分别组织。估计量的有限样本表现、线性或其他结构条件需要明示，三项工具条件并非任意模型的性能结论。\n\n## 哪些证据会改变因果解释\n\n发现可信的绕行结局路径、方向或群体不相容、工具过弱，应重新选择工具、估计问题或研究设计。无效工具产生的因果估计不能通过改名转成普通表型关联；要回答表型关联问题，需对应的观察数据和分析。\n\nR10 的不确定性讨论还提醒：观测不足以区分参数与模型差异时，先验或外部信息可提供约束。交接时说明约束来自哪里，以及结论对它的敏感性；把更窄的后验区间与新增观测识别能力分开解释。\n\n## 向人解释与讨论\n\n画出 G、X、Y 和共同原因的路径，标出哪些箭头有数据支持，哪些属于识别条件。用结果的实际单位解释目标效应，提供继续估计、补识别证据、改变问题三条出口，并指出哪种新证据会改变推荐。\n\n## 文献与相关指南\n\n- George Davey Smith, Gibran Hemani (2014). [Mendelian randomization: genetic anchors for causal inference in epidemiological studies](https://doi.org/10.1093/hmg/ddu328).\n- Louise M Kimpton, L Mihaela Paun, Mitchel J Colebank et al. (2025). [Challenges and opportunities in uncertainty quantification for healthcare and biological systems](https://doi.org/10.1098/rsta.2024.0232).\n\n这些综述提供问题与方法关系；本页的组合方案、取舍条件和交接形式由 Harness 整理。各来源的阅读范围见[书目](../../../REFERENCES.md)。相关指导：[从测量到主张](../guides/measurement-to-claim.md)、[信息与状态影响](../guides/information-and-state-effects.md)、[统计单位与选择](../guides/statistical-units-and-selection.md)。\n",
+  "source_commit": null,
+  "source_sha256": "a2750c8b7c2537d1527bb31b2b736ed644712375435732edc897d796716080d6",
+  "revisions": [
+    {
+      "date": "2026-10-24",
+      "reason": "Review-derived conditional worked examples and source/use index.",
+      "current_identity": {
+        "bytes": 3937,
+        "sha256": "a2750c8b7c2537d1527bb31b2b736ed644712375435732edc897d796716080d6"
+      },
+      "technical_refs": [
+        "machine/history/review-derived-worked-examples.json",
+        "core/machine/design/review-derived-worked-examples.json"
+      ],
+      "scientific_execution": false
+    }
+  ]
+}

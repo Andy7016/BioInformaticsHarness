@@ -93,7 +93,7 @@
   },
   "release": {
     "frozen_tag": "v0.1.0-alpha.2",
-    "documentation_revision": "2026-10-23",
+    "documentation_revision": "2026-10-24",
     "new_docs_do_not_rewrite_published_assets": true
   },
   "new_file_licenses": {

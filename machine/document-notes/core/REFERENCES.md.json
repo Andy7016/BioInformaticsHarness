@@ -7,5 +7,20 @@
   "source_text_retained_verbatim": true,
   "technical_notes": [
     "Original public reference and attribution prose retained before reorganizing the unified source and design index."
+  ],
+  "revisions": [
+    {
+      "date": "2026-10-24",
+      "reason": "Review-derived conditional worked examples and source/use index.",
+      "current_identity": {
+        "bytes": 22966,
+        "sha256": "adcd2ca562e4abe4bc48fa008f85273dc1b1cbdf60a3e0e991419f23a76a0ff8"
+      },
+      "technical_refs": [
+        "machine/history/review-derived-worked-examples.json",
+        "core/machine/design/review-derived-worked-examples.json"
+      ],
+      "scientific_execution": false
+    }
   ]
 }
