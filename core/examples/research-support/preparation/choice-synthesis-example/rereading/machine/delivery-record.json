@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-25",
+  "identity_receipt_before_rereading": true,
+  "receipt_scope": "Oldv2 andv2.2 packagecompleteness andexactidentitiesonly; historicalscientificdecisions separate.",
+  "historical_packages": [
+    {
+      "version": "application",
+      "manifest": {
+        "bytes": 68799,
+        "sha256": "f664bf3bac45b084b908003a1b664a172296827069da98e2f9b9c53f2a43b272"
+      },
+      "review": {
+        "bytes": 26719,
+        "sha256": "18462d0c215e7d0e2fed5c308f764ba5048406c84a4a383c5ce3c1e806698936"
+      }
+    },
+    {
+      "version": "application-v2.2",
+      "manifest": {
+        "bytes": 14782,
+        "sha256": "ac82b53c73d5badf0b8e920dc72f4ad999a9219bd62d7c3d1c0809cb2f90d316"
+      },
+      "review": {
+        "bytes": 27469,
+        "sha256": "4d66fabcd60d800b4104526db27443b1e91073339d39dcdb1903bb4081575a60"
+      }
+    }
+  ],
+  "public_old_excerpt_role": "Newfirstpartyillustration rewrittenfromrealoldrelations, notoriginaldeliverybytes.",
+  "public_source_basis_role": "Firstparty rereadingnotes, neitheroriginalarticlefulltext norrawdata.",
+  "scientific_acceptance": "not_assessed",
+  "hidden_access_unlocked": false,
+  "old_scores_changed": false,
+  "new_scientific_experiment_count": 0
+}

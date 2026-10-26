@@ -131,3 +131,9 @@ The 43 formal cases overlap the central references for three source works. The m
 - Geir Kjetil Sandve, Anton Nekrutenko, James Taylor, Eivind Hovig. **Ten Simple Rules for Reproducible Computational Research**. PLoS Computational Biology. 2013;9(10):e1003285. [DOI: 10.1371/journal.pcbi.1003285](https://doi.org/10.1371/journal.pcbi.1003285)。阅读：十项规则正文；作为过程背景，沿用已有书目身份。
 - George Davey Smith, Gibran Hemani. **Mendelian randomization: genetic anchors for causal inference in epidemiological studies**. Human molecular genetics. 2014;23(R1):R89-R98. [DOI: 10.1093/hmg/ddu328](https://doi.org/10.1093/hmg/ddu328)。阅读：正文、Box 1–4、表1–2与图1–2。
 - Xuan-Yu Meng, Hong-Xing Zhang, Mihaly Mezei, Meng Cui. **Molecular Docking: A powerful approach for structure-based drug discovery**. Current Computer-Aided Drug Design. 2011;7(2):146-157. [DOI: 10.2174/157340911795677602](https://doi.org/10.2174/157340911795677602)。阅读：正文、表1–3及图1–4说明。
+
+## 方法取舍工作例的原始研究来源
+
+- Greg Finak, Andrew McDavid, Masanao Yajima, Jingyuan Deng, Vivian Gersuk, Alex K Shalek, Chloe K Slichter, Hannah W Miller, M Juliana McElrath, Martin Prlic, Peter S Linsley, Raphael Gottardo. **MAST: a flexible statistical framework for assessing transcriptional changes and characterizing heterogeneity in single-cell RNA sequencing data**. Genome Biology. 2015;16:278. [DOI: 10.1186/s13059-015-0844-5](https://doi.org/10.1186/s13059-015-0844-5)。阅读：Background 末段的基因集、基因间相关与Ⅰ类错误说明，以及模型和细胞检出率相关选段；用于[单细胞重综合工作例](examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md)。
+
+- Mu Gao, Davi Nakajima An, Jerry M. Parks, Jeffrey Skolnick. **AF2Complex predicts direct physical interactions in multimeric proteins with deep learning**. Nature Communications. 2022;13:1744. [DOI: 10.1038/s41467-022-29394-2](https://doi.org/10.1038/s41467-022-29394-2)。阅读：原论文全部正文、方法、主图与图注；补充材料未读。用于[重读与重综合工作例](examples/research-support/preparation/choice-synthesis-example/rereading/README.md)。

@@ -1,0 +1,36 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/design/34-review-choice-synthesis.md",
+  "source_text": "# D57：将已读条件接到综述论证\n\n## 问题\n\n此前三份不同主题的综述，分别有六项、七项和八项关系达到各自图谱的实质覆盖要求。第一题后来的两次重做仍停在六项。综述已有清楚主线，部分条件虽然读过，却没有进入问题地图和正文论证。后续整理的综述来源与工作例，提供了更多取舍材料，接下来需要检验它们怎样被研究者使用。\n\n## 决定\n\n沿用 D55 的问题地图、覆盖检查、有界补查与收束，以及 D56 的范围评议。在“已读未综合”或方法段落仍以名称为主时，增加一条具体写作路线：选取一个核心问题，改变一个重要条件，从已读来源说明方法选择及评价含义，再把关系写进正文。\n\n[操作指南](../methods/guides/review-choice-synthesis.md)给出阅读和改写顺序；[输入条件工作例](../../examples/research-support/preparation/choice-synthesis-example/README.md)用既有来源演示三种缺口的不同处理。原有地图和来源记录继续使用，正文、一页表格或现有研究工具都能承接。\n\n## 取舍与下一步\n\n按专题选择真正影响目标、信息资格、推断或使用的条件。经典路线与新路线按解释价值选读；同一前提下的实现细节可以合并。合理替代、收窄、暂缓和向人讨论继续保留。\n\n旧案例复核保留原评分，并将新判断另行登记。新一批使用不同问题，在交付前保留参照综述和评价图谱；观察正文是否给出更充分的关系、来源是否支持，以及读者能否据此选择下一步。当前实现与评价状态见[结构记录](../../machine/design/review-choice-synthesis.json)。\n",
+  "source_commit": null,
+  "source_sha256": "f71a9c818e51d5837270782283c23262eebb94207bb57706133042865d53da80",
+  "original_source_scope": "Preserved uncommitted draft before this revision",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D57",
+      "date": "2026-10-25",
+      "reason": "Connect actually read conditions to choice and evaluation; distinguish objective changes, response routes, compound subrelations and source reports.",
+      "new_sources_or_designs": [
+        "D57",
+        "review-learning:R13",
+        "evaluation:R2:S407"
+      ],
+      "technical_records": [
+        "core/machine/design/review-choice-synthesis.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/before-public/core/docs/design/34-review-choice-synthesis.md"
+      },
+      "acceptance_status": "candidate_self_reviewed_awaiting_independent_review"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T07:39:51.838882+00:00",
+  "current_identity": {
+    "bytes": 2344,
+    "sha256": "abdf5c9d81536831e23750765cfa4d10474629a411413345af3e43c549d27db3"
+  },
+  "current_technical_records": [
+    "core/machine/design/review-choice-synthesis.json"
+  ]
+}

@@ -19,6 +19,8 @@ Use the trigger that matches your research question. The table suggests a starti
 |---|---|---|
 | 需要把调研、人的方向选择与后续研究连成一条主线 | [研究推进与共同取舍](guides/research-guidance-cycle.md) | [讨论模板](../../examples/research-support/research-cycle/README.md)、[当前任务](guides/task-continuity.md) |
 | 新主题或具体问题需要串起文献、方法与首计划 | [研究前期准备](guides/research-preparation.md) | [资料获取](source-acquisition-routing.md)、[资源缺口](guides/resource-gap-loop.md) |
+| 方法比较仍以名称为主，需要将已读条件接到选择与评价 | [从已读文献写出方法取舍](guides/review-choice-synthesis.md) | [输入与目标工作例](../../examples/research-support/preparation/choice-synthesis-example/README.md)、[单细胞旧例](../../examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md) |
+| 固定交付后仍缺选择依据，需要重读并复查注意分配 | [重读与视角切换](guides/review-choice-synthesis.md#固定交付后主动重读相关原文) | [AF2Complex 实际重读例](../../examples/research-support/preparation/choice-synthesis-example/rereading/README.md) |
 | 综述已有主线，需要检查遗漏、补查价值和何时结束 | [问题地图与收束](guides/review-coverage-and-closure.md) | [可运行例](../../examples/research-support/preparation/coverage-example/README.md)、[综述优先](guides/review-first-preparation.md) |
 | 希望先完成详实综述，再选择是否开展研究 | [综述优先](guides/review-first-preparation.md) | [准备模板](../../examples/research-support/preparation/README.md)、[统计单位](guides/statistical-units-and-selection.md) |
 | 同一研究续跑、恢复会话或旧成果上开展补分析 | [当前任务与本轮交付](guides/task-continuity.md) | [接手研究](guides/receiving-research-work.md)、[操作工具](research-support-tools.md) |
@@ -26,7 +28,7 @@ Use the trigger that matches your research question. The table suggests a starti
 | 需要调用Proto的生信工具或已有模型，并接入真实研究工件 | [Proto工具调用](guides/proto-tool-use.md) | [公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)、[生产—消费接口](guides/artifact-producer-consumer.md) |
 | 预测/距离/指标等工件将被另一程序消费，字段或ID对齐会影响结论 | [生产—消费接口](guides/artifact-producer-consumer.md) | [实际消费证据](cards/execution-evidence.md)、[研究操作工具](research-support-tools.md) |
 | 补目标标签、模型失准或校准/重拟合排序依赖表示 | [标签来源与模型更新](guides/label-source-and-update.md) | [统计单位](guides/statistical-units-and-selection.md)、[信息用途](guides/information-and-state-effects.md) |
-| 需要解释生物学原因、提出下一证据或向人交接研究决定 | [生物学解释与人读交接](guides/biological-explanation-and-handoff.md) | [功能与效用](guides/function-and-utility-validation.md)、[可读过程](../design/06-readable-process.md) |
+| 对象、特征、标签与候选用途尚未接通，或需要解释与交接研究决定 | [生物学解释与人读交接](guides/biological-explanation-and-handoff.md) | [Yeast 连续论证](../../examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md)、[功能与效用](guides/function-and-utility-validation.md) |
 | 交付真实文件供另一位研究者或agent执行 | [接手研究操作](guides/receiving-research-work.md) | [研究操作工具](research-support-tools.md)、[具体义务与交接](guides/guidance-calibration-and-handoff.md) |
 | 报告指标与复算冲突，需要判断哪些定义仍可能相容 | [有限指标诊断](guides/finite-diagnostics.md) | [指标语义](cards/metric-semantics.md)、[工具与矩阵接口](research-support-tools.md) |
 | 单角误差与联合结构损失关系不清，或需选择几何对照 | [联合几何诊断例](guides/joint-geometry-diagnostics.md) | [结构几何与扰动](guides/structural-geometry-and-perturbation.md) |

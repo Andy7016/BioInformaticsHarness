@@ -1,0 +1,264 @@
+{
+  "schema": "harness.review-choice-synthesis.design/v1",
+  "decision_id": "D57",
+  "date": "2026-10-25",
+  "status": "source_grounded_candidate_awaiting_independent_review",
+  "supplements": [
+    "D55",
+    "D56",
+    "D38-D43 revisor response/handoff principles"
+  ],
+  "purpose": "Carry actually read choice-changing conditions into review arguments, including input change, objective change, compound concerns and route-specific deliverables.",
+  "minimum_consumer": "One paragraph or one-page table with the existing source ledger/review map; no new schema or mandatory machine fields.",
+  "route_key": [
+    "concern",
+    "delivery_version",
+    "assessed_scope",
+    "selected_response_route"
+  ],
+  "five_dimensions": [
+    "process",
+    "input_use",
+    "next_action",
+    "artifact",
+    "acceptance"
+  ],
+  "routes": [
+    {
+      "route": "explain_or_resynthesize",
+      "process": "Compare the preserved draft with actually read source passages; identify the missing choice relation.",
+      "input_use": "Source text defines the reported method/conditions; it supplies no new experiment.",
+      "next_action": "Write supported prose/table and attach it to the existing concern and review map.",
+      "artifact": "Actual revised argument plus unresolved subrelations, exemplified by mast-resynthesis.md.",
+      "acceptance": "Exact source support and a readable condition–choice–evaluation argument; remaining broader obligations visible."
+    },
+    {
+      "route": "targeted_reading",
+      "process": "Name a missing relation, choose an eligible original/author manuscript/equivalent source, read bounded relevant content.",
+      "input_use": "The selected source supplies the missing relation or comparison; discovery and acquisition are separate states.",
+      "next_action": "Use the actual passages to revise the argument or retain a specific gap on failure.",
+      "artifact": "Reading locators and used argument, or an actual access/gap disposition; a download alone is insufficient.",
+      "acceptance": "Read version supports this relation and scope; source and relationship denominators remain distinct."
+    },
+    {
+      "route": "scientific_validation",
+      "process": "Define the discriminating question, target unit, comparison/reference and evaluation before execution.",
+      "input_use": "Each data/model/reference input has its research use; explanatory text is not a new measured result.",
+      "next_action": "Deliver a design; execute only within research authorization; update the claim using actual results.",
+      "artifact": "Design first; execution receipts and result artifacts only after actual execution.",
+      "acceptance": "Judge observed results for the selected scientific question; planned or blocked work remains separate."
+    }
+  ],
+  "comparison_types": [
+    {
+      "kind": "input_change_fixed_target",
+      "example": "MR same A→B question with individual-level joint versus independent exposure/outcome datasets"
+    },
+    {
+      "kind": "target_change",
+      "example": "MR effect-size question becomes A→B versus B→A direction question; needs two-sided instrument information and direction-specific evidence"
+    }
+  ],
+  "compound_relation_example": {
+    "concern": "R2-I10",
+    "frozen_delivery": "r2-xhigh-first-delivery",
+    "original_question": "差异表达、基因集和调控网络结论应在哪些层级解释？",
+    "historical_score": 2,
+    "historical_substantive_count": "7/10",
+    "subrelations": [
+      {
+        "relation": "DE/design",
+        "original_state": "substantive_bounded_synthesis",
+        "current_action": "retain"
+      },
+      {
+        "relation": "gene-set",
+        "original_state": "read_but_not_synthesized",
+        "basis": "S407:P007",
+        "current_action": "source-grounded explanation in a new addendum candidate"
+      },
+      {
+        "relation": "regulatory network method and edge meaning",
+        "original_state": "not_developed_with_sufficient_read_support",
+        "current_action": "remain unresolved; targeted reading or narrowed use"
+      }
+    ],
+    "completion_scope": "One selected gene-set explanation; original first-delivery prose, score and wider concern retained.",
+    "source_claim_boundary": "P007 is an author report of a GSEA framework and its correlation/type-I-error rationale; no new comparative calibration/power test and no network-inference completion."
+  },
+  "sources": [
+    {
+      "id": "review-learning:R13",
+      "kind": "historical_review_report",
+      "title": "Mendelian randomization: genetic anchors for causal inference in epidemiological studies",
+      "doi": "10.1093/hmg/ddu328",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4170722/",
+      "read_version": "archived PMC version 1 XML, retrieved 2026-10-23",
+      "read_scope": {
+        "this_revision": "Basic principles P02–P03; Box 1; multiple variants P08–P09 and Table 2; two-sample P12–P13; bidirectional P14–P16",
+        "paragraph_convention": "P numbers enumerate p elements directly under sec elements in the archived body (24); boxes, captions and lists do not increment this numbering separately. Printed labels identify Box/Table/Figure.",
+        "cited_primary_studies_read_this_revision": false
+      }
+    },
+    {
+      "id": "evaluation:R2:S407",
+      "kind": "selected_primary_passage",
+      "title": "MAST: a flexible statistical framework for assessing transcriptional changes and characterizing heterogeneity in single-cell RNA sequencing data",
+      "doi": "10.1186/s13059-015-0844-5",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4676162/",
+      "read_version": "saved Europe PMC JATS article, version available 2015-12-10",
+      "read_scope": {
+        "this_revision": "S407:P002–P008, with P007 as the gene-set relation basis; adjacent P009–P013 visible for context",
+        "historical_ledger_range": "P002-P008,P012-P017,P036-P038,P043-P047",
+        "paragraph_convention": "Use archived body.txt stable S407:P locators, which include figure captions as numbered units. P007 is Background final prose paragraph.",
+        "performance_comparison_executed": false,
+        "gene_set_methods_comparatively_reviewed_this_revision": false
+      }
+    }
+  ],
+  "source_to_design_relation": "Published sources illustrate conditional scientific relations. First-party old-delivery adjudication motivated the workflow; source authors did not prescribe or endorse the Harness guide.",
+  "historical_scores_preserved": {
+    "r1": "6/9",
+    "r2": "7/10",
+    "r3": "8/10 comparison-map; 7/9 if original CORE-MAP denominator discussed",
+    "r1_medium": "6/9",
+    "r1_d55": "6/9",
+    "r1_i05": "Retain old bounded-instance score2; integration mechanism remains partial under the wider architecture question."
+  },
+  "old_5_and_7_reviewer_summary": {
+    "formal_per_relation_output_found": false,
+    "use": "Reported reviewer opinion only; current adjudication rereads frozen deliveries and selected sources with its own scope."
+  },
+  "acceptance_requirements": [
+    {
+      "id": "A01",
+      "requirement": "同时示范固定目标改变输入条件、以及目标改变后重选评价和路线。",
+      "observable_acceptance": "读者能指出两类变化及各自理由；不将单条件反事实当完整方法论。",
+      "implementation": [
+        "core/docs/methods/guides/review-choice-synthesis.md#先变条件再检查目标是否改变",
+        "core/examples/research-support/preparation/choice-synthesis-example/README.md#固定目标改变可用输入",
+        "core/examples/research-support/preparation/choice-synthesis-example/README.md#目标改变时重选路线与评价"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A02",
+      "requirement": "将作者实际比较、综述跨来源综合、尚待验证的建议分别表达。",
+      "observable_acceptance": "MR例逐条绑定已读原文位置；不把输入导览当估计量性能比较。",
+      "implementation": [
+        "core/examples/research-support/preparation/choice-synthesis-example/README.md#先确定来源报告了什么",
+        "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md#新论证怎样改变读者的下一步"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A03",
+      "requirement": "复合兴趣点显出内部子关系。",
+      "observable_acceptance": "DE充分、gene-set未综合、network未读分别定位，不能以一个高分注销剩余义务。",
+      "implementation": [
+        "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md#先保留旧段落承担的任务"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A04",
+      "requirement": "接通revisor的concern×交付版本×所评范围×回应路线。",
+      "observable_acceptance": "解释/重综合、补读、科学验证分别有具体过程、输入用途、下一动作、产物和验收；五维齐全之后仍做语义判断。",
+      "implementation": [
+        "core/docs/methods/guides/review-choice-synthesis.md#按缺口选择路线和产物",
+        "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md#将产物接回原问题"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A05",
+      "requirement": "以真实旧案示范已读未写，并另保留获取失败和合理限域。",
+      "observable_acceptance": "CADD缺失处理、scater交互诊断或MAST gene-set至少一例完成来源→旧段落→新论证→原地图的可追溯链。",
+      "implementation": [
+        "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md",
+        "core/examples/research-support/preparation/choice-synthesis-example/README.md#三种缺口分别交付"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A06",
+      "requirement": "解释路线只验收它实际回答的范围。",
+      "observable_acceptance": "原宽请求及未选OR路线继续保留；限域不能把原问题记为全解决，验证计划不能记已执行结果。",
+      "implementation": [
+        "core/docs/methods/guides/review-choice-synthesis.md#按缺口选择路线和产物",
+        "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md#将产物接回原问题"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A07",
+      "requirement": "使用有意义的负例检查。",
+      "observable_acceptance": "遮掉方法名后仍能看见对象、条件、替代和评价；只有方法名/来源名/字段齐全的段落判不充分。",
+      "implementation": [
+        "core/docs/methods/guides/review-choice-synthesis.md#用修订前后检查含义是否改变"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    },
+    {
+      "id": "A08",
+      "requirement": "分开工程验收和研究应用结果。",
+      "observable_acceptance": "源索引、机器记录、模板消费者和既有verifier通过才封存；新三例首次交付前不得宣称改善已验证。",
+      "implementation": [
+        "core/docs/design/34-review-choice-synthesis.md#取舍与下一步",
+        "core/machine/design/review-choice-synthesis.json"
+      ],
+      "self_review": "implemented_candidate; independent verdict pending"
+    }
+  ],
+  "anti_overfitting": [
+    "No universal list of R1 method names, branch/paper quota, required followup download or all-route execution.",
+    "A source name, a method name or five filled dimensions does not establish scientific sufficiency.",
+    "Equivalent evidence and justified scoped use are permitted.",
+    "OR routes remain optional; their unanswered original questions remain visible."
+  ],
+  "implementation": [
+    "core/docs/design/34-review-choice-synthesis.md",
+    "core/docs/methods/guides/review-choice-synthesis.md",
+    "core/examples/research-support/preparation/choice-synthesis-example/README.md",
+    "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md",
+    "core/docs/methods/README.md",
+    "core/examples/research-support/preparation/README.md",
+    "core/docs/methods/guides/review-coverage-and-closure.md"
+  ],
+  "validation": {
+    "source_semantic_self_review": "completed; internal, not independent",
+    "local_document_checks": {
+      "status": "pass",
+      "local_links_and_fragments": 138,
+      "document_note_identities": 7,
+      "source_index_original_prefix_retained": true,
+      "json_parse": "pass",
+      "new_prose_policy": "pass",
+      "scope": "Assigned candidate only; final inventory and release verifiers deferred to root."
+    },
+    "independent_editorial_scientific_claim_review": "pending_root_dispatch",
+    "documentation_refresh_and_existing_verifiers": "pending_root_after_all_writers_stop",
+    "new_topic_application": "not_started",
+    "new_scientific_experiments": 0,
+    "old_case_regression": "one bounded source→prose resynthesis; no new independent efficacy outcome"
+  },
+  "private_evidence": [
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-review-guidance-reassessment/adjudication-2026-10-25/relation-adjudication.json"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-review-guidance-reassessment/adjudication-2026-10-25/guidance-acceptance.json"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/claim-source-review.json"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/before-snapshot.json"
+    }
+  ],
+  "publication_scope": "First-party paraphrases, one historical source-guidance illustration and one bounded prior-delivery regression; archived raw source bodies, old first deliveries and frozen releases remain unmodified."
+}

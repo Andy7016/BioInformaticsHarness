@@ -1,0 +1,62 @@
+{
+  "source_id": "POST-S02",
+  "object": "Given sequences/stoichiometry of a putative protein complex; separately arbitrary candidateproteinpairs for interface-basedinteractionranking.",
+  "input_information": "Each monomer amino-acidsequence, its MSA from sequence libraries and monomer structuraltemplates; known or hypothesized component/stoichiometrycontext. UnpairedMSAs are padded into fullcomplexlength; residueindices distinguishchains; no explicit complex-template search.",
+  "representation_fusion": "Reuse AF2 monomerDLmodels, optionally AF-MultimerDLmodels, without retraining; assemble monomer features, jointly predict complexcoordinates throughAF2. piTM/interface-score use predictedalignmenterror over predictedinterface residues; confidence0-1 is not measured affinity/calibratedbiologicalprobability.",
+  "labels_units": "Poseassessment uses experimentalPDBcomplexcoordinates; DockQ unitless [0,1] quality bands. PPIassessment labels CP17truepairs positive, naively allother34-proteinpaircombinations negative. E.coli701previouslycuratedpositivepairs,6849randomlyselectedputative negatives,~1:10 afterlengthfilter. CP17 coordinate result is target-level interface-score-selected best-of15 from3 independent runs×5models; the561pair screen instead has1run perpair, not1model.",
+  "actual_output": "复合物坐标及接口置信度；可另用于直接互作候选筛选，仍非亲和力/校准发生概率。 CP17坐标质量结果使用每目标3×5候选、按interface-score从15选top；561对筛选另为每对single run，非single model。",
+  "reasonable_alternatives": "CP17same17targets: originalmonomerAF2ComplexmeanDockQ.62 vsAF2/ClusPro.25,combineddockingstrategy.47,AF-Multimer.65. AF2ComplexusingmultimerDLmodels reports.74; authors attribute this configuration to unpairedMSAs,increasedrecycles,andinterface-score in combination. OriginalmonomerAF2Complex already uses unpairedMSAs; this view hasnot established factor-by-factor changes relative toeach comparator or isolated each contribution. Authorsnotuniversallydominateeverytarget:oneAF2Complexfailurehasgooddockingalternative. Same targets do not establish matched candidate-generation or compute budgets. CP17pose results condition on3runs×5models/interface-score topof15, not DockQ-based selection.",
+  "unknowns": [
+    "No experimentallyvalidatednegativepopulation established for CP17/E.coli evaluation.",
+    "Authors suggest someE.colipositivepairsare coassemblywithoutdirectcontact; thisisdiagnosticinterpretation,noteachpair experimentallyreclassified.",
+    "Currentstudy didnot provide general target-domain probabilitycalibration.",
+    "Fullfamily/species/sequenceexposureisolation not established.",
+    "NoofficialCAPRIprotocol/historyreview; DockQposeevaluation is thesupportedinstance.",
+    "Results p4largebenchmarkcounts1192dimers/593oligomers differ fromMethods p11namesDimer1193/Oligomer562; preserved asinternalinconsistency,nocanonicalcountinvented.",
+    "Detailedlargebenchmarksupplement andallstatisticalclaimsnotindependentlychecked; no rerun."
+  ],
+  "evaluation_budget": {
+    "CP17_pose": {
+      "targets": 17,
+      "independent_runs_per_target": 3,
+      "top_models_per_run": 5,
+      "candidate_models_per_target": 15,
+      "selection": "overall top-ranked of15 by interface-score; experimental DockQ is evaluation after selection",
+      "selection_by_DockQ": false,
+      "applies_to": "both monomer and multimer AF neural-network model evaluations as stated in CP17 methods",
+      "max_recycles_per_run": 20,
+      "results_conditioned_on_this_budget": [
+        "15/17 acceptable or better",
+        "monomer-AF2Complex meanDockQ0.62"
+      ],
+      "matched_candidate_or_compute_budget_with_other_methods": "not_established"
+    },
+    "CP17_occurrence": {
+      "proteins": 34,
+      "candidate_pairs": 561,
+      "known_positive_pairs": 17,
+      "runs_per_pair": 1,
+      "single_run_is_not_single_model": true,
+      "models_per_run": "not inferred here for this separate screen",
+      "max_recycles_per_run": 20,
+      "negative_labels": "other pairs naively assumed noninteracting; unchanged limitation"
+    }
+  },
+  "configuration_attribution": {
+    "author_explanation": "unpairedMSA,increasedrecycles,interface-score combination",
+    "monomer_AF2Complex_already_uses_unpaired_MSA": true,
+    "relative_changes_for_each_comparator": "not_audited",
+    "individual_causal_gains": "not_isolated",
+    "source_pages": [
+      2,
+      4,
+      10
+    ]
+  },
+  "version": "D58-rereading-explanatory-view",
+  "source_reference": "gao-af2complex-2022",
+  "source_locators": "VORp2–5,p9–11; actualcomplete maintext/allmainfigures/captions read,SIunread.",
+  "historical_view_role": "Retainedoriginalv2.2; currentboundedderivedview doesnotrewriteoldartifact.",
+  "reading_record_ref": "reading-record.json",
+  "current_report_ref": "../report-v2.md"
+}

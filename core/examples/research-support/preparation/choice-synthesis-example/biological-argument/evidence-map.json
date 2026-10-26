@@ -1,0 +1,235 @@
+{
+  "schema": "harness.research-preparation-evidence-map/v1",
+  "preparation_id": "yeast-biological-argument",
+  "definitions": [],
+  "findings": [
+    {
+      "finding_id": "F01",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "历史蛋白对象、数据库注释与当前类别任务的关系",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "locator": "1996pp109-112;notes历史任务",
+          "summary": "SWISS-PROT sequences,YPD annotations,eight historical features and one archived class."
+        }
+      ],
+      "cross_source_synthesis": "Original/dictionary and accepted project records have different roles; derivatives do not add independent studies.",
+      "researcher_inference": "Define object/label correspondence before expanding to all vacuole-related proteins or genes.",
+      "evidence": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "work_id": "Horton-Nakai1996-UCI110",
+          "evidence_unit_id": "F01",
+          "relation": "supports",
+          "basis": "Attributed notes;actual-reading and prior-result boundaries in reading-record.json."
+        }
+      ]
+    },
+    {
+      "finding_id": "F02",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "八项表示生成、vac/VAC与上游谱系",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "locator": "1996pp110-111,Fig3p114;yeast.names",
+          "summary": "Rules/programs/discriminants compress sequence information;vac discriminates composition at VAC/EXC split;nuc/pox descriptions differ in granularity."
+        }
+      ],
+      "cross_source_synthesis": "Original/dictionary and accepted project records have different roles; derivatives do not add independent studies.",
+      "researcher_inference": "Use fixed features conditionally; actual upstream overlap needs members,version and data-flow evidence.",
+      "evidence": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "work_id": "Horton-Nakai1996-UCI110",
+          "evidence_unit_id": "F02",
+          "relation": "supports",
+          "basis": "Attributed notes;actual-reading and prior-result boundaries in reading-record.json."
+        }
+      ]
+    },
+    {
+      "finding_id": "F03",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "标签证据与实际使用路径的层次",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "locator": "source-basis.md, 历史任务、表示与标签, paragraphs1 and3; Horton-Nakai1996 pp110-112; UCI yeast.names target/classes",
+          "summary": "The historical task uses localization categories and database annotations as its classification reference. These sources establish category meaning and database-level provenance."
+        },
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "locator": "source-basis.md, Harness 历史计算案例的导出摘要, workflow paragraph; prior accepted LABEL-USE-CLARIFICATION paragraphs2-3 and role table; accepted REVIEW paragraph2",
+          "summary": "The accepted Harness correction reports parsing an old prediction JSON containing true labels, while the readable scoring and ranking calculations did not use those fields. Evaluation later joined the historical reference; TP/FP count archive-label agreement."
+        }
+      ],
+      "cross_source_synthesis": "Historical sources supply category semantics; the accepted Harness correction alone supplies the modern access/use account. Their connection is the current synthesis.",
+      "researcher_inference": "Retain narrow label-use statement; separately saved reference is still historical annotation.",
+      "evidence": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "work_id": "Horton-Nakai1996-UCI110",
+          "evidence_unit_id": "F03",
+          "relation": "supports",
+          "basis": "Supports the historical annotation/category component only; no modern Harness parsing, scoring or selection claim."
+        },
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "work_id": "Harness-Yeast-VAC-accepted-followup",
+          "evidence_unit_id": "F03",
+          "relation": "supports",
+          "basis": "Supports modern label access, scoring/selection use and archive-hit definitions; this is the later Harness review, not the 1996 paper."
+        }
+      ]
+    },
+    {
+      "finding_id": "F04",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "历史训练/总体CV与序列/ID/向量保护",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "locator": "source-basis.md, 原结果的评价条件, paragraph1; Horton-Nakai1996 p112 Yeast text and Tables3-4/captions",
+          "summary": "Table3 uses all-data training. Table4 reports overall ten-fold results for the full dataset and the 1368-sequence set obtained by removal until no pair exceeds 50% residue identity."
+        },
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "locator": "source-basis.md, 原结果的评价条件, paragraph2 modern census statements; prior raw-data-audit unique_ids/unique_complete_feature_vectors; accepted REVIEW paragraphs2 and4",
+          "summary": "The accepted project census gives 1462 unique historical IDs and 1453 complete eight-feature vectors. The later Harness design groups identical vectors and separates training and held-out IDs."
+        }
+      ],
+      "cross_source_synthesis": "Historical sequence removal and modern ID/vector grouping are different protections. This comparison is the current synthesis, not a statement independently reported in full by each source.",
+      "researcher_inference": "Choose a sequence-based design only when a selected new-family claim requires it.",
+      "evidence": [
+        {
+          "source_id": "S-PAPER-NOTES",
+          "work_id": "Horton-Nakai1996-UCI110",
+          "evidence_unit_id": "F04",
+          "relation": "supports",
+          "basis": "Supports 1996 table conditions and sequence-set description only; not the later 1462-ID or 1453-vector counts."
+        },
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "work_id": "Harness-Yeast-VAC-accepted-followup",
+          "evidence_unit_id": "F04",
+          "relation": "supports",
+          "basis": "Supports modern census and ID/vector protection only; not the historical 1368-sequence algorithm or family-isolation evidence."
+        }
+      ]
+    },
+    {
+      "finding_id": "F05",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "固定输出进入五队列审阅事件",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "locator": "accepted REVIEW;notes项目已接受结果",
+          "summary": "Uncalibrated VAC-relative scores ranked within each fold with frozen quotas totaling85;two splits share IDs/labels."
+        }
+      ],
+      "cross_source_synthesis": "Original/dictionary and accepted project records have different roles; derivatives do not add independent studies.",
+      "researcher_inference": "Interpret finite-archive ranking; probability/external performance/real capacity need matching evidence.",
+      "evidence": [
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "work_id": "Harness-Yeast-VAC-accepted-followup",
+          "evidence_unit_id": "F05",
+          "relation": "supports",
+          "basis": "Attributed notes;actual-reading and prior-result boundaries in reading-record.json."
+        }
+      ]
+    },
+    {
+      "finding_id": "F06",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "同预算负决定与新用途改判",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "locator": "accepted K85 results and original joint rule",
+          "summary": "Hits4/30and6/30,FP81/79,FN26/24;both fail complete rule;each gains1over linear."
+        }
+      ],
+      "cross_source_synthesis": "Original/dictionary and accepted project records have different roles; derivatives do not add independent studies.",
+      "researcher_inference": "Accept bounded negative without complete mechanism; new-use target/capacity/cost guide new evidence.",
+      "evidence": [
+        {
+          "source_id": "S-ARCHIVE-NOTES",
+          "work_id": "Harness-Yeast-VAC-accepted-followup",
+          "evidence_unit_id": "F06",
+          "relation": "supports",
+          "basis": "Attributed notes;actual-reading and prior-result boundaries in reading-record.json."
+        }
+      ]
+    },
+    {
+      "finding_id": "F07",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "AF2Complex对象、预算与参照随用途变化",
+      "scope_conditions": [
+        "Bounded resynthesis;old accepted results retained;no new model or biological run."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-AF2-NOTES",
+          "locator": "D58report-v2;notes对照",
+          "summary": "Given-component structures selected by interface-score then evaluated by DockQ;pair screening uses declared interaction labels and its single-run protocol."
+        }
+      ],
+      "cross_source_synthesis": "Original/dictionary and accepted project records have different roles; derivatives do not add independent studies.",
+      "researcher_inference": "Choose object,reference and generation budget for the intended action.",
+      "evidence": [
+        {
+          "source_id": "S-AF2-NOTES",
+          "work_id": "Gao-AF2Complex2022-D58",
+          "evidence_unit_id": "F07",
+          "relation": "supports",
+          "basis": "Attributed notes;actual-reading and prior-result boundaries in reading-record.json."
+        }
+      ]
+    }
+  ],
+  "disagreements": [],
+  "method_candidates": [],
+  "questions": [],
+  "hypothesis_review": {
+    "status": "not_applicable",
+    "reason": "Existing-result explanation; new empirical cause/deployment test not selected.",
+    "hypotheses": []
+  },
+  "narrative": {
+    "main_line": "object→feature generation→label evidence→output/action→evaluation→bounded decision and change conditions",
+    "outline": [],
+    "figure_or_table_ideas": [],
+    "glossary": []
+  },
+  "review_decision": {
+    "status": "review_delivered",
+    "reason": "Continuous report for independent source-level review.",
+    "unresolved_questions": [
+      "Empirical upstream independence,new localization,family transfer,actual use remain open."
+    ],
+    "next_action": "Independent content review and separate Medium native run; no old scores updated."
+  }
+}

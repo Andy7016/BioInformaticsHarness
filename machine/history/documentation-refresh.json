@@ -4,10 +4,10 @@
   "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
   "frozen_tag": "v0.1.0-alpha.2",
   "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "documentation_revision": "2026-10-24",
+  "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "e03d8bdb027db99e15d43285f54868a3b1ef7a28",
+    "head": "0ec170eb6eff0259136df23e6efac8f15f3da8d4",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 4741,
-      "current_sha256": "d404a42fde52123e9e5d45e58bacfa6b1a6c070a28ec04276a830f0f781b7b0b"
+      "current_bytes": 5404,
+      "current_sha256": "65937f4bde374faadca241179de70ea4e630aedc305863cecb64fb4080e933bc"
     },
     {
       "path": "LICENSING.md",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 3191,
-      "current_sha256": "3bf06598287eaaecc5528dc3c6a6d006177c33757b18774d91310b6c5d26274a"
+      "current_bytes": 3461,
+      "current_sha256": "38243a192336c0f915b8058b3aa49844cc83703c75c5235b590457a1f9e897c2"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -63,8 +63,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:ROADMAP.zh.md",
       "previous_sha256": "f3302d833b016dd8fe549b36a94a3d4adc88c241e78eb926cc381508844f15b4",
-      "current_bytes": 4090,
-      "current_sha256": "1969b2bfdc1d2a5fcd12e103ed5c0504c27cbfaaa4ab3bb52a50389af6d10d31"
+      "current_bytes": 6209,
+      "current_sha256": "fad006e64d330bbb4a0327b608a2f459ce1d46d541a1c7ca3adca8ad026b3810"
     },
     {
       "path": "core/EVIDENCE.zh.md",
@@ -72,8 +72,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/EVIDENCE.zh.md",
       "previous_sha256": "1cd4ca97b19b414403b727a01cdcbf07bae9d91221608e107fad6281e8d1f7fc",
-      "current_bytes": 2663,
-      "current_sha256": "98e33e42acb8c9494183ce2ac81fa546aaa928d04b727aa262a5b148bd56998d"
+      "current_bytes": 3190,
+      "current_sha256": "782719aee60d7f67e62f5deb74eef4c6c60671f912fad072d54353b2b26cd6db"
     },
     {
       "path": "core/LICENSING.md",
@@ -108,8 +108,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/REFERENCES.bib",
       "previous_sha256": "dd1e06e1d270704cf073ff4b3ae9a08d28d07430562474341861980b4fb6b25f",
-      "current_bytes": 36348,
-      "current_sha256": "db365188e4ff984ca108f276936dada9dbb018a0d126fbcbd42625b5dcb452b0"
+      "current_bytes": 37359,
+      "current_sha256": "6097fea221cd40d1626718871d864989d9b4a6112cda19cf1481b784204d283e"
     },
     {
       "path": "core/REFERENCES.md",
@@ -117,8 +117,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/REFERENCES.md",
       "previous_sha256": "f6ae034fc1983e8ef0e6bb65087cd4b3b74f456fa517618d34f287aa91197566",
-      "current_bytes": 22966,
-      "current_sha256": "adcd2ca562e4abe4bc48fa008f85273dc1b1cbdf60a3e0e991419f23a76a0ff8"
+      "current_bytes": 24194,
+      "current_sha256": "89517fa97fbfa575ceda2c88191a8f35f9615e41b946ad77e08abae04e5b9c77"
     },
     {
       "path": "core/RELEASE-MANIFEST.json",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 232589,
-      "current_sha256": "063e488eb70d7b031b00f6c94ff905f65605e89db3c03f3e34d0dd6f4f3c9dcd"
+      "current_bytes": 263266,
+      "current_sha256": "1a07a3ffe25bbee0c2d8f373c15950636985ff7f31a2d41df44fe1b91d1f8728"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -404,13 +404,34 @@
       "current_sha256": "fdaa128c0d2484d0cc01bf3b249892c11e3061edb31c22c12a1ea3b7b549d79d"
     },
     {
+      "path": "core/docs/design/34-review-choice-synthesis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2344,
+      "current_sha256": "abdf5c9d81536831e23750765cfa4d10474629a411413345af3e43c549d27db3"
+    },
+    {
+      "path": "core/docs/design/35-rereading-perspectives.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2108,
+      "current_sha256": "42867b866ac85f86b055e9a1b844ae923bc9ca0697d4275dd5f65626d4144b48"
+    },
+    {
+      "path": "core/docs/design/36-biological-argument.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2247,
+      "current_sha256": "3d7e868faed7a37ffbd2dba63ec9e70cf9574126b72c095fa8d557b68df5419a"
+    },
+    {
       "path": "core/docs/methods/README.md",
       "change": "modified",
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 10926,
-      "current_sha256": "de3dd641a3950b0d1731d32406dbe4e9595bc8519d46bc45de4fd25c9fbd5349"
+      "current_bytes": 11606,
+      "current_sha256": "24ffe3c18c117e634249540a4ecf717220fb81d6d2ccd24c7f0a46a9a94612ac"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -535,8 +556,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/biological-explanation-and-handoff.md",
       "previous_sha256": "2f8dc75f5985a7d05a8b574505b47d9c5308e147fd6fc0bb73837c08cb3a1aa2",
-      "current_bytes": 7444,
-      "current_sha256": "5240a4b91de606337c11299ee920739252328d65405f486059a584f0831fc28b"
+      "current_bytes": 10776,
+      "current_sha256": "9ffe1dbe12835a1b39f2178f5097c21855f72a836cd1bb52f0d6e9be2360ad91"
     },
     {
       "path": "core/docs/methods/guides/finite-diagnostics.md",
@@ -659,18 +680,25 @@
       "current_sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0"
     },
     {
+      "path": "core/docs/methods/guides/review-choice-synthesis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 11276,
+      "current_sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+    },
+    {
       "path": "core/docs/methods/guides/review-coverage-and-closure.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9936,
-      "current_sha256": "50b752f1a1150de13095dd0a1c6046332c3071d4189bfadefe4f00d4616b7c0c"
+      "current_bytes": 10729,
+      "current_sha256": "deaf45dcf098099c99d0df58fad657e802b8833f35c7918149d99ee62d368a4f"
     },
     {
       "path": "core/docs/methods/guides/review-first-preparation.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 10343,
-      "current_sha256": "d07991b456773c173b6745401ebcca7447e52e98ae681b1eb559f2fd3157fb06"
+      "current_bytes": 10527,
+      "current_sha256": "64cf57482ea075829eb7a050c36247c8fb1dc03ef125d31401ab8f114d464cfb"
     },
     {
       "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
@@ -678,8 +706,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/revision-responses-and-acceptance.md",
       "previous_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
-      "current_bytes": 10492,
-      "current_sha256": "94f76cd16810b256dbed9ee0044862adfc1e3df272db3653e5f9a865f2a7bd87"
+      "current_bytes": 10807,
+      "current_sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
     },
     {
       "path": "core/docs/methods/guides/sequence-novelty-and-background.md",
@@ -919,8 +947,8 @@
       "path": "core/examples/research-support/preparation/README.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4688,
-      "current_sha256": "fb4116d218ba446a9ebc807eb11a13c87543db0b8a826d320e3d9bcfe5793bba"
+      "current_bytes": 5299,
+      "current_sha256": "39cf5aa09e8169da182a41916f745ab7847cb7e45c48ac354fcad040d4534ddb"
     },
     {
       "path": "core/examples/research-support/preparation/REVIEW.template.md",
@@ -928,6 +956,188 @@
       "baseline_revision": "764bd88",
       "current_bytes": 3505,
       "current_sha256": "47d072149765923d342fd1cec5bcbbdeebf3694207976e9f8f0cc2032e94b2ce"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6782,
+      "current_sha256": "2a6f87cba3bccab2da686748e43e25e6f831b4761257424685494af03858159a"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3086,
+      "current_sha256": "049c94518dacd7c5291c184b6306c4e69465b42cb13db0da0426a650eeb6d963"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/evidence-map.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 11521,
+      "current_sha256": "a951c82c5e3a11fa0d23b3abf7a63e0820452cc0200b0b77a18f9ae53bb55693"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7619,
+      "current_sha256": "4cbae2ba12f7b5babfb37e717b775636baa45454d9d69e369b4977d3bfaac098"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/report.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9081,
+      "current_sha256": "16f6bfc1ce1141311fb9285355fde49ba8e88ed43d073c2ed741b1c0e33fc567"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/review-map.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5962,
+      "current_sha256": "87dfa91c14685e9c7888c51d871c834bf5b8bb20bee3ad0904b6ee5bd68d0952"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/revisor-record.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3730,
+      "current_sha256": "77fec87a4fee10ee0e08f69d82a3e3c17b38151f989bbdf4bdc6f8f3bb908279"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-basis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4902,
+      "current_sha256": "fec4dbd5050c6ea4e5a7c664b06f7b9ff7fdbb933687549702cf620ce602bca6"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-ledger.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7259,
+      "current_sha256": "b38f7298c1000efe8a34f23e04d77faea3bbadbc2ea23b39fb8defe9bc70df98"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4712,
+      "current_sha256": "61f84e4104eb3d10812dee37d6820ff2a8b47605689926e70b43172e6b64f72e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/README.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2902,
+      "current_sha256": "fab02a2c724b74ce8b2d7cff809e01935ad4d7bff9ceabc1922257965eb615d0"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/audit.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1952,
+      "current_sha256": "fae5fa6eb3e1d9af0cad86bbb7bddc986162a225a2d68b98181890208a86c399"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/evidence-map-v1.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2144,
+      "current_sha256": "99c4aba976ad28da890fac31794817341bf87d27996d794727c5a2b5db7ba943"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/evidence-map-v2.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4863,
+      "current_sha256": "b874f5bc0a990ebe78f684a090313a7b84c3ef00e5abe6885e248767bb1ce647"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/POST-F011-F012.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2995,
+      "current_sha256": "3ee3874cdba370c170c1a20498db0611b3011a3e081b4a78ed46ab1171b47b38"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/POST-S02-taskcard.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4896,
+      "current_sha256": "b81be4b785e2b6605862fba61c5abe52c7bad6d5885f951299dadc79544e649e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/delivery-record.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1231,
+      "current_sha256": "e1cf3e4ecfc631d80c2aa7e01a6c73653c359da8d146c3c3fedb4c984503d203"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/observation.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 682,
+      "current_sha256": "14ecf0746ac18b9e3f8ec570b36cdd27eeb3c679fbedb3f5163ee864e5e4ba3f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2540,
+      "current_sha256": "2c55149d3130962fd5d4258915b8cff352d6a1d0d7ffa6e9865d54186af26bff"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/revisor-record.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2483,
+      "current_sha256": "048a45806f427f24a697db50408bca628701baa153ce4fb0526f7caea5843b8f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v1.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 827,
+      "current_sha256": "40c8f389ae3e9e00f95f84f135f37a181f3dd8faf6b76ae560279b92a7fef08f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v2.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3817,
+      "current_sha256": "5aebb22439c776c09d6c0bb1d78a075a0868d978b2090b9e8abe868aa9ac7c78"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/review-map-v1.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3373,
+      "current_sha256": "6d47c5fe76a0d5d75575a6ea358e1e5fe1d85dc6a1d8f8778bbb0cab7056346f"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/review-map-v2.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4696,
+      "current_sha256": "e4a1b4a2ed609ed8d1b4a82121759baa383e945702e3b8ee0c65c5547c74c94e"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/source-basis.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2723,
+      "current_sha256": "66bd94c7d99e52c27c889749e75068375ac132610f8ad24041270265a22be9fe"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/source-ledger.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2568,
+      "current_sha256": "f3039fa2c1426c03584991eda93205e7146ddb6391629cbe0a266081f66ee5e6"
     },
     {
       "path": "core/examples/research-support/preparation/coverage-example/README.md",
@@ -1168,6 +1378,20 @@
       "current_sha256": "9774318d9ae945fad5bfb6e7983c648798f7566d973c14c24125194e56f5de2b"
     },
     {
+      "path": "core/machine/design/biological-argument.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 11567,
+      "current_sha256": "144cc08b920210eac9f599d5c43363f5e1d5219669f8be06c322770954b54344"
+    },
+    {
+      "path": "core/machine/design/rereading-perspectives.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7740,
+      "current_sha256": "bcb5095044459c9076b21ea589698c198043b2c735a2c3f40dda19641f87658b"
+    },
+    {
       "path": "core/machine/design/research-guidance-cycle.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1187,6 +1411,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 18093,
       "current_sha256": "f497db20d075fe31151f3d38b21add47952342ce73043cf3985ca5f01c376260"
+    },
+    {
+      "path": "core/machine/design/review-choice-synthesis.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 14662,
+      "current_sha256": "8351a604ce507cdcf6509bf14b63f32166b941012385dcc0a2de50a6005143aa"
     },
     {
       "path": "core/machine/design/review-coverage.json",
@@ -1229,8 +1460,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/references.json",
       "previous_sha256": "8318cb07560d6d55e8e00a501bd9c9bbf73483b0de9fb64909e1f0c3e6545eef",
-      "current_bytes": 78560,
-      "current_sha256": "87ed6d0279fc228c505427a95a4af02787786aaa1e46c321ad92774de5939458"
+      "current_bytes": 82746,
+      "current_sha256": "69173f8b881c72c55d50d2318379d81031e41fac68aeb0d2a439c2a4037dfb3e"
     },
     {
       "path": "core/scripts/acquisition/route_sources.py",
@@ -1322,8 +1553,8 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 63530,
-      "current_sha256": "424edf44e46d9388bfc46cd7eda4665f3b97aecbc20f319c0ab2ac10d6abd0ff"
+      "current_bytes": 65358,
+      "current_sha256": "36e663105302427885bd57b39757846fdf5c13d479c6cf0bcfac5b677e989e4f"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -1331,8 +1562,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:docs/history/EVOLUTION.zh.md",
       "previous_sha256": "6a03308d8feb858189981fb6c32221cd809c2a5950168f40bf36e5e55abc5823",
-      "current_bytes": 8798,
-      "current_sha256": "29b02b16f0994f417e3fe171f7163b0a5e1d89151e25d8ea342f0f7f3f348547"
+      "current_bytes": 9629,
+      "current_sha256": "2b05d9f7d4d2d9523b1081cd014b88ca4df9e6a1791f52b6a176d3d4b698de39"
     },
     {
       "path": "docs/plans/RESOURCE-COMPLETION.zh.md",
@@ -1340,6 +1571,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 3846,
       "current_sha256": "ab0d034acd3ddb275d09db70f3ca6877215319160d3bf412769af95459591b22"
+    },
+    {
+      "path": "docs/research/rereading-validation-2026-10-27.zh.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6830,
+      "current_sha256": "b1006c7e2c1934a52206adcc5429fdc43eba0cf512c1eec698331ab06737f3dc"
     },
     {
       "path": "examples/splice/CASE-MANIFEST.json",
@@ -1402,8 +1640,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5680,
-      "current_sha256": "81f588a31c4024fd2526edb5162b53fc108c582f85861084d10804de24e2c487"
+      "current_bytes": 6190,
+      "current_sha256": "9faa306a7b710c1949f106b52f5b20732b36def2e7dd426304fca15a4d177d6c"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1423,22 +1661,22 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4886,
-      "current_sha256": "9890de744ec899141aed854dd26a664fd012bef342aef04bb8038fc11e6d2647"
+      "current_bytes": 5484,
+      "current_sha256": "73ea08eb5b795222e9193fa4bec65f1cda6975724432440f753ba3886f919dd1"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5270,
-      "current_sha256": "f969ba54b502cc0d0b5ab24ba1f424c641393d37e9ed26fb27d524af8a098e35"
+      "current_bytes": 6248,
+      "current_sha256": "40e9902e6d86525bbfb75fd8c3bcad1d13f898da8a227105ac63ea1fcfb134da"
     },
     {
       "path": "machine/document-notes/core/EVIDENCE.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4240,
-      "current_sha256": "b3d8649fcbd830fc7ab9fd5ed20a099236f47c99f7ca33e4d5a50ba40aec9c1e"
+      "current_bytes": 4871,
+      "current_sha256": "e3ac78e0349ce6149403f173c2b40b8d1dc63ad6e850d6bde8d8322a4d2061f5"
     },
     {
       "path": "machine/document-notes/core/LICENSING.md.json",
@@ -1462,11 +1700,18 @@
       "current_sha256": "ac0af474bf6c7b23019140a897d3a016a424aef29e90043ab41908a3f92f06e5"
     },
     {
+      "path": "machine/document-notes/core/REFERENCES.bib.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 39725,
+      "current_sha256": "be191a602ac8d1051bde022a7409de882cc36d1a64b7d82bbdb3c598a23da4d0"
+    },
+    {
       "path": "machine/document-notes/core/REFERENCES.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 24475,
-      "current_sha256": "23247645382cc1957e393df18cfe431ce1a440de6766a50bac4808b03ff07e57"
+      "current_bytes": 26927,
+      "current_sha256": "9115904433312130fda45ba9d0635b2df352f09173107df8280e2ec05470b3d9"
     },
     {
       "path": "machine/document-notes/core/THIRD_PARTY.md.json",
@@ -1686,11 +1931,32 @@
       "current_sha256": "e7656e5e367d2fb8e17b663ad5bd85f13f2b5541c0f54a178699e4df621b2527"
     },
     {
+      "path": "machine/document-notes/core/docs/design/34-review-choice-synthesis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3208,
+      "current_sha256": "67e8b41311a871bb2f7823b3291c8e70ad359641bfd0581c1c27c2d0df5f8ecf"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/35-rereading-perspectives.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3772,
+      "current_sha256": "ba0de32bde2f34cc44c105c3cdd9a43edd62bed852910e7236c1cbdd3cd05207"
+    },
+    {
+      "path": "machine/document-notes/core/docs/design/36-biological-argument.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4334,
+      "current_sha256": "3f9ab4960e327c2ed25591c9d1d2610583606e85f54a0fadb37a5cc6c28993d7"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 26256,
-      "current_sha256": "709c77cfe4edb64b808be513179b9418bd7a566d478c1a094194c15caf3e94fa"
+      "current_bytes": 29613,
+      "current_sha256": "0ea2145cccab2af7f1bfb383108e4e7edfd3a8fda540e8f700e52ae88110f22b"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -1787,8 +2053,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/biological-explanation-and-handoff.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 10426,
-      "current_sha256": "49cb429322cc07de4fc7c663464c9a8db7c26a5fa92de043d4f7257389ceb97d"
+      "current_bytes": 13519,
+      "current_sha256": "c10fb80b8d14592e1654cac88bc5f2026dfc070f85fc8291c002c8598deaff1a"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/finite-diagnostics.md.json",
@@ -1889,25 +2155,32 @@
       "current_sha256": "afe15a93d5bc3e34e953508b99ceb4132fc4d5c0b424ff045f06b34a03d8498c"
     },
     {
+      "path": "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 8403,
+      "current_sha256": "835fc534681c6a78e03ca1db2ce9e27c4dbb459ebd10926650adfe6cd69201e4"
+    },
+    {
       "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1510,
-      "current_sha256": "4177e968f784721476afae6f331afd127a94a8c63ee458eb33d734846056fc21"
+      "current_bytes": 3260,
+      "current_sha256": "e798160417591f4e666fe7e5603d9fbd164658bd869a037f74304be5a2f2a3f2"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2386,
-      "current_sha256": "83dcdd2fd148496a232dd3dd4ad6f8b204bbaeffdaac62a926dfadd1b479dd08"
+      "current_bytes": 3321,
+      "current_sha256": "2da1ff0e8c56d43723d36f6f8e609c5f491868a36201db05bb7db58f0c30b182"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 12939,
-      "current_sha256": "6aaa910dbbc7ab57e60517042a5190cab6a36807c1da359163ba897619eb18db"
+      "current_bytes": 14241,
+      "current_sha256": "61ee1e6cd5475d115fc2153e8ee8c08ecfb8024793b2b1e459ac0619149fc67d"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/sequence-novelty-and-background.md.json",
@@ -2109,8 +2382,8 @@
       "path": "machine/document-notes/core/examples/research-support/preparation/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2385,
-      "current_sha256": "0aa4707544c6acb9e800c3c2125a312d8fb03af6214fd70af6756640bb8b0cb8"
+      "current_bytes": 4135,
+      "current_sha256": "f6b4c5966c96315f8d1b6e0e9b198424816681111df3dcac58489563489d07f8"
     },
     {
       "path": "machine/document-notes/core/examples/research-support/preparation/REVIEW.template.md.json",
@@ -2118,6 +2391,76 @@
       "baseline_revision": "764bd88",
       "current_bytes": 1750,
       "current_sha256": "7bacbb0720c2ce1a5bfa0514bd2f9f0d02c7c51819426d8d83e76c867bfae9ab"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 8107,
+      "current_sha256": "15f3da7cdf028fc89d7ef630b1f5807492688180461ef2533c8d5c2203888ad1"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5249,
+      "current_sha256": "de2d37f60890d42a8c8813a9926cab3c3ef4c99b3063a0b9a9deceade5e61f97"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/biological-argument/report.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 11259,
+      "current_sha256": "8871d9d3290007c73f1f1645be23f482f4f5f6305a261dd3e31273dcdacc29bf"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-basis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 8275,
+      "current_sha256": "11a809e58dc14b2c52cb62f58651043d2f069601ef2741b8d4328c97ba4abc11"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/mast-resynthesis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6089,
+      "current_sha256": "d5de6717a52f79bf68476d1b2ab5baf14c37f5391b27d78f43733cae0f08a98b"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/rereading/README.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4621,
+      "current_sha256": "aa73dcaf19b87c509f1a987973d2e70c7c98443f1e98f37c87c0b8d9cd93d6e2"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/rereading/audit.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3658,
+      "current_sha256": "4199f64957112d6eec70c4ee5a0e116cc5980f8f6b6f202353732d251ca0c98f"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v1.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2529,
+      "current_sha256": "94d8a987f2f772d67a9ebd1b5f45c242d658cc55b162fb849800dd4b2e4006d4"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v2.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5526,
+      "current_sha256": "3b1a85a01e90773e78b66428e7e67e3f321dcdb4a3c9c7e4a7eba2810d4a7864"
+    },
+    {
+      "path": "machine/document-notes/core/examples/research-support/preparation/choice-synthesis-example/rereading/source-basis.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4443,
+      "current_sha256": "af252c0bb925bd2bab04404a5f57b7a1225e96c76df4c74bfc733b4380a76ec6"
     },
     {
       "path": "machine/document-notes/core/examples/research-support/preparation/coverage-example/README.md.json",
@@ -2204,18 +2547,32 @@
       "current_sha256": "783ed766287648cc6f4d847fe1402b5a7c8b862d9550bbeb527a0ca8e9cbd945"
     },
     {
+      "path": "machine/document-notes/core/machine/design/biological-argument.json.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 12874,
+      "current_sha256": "072501d16b293561fb93894ef9efd4c514f30b2b7c0d8799e5ede03d2b0147e9"
+    },
+    {
+      "path": "machine/document-notes/core/references.json.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 88350,
+      "current_sha256": "26bc4511bbe2a4eed5d671ccd9172aa4164ea749bc2328852962fb65e61cd66a"
+    },
+    {
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3727,
-      "current_sha256": "d9d12bd89e75f66c093ece593a3f974373e2c1f9333e513f36300bc128ca2795"
+      "current_bytes": 5866,
+      "current_sha256": "c53aae3027410f0e8f0b79a9b6778185a4e87cfb1df87e1d84de6d32b8c645e2"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8434,
-      "current_sha256": "7ad30dd5d1dba070cf13c6547e1479a8191033340e50ae48ee4b532c391d210d"
+      "current_bytes": 8842,
+      "current_sha256": "3de6b470827c1bc1c913bb950896d87d0a4088af41c662fb6af4b9467bbde594"
     },
     {
       "path": "machine/document-notes/docs/plans/RESOURCE-COMPLETION.zh.md.json",
@@ -2223,6 +2580,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 601,
       "current_sha256": "915aa9718e94cb33d90ea4f154501c1e2dabd402e284036c61d522b3c238411a"
+    },
+    {
+      "path": "machine/document-notes/docs/research/rereading-validation-2026-10-27.zh.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7382,
+      "current_sha256": "8cc6b31f70a6b7a228970f4fa3dc478f3bad738b3ca91eb80efcd805ee06fb6f"
     },
     {
       "path": "machine/document-notes/examples/splice/README.md.json",
@@ -2239,6 +2603,13 @@
       "current_sha256": "223ef4993d75e256939991af6f37a839035758c13d48e1b6b25c24fc2203c136"
     },
     {
+      "path": "machine/document-notes/machine/documentation-policy.json.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9988,
+      "current_sha256": "71ab01244461a6d2bfe8641fd54693dba124fc9e1bc232d8850b63c2c2e6027e"
+    },
+    {
       "path": "machine/documentation-operations.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2249,8 +2620,8 @@
       "path": "machine/documentation-policy.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6816,
-      "current_sha256": "b9c75ecff1f88400c6676b650a80bb20df9a15ffbbd3a32fe8df158e89694b74"
+      "current_bytes": 8079,
+      "current_sha256": "e0347e466f3edbb934b7eec232cc32726308a07c60f7f0b7d2886e38f6d670dc"
     },
     {
       "path": "machine/examples/splice-resource-readiness.json",
@@ -2265,6 +2636,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 15675,
       "current_sha256": "75600091a44878538b4207f2bdea0d725cfad9afe3f0e0e20a4bcf48acee1119"
+    },
+    {
+      "path": "machine/history/preparation-priority-2026-10-24.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1777,
+      "current_sha256": "62b822c11a40c591e0adb765ff90863e1c8269a2c1973b685586de1fa6494f89"
     },
     {
       "path": "machine/history/research-guidance-cycle.json",
@@ -2309,6 +2687,13 @@
       "current_sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302"
     },
     {
+      "path": "machine/research/rereading-validation-2026-10-27.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4282,
+      "current_sha256": "72645bdf63857b723630676259500d19f719a48a53a02bcc53010e2b7a351850"
+    },
+    {
       "path": "machine/reviews/documentation-2026-10-22.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2326,8 +2711,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 222439,
-      "current_sha256": "43476be7a7f6fa180e0963d12559b04dfe5e6928611c4678a79b46f01d7a30e8"
+      "current_bytes": 245374,
+      "current_sha256": "2f59dacf079468254adc4cc004d240e13c55e326f539fc318cd80d6693b070a1"
     },
     {
       "path": "tests/test_documentation.py",

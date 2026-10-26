@@ -1,0 +1,56 @@
+{
+  "schema": "harness.research-preparation-evidence-map/v1",
+  "preparation_id": "af2complex-cp17-rereading",
+  "definitions": [],
+  "findings": [
+    {
+      "finding_id": "F010",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "Current purpose selects structurequality versus proteinpairscreening.",
+      "scope_conditions": [
+        "Oneauthorreportedstudy/CP17; nonewexperiment",
+        "作者区分给定组分空间模型与任意候选对直接互作问题。"
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-NOTES",
+          "locator": "p2–3 authorobjectives/overview,p9–10Discussion asattributed in source-basis.md",
+          "summary": "Current purpose selects structurequality versus proteinpairscreening."
+        }
+      ],
+      "cross_source_synthesis": "Single-source boundedresynthesis, notindependent cross-sourcecorroboration.",
+      "researcher_inference": "Chooseevaluation forcurrenttask; matched-budgetcomparison requires additionaldesign/results.",
+      "evidence": [
+        {
+          "source_id": "S-NOTES",
+          "work_id": "HARNESS-AF2-NOTES",
+          "evidence_unit_id": "gao2022-F010",
+          "relation": "supports",
+          "basis": "Attributedfirstpartynotes; actualoriginalreading/SIboundary in machine/reading-record.json."
+        }
+      ]
+    }
+  ],
+  "disagreements": [],
+  "method_candidates": [],
+  "questions": [],
+  "hypothesis_review": {
+    "status": "not_applicable",
+    "reason": "Boundedexplanation ofalreadyreportedprotocols, no empiricalhypothesistest.",
+    "hypotheses": []
+  },
+  "narrative": {
+    "main_line": "Purpose→object/information→generation/selection→evaluation→currentuse",
+    "outline": [],
+    "figure_or_table_ideas": [],
+    "glossary": []
+  },
+  "review_decision": {
+    "status": "continue_targeted_reading",
+    "reason": "Reconstructedold-state demonstration, notoriginalnative map.",
+    "unresolved_questions": [
+      "SI andmatched-budget/individual-factor empiricalcomparisons unassessed."
+    ],
+    "next_action": "Independent source-levelreview; nooldscoreupdate."
+  }
+}

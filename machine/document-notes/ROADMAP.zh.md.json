@@ -73,15 +73,36 @@
         "machine/history/review-scope-appraisal.json"
       ],
       "previous_document_snapshot": null
+    },
+    {
+      "id": "2026-10-24-preparation-before-abstract-methodology",
+      "date": "2026-10-24",
+      "reason": "User prioritizes early-stage research preparation before broad abstract-methodology guidance. Preserve current conditional interfaces and use existing feedback to choose improvements.",
+      "technical_records": [
+        "machine/history/preparation-priority-2026-10-24.json"
+      ],
+      "acceptance": "Planning order only; no new prospective scientific result claimed."
+    },
+    {
+      "at_utc": "2026-10-26T23:55:03.663728+00:00",
+      "reason": "Publish accepted rereading guidance and latest bounded case results.",
+      "prior_identity": {
+        "bytes": 5733,
+        "sha256": "0af7f1f80c9e4a95d36923565b0bdafa875fb0955b66f24c077bbd6c4172ac13"
+      },
+      "technical_records": [
+        "machine/research/rereading-validation-2026-10-27.json"
+      ]
     }
   ],
-  "updated_at_utc": "2026-10-23T09:23:42.443527+00:00",
+  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",
   "current_identity": {
-    "bytes": 4090,
-    "sha256": "1969b2bfdc1d2a5fcd12e103ed5c0504c27cbfaaa4ab3bb52a50389af6d10d31"
+    "bytes": 6209,
+    "sha256": "fad006e64d330bbb4a0327b608a2f459ce1d46d541a1c7ca3adca8ad026b3810"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",
-    "machine/history/review-scope-appraisal.json"
+    "machine/history/review-scope-appraisal.json",
+    "machine/history/preparation-priority-2026-10-24.json"
   ]
 }

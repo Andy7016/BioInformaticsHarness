@@ -1,0 +1,38 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/README.md",
+  "source_text": "# 工作例：确认交付，重读后区分两个 CP17 预算\n\n这个例子使用 AF2Complex 原论文和一份已有综述的真实修订问题。旧稿已区分给定组分的结构质量与蛋白对发生关系，预算遗漏则在此前独立复核中发现。本轮先固定旧 v2 与 v2.2 的交付身份，再完整重读相关原文，把已确认修订组织成[连贯新稿](report-v2.md)。本例供接手与解释路线使用；重读效率和研究总体成绩的比较留待独立评价。\n\n## 阅读与修订顺序\n\n1. 先确认接收的版本、来源和依赖完整，保留旧包及访问边界。文件接收后，科学内容继续交领域审阅。\n2. 阅读[来源笔记](source-basis.md)及其原论文定位。本次实际重读包括 PDF 第 1–13 页文字、全部 8 个主图和图注；方法算法与公式另看页图。相关补充材料未读，范围在笔记中保留。\n3. 比较[据旧稿问题改写的示意](report-v1.md)、[复查记录](audit.md)和新稿。已正确的对象、负例和反例继续保留；预算匹配或新性能需要另有实际结果。\n4. 按现有地图及回应路线交接新稿。当前解释范围是两个 CP17 对象、生成预算与评价，原宽综述的其余关系和原分数沿用各自记录。\n\n新稿把 15/17 与原单体权重平均 DockQ 0.62 紧接到 3 次运行、每次 5 个候选、按 interface-score 从 15 个选优；561 对筛选则另记每对 single run。0.65/0.74 的配置标签、原单体已用未配对 MSA、失败替代与推定负例继续可见。\n\n## 使用已有地图接口\n\n将整个 `rereading` 目录复制到一个新工作目录，从 core 运行现有消费者：\n\n```text\npython -B -X utf8 -m scripts.research_support.review_coverage --root REVIEW_ROOT --record review-map-v2.json --out checks/review-map-v2.json\n```\n\n地图、来源账本和证据图使用既有 D53/D55 格式。`review-map-v1.json` 是本轮为旧关系重建的示例地图，供前后消费使用；真实旧稿采用自己的格式和原封存。本目录的来源工件是本轮自写笔记，原论文由 DOI 提供，程序读取笔记与记录的连接。实际全文重读由阅读范围及人工内容复核说明；消费者检查文件引用、状态和正文摘录。结果中的科学接受状态保持待评。\n\n本轮实际消费交给单独执行者，在独立工作目录保存回执。可对测试副本检查缺少范围依据、关键分支未综合却要求宽交付等错误；原包与本目录原件保留。接收确认继续沿用既有不可变包回执或[封存工具](../../../../../docs/methods/guides/plan-seal-and-first-execution.md)，无须启用新的研究运行平台。\n\n回到[方法取舍指南](../../../../../docs/methods/guides/review-choice-synthesis.md)；本例的任务、主张和阅读记录见同目录机器资料，科学验收由独立阅读者完成。\n",
+  "source_commit": null,
+  "source_sha256": "fab02a2c724b74ce8b2d7cff809e01935ad4d7bff9ceabc1922257965eb615d0",
+  "original_source_scope": "PreservedbeforeD58bytes ifexisting; newD58firstpartysource otherwise.",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
+  "current_identity": {
+    "bytes": 2902,
+    "sha256": "fab02a2c724b74ce8b2d7cff809e01935ad4d7bff9ceabc1922257965eb615d0"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-25",
+  "recorded_at_utc": "2026-10-25T13:25:16.391987+00:00",
+  "version": "D59-application-reading-v1",
+  "reader": "D59 application Sol Max",
+  "actual_reading": true,
+  "source": {
+    "reference_id": "horton-nakai-1996",
+    "authors": [
+      "Paul Horton",
+      "Kenta Nakai"
+    ],
+    "title": "A Probabilistic Classification System for Predicting the Cellular Localization Sites of Proteins",
+    "version": "ISMB-96 publisher PDF, printed pp109-115",
+    "url": "https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf",
+    "local_original": {
+      "availability": "private_archive",
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/Horton-Nakai-1996-ISMB96-012.pdf",
+      "bytes": 472537,
+      "sha256": "8ecca931057ffbc48c283667defc5d3a816b65dd1b0a82417d43788e5ba7e764"
+    }
+  },
+  "scope": {
+    "text_pages_actually_read": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "pixel_pages_actually_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "body": "Complete abstract,introduction,model,conditional probabilities,E.coli/Yeast class and feature definitions,software,results,discussion,conclusion,acknowledgements and bibliography entries.",
+    "figures_and_captions_actually_read": {
+      "1": 3,
+      "2": 5,
+      "3": 6
+    },
+    "tables_and_captions_actually_read": {
+      "1": 3,
+      "2": 4,
+      "3": 4,
+      "4": 4
+    },
+    "visual_method": "Previously rendered original PDF PNGs viewed page by page with view_image; all seven extraction entries also actually read.",
+    "SI": "Separate supporting material not retrieved/read; existence or absence not established.",
+    "cited_originals": "1991/1992 predecessors and original feature-method papers unread; bibliography entries and 1996 descriptions only."
+  },
+  "page_render_identities": [
+    {
+      "pdf_page": 1,
+      "printed_page": 109,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-1.png",
+      "bytes": 206556,
+      "sha256": "923f3c9a5eaf3cacd9b0a7c38d9775fc4a90319a94e2a60f43bbc0dd54a0fe80"
+    },
+    {
+      "pdf_page": 2,
+      "printed_page": 110,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-2.png",
+      "bytes": 233512,
+      "sha256": "e9b01825f6ab27d3ac8c7af2314b9d4369c0c42f6e8fcdf86f013884730b139e"
+    },
+    {
+      "pdf_page": 3,
+      "printed_page": 111,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-3.png",
+      "bytes": 155537,
+      "sha256": "48de22217db3565c575a39723fbfd45f0f8d64504adb07bd4b1560e19b7b8717"
+    },
+    {
+      "pdf_page": 4,
+      "printed_page": 112,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-4.png",
+      "bytes": 199067,
+      "sha256": "d3c2f23e4b688f9d4ca9244566364d4b2916de2859ccfb3519506886821a0f07"
+    },
+    {
+      "pdf_page": 5,
+      "printed_page": 113,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-5.png",
+      "bytes": 36150,
+      "sha256": "7c50927cd955881c1e55a0d1281253f96a88f4b8796a73103f31ee6dd46f5520"
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 114,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-6.png",
+      "bytes": 35582,
+      "sha256": "3240f3727eb2e957fa74c79eb336a8285456ca0ff77802f7130338389ebe4a8a"
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 115,
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/pages/page-7.png",
+      "bytes": 184033,
+      "sha256": "db2016f1d0c3ed44118a3ed065dadd19cc9b7023b5fb1e62ef03c85ad2fcdebd"
+    }
+  ],
+  "other_materials_actually_read": [
+    {
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/yeast.names",
+      "bytes": 3313,
+      "sha256": "c0b2d0e8708c1d2484e898749ab13f46fdc797ac49844c6294108db57bcad19e",
+      "scope": "Complete official dictionary mirror; no new official webpage retrieval.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "machine/reviews/2026-10-rereading-perspectives-iteration/yeast-domain/sources/raw-data-audit.json",
+      "bytes": 2562,
+      "sha256": "ff995314539becb909219c3a6101c4ce54fc141262b6613d26c555cbc45c50ac",
+      "scope": "Complete prior static census; no new raw-row recount.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "docs/pilots/2026-10-yeast-followup/assessment/2026-10-25-scientific-review/REVIEW.zh.md",
+      "bytes": 6370,
+      "sha256": "ce792bd0958d8aa8850750036149e5ed2457e6c1dd5d7f008d3e10a07835d277",
+      "scope": "Complete accepted scientific review.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "docs/pilots/2026-10-yeast-followup/assessment/2026-10-25-scientific-review/LABEL-USE-CLARIFICATION.zh.md",
+      "bytes": 2664,
+      "sha256": "5353ec7beee65d95624f61c4dca045f94ec710d7a2fcb62b2c50d840545aa739",
+      "scope": "Complete accepted correction; no new dynamic scoring audit.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "machine/reviews/2026-10-yeast-vac-scientific-review/parent/parent-acceptance.json",
+      "bytes": 3971,
+      "sha256": "a40ed6e12b1a6827cde58601a85f992b0662b76993d76945f9c2a557bc665aaf",
+      "scope": "Complete compact acceptance.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "docs/pilots/2026-10-yeast-followup/execution/submissions/first/study/output/main-evaluation-v1/evaluation.json",
+      "bytes": 76544,
+      "sha256": "b4f1a98ce3c34160b87e0eb38aa96f7b9cfd15a3b44eaa03c141eb72918a350c",
+      "scope": "Selected K85 aggregate metrics, full frozen_change_rule_evaluation and interpretation; remainder not fully read.",
+      "availability": "private_archive"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/source-basis.md",
+      "bytes": 2723,
+      "sha256": "66bd94c7d99e52c27c889749e75068375ac132610f8ad24041270265a22be9fe",
+      "scope": "Complete prior public notes; original complete reading stays D58-attributed.",
+      "availability": "public"
+    },
+    {
+      "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v2.md",
+      "bytes": 3817,
+      "sha256": "5aebb22439c776c09d6c0bb1d78a075a0868d978b2090b9e8abe868aa9ac7c78",
+      "scope": "Complete accepted public continuous report.",
+      "availability": "public"
+    }
+  ],
+  "peer_case_extraction": {
+    "availability": "private_archive",
+    "path": "machine/reviews/2026-10-biological-argument-rereading/case-extraction/evidence-and-design.json",
+    "scope": "Complete continuous report; all29 source scopes,14claims,8gap routes,6recommendations,17counterexamples. Application used Yeast and short AF2 contrast; N3 source details not added.",
+    "boundary": "Peer selected-page scope remains peer-attributed; application independently viewed all7 Yeast pages. No D59 application full AF2Complex or N3 original rereading."
+  },
+  "new_originals_downloaded": 0,
+  "new_model_or_biological_runs": 0,
+  "old_scores_changed": false,
+  "N1_N2_N3_batch_rereading_started": false,
+  "scientific_acceptance": "pending_independent_review",
+  "controlled_guidance_effectiveness": "not_assessed",
+  "source_extraction_alone_is_not_reading_evidence": true,
+  "nonblind": "Prior findings, accepted result and source hints known."
+}

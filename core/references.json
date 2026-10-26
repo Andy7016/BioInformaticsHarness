@@ -1,6 +1,6 @@
 {
   "schema": "harness-release-bibliography.v1",
-  "as_of": "2026-10-24",
+  "as_of": "2026-10-25",
   "scope": "Public bibliography for the source/design crosswalk, including version-specific academic, engineering, and documentation-writing references.",
   "evidence_boundary": "Bibliographic metadata and recorded reading scopes identify sources; static case analysis, selected reading, source comparison, and model execution remain separate evidence types. Acceptance results are attached to their actual analysis or application records.",
   "network_policy": "No new paper download or academic-metadata refresh was performed for this catalog. Historical README style observations came from read-only first-party GitHub raw URLs through the configured proxy; upstream README bodies are not redistributed.",
@@ -1061,6 +1061,81 @@
       "source_ids": [
         "review-learning:R14"
       ]
+    },
+    {
+      "id": "finak-mast-2015",
+      "kind": "academic",
+      "category": "original_method",
+      "authors": [
+        "Greg Finak",
+        "Andrew McDavid",
+        "Masanao Yajima",
+        "Jingyuan Deng",
+        "Vivian Gersuk",
+        "Alex K Shalek",
+        "Chloe K Slichter",
+        "Hannah W Miller",
+        "M Juliana McElrath",
+        "Martin Prlic",
+        "Peter S Linsley",
+        "Raphael Gottardo"
+      ],
+      "title": "MAST: a flexible statistical framework for assessing transcriptional changes and characterizing heterogeneity in single-cell RNA sequencing data",
+      "year": 2015,
+      "venue": "Genome Biology",
+      "volume": "16",
+      "issue": null,
+      "pages": "278",
+      "article_number": "278",
+      "doi": "10.1186/s13059-015-0844-5",
+      "public_url": "https://doi.org/10.1186/s13059-015-0844-5",
+      "pmid": "26653891",
+      "pmcid": "PMC4676162",
+      "publication_date": "2015-12-10",
+      "pmc_release_date": "2015-12-12",
+      "material_scope": "Bibliographic metadata and original first-party paraphrase only; no full text, figure, table or code redistributed.",
+      "actual_reading_scope": "D57 selected saved S407:P007 (Background final prose paragraph) for the gene-set/correlation/type-I-error author report; adjacent P002–P008/P009–P013 visible as model/CDR context. Historical R2 ledger records P002-P008,P012-P017,P036-P038,P043-P047. No comparative GSEA calibration/power analysis, network-method completion or full supplement reading.",
+      "metadata_status": "archived_JATS_front_and_saved_S407_ledger_checked",
+      "source_ids": [
+        "evaluation:R2:S407"
+      ],
+      "metadata_locators": [
+        "JATS front/journal-meta/journal-title-group/journal-title",
+        "JATS front/article-meta/article-id, title-group, contrib-group, pub-date, volume, fpage",
+        "JATS front/article-meta/pub-history/event[@event-type=pmc-release]/date"
+      ],
+      "date_scope_note": "Article publication date and PMC release date are separately recorded; this metadata reconciliation does not rewrite the historical ledger."
+    },
+    {
+      "id": "gao-af2complex-2022",
+      "kind": "academic",
+      "category": "original_method",
+      "authors": [
+        "Mu Gao",
+        "Davi Nakajima An",
+        "Jerry M. Parks",
+        "Jeffrey Skolnick"
+      ],
+      "title": "AF2Complex predicts direct physical interactions in multimeric proteins with deep learning",
+      "year": 2022,
+      "venue": "Nature Communications",
+      "volume": "13",
+      "issue": null,
+      "pages": "1744",
+      "article_number": "1744",
+      "doi": "10.1038/s41467-022-29394-2",
+      "public_url": "https://doi.org/10.1038/s41467-022-29394-2",
+      "material_scope": "Metadata and attributedfirstpartyparaphrase; originalPDF/figures/rawdata notredistributed.",
+      "actual_reading_scope": "Actual D58 completep1–13text, all8mainfigures/captions, methodsalgorithm/equationpixels p10–11. SI/SupplementaryData1/2/ReportingSummaryunread; bibliographyentriesonly,norecursivereading.",
+      "metadata_status": "archived_publisher_VOR_titlepage_and_journal_footer_checked",
+      "metadata_locators": [
+        "VORp1title/authors/DOI",
+        "Journalfooter2022,13:1744"
+      ],
+      "source_ids": [
+        "POST-S02"
+      ],
+      "reading_record": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
     }
   ],
   "public_readiness_sources": [
@@ -1773,7 +1848,7 @@
     }
   ],
   "counts": {
-    "core_entries": 36,
+    "core_entries": 38,
     "public_readiness_sources": 4,
     "formal_case_index": 43,
     "formal_case_population_source": "Source corpus formal_case_index deduplicates work identities; bibliography references are separate and may point to the same work.",
@@ -1922,6 +1997,23 @@
         "additional_relationship_rows_from_source_reuse": 13
       },
       "current_source_relationship_appearances": 123
+    },
+    {
+      "date": "2026-10-25",
+      "reason": "IR-R01 reconcile the already adopted D57 MAST primary source into the three central bibliographies.",
+      "core_entries_before": 36,
+      "core_entries_after": 37,
+      "formal_case_population_increment": 0,
+      "scientific_experiment_increment": 0,
+      "source_relationship": "Existing review-regression:mast-gene-set-resynthesis retained without modification."
+    },
+    {
+      "date": "2026-10-25",
+      "reason": "D58 originalrereadingexample adds existingAF2Complex source tocentralbibliography.",
+      "core_entries_before": 37,
+      "core_entries_after": 38,
+      "formal_case_population_increment": 0,
+      "scientific_experiment_increment": 0
     }
   ]
 }

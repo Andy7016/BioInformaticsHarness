@@ -30,5 +30,35 @@
     "Removed Q/RQ/GC request labels from the Islet and five-case route examples. Exact original identifiers, source pointers and citation text remain in source_text and machine/archive-pointers.jsonl; the public prose preserves each route condition and the unresolved alternative."
   ],
   "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "source_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d"
+  "source_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
+  "current_identity": {
+    "bytes": 10807,
+    "sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json"
+  ]
 }

@@ -93,7 +93,7 @@
   },
   "release": {
     "frozen_tag": "v0.1.0-alpha.2",
-    "documentation_revision": "2026-10-24",
+    "documentation_revision": "2026-10-27",
     "new_docs_do_not_rewrite_published_assets": true
   },
   "new_file_licenses": {
@@ -124,7 +124,10 @@
     "core/examples/research-support/research-cycle/offline-fixture/*.json": "Apache-2.0",
     "core/tests/research_support/test_review_coverage.py": "Apache-2.0",
     "core/examples/research-support/preparation/coverage-example/*.json": "Apache-2.0",
-    "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0"
+    "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0",
+    "core/examples/research-support/preparation/choice-synthesis-example/rereading/*.json": "CC-BY-4.0",
+    "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/*.json": "CC-BY-4.0",
+    "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/*.json": "CC-BY-4.0"
   },
   "license_scope_updates": [
     {
@@ -167,6 +170,21 @@
         "core/tests/research_support/test_review_coverage.py": "Apache-2.0",
         "core/examples/research-support/preparation/coverage-example/*.json": "Apache-2.0",
         "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0"
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "reason": "D58 adds first-party scientific reading annotations, evidence/review maps and revision records, with no executable code, third-party paper bodies or external data redistributed. Apply existing narrative CC BY 4.0 licensing.",
+      "scopes": {
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/*.json": "CC-BY-4.0",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/*.json": "CC-BY-4.0"
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "reason": "D59 first-party scientific notes/maps/revision/reading records only;no executable code,third-party paper bodies,figures or data rows redistributed. Apply existing narrative CC BY4.0 license.",
+      "scopes": {
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/*.json": "CC-BY-4.0"
       }
     }
   ]

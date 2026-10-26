@@ -200,3 +200,16 @@ The [core bibliography](../core/REFERENCES.md) is the reader-facing citation lis
 | 经典分子对接综述 | 生成集合、评分选择与最终用途怎样分别验收 | [采样与评分](../core/docs/methods/worked-examples/sampling-scoring-and-use.md) |
 
 完整作者、出处和阅读范围见[书目](../core/REFERENCES.md)；逐项借鉴、实现与验收见[来源账本](../machine/source-design-index.jsonl)。本轮增加方法指导的具体用法，正式模型案例统计沿用既有口径。接下来选择具有真实材料的工作例检验其研究指导效果。
+
+## 生物对象到候选用途
+
+| 来源与观察 | 形成的设计 | 论证与验收入口 |
+|---|---|---|
+| [Horton 与 Nakai 1996](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf) 与 [UCI Yeast](https://archive.ics.uci.edu/dataset/110/yeast) 说明历史对象、特征生成、注释和评价条件；[Harness 计算摘要](../core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-basis.md#harness-历史计算案例的导出摘要)提供另一来源的既有同预算负结果。 | [D59：接通生物学论证](../core/docs/design/36-biological-argument.md)，在既有解释链中补上各层之间的理由。 | [指南](../core/docs/methods/guides/biological-explanation-and-handoff.md#从对象到用途接通关系)、[连续工作例](../core/examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md)、[来源及接受状态](../core/machine/design/biological-argument.json)。 |
+
+原论文事实、项目计算结果和本轮方法建议分别归属。工作例沿用已有记录接口，科学内容与文件消费各自验收；后续应用接收并实际阅读含最新指南的同一版本。
+
+
+## 原文重读与生物论证链的实际采用
+
+[D57方法取舍](../core/docs/design/34-review-choice-synthesis.md)、[D58视角与重读](../core/docs/design/35-rereading-perspectives.md)及[D59生物论证链](../core/docs/design/36-biological-argument.md)已完成指南与工作例接受。随后旧三例及空间转录组、RNA velocity、微生物组成案例分别提供采用、保留与修订证据；逐来源贡献及适用条件见[研究总结](research/rereading-validation-2026-10-27.zh.md)。技术分类与原始档案可得性见[结构化记录](../machine/research/rereading-validation-2026-10-27.json)。

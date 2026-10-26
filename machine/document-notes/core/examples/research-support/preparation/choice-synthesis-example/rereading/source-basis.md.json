@@ -1,0 +1,38 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/source-basis.md",
+  "source_text": "# AF2Complex 原文重读笔记\n\n这是 Harness 在本轮写作的来源笔记，用于公开工作例；原论文全文和原始数据由原出版与数据入口提供。读者可沿 DOI 回看 Gao、An、Parks 与 Skolnick 的 2022 年论文 *AF2Complex predicts direct physical interactions in multimeric proteins with deep learning*，Nature Communications 13:1744。[原论文](https://doi.org/10.1038/s41467-022-29394-2)。\n\n## 作者明确的目标和信息用途\n\n第 2 页先讨论给定互作组分的结构问题，再提出任意蛋白对的直接互作问题；第 2–3 页及图 1 说明单体特征组织、未配对 MSA 和接口置信度。第 9–10 页继续强调单体 MSA 重要，讨论复杂组装背景和修饰条件。这里的视角依据是原文目标与操作，受众则是要选择结构建模或候选对筛选的研究者。\n\n## CP17 结构评价\n\n第 11 页 CP17 set 说明：每个结构目标 3 次独立运行，每次 5 个 top models，从 15 个模型中依 interface-score 取整体最前模型，再以实验坐标评价 DockQ；该协议用于单体与多体 AF 模型。第 4 页和图 3 报告原单体配置 15/17 达到可接受或更好，平均 DockQ 0.62。图 3 中 AF-Multimer 为 0.65，使用多体权重的 AF2Complex 为 0.74。第 4 页给出组合解释；第 2、10 页及图 3 显示原单体配置已使用未配对 MSA。本例保留系统比较，各因素相对每个对照的改变与单独效应尚未核定。\n\n## CP17 蛋白对筛选\n\n第 4 页及图 4 使用 34 个蛋白组成的 561 对组合寻找 17 个已知对，其余组合朴素假定非互作。第 11 页说明第二项测试每对 single run。这里没有将一次运行改写为一个模型，也没有把该筛选沿用为三次运行的结构质量协议。第 5–6 页及图 5 对大肠杆菌集合的共组装与直接接触差异给出作者解释，逐对生物确认仍开放。\n\n## 保留的反例与阅读范围\n\n第 4 页报告一个 AF2Complex 失败目标在组合 docking 策略中得到高质量模型，且两个失败案例各有一个浅 MSA 单体。全文中的对象区分与此反例在新稿继续保留。实际重读覆盖 PDF 第 1–13 页文字，全部 8 个主图与图注，并查看第 10–11 页方法公式和算法图像。主文未见编号表。\n\n本轮未取得或阅读 Supplementary Text、Supplementary Figures 及 Supplementary Data 1/2，也未读独立 Reporting Summary；主文对它们的引用可见，补充内容的独立核证继续保留。第 4 页大基准数量与第 11 页集合名称的差异维持待核，不在本例选定标准数。书目条目阅读止于原论文列出的信息，没有递归重读这些被引论文。\n",
+  "source_commit": null,
+  "source_sha256": "66bd94c7d99e52c27c889749e75068375ac132610f8ad24041270265a22be9fe",
+  "original_source_scope": "PreservedbeforeD58bytes ifexisting; newD58firstpartysource otherwise.",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
+  "current_identity": {
+    "bytes": 2723,
+    "sha256": "66bd94c7d99e52c27c889749e75068375ac132610f8ad24041270265a22be9fe"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json"
+  ]
+}

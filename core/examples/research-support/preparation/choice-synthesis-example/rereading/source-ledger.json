@@ -1,0 +1,65 @@
+{
+  "schema": "harness.research-preparation-source-ledger/v1",
+  "preparation_id": "af2complex-cp17-rereading",
+  "search_runs": [],
+  "sources": [
+    {
+      "source_id": "S-NOTES",
+      "work_id": "HARNESS-AF2-NOTES",
+      "version_family_id": "HARNESS-AF2-NOTES",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "AF2Complex 原文重读笔记",
+        "venue_or_repository": "First-party worked example",
+        "year": "2026",
+        "doi_or_identifier": "D58-AF2Complex-notes",
+        "url": "",
+        "version_or_release": "D58-v1",
+        "published_or_updated_on": "2026-10-25"
+      },
+      "relation_to_work": "First-party derivative notes explicitly attributed to Gaoetal2022 DOI10.1038/s41467-022-29394-2; one originalwork, no independentreplication or originalarticlecopy.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Publiclyconsumable sourcenotes forboundedexplanation; actualoriginalrereading separatelyrecorded."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "First-partyparaphrase, no originalarticle/rawdataredistributed; originalarticleCCBY4.0.",
+        "artifact_path": "source-basis.md",
+        "receipt_path": "machine/reading-record.json"
+      },
+      "reading": {
+        "status": "main_text_read",
+        "parts_read": [
+          {
+            "locator": "Entire source-basis.md, allfour sections; actualoriginalPDFreading separatelydocumented in machine/reading-record.json"
+          }
+        ],
+        "locator_notes": "Status refers to public notes, not a claim that notes are original fulltext; actualVORp1–13/allmainfigures read, SIunread."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "Gaoetal2022 AF2Complex; derivative notes",
+        "shared_dataset_or_cohort": "CP17authorreportedtests",
+        "independence_note": "Oneoriginalwork; notes/revisions are notindependentstudies."
+      }
+    }
+  ],
+  "coverage_snapshot": {
+    "fixed_on": "2026-10-25",
+    "scope_version": "D58-v1",
+    "included_source_ids": [
+      "S-NOTES"
+    ],
+    "excluded_source_ids": [],
+    "unavailable_or_unread_source_ids": [],
+    "remaining_gaps": [
+      "Originalsupplementunread; scope in machine/reading-record.json.",
+      "Othermethodmatchedcandidate/compute and empiricaldeployment notestablished.",
+      "Historicalbroadreview outside boundedexplanatorymap."
+    ]
+  }
+}

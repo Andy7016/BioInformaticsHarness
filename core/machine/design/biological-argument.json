@@ -1,0 +1,244 @@
+{
+  "decision_id": "D59",
+  "date": "2026-10-25",
+  "status": "accepted_D59_guidance_and_bounded_worked_example_v2",
+  "supplements": [
+    "D46/D47 biology handoff",
+    "D53 sources",
+    "D55/D56 review map",
+    "D57 choice synthesis",
+    "D58 rereading",
+    "existing revisor routes"
+  ],
+  "problem": "Correct inputs,labels and scores may still leave their biological generation-to-use relations unexplained.",
+  "reasoning_bridges": [
+    "Biological object/state/selection→operational observation unit",
+    "Raw material/processing/upstream learning→representation",
+    "Measurement/annotation/proxy→qualified label or reference",
+    "Output/action→appropriate evaluation and bounded next-use decision"
+  ],
+  "minimum_artifact": "Continuous source-grounded prose with known basis,weakest connection,alternatives,next action and change conditions; no compulsory per-paper table.",
+  "main_guide": {
+    "path": "core/docs/methods/guides/biological-explanation-and-handoff.md",
+    "version": "biological-handoff-v1.2",
+    "anchor": "从对象到用途接通关系"
+  },
+  "source_scope": {
+    "original": "Horton-Nakai1996 publisher7pages pp109-115",
+    "application_reading": "All7 extracted pages and all7 rendered pages;Figures1-3,Tables1-4 and all captions;complete yeast.names.",
+    "AF2Complex": "Short contrast reuses D58 accepted public report/notes,which application read completely;no D59 application full original/SI reread.",
+    "peer_extraction": "Final continuous report,all29 source scopes,14claims,8gap routes,6recommendations,17counterexamples read. Yeast and AF2 selected;N3 specifics not copied.",
+    "record": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+  },
+  "historical_result_export": {
+    "origin": "Harness prior VAC followup and accepted scientific review; exported first-party computational summary, distinct from1996paper results",
+    "current_round_recomputed": false,
+    "public_notes": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-basis.md",
+    "public_report": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/report.md",
+    "finite_archive": {
+      "unique_ids": 1462,
+      "complete_feature_vector_groups": 1453,
+      "archived_single_label_VAC": 30
+    },
+    "main_results": [
+      {
+        "split_seed": 20261021,
+        "reviewed": 85,
+        "TP": 4,
+        "FP": 81,
+        "FN": 26,
+        "hard_priority_random_expected_TP": 2.61170471956838,
+        "uniform_pool_expected_TP": 1.744190939267848,
+        "complete_rule_passed": false
+      },
+      {
+        "split_seed": 20261022,
+        "reviewed": 85,
+        "TP": 6,
+        "FP": 79,
+        "FN": 24,
+        "hard_priority_random_expected_TP": 3.9271733261649766,
+        "uniform_pool_expected_TP": 1.7441991330932705,
+        "complete_rule_passed": false
+      }
+    ],
+    "frozen_joint_rule": {
+      "both_splits_required": true,
+      "minimum_TP": 6,
+      "minimum_ratio_to_uniform_expectation": 2,
+      "minimum_TP_delta_to_hard_priority_expectation": 3
+    },
+    "nonlinear_vs_linear_TP_increment": [
+      1,
+      1
+    ],
+    "usage_decision": "Continue not recommending current fixed states as reliable VAC candidate tool.",
+    "evidence_scope": "Retrospective finite-archive eight-feature crossfit ranking;reference labels from same historical archive;no new independent localization or deployment experiment.",
+    "prior_evidence": [
+      {
+        "availability": "private_archive",
+        "locator": "docs/pilots/2026-10-yeast-followup/assessment/2026-10-25-scientific-review/REVIEW.zh.md"
+      },
+      {
+        "availability": "private_archive",
+        "locator": "docs/pilots/2026-10-yeast-followup/assessment/2026-10-25-scientific-review/LABEL-USE-CLARIFICATION.zh.md"
+      },
+      {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-yeast-vac-scientific-review/parent/parent-acceptance.json"
+      }
+    ]
+  },
+  "implementation": {
+    "runtime_code_changed": false,
+    "new_schema_or_checker": false,
+    "producer_version": "D59-producer-v2",
+    "producer": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument",
+    "native_consumer": "core/scripts/research_support/review_coverage.py",
+    "native_consumer_execution": "Initial v1 positive and two rejection controls executed; current producer-v2 positive replay executed and passed; originals preserved.",
+    "scientific_acceptance": "Independent bounded guidance/example content accepted; checker scientific_acceptance remains not_assessed.",
+    "producer_directory_stopped": true
+  },
+  "guardrails": [
+    "Unknown upstream overlap is not proven leakage;supervised representation may be valid.",
+    "Object identification is distinct from mechanism;bounded fixed-task conclusions remain valid.",
+    "Archived label hits,ranking,probability,experimental success and mechanism need their respective evidence.",
+    "New independent labels,capacity or experiments are triggered by selected new claims,not retroactive duties.",
+    "Bounded route acceptance preserves broader panorama gaps and all old scores/cutoffs."
+  ],
+  "remaining": [
+    "Exact upstream generation/training members,1368sequence settings/list",
+    "New-use localization,sequence-family axis,real capacity/cost",
+    "VAC failure mechanism;optional selected research"
+  ],
+  "followup_consumption": {
+    "package": "After independent acceptance and final documentation maintenance,freeze all current CHECKPOINT-MANIFEST entries and deliver the same complete latest Harness package to each N1/N2/N3 rereader.",
+    "required_reading": [
+      "core/docs/methods/guides/biological-explanation-and-handoff.md (v1.2)",
+      "core/docs/methods/guides/review-choice-synthesis.md (D58 rereading plus D59 bridge entry)",
+      "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md",
+      "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/report.md",
+      "core/examples/research-support/preparation/choice-synthesis-example/rereading/README.md",
+      "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v2.md"
+    ],
+    "required_application_evidence": [
+      "Received package identity and actual guide/example read scopes",
+      "Concrete guidance relation used and its effect on judgment/choice",
+      "New or retained prose locations and unresolved empirical limits"
+    ],
+    "N1_N2_N3_batch_rereading_started": false
+  },
+  "acceptance_requirements": [
+    {
+      "id": "D59-A01",
+      "requirement": "Four bridges present in continuous scientific prose",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A02",
+      "requirement": "Valid bounded explanations and alternatives",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A03",
+      "requirement": "Original paper/dictionary claims and actual scope accurate",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A04",
+      "requirement": "Old vac/VAC/score/hit distinctions and negative result retained",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A05",
+      "requirement": "Unknown upstream lineage not upgraded to leakage",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A06",
+      "requirement": "Labels,probabilities,mechanism and discovery separately justified",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A07",
+      "requirement": "Fixed-budget result and label-use correction retained",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A08",
+      "requirement": "New-use evidence and change conditions concrete",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A09",
+      "requirement": "Existing native consumer actually consumes frozen records;science separate",
+      "status": "pass"
+    },
+    {
+      "id": "D59-A10",
+      "requirement": "Latest whole Harness delivered and actually read in later application;old cases/cutoffs/scores preserved",
+      "status": "contract_accepted_actual_followup_pending"
+    }
+  ],
+  "old_scores_originals_cutoffs_preserved": true,
+  "controlled_guidance_effectiveness": "not_assessed",
+  "private_evidence": {
+    "availability": "private_archive",
+    "locator": "machine/reviews/2026-10-biological-argument-rereading/application/"
+  },
+  "candidate_revision_history": [
+    {
+      "date": "2026-10-25",
+      "recorded_at_utc": "2026-10-25T13:39:30.933545+00:00",
+      "previous_version": "D59-producer-v1",
+      "current_version": "D59-producer-v2",
+      "reason": "F03/F04 previously repeated a combined cross-source summary for each source. Split author reports,locators and evidence roles; audit F01-F07; retain human producer prose and reading scope.",
+      "source_roles": {
+        "S-PAPER-NOTES": "Historical task/category,1996 table conditions and1368-sequence result only.",
+        "S-ARCHIVE-NOTES": "Modern Harness label access/use,ID/vector census,quotas and accepted fixed-budget result.",
+        "S-AF2-NOTES": "Accepted D58 object/reference/protocol contrast."
+      },
+      "guide_precision": "One sentence requires each source's supported connection to be stated separately;the combined synthesis belongs to the researcher.",
+      "previous_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/v1-snapshot-manifest.json"
+      },
+      "current_manifest": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/producer-manifest-v2.json"
+      },
+      "review_map": "D59-map-v1 retained byte-for-byte because questions,branches and report did not change.",
+      "new_reading_or_scientific_result": false
+    }
+  ],
+  "acceptance_current": {
+    "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00",
+    "independent_requirements": {
+      "D59-A01": "pass",
+      "D59-A02": "pass",
+      "D59-A03": "pass",
+      "D59-A04": "pass",
+      "D59-A05": "pass",
+      "D59-A06": "pass",
+      "D59-A07": "pass",
+      "D59-A08": "pass",
+      "D59-A09": "pass",
+      "D59-A10": "contract_accepted_actual_followup_pending"
+    },
+    "blockers": [],
+    "scope": "Guidance and source-grounded bounded case, not three-case panorama or causal effectiveness",
+    "source_attribution": "F03/F04 corrected per source; F02 is explicitly first-party original+dictionary synthesis",
+    "producer_internal_pending_fields": "Frozen producer records keep their production-time states; current acceptance is this separate dated record",
+    "maintenance_gate": "Separate final maintainer checks",
+    "snapshot_stage": "Before old-case latest-Harness delivery and batch rereading",
+    "three_cases_have_received_and_read_current_package": false
+  },
+  "followup_recovery_current": {
+    "recorded_at_utc": "2026-10-26T23:55:03.663728+00:00",
+    "status": "old_three_completed_and_new_n4_n5_n6_accepted_bounded_scope",
+    "public_record": "machine/research/rereading-validation-2026-10-27.json",
+    "older_fields_scope": "followup_consumption and acceptance_current above retain the dated pre-dispatch snapshot; this later record reports actual completion.",
+    "D59_A10_actual_package_provision_and_adoption": "completed_for_old_three; same full frozen guidance supplied to N4/N5/N6",
+    "controlled_guidance_effectiveness": "not_assessed"
+  }
+}

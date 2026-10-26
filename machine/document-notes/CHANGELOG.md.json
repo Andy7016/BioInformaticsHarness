@@ -73,12 +73,23 @@
         "machine/history/review-scope-appraisal.json"
       ],
       "previous_document_snapshot": null
+    },
+    {
+      "at_utc": "2026-10-26T23:55:03.663728+00:00",
+      "reason": "Publish accepted rereading guidance and latest bounded case results.",
+      "prior_identity": {
+        "bytes": 4741,
+        "sha256": "d404a42fde52123e9e5d45e58bacfa6b1a6c070a28ec04276a830f0f781b7b0b"
+      },
+      "technical_records": [
+        "machine/research/rereading-validation-2026-10-27.json"
+      ]
     }
   ],
-  "updated_at_utc": "2026-10-23T09:23:42.172387+00:00",
+  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",
   "current_identity": {
-    "bytes": 4120,
-    "sha256": "0b1883150a6f6c4d6278ff4980834c8ffccc8a962bdc7d2dd65d2d3983c7c1c2"
+    "bytes": 5404,
+    "sha256": "65937f4bde374faadca241179de70ea4e630aedc305863cecb64fb4080e933bc"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",

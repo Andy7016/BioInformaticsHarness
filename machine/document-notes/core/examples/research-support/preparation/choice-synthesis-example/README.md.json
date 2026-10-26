@@ -1,0 +1,91 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/README.md",
+  "source_text": "# 工作例：让方法段落说明输入条件\n\n设想一份关于遗传证据与因果问题的综述，初稿写道：\n\n> 孟德尔随机化可以借助遗传变异研究因果关系。常用方法包括两阶段估计，也可以开展两样本分析。后续应扩大样本并检验稳健性。\n\n这段话列出了方法，却没有让读者看清自己能走哪条路线。问题可以收敛为：现有材料能否支持对同一个暴露与结局问题进行估计，需要补什么信息？\n\n## 先使用已经读过的内容\n\nDavey Smith 与 Hemani 的综述在基础原理中说明工具变量的条件，在“两样本孟德尔随机化”一节讨论暴露与结局在独立数据中测量的情况，以及发现工具与估计效应使用同一资料时的偏差问题。它提供了输入与研究设计之间的关系。[原综述](https://doi.org/10.1093/hmg/ddu328)。\n\n| 当前材料 | 能推进的路线 | 需要解释的条件与替代 |\n|---|---|---|\n| 同一研究具有个体层遗传、暴露和结局资料 | 在适合的模型与工具条件下考虑个体层估计 | 交代目标效应和模型；缺少所需信息时重新选择输入或问题 |\n| 暴露与结局关联来自不同研究 | 考虑两样本路线，并检查输入是否适合目标问题 | 群体与效应定义相容、工具有效性仍需依据；资料不足时先补齐或保留较窄解释 |\n| 工具的作用路径存在可信的相反证据 | 重新审视工具或因果问题 | 增大样本可改善精度，识别条件仍要单独处理 |\n\n下表及后面的段落是 Harness 对研究准备的组织建议。具体估计方法还需要其模型、输入和诊断依据；原综述中被引用的研究按需要另行阅读。\n\n据此可将初稿改写为：\n\n> 这项问题首先受可用输入限制。有同一研究的个体层资料时，可以在明确模型和工具条件后考虑个体层估计；当暴露与结局只在不同研究中测量时，两样本路线提供了另一种组织资料的方式，需要先判断输入是否支持同一个目标效应。两条路线都依赖工具的识别条件。当前优先补齐输入定义及其来源；若发现可信的绕行结局路径，就重新选择工具或研究问题。增加样本的建议则用于改善相应模型下的精度。\n\n新段落增加了“资料形式—估计路线—识别条件—下一动作”的关系。读者可以据此决定要补什么；本例没有给出新的因果估计。\n\n## 三种缺口，三种处理\n\n| 检查时发现什么 | 本轮动作 | 收束时写什么 |\n|---|---|---|\n| 两样本的适用条件已经读过，初稿只出现名称 | 整理现有笔记，改写正文；新增下载可为零 | 哪个条件进入了论证，它怎样影响路线选择 |\n| 某项具体估计量的关键原文不可得 | 寻找合格作者稿、协议或等价原始证据；仍缺时保留该比较 | 可解释到哪一层，暂缓的是哪项判断，何时恢复 |\n| 本轮只做输入与识别条件的导览，尚不比较估计量性能 | 保留这个范围，并解释其用途 | 当前能帮助准备什么，性能选择留给什么后续任务 |\n\n这三种情况分别是综合、获取和范围选择问题。回到[操作指南](../../../../docs/methods/guides/review-choice-synthesis.md)，把实际处理接回原地图、来源和正文即可。\n\n## 参考与继续阅读\n\nGeorge Davey Smith, Gibran Hemani. *Mendelian randomization: genetic anchors for causal inference in epidemiological studies*. Human Molecular Genetics 23(R1), R89–R98 (2014). [全文与书目信息](https://pmc.ncbi.nlm.nih.gov/articles/PMC4170722/)。本例使用基础原理、两样本小节及其相邻讨论；[工具变量与可识别性工作例](../../../../docs/methods/worked-examples/causal-instruments-and-identifiability.md)继续展开数据、目标与假设的衔接。\n",
+  "source_commit": null,
+  "source_sha256": "be77e16dd9fbb2084b899564c2e1d2353766f5c91ed11e1756dae9f8cb5feca4",
+  "original_source_scope": "Preserved uncommitted draft before this revision",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D57",
+      "date": "2026-10-25",
+      "reason": "Connect actually read conditions to choice and evaluation; distinguish objective changes, response routes, compound subrelations and source reports.",
+      "new_sources_or_designs": [
+        "D57",
+        "review-learning:R13",
+        "evaluation:R2:S407"
+      ],
+      "technical_records": [
+        "core/machine/design/review-choice-synthesis.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/before-public/core/examples/research-support/preparation/choice-synthesis-example/README.md"
+      },
+      "acceptance_status": "candidate_self_reviewed_awaiting_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    },
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/before/core/examples/research-support/preparation/choice-synthesis-example/README.md"
+      },
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 6782,
+        "sha256": "2a6f87cba3bccab2da686748e43e25e6f831b4761257424685494af03858159a"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 6782,
+    "sha256": "2a6f87cba3bccab2da686748e43e25e6f831b4761257424685494af03858159a"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json",
+    "core/machine/design/biological-argument.json"
+  ]
+}

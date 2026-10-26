@@ -40,15 +40,34 @@
         "machine/history/review-coverage-iteration.json"
       ],
       "previous_document_snapshot": "machine/reviews/2026-10-review-coverage-iteration/before/public/core/docs/methods/guides/review-first-preparation.md"
+    },
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
     }
   ],
-  "updated_at_utc": "2026-10-23T05:49:05.511223+00:00",
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
   "current_identity": {
-    "bytes": 10343,
-    "sha256": "d07991b456773c173b6745401ebcca7447e52e98ae681b1eb559f2fd3157fb06"
+    "bytes": 10527,
+    "sha256": "64cf57482ea075829eb7a050c36247c8fb1dc03ef125d31401ab8f114d464cfb"
   },
   "current_technical_records": [
-    "core/machine/design/review-coverage.json",
-    "machine/history/review-coverage-iteration.json"
+    "core/machine/design/rereading-perspectives.json"
   ]
 }

@@ -1,0 +1,91 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/docs/methods/guides/review-choice-synthesis.md",
+  "source_text": "# 从已读文献写出方法取舍\n\n这一步用在综述初稿已有主线、方法比较却仍像名称清单的时候。它接在[覆盖与收束](review-coverage-and-closure.md)的范围评议中，帮助把读过的条件写成读者可以使用的判断。\n\n## 从一个会改变选择的问题开始\n\n先取一段核心论述，问读者读完后能决定什么。例如，现有数据是否能回答这个问题，为什么考虑这条方法路线，换一种条件后应怎样处理。若答案仍需读者自行猜测，就回到支撑该段的来源。\n\n优先回看原文中的方法比较、输入要求、局限与讨论。找到一个条件，说明它怎样改变目标、信息需求、方法假设或允许的解释。方法名可以保留为查找入口，论证围绕条件展开。\n\n| 阅读时问什么 | 在综述中接上什么关系 |\n|---|---|\n| 作者究竟想估计、预测、重建或解释什么 | 生物学问题与方法目标，目标改变时需要另作比较 |\n| 哪些信息可用，哪些缺失、带偏差或来自别的总体 | 数据条件与路线选择，补充信息的价值 |\n| 方法怎样表达对象之间的关系，哪些假设使结果可解释 | 表示、推断与生物学含义 |\n| 作者用什么证据判断做得好，评价是否对应使用目的 | 评价对象、允许的主张与下一步选择 |\n\n这些问题供挑选合适的比较角度。专题决定哪些角度重要；狭窄问题可以直接说明其余角度为何不影响当前决定。\n\n## 固定问题，改变一个条件\n\n把当前问题与一种合理替代并排。先保持研究目标不变，只改变一个重要条件，例如可用标签、观测单位、测量噪声或部署范围。再问原路线是否仍能回答问题，需要补什么，哪条替代更合适。\n\n如果换了条件，评价目标也随之改变，就把这一点写明。例如，较容易获得的代理指标可能支持一种较窄用途；将它用于原来的生物学主张，还需要新的依据。若比较的其实是同一前提下的实现变体，可以留在同一分支；若信息资格、推断目标或使用含义不同，应在地图中显出这条关系。\n\n已有来源不足以回答时，再判断是否值得补一份基础比较、教程或原始研究。也可以保留开放问题、选择等价证据或收窄用途。每次新增阅读都应有它要改变的判断。\n\n## 将阅读笔记改写成一段论证\n\n可以先用下面五句整理一项关键选择，再写成自然的段落：\n\n1. 本段要回答什么问题，涉及什么对象或目标量。\n2. 在什么数据和假设下，某条路线能够提供什么结果。\n3. 来源在哪一处支持这个关系；作者实际比较了什么。\n4. 条件改变时，有什么合理替代，它保留或失去了什么。\n5. 当前据此怎样选择，哪种新证据会使选择改变。\n\n逐来源报告与跨来源综合分别表达。原文只报告一种方法时，可以提出有依据的比较建议，并说明这是本综述的综合。来源中的总体、版本、单位和主张强度在改写后继续保留。\n\n一个来源可以支撑多个关系；同一关系也可以由不同来源或等价证据支撑。最终看关键关系有没有依据并进入论证，引用数量用来描述材料覆盖。\n\n## 用初稿检查解释是否真的改变\n\n先保存初稿。修订后，将一段旧文与新文并排，指出新增的条件、替代、评价联系或撤回的判断。把方法名暂时遮住，再读新段落：读者能否看出何时需要哪类方法，以及为什么？这是一种阅读自检，关键科学关系仍须回到来源判断。\n\n把处理结果接回原问题地图：已有分支补上条件；新关系按用途加入；不值得展开的分支说明理由。重要研究方向或投入变化，带着证据、选项和建议向人讨论。简短综述可以直接在正文、脚注或一页比较表中完成这些工作，沿用已有来源账本即可。\n\n可以联用[从输入条件改写方法段落的例子](../../../examples/research-support/preparation/choice-synthesis-example/README.md)。它展示已读未综合、原件不可得和合理限域三种情况怎样产生不同动作。\n",
+  "source_commit": null,
+  "source_sha256": "7f941eb5e5a635b62bdc72f53eda65757e2c9e914737205831c15925c0dd05b1",
+  "original_source_scope": "Preserved uncommitted draft before this revision",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D57",
+      "date": "2026-10-25",
+      "reason": "Connect actually read conditions to choice and evaluation; distinguish objective changes, response routes, compound subrelations and source reports.",
+      "new_sources_or_designs": [
+        "D57",
+        "review-learning:R13",
+        "evaluation:R2:S407"
+      ],
+      "technical_records": [
+        "core/machine/design/review-choice-synthesis.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/before-public/core/docs/methods/guides/review-choice-synthesis.md"
+      },
+      "acceptance_status": "candidate_self_reviewed_awaiting_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    },
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/before/core/docs/methods/guides/review-choice-synthesis.md"
+      },
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 11276,
+        "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 11276,
+    "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json",
+    "core/machine/design/biological-argument.json"
+  ]
+}

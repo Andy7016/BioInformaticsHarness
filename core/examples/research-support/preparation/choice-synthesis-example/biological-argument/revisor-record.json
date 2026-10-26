@@ -1,0 +1,103 @@
+{
+  "concern": "Connect biological object,feature generation,label evidence and candidate use in continuous prose.",
+  "required_scope": "selected_route_only:bounded_biological_argument",
+  "guidance_version": "biological-handoff-v1.2/D59",
+  "producer_version": "D59-producer-v2",
+  "requests": [
+    {
+      "request_id": "D59-R1",
+      "concern": "object and unit"
+    },
+    {
+      "request_id": "D59-R2",
+      "concern": "feature generation and provenance"
+    },
+    {
+      "request_id": "D59-R3",
+      "concern": "label/reference qualification"
+    },
+    {
+      "request_id": "D59-R4",
+      "concern": "output/action/evaluation and change conditions"
+    }
+  ],
+  "response_groups": [
+    {
+      "alternatives": [
+        {
+          "id": "explain",
+          "route": "explain",
+          "request_ids": [
+            "D59-R1",
+            "D59-R2",
+            "D59-R3",
+            "D59-R4"
+          ],
+          "conditions": "Existing qualified original,dictionary and accepted project result available."
+        },
+        {
+          "id": "new_use_evaluation",
+          "route": "reanalyze",
+          "request_ids": [
+            "D59-R4"
+          ],
+          "conditions": "New positive use needs its own target,input,label,independence,capacity and cost design."
+        }
+      ],
+      "selected_alternative": "explain"
+    }
+  ],
+  "five_dimensions": {
+    "procedure": "Approved theory/final extraction→actual complete1996paper/allfigures/tables/captions→preserve accepted result/correction→continuous report→separate Medium consumption→independent scientific review.",
+    "input_use": [
+      {
+        "input": "1996original and UCIyeast.names",
+        "use": "Object,feature,tree,label source and reported-evaluation facts."
+      },
+      {
+        "input": "Accepted VAC review/label clarification/results",
+        "use": "Retain old values,negative decision and narrow label-use explanation;no new replay."
+      },
+      {
+        "input": "D58 accepted AF2Complex public report/notes",
+        "use": "Short object/reference/budget contrast;prior reading remains prior-attributed."
+      }
+    ],
+    "next_action": "Medium consumes a frozen copy;independent reviewer reads original relations against new prose.",
+    "output": [
+      "report.md",
+      "source-basis.md",
+      "review-map.json",
+      "source-ledger.json",
+      "evidence-map.json",
+      "reading-record.json"
+    ],
+    "acceptance": "Connected reasoning,correct source facts,old distinctions/negative result retained,and valid bounded alternatives;record pass is separate."
+  },
+  "acceptance_checks": [
+    {
+      "scope": "record_contract",
+      "status": "unknown",
+      "reason": "Current producer-v2 positive native replay pending; prior v1 receipts and controls retained separately."
+    },
+    {
+      "scope": "artifact_or_runtime",
+      "status": "pass",
+      "reason": "First-party prose and declared source/notes identities recorded;no new model runtime claimed."
+    },
+    {
+      "scope": "scientific",
+      "status": "unknown",
+      "reason": "Corrected source attribution and version chain await independent acceptance; human scientific prose unchanged."
+    }
+  ],
+  "unresolved": [
+    "Exact upstream generator/training overlap and1368sequence settings/list not established.",
+    "Independent current localization,family transfer and actual capacity/cost require selected new-use design.",
+    "VAC failure mechanism not isolated;not required for accepting bounded negative.",
+    "Broader N1/N2/N3 maps,old scores,cutoffs and first submissions unchanged."
+  ],
+  "historical_score_change": 0,
+  "new_scientific_run": false,
+  "controlled_guidance_gain": "not_assessed"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/README.md",
+  "source_text": "# 工作例：从蛋白定位信息到候选用途\n\n这个例子说明怎样把生物对象、特征形成、标签证据和候选决定写成[一篇连续论证](report.md)。主例使用 UCI Yeast 和 Horton、Nakai 1996 年原论文，保留既有 VAC 补研究的受限负结果；AF2Complex 仅用于对照用途改变时评价怎样随之改变。\n\n先读[正文](report.md)，再沿[来源笔记](source-basis.md)回到原文的定义、分类树和结果表。正文回答的是：八项历史特征与档案定位类别能支持怎样的候选审阅判断，以及下一种用途需要补上什么理由。旧报告已正确区分 vac、VAC、排序量与档案命中，本例补充它们之间的生物学联系。原实验和旧稿保留；这里的新正文是解释与重综合。\n\n## 怎样交给下一位研究者\n\n先核对正文是否给出了当前决定、来源支持的理由、未取得的关键证据和改判条件。仅归档历史结果时，接受这条解释路线即可；准备支持新蛋白或实际定位筛选时，再按正文末尾的具体问题选择新设计。\n\n几种看似完整但仍需修订的写法：\n\n| 写法 | 会改变什么判断；怎样回应 |\n|---|---|\n| “八项特征预测 VAC，所以可以发现液泡相关基因” | 对象和标签资格发生变化；先定义目标蛋白/基因及其与档案类别的对应，再决定是否需要新参照。 |\n| “vac 来自已知定位组，说明当前评价已经泄漏” | 监督来源已知，训练成员重合尚待核实；取得上游成员与数据流再判断，当前保留条件性历史结果。 |\n| “命中数增加，就已经能可靠用于筛选” | 要回到同预算参照和既定收益门槛；本例两套主情景均未达完整规则，继续保留负决定。 |\n| “记录或脚本检查通过，科学解释也已接受” | 文件、声明和科学证据分别评议；来源支持与推理强度由独立阅读者复核。 |\n\n## 使用已有地图接口\n\n将整个 `biological-argument` 目录复制到一个新工作目录，从 core 运行现有消费者：\n\n```text\npython -B -X utf8 -m scripts.research_support.review_coverage --root REVIEW_ROOT --record review-map.json --out checks/review-map.json\n```\n\n`review-map.json`、`source-ledger.json` 和 `evidence-map.json` 沿用现有格式。消费者实际读取的是本轮第一方来源笔记和正文，检查记录连接及摘录；原论文由公开链接提供，实际原文阅读另见 `reading-record.json`。`revisor-record.json` 说明为何选择解释路线和仍开放的新用途。\n\n本例没有历史原生地图；当前地图是本轮为解释路线建立的初版。复制后的文件检查与独立科学接受分别记录。测试副本可用于检查缺失阅读依据或关键关系尚未综合却要求交付的错误，原件继续保留。\n\n回到[生物学解释指南](../../../../../docs/methods/guides/biological-explanation-and-handoff.md#从对象到用途接通关系)或[方法取舍指南](../../../../../docs/methods/guides/review-choice-synthesis.md)。\n",
+  "source_commit": null,
+  "source_sha256": "049c94518dacd7c5291c184b6306c4e69465b42cb13db0da0426a650eeb6d963",
+  "original_source_scope": "New D59 first-party authored document;not a historical original or old report.",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": null,
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 3086,
+        "sha256": "049c94518dacd7c5291c184b6306c4e69465b42cb13db0da0426a650eeb6d963"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 3086,
+    "sha256": "049c94518dacd7c5291c184b6306c4e69465b42cb13db0da0426a650eeb6d963"
+  },
+  "current_technical_records": [
+    "core/machine/design/biological-argument.json"
+  ]
+}

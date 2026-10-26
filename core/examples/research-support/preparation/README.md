@@ -18,6 +18,10 @@
 
 [覆盖小例](coverage-example/README.md)提供可运行的虚构材料，分别演示继续整理、综合后交付和有理由的范围收窄。现有表格或平台可以保留同样的关系；机器助手的入口和状态见[契约](../../../machine/design/review-coverage.json)。
 
+[方法取舍工作例](choice-synthesis-example/README.md)演示固定目标改变输入、以及目标改变后重选评价；[单细胞旧例](choice-synthesis-example/mast-resynthesis.md)从实际已读材料补回基因集论证，并保留复合问题中仍开放的关系。写作步骤见[从已读文献写出方法取舍](../../../docs/methods/guides/review-choice-synthesis.md)。
+
+[AF2Complex 重读例](choice-synthesis-example/rereading/README.md)从已接收旧版出发，记录完整原文与补充材料的实际阅读范围，再把预算和评价对象接进新的连贯稿；附有现有地图消费者可读取的资料。
+
 ## 综述可以独立交付
 
 先将 [REVIEW.template.md](REVIEW.template.md) 复制为本轮综述主文，按对象、主要判断和证据关系展开，避免逐篇摘要的简单拼接。按准备计划中的目标结束综述时，填写本轮实际覆盖范围、关键来源及其版本、主要共识及适用条件、剩余分歧、方法比较、候选问题和后续决定。可以交付综述、继续定向阅读、暂缓或停止；数据准备从明确的研究转入决定开始。就绪依据目标所需的来源与证据覆盖情况判断，不设统一篇数门槛。

@@ -1,0 +1,175 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "yeast-biological-argument",
+  "version": "D59-map-v1",
+  "previous_map_ref": null,
+  "change_reason": "First D59 native explanatory map; no invented historical map or original overwrite.",
+  "purpose": {
+    "kind": "decision_support",
+    "objective": "解释历史Yeast八特征、定位标签、固定状态与同预算排序怎样支持受限负决定，并按新用途选择证据。",
+    "audience": "Researchers interpreting or handing off the accepted VAC ranking result."
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map.json",
+  "report_ref": "report.md",
+  "scope_appraisal": {
+    "status": "completed",
+    "owner": "application_sol_max",
+    "trigger": "Correct individual fields leave biological generation-to-use reasoning thin.",
+    "conclusion": "Critical explanatory bridges written;old correct distinctions/negative result retained;new empirical use remains open.",
+    "basis_refs": [
+      "README.md",
+      "source-basis.md",
+      "reading-record.json",
+      "revisor-record.json"
+    ],
+    "candidate_branch_ids": [
+      "B02",
+      "B03"
+    ]
+  },
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "历史蛋白对象、数据库注释与当前类别任务的关系",
+      "why_it_matters": "Define object/label correspondence before expanding to all vacuole-related proteins or genes.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-PAPER-NOTES"
+      ],
+      "finding_ids": [
+        "F01"
+      ],
+      "synthesis_locator": {
+        "excerpt": "这里的操作对象是带有历史定位类别的蛋白记录"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B02",
+      "question": "八项表示生成、vac/VAC与上游谱系",
+      "why_it_matters": "Use fixed features conditionally; actual upstream overlap needs members,version and data-flow evidence.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-PAPER-NOTES"
+      ],
+      "finding_ids": [
+        "F02"
+      ],
+      "synthesis_locator": {
+        "excerpt": "有监督生成的表示可以合理用于后续预测"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B03",
+      "question": "标签证据与实际使用路径的层次",
+      "why_it_matters": "Retain narrow label-use statement; separately saved reference is still historical annotation.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-PAPER-NOTES",
+        "S-ARCHIVE-NOTES"
+      ],
+      "finding_ids": [
+        "F03"
+      ],
+      "synthesis_locator": {
+        "excerpt": "当前 TP 表示入选且档案类别为 VAC"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B04",
+      "question": "历史训练/总体CV与序列/ID/向量保护",
+      "why_it_matters": "Choose a sequence-based design only when a selected new-family claim requires it.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-PAPER-NOTES",
+        "S-ARCHIVE-NOTES"
+      ],
+      "finding_ids": [
+        "F04"
+      ],
+      "synthesis_locator": {
+        "excerpt": "Table 3 的 VAC 10.0% 与前两类 13.3% 来自全数据训练"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B05",
+      "question": "固定输出进入五队列审阅事件",
+      "why_it_matters": "Interpret finite-archive ranking; probability/external performance/real capacity need matching evidence.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-ARCHIVE-NOTES"
+      ],
+      "finding_ids": [
+        "F05"
+      ],
+      "synthesis_locator": {
+        "excerpt": "各留出折分别排序，再按事先配额合并为 85 项"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B06",
+      "question": "同预算负决定与新用途改判",
+      "why_it_matters": "Accept bounded negative without complete mechanism; new-use target/capacity/cost guide new evidence.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-ARCHIVE-NOTES"
+      ],
+      "finding_ids": [
+        "F06"
+      ],
+      "synthesis_locator": {
+        "excerpt": "两套主情景均未达到完整规则"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B07",
+      "question": "AF2Complex对象、预算与参照随用途变化",
+      "why_it_matters": "Choose object,reference and generation budget for the intended action.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-AF2-NOTES"
+      ],
+      "finding_ids": [
+        "F07"
+      ],
+      "synthesis_locator": {
+        "excerpt": "给定组分时，候选结构经 interface-score 选优"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B08",
+      "question": "新部署用途是否已有独立定位、序列家族、上游谱系及真实容量/成本的经验评价？",
+      "why_it_matters": "Future positive use needs appropriate evidence;current purpose explains the accepted archive negative.",
+      "essential_for_purpose": false,
+      "coverage_state": "not_searched",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [],
+  "decision": {
+    "action": "deliver",
+    "reason": "Bounded explanatory report authored;science and native consumption separately reviewed.",
+    "remaining_branch_ids": [
+      "B08"
+    ],
+    "next_owner": "independent_scientific_reviewer",
+    "next_action": "Check original facts,prose and preserved result;Medium separately consumes frozen copy."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/report.md",
+  "source_text": "# Yeast VAC：从序列信号到有界的候选决定\n\n目前继续暂不推荐这些固定模型状态作为可靠的 VAC 候选工具。在每套划分审阅 85 项的主情景下，主要策略只找回 30 个档案 VAC 中的 4 个和 6 个，两套情景均未达到既定完整收益规则。理解这个负决定，要把历史定位任务、八项输入如何形成、标签能作何种参照，以及当前审阅策略评价的事件接在一起。以下是新的解释与重综合，保留既有结果。\n\n## 从蛋白对象到八项表示\n\nHorton 与 Nakai 的 1996 年研究用蛋白氨基酸序列中的定位信息，将酵母蛋白分入十个类别。原文说明 1,484 条序列取自 SWISS-PROT，定位注释取自 YPD。这里的操作对象是带有历史定位类别的蛋白记录；当前研究取得的是八项预计算特征及档案标签。它可以用来问这些数值是否有助于重现历史分类、优先找回档案 VAC。准备寻找所有液泡相关蛋白或基因时，需要先界定新的对象与定位含义。[原论文第 109–112 页](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=1)、[UCI Yeast](https://archive.ics.uci.edu/dataset/110/yeast)。\n\n八项输入压缩了序列中不同层次的线索。mcg、gvh 来自信号序列识别，alm 来自跨膜区预测程序；mit 以线粒体与非线粒体蛋白 N 端 20 残基的组成为判别依据，erl 检查 HDEL 模式。原文将 nuc 描述为定位共识模式与碱性残基频率的结合，将 pox 描述为短 motif 与组成判别的组合，并说明尝试过不同版本。UCI 文件提供较简短的核定位和过氧化物酶体信号描述；本例据此辨认信息类型，精确生成实现仍需历史方法与版本。后续模型接收的是这些经过规则、统计判别或上游程序处理的表示，而非本轮测得的定位。[第 110–111 页](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=2)、[UCI 文件](https://archive.ics.uci.edu/dataset/110/yeast)。\n\n小写 vac 尤其需要接回生成过程：它是液泡与胞外蛋白氨基酸组成的判别分数。原作者的 Figure 3 把 vac 放在 VAC 与 EXC 的末端分叉，说明该表示原本服务于两个定位类别的区分；大写 VAC 则是整项任务的一个档案类别。当前 RBF SVM 同时使用八列，并未移植这棵分类树。旧报告已清楚区分 vac、VAC、排序量和标签命中；本次补上的联系是，这个输入含有上游学习与生物知识形成的定位信息，分数的来源会影响我们怎样理解后续评价。[第 111 页与 Figure 3](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=3)。\n\n有监督生成的表示可以合理用于后续预测。要进一步判断上游学习是否见过当前留出对象，需要上游训练成员、所用标签、版本和实际数据流。现有材料尚未建立这条谱系，因而当前结论以八项历史输入固定为条件。当前分类器的折内拟合与留出设计说明这一层的可见范围；序列生成、上游判别和新的对象独立性分别保留待核问题。\n\n## 从定位标签到可评价的事件\n\n历史标签给出了一个明确而有限的参照。原文按信号特征区分 ME1/ME2/ME3，并为可处理的分类任务合并了一些膜位置；每行保留一个定位类别。VAC 因此先按档案类别解释。逐 ID 的实验根据、菌株、环境、现今注释和多定位状态尚未取得，不能把本例类别直接扩写为一切液泡相关功能。当前 TP 表示入选且档案类别为 VAC，FP 表示入选但档案类别为其他类；新独立定位或功能研究要另选相应参照。[第 110–112 页](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=2)。\n\n原论文的不同结果也各有评价条件。Table 3 的 VAC 10.0% 与前两类 13.3% 来自全数据训练，回答给定蛋白的最高类别或前两类别是否命中；Table 4 才报告总体十折分类表现。两者都没有直接评价固定审阅数下的候选队列。作者还按序列残基一致性去冗余得到 1,368 条序列的集合，再做随机十折；当前按 ID 去重及按完整八特征向量分组，保护的是不同层次。原去冗余算法、比对设置与名单尚未取得，当前分组支持 ID 与完整向量层次的留出，家族外评价仍需适合该用途的设计。[第 112 页、Tables 3–4 及表注](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=4)。\n\n总体成绩还会掩盖小类别。原作者在第 115 页讨论 POX 的失败时，指出其子树中的较大类别可让系统忽略 POX 而取得较高总体正确率。这个反例支持逐类看结果，却尚不足以判定当前 VAC 失败由哪一种特征、类别不平衡或模型表示造成。若研究转向误差原因，应先写能区分这些替代解释的预测，再选择比较。[第 115 页讨论](https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf#page=7)。\n\n## 从固定模型输出到同预算审阅\n\n已接受补研究将官方记录中的完全重复行按 ID 合并，得到 1,462 个 ID、1,453 个完整特征向量组，VAC 为 30。当前来源计数以原始记录为准：EXC 为 35；官方说明的 EXC 37 与其总数存在差异，Table 3 列为 35，差异原因仍开放。每个状态的留出 ID 与训练 ID、完整特征向量组无交叠。两个既定划分共享同一档案和标签，因此用来观察策略对分组的敏感性，解释时保留同一有限档案的范围。\n\n补研究选择固定状态的折内排序，没有重训、校准或学习拒用阈值。主要排序量为 VAC 类输出减去其他类别的最大输出，按实际类名取值。这个未校准量用于确定审阅次序；要按概率作决定，需要另有概率与使用域的证据。各留出折分别排序，再按事先配额合并为 85 项；这评价五队列交叉拟合策略。未入选者继续待审阅。\n\n标签在数据流中也有不同用途。评分进程曾解析带 `true` 字段的旧预测文件，因此接受的说明是可读计算路径未用历史真值计算模型分数或候选次序。候选程序使用新保存的无标签分数与既定配额；清单形成后，评价才按 ID 连接独立保存的参考表。参考仍来自同一历史档案。此前成绩、阳性数和旧清单长度已经可见，85 项是明示的回顾性容量情景，真实使用者容量和错误成本尚未确认。\n\n| 每套划分审阅 85 项 | 主划分 | 第二划分 |\n|---|---:|---:|\n| 入选且档案标签为 VAC | 4 / 30 | 6 / 30 |\n| 入选且档案标签为其他类 | 81 | 79 |\n| 未入选的档案 VAC | 26 | 24 |\n| 同预算硬分类优先随机策略的期望命中 | 2.612 | 3.927 |\n| 同预算全候选随机策略的期望命中 | 1.744 | 1.744 |\n\n原规则要求两套划分都命中至少 6 个、达到全候选随机期望的两倍，并比硬分类优先期望至少多 3 个。相对硬优先的实际增量约为 1.388 和 2.073，两套主情景均未达到完整规则；与线性参照也各只多 1 个，未达到原额外非线性复杂度规则。因此继续暂不推荐当前状态，符合原设计。更大预算下的更多命中保留为预算敏感的探索信号。随机参照的范围描述固定档案上随机审阅的波动，结果解释仍停在这项历史检索策略。上述数值是 [Harness 历史计算案例的导出摘要](source-basis.md#harness-历史计算案例的导出摘要)。\n\n## 接手后先选哪条证据路线\n\n若当前目的只是保存和解释这次负结果，上述连贯论证已经可以交接。若准备面向新的液泡定位筛选，第一步是让实际使用者确认对象、每批容量与容许错误，再决定现有档案类别是否适合作参照。候选优先级的改判需要适合这一用途的评价；继续沿用历史分类任务是合法的较窄路线。\n\n接着按会改变决定的缺口取证。取得逐 ID、条件清楚且与开发过程独立的定位依据后，可检查历史 VAC 与新目标怎样对应，并据新标签形成新的评价分母；取得序列与同源关系后，可按未来对象选择家族或其他留出轴；取得上游训练成员和版本后，可核实际信息重合，并决定是否需要重新生成表示或另建独立评价。材料不足时保留相应未知，当前固定档案负结果继续有效。只有目标、输入资格、参照与预算相接的新结果达到所选用途的接受规则，才扩大使用建议。机制问题则另需能区分替代解释的设计。\n\nAF2Complex 提供一个短对照：给定组分时，候选结构经 interface-score 选优，再以实验坐标上的 DockQ 评价；从任意蛋白对中筛选时，对象改为候选对，参照改为所声明的互作标签。既有例子分别保留结构目标的 3×5 生成协议与每对 single run 的筛选协议。对象、生成预算和参照接通以后，读者才知道一个分数适合哪种动作。详见[已接受的连续解释](../rereading/report-v2.md)；本例本轮复用该公开文字与来源笔记。\n",
+  "source_commit": null,
+  "source_sha256": "16f6bfc1ce1141311fb9285355fde49ba8e88ed43d073c2ed741b1c0e33fc567",
+  "original_source_scope": "New D59 first-party authored document;not a historical original or old report.",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": null,
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 9081,
+        "sha256": "16f6bfc1ce1141311fb9285355fde49ba8e88ed43d073c2ed741b1c0e33fc567"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 9081,
+    "sha256": "16f6bfc1ce1141311fb9285355fde49ba8e88ed43d073c2ed741b1c0e33fc567"
+  },
+  "current_technical_records": [
+    "core/machine/design/biological-argument.json"
+  ]
+}

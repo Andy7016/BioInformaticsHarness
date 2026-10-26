@@ -1,0 +1,38 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v1.md",
+  "source_text": "# 旧稿问题的示意：先有评价，再补预算\n\n以下是据真实旧 v2 关系自写的示意，用于前后阅读；它是当前工作例的文字，原首交及原稿字节另行保留。\n\nAF2Complex 对给定组分输出复合物坐标与接口置信度，并可用于筛选蛋白对。CP17 的结构评价中，作者报告 15/17 达到可接受，原单体权重配置平均 DockQ 为 0.62；AF-Multimer 为 0.65，多体权重的 AF2Complex 配置为 0.74。一个 AF2Complex 失败目标另有较好的 docking 结果。\n\n另一项测试在 34 个蛋白的 561 对组合中寻找 17 个已知对，并把其余组合假定为非互作。结构质量和发生关系各有其评价对象；推定负例、组装上下文和主张边界继续保留。这里尚未把生成次数和选优规则接到相应结果。\n",
+  "source_commit": null,
+  "source_sha256": "40c8f389ae3e9e00f95f84f135f37a181f3dd8faf6b76ae560279b92a7fef08f",
+  "original_source_scope": "PreservedbeforeD58bytes ifexisting; newD58firstpartysource otherwise.",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
+  "current_identity": {
+    "bytes": 827,
+    "sha256": "40c8f389ae3e9e00f95f84f135f37a181f3dd8faf6b76ae560279b92a7fef08f"
+  },
+  "current_technical_records": [
+    "core/machine/design/rereading-perspectives.json"
+  ]
+}

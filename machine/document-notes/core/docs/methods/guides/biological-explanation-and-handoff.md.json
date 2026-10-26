@@ -28,5 +28,69 @@
     "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes."
   ],
   "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "source_sha256": "2f8dc75f5985a7d05a8b574505b47d9c5308e147fd6fc0bb73837c08cb3a1aa2"
+  "source_sha256": "2f8dc75f5985a7d05a8b574505b47d9c5308e147fd6fc0bb73837c08cb3a1aa2",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/before/core/docs/methods/guides/biological-explanation-and-handoff.md"
+      },
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 10662,
+        "sha256": "cd0a510227ccd2e7ddf46307c14287da8d5978d311cd68c077a4a9b3f3f03800"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-source-attribution-v2",
+      "date": "2026-10-25",
+      "reason": "Split source-specific support from cross-source synthesis in producer-v2;one main-guide sentence records the common precision. Producer human prose and actual reading remain unchanged.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/evidence-map.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/source-ledger.json"
+      ],
+      "previous_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/v1-snapshot/public/core/docs/methods/guides/biological-explanation-and-handoff.md"
+      },
+      "current_producer": "D59-producer-v2",
+      "acceptance_status": "current_attribution_and_positive_replay_pending",
+      "current_identity": {
+        "bytes": 10776,
+        "sha256": "9ffe1dbe12835a1b39f2178f5097c21855f72a836cd1bb52f0d6e9be2360ad91"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 10776,
+    "sha256": "9ffe1dbe12835a1b39f2178f5097c21855f72a836cd1bb52f0d6e9be2360ad91"
+  },
+  "current_technical_records": [
+    "core/machine/design/biological-argument.json"
+  ]
 }

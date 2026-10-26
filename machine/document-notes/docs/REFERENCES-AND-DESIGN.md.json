@@ -67,16 +67,62 @@
         "machine/history/review-scope-appraisal.json"
       ],
       "previous_document_snapshot": null
+    },
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/before/docs/REFERENCES-AND-DESIGN.md"
+      },
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 64726,
+        "sha256": "147b3b6174a5f99703fd8807436cbd06d516bb217afd423fa21e5a98998c8647"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    },
+    {
+      "at_utc": "2026-10-26T23:55:03.663728+00:00",
+      "reason": "Publish accepted rereading guidance and latest bounded case results.",
+      "prior_identity": {
+        "bytes": 64726,
+        "sha256": "147b3b6174a5f99703fd8807436cbd06d516bb217afd423fa21e5a98998c8647"
+      },
+      "technical_records": [
+        "machine/research/rereading-validation-2026-10-27.json"
+      ]
     }
   ],
-  "updated_at_utc": "2026-10-23T09:23:43.548954+00:00",
+  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",
   "current_identity": {
-    "bytes": 61500,
-    "sha256": "a05921b78e12ce72d6424e2cf8d630061e5b79e32537c8e31bdaae230132bb40"
+    "bytes": 65358,
+    "sha256": "36e663105302427885bd57b39757846fdf5c13d479c6cf0bcfac5b677e989e4f"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",
-    "machine/history/review-scope-appraisal.json"
+    "machine/history/review-scope-appraisal.json",
+    "core/machine/design/biological-argument.json"
   ],
   "revisions": [
     {

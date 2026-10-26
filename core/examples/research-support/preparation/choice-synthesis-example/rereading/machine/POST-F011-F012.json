@@ -1,0 +1,63 @@
+{
+  "version": "D58-rereading-explanatory-view",
+  "claims": [
+    {
+      "finding_id": "POST-F011",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "CP17pose:3independentruns×5models,target15; topbyinterface-score thenexperimentalDockQ;15/17acceptable,monomermean.62;AF-Multimer.65,multimer-AF2Complex.74 labelled.",
+      "scope_conditions": [
+        "Oneauthorreportedstudy/CP17; nonewexperiment",
+        "原单体已用未配对MSA；各对照相对配置变化和单因素增益未核定。"
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-NOTES",
+          "locator": "p4Results,Fig3p5,p10workflow,p11CP17 asattributed in source-basis.md",
+          "summary": "CP17pose:3independentruns×5models,target15; topbyinterface-score thenexperimentalDockQ;15/17acceptable,monomermean.62;AF-Multimer.65,multimer-AF2Complex.74 labelled."
+        }
+      ],
+      "cross_source_synthesis": "Single-source boundedresynthesis, notindependent cross-sourcecorroboration.",
+      "researcher_inference": "Chooseevaluation forcurrenttask; matched-budgetcomparison requires additionaldesign/results.",
+      "evidence": [
+        {
+          "source_id": "S-NOTES",
+          "work_id": "HARNESS-AF2-NOTES",
+          "evidence_unit_id": "gao2022-POST-F011",
+          "relation": "supports",
+          "basis": "Attributedfirstpartynotes; actualoriginalreading/SIboundary in machine/reading-record.json."
+        }
+      ]
+    },
+    {
+      "finding_id": "POST-F012",
+      "finding_type": "condition_bounded_agreement",
+      "claim_or_observation": "CP17occurrence:34proteins,561pairs,17knownpositive;single run perpair,notassertedsinglemodel;othersnaivelynegative.",
+      "scope_conditions": [
+        "Oneauthorreportedstudy/CP17; nonewexperiment",
+        "Single-run screening is separate; presumednegatives andcalibrationlimits retained."
+      ],
+      "author_reports": [
+        {
+          "source_id": "S-NOTES",
+          "locator": "p4arbitrarypairs,Fig4p6,p11CP17 asattributed in source-basis.md",
+          "summary": "CP17occurrence:34proteins,561pairs,17knownpositive;single run perpair,notassertedsinglemodel;othersnaivelynegative."
+        }
+      ],
+      "cross_source_synthesis": "Single-source boundedresynthesis, notindependent cross-sourcecorroboration.",
+      "researcher_inference": "Chooseevaluation forcurrenttask; matched-budgetcomparison requires additionaldesign/results.",
+      "evidence": [
+        {
+          "source_id": "S-NOTES",
+          "work_id": "HARNESS-AF2-NOTES",
+          "evidence_unit_id": "gao2022-POST-F012",
+          "relation": "supports",
+          "basis": "Attributedfirstpartynotes; actualoriginalreading/SIboundary in machine/reading-record.json."
+        }
+      ]
+    }
+  ],
+  "current_taskcard": "POST-S02-taskcard.json",
+  "native_evidence_map": "../evidence-map-v2.json",
+  "historical_claims_rewritten": false,
+  "scientific_acceptance": "pending_independent_review"
+}

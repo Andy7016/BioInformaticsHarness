@@ -1,0 +1,47 @@
+{
+  "schema": "harness.preparation-priority/v1",
+  "recorded_at_utc": "2026-10-24T11:49:51.031941+00:00",
+  "decision": "strengthen_research_preparation_before_abstract_methodology_guidance",
+  "authority": {
+    "kind": "user_direction",
+    "date": "2026-10-24",
+    "summary": "Prioritize extending and improving early-stage research preparation, then integrate abstract-methodology research guidance."
+  },
+  "existing_designs": [
+    "D53",
+    "D54",
+    "D55",
+    "D56"
+  ],
+  "human_document": "ROADMAP.zh.md",
+  "milestones": [
+    {
+      "area": "map_scope",
+      "focus": "important information conditions beyond the initial map",
+      "acceptance": "supported inclusion or reasoned exclusion with actual source and prose use"
+    },
+    {
+      "area": "evidence_synthesis",
+      "focus": "consensus, disagreements and conditional method choices",
+      "acceptance": "align object, measurement, information and evaluation; identify evidence that changes choice"
+    },
+    {
+      "area": "human_discussion_and_bridge",
+      "focus": "biological explanation, alternatives, human direction choice, data and first plan",
+      "acceptance": "explain technical motivation and alternatives; retain actual human choice and trace its consumption by data requirements and plan"
+    }
+  ],
+  "evaluation_policy": {
+    "retain_first_versions": true,
+    "separate_acquisition_reading_synthesis_decision": true,
+    "no_fixed_paper_count": true,
+    "do_not_rewrite_historical_scores": true
+  },
+  "scope": {
+    "planning_change_only": true,
+    "new_research_dispatch": false,
+    "new_runtime_requirements": false,
+    "abstract_methodology_efficacy": "not_assessed_by_this_update",
+    "commit_or_push": false
+  }
+}

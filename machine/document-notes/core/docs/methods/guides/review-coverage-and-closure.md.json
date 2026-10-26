@@ -27,15 +27,52 @@
         "machine/history/review-scope-appraisal.json"
       ],
       "previous_document_snapshot": null
+    },
+    {
+      "id": "2026-10-25-D57",
+      "date": "2026-10-25",
+      "reason": "Connect actually read conditions to choice and evaluation; distinguish objective changes, response routes, compound subrelations and source reports.",
+      "new_sources_or_designs": [
+        "D57",
+        "review-learning:R13",
+        "evaluation:R2:S407"
+      ],
+      "technical_records": [
+        "core/machine/design/review-choice-synthesis.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-review-guidance-reassessment/guidance-acceptance-2026-10-25/before-public/core/docs/methods/guides/review-coverage-and-closure.md"
+      },
+      "acceptance_status": "candidate_self_reviewed_awaiting_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58",
+      "date": "2026-10-25",
+      "reason": "Conditionalrelatedoriginalrereading/openperspectives, AF2Complexboundedresynthesis andexistinginterfaceexample.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json"
+      ],
+      "acceptance_status": "candidate_pending_independent_review"
+    },
+    {
+      "id": "2026-10-25-D58-parent-acceptance",
+      "date": "2026-10-25",
+      "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+      "reason": "Independent nine-item bounded content acceptance and actual current-version consumer receipt; historical producer fields preserved.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
     }
   ],
-  "updated_at_utc": "2026-10-23T09:23:42.902226+00:00",
+  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
   "current_identity": {
-    "bytes": 9936,
-    "sha256": "50b752f1a1150de13095dd0a1c6046332c3071d4189bfadefe4f00d4616b7c0c"
+    "bytes": 10729,
+    "sha256": "deaf45dcf098099c99d0df58fad657e802b8833f35c7918149d99ee62d368a4f"
   },
   "current_technical_records": [
-    "core/machine/design/review-scope-appraisal.json",
-    "machine/history/review-scope-appraisal.json"
+    "core/machine/design/rereading-perspectives.json"
   ]
 }

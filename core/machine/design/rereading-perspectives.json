@@ -1,0 +1,153 @@
+{
+  "decision_id": "D58",
+  "date": "2026-10-25",
+  "status": "accepted_guidance_candidate_and_bounded_worked_example",
+  "supplements": [
+    "D53",
+    "D54",
+    "D55",
+    "D56",
+    "D57",
+    "existing_revisor_contract"
+  ],
+  "common_questions": [
+    "purpose determines evaluation",
+    "identify information use and object",
+    "comparison conditions",
+    "diagnose gap and choose response"
+  ],
+  "perspective_entry_points": {
+    "author": "Recover motivation, actual estimand/operation/evidence; do not universalize author scope",
+    "audience": "Can intended reader decide/use correctly with conditional limits?",
+    "current_bioinformatics_task": "Check transferred units/information/deployment/evaluation; switch only when decisionrelevant"
+  },
+  "perspectives_open": "Author/audience/currenttask are entrypoints, not fixedcompletelist. Measurement,dose/toxicity,structure/deployment angles requireactualcontextualmismatch; noidentity/topicwordinference.",
+  "knowledge_boundary": "Promptedknowledge helpsquestions; preciseclaims qualifiedoriginalevidence.",
+  "attention_definition": "Argument attention allocation too narrow relative to stateduse, supported by concrete beforetext and omitteddecisioncondition; distinct from statistical overfitting",
+  "rereading_default": "Encourage assigned agents, after actual deliveryidentity confirmation and packagefreeze, to reread relevant complete originals actually relied upon; body+methods+tables+figures/captions, relevantSIexplicit; not reference recursion or compulsory allperspectives for eachpaper",
+  "workflow": [
+    "Confirm delivery identity/completeness via existing interface; no scientific acceptance implied",
+    "Freeze identified oldpackage and preserveimmutableversions/accesslimits",
+    "Select relevant decisions and perspectives, encourage full original rereading within newiteration authorizedbudget",
+    "Record actualscope and omissions/missinganalysis/attentionallocation/retainedcorrectclaims",
+    "Resynthesize before acquisition/verification; route unresolved source/data/empirical needs separately",
+    "Save newdraft+audits outsideoldpackage; sync newmap/revisor versionlinks; scientificreview separately"
+  ],
+  "source": {
+    "id": "gao-af2complex-2022",
+    "doi": "10.1038/s41467-022-29394-2",
+    "reading_record": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/reading-record.json",
+    "public_consumed_artifact": "Explicitfirstpartynotes, not originalPDF/rawdata"
+  },
+  "example": {
+    "path": "core/examples/research-support/preparation/choice-synthesis-example/rereading/README.md",
+    "native_map": "core/examples/research-support/preparation/choice-synthesis-example/rereading/review-map-v2.json",
+    "report": "core/examples/research-support/preparation/choice-synthesis-example/rereading/report-v2.md",
+    "version": "D58-producer-v2",
+    "old_producer_preserved": true,
+    "known_omission_before_D58": true,
+    "historical_map_and_old_text": "Newreconstructedillustration, not originalnativefirstdelivery",
+    "POST_S02": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/POST-S02-taskcard.json",
+    "POST_F011_F012": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/POST-F011-F012.json",
+    "SI_status": "unread",
+    "matched_budget_or_individual_causal_gain": "not_established"
+  },
+  "implementation": {
+    "runtime_code_changed": false,
+    "new_runtime_schema_or_platform": false,
+    "consumer": "core/scripts/research_support/review_coverage.py",
+    "actual_execution": "Separate Sol Medium consumed initial producer (continue/ready/two rejection controls) and current producer-v2 positive (pass/ready_to_deliver).",
+    "execution_scope": "Both version identities and actual receipts independently reviewed; current 16-file producer remains frozen.",
+    "scientific_acceptance_from_record_check": "not_assessed",
+    "revisor": "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/revisor-record.json",
+    "execution_history": [
+      {
+        "producer": "original producer-v1",
+        "cases": [
+          "v1 continue_targeted exit1",
+          "v2 ready_to_deliver exit0",
+          "missing basis rejected exit2",
+          "essential gap rejected exit2"
+        ],
+        "scientific_acceptance": "not_assessed"
+      },
+      {
+        "producer": "current producer-v2",
+        "case": "positive replay exit0 pass ready_to_deliver",
+        "remaining_branch_ids": [
+          "B04"
+        ],
+        "scientific_acceptance": "not_assessed"
+      }
+    ]
+  },
+  "acceptance_requirements": [
+    {
+      "id": "D58-A01",
+      "requirement": "四类问题指导具体关系，不是每paper百科或固定清单",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A02",
+      "requirement": "三种视角按触发使用，原作者/评图不成为通用义务",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A03",
+      "requirement": "完整原文重读有真实范围，相关SI显式",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A04",
+      "requirement": "冻结/接收与科学接受分开",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A05",
+      "requirement": "完整工作例有source→oldtext→audit→newcontinuousprose→remaining→review",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A06",
+      "requirement": "既有接口实际消费与人工判断分开",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A07",
+      "requirement": "重综合/补读/获取/验证按缺口选择",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A08",
+      "requirement": "过度注意与统计过拟合分开，原成绩/残余保留",
+      "status": "accepted_independent_bounded_content_review"
+    },
+    {
+      "id": "D58-A09",
+      "requirement": "人机文档分工及独立验收后冻结",
+      "status": "accepted_independent_bounded_content_review"
+    }
+  ],
+  "old_scores_and_artifacts_preserved": true,
+  "hidden_access_unlocked": false,
+  "effectiveness_claim": "Maintenancecandidate/realworkedexample only; no controlledcomparison ofrereadingefficiency oraggregate scientificoutcome.",
+  "private_evidence": {
+    "availability": "private_archive",
+    "locator": "machine/reviews/2026-10-rereading-perspectives-iteration/application/"
+  },
+  "acceptance_current": {
+    "accepted_at_utc": "2026-10-25T12:41:42.164835+00:00",
+    "independent_content_requirements_accepted": 9,
+    "blockers": [],
+    "scope": "Guidance and bounded source-grounded resynthesis; no controlled effectiveness outcome",
+    "independent_original_reading": "Selected original passages and figures; producer complete-main-paper declaration and unread SI separately recorded",
+    "parent_identity_verification": {
+      "stopped_candidate": 45,
+      "prior_review_dependencies": 218,
+      "yeast_baseline_files": 31
+    },
+    "producer_internal_pending_fields": "Preserved production-time historical fields; current acceptance is this separate dated record",
+    "publication_integrity_gate": "Separate final maintainer verification; this dated record accepts bounded content, not publication.",
+    "controlled_guidance_effectiveness": "not_assessed"
+  }
+}

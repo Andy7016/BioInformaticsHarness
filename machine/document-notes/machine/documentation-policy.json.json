@@ -1,0 +1,61 @@
+{
+  "schema": "harness.document-notes/v1",
+  "human_path": "machine/documentation-policy.json",
+  "source_text": "{\n  \"schema\": \"harness.documentation-policy/v1\",\n  \"human\": {\n    \"include\": [\n      \"**/*.md\"\n    ],\n    \"exclude\": [\n      \"machine/**\",\n      \"LICENSES/**\",\n      \"core/LICENSES/**\",\n      \"core/examples/verification/**\",\n      \"core/examples/research-support/plan-seal/PLAN.md\",\n      \"AGENTS.md\"\n    ],\n    \"writing\": [\n      \"State purpose, installation, usage, examples, design choices and contribution paths in plain language.\",\n      \"Keep real scientific conditions and observed results; write useful scope positively.\",\n      \"Link file indexes where useful. Move integrity checks, raw identifiers, audit caveats and repetitive defensive claims into structured machine records.\"\n    ],\n    \"forbidden_boilerplate\": [\n      \"不保证\",\n      \"不代表\",\n      \"不能据此\",\n      \"不构成\",\n      \"不等于\",\n      \"不意味着\",\n      \"does not guarantee\",\n      \"does not imply\",\n      \"does not constitute\",\n      \"not a claim\",\n      \"not a certification\"\n    ],\n    \"forbidden_verification_terms\": [\n      \"SHA-256\",\n      \"SHA256\",\n      \"checksum\",\n      \"哈希\",\n      \"校验和\",\n      \"verify_checkpoint.py\",\n      \"verify_release.py\"\n    ],\n    \"forbid_archive_pointer_targets\": true,\n    \"forbid_visible_hex_identifiers\": true,\n    \"forbidden_link_prefixes\": [\n      \"https://github.com/vvcchh0/BioInformaticsHarness-research-archive\",\n      \"https://chatgpt.com/c/\",\n      \"codex://\",\n      \"file://\"\n    ]\n  },\n  \"machine\": {\n    \"root\": \"machine/\",\n    \"preferred_formats\": [\n      \"json\",\n      \"jsonl\"\n    ],\n    \"historical_records\": \"Retain original frozen artifacts under their existing historical scope; new metadata explicitly records source, status and access.\",\n    \"source_index\": \"machine/source-design-index.jsonl\",\n    \"source_index_required\": [\n      \"id\",\n      \"sources\",\n      \"design\",\n      \"borrowing\",\n      \"implementation\",\n      \"acceptance\"\n    ],\n    \"legacy_fixtures\": [\n      \"core/examples/verification/**\",\n      \"core/examples/research-support/plan-seal/PLAN.md\"\n    ],\n    \"agent_entrypoint\": \"AGENTS.md\",\n    \"original_document_retention\": {\n      \"path\": \"machine/document-notes/\",\n      \"schema\": \"harness.document-notes/v1\",\n      \"original_fields\": [\n        \"source_text\",\n        \"source_commit\",\n        \"source_sha256\"\n      ],\n      \"later_revisions\": \"Append dated technical notes or use machine/history; preserve the original-source fields.\"\n    }\n  },\n  \"legal\": {\n    \"preserve_verbatim\": [\n      \"LICENSE\",\n      \"LICENSES/**\",\n      \"NOTICE\",\n      \"core/LICENSE\",\n      \"core/LICENSES/**\",\n      \"core/NOTICE\"\n    ],\n    \"licensing_explanations\": \"State attribution, rights, and practical use in human prose; retain detailed license mappings in machine manifests.\"\n  },\n  \"release\": {\n    \"frozen_tag\": \"v0.1.0-alpha.2\",\n    \"documentation_revision\": \"2026-10-24\",\n    \"new_docs_do_not_rewrite_published_assets\": true\n  },\n  \"new_file_licenses\": {\n    \"machine/document-notes/**\": \"CC-BY-4.0\",\n    \"machine/source-design-index.jsonl\": \"CC-BY-4.0\",\n    \"machine/history/**\": \"CC-BY-4.0\",\n    \"machine/documentation-policy.json\": \"Apache-2.0\",\n    \"machine/schemas/**\": \"Apache-2.0\",\n    \"tools/**\": \"Apache-2.0\",\n    \"tests/**\": \"Apache-2.0\",\n    \"**/*.md\": \"CC-BY-4.0\",\n    \"machine/**\": \"CC-BY-4.0\",\n    \"machine/documentation-operations.json\": \"Apache-2.0\",\n    \"core/scripts/research_support/*.py\": \"Apache-2.0\",\n    \"core/tests/test_task_context.py\": \"Apache-2.0\",\n    \"core/tests/test_resource_loop.py\": \"Apache-2.0\",\n    \"core/machine/design/**\": \"CC-BY-4.0\",\n    \"examples/splice/resource_readiness.py\": \"Apache-2.0\",\n    \"core/scripts/acquisition/**\": \"Apache-2.0\",\n    \"core/config/source-routing.json\": \"Apache-2.0\",\n    \"core/tests/acquisition/**\": \"Apache-2.0\",\n    \"core/machine/tools/**\": \"Apache-2.0\",\n    \"core/examples/research-support/preparation/*.template.json\": \"Apache-2.0\",\n    \"core/examples/research-support/preparation/*.example.json\": \"CC-BY-4.0\",\n    \"core/tests/research_support/test_research_cycle.py\": \"Apache-2.0\",\n    \"core/examples/research-support/research-cycle/*.template.json\": \"Apache-2.0\",\n    \"core/examples/research-support/research-cycle/fixtures/**\": \"Apache-2.0\",\n    \"core/examples/research-support/research-cycle/offline-fixture/*.json\": \"Apache-2.0\",\n    \"core/tests/research_support/test_review_coverage.py\": \"Apache-2.0\",\n    \"core/examples/research-support/preparation/coverage-example/*.json\": \"Apache-2.0\",\n    \"core/examples/research-support/preparation/coverage-example/*.txt\": \"Apache-2.0\"\n  },\n  \"license_scope_updates\": [\n    {\n      \"date\": \"2026-10-22\",\n      \"reason\": \"D51/D52 add first-party task/control code, tests, machine design documentation and a resource-readiness consumer; preserve existing project code and documentation licenses.\",\n      \"scopes\": {\n        \"core/scripts/research_support/*.py\": \"Apache-2.0\",\n        \"core/tests/test_task_context.py\": \"Apache-2.0\",\n        \"core/tests/test_resource_loop.py\": \"Apache-2.0\",\n        \"core/machine/design/**\": \"CC-BY-4.0\",\n        \"examples/splice/resource_readiness.py\": \"Apache-2.0\"\n      }\n    },\n    {\n      \"date\": \"2026-10-22\",\n      \"reason\": \"D53 first-party acquisition transport and editable machine record templates, narrative plan/review documentation kept under CC BY 4.0.\",\n      \"scopes\": {\n        \"core/scripts/acquisition/**\": \"Apache-2.0\",\n        \"core/config/source-routing.json\": \"Apache-2.0\",\n        \"core/tests/acquisition/**\": \"Apache-2.0\",\n        \"core/machine/tools/**\": \"Apache-2.0\",\n        \"core/examples/research-support/preparation/*.template.json\": \"Apache-2.0\",\n        \"core/examples/research-support/preparation/*.example.json\": \"CC-BY-4.0\"\n      }\n    },\n    {\n      \"date\": \"2026-10-22\",\n      \"reason\": \"D54 adds first-party cycle/discussion machine templates, a native readiness checker and fictional offline test fixtures. Human guidance and design narrative remain CC BY 4.0.\",\n      \"scopes\": {\n        \"core/tests/research_support/test_research_cycle.py\": \"Apache-2.0\",\n        \"core/examples/research-support/research-cycle/*.template.json\": \"Apache-2.0\",\n        \"core/examples/research-support/research-cycle/fixtures/**\": \"Apache-2.0\",\n        \"core/examples/research-support/research-cycle/offline-fixture/*.json\": \"Apache-2.0\"\n      }\n    },\n    {\n      \"date\": \"2026-10-23\",\n      \"reason\": \"D55 adds first-party optional coverage checker, record template and explicitly fictional example inputs; no external paper bodies or third-party rows redistributed.\",\n      \"scopes\": {\n        \"core/tests/research_support/test_review_coverage.py\": \"Apache-2.0\",\n        \"core/examples/research-support/preparation/coverage-example/*.json\": \"Apache-2.0\",\n        \"core/examples/research-support/preparation/coverage-example/*.txt\": \"Apache-2.0\"\n      }\n    }\n  ]\n}\n",
+  "source_commit": null,
+  "source_sha256": "b9c75ecff1f88400c6676b650a80bb20df9a15ffbbd3a32fe8df158e89694b74",
+  "source_license": "Apache-2.0",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-25-D58-license-scope",
+      "date": "2026-10-25",
+      "reason": "Add exact D58 first-party scientific-record JSON scopes under established CC-BY-4.0 narrative policy; preserve unrelated scopes and legal texts.",
+      "technical_records": [
+        "core/machine/design/rereading-perspectives.json"
+      ],
+      "acceptance_status": "license_scope_mapping_registered"
+    },
+    {
+      "id": "2026-10-25-D59",
+      "date": "2026-10-25",
+      "reason": "Connect biological object,feature generation,label evidence and bounded candidate use;retain prior correct distinctions,source fields and negative result.",
+      "new_sources_or_designs": [
+        "D59",
+        "horton-nakai-1996",
+        "UCI110",
+        "Harness-VAC-prior-result"
+      ],
+      "technical_records": [
+        "core/machine/design/biological-argument.json",
+        "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/reading-record.json"
+      ],
+      "previous_document_snapshot": {
+        "availability": "private_archive",
+        "locator": "machine/reviews/2026-10-biological-argument-rereading/application/before/machine/documentation-policy.json"
+      },
+      "acceptance_status": "candidate_pending_independent_content_and_native_consumer_review",
+      "current_identity": {
+        "bytes": 8079,
+        "sha256": "f263c862ea67c076ae9c014ed7a0c8e58c779e39a29221f77bf44cd24d03cf49"
+      }
+    },
+    {
+      "id": "2026-10-25-D59-parent-acceptance",
+      "date": "2026-10-25",
+      "reason": "Independent D59 guidance and bounded v2 case accepted after source-role correction; actual current native consumption passed; three-case delivery/use is the next separate gate.",
+      "technical_records": [
+        "core/machine/design/biological-argument.json"
+      ],
+      "acceptance_status": "accepted_bounded_content_v2",
+      "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    }
+  ],
+  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "current_identity": {
+    "bytes": 8079,
+    "sha256": "f263c862ea67c076ae9c014ed7a0c8e58c779e39a29221f77bf44cd24d03cf49"
+  },
+  "current_technical_records": [
+    "core/machine/design/biological-argument.json"
+  ]
+}

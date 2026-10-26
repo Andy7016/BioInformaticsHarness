@@ -33,6 +33,22 @@
         "machine/history/research-guidance-cycle.json"
       ],
       "acceptance": "Parent interface and documentation acceptance recorded in the linked machine history; actual new scientific direction remains to be discussed."
+    },
+    {
+      "at_utc": "2026-10-26T23:55:03.663728+00:00",
+      "reason": "Publish accepted rereading guidance and latest bounded case results.",
+      "prior_identity": {
+        "bytes": 3191,
+        "sha256": "3bf06598287eaaecc5528dc3c6a6d006177c33757b18774d91310b6c5d26274a"
+      },
+      "technical_records": [
+        "machine/research/rereading-validation-2026-10-27.json"
+      ]
     }
-  ]
+  ],
+  "current_identity": {
+    "bytes": 3461,
+    "sha256": "38243a192336c0f915b8058b3aa49844cc83703c75c5235b590457a1f9e897c2"
+  },
+  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00"
 }

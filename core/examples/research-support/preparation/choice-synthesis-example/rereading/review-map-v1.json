@@ -1,0 +1,103 @@
+{
+  "schema": "research-support.review-map.v1",
+  "preparation_id": "af2complex-cp17-rereading",
+  "version": "D58-map-v1-reconstructed",
+  "previous_map_ref": null,
+  "change_reason": "Retrospectivefirstpartyillustration ofoldv2relations, notoriginalsubmittedmap.",
+  "purpose": {
+    "kind": "decision_support",
+    "objective": "解释CP17两种对象、预算、选优与评价，保留更宽比较未知。",
+    "audience": "Choosingstructuremodeling orcandidatepairranking."
+  },
+  "source_ledger_ref": "source-ledger.json",
+  "evidence_map_ref": "evidence-map-v1.json",
+  "report_ref": "report-v1.md",
+  "branches": [
+    {
+      "branch_id": "B01",
+      "question": "当前需要结构假设还是蛋白对排序，怎样选择评价？",
+      "why_it_matters": "Changesinterpretation ornextuse in boundedCP17explanation.",
+      "essential_for_purpose": true,
+      "coverage_state": "synthesized",
+      "source_ids": [
+        "S-NOTES"
+      ],
+      "finding_ids": [
+        "F010"
+      ],
+      "synthesis_locator": {
+        "excerpt": "结构质量和发生关系各有其评价对象"
+      },
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B02",
+      "question": "给定组分的结构质量结果采用什么生成预算和选优？",
+      "why_it_matters": "Changesinterpretation ornextuse in boundedCP17explanation.",
+      "essential_for_purpose": true,
+      "coverage_state": "read_not_synthesized",
+      "source_ids": [
+        "S-NOTES"
+      ],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B03",
+      "question": "候选蛋白对筛选采用什么运行和标签？",
+      "why_it_matters": "Changesinterpretation ornextuse in boundedCP17explanation.",
+      "essential_for_purpose": true,
+      "coverage_state": "read_not_synthesized",
+      "source_ids": [
+        "S-NOTES"
+      ],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    },
+    {
+      "branch_id": "B04",
+      "question": "SI与各方法预算匹配/独立因素增益能否支持更宽比较？",
+      "why_it_matters": "Broaderempiricalclaims outside currentexplanation.",
+      "essential_for_purpose": false,
+      "coverage_state": "source_unavailable",
+      "source_ids": [],
+      "finding_ids": [],
+      "synthesis_locator": null,
+      "exclusion_reason": ""
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "A-REREAD",
+      "branch_ids": [
+        "B02",
+        "B03"
+      ],
+      "route": "synthesize_existing",
+      "owner": "application_sol_max",
+      "reason": "Knownomission; rereadqualifiedoriginal andintegratereportedbudgets, preservegoodarguments.",
+      "expected_decision_change": "Readerdistinguishes posegenerationbudget frompairscreenrun andselectsevaluation forpurpose.",
+      "budget": {
+        "max_minutes": 120,
+        "max_sources": 0
+      },
+      "status": "planned",
+      "result_refs": [],
+      "result_summary": "",
+      "observation": null
+    }
+  ],
+  "decision": {
+    "action": "continue_targeted",
+    "reason": "Reconstructedoldview lacksnearbynumericbudgets; resynthesisplanned.",
+    "remaining_branch_ids": [
+      "B02",
+      "B03",
+      "B04"
+    ],
+    "next_owner": "application_sol_max",
+    "next_action": "Rereadqualifiedoriginal andintegratebudgetrelations."
+  }
+}

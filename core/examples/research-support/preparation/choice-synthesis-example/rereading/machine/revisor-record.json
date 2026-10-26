@@ -1,0 +1,75 @@
+{
+  "concern": "CP17generation/selectionbudget notnearreportednumbers inhistoricalv2",
+  "required_scope": "selected_route_only:boundedprotocol/objectexplanation",
+  "guidance_version": "D58candidate",
+  "response_groups": [
+    {
+      "alternatives": [
+        {
+          "id": "explain",
+          "route": "explain",
+          "request_ids": [
+            "CP17-budget"
+          ],
+          "conditions": "Qualifiedoriginalmaintext/oldprose available"
+        },
+        {
+          "id": "reanalyze",
+          "route": "reanalyze",
+          "request_ids": [
+            "CP17-budget"
+          ],
+          "conditions": "Newmatchedbudget empiricalcomparison needs design/resources"
+        }
+      ],
+      "selected_alternative": "explain"
+    }
+  ],
+  "five_dimensions": {
+    "procedure": "Confirmoldpackage→rereadrelatedcompleteoriginal→auditomission/analysis/attentioncounterevidence→continuousdraft",
+    "input_use": [
+      {
+        "input": "originalVOR",
+        "use": "Authorobject/budget/selection/evaluationfacts; source-basis explicitlyfirstpartynotes"
+      },
+      {
+        "input": "historicalv2/v2.2",
+        "use": "Knownmissingrelation andretainedcorrectarguments; identities indelivery-record"
+      }
+    ],
+    "next_action": "Independentlyreadp4/p11 andconfigurationp2/p10 againstreport-v2.md",
+    "output": [
+      "../report-v2.md",
+      "../audit.md",
+      "POST-S02-taskcard.json",
+      "POST-F011-F012.json",
+      "../review-map-v2.json"
+    ],
+    "acceptance": "Record/fileconsumption separate fromindependentscientificjudgment; SIandempiricalmatchedcomparison remainunassessed"
+  },
+  "acceptance_checks": [
+    {
+      "scope": "record_contract",
+      "status": "unknown",
+      "reason": "Actualconsumer pendingseparateMedium"
+    },
+    {
+      "scope": "artifact_or_runtime",
+      "status": "pass",
+      "reason": "Oldpackageexactidentities actuallyrevalidated before reading, nooldACKwrite"
+    },
+    {
+      "scope": "scientific",
+      "status": "unknown",
+      "reason": "Independentreviewpending, authornumbersnotrerun"
+    }
+  ],
+  "unresolved": [
+    "SI/detailedlargebenchmarkunread",
+    "Equalcomputebudget/individualfactorcausality untested",
+    "Broadreview/oldscoreunchanged"
+  ],
+  "historical_score_change": 0,
+  "producer_version": "D58-producer-v2",
+  "parent_clarification": "Experimentalcoordinates are reference forDockQevaluation, not requiredpredictioninput; oldproducer snapshotretained."
+}

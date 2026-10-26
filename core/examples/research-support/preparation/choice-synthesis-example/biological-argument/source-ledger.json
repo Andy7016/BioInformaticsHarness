@@ -1,0 +1,170 @@
+{
+  "schema": "harness.research-preparation-source-ledger/v1",
+  "preparation_id": "yeast-biological-argument",
+  "search_runs": [],
+  "sources": [
+    {
+      "source_id": "S-PAPER-NOTES",
+      "work_id": "Horton-Nakai1996-UCI110",
+      "version_family_id": "Horton-Nakai1996-UCI110",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "Notes on original Yeast localization task and UCI dictionary",
+        "venue_or_repository": "First-party source notes",
+        "year": "2026",
+        "doi_or_identifier": "Horton-Nakai1996-UCI110",
+        "url": "https://cdn.aaai.org/ISMB/1996/ISMB96-012.pdf",
+        "version_or_release": "D59-producer-v2",
+        "published_or_updated_on": "2026-10-25"
+      },
+      "relation_to_work": "Explicit paraphrase of1996original/UCI; full original reading separately recorded.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Source-linked notes for bounded explanation."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "First-party narrative CC BY4.0; no original paper bodies, figures or third-party rows redistributed.",
+        "artifact_path": "source-basis.md",
+        "receipt_path": "reading-record.json"
+      },
+      "reading": {
+        "status": "main_text_read",
+        "parts_read": [
+          {
+            "section": "历史任务、表示与标签",
+            "paragraphs": "1-3: historical paper and UCI dictionary facts"
+          },
+          {
+            "section": "原结果的评价条件",
+            "paragraph": "1: 1996 Tables3-4,1368-sequence set and POX discussion"
+          },
+          {
+            "section": "原结果的评价条件",
+            "paragraph": "2: dictionary EXC37 and original Table3 EXC35 only; modern census separately attributed"
+          }
+        ],
+        "locator_notes": "Precise support locations within already-read first-party notes. Actual original-reading scope is unchanged; this correction claims no additional reading."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "Horton-Nakai1996-UCI110",
+        "shared_dataset_or_cohort": "Named historical archive or CP17 report",
+        "independence_note": "Original,extraction,reviews and current notes are related evidence; no independent biological sample added."
+      }
+    },
+    {
+      "source_id": "S-ARCHIVE-NOTES",
+      "work_id": "Harness-Yeast-VAC-accepted-followup",
+      "version_family_id": "Harness-Yeast-VAC-accepted-followup",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "Summary of accepted fixed-archive VAC ranking and label-use correction",
+        "venue_or_repository": "First-party source notes",
+        "year": "2026",
+        "doi_or_identifier": "Harness-Yeast-VAC-accepted-followup",
+        "url": "",
+        "version_or_release": "D59-producer-v2",
+        "published_or_updated_on": "2026-10-25"
+      },
+      "relation_to_work": "Prior accepted outputs held in private archive; no D59 new scores/training/numerical replay.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Source-linked notes for bounded explanation."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "First-party narrative CC BY4.0; no original paper bodies, figures or third-party rows redistributed.",
+        "artifact_path": "source-basis.md",
+        "receipt_path": "reading-record.json"
+      },
+      "reading": {
+        "status": "main_text_read",
+        "parts_read": [
+          {
+            "section": "Harness 历史计算案例的导出摘要",
+            "paragraphs": "Modern workflow,label-use correction and fixed-budget results"
+          },
+          {
+            "section": "原结果的评价条件",
+            "paragraph": "2: prior modern census including1484rows,1462IDs and1453complete vectors"
+          }
+        ],
+        "locator_notes": "Precise support locations within already-read first-party notes. Actual original-reading scope is unchanged; this correction claims no additional reading."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "Harness-Yeast-VAC-accepted-followup",
+        "shared_dataset_or_cohort": "Named historical archive or CP17 report",
+        "independence_note": "Original,extraction,reviews and current notes are related evidence; no independent biological sample added."
+      }
+    },
+    {
+      "source_id": "S-AF2-NOTES",
+      "work_id": "Gao-AF2Complex2022-D58",
+      "version_family_id": "Gao-AF2Complex2022-D58",
+      "kind": "other",
+      "bibliography": {
+        "authors": [
+          "BioInformaticsHarness contributors"
+        ],
+        "title": "Note on accepted AF2Complex object/evaluation contrast",
+        "venue_or_repository": "First-party source notes",
+        "year": "2026",
+        "doi_or_identifier": "Gao-AF2Complex2022-D58",
+        "url": "https://doi.org/10.1038/s41467-022-29394-2",
+        "version_or_release": "D59-producer-v2",
+        "published_or_updated_on": "2026-10-25"
+      },
+      "relation_to_work": "Reuses accepted D58 public report/notes; no new D59 full original rereading.",
+      "found_by_search_ids": [],
+      "selection": {
+        "status": "included",
+        "reason": "Source-linked notes for bounded explanation."
+      },
+      "acquisition": {
+        "status": "retrieved",
+        "license_or_access_terms": "First-party narrative CC BY4.0; no original paper bodies, figures or third-party rows redistributed.",
+        "artifact_path": "source-basis.md",
+        "receipt_path": "reading-record.json"
+      },
+      "reading": {
+        "status": "main_text_read",
+        "parts_read": [
+          {
+            "section": "对照与本轮实际阅读",
+            "paragraph": "1: contrast through accepted D58 source-basis/report"
+          }
+        ],
+        "locator_notes": "Precise support locations within already-read first-party notes. Actual original-reading scope is unchanged; this correction claims no additional reading."
+      },
+      "evidence_relationship": {
+        "same_work_or_version_family": "Gao-AF2Complex2022-D58",
+        "shared_dataset_or_cohort": "Named historical archive or CP17 report",
+        "independence_note": "Original,extraction,reviews and current notes are related evidence; no independent biological sample added."
+      }
+    }
+  ],
+  "coverage_snapshot": {
+    "fixed_on": "2026-10-25",
+    "scope_version": "D59-producer-v2",
+    "included_source_ids": [
+      "S-PAPER-NOTES",
+      "S-ARCHIVE-NOTES",
+      "S-AF2-NOTES"
+    ],
+    "excluded_source_ids": [],
+    "unavailable_or_unread_source_ids": [],
+    "remaining_gaps": [
+      "Exact upstream generation/training members and1368sequence list/settings not obtained.",
+      "Independent localization,sequence-family transfer and actual capacity/cost remain for selected new use.",
+      "Short AF2 contrast reuses D58; no new D59 original/SI reread."
+    ]
+  }
+}

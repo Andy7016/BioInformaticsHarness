@@ -1,0 +1,118 @@
+{
+  "schema": "harness.public-rereading-validation/v1",
+  "date": "2026-10-27",
+  "status": "bounded_methodological_synthesis_accepted",
+  "human_summary": "docs/research/rereading-validation-2026-10-27.zh.md",
+  "old_three": {
+    "relations": 33,
+    "facets": 118,
+    "direct_or_explicit_synthesis": 112,
+    "reasoned_equivalent": 6,
+    "historical_first_scores_preserved": true
+  },
+  "n4": {
+    "relations": 9,
+    "facets": 36,
+    "adequate": 35,
+    "reasoned_equivalent": 1,
+    "per_method_responses": 108,
+    "denominator_not_multiplied_by_methods": true,
+    "accepted_revision": "v2",
+    "new_performance_experiment": false
+  },
+  "n5": {
+    "facets": 24,
+    "independent_adequate": 20,
+    "independent_partial": 4,
+    "main_review_points": 45,
+    "first_inventory_points": 39,
+    "mandatory_revisions": 0,
+    "accepted_revision": "v1",
+    "primary_points_represented": 22,
+    "primary_points_outside_with_reason": 5,
+    "Bergen2020_full_and_SI": "unavailable_after_bounded_public_routes"
+  },
+  "n6": {
+    "facets": 24,
+    "historical_self_counts": {
+      "adequate": 18,
+      "partial": 6
+    },
+    "independent_points": 36,
+    "first_points": 48,
+    "semantic_mapping": "bidirectional_complete",
+    "prior_disposition": {
+      "correct_keep": 20,
+      "bounded_revision_required": 4,
+      "is_adequacy_score": false
+    },
+    "revision_requests": 3,
+    "mandatory_atomic_edits": 4,
+    "optional_adopted": 1,
+    "all_confirmed": true,
+    "full24_adequacy": "not_regraded; six original partial source/implementation limits retained",
+    "accepted_revision": "v2",
+    "finding_provenance": [
+      "Two specific parent questions after independent source-map freeze",
+      "One independent comparison-stage ALR scope finding",
+      "M15 counterexample already in first delivery; not counted as new discovery"
+    ]
+  },
+  "source_first_protocol": {
+    "new_cases": "Independent source map fixed before first-delivery science opened; revision separately confirmed.",
+    "statistical_or_pretraining_blindness": false,
+    "guidance_causal_effect_estimated": false
+  },
+  "guidance": {
+    "designs": [
+      "D57",
+      "D58",
+      "D59"
+    ],
+    "version_used": "biological-handoff-v1.2",
+    "complete_frozen_package_files": 463,
+    "theory_executor": "GPT-6.1 Sol medium",
+    "application_scientific_review": "GPT-6.1 Sol max",
+    "Luna_dispatched": false,
+    "new_prompt_suggestions": "Variable layers and representation/operation/reporting scope; not separately effectiveness-tested."
+  },
+  "private_evidence": [
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-biological-argument-rereading/parent/comprehensive-gate-acceptance.json",
+      "bytes": 5825,
+      "sha256": "7ca501602075e285344c2849502f322c171b160e5f95682d8f666db3f987ed68"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-biological-argument-rereading/expansion/n4-spatial-mapping/parent/methodological-acceptance.json",
+      "bytes": 8127,
+      "sha256": "988fcb6a91019c51fa73a2278e8c6fcbfd1c8b1f27c7a9965d2947229856cd05"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-two-new-review-cases-20261026/parent/n5-methodological-acceptance.json",
+      "bytes": 2286,
+      "sha256": "870447311c47e3633e8843f3f775ceb685a9f296e7fc4ab49496c21962b38d9a"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-two-new-review-cases-20261026/parent/n6-methodological-acceptance.json",
+      "bytes": 4049,
+      "sha256": "a21bd87980d0339b4a9434921a5a69bf1b8eb17af2237e971f53f7d0a1a70b21"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-two-new-review-cases-20261026/parent/final-audit.json",
+      "bytes": 13812,
+      "sha256": "e3ccd72e53b12e74ca3be39b9e7a004a6934a2e46e282c4c286dd45acb3415d6"
+    }
+  ],
+  "publication": {
+    "first_party_prose_and_structured_summaries_only": true,
+    "paper_bodies_or_figures_or_third_party_data_redistributed": false,
+    "frozen_guidance_and_scientific_originals_unchanged": true,
+    "human_scientific_acceptance": "not_recorded",
+    "new_training_benchmark_or_wet_experiment": false
+  }
+}
