@@ -2615,28 +2615,33 @@
       }
     },
     {
-      "bytes": 7013,
+      "bytes": 7678,
       "license": "CC-BY-4.0",
       "path": "docs/methods/guides/receiving-research-work.md",
       "role": "normative-prose",
-      "sha256": "a4a1b66cf942469965523bf6a012d86951c68e85f06c8a5a19a02b01e6ac8c5e",
+      "sha256": "f6f2adce3b84f3c6ca1eb9ab2d871800a6a5dd958be6e86fb44926d68b42e668",
       "source": "docs/methods/guides/receiving-research-work.md",
       "source_sha256": "5619c283fd7c81746da6a0e333679af4d8932f65efaadfb86b58133fce154c38",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
           "revision": "2026-10-22",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 4,
-            "links_rewritten_to_package": 4,
-            "local_redactions": []
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 4,
+              "links_rewritten_to_package": 4,
+              "local_redactions": []
+            }
           }
         }
       },
@@ -2650,13 +2655,18 @@
         "transform_details": {
           "revision": "2026-10-22",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 4,
-            "links_rewritten_to_package": 4,
-            "local_redactions": []
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 4,
+              "links_rewritten_to_package": 4,
+              "local_redactions": []
+            }
           }
         }
       }
@@ -2735,16 +2745,33 @@
     },
     {
       "path": "docs/methods/guides/resource-gap-loop.md",
-      "bytes": 2460,
-      "sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0",
+      "bytes": 2842,
+      "sha256": "539e7048c3d971151e93a873ae2304273cbf95c7f71d215dece1d4328155e312",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/resource-gap-loop.md",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "docs/methods/guides/resource-gap-loop.md",
+        "sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0",
+        "source": "first-party-documentation-revision:docs/methods/guides/resource-gap-loop.md",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -3060,8 +3087,8 @@
     },
     {
       "path": "docs/methods/guides/task-continuity.md",
-      "bytes": 3378,
-      "sha256": "5bd9526b2b94f0aa2b33a36a5ac9ac6d7cb871b6fdebf203fb0ce3e47b6168b0",
+      "bytes": 4966,
+      "sha256": "7bef4e701e1454420f2449d0ae6c0deea3a5dac0f6cff60074af54dc73726814",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/task-continuity.md",
@@ -3072,8 +3099,13 @@
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
-          "revision": "2026-10-22",
-          "baseline_revision": "764bd88"
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "first-party-documentation-revision",
+          "previous_details": {
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88"
+          }
         }
       },
       "previous": {
@@ -3084,8 +3116,13 @@
         "transform": "first-party-documentation-revision",
         "source_sha256": null,
         "transform_details": {
-          "revision": "2026-10-22",
-          "baseline_revision": "764bd88"
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "first-party-documentation-revision",
+          "previous_details": {
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88"
+          }
         }
       }
     },
@@ -3211,20 +3248,20 @@
       }
     },
     {
-      "bytes": 9288,
+      "bytes": 9742,
       "license": "CC-BY-4.0",
       "path": "docs/methods/research-support-tools.md",
       "role": "normative-prose",
-      "sha256": "3a03aa5a6982e4c18b34816a688976b2e823f92735c86ac44d1d113e046a62ab",
+      "sha256": "48c3527c5ac774581e4597d39672ccc222b7325362e89d738a059cc1c087ab52",
       "source": "docs/methods/research-support-tools.md",
       "source_sha256": "39e5982312101656a16af629a192165a611e998d2d26c9100061ac0db6ac6b18",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-23",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
-          "revision": "2026-10-22",
+          "revision": "2026-10-23",
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
@@ -3234,13 +3271,18 @@
             "previous_details": {
               "revision": "2026-10-22",
               "baseline_revision": "764bd88",
-              "previous_transform": "markdown-links-and-local-redaction",
+              "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "changed": true,
-                "images_converted_to_ordinary_links": 0,
-                "links_redirected_to_archive_pointers": 10,
-                "links_rewritten_to_package": 7,
-                "local_redactions": []
+                "revision": "2026-10-22",
+                "baseline_revision": "764bd88",
+                "previous_transform": "markdown-links-and-local-redaction",
+                "previous_details": {
+                  "changed": true,
+                  "images_converted_to_ordinary_links": 0,
+                  "links_redirected_to_archive_pointers": 10,
+                  "links_rewritten_to_package": 7,
+                  "local_redactions": []
+                }
               }
             }
           }
@@ -3254,7 +3296,7 @@
         "transform": "markdown-links-and-local-redaction",
         "source_sha256": "39e5982312101656a16af629a192165a611e998d2d26c9100061ac0db6ac6b18",
         "transform_details": {
-          "revision": "2026-10-22",
+          "revision": "2026-10-23",
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
@@ -3264,13 +3306,18 @@
             "previous_details": {
               "revision": "2026-10-22",
               "baseline_revision": "764bd88",
-              "previous_transform": "markdown-links-and-local-redaction",
+              "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "changed": true,
-                "images_converted_to_ordinary_links": 0,
-                "links_redirected_to_archive_pointers": 10,
-                "links_rewritten_to_package": 7,
-                "local_redactions": []
+                "revision": "2026-10-22",
+                "baseline_revision": "764bd88",
+                "previous_transform": "markdown-links-and-local-redaction",
+                "previous_details": {
+                  "changed": true,
+                  "images_converted_to_ordinary_links": 0,
+                  "links_redirected_to_archive_pointers": 10,
+                  "links_rewritten_to_package": 7,
+                  "local_redactions": []
+                }
               }
             }
           }
@@ -5630,16 +5677,33 @@
     },
     {
       "path": "machine/design/task-continuity.json",
-      "bytes": 9522,
-      "sha256": "975a95d461616e4fe02d8acefed51f2aebacda4f145e5ad6c8bf6d83594278eb",
+      "bytes": 9866,
+      "sha256": "25432dc93eecf6b5545616b42c65b2b6420b1157df953b3009c38b7940d2f886",
       "license": "CC-BY-4.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:machine/design/task-continuity.json",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/design/task-continuity.json",
+        "sha256": "975a95d461616e4fe02d8acefed51f2aebacda4f145e5ad6c8bf6d83594278eb",
+        "source": "first-party-documentation-revision:machine/design/task-continuity.json",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -5797,15 +5861,29 @@
       "transform_details": {}
     },
     {
-      "bytes": 40563,
+      "bytes": 41960,
       "license": "Apache-2.0",
       "path": "scripts/research_support/evidence.py",
       "role": "code",
-      "sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+      "sha256": "85fd05f2311d1d4f592add270b31790767ff136e477e9ce657191bef26dacc18",
       "source": "scripts/research_support/evidence.py",
       "source_sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/evidence.py",
+        "sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+        "source": "scripts/research_support/evidence.py",
+        "transform": "verbatim",
+        "source_sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 17757,
@@ -5819,15 +5897,29 @@
       "transform_details": {}
     },
     {
-      "bytes": 29901,
+      "bytes": 30899,
       "license": "Apache-2.0",
       "path": "scripts/research_support/handoff.py",
       "role": "code",
-      "sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+      "sha256": "73d61861dfd55cd05688f0621c0da7d8d82ff4240f6f7227cd8d38e8b33b392d",
       "source": "scripts/research_support/handoff.py",
       "source_sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/handoff.py",
+        "sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+        "source": "scripts/research_support/handoff.py",
+        "transform": "verbatim",
+        "source_sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 30436,
@@ -5911,19 +6003,24 @@
       }
     },
     {
-      "bytes": 21574,
+      "bytes": 39691,
       "license": "Apache-2.0",
       "path": "scripts/research_support/run_bounded.py",
       "role": "code",
-      "sha256": "a0246bc3e285f8ea49fabd9aaefc4de65a04c76712bf423cf100e9302b11e2af",
+      "sha256": "49f3ecc87988b75e46a4110bbe433a1310d589d02ed32aaad3b21eaa3282a62d",
       "source": "scripts/research_support/run_bounded.py",
       "source_sha256": "fe8729458c65f293ccfdfec3435115790b09efe705e094fd0a85dfdebbed682c",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
-        "previous_transform": "verbatim",
-        "previous_details": {}
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       },
       "previous": {
         "revision": "764bd88",
@@ -5932,7 +6029,12 @@
         "source": "scripts/research_support/run_bounded.py",
         "transform": "verbatim",
         "source_sha256": "fe8729458c65f293ccfdfec3435115790b09efe705e094fd0a85dfdebbed682c",
-        "transform_details": {}
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       }
     },
     {
@@ -5948,16 +6050,33 @@
     },
     {
       "path": "scripts/research_support/task_context.py",
-      "bytes": 29461,
-      "sha256": "e99543e449c9cfcbc4458ca25249d00e559c2f9643a044e862bdaadb0f162c92",
+      "bytes": 30497,
+      "sha256": "d023090b2ba315b40e9458b49819da5643fb853582dd23c9031bddc5c0ac729e",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:scripts/research_support/task_context.py",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/task_context.py",
+        "sha256": "e99543e449c9cfcbc4458ca25249d00e559c2f9643a044e862bdaadb0f162c92",
+        "source": "first-party-documentation-revision:scripts/research_support/task_context.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6085,26 +6204,54 @@
       "transform_details": {}
     },
     {
-      "bytes": 17040,
+      "bytes": 20751,
       "license": "Apache-2.0",
       "path": "tests/research_support/test_evidence.py",
       "role": "test",
-      "sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+      "sha256": "65f1c77d0f0ea01553a3b42fc7da7ea30fe93073d6729cc9b898bf454fb709d5",
       "source": "tests/research_support/test_evidence.py",
       "source_sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/research_support/test_evidence.py",
+        "sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+        "source": "tests/research_support/test_evidence.py",
+        "transform": "verbatim",
+        "source_sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+        "transform_details": {}
+      }
     },
     {
-      "bytes": 12738,
+      "bytes": 15962,
       "license": "Apache-2.0",
       "path": "tests/research_support/test_handoff.py",
       "role": "test",
-      "sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+      "sha256": "e92fa874ab1fc39d2bd9502b777d9f2454722ad83329f6d079a278ff14837816",
       "source": "tests/research_support/test_handoff.py",
       "source_sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/research_support/test_handoff.py",
+        "sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+        "source": "tests/research_support/test_handoff.py",
+        "transform": "verbatim",
+        "source_sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 10480,
@@ -6221,17 +6368,48 @@
       }
     },
     {
+      "path": "tests/test_run_recovery.py",
+      "bytes": 22352,
+      "sha256": "9551c400fb5f5194c2e4bc59efef3eaeb83c34f5765128d07d4bd870cb9e00cc",
+      "license": "Apache-2.0",
+      "role": "documentation-tooling",
+      "source": "first-party-documentation-revision:tests/test_run_recovery.py",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
+      }
+    },
+    {
       "path": "tests/test_task_context.py",
-      "bytes": 23116,
-      "sha256": "0c728c5be7b9ff09c6907b797e506c9c7170a7c3acb3d0c6538df70a7a8a3e10",
+      "bytes": 24968,
+      "sha256": "d6385fbb957a8f4d735a2d3042e5602bf57a8e8059a729a6eff307f0d64fe0b3",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:tests/test_task_context.py",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/test_task_context.py",
+        "sha256": "0c728c5be7b9ff09c6907b797e506c9c7170a7c3acb3d0c6538df70a7a8a3e10",
+        "source": "first-party-documentation-revision:tests/test_task_context.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6339,7 +6517,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "c496def358b771325db0e0ace721565098f1f2ed",
+    "head": "f809d63be172b7a89c19bfbc9e82c316a10ba20e",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

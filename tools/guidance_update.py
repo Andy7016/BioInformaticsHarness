@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 from pathlib import Path, PurePosixPath
 import re
@@ -76,35 +77,43 @@ def _identity(entry):
     return {'bytes': n, 'sha256': h}
 
 
-def _git(root, *args):
-    result = subprocess.run(['git', '--no-optional-locks', '-c', f'safe.directory={root}',
-                             '-c', 'core.fsmonitor=false', '-C', str(root), *args],
-                            capture_output=True, timeout=30)
-    _assert(result.returncode == 0, 'local Git metadata query failed')
+def _git(root, *args, timeout_seconds=30):
+    try:
+        result = subprocess.run(['git', '--no-optional-locks', '-c', f'safe.directory={root}',
+                                 '-c', 'core.fsmonitor=false', '-C', str(root), *args],
+                                capture_output=True, timeout=timeout_seconds)
+    except subprocess.TimeoutExpired as exc:
+        raise SupportError('local Git metadata query timed out; source identity remains unresolved', 'unknown') from exc
+    except OSError as exc:
+        raise SupportError(f'local Git query could not start: {type(exc).__name__}', 'unknown') from exc
+    if result.returncode:
+        raise SupportError('local Git metadata query failed; source identity remains unresolved', 'unknown')
     return result.stdout
 
 
-def _source(root, legacy):
+def _source(root, legacy, git_timeout_seconds=30):
+    def query(*args):
+        return _git(root, *args, timeout_seconds=git_timeout_seconds)
     if legacy or not (root / '.git').exists():
         return {'expected_repository': REPOSITORY, 'repository': None,
                 'kind': 'legacy_snapshot' if legacy else 'gitless_snapshot',
                 'git_available': False, 'commit': None, 'dirty': None, 'exact_commit': False}
-    top = Path(os.fsdecode(_git(root, 'rev-parse', '--show-toplevel').strip())).resolve()
+    top = Path(os.fsdecode(query('rev-parse', '--show-toplevel').strip())).resolve()
     _assert(top == root.resolve(), 'Git root differs from payload root')
-    status = _git(root, 'status', '--porcelain=v1', '-z', '--untracked-files=all')
-    urls = [_git(root, 'remote', 'get-url', '--', name).decode().strip()
-            for name in _git(root, 'remote').decode().splitlines()]
+    status = query('status', '--porcelain=v1', '-z', '--untracked-files=all')
+    urls = [query('remote', 'get-url', '--', name).decode().strip()
+            for name in query('remote').decode().splitlines()]
     def matches(url):
         url = url.rstrip('/')
         if url.endswith('.git'):
             url = url[:-4]
         return url.casefold() in {REPOSITORY.casefold(), 'git@github.com:vvcchh0/bioinformaticsharness'}
     upstream = any(matches(url) for url in urls)
-    local_commit = _git(root, 'rev-parse', 'HEAD').decode().strip()
+    local_commit = query('rev-parse', 'HEAD').decode().strip()
     return {'expected_repository': REPOSITORY, 'repository': REPOSITORY if upstream else None,
             'kind': 'git_snapshot', 'git_available': True,
             'commit': local_commit if upstream else None, 'local_commit': local_commit,
-            'tree': _git(root, 'rev-parse', 'HEAD^{tree}').decode().strip(),
+            'tree': query('rev-parse', 'HEAD^{tree}').decode().strip(),
             'dirty': bool(status), 'status_digest': hashlib.sha256(status).hexdigest(),
             'upstream_remote_declared': upstream,
             'provenance_basis': 'local Git and configured remote; not an authenticated upstream release',
@@ -114,7 +123,8 @@ def _source(root, legacy):
 MATERIAL_DIRS = ('core/docs/methods/', 'core/scripts/', 'core/machine/design/',
                  'machine/schemas/', 'tools/')
 MATERIAL_FILES = {'AGENTS.md', 'README.md', 'CHANGELOG.md', 'docs/harness-updates.md',
-                  'machine/AGENT-INSTRUCTIONS.md', 'machine/guidance-update-contract.json'}
+                  'machine/AGENT-INSTRUCTIONS.md', 'machine/guidance-update-contract.json',
+                  'machine/time-budget-recovery-contract.json'}
 
 
 def _material(path):
@@ -146,14 +156,21 @@ def _note(value, path, files):
     return {**value, 'note_path': path}
 
 
-def capture(root, inventory='CHECKPOINT-MANIFEST.json', payload_prefix='', legacy=False):
+def capture(root, inventory='CHECKPOINT-MANIFEST.json', payload_prefix='', legacy=False,
+            git_timeout_seconds=30, git_timeout_reason=None):
     """Rehash a declared checkpoint/legacy inventory; never infer legacy commits."""
     root = Path(root).resolve(strict=True)
+    _assert(type(git_timeout_seconds) in {int, float} and math.isfinite(git_timeout_seconds)
+            and git_timeout_seconds > 0, 'Git query timeout must be positive and finite')
+    _assert(git_timeout_reason is None or isinstance(git_timeout_reason, str) and git_timeout_reason.strip(),
+            'Git query timeout reason must be nonempty when provided')
+    def query(*args):
+        return _git(payload, *args, timeout_seconds=git_timeout_seconds)
     payload = _path(root, payload_prefix).resolve(strict=True) if payload_prefix else root
     data, inv_identity = load_json_with_identity(_path(root, inventory), 4 * 1024 * 1024)
     expected = 'harness.current-guidance-freeze/v1' if legacy else 'bioinformatics-harness-public-checkpoint/v1'
     _assert(data.get('schema') == expected, 'unsupported inventory schema')
-    source = _source(payload, legacy)
+    source = _source(payload, legacy, git_timeout_seconds)
     entries = data.get('files')
     _assert(isinstance(entries, list) and 0 < len(entries) <= 10000, 'invalid inventory')
     files, blobs, folded, total = {}, {}, set(), 0
@@ -189,18 +206,18 @@ def capture(root, inventory='CHECKPOINT-MANIFEST.json', payload_prefix='', legac
             note = _note(value, relative, files)
             note['introduced_commit'] = None
             if source['git_available']:
-                note['introduced_commit'] = _git(payload, 'log', '-1', '--format=%H', '--diff-filter=A',
-                                                 source['local_commit'], '--', relative).decode().strip() or None
+                note['introduced_commit'] = query('log', '-1', '--format=%H', '--diff-filter=A',
+                                                   source['local_commit'], '--', relative).decode().strip() or None
             notes.append(note)
     _assert(len({n['id'] for n in notes}) == len(notes), 'duplicate change ID')
     if source['git_available']:
         tree = {}
-        for item in _git(payload, 'ls-tree', '-r', '-z', '--full-tree', 'HEAD').split(b'\0'):
+        for item in query('ls-tree', '-r', '-z', '--full-tree', 'HEAD').split(b'\0'):
             if item:
                 header, relative = item.split(b'\t', 1)
                 mode, kind, oid = header.split()
                 tree[relative.decode('utf-8')] = (kind, oid.decode())
-        algorithm = _git(payload, 'rev-parse', '--show-object-format').decode().strip()
+        algorithm = query('rev-parse', '--show-object-format').decode().strip()
         _assert(algorithm in {'sha1', 'sha256'}, 'unsupported Git object format')
         matched = all(tree.get(p) == (b'blob', hashlib.new(algorithm, b'blob ' + str(len(raw)).encode()
                                                          + b'\0' + raw).hexdigest()) for p, raw in blobs.items())
@@ -209,13 +226,15 @@ def capture(root, inventory='CHECKPOINT-MANIFEST.json', payload_prefix='', legac
         source['payload_matches_commit_bytes'] = matched
     for relative, entry in files.items():
         _assert(fingerprint(_path(payload, relative)) == _identity(entry), 'payload changed during capture')
-    after = _source(payload, legacy)
+    after = _source(payload, legacy, git_timeout_seconds)
     _assert(all(after.get(k) == source.get(k) for k in ['commit', 'local_commit', 'dirty', 'status_digest',
                                                        'upstream_remote_declared']), 'Git changed during capture')
     result = {'schema': SNAPSHOT, 'observed_at_utc': utc_now(), 'source': source,
               'inventory_identity': inv_identity, 'files': [files[p] for p in sorted(files)],
               'payload_id': _digest([files[p] for p in sorted(files)]), 'change_notes': notes,
               'evidence_scope': 'declared payload, stable reads; no signature or semantic-reading proof',
+              'observation_policy': {'git_query_timeout_seconds': git_timeout_seconds,
+                                     'basis': git_timeout_reason or 'operational query guard; not research completion or authorization expiry'},
               'scientific_acceptance': 'not_assessed'}
     result['package_id'] = _id(result, 'package_id')
     return result
@@ -347,22 +366,29 @@ def main(argv=None):
     p = sub.add_parser('capture'); p.add_argument('--root', type=Path, required=True)
     p.add_argument('--inventory', default='CHECKPOINT-MANIFEST.json'); p.add_argument('--payload-prefix', default='')
     p.add_argument('--legacy', action='store_true')
+    p.add_argument('--git-timeout-seconds', type=float, default=30)
+    p.add_argument('--git-timeout-reason')
     p = sub.add_parser('verify'); p.add_argument('--root', type=Path, required=True); p.add_argument('--snapshot', required=True)
     p = sub.add_parser('plan'); p.add_argument('--old', required=True); p.add_argument('--new', required=True)
     p.add_argument('--preserve-manifest')
     p = sub.add_parser('check'); p.add_argument('--study-root', type=Path, required=True)
     p.add_argument('--plan', required=True); p.add_argument('--receipt', required=True)
     args = parser.parse_args(argv)
+    target = None
+    error_target_validated = False
     try:
         root = args.work_root.resolve(strict=True)
         target = _path(root, args.out)
         _assert(not target.exists(), 'output already exists')
+        error_target_validated = args.command != 'capture'
         def load(name):
             return load_json_with_identity(_path(root, name), 8 * 1024 * 1024)[0]
         if args.command == 'capture':
             payload = _path(args.root, args.payload_prefix) if args.payload_prefix else args.root.resolve(strict=True)
             _assert(not target.is_relative_to(payload), 'capture output must be outside payload')
-            result = capture(args.root, args.inventory, args.payload_prefix, args.legacy)
+            error_target_validated = True
+            result = capture(args.root, args.inventory, args.payload_prefix, args.legacy,
+                             args.git_timeout_seconds, args.git_timeout_reason)
         elif args.command == 'verify':
             result = verify_snapshot(args.root, load(args.snapshot))
         elif args.command == 'plan':
@@ -374,9 +400,28 @@ def main(argv=None):
         status = result.get('overall', 'pass')
         print(json.dumps({'status': status, 'out': args.out}))
         return {'pass': 0, 'fail': 1, 'unknown': 2}.get(status, 2)
-    except (SupportError, FileExistsError, OSError, ValueError, KeyError, TypeError) as exc:
-        print(json.dumps({'status': 'fail', 'error': str(exc)}))
-        return 1
+    except (SupportError, FileExistsError, OSError, ValueError, KeyError, TypeError, KeyboardInterrupt) as exc:
+        status = exc.status if isinstance(exc, SupportError) else 'unknown' if isinstance(exc, (OSError, KeyboardInterrupt)) else 'fail'
+        if isinstance(exc, FileExistsError):
+            status = 'fail'
+        report = {'schema': 'harness.guidance-operation-error/v1', 'overall': status,
+                  'error': str(exc) or type(exc).__name__, 'operation': args.command,
+                  'interrupted': isinstance(exc, KeyboardInterrupt),
+                  'adoption_readiness': 'pending', 'active_version_written': False,
+                  'scientific_acceptance': 'not_assessed', 'automatic_retry': False,
+                  'next_action': 'Resolve the affected query/input within existing authority; use a new output path for another attempt.'}
+        if args.command == 'capture':
+            report['observation_policy'] = {'git_query_timeout_seconds': args.git_timeout_seconds,
+                                            'basis': args.git_timeout_reason or 'operational query guard'}
+        written = False
+        if error_target_validated and target is not None and not target.exists():
+            try:
+                dump_new(target, report)
+                written = True
+            except (SupportError, OSError, ValueError):
+                pass
+        print(json.dumps({'status': status, 'error': str(exc), 'error_receipt_written': written}))
+        return 130 if isinstance(exc, KeyboardInterrupt) else 2 if status == 'unknown' else 1
 
 
 if __name__ == '__main__':

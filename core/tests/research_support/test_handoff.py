@@ -10,6 +10,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +28,49 @@ from scripts.research_support.handoff import inspect_handoff, main  # noqa: E402
 
 
 class HandoffSupportTests(unittest.TestCase):
+    def test_oversized_timeout_is_structured_invalid_environment_without_launch(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = {"schema_version": "research-support-handoff-v1", "id": "invalid-huge-budget",
+                        "artifacts": [{"id": "cache", "path": "optional.bin", "role": "cache",
+                                       "required": False, "use": "optional cache"}],
+                        "environment": {"python": sys.executable, "cwd": ".", "imports": ["json"],
+                                        "required": True, "timeout_seconds": 10 ** 400}}
+            with mock.patch("scripts.research_support.handoff.subprocess.run") as launch:
+                report = inspect_handoff(manifest, root, actor="receiver", phase="receiver", probe=True)
+            launch.assert_not_called()
+            self.assertEqual(report["overall"], "fail")
+            self.assertEqual(report["environment_probe"]["status"], "fail")
+
+    def test_probe_budget_can_exceed_old_limit_and_keeps_task_basis(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = {"schema_version": "research-support-handoff-v1", "id": "slow-cold-start",
+                        "artifacts": [{"id": "cache", "path": "optional.bin", "role": "cache",
+                                       "required": False, "use": "optional cache"}],
+                        "environment": {"python": sys.executable, "cwd": ".",
+                        "imports": ["json"], "required": True, "timeout_seconds": 180,
+                        "timeout_basis": "Measured cold environment for this task"}}
+            report = inspect_handoff(manifest, root, actor="receiver", phase="receiver", probe=True)
+            self.assertEqual(report["overall"], "pass")
+            self.assertEqual(report["environment_probe"]["timeout_seconds"], 180)
+            self.assertEqual(report["environment_probe"]["timeout_basis"], manifest["environment"]["timeout_basis"])
+            self.assertFalse(report["environment_probe"]["permission_changes"])
+
+    def test_probe_interrupt_keeps_required_task_unresolved(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            manifest = {"schema_version": "research-support-handoff-v1", "id": "interrupted-probe",
+                        "artifacts": [{"id": "cache", "path": "optional.bin", "role": "cache",
+                                       "required": False, "use": "optional cache"}],
+                        "environment": {"python": sys.executable, "cwd": ".",
+                        "imports": ["json"], "required": True}}
+            with mock.patch("scripts.research_support.handoff.subprocess.run", side_effect=KeyboardInterrupt()):
+                report = inspect_handoff(manifest, root, actor="receiver", phase="receiver", probe=True)
+            self.assertEqual(report["overall"], "unknown")
+            self.assertEqual(report["environment_probe"]["reason"], "probe_interrupted")
+            self.assertEqual(report["scientific_acceptance"], "not_assessed")
+
     def test_path_resolution_accepts_nested_and_contained_absolute_paths(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

@@ -90,6 +90,28 @@ class _TaskContextFixture:
         )
 
 class TaskContextTests(_TaskContextFixture, unittest.TestCase):
+    def test_new_unknown_completion_blocks_only_its_bound_run_and_legacy_still_reads(self) -> None:
+        binding = {"study_id": "s", "iteration_id": "i", "task_id": "t",
+                   "context_path": str(self.context_path.resolve()), "context_sha256": "0" * 64}
+        receipt = {"schema": "bounded-run-receipt.v1", "task_context": binding,
+                   "command": {"cwd": str(self.root.resolve())},
+                   "result": {"kind": "success", "root_exit_code": 0, "root_pid": 12345}}
+        old_path = self.output_root / "old-run.json"
+        old_path.write_text(json.dumps(receipt), encoding="utf-8")
+        self.assertEqual(check_bound_run_receipt(old_path, context_binding=binding, expected_cwd=self.root)["overall"], "pass")
+        new_path = self.output_root / "unresolved-run.json"
+        new_path.write_text(json.dumps({**receipt, "completion": {"status": "unknown"}}), encoding="utf-8")
+        checked = check_bound_run_receipt(new_path, context_binding=binding, expected_cwd=self.root)
+        self.assertEqual(checked["overall"], "fail")
+        self.assertTrue(any(c["id"] == "completion" and c["status"] == "fail" for c in checked["checks"]))
+        for extra in [{"completion": {"status": "pass", "cleanup_verified": False}},
+                      {"completion": {"status": "pass", "permission_or_identity_gap": True}},
+                      {"completion": {"status": "pass"}, "recovery": {"status": "running"}}]:
+            with self.subTest(extra=extra):
+                new_path.write_text(json.dumps({**receipt, **extra}), encoding="utf-8")
+                self.assertEqual(check_bound_run_receipt(new_path, context_binding=binding, expected_cwd=self.root)["overall"], "fail")
+        self.assertEqual(check_bound_run_receipt(old_path, context_binding=binding, expected_cwd=self.root)["overall"], "pass")
+
     def test_init_cli_and_independent_expected_iteration_and_root_checks(self) -> None:
         spec_path = self.temp / "spec.json"
         spec_path.write_text(json.dumps(self._spec()), encoding="utf-8")

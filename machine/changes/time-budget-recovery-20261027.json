@@ -1,0 +1,23 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "time-budget-recovery-20261027",
+  "summary": "Separate checkpoints, explicit budgets, evidence windows and authorization; preserve interrupted work and block affected dependencies.",
+  "impact": "interface",
+  "paths": [
+    "core/scripts/research_support/run_bounded.py", "core/scripts/research_support/evidence.py",
+    "core/scripts/research_support/handoff.py", "core/scripts/research_support/task_context.py",
+    "tools/guidance_update.py", "core/docs/methods/guides/task-continuity.md",
+    "core/docs/methods/guides/receiving-research-work.md", "core/docs/methods/guides/resource-gap-loop.md",
+    "core/docs/methods/research-support-tools.md", "docs/harness-updates.md",
+    "machine/time-budget-recovery-contract.json", "machine/guidance-update-contract.json",
+    "core/machine/design/task-continuity.json", "machine/AGENT-INSTRUCTIONS.md", "CHANGELOG.md"
+  ],
+  "reading_paths": [
+    "core/docs/methods/guides/task-continuity.md", "core/docs/methods/guides/receiving-research-work.md",
+    "machine/time-budget-recovery-contract.json"
+  ],
+  "reading_sections": {"core/docs/methods/guides/task-continuity.md": ["时间、预算与恢复"]},
+  "revisit": "Review launch defaults and inherited benchmark deadlines. Omitted timeout now means checkpoints; explicit timeout remains a hard command budget. Resolve process/permission state before consuming partial output.",
+  "acceptance": "Keep old experiments, budgets and results. Record new task-specific policy and actual authority; use new output prefixes for recovery and resolved runtime evidence for dependent acceptance. Elapsed time proves neither reading nor scientific acceptance or permission.",
+  "historical_backfill": false
+}

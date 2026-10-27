@@ -49,3 +49,7 @@
 迁移历史时可用 [Git bundle](https://git-scm.com/docs/git-bundle)传递选定的提交与引用；未提交的工作文件需要单独打包。[Codex worktree](https://developers.openai.com/codex/app/worktrees)适合同一仓库内的并行工作，它共享 Git 历史，仍需为交付记录明确版本与责任。
 
 长期运行时，在恢复、接收更新和阶段交付三个节点复查当前版本与采用范围；每轮无需重读全部 Harness，优先处理差异索引、影响项与待裁定项。
+
+## 更新运行与时间政策
+
+接收运行策略更新时，同时检查调用方是否依赖旧默认值。为新的长程任务选择进度检查点和有依据的执行预算，保留旧实验的原窗口、结果与投入。中断后的恢复另记来源和预算，沿[续跑指南](../core/docs/methods/guides/task-continuity.md#时间预算与恢复)连接当前责任与下一验收点。

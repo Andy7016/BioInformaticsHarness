@@ -23,7 +23,7 @@
 
 ## 实际环境预检
 
-environment按任务提供解释器、root内cwd、imports、required和不超过60秒的timeout_seconds。`--probe`用固定子程序在当前调用权限/环境中真实导入列出的库，保留模块来源；不执行任意用户命令、不安装/自动重试。必要预检未运行或失败保留unknown。没有触发环境要求的纯记录任务可省略environment。
+environment按任务提供解释器、root内cwd、imports、required，以及适合实际启动环境的预检等待预算和依据。`--probe`用固定子程序在当前调用权限/环境中真实导入列出的库，保留模块来源；不执行任意用户命令、不安装/自动重试。必要预检未运行或失败保留unknown。没有触发环境要求的纯记录任务可省略environment。
 
 每次观察写actor、phase和UTC时间。producer与receiver是分别实际执行的观察，工具不会生成另一方签字或证明已在历史消费前完成。
 
@@ -72,3 +72,7 @@ API/字段见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DE
 [计划封存与首次执行](guides/plan-seal-and-first-execution.md)给出触发、选择理由和替代路线。计划目录是唯一清单基准；使用生产助手生成清单，再送正式reader。实际审计影响样本或研究选择时，先保存列明代码/配置原字节，再启动子进程；新修订不刷新旧快照。[封存小例](../../examples/research-support/plan-seal/README.md)和[首次审计小例](../../examples/research-support/first-audit/README.md)可直接运行。
 
 [发行交接](guides/publication-handoff.md)把代码、文字、原数据、已有权重、新训练参数和外部库分开说明。该指导按对外分发触发，不把许可证核查增加为每次本地计算的固定步骤。真实案例及本轮验收见[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。
+
+## 时间与异常恢复
+
+有界运行器将进度检查和硬执行预算分别记录。中断和运行错误保留恢复入口、已发现进程的状态及最终回执；实际存储失败时记录可获得的恢复信息。预算、状态与兼容规则见[机器契约](../../../machine/time-budget-recovery-contract.json)，研究层面的取舍见[续跑指南](guides/task-continuity.md#时间预算与恢复)。

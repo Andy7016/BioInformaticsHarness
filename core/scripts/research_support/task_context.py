@@ -460,6 +460,7 @@ def check_bound_run_receipt(
         and result.get("kind") == "success"
         and type(result.get("root_exit_code")) is int
         and result.get("root_exit_code") == 0
+        and not result.get("runner_errors")
     )
     root_pid = result.get("root_pid") if result_is_object else None
     pid_ok = type(root_pid) is int and root_pid > 0
@@ -483,6 +484,20 @@ def check_bound_run_receipt(
         _check_record("cwd", cwd_ok, "command.cwd matches the expected work root" if cwd_ok else "command.cwd does not match the expected work root"),
         _check_record("task_context", binding_ok, "task_context matches the current binding" if binding_ok else "task_context does not match current IDs, path, and context bytes"),
     ]
+    if "completion" in receipt:
+        completion = receipt["completion"]
+        complete = (isinstance(completion, dict) and completion.get("status") == "pass"
+                    and completion.get("cleanup_verified") is not False
+                    and completion.get("permission_or_identity_gap") is not True)
+        checks.append(_check_record("completion", complete,
+                                    "observed completion is resolved" if complete else
+                                    "process completion or cleanup remains unresolved; dependent delivery is not ready"))
+    if "recovery" in receipt:
+        recovery = receipt["recovery"]
+        terminal = isinstance(recovery, dict) and recovery.get("status") == "terminal"
+        checks.append(_check_record("recovery", terminal,
+                                    "runtime has a terminal recovery record" if terminal else
+                                    "recovery is not terminal; dependent delivery is not ready"))
     return {
         "overall": "pass" if all(check["status"] == "pass" for check in checks) else "fail",
         "receipt": receipt,

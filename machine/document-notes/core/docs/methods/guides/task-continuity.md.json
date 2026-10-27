@@ -24,6 +24,16 @@
         "machine/research/long-research-and-engineering-2026-10-27.json"
       ],
       "acceptance": "independent_design_review_then_actual_flow_consumption"
+    },
+    {
+      "id": "2026-10-27-time-budget-recovery",
+      "date": "2026-10-27",
+      "reason": "Separate research checkpoints, explicit resource budgets and authority; preserve interrupted work and scoped dependent acceptance.",
+      "technical_records": [
+        "machine/time-budget-recovery-contract.json",
+        "machine/changes/time-budget-recovery-20261027.json"
+      ],
+      "acceptance": "Controlled operational and abnormal-path tests; scientific acceptance remains separately judged."
     }
   ]
 }

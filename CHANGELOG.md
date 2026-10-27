@@ -1,5 +1,12 @@
 # Changelog
 
+## 时间预算与异常恢复 — 2026-10-27
+
+- 将研究检查点、观察等待、显式执行预算、证据窗口和授权条件分开，补入[续跑指导](core/docs/methods/guides/task-continuity.md#时间预算与恢复)。
+- 运行器默认保存进度，显式预算按任务设置；补充中断、错误与权限未知时的恢复入口和进程核对。
+- 预检与版本查询允许按环境配置等待预算，未完成状态持续保留；依赖交付核对运行完整性，历史回执保持兼容。
+- 接收适配与验证范围见[变化索引](machine/changes/time-budget-recovery-20261027.json)和[机器契约](machine/time-budget-recovery-contract.json)。
+
 ## 课题更新与长程续研 — 2026-10-27
 
 - 增加[更新指南](docs/harness-updates.md)，连接交付版本、变化索引、必要重读、课题适配和 revisor 接受。

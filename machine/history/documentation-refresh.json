@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "c496def358b771325db0e0ace721565098f1f2ed",
+    "head": "f809d63be172b7a89c19bfbc9e82c316a10ba20e",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 6112,
-      "current_sha256": "61f389f270ffd08d2a3f5624e665b9fd2af0e50465894eb38a3db1383f684ddf"
+      "current_bytes": 6804,
+      "current_sha256": "0d209303c89bfc373fff9c78b093d44fc4f670487283506747223e4c715f5a1c"
     },
     {
       "path": "LICENSING.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 265053,
-      "current_sha256": "5d2a14be672df77729141ba449a4c90826dc168bf05839ac2601024d24e54d28"
+      "current_bytes": 272347,
+      "current_sha256": "8fead71a486f509ca78401be8f077c832c3502dad889a4ddd0aeb386d71270ac"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -662,8 +662,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/receiving-research-work.md",
       "previous_sha256": "f1cdce601ce3f7bf9b4048dcdafeaf2dcf394b4954dcff86608ba2424f00f882",
-      "current_bytes": 7013,
-      "current_sha256": "a4a1b66cf942469965523bf6a012d86951c68e85f06c8a5a19a02b01e6ac8c5e"
+      "current_bytes": 7678,
+      "current_sha256": "f6f2adce3b84f3c6ca1eb9ab2d871800a6a5dd958be6e86fb44926d68b42e668"
     },
     {
       "path": "core/docs/methods/guides/research-guidance-cycle.md",
@@ -683,8 +683,8 @@
       "path": "core/docs/methods/guides/resource-gap-loop.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2460,
-      "current_sha256": "da22fe9a70cb2db43b0e91c91abec630faeb9fa189d1da20fe6402a0f2e143d0"
+      "current_bytes": 2842,
+      "current_sha256": "539e7048c3d971151e93a873ae2304273cbf95c7f71d215dece1d4328155e312"
     },
     {
       "path": "core/docs/methods/guides/review-choice-synthesis.md",
@@ -747,8 +747,8 @@
       "path": "core/docs/methods/guides/task-continuity.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3378,
-      "current_sha256": "5bd9526b2b94f0aa2b33a36a5ac9ac6d7cb871b6fdebf203fb0ce3e47b6168b0"
+      "current_bytes": 4966,
+      "current_sha256": "7bef4e701e1454420f2449d0ae6c0deea3a5dac0f6cff60074af54dc73726814"
     },
     {
       "path": "core/docs/methods/handoff-contract.md",
@@ -783,8 +783,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/research-support-tools.md",
       "previous_sha256": "45a9622621b6f53303fd6432260868cd7cde59b844151fb6fa1d781d09e2fd9b",
-      "current_bytes": 9288,
-      "current_sha256": "3a03aa5a6982e4c18b34816a688976b2e823f92735c86ac44d1d113e046a62ab"
+      "current_bytes": 9742,
+      "current_sha256": "48c3527c5ac774581e4597d39672ccc222b7325362e89d738a059cc1c087ab52"
     },
     {
       "path": "core/docs/methods/review-receipt.md",
@@ -1451,8 +1451,8 @@
       "path": "core/machine/design/task-continuity.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9522,
-      "current_sha256": "975a95d461616e4fe02d8acefed51f2aebacda4f145e5ad6c8bf6d83594278eb"
+      "current_bytes": 9866,
+      "current_sha256": "25432dc93eecf6b5545616b42c65b2b6420b1157df953b3009c38b7940d2f886"
     },
     {
       "path": "core/machine/tools/source-acquisition.json",
@@ -1476,6 +1476,24 @@
       "baseline_revision": "764bd88",
       "current_bytes": 44905,
       "current_sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a"
+    },
+    {
+      "path": "core/scripts/research_support/evidence.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/evidence.py",
+      "previous_sha256": "c4b5448c5ec33aec67d072ba907d2679bbe2086832c38e0b3b88a97ead438c45",
+      "current_bytes": 41960,
+      "current_sha256": "85fd05f2311d1d4f592add270b31790767ff136e477e9ce657191bef26dacc18"
+    },
+    {
+      "path": "core/scripts/research_support/handoff.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/handoff.py",
+      "previous_sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
+      "current_bytes": 30899,
+      "current_sha256": "73d61861dfd55cd05688f0621c0da7d8d82ff4240f6f7227cd8d38e8b33b392d"
     },
     {
       "path": "core/scripts/research_support/research_cycle.py",
@@ -1504,15 +1522,15 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/scripts/research_support/run_bounded.py",
       "previous_sha256": "fe8729458c65f293ccfdfec3435115790b09efe705e094fd0a85dfdebbed682c",
-      "current_bytes": 21574,
-      "current_sha256": "a0246bc3e285f8ea49fabd9aaefc4de65a04c76712bf423cf100e9302b11e2af"
+      "current_bytes": 39691,
+      "current_sha256": "49f3ecc87988b75e46a4110bbe433a1310d589d02ed32aaad3b21eaa3282a62d"
     },
     {
       "path": "core/scripts/research_support/task_context.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 29461,
-      "current_sha256": "e99543e449c9cfcbc4458ca25249d00e559c2f9643a044e862bdaadb0f162c92"
+      "current_bytes": 30497,
+      "current_sha256": "d023090b2ba315b40e9458b49819da5643fb853582dd23c9031bddc5c0ac729e"
     },
     {
       "path": "core/tests/acquisition/test_source_routing.py",
@@ -1520,6 +1538,24 @@
       "baseline_revision": "764bd88",
       "current_bytes": 17821,
       "current_sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362"
+    },
+    {
+      "path": "core/tests/research_support/test_evidence.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/tests/research_support/test_evidence.py",
+      "previous_sha256": "cc09ef709d95d16d375b3a5362b077d65f74d9e022277eb6d169a714d5c58233",
+      "current_bytes": 20751,
+      "current_sha256": "65f1c77d0f0ea01553a3b42fc7da7ea30fe93073d6729cc9b898bf454fb709d5"
+    },
+    {
+      "path": "core/tests/research_support/test_handoff.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/tests/research_support/test_handoff.py",
+      "previous_sha256": "54a60185fd9069863d2a97bb45b59a602ff5516dd96b146f974d20d6e6ed9a43",
+      "current_bytes": 15962,
+      "current_sha256": "e92fa874ab1fc39d2bd9502b777d9f2454722ad83329f6d079a278ff14837816"
     },
     {
       "path": "core/tests/research_support/test_research_cycle.py",
@@ -1543,11 +1579,18 @@
       "current_sha256": "fea6533e2f61d31485d335ac48f4354676138091c75d593ce524023fd3392a28"
     },
     {
+      "path": "core/tests/test_run_recovery.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 22352,
+      "current_sha256": "9551c400fb5f5194c2e4bc59efef3eaeb83c34f5765128d07d4bd870cb9e00cc"
+    },
+    {
       "path": "core/tests/test_task_context.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 23116,
-      "current_sha256": "0c728c5be7b9ff09c6907b797e506c9c7170a7c3acb3d0c6538df70a7a8a3e10"
+      "current_bytes": 24968,
+      "current_sha256": "d6385fbb957a8f4d735a2d3042e5602bf57a8e8059a729a6eff307f0d64fe0b3"
     },
     {
       "path": "docs/DOCUMENTATION.md",
@@ -1560,15 +1603,15 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 66584,
-      "current_sha256": "c072a5c5b61d0c22a002f4ac33f7721a858c8d364fb565bf4db36532d339c5f8"
+      "current_bytes": 67143,
+      "current_sha256": "1036af22381438122f93e824f9010e44e79b77049b3234f9ecaf88da3e677b88"
     },
     {
       "path": "docs/harness-updates.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5097,
-      "current_sha256": "602e08c563b0eb22ade04d582a17514984783077b0b38ab252c4c3710ee7191c"
+      "current_bytes": 5497,
+      "current_sha256": "6dcecf0b55c4d991744824e234ffd93c2cf3e4cc62e1856d8f7aa72088df53cc"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -1654,8 +1697,8 @@
       "path": "machine/AGENT-INSTRUCTIONS.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2476,
-      "current_sha256": "d14411427f1a14bbaf2af78ae90dd77d2da4062cb8b3dc2ac6e9446d429e5312"
+      "current_bytes": 3053,
+      "current_sha256": "2ab3517278d538dc961d2601b7e6398b276b9aa3f0bc3d12b851f29c688750af"
     },
     {
       "path": "machine/archive-pointers.jsonl",
@@ -1679,11 +1722,18 @@
       "current_sha256": "0eb7e548cffda826c114dbe2de0816f1ab359e5fb3340c913a3216bd34b21a49"
     },
     {
+      "path": "machine/changes/time-budget-recovery-20261027.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1753,
+      "current_sha256": "0d0bd251c170037572a8fa3f250dee398a05ea1904f7842cb395b6a9525a1fb8"
+    },
+    {
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6654,
-      "current_sha256": "0a9348b5accc92f9b90a6344a93b5b21fa4a2f3aff21be9359a53790d4e4df44"
+      "current_bytes": 7174,
+      "current_sha256": "205c35c9854be9f62292c38fc9d2ec4f3c7784203889611463d17843c500cb24"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -2179,8 +2229,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/receiving-research-work.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9364,
-      "current_sha256": "d162555f7bd40b47e74884a0c8cc3133ce63168da07cb963c72b7ee2dbc020d7"
+      "current_bytes": 9884,
+      "current_sha256": "e1b803d3f8e81899264d4fbd4e7ed9c0ad3af61fe965171d164cc9117f2d3e90"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/research-guidance-cycle.md.json",
@@ -2200,8 +2250,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/resource-gap-loop.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 614,
-      "current_sha256": "afe15a93d5bc3e34e953508b99ceb4132fc4d5c0b424ff045f06b34a03d8498c"
+      "current_bytes": 1134,
+      "current_sha256": "3b1ed84acf985db8b2f632d3ff1514290ea24cdae8241c30efa933bbec70739c"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
@@ -2256,8 +2306,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/task-continuity.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1080,
-      "current_sha256": "0f0c5d036ec70471facb126136e1c7fe9d306d436f5164c4d6123e0732146bb2"
+      "current_bytes": 1600,
+      "current_sha256": "081c11c50a98bb5986130a2bd788f6cc117f4727086b1c1b04ac914f27982ae9"
     },
     {
       "path": "machine/document-notes/core/docs/methods/handoff-contract.md.json",
@@ -2284,8 +2334,8 @@
       "path": "machine/document-notes/core/docs/methods/research-support-tools.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 14957,
-      "current_sha256": "d57bedbcd50a7c61f2645714f9818b44e1a00fa94026ec3e6624ef505143710e"
+      "current_bytes": 15477,
+      "current_sha256": "b47d776eb0d568437cb93d5c198c0d8aa99713968e6f2fac0cc6a8df84e2911e"
     },
     {
       "path": "machine/document-notes/core/docs/methods/review-receipt.md.json",
@@ -2613,15 +2663,15 @@
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7072,
-      "current_sha256": "f8ebe61433a269de379e9410f9719d5aee0869b37a583225d4d53a02ca755c2b"
+      "current_bytes": 7592,
+      "current_sha256": "64e86bc2ffa4e39fa09bf3e99528761618b41aeffa94e201c1614824cf9ff00d"
     },
     {
       "path": "machine/document-notes/docs/harness-updates.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 611,
-      "current_sha256": "6733834941a4f128857dfc90a40fa3ae2352cb1ca03517e80537a7566bd6c751"
+      "current_bytes": 1121,
+      "current_sha256": "96857c4264124e82033ff471019655bbc5f202e342b26b99b7ae191e15c1c9e6"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
@@ -2690,8 +2740,8 @@
       "path": "machine/documentation-policy.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8079,
-      "current_sha256": "e0347e466f3edbb934b7eec232cc32726308a07c60f7f0b7d2886e38f6d670dc"
+      "current_bytes": 8399,
+      "current_sha256": "de66b4e54c069774705be41a4b7355b096ff6bbfe8dced55bd22866d30e10199"
     },
     {
       "path": "machine/examples/splice-resource-readiness.json",
@@ -2711,8 +2761,8 @@
       "path": "machine/guidance-update-contract.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8163,
-      "current_sha256": "76ab7e8854c64e737073e5475efe4898576d82cdfcda563fa4ab2699af39a3c5"
+      "current_bytes": 8958,
+      "current_sha256": "37d88d2bc1b57864b79dbffe0d3521bb064285a2ca19d08a502ade61ae383d37"
     },
     {
       "path": "machine/history/preparation-priority-2026-10-24.json",
@@ -2802,8 +2852,15 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 256994,
-      "current_sha256": "4444e50a01e73894eeb64fdddc26609bd6a40089dc71c446d71844ce87874f59"
+      "current_bytes": 259627,
+      "current_sha256": "20ab8fdfb3da532dd09a3ae627f60a14d4b36d1f33c6f0350a579af29beeecc8"
+    },
+    {
+      "path": "machine/time-budget-recovery-contract.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7571,
+      "current_sha256": "a61e30f0c282d13445629ae1d38b7a27bb406b7072aafaaad54ccbd144c63dcb"
     },
     {
       "path": "tests/test_documentation.py",
@@ -2816,8 +2873,8 @@
       "path": "tests/test_guidance_update.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 21265,
-      "current_sha256": "b1f25864ae8c9c2d77b383fa54dbce57f8f3c3a14394ee853d8c63a773683450"
+      "current_bytes": 23857,
+      "current_sha256": "8f59a3b4b17f224437590325dcf9461809132c282ac2ee08a4ef93dd5001a1d9"
     },
     {
       "path": "tools/documentation.py",
@@ -2830,8 +2887,8 @@
       "path": "tools/guidance_update.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 21432,
-      "current_sha256": "8681f1df01c6c411d87a9a44b8173d23386da6b582c4c6a28a62e8043cb6869f"
+      "current_bytes": 24532,
+      "current_sha256": "01b510db0d8c58f37c32559ea1866059a8992e4e8c39214428bf04bf61d91208"
     }
   ]
 }

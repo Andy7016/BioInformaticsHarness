@@ -1,0 +1,90 @@
+{
+  "schema": "harness.time-budget-recovery-contract/v1",
+  "status": "implemented_local_contract",
+  "human_guide": "core/docs/methods/guides/task-continuity.md",
+  "principle": "Research stages use progress and acceptance checkpoints. A task-specific explicit hard resource budget may terminate a command; observer waits do not authorize termination or determine scientific sufficiency.",
+  "time_classes": {
+    "observer_wait": "One bounded wait/yield/poll. Preserve job identity and inspect the same operation again. No implicit retry, new job, termination or permission change.",
+    "progress_checkpoint": "Save progress, unresolved work, evidence and next responsibility. Elapsed time does not complete unread sources or accept results.",
+    "execution_budget": "An explicit command budget with a task/resource/external-window reason. Record which time it counts and who can renew it. Existing authority and actual constraints remain in force.",
+    "evidence_window": "Publication, data exposure or historical reconstruction cutoff; not a process stop signal.",
+    "authorization_expiry": "Only an actual authority condition or explicit validity window. A wait/timeout does not grant, widen or silently expire authorization. Changed scope/target/conditions require relevant review."
+  },
+  "runner": {
+    "path": "core/scripts/research_support/run_bounded.py",
+    "receipt_schema": "bounded-run-receipt.v1",
+    "default_hard_timeout_seconds": null,
+    "default_checkpoint_seconds": 1800,
+    "uniform_hard_timeout_maximum": null,
+    "flags": {
+      "--checkpoint-seconds": "Positive finite progress interval; never ends the child.",
+      "--timeout-seconds": "Optional positive finite hard job-wall budget. Legacy explicit calls remain supported; a value alone is not scientific calibration.",
+      "--time-budget-reason": "Task-specific policy basis. Prefer a reason for new calls; legacy explicit calls retain explicit_cli provenance."
+    },
+    "outputs": "New immutable .running.json entry before launch, append-only .progress.jsonl, stdout/stderr/metrics and final .receipt.json. Existing prefixes are never overwritten.",
+    "receipt_publication": "Serialize, flush and fsync an owned same-directory temporary file before atomic no-replace publication. A pre-publication storage error cannot leave a final success receipt. This does not claim hardware or filesystem crash durability beyond observed operations.",
+    "hard_budget_observation": "Recheck elapsed time after observation. If completion is first observed beyond the explicit observation-phase budget, retain root exit code and record operational budget overrun; do not infer a scientific failure or exact unobserved exit time.",
+    "time_accounting": "Report measured setup, job wall and cleanup separately. External queue/permission-repair time remains unknown. Do not retrospectively subtract costs from frozen budgets.",
+    "termination": "Only tracked PID plus creation-time identities; the invocation's own Popen root may use its owned handle. No name-based or machine-wide cleanup. AccessDenied stays unknown.",
+    "exception_recovery": "Interrupts and post-launch exceptions enter cleanup and best-effort terminal recording. If storage is unavailable, retain the prelaunch entry and emit structured stderr recovery information; do not claim durable writes succeeded.",
+    "completion": "New receipt completion.status must be pass for dependent acceptance. Alive/unknown owned processes and observation gaps stay explicit. Sampled tracking is not OS containment of every short-lived descendant.",
+    "resource_authority": "Existing memory, thread, path and permission constraints remain. A longer time value grants no other resource or filesystem permission."
+  },
+  "environment_probe": {
+    "path": "core/scripts/research_support/handoff.py",
+    "default_timeout_seconds": 10,
+    "uniform_maximum_seconds": null,
+    "configuration": "environment.timeout_seconds is positive finite; environment.timeout_basis records the environment/task basis.",
+    "meaning": "Fixed interpreter/import readiness guard. Required timeout/interruption stays unknown; optional prerequisites retain their own status without blocking unrelated work.",
+    "containment_scope": "Direct subprocess child only. Arbitrary import-created descendants are not contained; side-effectful readiness work needs an appropriate managed adapter."
+  },
+  "git_observation": {
+    "path": "tools/guidance_update.py",
+    "default_timeout_seconds": 30,
+    "flags": [
+      "--git-timeout-seconds",
+      "--git-timeout-reason"
+    ],
+    "configuration": "Positive finite operational query cap, no uniform maximum.",
+    "error_receipt_schema": "harness.guidance-operation-error/v1",
+    "timeout_or_permission": "Structured unknown, pending adoption; no active-version write or retry. Another attempt uses a new output path within existing relevant authority.",
+    "interrupt_exit_code": 130,
+    "disk_failure": "stdout reports error_receipt_written=false if a new error receipt cannot be stored."
+  },
+  "dependency_and_acceptance": {
+    "evidence": "Timeout/error/interruption are operational failures; unresolved process observation/cleanup is unknown. Neither is a scientific negative label.",
+    "task_context": "New completion.status other than pass blocks that bound run and its dependent delivery. Resource-loop and research-cycle reuse the bound receipt check.",
+    "legacy": "Historical receipts without completion metadata retain their old interpretation. Preserve benchmark deadlines/results; derived recoveries declare their own budget and lineage.",
+    "scope": "Keep fail/unknown attached to the affected prerequisite. Continue independent authorized work. No new global scheduler or permission grant."
+  },
+  "recovery_record_minimum": [
+    "original run/task and input/version references",
+    "observed cause and exact denied operation when available",
+    "completed, partial and missing artifacts",
+    "alive, gone and unknown owned processes; cleanup attempts/errors",
+    "affected dependencies and independent work",
+    "current authority, budget accounting, next action and responsibility"
+  ],
+  "examples": [
+    "python -B -m scripts.research_support.run_bounded --cwd WORK --out-prefix NEW_PREFIX --checkpoint-seconds 1800 -- COMMAND ARG",
+    "python -B -m scripts.research_support.run_bounded --cwd WORK --out-prefix NEW_PREFIX --timeout-seconds 7200 --time-budget-reason 'Task-specific compute window' -- COMMAND ARG",
+    "python tools/guidance_update.py --work-root RECORDS --out NEW.json capture --root HARNESS --git-timeout-seconds 120 --git-timeout-reason 'Measured slow storage'"
+  ],
+  "validation_scope": "Controlled short owned-process fixtures, abnormal-path injection, compatibility and downstream acceptance. No calendar-long reliability, scientific effect or arbitrary containment claim.",
+  "scientific_acceptance": "not_assessed",
+  "validation": {
+    "total": 117,
+    "passed": 116,
+    "skipped": 1,
+    "skip_reason": "Native Windows symlink creation privilege unavailable",
+    "scope": "Controlled short owned-process fixtures, fault injection and compatibility; no calendar-long scientific effect or universal timing calibration.",
+    "test_paths": [
+      "core/tests/test_run_recovery.py",
+      "core/tests/test_public_run_bounded.py",
+      "core/tests/research_support/test_evidence.py",
+      "core/tests/research_support/test_handoff.py",
+      "core/tests/test_task_context.py",
+      "tests/test_guidance_update.py"
+    ]
+  }
+}

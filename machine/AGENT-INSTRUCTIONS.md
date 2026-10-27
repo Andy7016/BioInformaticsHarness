@@ -13,3 +13,7 @@ Retained source_text, source_commit and source_sha256 describe the original docu
 ## Guidance updates during a study
 
 On receiving a replacement Harness, use docs/harness-updates.md and machine/guidance-update-contract.json. Record the supplied source/package identity, preserve the old study state, inspect old-to-new file deltas and machine/changes indices, actually reread required guidance, and appraise each current/next-gate impact. Keep historical notes append-only. Record retain/revise/qualify/not_applicable/defer decisions; send necessary derived scientific revisions through the existing revisor workflow. Record adopted scope separately. Do not turn receipt/check success into scientific acceptance or silently overwrite old conclusions.
+
+## Time, authority and recovery
+
+Use machine/time-budget-recovery-contract.json. Research checkpoints preserve progress and unresolved work; an explicit hard execution budget needs a task/resource basis. Observer waits, evidence windows and actual authorization conditions are separate. A wait or timeout grants no permissions and does not complete reading or scientific acceptance. Preserve interrupted runs and use derived outputs for recovery. Block only affected dependencies; continue independent authorized work. Keep historical experiment deadlines/results intact.

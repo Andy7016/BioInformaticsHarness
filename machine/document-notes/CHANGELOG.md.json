@@ -94,6 +94,16 @@
         "machine/changes/guidance-updates-20261027.json"
       ],
       "acceptance": "Contract tests and independent protocol review; scientific study adoption remains separate."
+    },
+    {
+      "id": "2026-10-27-time-budget-recovery",
+      "date": "2026-10-27",
+      "reason": "Separate research checkpoints, explicit resource budgets and authority; preserve interrupted work and scoped dependent acceptance.",
+      "technical_records": [
+        "machine/time-budget-recovery-contract.json",
+        "machine/changes/time-budget-recovery-20261027.json"
+      ],
+      "acceptance": "Controlled operational and abnormal-path tests; scientific acceptance remains separately judged."
     }
   ],
   "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",

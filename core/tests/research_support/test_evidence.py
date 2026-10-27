@@ -376,6 +376,70 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(parsed, load_json(path))
         self.assertEqual(identity, fingerprint(path))
 
+    def test_new_runner_errors_and_interruptions_are_explicit_runtime_failures(self) -> None:
+        for kind in ("runner_error", "interrupted", "preparation_error"):
+            with self.subTest(kind=kind):
+                receipt = _bounded_receipt(kind=kind, exit_code=0)
+                receipt["completion"] = {"status": "unknown"}
+                manifest = _write_fixture(self.tmp_path, receipt)
+                report = build_evidence(manifest, self.tmp_path)
+                self.assertEqual(report["runtime_status"], "fail")
+                self.assertEqual(report["overall"], "fail")
+                self.assertEqual(report["scientific_acceptance"], "not_assessed")
+
+    def test_permission_and_cleanup_unknown_are_unknown_even_with_exit_zero(self) -> None:
+        for completion in (
+            {"status": "unknown", "cleanup_verified": False},
+            {"status": "pass", "permission_or_identity_gap": True},
+            {"status": "pass", "cleanup_verified": False},
+            None,
+        ):
+            with self.subTest(completion=completion):
+                receipt = _bounded_receipt(cpu_seconds=None, rss_bytes=None)
+                receipt["completion"] = completion
+                manifest = _write_fixture(self.tmp_path, receipt)
+                report = build_evidence(manifest, self.tmp_path)
+                self.assertEqual(report["runtime_status"], "unknown")
+                self.assertEqual(report["overall"], "unknown")
+                self.assertIsNone(report["resource_summary"]["max_observed_rss_bytes"])
+                self.assertEqual(report["scientific_acceptance"], "not_assessed")
+
+    def test_nonterminal_recovery_and_unknown_result_cannot_pass(self) -> None:
+        cases = [
+            {**_bounded_receipt(), "recovery": {"status": "running"}},
+            {**_bounded_receipt(), "recovery": None},
+            _bounded_receipt(kind="completion_unknown", exit_code=None),
+            _bounded_receipt(kind="recovery_unknown", exit_code=-15),
+            {"schema": "bounded-run-running.v1", "state": "prepared", "run_id": "interrupted-before-terminal"},
+        ]
+        for receipt in cases:
+            with self.subTest(receipt=receipt):
+                manifest = _write_fixture(self.tmp_path, receipt)
+                report = build_evidence(manifest, self.tmp_path)
+                self.assertEqual(report["runtime_status"], "unknown")
+                self.assertEqual(report["overall"], "unknown")
+
+    def test_complete_new_receipt_and_legacy_receipt_both_remain_supported(self) -> None:
+        for current in (False, True):
+            with self.subTest(current=current):
+                receipt = _bounded_receipt(cpu_seconds=None, rss_bytes=None)
+                if current:
+                    receipt["completion"] = {"status": "pass", "cleanup_verified": True,
+                                             "permission_or_identity_gap": False}
+                    receipt["recovery"] = {"run_id": "complete", "status": "terminal"}
+                manifest = _write_fixture(self.tmp_path, receipt)
+                report = build_evidence(manifest, self.tmp_path)
+                self.assertEqual(report["runtime_status"], "pass")
+                self.assertEqual(report["overall"], "pass")
+
+    def test_embedded_runner_error_cannot_be_hidden_by_success_kind(self) -> None:
+        receipt = _bounded_receipt()
+        receipt["result"]["runner_errors"] = [{"stage": "metrics_write", "type": "PermissionError"}]
+        manifest = _write_fixture(self.tmp_path, receipt)
+        report = build_evidence(manifest, self.tmp_path)
+        self.assertEqual(report["runtime_status"], "fail")
+        self.assertEqual(report["overall"], "fail")
+
 
 if __name__ == "__main__":
     unittest.main()

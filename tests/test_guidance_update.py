@@ -16,13 +16,14 @@ import tempfile
 import unittest
 from pathlib import Path
 from typing import Mapping
+from unittest import mock
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from tools.guidance_update import capture, check_adoption, make_plan, verify_snapshot, _rel, main
+from tools.guidance_update import capture, check_adoption, make_plan, verify_snapshot, _rel, _git, main
 
 try:
     from tools.guidance_update import SupportError
@@ -487,11 +488,50 @@ class GuidanceUpdateContractTests(unittest.TestCase):
         self.assertEqual(target.read_bytes(), b"keep\n")
 
     def test_receiver_rejects_extra_unlisted_material(self) -> None:
-        root = self._write_package("received-extra", {"README.md": "package\n"})
-        snapshot = capture(root)
-        (root / "core/scripts").mkdir(parents=True)
-        (root / "core/scripts/unlisted.py").write_bytes(b"pass\n")
-        self.assertEqual(verify_snapshot(root, snapshot)["overall"], "fail")
+        for name, relative in [("script", "core/scripts/unlisted.py"),
+                               ("contract", "machine/time-budget-recovery-contract.json")]:
+            with self.subTest(name=name):
+                root = self._write_package("received-extra-" + name, {"README.md": "package\n"})
+                snapshot = capture(root)
+                path = root / relative
+                path.parent.mkdir(parents=True)
+                path.write_bytes(b"{}\n")
+                self.assertEqual(verify_snapshot(root, snapshot)["overall"], "fail")
+
+    def test_git_query_timeout_and_permission_failure_leave_unknown_receipt(self) -> None:
+        for name, failure in [("timeout", subprocess.TimeoutExpired("git", 120)),
+                              ("permission", PermissionError("query denied")),
+                              ("interrupt", KeyboardInterrupt())]:
+            with self.subTest(name=name):
+                root = self._write_package("query-" + name, {"README.md": "package\n"})
+                (root / ".git").mkdir()
+                out = name + ".json"
+                with mock.patch("tools.guidance_update.subprocess.run", side_effect=failure) as query:
+                    code = main(["--work-root", str(self.temp_root), "--out", out,
+                                 "capture", "--root", str(root), "--git-timeout-seconds", "120",
+                                 "--git-timeout-reason", "Slow storage in this task"])
+                self.assertEqual(code, 130 if name == "interrupt" else 2)
+                self.assertEqual(query.call_args.kwargs["timeout"], 120)
+                receipt = json.loads((self.temp_root / out).read_text(encoding="utf-8"))
+                self.assertEqual(receipt["overall"], "unknown")
+                self.assertFalse(receipt["active_version_written"])
+                self.assertFalse(receipt["automatic_retry"])
+                self.assertEqual(receipt["scientific_acceptance"], "not_assessed")
+                self.assertTrue((root / "README.md").exists())
+
+    def test_git_query_uses_configured_wait_without_global_maximum(self) -> None:
+        with mock.patch("tools.guidance_update.subprocess.run",
+                        return_value=subprocess.CompletedProcess(["git"], 0, stdout=b"ok")) as query:
+            self.assertEqual(_git(self.temp_root, "status", timeout_seconds=600), b"ok")
+        self.assertEqual(query.call_args.kwargs["timeout"], 600)
+
+    def test_capture_error_does_not_write_inside_protected_payload(self) -> None:
+        root = self._write_package("protected-output", {"README.md": "package\n"})
+        target = root / "forbidden.json"
+        code = main(["--work-root", str(self.temp_root), "--out", "protected-output/forbidden.json",
+                     "capture", "--root", str(root)])
+        self.assertEqual(code, 1)
+        self.assertFalse(target.exists())
 
 
 if __name__ == "__main__":

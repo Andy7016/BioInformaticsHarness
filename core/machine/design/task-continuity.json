@@ -142,7 +142,7 @@
         "context_path",
         "context_sha256"
       ],
-      "bounded_run_check": "Requires bounded-run-receipt.v1, success with exit code zero, positive root_pid, command.cwd equal to work_root, and an exact current task/context binding."
+      "bounded_run_check": "Requires bounded-run-receipt.v1, success with exit code zero, positive root_pid, command.cwd equal to work_root, and an exact current task/context binding. New explicit completion metadata must report status=pass; legacy receipts without it retain their old interpretation."
     },
     "delivery_contract": {
       "artifact_shape": "{requirement_id,path,bytes,sha256}, exactly one artifact per selected requirement and no unexpected requirement IDs.",
@@ -208,6 +208,12 @@
         "scientific_acceptance": "not_assessed"
       }
     ],
+    "scientific_acceptance": "not_assessed"
+  },
+  "time_budget_recovery": {
+    "contract": "machine/time-budget-recovery-contract.json",
+    "revision": "2026-10-27",
+    "historical_results_and_budgets": "preserved",
     "scientific_acceptance": "not_assessed"
   }
 }

@@ -488,17 +488,22 @@ def _validate_environment(
                 import_names.append(name)
 
     timeout_value = environment.get("timeout_seconds", 10)
+    try:
+        numeric_timeout = float(timeout_value) if isinstance(timeout_value, (int, float)) and not isinstance(timeout_value, bool) else None
+    except (OverflowError, ValueError):
+        numeric_timeout = None
     if (
-        isinstance(timeout_value, bool)
-        or not isinstance(timeout_value, (int, float))
-        or not math.isfinite(float(timeout_value))
-        or float(timeout_value) <= 0
-        or float(timeout_value) > 60
+        numeric_timeout is None
+        or not math.isfinite(numeric_timeout)
+        or numeric_timeout <= 0
     ):
-        errors.append("timeout_seconds must be finite and between 0 and 60")
+        errors.append("timeout_seconds must be positive and finite")
         timeout_seconds = 10.0
     else:
-        timeout_seconds = float(timeout_value)
+        timeout_seconds = numeric_timeout
+    timeout_basis = environment.get("timeout_basis", "operational_import_probe_guard; not a research deadline")
+    if not isinstance(timeout_basis, str) or not timeout_basis.strip():
+        errors.append("timeout_basis must be a nonempty string")
 
     probe: dict[str, Any] = {
         "status": "not_applicable",
@@ -506,6 +511,8 @@ def _validate_environment(
         "required": required,
         "imports": import_names,
         "timeout_seconds": timeout_seconds,
+        "timeout_basis": timeout_basis,
+        "timeout_scope": "fixed interpreter/import probe only",
     }
     if python_path is not None:
         probe["python"] = str(python_path)
@@ -523,6 +530,7 @@ def _validate_environment(
         "cwd": cwd_path,
         "imports": import_names,
         "timeout_seconds": timeout_seconds,
+        "timeout_basis": timeout_basis,
     }
 
 
@@ -536,6 +544,12 @@ def _probe_environment(spec: Mapping[str, Any], root: Path) -> dict[str, Any]:
         "cwd": _relative(root, spec["cwd"]),
         "imports": list(spec["imports"]),
         "timeout_seconds": spec["timeout_seconds"],
+        "timeout_basis": spec.get("timeout_basis", "operational_import_probe_guard; not a research deadline"),
+        "timeout_scope": "fixed interpreter/import probe only",
+        "research_completion": "not_assessed",
+        "permission_changes": False,
+        "automatic_retry": False,
+        "termination_scope": "subprocess direct child; arbitrary import-created descendants not contained",
         "observed_at_utc": started_at,
     }
     python_path: Path = spec["python"]
@@ -566,6 +580,9 @@ def _probe_environment(spec: Mapping[str, Any], root: Path) -> dict[str, Any]:
         result.update({"reason": "timeout", "timeout_seconds": spec["timeout_seconds"]})
         if exc.stdout:
             result["stdout_bytes"] = len(exc.stdout)
+        return result
+    except KeyboardInterrupt:
+        result.update({"reason": "probe_interrupted"})
         return result
     except OSError as exc:
         result.update({"reason": "interpreter_start_failed", "error": _safe_text(exc)})

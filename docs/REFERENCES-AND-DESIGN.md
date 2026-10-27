@@ -223,3 +223,7 @@ RNA velocity的独立原文图、冻结配对及后续两项定向补实，已�
 ## 进行中课题的版本更新
 
 [Git bundle](https://git-scm.com/docs/git-bundle)说明提交与引用的可迁移范围，[submodule](https://git-scm.com/docs/git-submodule)说明依赖版本的固定方式，[Codex worktree](https://developers.openai.com/codex/app/worktrees)说明同仓库并行工作的历史关系。据此将公共指导与课题历史分层，并形成[更新指南](harness-updates.md)。变化索引、接收与采用契约及结构测试见[机器记录](../machine/guidance-update-contract.json)。
+
+## 时间预算与异常恢复
+
+[Python 子进程文档](https://docs.python.org/3.11/library/subprocess.html#subprocess.run)说明等待、终止和异常的关系；[psutil 文档](https://psutil.readthedocs.io/stable/index.html)说明进程身份、权限不足和终止后观察。结合既有任务、运行与接受接口，形成[续跑补充](../core/docs/methods/guides/task-continuity.md#时间预算与恢复)及[时间与恢复契约](../machine/time-budget-recovery-contract.json)，由受控短作业和异常路径检查其操作行为。

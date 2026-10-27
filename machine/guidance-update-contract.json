@@ -17,12 +17,26 @@
     "legacy": "Retain null commit and rehash the old declared inventory. Do not infer commit from date, tag or directory name.",
     "snapshot_seal": "Canonical SHA-256 metadata digest excluding package_id and observed_at_utc; payload_id hashes sorted measured file entries. These are integrity identifiers, not signatures.",
     "inventory": "Public checkpoint or legacy guidance-freeze schemas only. Inventory self-entry is measured separately, avoiding recursive self-hashing.",
-    "bounds": "At most 10000 inventory entries, 32 MiB per file, 128 MiB total. Known method/tool/schema/entrypoint material omitted from inventory is rejected. Full release verification is still required for publication."
+    "bounds": "At most 10000 inventory entries, 32 MiB per file, 128 MiB total. Known method/tool/schema/entrypoint material omitted from inventory is rejected. Full release verification is still required for publication.",
+    "git_query_budget": "Configurable operational query wait and task/environment basis; timeout/launch permission failures produce pending unknown error receipts. No authority or active-version change."
   },
   "change_notes": {
     "directory": "machine/changes/",
-    "required_fields": ["id", "summary", "impact", "paths", "reading_paths", "revisit", "acceptance"],
-    "impact_values": ["guidance", "interface", "editorial", "scientific_correction"],
+    "required_fields": [
+      "id",
+      "summary",
+      "impact",
+      "paths",
+      "reading_paths",
+      "revisit",
+      "acceptance"
+    ],
+    "impact_values": [
+      "guidance",
+      "interface",
+      "editorial",
+      "scientific_correction"
+    ],
     "append_only": "An existing note cannot be deleted or edited across an update. Add a new superseding note instead.",
     "commit_link": "Capture resolves introduced_commit for the note path from Git. An uncommitted new note has null introduced_commit. A historical backfill must separately state its original feature provenance; note introduction does not date the underlying feature.",
     "effect": "New notes reappraise their paths even if target bytes are unchanged. Unchanged historical notes cannot index later unannotated changes.",
@@ -30,10 +44,30 @@
     "unindexed_material": "Changed known material always becomes an explicit review; an absent note never silently accepts it. Other changed files remain in changes for study-level triage."
   },
   "study_protocol": {
-    "preserve_first": ["old package", "current question and decisions", "evidence and reading ledgers", "plans and running work", "model states and results", "first judgments and revisions"],
+    "preserve_first": [
+      "old package",
+      "current question and decisions",
+      "evidence and reading ledgers",
+      "plans and running work",
+      "model states and results",
+      "first judgments and revisions"
+    ],
     "preserve_manifest": "Study-root-relative path/bytes/sha256 entries. The checker validates only these explicit protected files; the tool never writes research files or automatically freezes an entire study.",
-    "states": ["received", "identities_checked", "impact_appraisal_pending", "required_reading_declared", "derived_revisions_reviewed", "accepted_for_declared_scope"],
-    "dispositions": ["retain", "revise", "qualify", "not_applicable", "defer"],
+    "states": [
+      "received",
+      "identities_checked",
+      "impact_appraisal_pending",
+      "required_reading_declared",
+      "derived_revisions_reviewed",
+      "accepted_for_declared_scope"
+    ],
+    "dispositions": [
+      "retain",
+      "revise",
+      "qualify",
+      "not_applicable",
+      "defer"
+    ],
     "revise_or_qualify": "Reference newly derived artifacts and an existing acceptance_ref through the existing revisor workflow. Old results and old acceptance criteria remain attributed to their original package.",
     "defer": "The structural check remains unknown and pending. Continue unrelated authorized work under its recorded version; do not silently accept the affected gate.",
     "activation": "After impact appraisal and necessary revisor acceptance, record adopted package, declared study scope, effective time, responsible actor and next acceptance point. This tool does not write an active-version pointer.",
@@ -51,8 +85,14 @@
   "cli_rules": {
     "work_root": "Create the intended records directory first; all output and input record names are canonical relative paths inside it. Capture output must be outside captured payload.",
     "output": "Exclusive new files only; existing outputs are rejected. Use a new run path to retain earlier records.",
-    "exit_codes": {"pass": 0, "fail": 1, "unknown": 2},
-    "capture_or_plan_success": "A generated plan remains pending study appraisal even though plan generation exits successfully."
+    "exit_codes": {
+      "pass": 0,
+      "fail": 1,
+      "unknown": 2,
+      "interrupted": 130
+    },
+    "capture_or_plan_success": "A generated plan remains pending study appraisal even though plan generation exits successfully.",
+    "error_receipt": "harness.guidance-operation-error/v1; attempted exclusive write at requested output. Disk failure reports error_receipt_written=false."
   },
   "receipt_template": {
     "schema": "harness.guidance-adoption/v1",
@@ -61,20 +101,44 @@
     "to_package_id": "COPY_FROM_PLAN",
     "actor": "RESPONSIBLE_RESEARCHER_OR_AGENT",
     "scope": "CURRENT_STUDY_AND_NEXT_GATE",
-    "decisions": [{
-      "review_id": "COPY_REVIEW_ID",
-      "disposition": "retain",
-      "reason": "Explain applicability to current evidence and next decision.",
-      "readings": [{"path": "COPY_EACH_REQUIRED_READING_PATH", "sha256": "COPY_AFTER_ACTUAL_READING"}],
-      "artifacts": [],
-      "acceptance_ref": "REQUIRED_FOR_REVISE_OR_QUALIFY"
-    }]
+    "decisions": [
+      {
+        "review_id": "COPY_REVIEW_ID",
+        "disposition": "retain",
+        "reason": "Explain applicability to current evidence and next decision.",
+        "readings": [
+          {
+            "path": "COPY_EACH_REQUIRED_READING_PATH",
+            "sha256": "COPY_AFTER_ACTUAL_READING"
+          }
+        ],
+        "artifacts": [],
+        "acceptance_ref": "REQUIRED_FOR_REVISE_OR_QUALIFY"
+      }
+    ]
   },
   "git_and_feedback": {
     "default": "Public Harness upstream plus separate private study history with a pinned dependency/package identity. Versioned folders work without Git metadata.",
-    "optional": ["independent public clone", "submodule pinned to commit", "bundle of selected public refs", "same-repository worktree for local parallel development"],
-    "avoid": ["copying private archive .git into a public payload", "equating a study repository HEAD with Harness upstream HEAD", "merging entire private research history as Harness feedback", "assuming a worktree is automatically a named branch"],
-    "feedback_unit": ["minimal observed failure or useful behavior", "conditions and affected version", "proposed general rule or scoped method card", "positive and counterexample", "bounded validation and attribution", "public disclosure review"],
+    "optional": [
+      "independent public clone",
+      "submodule pinned to commit",
+      "bundle of selected public refs",
+      "same-repository worktree for local parallel development"
+    ],
+    "avoid": [
+      "copying private archive .git into a public payload",
+      "equating a study repository HEAD with Harness upstream HEAD",
+      "merging entire private research history as Harness feedback",
+      "assuming a worktree is automatically a named branch"
+    ],
+    "feedback_unit": [
+      "minimal observed failure or useful behavior",
+      "conditions and affected version",
+      "proposed general rule or scoped method card",
+      "positive and counterexample",
+      "bounded validation and attribution",
+      "public disclosure review"
+    ],
     "branch_naming_example": "codex/harness-feedback-TOPIC",
     "research_outcome": "Study progress and scientific findings stay in the study. Only curated reusable changes are proposed upstream."
   },

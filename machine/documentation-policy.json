@@ -127,7 +127,8 @@
     "core/examples/research-support/preparation/coverage-example/*.txt": "Apache-2.0",
     "core/examples/research-support/preparation/choice-synthesis-example/rereading/*.json": "CC-BY-4.0",
     "core/examples/research-support/preparation/choice-synthesis-example/rereading/machine/*.json": "CC-BY-4.0",
-    "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/*.json": "CC-BY-4.0"
+    "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/*.json": "CC-BY-4.0",
+    "core/tests/test_run_recovery.py": "Apache-2.0"
   },
   "license_scope_updates": [
     {
@@ -185,6 +186,13 @@
       "reason": "D59 first-party scientific notes/maps/revision/reading records only;no executable code,third-party paper bodies,figures or data rows redistributed. Apply existing narrative CC BY4.0 license.",
       "scopes": {
         "core/examples/research-support/preparation/choice-synthesis-example/biological-argument/*.json": "CC-BY-4.0"
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "reason": "First-party controlled runtime recovery and publication tests retain the project code license; no third-party data included.",
+      "scopes": {
+        "core/tests/test_run_recovery.py": "Apache-2.0"
       }
     }
   ]

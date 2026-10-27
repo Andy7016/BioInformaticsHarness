@@ -317,12 +317,32 @@ def _bounded_status(receipt: Mapping[str, Any]) -> tuple[str, str, dict[str, int
     kind = result.get("kind")
     code = result.get("root_exit_code")
     resources = _resource_measurement(receipt)
+    if kind in {"launch_error", "nonzero_exit", "timeout", "memory_limit", "runner_error", "interrupted", "preparation_error"}:
+        return "fail", f"result.kind={kind}", resources
+    if result.get("runner_errors"):
+        return "fail", "bounded-run receipt reports runner errors", resources
+    # New receipts state cleanup/recovery completeness separately. Old v1
+    # receipts lack these fields and keep their historical interpretation.
+    if "completion" in receipt:
+        completion = receipt["completion"]
+        if not isinstance(completion, dict):
+            return "unknown", "bounded-run completion record is unreadable", resources
+        if completion.get("status") == "fail":
+            return "fail", "bounded-run completion reports failure", resources
+        if completion.get("status") != "pass":
+            return "unknown", "bounded-run completion or cleanup is unconfirmed", resources
+        if completion.get("cleanup_verified") is False or completion.get("permission_or_identity_gap") is True:
+            return "unknown", "bounded-run completion has a cleanup or identity gap", resources
+    if "recovery" in receipt:
+        recovery = receipt["recovery"]
+        if not isinstance(recovery, dict) or recovery.get("status") != "terminal":
+            return "unknown", "bounded-run recovery record is not terminal", resources
+    if kind in {"completion_unknown", "recovery_unknown", "incomplete", "unknown"}:
+        return "unknown", f"result.kind={kind}", resources
     if kind == "success" and type(code) is int and code == 0:
         return "pass", "result.kind=success and root_exit_code=0", resources
     if type(code) is int and code != 0:
         return "fail", f"root_exit_code={code}", resources
-    if kind in {"launch_error", "nonzero_exit", "timeout", "memory_limit"}:
-        return "fail", f"result.kind={kind}", resources
     return "unknown", "bounded-run result is incomplete or unrecognized", resources
 
 
