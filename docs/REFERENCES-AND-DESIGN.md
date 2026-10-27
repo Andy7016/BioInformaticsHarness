@@ -2,7 +2,7 @@
 
 This index follows sources through design choices, public guidance or examples, and the result recorded for each stated scope. It covers academic methods, formal model cases, early engineering frameworks, official software guidance, guided research applications, UCI examples, and historical README writing references. The machine ledger preserves exact reading scopes, unknowns, analysis phases, and archive-only evidence locations.
 
-There are **91 relationship records** linked to **79 source identifiers**. A source can appear in more than one relationship when it serves a different role, such as a paper citation and a separate case analysis.
+There are **118 relationship records** linked to **130 source identifiers**. A source can appear in more than one relationship when it serves a different role, such as a paper citation and a separate case analysis.
 
 Formal model-case results here describe source-led paper and implementation analysis, with retrospective manuscript review where recorded. Model execution and saved-artifact applications have their own records below.
 
@@ -213,3 +213,13 @@ The [core bibliography](../core/REFERENCES.md) is the reader-facing citation lis
 ## 原文重读与生物论证链的实际采用
 
 [D57方法取舍](../core/docs/design/34-review-choice-synthesis.md)、[D58视角与重读](../core/docs/design/35-rereading-perspectives.md)及[D59生物论证链](../core/docs/design/36-biological-argument.md)已完成指南与工作例接受。随后旧三例及空间转录组、RNA velocity、微生物组成案例分别提供采用、保留与修订证据；逐来源贡献及适用条件见[研究总结](research/rereading-validation-2026-10-27.zh.md)。技术分类与原始档案可得性见[结构化记录](../machine/research/rereading-validation-2026-10-27.json)。
+
+## 长程续研与工程上手
+
+原始研究对记忆更新、有效执行和评价效度的分析形成[续研补充](../core/docs/methods/guides/task-continuity.md)；工程目的导航形成[独立方法卡](../core/docs/methods/cards/model-engineering-orientation.md)。实际采用、Splice保存模型消费与历史成员补查见[研究总结](research/long-research-and-engineering-2026-10-27.zh.md)，公开结果范围见[结构化摘要](../machine/research/long-research-and-engineering-2026-10-27.json)。
+
+RNA velocity的独立原文图、冻结配对及后续两项定向补实，已在同份研究总结中单列；原先判断和后续修订按各自范围解释。
+
+## 进行中课题的版本更新
+
+[Git bundle](https://git-scm.com/docs/git-bundle)说明提交与引用的可迁移范围，[submodule](https://git-scm.com/docs/git-submodule)说明依赖版本的固定方式，[Codex worktree](https://developers.openai.com/codex/app/worktrees)说明同仓库并行工作的历史关系。据此将公共指导与课题历史分层，并形成[更新指南](harness-updates.md)。变化索引、接收与采用契约及结构测试见[机器记录](../machine/guidance-update-contract.json)。

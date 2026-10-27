@@ -44,6 +44,16 @@
       "technical_records": [
         "machine/research/rereading-validation-2026-10-27.json"
       ]
+    },
+    {
+      "id": "2026-10-27-guidance-updates",
+      "date": "2026-10-27",
+      "reason": "Preserve study history while binding source identity, indexed rereading and scoped adoption.",
+      "technical_records": [
+        "machine/guidance-update-contract.json",
+        "machine/changes/guidance-updates-20261027.json"
+      ],
+      "acceptance": "Contract tests and independent protocol review; scientific study adoption remains separate."
     }
   ],
   "current_identity": {

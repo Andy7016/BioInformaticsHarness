@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "792ede97903bc7cbf8d3d87aaa4e15f5526ecc3f",
+    "head": "c496def358b771325db0e0ace721565098f1f2ed",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 5404,
-      "current_sha256": "65937f4bde374faadca241179de70ea4e630aedc305863cecb64fb4080e933bc"
+      "current_bytes": 6112,
+      "current_sha256": "61f389f270ffd08d2a3f5624e665b9fd2af0e50465894eb38a3db1383f684ddf"
     },
     {
       "path": "LICENSING.md",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 3461,
-      "current_sha256": "38243a192336c0f915b8058b3aa49844cc83703c75c5235b590457a1f9e897c2"
+      "current_bytes": 3571,
+      "current_sha256": "fb1d76a9e0e266a360d46b1115405b4684daf25f71e0f1c5eb7e3c1cceeb825a"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 263266,
-      "current_sha256": "bab0aca54fd1872c2818e716c29cb71c13ea11491f4c8c23b39dd459958cf76a"
+      "current_bytes": 265053,
+      "current_sha256": "5d2a14be672df77729141ba449a4c90826dc168bf05839ac2601024d24e54d28"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -430,8 +430,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 11606,
-      "current_sha256": "24ffe3c18c117e634249540a4ecf717220fb81d6d2ccd24c7f0a46a9a94612ac"
+      "current_bytes": 11859,
+      "current_sha256": "ade93a2b289aa8b87db8095192dd261d4a67b03724a044d1a165b9319a667a90"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -477,6 +477,13 @@
       "previous_sha256": "ee98fd41fd4505fa0b5e1a0900050f9e29ce96b4aead3244a822ab2993c79dc4",
       "current_bytes": 5537,
       "current_sha256": "b512854deabf6731140a62223e77b774f5b57f9d6efbc1e993f83c0a59e9b9f0"
+    },
+    {
+      "path": "core/docs/methods/cards/model-engineering-orientation.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4125,
+      "current_sha256": "8967070c8ba6b47b1f9fed4420b6047ba5aab8a926fd1ddd8d318c79458528a2"
     },
     {
       "path": "core/docs/methods/cards/molecular-graph.md",
@@ -740,8 +747,8 @@
       "path": "core/docs/methods/guides/task-continuity.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2573,
-      "current_sha256": "0c4d62c32cf4eaefbd8b70b15ddc7f5eb83d468bbc55546ff05c46142186f931"
+      "current_bytes": 3378,
+      "current_sha256": "5bd9526b2b94f0aa2b33a36a5ac9ac6d7cb871b6fdebf203fb0ce3e47b6168b0"
     },
     {
       "path": "core/docs/methods/handoff-contract.md",
@@ -1553,8 +1560,15 @@
       "path": "docs/REFERENCES-AND-DESIGN.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 65358,
-      "current_sha256": "36e663105302427885bd57b39757846fdf5c13d479c6cf0bcfac5b677e989e4f"
+      "current_bytes": 66584,
+      "current_sha256": "c072a5c5b61d0c22a002f4ac33f7721a858c8d364fb565bf4db36532d339c5f8"
+    },
+    {
+      "path": "docs/harness-updates.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5097,
+      "current_sha256": "602e08c563b0eb22ade04d582a17514984783077b0b38ab252c4c3710ee7191c"
     },
     {
       "path": "docs/history/EVOLUTION.zh.md",
@@ -1571,6 +1585,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 3846,
       "current_sha256": "ab0d034acd3ddb275d09db70f3ca6877215319160d3bf412769af95459591b22"
+    },
+    {
+      "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7291,
+      "current_sha256": "b2573d2ce414d986bb01a58764dd34c3a18c4d6bc9a3148dd71e8f285400ec92"
     },
     {
       "path": "docs/research/open-exploration-2026-10-27.zh.md",
@@ -1633,8 +1654,8 @@
       "path": "machine/AGENT-INSTRUCTIONS.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1802,
-      "current_sha256": "c1f090b2e60b17a2711337eaa8a1e91847b5bc71f39f335573cd4cd2065f5309"
+      "current_bytes": 2476,
+      "current_sha256": "d14411427f1a14bbaf2af78ae90dd77d2da4062cb8b3dc2ac6e9446d429e5312"
     },
     {
       "path": "machine/archive-pointers.jsonl",
@@ -1644,11 +1665,25 @@
       "current_sha256": "4b007244be595ba374977f6be3cdcb921a0fdbe908725ca582e3c9ccd5dcc67f"
     },
     {
+      "path": "machine/changes/continuity-and-engineering-20261027.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1399,
+      "current_sha256": "d5862a5d843fa6936827f62f7c1dc8f75a4243a7f4f3102cf2718c2c4f99ca27"
+    },
+    {
+      "path": "machine/changes/guidance-updates-20261027.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1280,
+      "current_sha256": "0eb7e548cffda826c114dbe2de0816f1ab359e5fb3340c913a3216bd34b21a49"
+    },
+    {
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6190,
-      "current_sha256": "9faa306a7b710c1949f106b52f5b20732b36def2e7dd426304fca15a4d177d6c"
+      "current_bytes": 6654,
+      "current_sha256": "0a9348b5accc92f9b90a6344a93b5b21fa4a2f3aff21be9359a53790d4e4df44"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1668,8 +1703,8 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5484,
-      "current_sha256": "73ea08eb5b795222e9193fa4bec65f1cda6975724432440f753ba3886f919dd1"
+      "current_bytes": 5948,
+      "current_sha256": "26606fbf7a9e09379666fcabdecd3c32c591dcceda5b5cbf6c9d6d6a1388c7b1"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
@@ -1962,8 +1997,8 @@
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 29613,
-      "current_sha256": "0ea2145cccab2af7f1bfb383108e4e7edfd3a8fda540e8f700e52ae88110f22b"
+      "current_bytes": 29987,
+      "current_sha256": "b0831e2c189735e40f9d275d935a18468d570a4046a4f45b25bab6c863eb776e"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -1999,6 +2034,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 7203,
       "current_sha256": "75d17b6b3912e81068367f93cca9a3b8794694e73c0df7579afc3725aef83d8a"
+    },
+    {
+      "path": "machine/document-notes/core/docs/methods/cards/model-engineering-orientation.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 595,
+      "current_sha256": "cf5e6a52909c681461618ebb7290f0dc0a07114620a5e0d13f22a4465deabe15"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/molecular-graph.md.json",
@@ -2214,8 +2256,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/task-continuity.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 638,
-      "current_sha256": "fb4431f37f516caa6d6aa25a9b5d93c1fec7d851129e21fe3e5c9658ab13776f"
+      "current_bytes": 1080,
+      "current_sha256": "0f0c5d036ec70471facb126136e1c7fe9d306d436f5164c4d6123e0732146bb2"
     },
     {
       "path": "machine/document-notes/core/docs/methods/handoff-contract.md.json",
@@ -2571,8 +2613,15 @@
       "path": "machine/document-notes/docs/REFERENCES-AND-DESIGN.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5866,
-      "current_sha256": "c53aae3027410f0e8f0b79a9b6778185a4e87cfb1df87e1d84de6d32b8c645e2"
+      "current_bytes": 7072,
+      "current_sha256": "f8ebe61433a269de379e9410f9719d5aee0869b37a583225d4d53a02ca755c2b"
+    },
+    {
+      "path": "machine/document-notes/docs/harness-updates.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 611,
+      "current_sha256": "6733834941a4f128857dfc90a40fa3ae2352cb1ca03517e80537a7566bd6c751"
     },
     {
       "path": "machine/document-notes/docs/history/EVOLUTION.zh.md.json",
@@ -2587,6 +2636,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 601,
       "current_sha256": "915aa9718e94cb33d90ea4f154501c1e2dabd402e284036c61d522b3c238411a"
+    },
+    {
+      "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 916,
+      "current_sha256": "60254f8d300ade92cd7d903dd13be4aa6d3d315846e27e488fa92fcb0c7fb681"
     },
     {
       "path": "machine/document-notes/docs/research/open-exploration-2026-10-27.zh.md.json",
@@ -2652,6 +2708,13 @@
       "current_sha256": "75600091a44878538b4207f2bdea0d725cfad9afe3f0e0e20a4bcf48acee1119"
     },
     {
+      "path": "machine/guidance-update-contract.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 8163,
+      "current_sha256": "76ab7e8854c64e737073e5475efe4898576d82cdfcda563fa4ab2699af39a3c5"
+    },
+    {
       "path": "machine/history/preparation-priority-2026-10-24.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2701,6 +2764,13 @@
       "current_sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302"
     },
     {
+      "path": "machine/research/long-research-and-engineering-2026-10-27.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7997,
+      "current_sha256": "4b27689bf445add6cda9caebccd4ffa11bce15314f64cd680871e8417a81621d"
+    },
+    {
       "path": "machine/research/open-exploration-2026-10-27.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2732,8 +2802,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 248583,
-      "current_sha256": "3aa1544b6b746df1f05ccfc351eede5d75f82a9cc973409638fa2f642cd82ea7"
+      "current_bytes": 256994,
+      "current_sha256": "4444e50a01e73894eeb64fdddc26609bd6a40089dc71c446d71844ce87874f59"
     },
     {
       "path": "tests/test_documentation.py",
@@ -2743,11 +2813,25 @@
       "current_sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9"
     },
     {
+      "path": "tests/test_guidance_update.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 21265,
+      "current_sha256": "b1f25864ae8c9c2d77b383fa54dbce57f8f3c3a14394ee853d8c63a773683450"
+    },
+    {
       "path": "tools/documentation.py",
       "change": "added",
       "baseline_revision": "764bd88",
       "current_bytes": 65402,
       "current_sha256": "e39783dded058fc65f34bcc7cceafa5eed4f108d9d1be786491138726392c285"
+    },
+    {
+      "path": "tools/guidance_update.py",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 21432,
+      "current_sha256": "8681f1df01c6c411d87a9a44b8173d23386da6b582c4c6a28a62e8043cb6869f"
     }
   ]
 }

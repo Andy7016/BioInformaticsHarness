@@ -1576,16 +1576,16 @@
       }
     },
     {
-      "bytes": 11606,
+      "bytes": 11859,
       "license": "CC-BY-4.0",
       "path": "docs/methods/README.md",
       "role": "normative-prose",
-      "sha256": "24ffe3c18c117e634249540a4ecf717220fb81d6d2ccd24c7f0a46a9a94612ac",
+      "sha256": "ade93a2b289aa8b87db8095192dd261d4a67b03724a044d1a165b9319a667a90",
       "source": "docs/methods/README.md",
       "source_sha256": "f75818893f6d0969025b5831d8db4969a01f9a5e922dd7fee1ffa083d6a89ac4",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-24",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
@@ -1597,11 +1597,11 @@
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
-              "revision": "2026-10-23",
+              "revision": "2026-10-24",
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-22",
+                "revision": "2026-10-23",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
@@ -1615,13 +1615,18 @@
                     "previous_details": {
                       "revision": "2026-10-22",
                       "baseline_revision": "764bd88",
-                      "previous_transform": "markdown-links-and-local-redaction",
+                      "previous_transform": "first-party-documentation-revision",
                       "previous_details": {
-                        "changed": true,
-                        "images_converted_to_ordinary_links": 0,
-                        "links_redirected_to_archive_pointers": 13,
-                        "links_rewritten_to_package": 104,
-                        "local_redactions": []
+                        "revision": "2026-10-22",
+                        "baseline_revision": "764bd88",
+                        "previous_transform": "markdown-links-and-local-redaction",
+                        "previous_details": {
+                          "changed": true,
+                          "images_converted_to_ordinary_links": 0,
+                          "links_redirected_to_archive_pointers": 13,
+                          "links_rewritten_to_package": 104,
+                          "local_redactions": []
+                        }
                       }
                     }
                   }
@@ -1647,11 +1652,11 @@
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
-              "revision": "2026-10-23",
+              "revision": "2026-10-24",
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-22",
+                "revision": "2026-10-23",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
@@ -1665,13 +1670,18 @@
                     "previous_details": {
                       "revision": "2026-10-22",
                       "baseline_revision": "764bd88",
-                      "previous_transform": "markdown-links-and-local-redaction",
+                      "previous_transform": "first-party-documentation-revision",
                       "previous_details": {
-                        "changed": true,
-                        "images_converted_to_ordinary_links": 0,
-                        "links_redirected_to_archive_pointers": 13,
-                        "links_rewritten_to_package": 104,
-                        "local_redactions": []
+                        "revision": "2026-10-22",
+                        "baseline_revision": "764bd88",
+                        "previous_transform": "markdown-links-and-local-redaction",
+                        "previous_details": {
+                          "changed": true,
+                          "images_converted_to_ordinary_links": 0,
+                          "links_redirected_to_archive_pointers": 13,
+                          "links_rewritten_to_package": 104,
+                          "local_redactions": []
+                        }
                       }
                     }
                   }
@@ -1865,6 +1875,20 @@
           "links_rewritten_to_package": 6,
           "local_redactions": []
         }
+      }
+    },
+    {
+      "path": "docs/methods/cards/model-engineering-orientation.md",
+      "bytes": 4125,
+      "sha256": "8967070c8ba6b47b1f9fed4420b6047ba5aab8a926fd1ddd8d318c79458528a2",
+      "license": "CC-BY-4.0",
+      "role": "documentation",
+      "source": "first-party-documentation-revision:docs/methods/cards/model-engineering-orientation.md",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
       }
     },
     {
@@ -3036,16 +3060,33 @@
     },
     {
       "path": "docs/methods/guides/task-continuity.md",
-      "bytes": 2573,
-      "sha256": "0c4d62c32cf4eaefbd8b70b15ddc7f5eb83d468bbc55546ff05c46142186f931",
+      "bytes": 3378,
+      "sha256": "5bd9526b2b94f0aa2b33a36a5ac9ac6d7cb871b6fdebf203fb0ce3e47b6168b0",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/task-continuity.md",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "docs/methods/guides/task-continuity.md",
+        "sha256": "0c4d62c32cf4eaefbd8b70b15ddc7f5eb83d468bbc55546ff05c46142186f931",
+        "source": "first-party-documentation-revision:docs/methods/guides/task-continuity.md",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6298,7 +6339,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "792ede97903bc7cbf8d3d87aaa4e15f5526ecc3f",
+    "head": "c496def358b771325db0e0ace721565098f1f2ed",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

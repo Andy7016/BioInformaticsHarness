@@ -9,3 +9,7 @@ Program-consumed Markdown fixtures and legal texts retain their contract and lic
 Exact command arguments, outputs, and mutation scopes are recorded in [documentation-operations.json](documentation-operations.json). Use its check and refresh contracts for ongoing documentation maintenance.
 
 Retained source_text, source_commit and source_sha256 describe the original document. Preserve those historical fields when adding later notes; record new revisions in machine/history or append a dated technical note. Evolve design decisions through additions or superseded relationships, with the original reason still recoverable.
+
+## Guidance updates during a study
+
+On receiving a replacement Harness, use docs/harness-updates.md and machine/guidance-update-contract.json. Record the supplied source/package identity, preserve the old study state, inspect old-to-new file deltas and machine/changes indices, actually reread required guidance, and appraise each current/next-gate impact. Keep historical notes append-only. Record retain/revise/qualify/not_applicable/defer decisions; send necessary derived scientific revisions through the existing revisor workflow. Record adopted scope separately. Do not turn receipt/check success into scientific acceptance or silently overwrite old conclusions.

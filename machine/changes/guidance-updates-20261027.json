@@ -1,0 +1,23 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "guidance-updates-20261027",
+  "summary": "Add source/package identity, append-only reading indices, non-destructive update plans and study adoption checks.",
+  "impact": "interface",
+  "paths": [
+    "docs/harness-updates.md",
+    "tools/guidance_update.py",
+    "machine/guidance-update-contract.json",
+    "machine/AGENT-INSTRUCTIONS.md",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "reading_paths": [
+    "docs/harness-updates.md",
+    "machine/guidance-update-contract.json",
+    "core/docs/methods/guides/revision-responses-and-acceptance.md"
+  ],
+  "reading_sections": {"docs/harness-updates.md": ["先确定正在使用的版本", "保留进度，逐项适配", "用 Git 支持课题分流与反馈"]},
+  "revisit": "On receiving a replacement Harness, preserve the prior study state, compare package inventories and appraise each affected current/next-gate use. Old packages without source commits remain explicitly legacy/unknown.",
+  "acceptance": "Check received bytes and required-reading identities, record all impact decisions, reference derived revisions and content acceptance where needed, then separately declare adopted scope. Pending items cannot silently become accepted.",
+  "historical_backfill": false
+}

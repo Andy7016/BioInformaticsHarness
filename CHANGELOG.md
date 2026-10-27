@@ -1,5 +1,12 @@
 # Changelog
 
+## 课题更新与长程续研 — 2026-10-27
+
+- 增加[更新指南](docs/harness-updates.md)，连接交付版本、变化索引、必要重读、课题适配和 revisor 接受。
+- 提供[通用更新契约与工具](machine/guidance-update-contract.json)，保留旧包与旧研究记录，明确新指导的生效范围。
+- 为[续跑指南与工程方法卡](machine/changes/continuity-and-engineering-20261027.json)、[更新机制](machine/changes/guidance-updates-20261027.json)建立可引导复议的索引。
+- 补入长程恢复的适用性、判断和下一责任，并用[研究总结](docs/research/long-research-and-engineering-2026-10-27.zh.md)连接实际采用与接受范围。
+
 ## 方法取舍、原文重读与生物论证链 — 2026-10-27
 
 - 提供方法取舍指南，按目的、对象与信息用途、比较条件和缺口响应组织选择。

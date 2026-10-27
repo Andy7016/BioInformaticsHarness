@@ -1,0 +1,87 @@
+{
+  "schema": "harness.guidance-update-contract/v1",
+  "status": "local_implementation_for_study_intake",
+  "human_guide": "docs/harness-updates.md",
+  "tool": "tools/guidance_update.py",
+  "schemas": {
+    "snapshot": "harness.guidance-snapshot/v1",
+    "plan": "harness.guidance-update-plan/v1",
+    "receipt": "harness.guidance-adoption/v1",
+    "change_note": "harness.guidance-change/v1"
+  },
+  "identity": {
+    "source": "Explicit payload-root Git only. A parent study repository is not searched.",
+    "source_commit": "HEAD is reported as commit only when a configured remote declares the expected public repository; any local HEAD is separately local_commit. The remote declaration is not upstream authentication.",
+    "exact_commit": "Matching declared remote, clean repository and all measured payload bytes equal Git blobs. This binds local bytes to a commit, not to a verified upstream release.",
+    "dirty_snapshot": "commit is a base; package_id and measured file identities describe the actual working snapshot.",
+    "legacy": "Retain null commit and rehash the old declared inventory. Do not infer commit from date, tag or directory name.",
+    "snapshot_seal": "Canonical SHA-256 metadata digest excluding package_id and observed_at_utc; payload_id hashes sorted measured file entries. These are integrity identifiers, not signatures.",
+    "inventory": "Public checkpoint or legacy guidance-freeze schemas only. Inventory self-entry is measured separately, avoiding recursive self-hashing.",
+    "bounds": "At most 10000 inventory entries, 32 MiB per file, 128 MiB total. Known method/tool/schema/entrypoint material omitted from inventory is rejected. Full release verification is still required for publication."
+  },
+  "change_notes": {
+    "directory": "machine/changes/",
+    "required_fields": ["id", "summary", "impact", "paths", "reading_paths", "revisit", "acceptance"],
+    "impact_values": ["guidance", "interface", "editorial", "scientific_correction"],
+    "append_only": "An existing note cannot be deleted or edited across an update. Add a new superseding note instead.",
+    "commit_link": "Capture resolves introduced_commit for the note path from Git. An uncommitted new note has null introduced_commit. A historical backfill must separately state its original feature provenance; note introduction does not date the underlying feature.",
+    "effect": "New notes reappraise their paths even if target bytes are unchanged. Unchanged historical notes cannot index later unannotated changes.",
+    "reading": "Each affected review binds the current target, active note and all of that note's reading_paths to exact identities. reading_sections provide human anchors; actual full relevant-file reading is declared by the receiving agent.",
+    "unindexed_material": "Changed known material always becomes an explicit review; an absent note never silently accepts it. Other changed files remain in changes for study-level triage."
+  },
+  "study_protocol": {
+    "preserve_first": ["old package", "current question and decisions", "evidence and reading ledgers", "plans and running work", "model states and results", "first judgments and revisions"],
+    "preserve_manifest": "Study-root-relative path/bytes/sha256 entries. The checker validates only these explicit protected files; the tool never writes research files or automatically freezes an entire study.",
+    "states": ["received", "identities_checked", "impact_appraisal_pending", "required_reading_declared", "derived_revisions_reviewed", "accepted_for_declared_scope"],
+    "dispositions": ["retain", "revise", "qualify", "not_applicable", "defer"],
+    "revise_or_qualify": "Reference newly derived artifacts and an existing acceptance_ref through the existing revisor workflow. Old results and old acceptance criteria remain attributed to their original package.",
+    "defer": "The structural check remains unknown and pending. Continue unrelated authorized work under its recorded version; do not silently accept the affected gate.",
+    "activation": "After impact appraisal and necessary revisor acceptance, record adopted package, declared study scope, effective time, responsible actor and next acceptance point. This tool does not write an active-version pointer.",
+    "reading_and_science": "Required digest declarations establish referenced material identity only. Actual comprehension, scientific acceptance and revisor judgment require content review.",
+    "history": "File delta is authoritative for legacy/dirty inputs. Even with exact commits, ancestry and whether to use a two-dot or other history comparison require separate Git inspection. No automatic pull, merge, rebase, rerun or history rewrite."
+  },
+  "commands": [
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out old.json capture --root OLD_PACKAGE",
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out legacy.json capture --root LEGACY_DELIVERY --inventory guidance-manifest.json --payload-prefix public-release --legacy",
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out new.json capture --root HARNESS_PUBLIC_ROOT",
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out received.json verify --root RECEIVED_PAYLOAD --snapshot new.json",
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out plan.json plan --old old.json --new new.json --preserve-manifest preserve.json",
+    "python tools/guidance_update.py --work-root STUDY_UPDATE_RECORDS --out checked.json check --study-root STUDY_ROOT --plan plan.json --receipt adoption.json"
+  ],
+  "cli_rules": {
+    "work_root": "Create the intended records directory first; all output and input record names are canonical relative paths inside it. Capture output must be outside captured payload.",
+    "output": "Exclusive new files only; existing outputs are rejected. Use a new run path to retain earlier records.",
+    "exit_codes": {"pass": 0, "fail": 1, "unknown": 2},
+    "capture_or_plan_success": "A generated plan remains pending study appraisal even though plan generation exits successfully."
+  },
+  "receipt_template": {
+    "schema": "harness.guidance-adoption/v1",
+    "plan_id": "COPY_FROM_PLAN",
+    "from_package_id": "COPY_FROM_PLAN",
+    "to_package_id": "COPY_FROM_PLAN",
+    "actor": "RESPONSIBLE_RESEARCHER_OR_AGENT",
+    "scope": "CURRENT_STUDY_AND_NEXT_GATE",
+    "decisions": [{
+      "review_id": "COPY_REVIEW_ID",
+      "disposition": "retain",
+      "reason": "Explain applicability to current evidence and next decision.",
+      "readings": [{"path": "COPY_EACH_REQUIRED_READING_PATH", "sha256": "COPY_AFTER_ACTUAL_READING"}],
+      "artifacts": [],
+      "acceptance_ref": "REQUIRED_FOR_REVISE_OR_QUALIFY"
+    }]
+  },
+  "git_and_feedback": {
+    "default": "Public Harness upstream plus separate private study history with a pinned dependency/package identity. Versioned folders work without Git metadata.",
+    "optional": ["independent public clone", "submodule pinned to commit", "bundle of selected public refs", "same-repository worktree for local parallel development"],
+    "avoid": ["copying private archive .git into a public payload", "equating a study repository HEAD with Harness upstream HEAD", "merging entire private research history as Harness feedback", "assuming a worktree is automatically a named branch"],
+    "feedback_unit": ["minimal observed failure or useful behavior", "conditions and affected version", "proposed general rule or scoped method card", "positive and counterexample", "bounded validation and attribution", "public disclosure review"],
+    "branch_naming_example": "codex/harness-feedback-TOPIC",
+    "research_outcome": "Study progress and scientific findings stay in the study. Only curated reusable changes are proposed upstream."
+  },
+  "validation": {
+    "contract_tests": "tests/test_guidance_update.py",
+    "scope": "Local source identity, change indexing, required-reading references, preservation and receipt structure.",
+    "scientific_acceptance": "not_assessed",
+    "actual_study_adoption": "not_performed_by_this_contract"
+  }
+}

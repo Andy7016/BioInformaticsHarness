@@ -38,6 +38,7 @@ cd BioInformaticsHarness
 | 参考了哪些工作，怎样用于设计 | [参考来源与设计索引](docs/REFERENCES-AND-DESIGN.md) |
 | 项目怎样发展至今 | [项目短史](docs/history/EVOLUTION.zh.md)与[版本记录](CHANGELOG.md) |
 | 已完成哪些实际应用 | [研究与应用](core/EVIDENCE.zh.md) |
+| 怎样更新进行中课题所用的 Harness | [版本接收、重读与适配](docs/harness-updates.md) |
 | 怎样继续开发 | [下一阶段](ROADMAP.zh.md)与[文档约定](docs/DOCUMENTATION.md) |
 
 ## 参与

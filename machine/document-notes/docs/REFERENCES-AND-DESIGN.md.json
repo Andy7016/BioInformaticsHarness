@@ -112,6 +112,32 @@
       "technical_records": [
         "machine/research/rereading-validation-2026-10-27.json"
       ]
+    },
+    {
+      "id": "2026-10-27-continuation-engineering-summary",
+      "date": "2026-10-27",
+      "reason": "Add public sources and bounded continuation/engineering results without private archive metadata.",
+      "technical_records": [
+        "machine/research/long-research-and-engineering-2026-10-27.json"
+      ]
+    },
+    {
+      "id": "2026-10-27-RNA-independent-pair-and-targeted-closure",
+      "date": "2026-10-27",
+      "reason": "Add content-minimized scientific results only: original pair retained, two additional targeted requests confirmed, conditional scope and source limits explicit.",
+      "technical_records": [
+        "machine/research/long-research-and-engineering-2026-10-27.json"
+      ]
+    },
+    {
+      "id": "2026-10-27-guidance-updates",
+      "date": "2026-10-27",
+      "reason": "Preserve study history while binding source identity, indexed rereading and scoped adoption.",
+      "technical_records": [
+        "machine/guidance-update-contract.json",
+        "machine/changes/guidance-updates-20261027.json"
+      ],
+      "acceptance": "Contract tests and independent protocol review; scientific study adoption remains separate."
     }
   ],
   "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",

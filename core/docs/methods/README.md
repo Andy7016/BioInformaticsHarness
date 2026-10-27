@@ -46,6 +46,7 @@ Use the trigger that matches your research question. The table suggests a starti
 | SMILES/SDF到分子图、图增强或图模型迁移 | [分子图变换与权重消费](cards/molecular-graph.md) | [表征可视化与效率比较](cards/visualization-efficiency.md) |
 | 单细胞表达、扰动、注释、整合或基因关系 | [单细胞表示与可见信息边界](cards/single-cell-boundaries.md) | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
 | 指标、区间、分位数、宏/微平均、有效分母或数学聚合改变研究结论 | [指标语义与数学事件](cards/metric-semantics.md) | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
+| 初步接手模型课题，需要按工程目的理解预训练、任务训练、适配与预测 | [模型工程上手](cards/model-engineering-orientation.md) | [信息用途](cards/information-use.md)、[执行证据](cards/execution-evidence.md) |
 | 模型组件的实际消费、配置作用、输入贡献或失败产物追踪 | [执行证据与实际消费](cards/execution-evidence.md) | [交接契约](handoff-contract.md)和[基准、教师与公平比较](cards/benchmark-teacher-fairness.md) |
 | 自适应负例、教师标签、蒸馏、基线或跨模型比较 | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) | [表征可视化与效率比较](cards/visualization-efficiency.md) |
 | UMAP/VIA/检索解释，或速度、显存、质量比较 | [表征可视化与效率比较](cards/visualization-efficiency.md) | 由任务卡补充输入与真值条件 |
