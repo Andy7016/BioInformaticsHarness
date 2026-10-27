@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "0ec170eb6eff0259136df23e6efac8f15f3da8d4",
+    "head": "792ede97903bc7cbf8d3d87aaa4e15f5526ecc3f",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -127,7 +127,7 @@
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
       "current_bytes": 263266,
-      "current_sha256": "1a07a3ffe25bbee0c2d8f373c15950636985ff7f31a2d41df44fe1b91d1f8728"
+      "current_sha256": "bab0aca54fd1872c2818e716c29cb71c13ea11491f4c8c23b39dd459958cf76a"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -1573,11 +1573,18 @@
       "current_sha256": "ab0d034acd3ddb275d09db70f3ca6877215319160d3bf412769af95459591b22"
     },
     {
+      "path": "docs/research/open-exploration-2026-10-27.zh.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4954,
+      "current_sha256": "8f27f67263742d465c2f02e9b8a437424490abfefd663682d84bc07cb91621ae"
+    },
+    {
       "path": "docs/research/rereading-validation-2026-10-27.zh.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6830,
-      "current_sha256": "b1006c7e2c1934a52206adcc5429fdc43eba0cf512c1eec698331ab06737f3dc"
+      "current_bytes": 7019,
+      "current_sha256": "90f76b9e1b198e00cc41c9be704f2cdafae07909bf886d0d870ef3830b37327e"
     },
     {
       "path": "examples/splice/CASE-MANIFEST.json",
@@ -2582,11 +2589,18 @@
       "current_sha256": "915aa9718e94cb33d90ea4f154501c1e2dabd402e284036c61d522b3c238411a"
     },
     {
+      "path": "machine/document-notes/docs/research/open-exploration-2026-10-27.zh.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 5520,
+      "current_sha256": "43bdc5a83e9257787c36eadc69fa84ee59ecce30499290ed3cb9bd99695d38fc"
+    },
+    {
       "path": "machine/document-notes/docs/research/rereading-validation-2026-10-27.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7382,
-      "current_sha256": "8cc6b31f70a6b7a228970f4fa3dc478f3bad738b3ca91eb80efcd805ee06fb6f"
+      "current_bytes": 7672,
+      "current_sha256": "9d0f1fd7987324889053483d788cff3dffb023780a1f91957254b46afeb753e2"
     },
     {
       "path": "machine/document-notes/examples/splice/README.md.json",
@@ -2687,6 +2701,13 @@
       "current_sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302"
     },
     {
+      "path": "machine/research/open-exploration-2026-10-27.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 7531,
+      "current_sha256": "21fbfe8d8b2576ea24272fd479565683c341351568887e6c8f21c075b506590f"
+    },
+    {
       "path": "machine/research/rereading-validation-2026-10-27.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2711,8 +2732,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 245374,
-      "current_sha256": "2f59dacf079468254adc4cc004d240e13c55e326f539fc318cd80d6693b070a1"
+      "current_bytes": 248583,
+      "current_sha256": "3aa1544b6b746df1f05ccfc351eede5d75f82a9cc973409638fa2f642cd82ea7"
     },
     {
       "path": "tests/test_documentation.py",

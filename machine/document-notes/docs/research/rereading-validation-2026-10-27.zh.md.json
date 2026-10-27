@@ -6,8 +6,17 @@
   "source_sha256": "b1006c7e2c1934a52206adcc5429fdc43eba0cf512c1eec698331ab06737f3dc",
   "registered_at_utc": "2026-10-26T23:55:03.663728+00:00",
   "current_identity": {
-    "bytes": 6830,
-    "sha256": "b1006c7e2c1934a52206adcc5429fdc43eba0cf512c1eec698331ab06737f3dc"
+    "bytes": 7019,
+    "sha256": "90f76b9e1b198e00cc41c9be704f2cdafae07909bf886d0d870ef3830b37327e"
   },
-  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00"
+  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",
+  "editorial_revisions": [
+    {
+      "at_utc": "2026-10-27T02:48:17.253626+00:00",
+      "reason": "Link subsequent open-exploration case without rewriting prior results.",
+      "technical_records": [
+        "machine/research/open-exploration-2026-10-27.json"
+      ]
+    }
+  ]
 }

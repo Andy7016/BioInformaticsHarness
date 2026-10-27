@@ -1,0 +1,146 @@
+{
+  "schema": "harness.public-open-exploration/v1",
+  "date": "2026-10-27",
+  "kind": "first_party_case_summary",
+  "case_count": 1,
+  "human_path": "docs/research/open-exploration-2026-10-27.zh.md",
+  "status": "accepted_as_bounded_review_and_preparation",
+  "topic": "Plant responses to environmental change",
+  "starting_context": "Fictional bioinformatics capacity, ordinary statistics/ML and public data on a workstation. No species, method, lab or target paper specified.",
+  "tested_input": {
+    "published_harness_commit": "792ede97903bc7cbf8d3d87aaa4e15f5526ecc3f",
+    "full_package_delivered": true,
+    "package_files": 467,
+    "core_guides_and_examples_actually_read": 12,
+    "all467_files_read_claim": false,
+    "additional_generic_supplement": "# 本批附加提示：展开与深入收束\n\n本提示是当前完整Harness之外的批次输入。它组织探索动作，不提供本例的科学分支、文献或预期答案。\n\n## 展开\n\n从背景、宽泛问题和初始知识建立可修订的理解。先区分实际行动约束、可修订偏好与待检验的想法；课题组擅长什么帮助起步，但不自动决定哪些相关证据可以进入。\n\n允许提出关联尚待核实的线索，先说明可能怎样连接对象、测量、解释或用途，再作适量探查。发现新问题、重新定义目标和找到有价值的联系，均可成为探查价值；无需在看到证据前承诺它会改变哪一个已经定好的方法选择。\n\n记录线索来自初始知识、实际查询、来源内容、跨来源综合还是研究者假说。初始地图及后来的版本分别保留，时间先后由实际写入与接收记录支持，不追认成事前预测。\n\n## 深入与收束\n\n选择值得深入的联系后，再比较科学依据、竞争解释、合理替代、数据资格、资源与后续行动。两种动作可以往返；继续探查的边际价值低时，给出推荐和未解决问题。无须用增加分支、引用或跨学科名词来证明开放性。\n\n先辨认变量处在什么层级，再检查限制发生于表示、操作还是报告范围。这可帮助重新组织问题与选择修复；具体事实和效果需要合格来源支持。\n\n重要新投入只给方案与判断依据。本轮可自主选择科学收束方向，提交首稿后由父方固定版本，再独立复核来源、推理、探索轨迹与背景的实际作用。既有正确结论可以保留，未确认事项不补造。\n"
+  },
+  "models": {
+    "theory": "gpt-6.1-sol medium",
+    "application": "gpt-6.1-sol max",
+    "scientific_review": "gpt-6.1-sol max",
+    "mechanical_executor": "gpt-6-luna max"
+  },
+  "workflow": [
+    "Pre-search map fixation",
+    "Open exploration and checkpoint",
+    "Autonomous deepening and change of provisional priority",
+    "Frozen first delivery",
+    "Independent source/content review",
+    "Separate v2 and per-request response",
+    "Targeted independent confirmation"
+  ],
+  "main_queries": 29,
+  "main_findings": 24,
+  "independent_targeted_queries": 3,
+  "branches": [
+    {
+      "id": "A",
+      "question": "Heat recovery cross-omics persistence",
+      "initial": "provisionally preferred",
+      "final": "defer same-kind new topic",
+      "reason": "Existing analysis coverage plus unresolved scale/sample qualification"
+    },
+    {
+      "id": "B",
+      "question": "Microbial environmental history and host root response",
+      "final": "prioritize data qualification and interpretation preparation",
+      "functional_collection": "unselected candidate; incremental scientific value not established"
+    },
+    {
+      "id": "C",
+      "question": "Temperature, floral traits, pollinator behavior and reproductive consequence",
+      "final": "retain for directed original reading",
+      "scope": "nominated lead, not fully evaluated"
+    }
+  ],
+  "original_five_dimensions": {
+    "preserved_without_recalculation": true,
+    "judgments": [
+      {
+        "name": "可追溯与表述校准",
+        "status": "pass"
+      },
+      {
+        "name": "开放性与演化",
+        "status": "pass"
+      },
+      {
+        "name": "科学推理",
+        "status": "partial"
+      },
+      {
+        "name": "价值与可行性",
+        "status": "partial"
+      },
+      {
+        "name": "独立复核与剩余不确定性",
+        "status": "pass"
+      }
+    ],
+    "aggregate_score": false,
+    "interpretation": "本次请求处置pass不把首审partial重算为pass，也不覆盖首审范围以外的科学判断。"
+  },
+  "revision_closure": {
+    "IR-01": "accepted narrow-to-preparation; acknowledge original GeneSet/orthogroup/MDS and distinguish a future pre-defined functional collection",
+    "IR-02": "accepted updated partial static qualification, explicit reading attribution and retained metadata conflicts",
+    "mandatory_closed": true,
+    "original_judgments_recalculated": false,
+    "new_empirical_results": false
+  },
+  "future_gates": {
+    "G0": "Full identity, coverage, missingness, nesting, scale and processing qualification not passed",
+    "G1": "Added scientific value and specific functional-collection design not established"
+  },
+  "sources": [
+    {
+      "id": "S03",
+      "url": "https://doi.org/10.1038/s41597-026-07813-z",
+      "role": "Data resource and static supplement qualification",
+      "scope": "Selected text/methods and bounded workbook fields; no full matrix analysis"
+    },
+    {
+      "id": "S03-pre",
+      "url": "https://doi.org/10.1101/2025.06.19.660594",
+      "role": "Existing original analysis changes novelty judgment",
+      "scope": "Preprint v1 body/captions/methods; related family, not independent replication"
+    },
+    {
+      "id": "S04-final",
+      "url": "https://doi.org/10.1038/s41564-025-02148-8",
+      "role": "Primary host/history experiment and nearest existing analyses",
+      "scope": "Main results/discussion, selected methods; Note1 and S10 README, independent bounded S10b/d windows; full figures/tables not reviewed"
+    },
+    {
+      "id": "S05",
+      "url": "https://doi.org/10.1128/spectrum.03019-25",
+      "role": "Context-dependent and limited legacy evidence",
+      "scope": "Selected original results/discussion; not a same-protocol replication"
+    },
+    {
+      "id": "Zenodo13821006",
+      "url": "https://doi.org/10.5281/zenodo.13821006",
+      "role": "Post-first static processing/sample identity entry points",
+      "scope": "Descriptors and bounded test-phase members; no author code/RDS/full matrix computation"
+    },
+    {
+      "id": "S06",
+      "url": "https://doi.org/10.1111/nph.19918",
+      "role": "Ecological lead",
+      "scope": "Original full text not read in this case"
+    }
+  ],
+  "evidence_availability": {
+    "public": "Original sources and this first-party structured summary",
+    "full_execution": "Private research archive; not distributed in public tree",
+    "external_bodies_figures_data_rows": "Not exported"
+  },
+  "interpretation": {
+    "observed_guidance": "Traceable source-led reasoning, related lead discovery, changed priority and bounded review closure",
+    "causal_guidance_gain": "not estimated",
+    "cross_topic_stability": "unmeasured",
+    "best_direction_claim": false,
+    "full_scientific_project_ready": false,
+    "guide_or_runtime_implementation_change_this_export": false
+  }
+}

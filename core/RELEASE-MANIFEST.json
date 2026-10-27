@@ -6298,7 +6298,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "0ec170eb6eff0259136df23e6efac8f15f3da8d4",
+    "head": "792ede97903bc7cbf8d3d87aaa4e15f5526ecc3f",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }
