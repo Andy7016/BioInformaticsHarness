@@ -1,0 +1,61 @@
+{
+  "schema": "harness.method-experience/v1",
+  "record_kind": "template",
+  "id": null,
+  "task_ref": null,
+  "method_ref": {
+    "kind": null,
+    "path": null,
+    "source_commit": null,
+    "sha256": null,
+    "use_state": null
+  },
+  "context": {
+    "research_question": null,
+    "conditions": [],
+    "environment_refs": []
+  },
+  "expected_use": null,
+  "actual_attempt": {
+    "state": "not_attempted",
+    "action": null,
+    "run_refs": [],
+    "artifact_refs": []
+  },
+  "observation": {
+    "category": null,
+    "claim": null,
+    "challenged_proposition": null,
+    "premises": [],
+    "alternative_explanations": [],
+    "unresolved": [],
+    "scientific_assessment": {
+      "status": "not_assessed",
+      "review_ref": null
+    }
+  },
+  "response": {
+    "decision": null,
+    "local_change": null,
+    "result": null,
+    "decision_ref": null
+  },
+  "evidence_refs": [],
+  "next_action": {
+    "owner": null,
+    "state": "unassigned",
+    "action": null,
+    "revisit_when": []
+  },
+  "relations": {
+    "supersedes": [],
+    "revisits": [],
+    "related_method_refs": []
+  },
+  "upstream": {
+    "status": "local_only",
+    "scope_conditions": [],
+    "proposal": null,
+    "review_ref": null
+  }
+}

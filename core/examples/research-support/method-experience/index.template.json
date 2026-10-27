@@ -1,0 +1,15 @@
+{
+  "schema": "harness.method-experience-index/v1",
+  "record_kind": "template",
+  "study_ref": null,
+  "owner": null,
+  "root": "research/method-experience",
+  "entries": [
+    {
+      "experience_id": null,
+      "path": null,
+      "method_key": null,
+      "summary": null
+    }
+  ]
+}

@@ -17,3 +17,7 @@ On receiving a replacement Harness, use docs/harness-updates.md and machine/guid
 ## Time, authority and recovery
 
 Use machine/time-budget-recovery-contract.json. Research checkpoints preserve progress and unresolved work; an explicit hard execution budget needs a task/resource basis. Observer waits, evidence windows and actual authorization conditions are separate. A wait or timeout grants no permissions and does not complete reading or scientific acceptance. Preserve interrupted runs and use derived outputs for recovery. Block only affected dependencies; continue independent authorized work. Keep historical experiment deadlines/results intact.
+
+## Local method experience
+
+Before invoking a method or resuming its work, read the relevant card version and the study local method-experience index. Use core/docs/methods/guides/method-experience.md to retain meaningful encounters as ordinary Task/Run/Artifact/Decision-linked files. Distinguish consulted guidance from actual use and a study-proposed strategy; distinguish scope mismatch, operational problems, evidence gaps and supported methodological limits. Preserve old entries and frozen cards; record revisions as new linked files. At stage delivery identify the wider research goal, remaining work and next responsibility. Local experience becomes an upstream candidate only after scoped synthesis and content/shareability review.

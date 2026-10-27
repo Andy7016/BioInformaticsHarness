@@ -1,0 +1,17 @@
+{
+  "schema": "harness.document-note/v1",
+  "human_path": "core/docs/methods/guides/method-experience.md",
+  "origin": "first_party_new_document",
+  "editorial_revisions": [
+    {
+      "id": "2026-10-27-method-experience",
+      "date": "2026-10-27",
+      "reason": "Persist contextual method encounters and stage-to-research continuity through existing carriers.",
+      "technical_records": [
+        "core/machine/design/method-experience.json",
+        "machine/changes/method-experience-20261027.json"
+      ],
+      "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
+    }
+  ]
+}

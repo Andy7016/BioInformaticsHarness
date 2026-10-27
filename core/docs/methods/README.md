@@ -5,11 +5,13 @@ Choose a guide when a research decision needs a concrete measure, comparison, or
 ## How to use the cards
 
 1. Start from the question or workflow stage that triggered the work.
-2. Read the matching card and name the measurement, unit, split, and comparison that fit your study.
+2. Read the matching card and this study's relevant, version-linked experience notes; name the measurement, unit, split, and comparison that fit the current study.
 3. Record the chosen method, a suitable alternative, and the condition that would change your decision.
 4. Use a tool only when it answers that question. The cards do not make every check mandatory for every study.
 
 Use [worked examples](worked-examples/README.md) to see how method choices change a decision. The [research-support tools](research-support-tools.md) help with file handoff and limited diagnostics. For public references and design reasons, see the [combined source and design index](../../../docs/REFERENCES-AND-DESIGN.md) and [research history](../../../docs/history/EVOLUTION.zh.md).
+
+When a method encounter changes a decision, retain its context, actual attempt, evidence and next action in a [local method experience](guides/method-experience.md). Reuse these files when resuming or selecting the method again.
 
 ## Choose a guide by research question
 

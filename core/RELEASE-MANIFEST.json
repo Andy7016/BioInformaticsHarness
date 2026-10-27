@@ -1576,11 +1576,11 @@
       }
     },
     {
-      "bytes": 11859,
+      "bytes": 12152,
       "license": "CC-BY-4.0",
       "path": "docs/methods/README.md",
       "role": "normative-prose",
-      "sha256": "ade93a2b289aa8b87db8095192dd261d4a67b03724a044d1a165b9319a667a90",
+      "sha256": "f8b528eeb3c22238fa84942936ac04ce6bec4f20aec90a0395b5e0a3b22d9b5f",
       "source": "docs/methods/README.md",
       "source_sha256": "f75818893f6d0969025b5831d8db4969a01f9a5e922dd7fee1ffa083d6a89ac4",
       "transform": "first-party-documentation-revision",
@@ -1589,7 +1589,7 @@
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
-          "revision": "2026-10-24",
+          "revision": "2026-10-27",
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
@@ -1601,11 +1601,11 @@
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-23",
+                "revision": "2026-10-24",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
-                  "revision": "2026-10-22",
+                  "revision": "2026-10-23",
                   "baseline_revision": "764bd88",
                   "previous_transform": "first-party-documentation-revision",
                   "previous_details": {
@@ -1619,13 +1619,18 @@
                       "previous_details": {
                         "revision": "2026-10-22",
                         "baseline_revision": "764bd88",
-                        "previous_transform": "markdown-links-and-local-redaction",
+                        "previous_transform": "first-party-documentation-revision",
                         "previous_details": {
-                          "changed": true,
-                          "images_converted_to_ordinary_links": 0,
-                          "links_redirected_to_archive_pointers": 13,
-                          "links_rewritten_to_package": 104,
-                          "local_redactions": []
+                          "revision": "2026-10-22",
+                          "baseline_revision": "764bd88",
+                          "previous_transform": "markdown-links-and-local-redaction",
+                          "previous_details": {
+                            "changed": true,
+                            "images_converted_to_ordinary_links": 0,
+                            "links_redirected_to_archive_pointers": 13,
+                            "links_rewritten_to_package": 104,
+                            "local_redactions": []
+                          }
                         }
                       }
                     }
@@ -1644,7 +1649,7 @@
         "transform": "markdown-links-and-local-redaction",
         "source_sha256": "f75818893f6d0969025b5831d8db4969a01f9a5e922dd7fee1ffa083d6a89ac4",
         "transform_details": {
-          "revision": "2026-10-24",
+          "revision": "2026-10-27",
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
@@ -1656,11 +1661,11 @@
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-23",
+                "revision": "2026-10-24",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
-                  "revision": "2026-10-22",
+                  "revision": "2026-10-23",
                   "baseline_revision": "764bd88",
                   "previous_transform": "first-party-documentation-revision",
                   "previous_details": {
@@ -1674,13 +1679,18 @@
                       "previous_details": {
                         "revision": "2026-10-22",
                         "baseline_revision": "764bd88",
-                        "previous_transform": "markdown-links-and-local-redaction",
+                        "previous_transform": "first-party-documentation-revision",
                         "previous_details": {
-                          "changed": true,
-                          "images_converted_to_ordinary_links": 0,
-                          "links_redirected_to_archive_pointers": 13,
-                          "links_rewritten_to_package": 104,
-                          "local_redactions": []
+                          "revision": "2026-10-22",
+                          "baseline_revision": "764bd88",
+                          "previous_transform": "markdown-links-and-local-redaction",
+                          "previous_details": {
+                            "changed": true,
+                            "images_converted_to_ordinary_links": 0,
+                            "links_redirected_to_archive_pointers": 13,
+                            "links_rewritten_to_package": 104,
+                            "local_redactions": []
+                          }
                         }
                       }
                     }
@@ -2504,6 +2514,20 @@
       }
     },
     {
+      "path": "docs/methods/guides/method-experience.md",
+      "bytes": 5583,
+      "sha256": "457648057a424ec6edbc1b2ee29236488a512579e4b7d131809b9a9623015484",
+      "license": "CC-BY-4.0",
+      "role": "documentation",
+      "source": "first-party-documentation-revision:docs/methods/guides/method-experience.md",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
+      }
+    },
+    {
       "bytes": 3509,
       "license": "CC-BY-4.0",
       "path": "docs/methods/guides/plan-seal-and-first-execution.md",
@@ -3087,8 +3111,8 @@
     },
     {
       "path": "docs/methods/guides/task-continuity.md",
-      "bytes": 4966,
-      "sha256": "7bef4e701e1454420f2449d0ae6c0deea3a5dac0f6cff60074af54dc73726814",
+      "bytes": 5850,
+      "sha256": "afc0dfbb991e0da063d49d02635218c6864b5711b9b01c4404b38860715c0dc6",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/task-continuity.md",
@@ -3103,8 +3127,13 @@
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "revision": "2026-10-22",
-            "baseline_revision": "764bd88"
+            "revision": "2026-10-27",
+            "baseline_revision": "764bd88",
+            "previous_transform": "first-party-documentation-revision",
+            "previous_details": {
+              "revision": "2026-10-22",
+              "baseline_revision": "764bd88"
+            }
           }
         }
       },
@@ -3120,8 +3149,13 @@
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "revision": "2026-10-22",
-            "baseline_revision": "764bd88"
+            "revision": "2026-10-27",
+            "baseline_revision": "764bd88",
+            "previous_transform": "first-party-documentation-revision",
+            "previous_details": {
+              "revision": "2026-10-22",
+              "baseline_revision": "764bd88"
+            }
           }
         }
       }
@@ -4272,6 +4306,34 @@
       "source_sha256": "f15f70f8052dfe528c646365e724ea9771ebe89690b6dc6b3fe103805a02f3af",
       "transform": "verbatim",
       "transform_details": {}
+    },
+    {
+      "path": "examples/research-support/method-experience/experience.template.json",
+      "bytes": 1222,
+      "sha256": "fb70e87909504c378f96db91f1dc9d91ceac5473fbe5bd22d9960d0d7b6cc149",
+      "license": "Apache-2.0",
+      "role": "documentation-tooling",
+      "source": "first-party-documentation-revision:examples/research-support/method-experience/experience.template.json",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
+      }
+    },
+    {
+      "path": "examples/research-support/method-experience/index.template.json",
+      "bytes": 289,
+      "sha256": "ee884dd5d4119d7d23b06f6c8eded3a822ce363be8c11dc85b582d1200438f78",
+      "license": "Apache-2.0",
+      "role": "documentation-tooling",
+      "source": "first-party-documentation-revision:examples/research-support/method-experience/index.template.json",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
+      }
     },
     {
       "bytes": 550,
@@ -5510,6 +5572,20 @@
       }
     },
     {
+      "path": "machine/design/method-experience.json",
+      "bytes": 13271,
+      "sha256": "35caf1d4bf61bd1c087efc444aa272039ef98878b9e7ebbc97eadc753a2288cd",
+      "license": "CC-BY-4.0",
+      "role": "documentation-tooling",
+      "source": "first-party-documentation-revision:machine/design/method-experience.json",
+      "source_sha256": null,
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88"
+      }
+    },
+    {
       "path": "machine/design/rereading-perspectives.json",
       "bytes": 7740,
       "sha256": "bcb5095044459c9076b21ea589698c198043b2c735a2c3f40dda19641f87658b",
@@ -6517,7 +6593,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "f809d63be172b7a89c19bfbc9e82c316a10ba20e",
+    "head": "41e9a5381db81f14025acfbfa06d17909f1dacb9",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

@@ -1,0 +1,203 @@
+{
+  "schema": "harness.method-experience-design/v1",
+  "date": "2026-10-27",
+  "state": "documentation_and_existing_carrier_checked",
+  "purpose": "Keep study-local, evidence-linked observations about method use recoverable, then route shareable proposals through existing revision review.",
+  "scope": {
+    "existing_objects": [
+      "Task",
+      "Run",
+      "Artifact",
+      "Decision"
+    ],
+    "record_role": "A serialization of a task output or observed finding, linked to existing objects; no new top-level research object or experience database.",
+    "implementation": "Editable JSON templates and documentation; existing Task/Artifact file checks are reused. No new validator, JSON Schema, runtime component or automatic merge.",
+    "scientific_rules": "No new general scientific rule is established by this mechanism. Scientific interpretation remains with the selected study and review route."
+  },
+  "interfaces": {
+    "path_base": "core root of the matched Harness source or package",
+    "guide": "docs/methods/guides/method-experience.md",
+    "experience_template": "examples/research-support/method-experience/experience.template.json",
+    "index_template": "examples/research-support/method-experience/index.template.json",
+    "continuity_guide": "docs/methods/guides/task-continuity.md",
+    "continuity_design": "machine/design/task-continuity.json",
+    "revision_guide": "docs/methods/guides/revision-responses-and-acceptance.md",
+    "revision_contract": "docs/methods/revision-contract.md",
+    "revisor_handoff": "docs/methods/revision-guidance-contract.md",
+    "decision_observation_interface": "machine/design/research-guidance-cycle.json"
+  },
+  "storage": {
+    "path_base": "current study root",
+    "record_pattern": "research/method-experience/<method-key>/<experience-id>.json",
+    "index_path": "research/method-experience/index.json",
+    "method_key": "A stable study-local navigation key for the referenced method, guide or strategy; it does not establish a new method identity.",
+    "record_identity": "Choose a study-unique experience id and unused file path for each meaningful observation.",
+    "history": "Preserve original records. A correction or new finding is a new record with supersedes or revisits references; do not rewrite the earlier observation.",
+    "shared_sources": "Shared or frozen Harness cards remain unchanged during study-local use. Store local adaptations and their outputs in the study.",
+    "parallel_writing": "Each writer creates separate experience files. The named index owner serializes navigation updates; agents do not concurrently revise the same historical entry."
+  },
+  "index_contract": {
+    "schema": "harness.method-experience-index/v1",
+    "record_kind_values": [
+      "template",
+      "index"
+    ],
+    "template_use": "Copy into the study, set record_kind=index, fill study_ref and owner, then replace or remove the null placeholder entry. An empty entries array is valid when no observations exist.",
+    "entry_fields": [
+      "experience_id",
+      "path",
+      "method_key",
+      "summary"
+    ],
+    "reference_base": "Entry paths are study-root-relative and resolve to the complete experience records.",
+    "authority": "Rebuildable navigation maintained by its owner; the referenced records, evidence and next_action supply the observation and current continuation basis.",
+    "rebuild": "Read study-local experience files, retain their identities and relations, and rebuild entries without changing historical records or promoting an observation's status."
+  },
+  "experience_contract": {
+    "schema": "harness.method-experience/v1",
+    "record_kind_values": [
+      "template",
+      "experience"
+    ],
+    "template_use": "Copy into an unused study-local path, set record_kind=experience and fill actual facts. Null values and empty arrays express missing or inapplicable information; explain any missing item that changes the next decision in observation.unresolved.",
+    "task_ref": "A readable reference to the existing current task or task context; a daily observation can be an output of that task without changing its stable contract.",
+    "method_ref": {
+      "kind_values": [
+        "method_card",
+        "guide",
+        "study_strategy"
+      ],
+      "path": "For a method_card or guide, resolve against the exact Harness source/package recorded among task inputs. For a study_strategy, resolve against the study root.",
+      "source_commit": "Exact source revision when available; nullable for a package or unresolved source identity.",
+      "sha256": "Identity of the actual referenced bytes when available; nullable when not captured. Do not substitute a later source version.",
+      "use_state_values": [
+        "consulted",
+        "used",
+        "proposed",
+        "attribution_unverified"
+      ],
+      "use_state_meaning": "Record reading, actual use, a proposed use, or unresolved attribution respectively. Used requires an actual attempt, with evidence identifying what was attempted. Missing version identity remains explicit.",
+      "strategy_attribution": "When a card supplied navigation and a researcher designed the actual strategy, give them separate method references using relations.related_method_refs. Assess the implemented strategy and the card's actual proposition separately."
+    },
+    "context": "Record the current question, relevant applicability conditions and environment references needed to interpret the observation.",
+    "expected_use": "State the intended benefit, prediction or decision the method was expected to inform.",
+    "actual_attempt": {
+      "state_values": [
+        "not_attempted",
+        "attempted",
+        "completed",
+        "interrupted"
+      ],
+      "action": "Describe only actual work when attempted; identify runs and artifacts through existing references. Proposed operations stay in expected_use or next_action.",
+      "not_attempted": "A reading note or proposal has no empirical-use failure. Keep the actual result absent and state the unresolved expectation.",
+      "completed": "The declared action finished; scientific review and upstream acceptance remain separately recorded."
+    },
+    "observation": {
+      "category_values": [
+        "conditions_mismatch",
+        "implementation_environment",
+        "evidence_gap",
+        "assumption_counterexample_or_limit",
+        "helpful_or_no_change",
+        "unresolved"
+      ],
+      "category_role": "A primary navigation category, not a forced causal attribution. Keep competing or overlapping explanations in alternative_explanations and unresolved.",
+      "claim": "The bounded observation supported by the stated attempt and evidence, including the conditions in which it was made.",
+      "counterexample": "An assumption counterexample identifies the challenged proposition, its premises, and evidence that the premises hold while the proposition fails. A constructed case describes possibility under its construction; population frequency requires a separate observation and sampling basis.",
+      "scientific_assessment": {
+        "status_values": [
+          "not_assessed",
+          "pending",
+          "recorded"
+        ],
+        "recorded": "A readable review_ref contains the scientific judgment and its scope. Record completion alone does not establish scientific acceptance."
+      }
+    },
+    "response": {
+      "decision_values": [
+        "retain",
+        "add_conditions",
+        "adapt",
+        "replace",
+        "defer"
+      ],
+      "local_change": "Describe the actual study-local change, or leave null when no change was made.",
+      "result": "Record the observed consequence; leave unexecuted follow-up results pending rather than presenting them as measured.",
+      "decision_ref": "Reference an existing Decision when one governs this response; routine task observations may keep this null."
+    },
+    "evidence_refs": "Readable study-root-relative references to existing evidence or Artifact/Run records. They support the observed claim and preserve provenance; a reason alone is not an evidence reference.",
+    "next_action": {
+      "fields": [
+        "owner",
+        "state",
+        "action",
+        "revisit_when"
+      ],
+      "state_values": [
+        "unassigned",
+        "planned",
+        "in_progress",
+        "blocked",
+        "completed",
+        "deferred",
+        "closed"
+      ],
+      "continuation": "Name the responsible person or role, the first unmet action and the evidence or condition that should trigger a revisit. The original record remains historical; subsequent progress is a new related record or existing task progress."
+    },
+    "relations": {
+      "supersedes": "References to earlier records corrected or replaced by this new observation; keep both files and the reason readable.",
+      "revisits": "References to earlier observations revisited with additional evidence or a changed context.",
+      "related_method_refs": "Separate method references with the same shape as method_ref, including navigation cards and researcher-designed strategies where attribution requires both."
+    }
+  },
+  "existing_object_mapping": {
+    "Task": "Bind the experience to the current task. Add it as an allowed task output or observation reference. If scope, plan or completion requirements of a frozen task change, create a new task/context version and retain the original.",
+    "Run": "Reference actual attempted execution and its receipt; do not manufacture a run for a reading note or proposal.",
+    "Artifact": "Store each experience and any adaptation, evidence or shareable candidate as existing artifact kinds with appropriate provenance.",
+    "Decision": "Use existing decisions for retain, revise, qualify, narrow, defer or other selected routes. An experience may supply evidence_refs or observed_findings_ref without rewriting the earlier plan.",
+    "revisor": "A candidate that affects a claim, method condition or shared card follows the existing request, response-route, task, artifact and acceptance chain."
+  },
+  "workflow": [
+    "Before choosing a method, read the matched source version and relevant study-local index entries with their evidence.",
+    "Choose retain, add_conditions, adapt, replace or defer, and state the conditions that would change the choice.",
+    "Record actual attempts through the existing task, run and artifact records. Create an independent experience file when a meaningful observation or failure changes a decision; ordinary tool calls need no separate long form.",
+    "On recovery, read the index, relevant experience records, their evidence and next_action; continue from the first unmet action without relying on conversation memory.",
+    "Extract a bounded candidate only when it has a reusable lesson, stated conditions and supporting evidence. Prepare shareable evidence and rights before sending it through revisor review.",
+    "After review, record the accepted scope in a conditional worked example or a card revision. Keep study-local observations and historical task contracts recoverable."
+  ],
+  "upstream_contract": {
+    "default_status": "local_only",
+    "status_values": [
+      "local_only",
+      "candidate",
+      "in_review",
+      "accepted",
+      "declined",
+      "deferred"
+    ],
+    "proposal": "A bounded proposal or reference to its shareable Artifact, with scope_conditions and remaining questions.",
+    "review_ref": "Readable existing revisor or maintainer review reference; required to record accepted, declined or deferred review outcomes.",
+    "accepted_scope": "Accepted means the cited review adopted the stated upstream proposal and conditions. Application observation and scientific judgment retain their separate evidence and statuses.",
+    "single_case": "One study-local case can motivate review. General guidance changes require appraisal of premises, alternatives and transfer scope rather than automatic promotion.",
+    "publication": "Keep private records and restricted licensed material within their existing access scope. Public proposals contain only shareable evidence with its source and rights."
+  },
+  "public_content": {
+    "material": "First-party generalized guidance and incomplete editable templates.",
+    "example": "The human guide's repeated-measurement example is fictional and has no real study, run, molecule or private-archive locator.",
+    "third_party_material_included": false
+  },
+  "acceptance": {
+    "status": "pass_with_scope",
+    "record_ref": "machine/research/method-experience-2026-10-27.json",
+    "planned_checks": [
+      "Parse the two templates and this design as JSON.",
+      "Resolve the human guide and design interface links against the public tree.",
+      "Review template defaults, record history, attribution and state separation against the agreed scope.",
+      "Run the existing documentation checks after all writers stop."
+    ],
+    "scientific_acceptance": "not_assessed",
+    "upstream_acceptance": "not_proposed",
+    "record_path_base": "public repository root",
+    "meaning": "Template, attribution, file navigation and existing Task carrier checks only; final documentation/package checks are recorded by the delivery process."
+  }
+}

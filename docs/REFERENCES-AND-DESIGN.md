@@ -227,3 +227,7 @@ RNA velocity的独立原文图、冻结配对及后续两项定向补实，已�
 ## 时间预算与异常恢复
 
 [Python 子进程文档](https://docs.python.org/3.11/library/subprocess.html#subprocess.run)说明等待、终止和异常的关系；[psutil 文档](https://psutil.readthedocs.io/stable/index.html)说明进程身份、权限不足和终止后观察。结合既有任务、运行与接受接口，形成[续跑补充](../core/docs/methods/guides/task-continuity.md#时间预算与恢复)及[时间与恢复契约](../machine/time-budget-recovery-contract.json)，由受控短作业和异常路径检查其操作行为。
+
+## 方法使用经验的延伸记录
+
+既有[任务连续性](../core/docs/methods/guides/task-continuity.md)、[研究推进](../core/docs/methods/guides/research-guidance-cycle.md)及[修订接受](../core/docs/methods/guides/revision-responses-and-acceptance.md)提供任务、证据与决定之间的连接。[方法经验指南](../core/docs/methods/guides/method-experience.md)将使用条件、实际尝试、遇阻与调整保存为可续读的课题工件；[设计记录](../core/machine/design/method-experience.json)说明来源归因和后续提炼范围。

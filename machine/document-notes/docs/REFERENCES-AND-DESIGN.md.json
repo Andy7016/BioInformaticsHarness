@@ -148,6 +148,16 @@
         "machine/changes/time-budget-recovery-20261027.json"
       ],
       "acceptance": "Controlled operational and abnormal-path tests; scientific acceptance remains separately judged."
+    },
+    {
+      "id": "2026-10-27-method-experience",
+      "date": "2026-10-27",
+      "reason": "Persist contextual method encounters and stage-to-research continuity through existing carriers.",
+      "technical_records": [
+        "core/machine/design/method-experience.json",
+        "machine/changes/method-experience-20261027.json"
+      ],
+      "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
     }
   ],
   "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",

@@ -1,0 +1,17 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "method-experience-20261027",
+  "summary": "Persist contextual method encounters as study-owned artifacts, reread before reuse, and curate scoped feedback upstream.",
+  "impact": "guidance",
+  "paths": [
+    "core/docs/methods/guides/method-experience.md", "core/docs/methods/README.md",
+    "core/docs/methods/guides/task-continuity.md", "core/machine/design/method-experience.json",
+    "core/examples/research-support/method-experience/experience.template.json",
+    "core/examples/research-support/method-experience/index.template.json",
+    "docs/harness-updates.md", "machine/AGENT-INSTRUCTIONS.md", "CHANGELOG.md"
+  ],
+  "reading_paths": ["core/docs/methods/guides/method-experience.md", "core/docs/methods/guides/task-continuity.md"],
+  "revisit": "Before method reuse or recovery, load local experiences linked to the actual card/version or study strategy. At stage delivery connect the wider research goal, remaining work and next executable action.",
+  "acceptance": "Retain frozen cards, old tasks and observations. Distinguish actual use from consultation, strategy limits from guidance failure, local evidence from upstream acceptance. No automatic rule promotion or scientific acceptance from file checks.",
+  "historical_backfill": false
+}
