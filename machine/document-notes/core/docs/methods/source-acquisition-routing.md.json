@@ -42,6 +42,19 @@
         "core/machine/tools/source-acquisition.json"
       ],
       "acceptance": "local transport tests, bounded live metadata/fullTextXML and preparation interface walkthrough; literature synthesis quality not newly validated"
+    },
+    {
+      "id": "2026-10-28-optional-github-proxy",
+      "date": "2026-10-28",
+      "reason": "The shipped configuration required a maintainer-local GitHub proxy at 127.0.0.1:7890, so GitHub downloads failed for users without that proxy. github_proxy now defaults to null (github-direct); a proxy is opt-in through a copied --config file.",
+      "new_sources_or_designs": [],
+      "technical_records": [
+        "core/config/source-routing.json",
+        "core/scripts/acquisition/route_sources.py",
+        "core/machine/tools/source-acquisition.json",
+        "core/tests/acquisition/test_source_routing.py"
+      ],
+      "acceptance": "offline acquisition tests with stubbed public DNS; no live GitHub request performed"
     }
   ]
 }

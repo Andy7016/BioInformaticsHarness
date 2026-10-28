@@ -11,7 +11,7 @@
   "arxiv_interval_seconds": 3.0,
   "arxiv_domains": ["arxiv.org", "export.arxiv.org"],
   "redirect_delay_seconds": 0.0,
-  "github_proxy": "http://127.0.0.1:7890",
+  "github_proxy": null,
   "github_domains": [
     "github.com",
     "api.github.com",

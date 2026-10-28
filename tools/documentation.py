@@ -1170,10 +1170,15 @@ def _atomic_json(path: Path, value: object) -> None:
 def _assert_outside_root(root: Path, out: Path) -> Path:
     resolved_root = root.resolve(strict=True)
     resolved_out = out.expanduser().absolute()
-    try:
-        lexical_relative = resolved_out.relative_to(resolved_root)
-    except ValueError:
-        lexical_relative = None
+    lexical_relative = None
+    # Compare against the root as given as well as resolved, so an ancestor
+    # system link (e.g. /var -> /private/var on macOS) does not hide .scratch.
+    for candidate_root in (root.expanduser().absolute(), resolved_root):
+        try:
+            lexical_relative = resolved_out.relative_to(candidate_root)
+            break
+        except ValueError:
+            continue
     if lexical_relative is not None:
         if lexical_relative.parts and lexical_relative.parts[0].casefold() == ".scratch":
             probe = resolved_root

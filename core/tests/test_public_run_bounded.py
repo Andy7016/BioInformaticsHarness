@@ -183,7 +183,8 @@ class PublicRunBoundedTests(unittest.TestCase):
                 expected_signature: object,
                 destination: Path | None = None,
             ) -> dict[str, int | str]:
-                if path == subject:
+                # The capture root is resolved, e.g. /var -> /private/var on macOS.
+                if path == subject.resolve():
                     path.write_bytes(b"changed during capture")
                 return original(path, expected_signature=expected_signature, destination=destination)  # type: ignore[arg-type]
 

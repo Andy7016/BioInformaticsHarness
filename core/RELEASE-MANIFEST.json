@@ -508,16 +508,33 @@
     },
     {
       "path": "config/source-routing.json",
-      "bytes": 1200,
-      "sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb",
+      "bytes": 1181,
+      "sha256": "3452fd87e23a924e162dd2dc4cfa771f6eea653589cc4973d6ab8079985a6516",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:config/source-routing.json",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "config/source-routing.json",
+        "sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb",
+        "source": "first-party-documentation-revision:config/source-routing.json",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -3490,34 +3507,39 @@
       }
     },
     {
-      "bytes": 3600,
+      "bytes": 3646,
       "license": "CC-BY-4.0",
       "path": "docs/methods/source-acquisition-routing.md",
       "role": "normative-prose",
-      "sha256": "4a9e2f6f240513d6d1bf439c4ac8893f8bda12754414e6ee059a3a83d8de4167",
+      "sha256": "424534839ab8b4532097125c820fe761fe1f39f2ed943c17c5e4a888c499d885",
       "source": "docs/methods/source-acquisition-routing.md",
       "source_sha256": "f7a7c105ff9bde36e5bf7e67a7f328725cf41da813c7fd9dae715a03676d9236",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
           "revision": "2026-10-22",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 2,
-            "links_rewritten_to_package": 0,
-            "local_redactions": [
-              {
-                "count": 1,
-                "kind": "local-endpoint",
-                "replacement": "<local endpoint omitted from release>"
-              }
-            ]
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 2,
+              "links_rewritten_to_package": 0,
+              "local_redactions": [
+                {
+                  "count": 1,
+                  "kind": "local-endpoint",
+                  "replacement": "<local endpoint omitted from release>"
+                }
+              ]
+            }
           }
         }
       },
@@ -3531,19 +3553,24 @@
         "transform_details": {
           "revision": "2026-10-22",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 2,
-            "links_rewritten_to_package": 0,
-            "local_redactions": [
-              {
-                "count": 1,
-                "kind": "local-endpoint",
-                "replacement": "<local endpoint omitted from release>"
-              }
-            ]
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 2,
+              "links_rewritten_to_package": 0,
+              "local_redactions": [
+                {
+                  "count": 1,
+                  "kind": "local-endpoint",
+                  "replacement": "<local endpoint omitted from release>"
+                }
+              ]
+            }
           }
         }
       }
@@ -5784,20 +5811,25 @@
     },
     {
       "path": "machine/tools/source-acquisition.json",
-      "bytes": 5415,
-      "sha256": "6b41dcad8c999ff1ae51a77ca7cc7a66f45d80a79afc0872f362f0594411cd5f",
+      "bytes": 5425,
+      "sha256": "f0a3b3d32b32c190f0144bfc4f4c7841025671235a2444721adf4483eda60e7f",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:machine/tools/source-acquisition.json",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
           "revision": "2026-10-22",
-          "baseline_revision": "764bd88"
+          "baseline_revision": "764bd88",
+          "previous_transform": "first-party-documentation-revision",
+          "previous_details": {
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88"
+          }
         }
       },
       "previous": {
@@ -5809,7 +5841,12 @@
         "source_sha256": null,
         "transform_details": {
           "revision": "2026-10-22",
-          "baseline_revision": "764bd88"
+          "baseline_revision": "764bd88",
+          "previous_transform": "first-party-documentation-revision",
+          "previous_details": {
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88"
+          }
         }
       }
     },
@@ -5880,16 +5917,33 @@
     },
     {
       "path": "scripts/acquisition/route_sources.py",
-      "bytes": 44905,
-      "sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a",
+      "bytes": 45030,
+      "sha256": "4d014c2238cc7c4e08f2ede0bb1bb6e6995d68ec2a0c9bc07ac84719676c5c5d",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:scripts/acquisition/route_sources.py",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/acquisition/route_sources.py",
+        "sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a",
+        "source": "first-party-documentation-revision:scripts/acquisition/route_sources.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -5904,15 +5958,29 @@
       "transform_details": {}
     },
     {
-      "bytes": 9430,
+      "bytes": 10250,
       "license": "Apache-2.0",
       "path": "scripts/research_support/_common.py",
       "role": "code",
-      "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+      "sha256": "ef54c92b07df42bd5f8b5b500f5d4dc0553308d1b77092aaee29a106bc752484",
       "source": "scripts/research_support/_common.py",
       "source_sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/_common.py",
+        "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+        "source": "scripts/research_support/_common.py",
+        "transform": "verbatim",
+        "source_sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 37548,
@@ -5962,15 +6030,29 @@
       }
     },
     {
-      "bytes": 17757,
+      "bytes": 17905,
       "license": "Apache-2.0",
       "path": "scripts/research_support/execution_capture.py",
       "role": "code",
-      "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+      "sha256": "b13315f9e1f35a8e84d403802af608d8db4212d7fab017973b1cc9b19ea73dab",
       "source": "scripts/research_support/execution_capture.py",
       "source_sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/execution_capture.py",
+        "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+        "source": "scripts/research_support/execution_capture.py",
+        "transform": "verbatim",
+        "source_sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 30899,
@@ -5998,15 +6080,29 @@
       }
     },
     {
-      "bytes": 30436,
+      "bytes": 30658,
       "license": "Apache-2.0",
       "path": "scripts/research_support/plan_seal.py",
       "role": "code",
-      "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+      "sha256": "0eca607aba9771b0f3e2b9ba7fdcbae14cf34c6f205e5d98086daf0085edfacd",
       "source": "scripts/research_support/plan_seal.py",
       "source_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/plan_seal.py",
+        "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+        "source": "scripts/research_support/plan_seal.py",
+        "transform": "verbatim",
+        "source_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+        "transform_details": {}
+      }
     },
     {
       "bytes": 28892,
@@ -6223,16 +6319,33 @@
     },
     {
       "path": "tests/acquisition/test_source_routing.py",
-      "bytes": 17821,
-      "sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362",
+      "bytes": 18582,
+      "sha256": "fa7057edf8410d49994cff4d25365e5b8f318c8398ba167685de258676cb137f",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:tests/acquisition/test_source_routing.py",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
-        "baseline_revision": "764bd88"
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/acquisition/test_source_routing.py",
+        "sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362",
+        "source": "first-party-documentation-revision:tests/acquisition/test_source_routing.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6408,26 +6521,54 @@
       "transform_details": {}
     },
     {
-      "bytes": 10290,
+      "bytes": 11479,
       "license": "Apache-2.0",
       "path": "tests/test_plan_seal.py",
       "role": "test",
-      "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+      "sha256": "99ac452b9d20392902bbe4f050e7ce43316abbcb2638dbbb0e65098b65cf7d36",
       "source": "tests/test_plan_seal.py",
       "source_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/test_plan_seal.py",
+        "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+        "source": "tests/test_plan_seal.py",
+        "transform": "verbatim",
+        "source_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+        "transform_details": {}
+      }
     },
     {
-      "bytes": 10200,
+      "bytes": 10294,
       "license": "Apache-2.0",
       "path": "tests/test_public_run_bounded.py",
       "role": "test",
-      "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+      "sha256": "ec916cdbabab81ca638e7edd715df66fc36697b3d4a2f21ab04e647b055cd11b",
       "source": "tests/test_public_run_bounded.py",
       "source_sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
-      "transform": "verbatim",
-      "transform_details": {}
+      "transform": "first-party-documentation-revision",
+      "transform_details": {
+        "revision": "2026-10-27",
+        "baseline_revision": "764bd88",
+        "previous_transform": "verbatim",
+        "previous_details": {}
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/test_public_run_bounded.py",
+        "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+        "source": "tests/test_public_run_bounded.py",
+        "transform": "verbatim",
+        "source_sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+        "transform_details": {}
+      }
     },
     {
       "path": "tests/test_resource_loop.py",
@@ -6593,7 +6734,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "41e9a5381db81f14025acfbfa06d17909f1dacb9",
+    "head": "4ef40ff4873255f614d27c4c706cbe7fc5c96ab1",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 跨平台路径与可选 GitHub 代理 — 2026-10-28
+
+- 计划封存与执行捕获接受只有 root 能创建或替换的系统链接（如 macOS 的 `/var`、`/tmp`），用户可写位置的符号链接仍被拒绝。
+- POSIX 绝对路径写入 READY 清单时给出“必须相对 plan_root”的明确错误。
+- `github_proxy` 默认为空，GitHub 直连；需要代理时在复制的配置中设置，见[资料获取入口](core/docs/methods/source-acquisition-routing.md)。
+
 ## 方法使用经验与持续研究 — 2026-10-27
 
 - 增加[方法经验指南](core/docs/methods/guides/method-experience.md)与轻量模板，把实际尝试、困难、调整、证据和下一动作保存为课题文件。

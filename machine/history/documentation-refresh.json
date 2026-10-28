@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "41e9a5381db81f14025acfbfa06d17909f1dacb9",
+    "head": "4ef40ff4873255f614d27c4c706cbe7fc5c96ab1",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 7415,
-      "current_sha256": "69d92b8fc73da0bd80a2749c5fb232eee1aa99dadc8a5967e8bb66a6b437b4a5"
+      "current_bytes": 7911,
+      "current_sha256": "592eb2a55980d2adbac4297c785f9f3c5a29cff6a2ef5cdd2f5c949a5dd8d949"
     },
     {
       "path": "LICENSING.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 275557,
-      "current_sha256": "85fd247606243af2a8e33a31c9894ef59c0175229311cd88b4ce5f64081369a3"
+      "current_bytes": 281427,
+      "current_sha256": "60d80c3efc0d39a9ded93328a9e2aea0dfcddbec4fadd426ca930370a1fe9623"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -142,8 +142,8 @@
       "path": "core/config/source-routing.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 1200,
-      "current_sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb"
+      "current_bytes": 1181,
+      "current_sha256": "3452fd87e23a924e162dd2dc4cfa771f6eea653589cc4973d6ab8079985a6516"
     },
     {
       "path": "core/docs/ARCHIVE_POINTERS.md",
@@ -826,8 +826,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/source-acquisition-routing.md",
       "previous_sha256": "3f731303cdc2f205214cd57fc4534a72bde2d2c08696e85588e403b0d68c6f12",
-      "current_bytes": 3600,
-      "current_sha256": "4a9e2f6f240513d6d1bf439c4ac8893f8bda12754414e6ee059a3a83d8de4167"
+      "current_bytes": 3646,
+      "current_sha256": "424534839ab8b4532097125c820fe761fe1f39f2ed943c17c5e4a888c499d885"
     },
     {
       "path": "core/docs/methods/worked-examples/README.md",
@@ -1486,8 +1486,8 @@
       "path": "core/machine/tools/source-acquisition.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5415,
-      "current_sha256": "6b41dcad8c999ff1ae51a77ca7cc7a66f45d80a79afc0872f362f0594411cd5f"
+      "current_bytes": 5425,
+      "current_sha256": "f0a3b3d32b32c190f0144bfc4f4c7841025671235a2444721adf4483eda60e7f"
     },
     {
       "path": "core/references.json",
@@ -1502,8 +1502,17 @@
       "path": "core/scripts/acquisition/route_sources.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 44905,
-      "current_sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a"
+      "current_bytes": 45030,
+      "current_sha256": "4d014c2238cc7c4e08f2ede0bb1bb6e6995d68ec2a0c9bc07ac84719676c5c5d"
+    },
+    {
+      "path": "core/scripts/research_support/_common.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/_common.py",
+      "previous_sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+      "current_bytes": 10250,
+      "current_sha256": "ef54c92b07df42bd5f8b5b500f5d4dc0553308d1b77092aaee29a106bc752484"
     },
     {
       "path": "core/scripts/research_support/evidence.py",
@@ -1515,6 +1524,15 @@
       "current_sha256": "85fd05f2311d1d4f592add270b31790767ff136e477e9ce657191bef26dacc18"
     },
     {
+      "path": "core/scripts/research_support/execution_capture.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/execution_capture.py",
+      "previous_sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+      "current_bytes": 17905,
+      "current_sha256": "b13315f9e1f35a8e84d403802af608d8db4212d7fab017973b1cc9b19ea73dab"
+    },
+    {
       "path": "core/scripts/research_support/handoff.py",
       "change": "modified",
       "baseline_revision": "764bd88",
@@ -1522,6 +1540,15 @@
       "previous_sha256": "0f0be2ffe2dcf0c2285b1776750c44fb60d5eae12d5c8ccbad1686ac49c6fc5c",
       "current_bytes": 30899,
       "current_sha256": "73d61861dfd55cd05688f0621c0da7d8d82ff4240f6f7227cd8d38e8b33b392d"
+    },
+    {
+      "path": "core/scripts/research_support/plan_seal.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/scripts/research_support/plan_seal.py",
+      "previous_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+      "current_bytes": 30658,
+      "current_sha256": "0eca607aba9771b0f3e2b9ba7fdcbae14cf34c6f205e5d98086daf0085edfacd"
     },
     {
       "path": "core/scripts/research_support/research_cycle.py",
@@ -1564,8 +1591,8 @@
       "path": "core/tests/acquisition/test_source_routing.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 17821,
-      "current_sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362"
+      "current_bytes": 18582,
+      "current_sha256": "fa7057edf8410d49994cff4d25365e5b8f318c8398ba167685de258676cb137f"
     },
     {
       "path": "core/tests/research_support/test_evidence.py",
@@ -1598,6 +1625,24 @@
       "baseline_revision": "764bd88",
       "current_bytes": 38497,
       "current_sha256": "094ced1300784baf77288c9ef76df289f7f3d2667596826ae11c87dcccf78e11"
+    },
+    {
+      "path": "core/tests/test_plan_seal.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/tests/test_plan_seal.py",
+      "previous_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+      "current_bytes": 11479,
+      "current_sha256": "99ac452b9d20392902bbe4f050e7ce43316abbcb2638dbbb0e65098b65cf7d36"
+    },
+    {
+      "path": "core/tests/test_public_run_bounded.py",
+      "change": "modified",
+      "baseline_revision": "764bd88",
+      "baseline_locator": "764bd88:core/tests/test_public_run_bounded.py",
+      "previous_sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+      "current_bytes": 10294,
+      "current_sha256": "ec916cdbabab81ca638e7edd715df66fc36697b3d4a2f21ab04e647b055cd11b"
     },
     {
       "path": "core/tests/test_resource_loop.py",
@@ -2404,8 +2449,8 @@
       "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9174,
-      "current_sha256": "4bc07673859067f6c177b9ddc6e6bfa559e39c09736761fce41be985acf165e9"
+      "current_bytes": 9925,
+      "current_sha256": "be68f244bea3001fe4303d5a6bb371f67ad14f19887b8c8a429f4012370e248c"
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
@@ -2929,8 +2974,8 @@
       "path": "tools/documentation.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 65402,
-      "current_sha256": "e39783dded058fc65f34bcc7cceafa5eed4f108d9d1be786491138726392c285"
+      "current_bytes": 65683,
+      "current_sha256": "79d861dcde8d061880c06b983008f077228f337514013a88670f9f1ba07f40c7"
     },
     {
       "path": "tools/guidance_update.py",

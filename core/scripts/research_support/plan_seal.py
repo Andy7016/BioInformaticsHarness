@@ -27,6 +27,7 @@ from scripts.research_support._common import (
     DEFAULT_JSON_BYTES,
     SupportError,
     dump_new,
+    is_root_controlled_link,
     load_json,
     load_json_with_identity,
     utc_now,
@@ -86,7 +87,10 @@ def _absolute_path(value: Path | str | os.PathLike[str], label: str) -> Path:
 
 
 def _assert_no_reparse_components(path: Path, *, allow_missing: bool) -> None:
-    """Reject symlinks and Windows reparse points along an absolute path."""
+    """Reject symlinks and Windows reparse points along an absolute path.
+
+    Root-controlled system links such as macOS ``/var`` are accepted.
+    """
 
     current = Path(path.anchor)
     for part in path.parts[1:]:
@@ -99,7 +103,7 @@ def _assert_no_reparse_components(path: Path, *, allow_missing: bool) -> None:
             _error(f"path component is missing: {current}")
         except OSError as exc:
             _error(f"cannot inspect path component {current}: {exc}", "unknown")
-        if _is_reparse(info):
+        if _is_reparse(info) and not is_root_controlled_link(current, info):
             _error(f"symlink or reparse point refused: {current}")
 
 
@@ -223,7 +227,11 @@ def _canonical_relative(value: Any, root: Path, index: int) -> str:
     label = f"files[{index}]"
     if not isinstance(value, str) or not value:
         _error(f"{label}.path must be a non-empty string")
-    if PureWindowsPath(value).is_absolute() or PureWindowsPath(value).drive:
+    if (
+        PureWindowsPath(value).is_absolute()
+        or PureWindowsPath(value).drive
+        or PurePosixPath(value).is_absolute()
+    ):
         _error(f"{label}.path must be relative to plan_root: {value!r}")
     if "\\" in value or "\x00" in value:
         _error(f"{label}.path must use canonical POSIX separators: {value!r}")

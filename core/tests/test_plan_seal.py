@@ -9,7 +9,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from scripts.research_support._common import SupportError, dump_new
+from scripts.research_support._common import SupportError, dump_new, is_root_controlled_link
 from scripts.research_support.plan_seal import (
     PUBLIC_APPLICATIONS_PROTOCOL,
     STANDARD_PROTOCOL,
@@ -231,6 +231,30 @@ class PlanSealTests(unittest.TestCase):
             build_ready(root_link, "fixture-case")
         with self.assertRaisesRegex(SupportError, "symlink or reparse"):
             build_ready(self.plan, "fixture-case")
+
+    def test_user_owned_ancestor_link_is_refused(self) -> None:
+        outside = self.root / "outside"
+        (outside / "plan").mkdir(parents=True)
+        (outside / "plan" / "PLAN.md").write_text("A frozen plan.\n", encoding="utf-8")
+        ancestor_link = self.root / "linked-parent"
+        try:
+            os.symlink(outside, ancestor_link, target_is_directory=True)
+        except OSError as exc:
+            self.skipTest(f"symlink creation is unavailable: {exc}")
+        if os.name == "posix" and os.geteuid() == 0:
+            self.skipTest("a root-created link is root-controlled by design")
+
+        self.assertFalse(is_root_controlled_link(ancestor_link, ancestor_link.lstat()))
+        with self.assertRaisesRegex(SupportError, "symlink or reparse"):
+            build_ready(ancestor_link / "plan", "fixture-case")
+
+    @unittest.skipUnless(
+        os.name == "posix" and Path("/var").is_symlink(),
+        "requires a system /var link, as on macOS",
+    )
+    def test_root_controlled_system_link_is_accepted(self) -> None:
+        system_link = Path("/var")
+        self.assertTrue(is_root_controlled_link(system_link, system_link.lstat()))
 
 
 if __name__ == "__main__":
