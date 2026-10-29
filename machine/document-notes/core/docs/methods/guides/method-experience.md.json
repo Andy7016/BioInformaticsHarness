@@ -12,6 +12,23 @@
         "machine/changes/method-experience-20261027.json"
       ],
       "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
+    },
+    {
+      "id": "2026-10-29-single-session-stability-20261029",
+      "date": "2026-10-29",
+      "reason": "Attach each later action to its own claim, evidence and revisit condition.",
+      "technical_records": [
+        "machine/changes/single-session-stability-20261029.json"
+      ],
+      "acceptance_status": "accepted_for_parent_documentation_integration"
     }
+  ],
+  "current_identity": {
+    "bytes": 5897,
+    "sha256": "c5c4008dbf0348585f6aaa057f00a95a42485476af2cdb674e0c21692ad14ee4"
+  },
+  "updated_at_utc": "2026-10-29T05:06:58.445080+00:00",
+  "current_technical_records": [
+    "machine/changes/single-session-stability-20261029.json"
   ]
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## 单会话推进与修订收束 — 2026-10-29
+
+- 在[续跑指南](core/docs/methods/guides/task-continuity.md)中连接本轮承诺、阶段动作、实际执行和专题接受，并补清各路线缺口共同造成整体阻断的条件。
+- 在[修订指南](core/docs/methods/guides/revision-responses-and-acceptance.md)中保留请求来源、原主张范围与修订复核，让当前裁定可按所评对象直接读取。
+- 将[综述收束](core/docs/methods/guides/review-coverage-and-closure.md)接回原问题与实际证据，按任务依据区分进度检查点和显式硬预算。
+- [方法经验](core/docs/methods/guides/method-experience.md)中的后续条件逐项连接动作；设计输入的可得性与本轮接受范围见[变化索引](machine/changes/single-session-stability-20261029.json)。
+
 ## 方法使用经验与持续研究 — 2026-10-27
 
 - 增加[方法经验指南](core/docs/methods/guides/method-experience.md)与轻量模板，把实际尝试、困难、调整、证据和下一动作保存为课题文件。

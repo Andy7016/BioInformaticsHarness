@@ -2515,8 +2515,8 @@
     },
     {
       "path": "docs/methods/guides/method-experience.md",
-      "bytes": 5583,
-      "sha256": "457648057a424ec6edbc1b2ee29236488a512579e4b7d131809b9a9623015484",
+      "bytes": 5897,
+      "sha256": "c5c4008dbf0348585f6aaa057f00a95a42485476af2cdb674e0c21692ad14ee4",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/method-experience.md",
@@ -2524,7 +2524,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "docs/methods/guides/method-experience.md",
+        "sha256": "457648057a424ec6edbc1b2ee29236488a512579e4b7d131809b9a9623015484",
+        "source": "first-party-documentation-revision:docs/methods/guides/method-experience.md",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -2841,15 +2858,15 @@
     },
     {
       "path": "docs/methods/guides/review-coverage-and-closure.md",
-      "bytes": 10729,
-      "sha256": "deaf45dcf098099c99d0df58fad657e802b8833f35c7918149d99ee62d368a4f",
+      "bytes": 11563,
+      "sha256": "73efbc0bbe0b7ead0f13c0a884d9b3dcb004e74e8beb102b1579cfd3521271b3",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/review-coverage-and-closure.md",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-24",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
@@ -2857,7 +2874,7 @@
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "revision": "2026-10-23",
+            "revision": "2026-10-24",
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
@@ -2866,7 +2883,12 @@
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
                 "revision": "2026-10-23",
-                "baseline_revision": "764bd88"
+                "baseline_revision": "764bd88",
+                "previous_transform": "first-party-documentation-revision",
+                "previous_details": {
+                  "revision": "2026-10-23",
+                  "baseline_revision": "764bd88"
+                }
               }
             }
           }
@@ -2884,7 +2906,7 @@
           "baseline_revision": "764bd88",
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "revision": "2026-10-23",
+            "revision": "2026-10-24",
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
@@ -2893,7 +2915,12 @@
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
                 "revision": "2026-10-23",
-                "baseline_revision": "764bd88"
+                "baseline_revision": "764bd88",
+                "previous_transform": "first-party-documentation-revision",
+                "previous_details": {
+                  "revision": "2026-10-23",
+                  "baseline_revision": "764bd88"
+                }
               }
             }
           }
@@ -2952,28 +2979,33 @@
       }
     },
     {
-      "bytes": 10807,
+      "bytes": 12250,
       "license": "CC-BY-4.0",
       "path": "docs/methods/guides/revision-responses-and-acceptance.md",
       "role": "normative-prose",
-      "sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517",
+      "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77",
       "source": "docs/methods/guides/revision-responses-and-acceptance.md",
       "source_sha256": "3029d9ffe3ee27f454ad9a8f1f9f3f6eb8affb72c08a7fea1bc74f05f0760ab5",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-24",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
-          "revision": "2026-10-22",
+          "revision": "2026-10-24",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 4,
-            "links_rewritten_to_package": 5,
-            "local_redactions": []
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 4,
+              "links_rewritten_to_package": 5,
+              "local_redactions": []
+            }
           }
         }
       },
@@ -2985,15 +3017,20 @@
         "transform": "markdown-links-and-local-redaction",
         "source_sha256": "3029d9ffe3ee27f454ad9a8f1f9f3f6eb8affb72c08a7fea1bc74f05f0760ab5",
         "transform_details": {
-          "revision": "2026-10-22",
+          "revision": "2026-10-24",
           "baseline_revision": "764bd88",
-          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_transform": "first-party-documentation-revision",
           "previous_details": {
-            "changed": true,
-            "images_converted_to_ordinary_links": 0,
-            "links_redirected_to_archive_pointers": 4,
-            "links_rewritten_to_package": 5,
-            "local_redactions": []
+            "revision": "2026-10-22",
+            "baseline_revision": "764bd88",
+            "previous_transform": "markdown-links-and-local-redaction",
+            "previous_details": {
+              "changed": true,
+              "images_converted_to_ordinary_links": 0,
+              "links_redirected_to_archive_pointers": 4,
+              "links_rewritten_to_package": 5,
+              "local_redactions": []
+            }
           }
         }
       }
@@ -3111,8 +3148,8 @@
     },
     {
       "path": "docs/methods/guides/task-continuity.md",
-      "bytes": 5850,
-      "sha256": "afc0dfbb991e0da063d49d02635218c6864b5711b9b01c4404b38860715c0dc6",
+      "bytes": 7306,
+      "sha256": "4bee623a5e3b9a46145a82220ff984fb9cc12888dc99c056b034ee2d4769bfea",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/task-continuity.md",
@@ -3131,8 +3168,13 @@
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
-              "revision": "2026-10-22",
-              "baseline_revision": "764bd88"
+              "revision": "2026-10-27",
+              "baseline_revision": "764bd88",
+              "previous_transform": "first-party-documentation-revision",
+              "previous_details": {
+                "revision": "2026-10-22",
+                "baseline_revision": "764bd88"
+              }
             }
           }
         }
@@ -3153,8 +3195,13 @@
             "baseline_revision": "764bd88",
             "previous_transform": "first-party-documentation-revision",
             "previous_details": {
-              "revision": "2026-10-22",
-              "baseline_revision": "764bd88"
+              "revision": "2026-10-27",
+              "baseline_revision": "764bd88",
+              "previous_transform": "first-party-documentation-revision",
+              "previous_details": {
+                "revision": "2026-10-22",
+                "baseline_revision": "764bd88"
+              }
             }
           }
         }
@@ -6593,7 +6640,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "41e9a5381db81f14025acfbfa06d17909f1dacb9",
+    "head": "4ef40ff4873255f614d27c4c706cbe7fc5c96ab1",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }
