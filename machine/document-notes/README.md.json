@@ -54,11 +54,20 @@
         "machine/changes/guidance-updates-20261027.json"
       ],
       "acceptance": "Contract tests and independent protocol review; scientific study adoption remains separate."
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Separate research entry from runtime preparation.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
   ],
   "current_identity": {
-    "bytes": 3461,
-    "sha256": "38243a192336c0f915b8058b3aa49844cc83703c75c5235b590457a1f9e897c2"
+    "bytes": 3776,
+    "sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe"
   },
-  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00"
+  "updated_at_utc": "2026-10-29T06:22:52.609392+00:00"
 }

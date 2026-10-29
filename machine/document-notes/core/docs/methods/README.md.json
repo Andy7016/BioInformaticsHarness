@@ -209,12 +209,21 @@
         "machine/changes/method-experience-20261027.json"
       ],
       "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Limit applicability bookkeeping and offer a scoped experience carrier.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
   ],
-  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "updated_at_utc": "2026-10-29T06:22:52.609392+00:00",
   "current_identity": {
-    "bytes": 11606,
-    "sha256": "24ffe3c18c117e634249540a4ecf717220fb81d6d2ccd24c7f0a46a9a94612ac"
+    "bytes": 12519,
+    "sha256": "d46d233d6fda0d07c7ff736ff6e16d174ecd66b30097222a5988737343765585"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",

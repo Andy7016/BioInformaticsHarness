@@ -1,0 +1,69 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "research-use-entry-20261029",
+  "date": "2026-10-29",
+  "baseline_commit": "ab7e6bcef41e3359d2317e999f78ed207684ef3e",
+  "summary": "Clarify staged research use and maintenance scope; offer a compact study-note experience carrier while retaining strict templates and runtime contracts.",
+  "impact": "guidance",
+  "paths": [
+    "README.md",
+    "core/QUICKSTART.md",
+    "core/docs/methods/README.md",
+    "core/docs/methods/guides/method-experience.md",
+    "machine/AGENT-INSTRUCTIONS.md",
+    "core/machine/design/method-experience.json",
+    "CHANGELOG.md",
+    "machine/document-notes/README.md.json",
+    "machine/document-notes/core/QUICKSTART.md.json",
+    "machine/document-notes/core/docs/methods/README.md.json",
+    "machine/document-notes/core/docs/methods/guides/method-experience.md.json",
+    "machine/document-notes/machine/AGENT-INSTRUCTIONS.md.json",
+    "machine/changes/research-use-entry-20261029.json",
+    "machine/source-design-index.jsonl",
+    "core/docs/methods/guides/task-continuity.md",
+    "machine/document-notes/core/docs/methods/guides/task-continuity.md.json"
+  ],
+  "reading_paths": [
+    "core/QUICKSTART.md",
+    "core/docs/methods/README.md",
+    "core/docs/methods/guides/method-experience.md"
+  ],
+  "reading_sections": {
+    "core/QUICKSTART.md": [
+      "Prepare a question or a review",
+      "Maintain or develop the core"
+    ],
+    "core/docs/methods/README.md": [
+      "How to use the cards",
+      "Choose a guide by research question"
+    ],
+    "core/docs/methods/guides/method-experience.md": [
+      "在课题里保存",
+      "接到当前任务与恢复"
+    ]
+  },
+  "revisit": "Choose only currently relevant reading and the experience carrier. Retain old frozen/selected structured contracts; a new carrier does not relabel old records.",
+  "acceptance_status": "editorial_accepted_with_scope",
+  "acceptance": "Three entry walkthroughs and original-template/runtime preservation are checked separately; scientific review, required actual execution and first-delivery preservation remain. No measured efficiency or causal model benefit is asserted.",
+  "design_inputs": [
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-single-session-iteration-20261029/ARCHITECTURE-REVIEW.json",
+      "sha256": "bb3affe7d839a259a14029c371b0abb5092173369cefb76f9a6edf7161f8ff11"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-single-session-iteration-20261029/GPT-CASE-EVALUATION.json",
+      "scope": "Observed semantic carrier use and scoped review loop, not strict-v1 format or architecture-effect validation"
+    }
+  ],
+  "invariants": [
+    "No original guides, records, paths, templates, runtime or schemas deleted.",
+    "Strict v1 fields and strict entry/plan/Run consumers remain unchanged.",
+    "Single-owner note is ordinary file evidence; parallel/structured contracts use original formal route.",
+    "First deliveries and scoped historical verdicts preserved.",
+    "Researcher path does not inherit the whole maintainer publication ledger."
+  ],
+  "effect_status": "Compact route is a new documented option; quantitative cost and model effects remain unmeasured.",
+  "historical_backfill": false
+}

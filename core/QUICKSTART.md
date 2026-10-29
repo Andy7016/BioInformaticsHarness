@@ -1,10 +1,12 @@
 # Quickstart
 
-Run these commands from the core directory with Python 3.11 or newer. The three tool examples below use fictional inputs and the Python standard library. Preparation templates and the Splice reading example have their own descriptions. Each command writes to a new directory under your own `.scratch/` folder.
+For literature synthesis or theoretical comparison, start with your question and existing study notes, then choose the relevant [method guide](docs/methods/README.md). This page provides optional tool examples; the maintenance tests at the end serve repository development.
+
+When you select a tool, run its commands from the core directory with Python 3.11 or newer and follow that tool's input contract. The three examples use fictional inputs and the Python standard library. Each command writes to a new directory under your own `.scratch/` folder.
 
 ## Prepare a question or a review
 
-Use the [preparation guide](docs/methods/guides/research-preparation.md) to choose a question-led or review-first route. Copy its [starter records](examples/research-support/preparation/README.md) to your study directory. A review may be delivered before selecting any data or model experiment.
+Use the [preparation guide](docs/methods/guides/research-preparation.md) to choose a question-led or review-first route. Keep the question, sources, choices and next action in existing study records, or copy the [starter records](examples/research-support/preparation/README.md) when choosing that structured route. A review may be delivered before selecting a data or model experiment.
 
 To plan acquisition for a selected paper:
 
@@ -43,7 +45,9 @@ The producer and receiver outputs record separate observations. When a task need
 - [Plan seal example](examples/research-support/plan-seal/README.md): create a READY plan in a dedicated plan root, then check and seal it using the same root. Put revisions in a new directory.
 - [First audit example](examples/research-support/first-audit/README.md): list the code, configuration, and input before starting the child process. The runner uses `psutil` only when process-tree resource sampling is requested.
 
-## Run the core tests
+## Maintain or develop the core
+
+Run these regression tests when maintaining the core or checking a relevant implementation change. Research use starts from its question and selected methods; these tests are a separate maintenance activity.
 
 The test commands below use Python's standard library. For the test session, set `$env:PYTHONDONTWRITEBYTECODE = "1"` in PowerShell or `export PYTHONDONTWRITEBYTECODE=1` on POSIX. This also configures the Python processes started by the tests. Run each test directory explicitly:
 

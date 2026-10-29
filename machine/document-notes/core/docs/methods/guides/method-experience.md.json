@@ -21,13 +21,22 @@
         "machine/changes/single-session-stability-20261029.json"
       ],
       "acceptance_status": "accepted_for_parent_documentation_integration"
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Find selected experience through current navigation rather than require an empty index.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
   ],
   "current_identity": {
-    "bytes": 5897,
-    "sha256": "c5c4008dbf0348585f6aaa057f00a95a42485476af2cdb674e0c21692ad14ee4"
+    "bytes": 6998,
+    "sha256": "0a72e0c46b06b04b7d23286fec26732fae1f6d1c051a4a7bef251e8cfefec8ea"
   },
-  "updated_at_utc": "2026-10-29T05:06:58.445080+00:00",
+  "updated_at_utc": "2026-10-29T06:22:52.609392+00:00",
   "current_technical_records": [
     "machine/changes/single-session-stability-20261029.json"
   ]

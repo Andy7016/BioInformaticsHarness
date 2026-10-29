@@ -53,11 +53,20 @@
         "machine/changes/single-session-stability-20261029.json"
       ],
       "acceptance_status": "accepted_for_parent_documentation_integration"
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Find the selected note or structured index through current navigation.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
   ],
   "current_identity": {
-    "bytes": 7306,
-    "sha256": "4bee623a5e3b9a46145a82220ff984fb9cc12888dc99c056b034ee2d4769bfea"
+    "bytes": 7327,
+    "sha256": "4173898d9ab14d12165d06763c55d7b9094539ecbde2157d5ef46be0ed3250f4"
   },
   "updated_at_utc": "2026-10-29T05:06:58.445080+00:00",
   "current_technical_records": [
