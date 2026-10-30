@@ -51,14 +51,29 @@
         "core/machine/design/rereading-perspectives.json"
       ],
       "acceptance_status": "accepted_guidance_candidate_and_bounded_content_example"
+    },
+    {
+      "id": "2026-10-29-single-session-stability-20261029",
+      "date": "2026-10-29",
+      "reason": "Classify request obligations, preserve original claim scope through narrowing, close actual repairs through corresponding review, and expose current scoped adjudication to final consumers.",
+      "technical_records": [
+        "machine/changes/single-session-stability-20261029.json"
+      ],
+      "acceptance_status": "accepted_for_parent_documentation_integration",
+      "previous_document_identity": {
+        "bytes": 10807,
+        "sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
+      },
+      "previous_document_updated_at_utc": "2026-10-25T12:41:42.164835+00:00"
     }
   ],
-  "updated_at_utc": "2026-10-25T12:41:42.164835+00:00",
+  "updated_at_utc": "2026-10-29T05:09:46.525548+00:00",
   "current_identity": {
-    "bytes": 10807,
-    "sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
+    "bytes": 12250,
+    "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
   },
   "current_technical_records": [
-    "core/machine/design/rereading-perspectives.json"
+    "core/machine/design/rereading-perspectives.json",
+    "machine/changes/single-session-stability-20261029.json"
   ]
 }

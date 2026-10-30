@@ -51,6 +51,20 @@
         "machine/history/research-guidance-cycle.json"
       ],
       "acceptance": "Parent interface and documentation acceptance recorded in the linked machine history; actual new scientific direction remains to be discussed."
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Make research, selected tools and maintenance tests distinct entry routes.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
-  ]
+  ],
+  "current_identity": {
+    "bytes": 5260,
+    "sha256": "28f8d4818deb2b52170d8f8ecf2cf2af1ca750e1c72c0443b0f112453be8f6b6"
+  },
+  "updated_at_utc": "2026-10-29T06:22:52.609392+00:00"
 }

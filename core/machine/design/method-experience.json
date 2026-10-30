@@ -31,10 +31,11 @@
     "record_pattern": "research/method-experience/<method-key>/<experience-id>.json",
     "index_path": "research/method-experience/index.json",
     "method_key": "A stable study-local navigation key for the referenced method, guide or strategy; it does not establish a new method identity.",
-    "record_identity": "Choose a study-unique experience id and unused file path for each meaningful observation.",
+    "record_identity": "For structured_template, choose a study-unique experience id and unused file path for each meaningful observation.",
     "history": "Preserve original records. A correction or new finding is a new record with supersedes or revisits references; do not rewrite the earlier observation.",
     "shared_sources": "Shared or frozen Harness cards remain unchanged during study-local use. Store local adaptations and their outputs in the study.",
-    "parallel_writing": "Each writer creates separate experience files. The named index owner serializes navigation updates; agents do not concurrently revise the same historical entry."
+    "parallel_writing": "Each writer creates separate experience files. The named index owner serializes navigation updates; agents do not concurrently revise the same historical entry.",
+    "applies_to": "structured_template carrier; study_note uses its existing study path and stable entry locator"
   },
   "index_contract": {
     "schema": "harness.method-experience-index/v1",
@@ -158,10 +159,10 @@
     "revisor": "A candidate that affects a claim, method condition or shared card follows the existing request, response-route, task, artifact and acceptance chain."
   },
   "workflow": [
-    "Before choosing a method, read the matched source version and relevant study-local index entries with their evidence.",
+    "Before choosing a method, read the matched source version and find relevant local experiences through the selected note or index with their evidence.",
     "Choose retain, add_conditions, adapt, replace or defer, and state the conditions that would change the choice.",
-    "Record actual attempts through the existing task, run and artifact records. Create an independent experience file when a meaningful observation or failure changes a decision; ordinary tool calls need no separate long form.",
-    "On recovery, read the index, relevant experience records, their evidence and next_action; continue from the first unmet action without relying on conversation memory.",
+    "Record actual attempts through existing task, run and artifact evidence. Keep meaningful observations in the selected carrier; structured_template creates independent experience files, while a single-owner study_note uses stable entries. Ordinary tool calls need no separate long form.",
+    "On resuming work, follow current navigation to the selected note or index, read relevant experience, evidence and next action, and continue from the first unmet action.",
     "Extract a bounded candidate only when it has a reusable lesson, stated conditions and supporting evidence. Prepare shareable evidence and rights before sending it through revisor review.",
     "After review, record the accepted scope in a conditional worked example or a card revision. Keep study-local observations and historical task contracts recoverable."
   ],
@@ -199,5 +200,26 @@
     "upstream_acceptance": "not_proposed",
     "record_path_base": "public repository root",
     "meaning": "Template, attribution, file navigation and existing Task carrier checks only; final documentation/package checks are recorded by the delivery process."
-  }
+  },
+  "carrier_choices": {
+    "study_note": {
+      "use": "Small study with a single responsible writer; stable entries in an existing task/decision/research note, linked by current navigation.",
+      "semantics": "Recover method/source version, context, actual attempt and evidence, observation/uncertainty, response and next owner/trigger; distinguish consultation and study-proposed strategy.",
+      "history": "Append new related observations; frozen records get derived versions. Do not rewrite the first delivery.",
+      "contract_boundary": "An ordinary file Artifact, not a harness.method-experience/v1 or index/v1 conformance claim. Never substitute it for strict entry/plan/Run or other consumer inputs.",
+      "formalization": "When explicit structured exchange or parallel ownership is needed, create new formal entries referencing the original observation and retain its history."
+    },
+    "structured_template": {
+      "use": "Explicit serialization, parallel writers or an already selected/frozen structured contract.",
+      "templates": "Original experience.template.json and index.template.json and all declared v1 fields remain unchanged.",
+      "authority": "Do not silently migrate existing selected outputs or retroactively relabel old study records as format-compliant."
+    }
+  },
+  "guidance_revisions": [
+    {
+      "date": "2026-10-29",
+      "change_ref": "machine/changes/research-use-entry-20261029.json",
+      "scope": "Explicit optional study-note carrier; no new validator/schema/runtime and no change to strict v1 template fields."
+    }
+  ]
 }

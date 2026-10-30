@@ -44,6 +44,32 @@
         "machine/changes/method-experience-20261027.json"
       ],
       "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
+    },
+    {
+      "id": "2026-10-29-single-session-stability-20261029",
+      "date": "2026-10-29",
+      "reason": "Connect same-session commitments to the next dependent action, actual execution, review and topic-level closure; retain legitimate all-route blockage with either shared or heterogeneous missing prerequisites.",
+      "technical_records": [
+        "machine/changes/single-session-stability-20261029.json"
+      ],
+      "acceptance_status": "accepted_for_parent_documentation_integration"
+    },
+    {
+      "id": "2026-10-29-research-use-entry-20261029",
+      "date": "2026-10-29",
+      "reason": "Find the selected note or structured index through current navigation.",
+      "technical_records": [
+        "machine/changes/research-use-entry-20261029.json"
+      ],
+      "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
     }
+  ],
+  "current_identity": {
+    "bytes": 7327,
+    "sha256": "4173898d9ab14d12165d06763c55d7b9094539ecbde2157d5ef46be0ed3250f4"
+  },
+  "updated_at_utc": "2026-10-29T05:06:58.445080+00:00",
+  "current_technical_records": [
+    "machine/changes/single-session-stability-20261029.json"
   ]
 }

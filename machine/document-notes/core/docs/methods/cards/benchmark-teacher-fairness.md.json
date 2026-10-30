@@ -26,8 +26,35 @@
       ]
     },
     "source_text is the exact UTF-8 decode of the baseline Git blob; line endings are preserved in the JSON string. source_sha256 hashes the original blob bytes.",
-    "Source details retained from the baseline case-analysis sections: DNABERT-2 case sections 3.2/5/6; ESM2/ESMFold case sections 3/6; MolCLR case sections 4.1-4.4/7; calibration anchors scFoundation test-set selection and Enformer component independence."
+    "Source details retained from the baseline case-analysis sections: DNABERT-2 case sections 3.2/5/6; ESM2/ESMFold case sections 3/6; MolCLR case sections 4.1-4.4/7; calibration anchors scFoundation test-set selection and Enformer component independence.",
+    {
+      "id": "2026-10-30-conditional-model-comparison",
+      "date": "2026-10-30",
+      "reason": "Make task, training-visible information, prediction/output target and evaluation matching callable in baseline/deep-model selection, with system-utility and missing-evidence routes.",
+      "technical_records": [
+        "machine/changes/conditional-model-comparison-20261030.json"
+      ],
+      "prior_identity": {
+        "bytes": 4940,
+        "sha256": "3e4f5f1a00ffb75a40e0f2fa07dd0fb3fc581a802501e6aca073d1c8ac3cde47"
+      },
+      "revised_identity": {
+        "bytes": 7584,
+        "sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523"
+      },
+      "acceptance_status": "accepted_parent_editorial_and_publication_checks",
+      "evidence_scope": "Existing public guidance and a bounded private accepted case; no new primary-paper reading or model execution claimed.",
+      "first_draft_and_revisor": "Existing mechanism retained; no zero-error first-draft requirement or new required carrier."
+    }
   ],
   "source_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-  "source_sha256": "a536a9e35c92a519c9b43da5d922f7aaa4670e6b5dcc58ef9c33d1594213b77f"
+  "source_sha256": "a536a9e35c92a519c9b43da5d922f7aaa4670e6b5dcc58ef9c33d1594213b77f",
+  "current_identity": {
+    "bytes": 7584,
+    "sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523"
+  },
+  "updated_at_utc": "2026-10-30T01:59:11.932790+00:00",
+  "current_technical_records": [
+    "machine/changes/conditional-model-comparison-20261030.json"
+  ]
 }

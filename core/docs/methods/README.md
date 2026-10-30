@@ -11,7 +11,7 @@ Choose a guide when a research decision needs a concrete measure, comparison, or
 
 Use [worked examples](worked-examples/README.md) to see how method choices change a decision. The [research-support tools](research-support-tools.md) help with file handoff and limited diagnostics. For public references and design reasons, see the [combined source and design index](../../../docs/REFERENCES-AND-DESIGN.md) and [research history](../../../docs/history/EVOLUTION.zh.md).
 
-When a method encounter changes a decision, retain its context, actual attempt, evidence and next action in a [local method experience](guides/method-experience.md). Reuse these files when resuming or selecting the method again.
+When a method encounter changes a decision, retain its context, actual attempt, evidence and next action in a [local method experience](guides/method-experience.md). A small, single-owner study may use stable entries in existing notes; structured entries and an index remain available for parallel work or explicit machine consumption. Revisit the relevant experience before using the method again.
 
 ## Choose a guide by research question
 
@@ -53,7 +53,7 @@ Use the trigger that matches your research question. The table suggests a starti
 | 自适应负例、教师标签、蒸馏、基线或跨模型比较 | [基准、教师与公平比较](cards/benchmark-teacher-fairness.md) | [表征可视化与效率比较](cards/visualization-efficiency.md) |
 | UMAP/VIA/检索解释，或速度、显存、质量比较 | [表征可视化与效率比较](cards/visualization-efficiency.md) | 由任务卡补充输入与真值条件 |
 
-Use only the cards that apply to the study. Mark an unrelated card `not-applicable` with a short reason; mark a required source `unknown` until it is available.
+Use only the cards that apply to the study. For a card already proposed for this task and material to a method choice or acceptance, record a short reason when it is not used. Other cards remain outside the current work; new evidence can trigger relevant reading later. Keep a missing required source `unknown` and state which judgment or action it affects.
 
 ## 最小使用步骤
 

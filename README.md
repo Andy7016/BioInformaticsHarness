@@ -6,7 +6,7 @@ BioInformaticsHarness 帮助研究者和 agent 开展生物模型研究：从问
 
 ## 开始使用
 
-准备 Python 3.11 或更新版本，然后取得项目：
+先取得项目，再按本轮研究或工具使用需要选择入口：
 
 ```sh
 git clone https://github.com/vvcchh0/BioInformaticsHarness.git
@@ -15,7 +15,7 @@ cd BioInformaticsHarness
 
 从新主题开始时，先选择[研究前期准备路线](core/docs/methods/guides/research-preparation.md)。希望先看清领域时，可按[综述优先](core/docs/methods/guides/review-first-preparation.md)梳理证据、分歧和问题，再决定下一步。
 
-按照 [快速入门](core/QUICKSTART.md) 试用资料获取、交接、诊断和证据整理工具。运行真实模型应用时，按案例说明安装科学计算依赖。
+文献调研与理论比较可先在现有课题记录中写清问题、证据和预期交付，按当前决定选择指南。需要资料获取、交接、诊断或证据整理工具时，再按[工具快速入门](core/QUICKSTART.md)准备 Python 3.11 或更新版本并选择对应命令。运行真实模型应用时，按案例说明安装科学计算依赖。
 
 ## 示例
 

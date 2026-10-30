@@ -1,0 +1,148 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "single-session-stability-20261029",
+  "date": "2026-10-29",
+  "summary": "Connect current commitments, scoped dependencies, executed revision closure and directly readable scoped verdicts within the existing single-session workflow.",
+  "impact": "guidance",
+  "baseline_commit": "4ef40ff4873255f614d27c4c706cbe7fc5c96ab1",
+  "paths": [
+    "core/docs/methods/guides/task-continuity.md",
+    "core/docs/methods/guides/review-coverage-and-closure.md",
+    "core/docs/methods/guides/revision-responses-and-acceptance.md",
+    "core/docs/methods/guides/method-experience.md",
+    "machine/document-notes/core/docs/methods/guides/task-continuity.md.json",
+    "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
+    "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
+    "machine/document-notes/core/docs/methods/guides/method-experience.md.json",
+    "CHANGELOG.md",
+    "machine/changes/single-session-stability-20261029.json",
+    "machine/source-design-index.jsonl"
+  ],
+  "reading_paths": [
+    "core/docs/methods/guides/task-continuity.md",
+    "core/docs/methods/guides/review-coverage-and-closure.md",
+    "core/docs/methods/guides/revision-responses-and-acceptance.md",
+    "core/docs/methods/guides/method-experience.md"
+  ],
+  "reading_sections": {
+    "core/docs/methods/guides/task-continuity.md": [
+      "同一会话内推进本轮工作",
+      "方法经验与阶段衔接",
+      "计算与交付"
+    ],
+    "core/docs/methods/guides/review-coverage-and-closure.md": [
+      "1. 先确定地图服务什么",
+      "5. 为值得处理的缺口选择一项有界动作",
+      "6. 把收束理由写给读者"
+    ],
+    "core/docs/methods/guides/revision-responses-and-acceptance.md": [
+      "先把问题变成可选路线",
+      "路线选择表",
+      "修订后收敛到当前裁定"
+    ],
+    "core/docs/methods/guides/method-experience.md": [
+      "写清观察与回应"
+    ]
+  },
+  "revisit": "At a stage transition, gap, revisor response or final delivery, compare current obligations, dependent actions, actual artifacts and scoped acceptance. Reuse existing Plan/report/navigation views; appraise only current or next-gate impacts.",
+  "acceptance": "Preserve original commitments and historical judgments; use explicit scope revisions, actual requested execution and corresponding scientific review. Overall dependency blockage is valid after bounded alternative appraisal when all worthwhile authorized routes are blocked, including heterogeneous gaps.",
+  "change_rationale": [
+    {
+      "path": "core/docs/methods/guides/task-continuity.md",
+      "reason": "Connect same-session commitments to the next dependent action, actual execution, review and topic-level closure; retain legitimate all-route blockage with either shared or heterogeneous missing prerequisites.",
+      "prior_coverage": "Recovery, scoped blocked work, independent authorized work, task-bound delivery and stage-to-research continuity already existed.",
+      "addition_needed": "Make those controls explicit within one continuing session, attach judgments/execution/delivery to current obligations, and distinguish accepted stage output, complete topic and overall dependency blockage."
+    },
+    {
+      "path": "core/docs/methods/guides/review-coverage-and-closure.md",
+      "reason": "Connect original questions and author commitments to actual methods/results and concluding synthesis; align bounded follow-up with existing task-based checkpoint and explicit-budget semantics.",
+      "prior_coverage": "Purpose-specific maps, scope appraisal, evidence states, bounded alternatives and conditional closure already existed.",
+      "addition_needed": "Separate domain motivation from undertaken work, preserve unfinished necessary work at closure, and remove the universal per-action time/paper-count cap requirement while preserving explicit authorized budgets."
+    },
+    {
+      "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
+      "reason": "Classify request obligations, preserve original claim scope through narrowing, close actual repairs through corresponding review, and expose current scoped adjudication to final consumers.",
+      "prior_coverage": "Atomic requests, selected-route AND/OR, route-specific inputs and record/runtime/scientific acceptance already existed.",
+      "addition_needed": "Connect request origin to the original commitment or adopted new use, preserve original-wording verdicts alongside narrow claims, and prevent historical pending or scalar verdicts from hiding current object-specific decisions."
+    },
+    {
+      "path": "core/docs/methods/guides/method-experience.md",
+      "reason": "Attach each later action to its own claim, evidence and revisit condition.",
+      "prior_coverage": "Contextual observations, actual-use attribution, append-only experience, task links and later responsibility already existed.",
+      "addition_needed": "Prevent independently applicable missing materials from becoming one global precondition for all later work."
+    }
+  ],
+  "design_inputs": [
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-topic-completion-research-20261028/GUIDANCE-CANDIDATE-v1.json",
+      "kind": "revised_private_design_candidate",
+      "sha256": "fea77a4468b6086f16a543b900028cd4237235d34601511c0c44426ed4d1c5a9"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-topic-completion-research-20261028/revisor/independent-review-v1.json",
+      "kind": "private_independent_candidate_review",
+      "sha256": "142f1ee9f04da29ab2f37266e4e898cba11842e36c1e9cd72bfa02a691454c44"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-topic-completion-research-20261028/REVISOR-RESPONSE.json",
+      "kind": "private_candidate_response",
+      "sha256": "12ccc0649d66b1c6ef92589d309c4735a2eba57d75f9e2f224424ba22f65df36"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-topic-completion-research-20261028/ACCEPTANCE.json",
+      "kind": "private_bounded_candidate_acceptance",
+      "sha256": "dcc5ed365e69228d0647bf628512ef4b3d17fb19cd134f1e3afd6aba6f008f0d"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-yeast-topic-recovery-20261028/FINAL-REPORT.json",
+      "kind": "private_retrospective_delivery_summary",
+      "sha256": "8f606b4aa715b7de70061cf6e46fd6d2bee4afdd6c52906d99146785c5d5d90b"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-yeast-topic-recovery-20261028/CONTINUITY-OBSERVATION.json",
+      "kind": "private_retained_context_observation",
+      "sha256": "93f3e1b447c9df5a0b13e9b7067300110a7be7b08588d8783e2c1113367388a4"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-yeast-topic-recovery-20261028/COMPLETION-GAP-CASE-ADDENDUM.json",
+      "kind": "private_retrospective_addendum",
+      "sha256": "a47e3310e817741d1d9cf2716c0183d252c9806278ac742aad3c2f497e19a047"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-yeast-topic-recovery-20261028/revisor/INDEPENDENT-CLOSURE-REVIEW.json",
+      "kind": "private_independent_recovery_closure_review",
+      "sha256": "0f9218bdc5869eeec34104280c4c5df00d5351fa6c1a1d8782331e07854a69af"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-file-only-recovery-yeast-continuation-20261028/F0-INDEPENDENT-GRADING.json",
+      "kind": "private_historical_file_recovery_appraisal",
+      "sha256": "b1646763a07b8224418d91bfcbc5808f19812d7df640722527c847e3d3ed76ea"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-file-only-recovery-yeast-continuation-20261028/F1-SCIENTIFIC-APPRAISAL.json",
+      "kind": "private_historical_scoped_continuation_appraisal",
+      "sha256": "c5fe7700d46aac4217f9df46a998d89726d55e099f6d0a426b59894a4cbb114e"
+    }
+  ],
+  "evidence_scope": "Private candidate/source review and retrospective case appraisals inform this first-party wording. The source materials remain private. No private case answers, source paper bodies or new experiment grading materials are exported into public prose.",
+  "implementation_boundary": [
+    "Existing Plan, Task, Claim, Decision, Review, report and navigation carriers only.",
+    "No code, templates, schemas, manifests, required new file or mandatory new field set changed.",
+    "No new universal time limit, paper count, zero-error first draft threshold or architectural simplification.",
+    "Explicit existing authorized budgets retain their effect; process counts do not determine scientific sufficiency."
+  ],
+  "acceptance_status": "accepted_for_parent_documentation_integration",
+  "validation_scope": "Writer checks exact edits, append-only note/source-index retention and JSON consistency. Parent performs final editorial acceptance, documentation refresh/check and publication verification after all writers stop.",
+  "effect_status": "No prospective stability, frequency or isolated causal effect established by this documentation change; retrospective retained-context observations retain their original scope.",
+  "historical_backfill": false
+}

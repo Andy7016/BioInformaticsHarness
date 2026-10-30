@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "4ef40ff4873255f614d27c4c706cbe7fc5c96ab1",
+    "head": "e0562ed003a5bcb75a115f13acbc14771501e202",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 7911,
-      "current_sha256": "592eb2a55980d2adbac4297c785f9f3c5a29cff6a2ef5cdd2f5c949a5dd8d949"
+      "current_bytes": 9625,
+      "current_sha256": "27da1a241ad6642dbd6bf92293c90bd12edb6dbe57e0b005f4ec89b749012b15"
     },
     {
       "path": "LICENSING.md",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 3571,
-      "current_sha256": "fb1d76a9e0e266a360d46b1115405b4684daf25f71e0f1c5eb7e3c1cceeb825a"
+      "current_bytes": 3776,
+      "current_sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -90,8 +90,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/QUICKSTART.md",
       "previous_sha256": "c15eedc79a66fe5c8eef7eafdec686e78bcc5d680ab9a8229ff25a9adeea5906",
-      "current_bytes": 4703,
-      "current_sha256": "aeba8004cbf9850d552db911ccbcc4b03a99c563929812463033670b0503085e"
+      "current_bytes": 5260,
+      "current_sha256": "28f8d4818deb2b52170d8f8ecf2cf2af1ca750e1c72c0443b0f112453be8f6b6"
     },
     {
       "path": "core/README.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 281427,
-      "current_sha256": "60d80c3efc0d39a9ded93328a9e2aea0dfcddbec4fadd426ca930370a1fe9623"
+      "current_bytes": 286831,
+      "current_sha256": "9dfa3668dbbc2739a4cc5966f339387cf03efa36e5b8a8411bb71aa20056abb9"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -430,8 +430,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 12152,
-      "current_sha256": "f8b528eeb3c22238fa84942936ac04ce6bec4f20aec90a0395b5e0a3b22d9b5f"
+      "current_bytes": 12519,
+      "current_sha256": "d46d233d6fda0d07c7ff736ff6e16d174ecd66b30097222a5988737343765585"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -439,8 +439,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/cards/benchmark-teacher-fairness.md",
       "previous_sha256": "a536a9e35c92a519c9b43da5d922f7aaa4670e6b5dcc58ef9c33d1594213b77f",
-      "current_bytes": 4940,
-      "current_sha256": "3e4f5f1a00ffb75a40e0f2fa07dd0fb3fc581a802501e6aca073d1c8ac3cde47"
+      "current_bytes": 7584,
+      "current_sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523"
     },
     {
       "path": "core/docs/methods/cards/coordinate-transforms.md",
@@ -633,8 +633,8 @@
       "path": "core/docs/methods/guides/method-experience.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5583,
-      "current_sha256": "457648057a424ec6edbc1b2ee29236488a512579e4b7d131809b9a9623015484"
+      "current_bytes": 6998,
+      "current_sha256": "0a72e0c46b06b04b7d23286fec26732fae1f6d1c051a4a7bef251e8cfefec8ea"
     },
     {
       "path": "core/docs/methods/guides/plan-seal-and-first-execution.md",
@@ -697,15 +697,15 @@
       "path": "core/docs/methods/guides/review-choice-synthesis.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 11276,
-      "current_sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+      "current_bytes": 12660,
+      "current_sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2"
     },
     {
       "path": "core/docs/methods/guides/review-coverage-and-closure.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 10729,
-      "current_sha256": "deaf45dcf098099c99d0df58fad657e802b8833f35c7918149d99ee62d368a4f"
+      "current_bytes": 11563,
+      "current_sha256": "73efbc0bbe0b7ead0f13c0a884d9b3dcb004e74e8beb102b1579cfd3521271b3"
     },
     {
       "path": "core/docs/methods/guides/review-first-preparation.md",
@@ -720,8 +720,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/revision-responses-and-acceptance.md",
       "previous_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
-      "current_bytes": 10807,
-      "current_sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
+      "current_bytes": 12250,
+      "current_sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
     },
     {
       "path": "core/docs/methods/guides/sequence-novelty-and-background.md",
@@ -754,8 +754,8 @@
       "path": "core/docs/methods/guides/task-continuity.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5850,
-      "current_sha256": "afc0dfbb991e0da063d49d02635218c6864b5711b9b01c4404b38860715c0dc6"
+      "current_bytes": 7327,
+      "current_sha256": "4173898d9ab14d12165d06763c55d7b9094539ecbde2157d5ef46be0ed3250f4"
     },
     {
       "path": "core/docs/methods/handoff-contract.md",
@@ -1416,8 +1416,8 @@
       "path": "core/machine/design/method-experience.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 13271,
-      "current_sha256": "35caf1d4bf61bd1c087efc444aa272039ef98878b9e7ebbc97eadc753a2288cd"
+      "current_bytes": 15093,
+      "current_sha256": "6b2720de35657f6b2811fb7af6a68ad003f3a7e0718ea4d4c1ac452112dda48e"
     },
     {
       "path": "core/machine/design/rereading-perspectives.json",
@@ -1770,8 +1770,8 @@
       "path": "machine/AGENT-INSTRUCTIONS.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3800,
-      "current_sha256": "e3cbf4a82b5960c369b2958f84a352270298799c0cc3f1df0fc696001c0e3d06"
+      "current_bytes": 4611,
+      "current_sha256": "8bf159792727ee344c61de619f16ee10bb0381fa2be838ed7925d6b8c0d94557"
     },
     {
       "path": "machine/archive-pointers.jsonl",
@@ -1779,6 +1779,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 210615,
       "current_sha256": "4b007244be595ba374977f6be3cdcb921a0fdbe908725ca582e3c9ccd5dcc67f"
+    },
+    {
+      "path": "machine/changes/conditional-model-comparison-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6835,
+      "current_sha256": "f4c1cd26fbb6cf50c6632ea989955246b1b7185ebe9d461d2d4be62bb0bfa1e7"
     },
     {
       "path": "machine/changes/continuity-and-engineering-20261027.json",
@@ -1802,6 +1809,20 @@
       "current_sha256": "ee678089c9330995d1254d7efb284e9254ada27468dfd3688ce68ca18e57915d"
     },
     {
+      "path": "machine/changes/research-use-entry-20261029.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3304,
+      "current_sha256": "04a06ee82b382feb41e674c3141ff0d7146fbc443fe3a21125faf3ebd86dee1a"
+    },
+    {
+      "path": "machine/changes/single-session-stability-20261029.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9473,
+      "current_sha256": "e37488ac178ffb7a774b9bdd39a63fed4d47fe3a91729383d25ee54b2347582b"
+    },
+    {
       "path": "machine/changes/time-budget-recovery-20261027.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1812,8 +1833,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7660,
-      "current_sha256": "95d1c1cf30fdb21cf6210fda77ff945fd95470ff3e5c0c185c76b40a5d4a3705"
+      "current_bytes": 9558,
+      "current_sha256": "060555c48f44793c088ab88512613b60190f2f52154e3dfc6ea43f35b0a77abe"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1833,8 +1854,8 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5948,
-      "current_sha256": "26606fbf7a9e09379666fcabdecd3c32c591dcceda5b5cbf6c9d6d6a1388c7b1"
+      "current_bytes": 6293,
+      "current_sha256": "4505202c6ad681e271f6b0b9c7360c63778f03abc74c67818da622477bc35992"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
@@ -1861,8 +1882,8 @@
       "path": "machine/document-notes/core/QUICKSTART.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7280,
-      "current_sha256": "259545ad17bf0779bc62e55c811adf69ed46a92f7e986445bee86321611b2614"
+      "current_bytes": 7840,
+      "current_sha256": "3ebc25474ab42d00cf40f366493de211d8288b14f94cc7480e34bf5a304c2371"
     },
     {
       "path": "machine/document-notes/core/README.md.json",
@@ -2127,15 +2148,15 @@
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 30473,
-      "current_sha256": "5869d97df6550f8e48f00712b7f174a8ba63ae30831316697fbc4c6bbccf1c1d"
+      "current_bytes": 30839,
+      "current_sha256": "ceb7e0dbd52dded5c2fe73f1c5918564ad967205feb4bb3e775ff0a3fc16a5f6"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7057,
-      "current_sha256": "4d57d4501e6926a8d19c0a6861f28484f9c9eeba2dcfeae1eccf17650c667125"
+      "current_bytes": 8416,
+      "current_sha256": "2c616b0c71f3292e596fc82af58ee49f17490a4075eed6ba9f6515cb6d0b8393"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/coordinate-transforms.md.json",
@@ -2288,8 +2309,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/method-experience.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 655,
-      "current_sha256": "ad0c2398b46083b33c1b3056f3317da189d2a81434c5b83e064932e88f8efba1"
+      "current_bytes": 1686,
+      "current_sha256": "a1b57b46b838ec3d22ad9356acbb016d0db818b68e8a3be111e9f16690b1666d"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/plan-seal-and-first-execution.md.json",
@@ -2344,15 +2365,15 @@
       "path": "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8403,
-      "current_sha256": "835fc534681c6a78e03ca1db2ce9e27c4dbb459ebd10926650adfe6cd69201e4"
+      "current_bytes": 9498,
+      "current_sha256": "e6344895c74a108961f00bcdcf538cd78e9bd8847448487d2d470165f6d410c8"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3260,
-      "current_sha256": "e798160417591f4e666fe7e5603d9fbd164658bd869a037f74304be5a2f2a3f2"
+      "current_bytes": 4041,
+      "current_sha256": "777eab098a0cd5eb32069bf292c905ed685bc0f8852c2254e50ce61b39aba13f"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-first-preparation.md.json",
@@ -2365,8 +2386,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 14241,
-      "current_sha256": "61ee1e6cd5475d115fc2153e8ee8c08ecfb8024793b2b1e459ac0619149fc67d"
+      "current_bytes": 15018,
+      "current_sha256": "fb43d5c76fce19493455c779df1648630ef3eaa3b5d38b1602dd128d5228478c"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/sequence-novelty-and-background.md.json",
@@ -2393,8 +2414,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/task-continuity.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2086,
-      "current_sha256": "288714693327adf863a46fc2a4e53b302491b378f495ded1cf7b9e501a94510b"
+      "current_bytes": 3260,
+      "current_sha256": "ef74a706ba9d50150cb6882e7d38bedd070f11a6bc59bdeb1523f067dae2fbd8"
     },
     {
       "path": "machine/document-notes/core/docs/methods/handoff-contract.md.json",
@@ -2810,6 +2831,13 @@
       "current_sha256": "223ef4993d75e256939991af6f37a839035758c13d48e1b6b25c24fc2203c136"
     },
     {
+      "path": "machine/document-notes/machine/AGENT-INSTRUCTIONS.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4705,
+      "current_sha256": "adf8ec91b8e4358936389d33d3fe60e63ce8e152d66eab546dff391d91b389fb"
+    },
+    {
       "path": "machine/document-notes/machine/documentation-policy.json.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2946,8 +2974,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 262263,
-      "current_sha256": "665ad22f2ae2780bd0e28fc82c85fccad936be90f81ddc30aedd39064d32f33a"
+      "current_bytes": 275142,
+      "current_sha256": "197aff7e89ab1353d532b0ceeceb7f0b49f5016bf2c58b0ad67a8f3f8fc4d341"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

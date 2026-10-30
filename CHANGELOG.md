@@ -1,5 +1,23 @@
 # Changelog
 
+## 条件化模型比较 — 2026-10-30
+
+- 在[基准与公平比较卡](core/docs/methods/cards/benchmark-teacher-fairness.md)中，把模型优劣拆成任务、训练时可见信息、预测对象与评价量，按条件选择比较、系统用途说明或补证。
+- 将这一判断接入[方法取舍指南](core/docs/methods/guides/review-choice-synthesis.md)，复用公开工作例，并沿现有首稿、独立评阅与修订机制补足缺失关系。
+
+## 按需研究入口与经验载体 — 2026-10-29
+
+- 区分研究选用、工具试用与仓库维护测试；按当前问题打开相关指南。
+- 只对已提名且影响本轮选择或验收的方法记录未采用理由。
+- 少量单写者经验可集中在已有课题日志；正式模板、严格工具输入、并行责任与冻结历史保持，见[经验指南](core/docs/methods/guides/method-experience.md)。
+
+## 单会话推进与修订收束 — 2026-10-29
+
+- 在[续跑指南](core/docs/methods/guides/task-continuity.md)中连接本轮承诺、阶段动作、实际执行和专题接受，并补清各路线缺口共同造成整体阻断的条件。
+- 在[修订指南](core/docs/methods/guides/revision-responses-and-acceptance.md)中保留请求来源、原主张范围与修订复核，让当前裁定可按所评对象直接读取。
+- 将[综述收束](core/docs/methods/guides/review-coverage-and-closure.md)接回原问题与实际证据，按任务依据区分进度检查点和显式硬预算。
+- [方法经验](core/docs/methods/guides/method-experience.md)中的后续条件逐项连接动作；设计输入的可得性与本轮接受范围见[变化索引](machine/changes/single-session-stability-20261029.json)。
+
 ## 跨平台路径与可选 GitHub 代理 — 2026-10-28
 
 - 计划封存与执行捕获接受只有 root 能创建或替换的系统链接（如 macOS 的 `/var`、`/tmp`），用户可写位置的符号链接仍被拒绝。

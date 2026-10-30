@@ -114,16 +114,54 @@
         "machine/changes/method-experience-20261027.json"
       ],
       "acceptance": "Local record and native Artifact/Task consumption checks; scientific and upstream acceptance separate."
+    },
+    {
+      "id": "2026-10-30-conditional-model-comparison",
+      "date": "2026-10-30",
+      "reason": "Publish the bounded comparison-guidance addition and existing entry points.",
+      "technical_records": [
+        "machine/changes/conditional-model-comparison-20261030.json"
+      ],
+      "prior_identity": {
+        "bytes": 8666,
+        "sha256": "b9fb9a876fd78d125c22087c99f1b56840562632d94d4553ca2138c0ebe77b81"
+      },
+      "revised_identity": {
+        "bytes": 9129,
+        "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764"
+      },
+      "acceptance_status": "accepted_parent_editorial_and_publication_checks",
+      "evidence_scope": "Existing public guidance and a bounded private accepted case; no new primary-paper reading or model execution claimed.",
+      "first_draft_and_revisor": "Existing mechanism retained; no zero-error first-draft requirement or new required carrier."
+    },
+    {
+      "id": "2026-10-28-cross-platform-paths-optional-proxy",
+      "date": "2026-10-28",
+      "reason": "Record PR #1: accept root-controlled system links (macOS /var, /tmp) in path walks and make the GitHub proxy optional; entry merged below the 2026-10-29/30 entries.",
+      "technical_records": [
+        "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
+        "core/machine/tools/source-acquisition.json"
+      ],
+      "prior_identity": {
+        "bytes": 9129,
+        "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764"
+      },
+      "revised_identity": {
+        "bytes": 9625,
+        "sha256": "27da1a241ad6642dbd6bf92293c90bd12edb6dbe57e0b005f4ec89b749012b15"
+      },
+      "acceptance_status": "contributor_local_macos_tests; maintainer native macOS validation pending"
     }
   ],
-  "updated_at_utc": "2026-10-26T23:55:03.663728+00:00",
+  "updated_at_utc": "2026-10-30T01:59:11.934790+00:00",
   "current_identity": {
-    "bytes": 5404,
-    "sha256": "65937f4bde374faadca241179de70ea4e630aedc305863cecb64fb4080e933bc"
+    "bytes": 9129,
+    "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",
-    "machine/history/review-scope-appraisal.json"
+    "machine/history/review-scope-appraisal.json",
+    "machine/changes/conditional-model-comparison-20261030.json"
   ],
   "revisions": [
     {
