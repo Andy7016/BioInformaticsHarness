@@ -15,7 +15,7 @@ from pathlib import Path, PureWindowsPath
 import stat
 from typing import Any, Sequence
 
-from scripts.research_support._common import SupportError, utc_now
+from scripts.research_support._common import SupportError, is_root_controlled_link, utc_now
 
 
 _CHUNK_BYTES = 1024 * 1024
@@ -39,7 +39,10 @@ def _signature(info: os.stat_result) -> tuple[int, int, int, int, int, int]:
 
 
 def _assert_no_reparse_components(path: Path) -> None:
-    """Reject symlink/reparse components from the path anchor through path."""
+    """Reject symlink/reparse components from the path anchor through path.
+
+    Root-controlled system links such as macOS ``/var`` are accepted.
+    """
 
     absolute = Path(os.path.abspath(path))
     current = Path(absolute.anchor)
@@ -49,7 +52,7 @@ def _assert_no_reparse_components(path: Path) -> None:
             info = current.lstat()
         except OSError as exc:
             raise SupportError(f"cannot inspect path component {current}: {exc}", "fail") from exc
-        if _is_reparse(info):
+        if _is_reparse(info) and not is_root_controlled_link(current, info):
             raise SupportError(f"symlink or reparse point is not allowed: {current}", "fail")
 
 

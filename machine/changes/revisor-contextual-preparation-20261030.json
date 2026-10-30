@@ -1,0 +1,37 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "revisor-contextual-preparation-20261030",
+  "date": "2026-10-30",
+  "summary": "Keep reviewer preparation optional, source-grounded and triggered by research context; reuse study notes.",
+  "impact": "guidance",
+  "paths": [
+    "core/docs/methods/guides/revision-responses-and-acceptance.md",
+    "core/docs/methods/README.md",
+    "CHANGELOG.md",
+    "machine/changes/revisor-contextual-preparation-20261030.json",
+    "machine/source-design-index.jsonl",
+    "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
+    "machine/document-notes/core/docs/methods/README.md.json",
+    "machine/document-notes/CHANGELOG.md.json"
+  ],
+  "reading_paths": [
+    "core/docs/methods/guides/revision-responses-and-acceptance.md"
+  ],
+  "reading_sections": {
+    "core/docs/methods/guides/revision-responses-and-acceptance.md": [
+      "按研究语境准备评审"
+    ]
+  },
+  "revisit": "At a relevant next review, appraise unfamiliar measurements, cross-domain disagreement, unusual hypotheses or contrary evidence. Preserve prior progress and scope; no blanket retrospective reread.",
+  "acceptance": "Identify object, measurement, task and evidence scope; reuse notes, reread sources at genuine uncertainties and revise prior understanding against evidence while retaining the first-draft/revisor/revision path.",
+  "adoption": "User-confirmed optional policy, not an empirical superiority rule.",
+  "evidence_scope": {
+    "availability": "not_exported",
+    "scope": "First-party optional design choice. A bounded internal review comparison did not establish general superiority or measure two-arm author revision benefit; detailed working evidence is retained locally."
+  },
+  "new_first_draft_requirements": false,
+  "new_mandatory_file_family": false,
+  "historical_backfill": false,
+  "validation_ref": "machine/reviews/pr1-integration-20261030.json",
+  "validation_status": "accepted_existing_suites_and_package_checks"
+}

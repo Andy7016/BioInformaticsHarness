@@ -1,5 +1,10 @@
 # Changelog
 
+## 按研究语境准备独立评阅 — 2026-10-30
+
+- 在[回应路线与验收](core/docs/methods/guides/revision-responses-and-acceptance.md#按研究语境准备评审)加入可选领域准备：先辨认对象、测量、任务与证据层级，围绕陌生测量、跨领域分歧和相反证据补读。
+- 优先复用课题笔记与方法经验，保留既有首稿、独立评阅、实际修订与接受路径。
+
 ## 条件化模型比较 — 2026-10-30
 
 - 在[基准与公平比较卡](core/docs/methods/cards/benchmark-teacher-fairness.md)中，把模型优劣拆成任务、训练时可见信息、预测对象与评价量，按条件选择比较、系统用途说明或补证。
@@ -17,6 +22,13 @@
 - 在[修订指南](core/docs/methods/guides/revision-responses-and-acceptance.md)中保留请求来源、原主张范围与修订复核，让当前裁定可按所评对象直接读取。
 - 将[综述收束](core/docs/methods/guides/review-coverage-and-closure.md)接回原问题与实际证据，按任务依据区分进度检查点和显式硬预算。
 - [方法经验](core/docs/methods/guides/method-experience.md)中的后续条件逐项连接动作；设计输入的可得性与本轮接受范围见[变化索引](machine/changes/single-session-stability-20261029.json)。
+
+## 跨平台路径与可选 GitHub 代理 — 2026-10-28
+
+- 计划封存与执行捕获接受只有 root 能创建或替换的系统链接（如 macOS 的 `/var`、`/tmp`），用户可写位置的符号链接仍被拒绝。
+- 封存前按物理身份拒绝计划目录与封存目录相同或互相包含，覆盖 `/var` 与 `/private/var` 等别名拼写及大小写不敏感的文件系统；文档检查接受任一拼写的 `.scratch` 报告。
+- POSIX 绝对路径写入 READY 清单时给出“必须相对 plan_root”的明确错误。
+- `github_proxy` 默认为空，GitHub 直连；需要代理时在复制的配置中设置，见[资料获取入口](core/docs/methods/source-acquisition-routing.md)。
 
 ## 方法使用经验与持续研究 — 2026-10-27
 

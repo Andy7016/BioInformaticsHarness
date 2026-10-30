@@ -10,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import stat
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Mapping
@@ -50,6 +51,28 @@ def _as_root(root: Path | str | os.PathLike[str]) -> Path:
     if not candidate.is_dir():
         raise SupportError(f"root is not a directory: {root}", "fail")
     return candidate
+
+
+def is_root_controlled_link(path: Path, info: os.stat_result) -> bool:
+    """Return True for a POSIX symlink that only root can create or replace.
+
+    macOS places the default temporary directory under ``/var -> private/var``
+    and ``/tmp -> private/tmp``.  Refusing those system links would refuse every
+    ordinary temporary path.  A link qualifies only when root owns it and its
+    parent directory, and that parent is not group- or world-writable.
+    """
+
+    if os.name != "posix" or not stat.S_ISLNK(info.st_mode) or info.st_uid != 0:
+        return False
+    try:
+        parent = path.parent.lstat()
+    except OSError:
+        return False
+    return (
+        stat.S_ISDIR(parent.st_mode)
+        and parent.st_uid == 0
+        and not parent.st_mode & (stat.S_IWGRP | stat.S_IWOTH)
+    )
 
 
 def _inside(root: Path, candidate: Path) -> bool:

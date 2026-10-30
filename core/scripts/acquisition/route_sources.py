@@ -5,8 +5,8 @@
 The module deliberately keeps planning separate from execution.  Planning
 only validates and describes requests.  Execution is opt-in, uses one HTTP
 request at a time, counts every response (including redirects), disables
-environment proxies for academic traffic, and selects the GitHub proxy from
-the destination host on every hop.
+environment proxies for every route, and applies the optional configured
+GitHub proxy from the destination host on every hop.
 
 The public Python entry points are :func:`build_plan`, :func:`execute_plan`,
 :func:`route_url`, and :func:`load_config`.  The command line interface is
@@ -109,7 +109,7 @@ def _default_config() -> dict[str, Any]:
         "arxiv_interval_seconds": 3.0,
         "arxiv_domains": ["arxiv.org", "export.arxiv.org"],
         "redirect_delay_seconds": 0.0,
-        "github_proxy": "http://127.0.0.1:7890",
+        "github_proxy": None,
         "github_domains": [
             "github.com",
             "api.github.com",
@@ -173,8 +173,9 @@ def load_config(path: str | os.PathLike[str] | None = None) -> dict[str, Any]:
             raise RoutingError(f"config field {key!r} must be positive")
     if not isinstance(config.get("redirect_delay_seconds"), (int, float)) or config["redirect_delay_seconds"] < 0:
         raise RoutingError("config field 'redirect_delay_seconds' must be non-negative")
-    if not isinstance(config.get("github_proxy"), str) or not config["github_proxy"]:
-        raise RoutingError("config field 'github_proxy' must be a non-empty URL")
+    proxy = config.get("github_proxy")
+    if proxy is not None and (not isinstance(proxy, str) or not proxy):
+        raise RoutingError("config field 'github_proxy' must be null or a non-empty URL")
     for key in ("github_domains",):
         values = config.get(key)
         if not isinstance(values, list) or not values or not all(isinstance(x, str) and x for x in values):
@@ -327,12 +328,17 @@ def route_url(
     validate_url(url, allow_private=allow_private, resolve_private=resolve_private)
     host = urlsplit(url).hostname or ""
     github = _is_github_host(host, selected)
+    proxy = selected.get("github_proxy") if github else None
+    if github:
+        mode = "github-proxy" if proxy else "github-direct"
+    else:
+        mode = "academic-direct"
     return {
         "host": host.lower().rstrip("."),
         "service": "github" if github else _service_for_host(host, selected),
-        "mode": "github-proxy" if github else "academic-direct",
-        "network_mode": "explicit-proxy" if github else "direct",
-        "proxy": selected["github_proxy"] if github else None,
+        "mode": mode,
+        "network_mode": "explicit-proxy" if proxy else "direct",
+        "proxy": proxy,
     }
 
 

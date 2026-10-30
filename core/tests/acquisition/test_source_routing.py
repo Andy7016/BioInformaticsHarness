@@ -160,8 +160,22 @@ class SourceRoutingTests(unittest.TestCase):
         self.assertEqual(plan["firecrawl_calls"], 0)
         self.assertFalse(plan["api_keys_used"])
 
+    def test_github_defaults_to_direct_without_configured_proxy(self):
+        config = quiet_config()
+        self.assertIsNone(config["github_proxy"])
+        github = route_sources.route_url("https://raw.githubusercontent.com/a/b/main.py", config)
+        self.assertEqual(github["service"], "github")
+        self.assertEqual(github["mode"], "github-direct")
+        self.assertEqual(github["network_mode"], "direct")
+        self.assertIsNone(github["proxy"])
+        session = route_sources.session_for_route(github, config)
+        self.assertFalse(session.trust_env)
+        self.assertEqual(session.proxies, {})
+        session.close()
+
     def test_route_selects_explicit_github_proxy_and_academic_direct(self):
         config = quiet_config()
+        config["github_proxy"] = "http://127.0.0.1:7890"
         github = route_sources.route_url("https://raw.githubusercontent.com/a/b/main.py", config)
         academic = route_sources.route_url("https://api.crossref.org/works/10.1/example", config)
         self.assertEqual(github["mode"], "github-proxy")
@@ -171,6 +185,7 @@ class SourceRoutingTests(unittest.TestCase):
 
     def test_session_configuration_disables_environment_and_retries(self):
         config = quiet_config()
+        config["github_proxy"] = "http://127.0.0.1:7890"
         academic = route_sources.session_for_route(route_sources.route_url("https://api.crossref.org/works/x", config), config)
         github = route_sources.session_for_route(route_sources.route_url("https://github.com/a/b", config), config)
         self.assertFalse(academic.trust_env)
@@ -232,7 +247,7 @@ class SourceRoutingTests(unittest.TestCase):
         result = receipt["results"][0]
         self.assertEqual(result["outcome"], "downloaded")
         self.assertEqual(result["http_requests"], 2)
-        self.assertEqual([route["mode"] for route in sessions.routes], ["github-proxy", "academic-direct"])
+        self.assertEqual([route["mode"] for route in sessions.routes], ["github-direct", "academic-direct"])
         self.assertEqual(result["redirects_followed"], 1)
 
     def test_403_stops_service_without_fallback_or_retry(self):

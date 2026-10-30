@@ -1,0 +1,86 @@
+{
+  "schema": "harness.integration-validation/v1",
+  "date": "2026-10-30",
+  "status": "accepted_owner_integration",
+  "upstream_pr": "https://github.com/vvcchh0/BioInformaticsHarness/pull/1",
+  "upstream_head": "31ff6f91a419adb45b5cd0efc6c3bb192056c670",
+  "owner_integration": "Windows case-insensitive assertion correction plus optional contextual revisor guidance and source/update indices; contributor runtime code unchanged.",
+  "local_execution": {
+    "platform": "Windows",
+    "python": "3.11.2 (tags/v3.11.2:878ead1, Feb  7 2023, 16:38:35) [MSC v.1934 64 bit (AMD64)]",
+    "psutil_available": true,
+    "requests_available": true,
+    "suites": [
+      {
+        "suite": "root",
+        "discovered": 32,
+        "skipped": 3,
+        "exit_code": 0,
+        "cwd": ".",
+        "command": "python -B -m unittest discover -s tests -v"
+      },
+      {
+        "suite": "core",
+        "discovered": 62,
+        "skipped": 6,
+        "exit_code": 0,
+        "cwd": ".",
+        "command": "python -B -m unittest discover -s core/tests -v"
+      },
+      {
+        "suite": "research-support",
+        "discovered": 119,
+        "skipped": 0,
+        "exit_code": 0,
+        "cwd": "core",
+        "command": "python -B -m unittest discover -s tests/research_support -v"
+      },
+      {
+        "suite": "verification",
+        "discovered": 100,
+        "skipped": 0,
+        "exit_code": 0,
+        "cwd": ".",
+        "command": "python -B -m unittest discover -s core/tests/verification -v"
+      },
+      {
+        "suite": "acquisition",
+        "discovered": 16,
+        "skipped": 0,
+        "exit_code": 0,
+        "cwd": ".",
+        "command": "python -B -m unittest discover -s core/tests/acquisition -v"
+      }
+    ],
+    "total_discovered": 329,
+    "total_skipped": 9
+  },
+  "independent_review": {
+    "upstream_runtime": "No extra runtime blocker; physical overlap checked before side effects in26 targeted logical/Windows scenarios.",
+    "windows_regression": "Upstream single test failed due valid lexical refusal text; owner accepts lexical or physical refusal without altering runtime protection.",
+    "optional_guidance": "Existing guide/navigation only; contextual preparation, relevant source rereading, study-note reuse and first-draft scope retained.",
+    "public_evidence": "https://github.com/vvcchh0/BioInformaticsHarness/pull/1#issuecomment-6514702094",
+    "owner_evidence_availability": "Detailed local logs are not included in the public export; public validation scope and contributor report are recorded here."
+  },
+  "macos": {
+    "status": "contributor_native_report",
+    "python": "3.14",
+    "maintainer_native_rerun": false,
+    "result_bundle_provided": false,
+    "scope": "Author reports three real alias families, pre-write refusal/independent sibling copies, unsafe-link refusal and passing native suites; machine bundle absent is retained as evidence limitation."
+  },
+  "acquisition": {
+    "offline_existing_tests": "16 passed locally with mock transport; no live acquisition claimed.",
+    "live_acquisition_performed": false
+  },
+  "runner_correction": "Research-support discovery initially hit a root scripts namespace collision; canonical core package entry passed119 tests. No runtime source change for this correction.",
+  "final_package_checks": "Owner final refresh and three verifiers recorded in the merge acceptance; checks and scientific efficacy are separate.",
+  "package_checks": {
+    "documentation": "pass",
+    "checkpoint": "pass",
+    "core_release": "pass",
+    "scope": "Executed on the integrated working tree before acceptance metadata; final identity check repeated after metadata update.",
+    "unit_suites": "329 discovered,320 executed successfully,9 platform-skipped."
+  },
+  "metadata_export": "Current-task-only redacted export. Runtime and human-guidance bytes match the validated integration; package and root/tool checks are repeated after metadata export."
+}

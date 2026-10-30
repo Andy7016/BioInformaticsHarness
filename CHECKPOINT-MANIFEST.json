@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 9129,
+      "bytes": 10274,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764",
+      "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 280961,
+      "bytes": 288987,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "15f8643d6cb78396885442242e08428af8cb73d98ee1730ade7525b65dc585ff",
+      "sha256": "572fd6c819919523b9a8e4f8bc4c6f8b9e408c467408981effa84bb8c5a5dc3b",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -521,15 +521,26 @@
     },
     {
       "path": "core/config/source-routing.json",
-      "bytes": 1200,
-      "sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb",
+      "bytes": 1181,
+      "sha256": "3452fd87e23a924e162dd2dc4cfa771f6eea653589cc4973d6ab8079985a6516",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "core/config/source-routing.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/config/source-routing.json",
+        "sha256": "e757eff687a947d81ae61cf3eabaadc21d95d56129fccb4c92161ee2edfa31bb",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/config/source-routing.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "bytes": 1008,
@@ -1347,10 +1358,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 12519,
+      "bytes": 12793,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/README.md",
-      "sha256": "d46d233d6fda0d07c7ff736ff6e16d174ecd66b30097222a5988737343765585",
+      "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e",
       "source": {
         "path": "docs/methods/README.md",
         "release_manifest": {
@@ -2274,10 +2285,10 @@
       }
     },
     {
-      "bytes": 12250,
+      "bytes": 13667,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
-      "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77",
+      "sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4",
       "source": {
         "path": "docs/methods/guides/revision-responses-and-acceptance.md",
         "release_manifest": {
@@ -2616,10 +2627,10 @@
       }
     },
     {
-      "bytes": 3600,
+      "bytes": 3646,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/source-acquisition-routing.md",
-      "sha256": "4a9e2f6f240513d6d1bf439c4ac8893f8bda12754414e6ee059a3a83d8de4167",
+      "sha256": "424534839ab8b4532097125c820fe761fe1f39f2ed943c17c5e4a888c499d885",
       "source": {
         "path": "docs/methods/source-acquisition-routing.md",
         "release_manifest": {
@@ -4663,8 +4674,8 @@
     },
     {
       "path": "core/machine/tools/source-acquisition.json",
-      "bytes": 5415,
-      "sha256": "6b41dcad8c999ff1ae51a77ca7cc7a66f45d80a79afc0872f362f0594411cd5f",
+      "bytes": 5425,
+      "sha256": "f0a3b3d32b32c190f0144bfc4f4c7841025671235a2444721adf4483eda60e7f",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -4715,15 +4726,26 @@
     },
     {
       "path": "core/scripts/acquisition/route_sources.py",
-      "bytes": 44905,
-      "sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a",
+      "bytes": 45030,
+      "sha256": "4d014c2238cc7c4e08f2ede0bb1bb6e6995d68ec2a0c9bc07ac84719676c5c5d",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "core/scripts/acquisition/route_sources.py",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/scripts/acquisition/route_sources.py",
+        "sha256": "a0bfb263e16dc993d7521215bd85fa6f7ecd5e26c58ca4b884ed9bc17308219a",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/scripts/acquisition/route_sources.py",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "bytes": 649,
@@ -4741,10 +4763,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 9430,
+      "bytes": 10250,
       "license": "Apache-2.0",
       "path": "core/scripts/research_support/_common.py",
-      "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+      "sha256": "ef54c92b07df42bd5f8b5b500f5d4dc0553308d1b77092aaee29a106bc752484",
       "source": {
         "path": "scripts/research_support/_common.py",
         "release_manifest": {
@@ -4753,7 +4775,21 @@
         },
         "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803"
       },
-      "transform": "verbatim"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/scripts/research_support/_common.py",
+        "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803",
+        "source": {
+          "path": "scripts/research_support/_common.py",
+          "release_manifest": {
+            "path": "core/RELEASE-MANIFEST.json",
+            "sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65"
+          },
+          "sha256": "b9e58d6448df13f0e130887e1679f9462da0d5170932935ff01c6f4e9ca82803"
+        },
+        "transform": "verbatim"
+      }
     },
     {
       "bytes": 37548,
@@ -4815,10 +4851,10 @@
       }
     },
     {
-      "bytes": 17757,
+      "bytes": 17905,
       "license": "Apache-2.0",
       "path": "core/scripts/research_support/execution_capture.py",
-      "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+      "sha256": "b13315f9e1f35a8e84d403802af608d8db4212d7fab017973b1cc9b19ea73dab",
       "source": {
         "path": "scripts/research_support/execution_capture.py",
         "release_manifest": {
@@ -4827,7 +4863,21 @@
         },
         "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d"
       },
-      "transform": "verbatim"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/scripts/research_support/execution_capture.py",
+        "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d",
+        "source": {
+          "path": "scripts/research_support/execution_capture.py",
+          "release_manifest": {
+            "path": "core/RELEASE-MANIFEST.json",
+            "sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65"
+          },
+          "sha256": "65cee0357f2089ce1d6ba74e1ea2364d685d5e9cbb8eb6d2c4efa39df91e407d"
+        },
+        "transform": "verbatim"
+      }
     },
     {
       "bytes": 30899,
@@ -4859,10 +4909,10 @@
       }
     },
     {
-      "bytes": 30436,
+      "bytes": 31970,
       "license": "Apache-2.0",
       "path": "core/scripts/research_support/plan_seal.py",
-      "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+      "sha256": "f65c239b37cc551903f0b3fdd93ada0b4ab9af4dd9b361fb26dd2fb42d484f1b",
       "source": {
         "path": "scripts/research_support/plan_seal.py",
         "release_manifest": {
@@ -4871,7 +4921,21 @@
         },
         "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd"
       },
-      "transform": "verbatim"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/scripts/research_support/plan_seal.py",
+        "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
+        "source": {
+          "path": "scripts/research_support/plan_seal.py",
+          "release_manifest": {
+            "path": "core/RELEASE-MANIFEST.json",
+            "sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65"
+          },
+          "sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd"
+        },
+        "transform": "verbatim"
+      }
     },
     {
       "bytes": 28892,
@@ -5094,15 +5158,26 @@
     },
     {
       "path": "core/tests/acquisition/test_source_routing.py",
-      "bytes": 17821,
-      "sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362",
+      "bytes": 18582,
+      "sha256": "fa7057edf8410d49994cff4d25365e5b8f318c8398ba167685de258676cb137f",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "core/tests/acquisition/test_source_routing.py",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/tests/acquisition/test_source_routing.py",
+        "sha256": "9f78e54aa73d89cf1664aecd83ef5b0638544153ea09b04f951529880f1e3362",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "core/tests/acquisition/test_source_routing.py",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "bytes": 4089,
@@ -5303,10 +5378,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 10290,
+      "bytes": 17722,
       "license": "Apache-2.0",
       "path": "core/tests/test_plan_seal.py",
-      "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+      "sha256": "44065572cba89e0050bd432c4bcd6e044ea41dc207490e68079b089c3dc97996",
       "source": {
         "path": "tests/test_plan_seal.py",
         "release_manifest": {
@@ -5315,13 +5390,27 @@
         },
         "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be"
       },
-      "transform": "verbatim"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/tests/test_plan_seal.py",
+        "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
+        "source": {
+          "path": "tests/test_plan_seal.py",
+          "release_manifest": {
+            "path": "core/RELEASE-MANIFEST.json",
+            "sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65"
+          },
+          "sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be"
+        },
+        "transform": "verbatim"
+      }
     },
     {
-      "bytes": 10200,
+      "bytes": 10294,
       "license": "Apache-2.0",
       "path": "core/tests/test_public_run_bounded.py",
-      "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+      "sha256": "ec916cdbabab81ca638e7edd715df66fc36697b3d4a2f21ab04e647b055cd11b",
       "source": {
         "path": "tests/test_public_run_bounded.py",
         "release_manifest": {
@@ -5330,7 +5419,21 @@
         },
         "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb"
       },
-      "transform": "verbatim"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "core/tests/test_public_run_bounded.py",
+        "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb",
+        "source": {
+          "path": "tests/test_public_run_bounded.py",
+          "release_manifest": {
+            "path": "core/RELEASE-MANIFEST.json",
+            "sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65"
+          },
+          "sha256": "2b23b40e5a9ad2659b6e1b97f7c8810baaabaee4be46f7336d7acc8393f27adb"
+        },
+        "transform": "verbatim"
+      }
     },
     {
       "path": "core/tests/test_resource_loop.py",
@@ -6094,6 +6197,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/macos-paths-optional-github-proxy-20261030.json",
+      "bytes": 2049,
+      "sha256": "7dfa14639680f4e9565d96f191f7e92ab1f2290db744c85572129b239252c8f6",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/macos-paths-optional-github-proxy-20261030.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/method-experience-20261027.json",
       "bytes": 1308,
       "sha256": "ee678089c9330995d1254d7efb284e9254ada27468dfd3688ce68ca18e57915d",
@@ -6113,6 +6228,18 @@
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/changes/research-use-entry-20261029.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/changes/revisor-contextual-preparation-20261030.json",
+      "bytes": 2017,
+      "sha256": "58fc743073a523f57b38224cabc529ce68536d873a01a24bdcced494a723333d",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/revisor-contextual-preparation-20261030.json",
         "revision": "2026-10-27"
       },
       "transform": "first-party-documentation-revision"
@@ -6143,8 +6270,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 8684,
-      "sha256": "090f036d9aecd8e2bf932b0d4262a4d4eb22cfee8641da28b4f8ed33522b6935",
+      "bytes": 10346,
+      "sha256": "fc216c1ab18c56a5c16e62384787039b93aa40ba34d058523f462f42dc650df5",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6815,8 +6942,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
-      "bytes": 30839,
-      "sha256": "ceb7e0dbd52dded5c2fe73f1c5918564ad967205feb4bb3e775ff0a3fc16a5f6",
+      "bytes": 31477,
+      "sha256": "92aa259cd313a1f50b22f123e38523e609fb70f6b3ad20e8d1fb79e2e070f9c8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -7344,8 +7471,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
-      "bytes": 15018,
-      "sha256": "fb43d5c76fce19493455c779df1648630ef3eaa3b5d38b1602dd128d5228478c",
+      "bytes": 15677,
+      "sha256": "432e5f42f1bbb88c2d639e3032304b02f7fe1968ed6e5920a30333767063105d",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -7521,8 +7648,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
-      "bytes": 9174,
-      "sha256": "4bc07673859067f6c177b9ddc6e6bfa559e39c09736761fce41be985acf165e9",
+      "bytes": 10036,
+      "sha256": "3e572a41201e04f47ea2161022a9fafa8a126cc63240f6eb10454894e940a6cd",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8416,8 +8543,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 126920,
-      "sha256": "6b0fdfdd01522f7772c876f3ab19167ee0f3bd6333d29c2203d3169007fdc62b",
+      "bytes": 129872,
+      "sha256": "01e1b9889f71eb4e9eaee857df236c4fc9ddd18d374bc9bdd7d5a59a9c4219e3",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8604,6 +8731,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/reviews/pr1-integration-20261030.json",
+      "bytes": 3961,
+      "sha256": "5ddc89e4300eca8402e98f7a0b51dee17ab0495b12b9f18b3366b500543ca4e0",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/reviews/pr1-integration-20261030.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/schemas/source-design-index.schema.json",
       "bytes": 4924,
       "sha256": "59ddb32c20a6209fcd4322ed3d5db022ff9c29a0c8b5cdcb8f7288c262c5e9b9",
@@ -8617,8 +8756,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 275142,
-      "sha256": "197aff7e89ab1353d532b0ceeceb7f0b49f5016bf2c58b0ad67a8f3f8fc4d341",
+      "bytes": 279904,
+      "sha256": "741202076f1a49273f680b4140e4bce3bcf96ca8bb6aba1071e991735b827f6d",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8652,15 +8791,26 @@
     },
     {
       "path": "tests/test_documentation.py",
-      "bytes": 23619,
-      "sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9",
+      "bytes": 26291,
+      "sha256": "826269866041931cb2fd351aff26bd43ca2624016b6fb25318019817e48704cf",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "tests/test_documentation.py",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/test_documentation.py",
+        "sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "tests/test_documentation.py",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "tests/test_guidance_update.py",
@@ -8687,15 +8837,26 @@
     },
     {
       "path": "tools/documentation.py",
-      "bytes": 65402,
-      "sha256": "e39783dded058fc65f34bcc7cceafa5eed4f108d9d1be786491138726392c285",
+      "bytes": 66824,
+      "sha256": "98bfe290055c39ce2facd99800ceac1ac2345fe6512f3a5b4478c161c5af67f7",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "tools/documentation.py",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "tools/documentation.py",
+        "sha256": "e39783dded058fc65f34bcc7cceafa5eed4f108d9d1be786491138726392c285",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "tools/documentation.py",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "tools/guidance_update.py",

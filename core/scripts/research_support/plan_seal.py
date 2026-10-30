@@ -27,6 +27,7 @@ from scripts.research_support._common import (
     DEFAULT_JSON_BYTES,
     SupportError,
     dump_new,
+    is_root_controlled_link,
     load_json,
     load_json_with_identity,
     utc_now,
@@ -86,7 +87,10 @@ def _absolute_path(value: Path | str | os.PathLike[str], label: str) -> Path:
 
 
 def _assert_no_reparse_components(path: Path, *, allow_missing: bool) -> None:
-    """Reject symlinks and Windows reparse points along an absolute path."""
+    """Reject symlinks and Windows reparse points along an absolute path.
+
+    Root-controlled system links such as macOS ``/var`` are accepted.
+    """
 
     current = Path(path.anchor)
     for part in path.parts[1:]:
@@ -99,7 +103,7 @@ def _assert_no_reparse_components(path: Path, *, allow_missing: bool) -> None:
             _error(f"path component is missing: {current}")
         except OSError as exc:
             _error(f"cannot inspect path component {current}: {exc}", "unknown")
-        if _is_reparse(info):
+        if _is_reparse(info) and not is_root_controlled_link(current, info):
             _error(f"symlink or reparse point refused: {current}")
 
 
@@ -159,6 +163,18 @@ def _path_is_within(candidate: Path, root: Path) -> bool:
         return False
 
 
+def _directory_key(path: Path) -> tuple[int, int]:
+    info = path.stat()
+    return (int(info.st_dev), int(info.st_ino))
+
+
+def _physical_chain(path: Path) -> set[tuple[int, int]]:
+    """Return identities of an existing path and all its physical ancestors."""
+
+    physical = path.resolve(strict=True)
+    return {_directory_key(item) for item in (physical, *physical.parents)}
+
+
 def _reject_overlapping_roots(plan_root: Path, archive_root: Path) -> None:
     # This prevents copying a plan into itself and prevents the archive from
     # becoming a newly discovered source file during the final source check.
@@ -167,6 +183,20 @@ def _reject_overlapping_roots(plan_root: Path, archive_root: Path) -> None:
         or _path_is_within(plan_root, archive_root)
     ):
         _error("plan_root and archive_root must not contain one another")
+    # Accepted system links (/var -> /private/var) and case-insensitive file
+    # systems give one directory several spellings, so also compare physical
+    # identities. Callers have already refused user-controlled links; this runs
+    # before any staging, copy or acknowledgement write.
+    archive_exists = archive_root.exists()
+    try:
+        plan_key = _directory_key(plan_root)
+        archive_chain = _physical_chain(archive_root if archive_exists else archive_root.parent)
+        plan_chain = _physical_chain(plan_root)
+        archive_key = _directory_key(archive_root) if archive_exists else None
+    except (OSError, RuntimeError) as exc:
+        _error(f"cannot compare physical plan and archive roots: {exc}", "unknown")
+    if plan_key in archive_chain or (archive_key is not None and archive_key in plan_chain):
+        _error("plan_root and archive_root must not contain one another (physical paths overlap)")
 
 
 def _signature(info: os.stat_result) -> tuple[int, int, int, int, int]:
@@ -223,7 +253,11 @@ def _canonical_relative(value: Any, root: Path, index: int) -> str:
     label = f"files[{index}]"
     if not isinstance(value, str) or not value:
         _error(f"{label}.path must be a non-empty string")
-    if PureWindowsPath(value).is_absolute() or PureWindowsPath(value).drive:
+    if (
+        PureWindowsPath(value).is_absolute()
+        or PureWindowsPath(value).drive
+        or PurePosixPath(value).is_absolute()
+    ):
         _error(f"{label}.path must be relative to plan_root: {value!r}")
     if "\\" in value or "\x00" in value:
         _error(f"{label}.path must use canonical POSIX separators: {value!r}")
