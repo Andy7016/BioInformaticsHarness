@@ -1167,18 +1167,50 @@ def _atomic_json(path: Path, value: object) -> None:
             os.unlink(temporary_name)
 
 
+def _resolve_system_links(path: Path) -> Path:
+    """Resolve only root-controlled POSIX links such as /var -> /private/var.
+
+    A link qualifies when root owns it and its parent, and the parent is not
+    group- or world-writable. Other links stay in place for later checks.
+    """
+    if os.name != "posix":
+        return path
+    current = Path(path.anchor)
+    parts = path.parts[1:]
+    for index, part in enumerate(parts):
+        candidate = current / part
+        try:
+            info = candidate.lstat()
+            parent = current.lstat()
+        except OSError:
+            return candidate.joinpath(*parts[index + 1:])
+        if (
+            stat.S_ISLNK(info.st_mode)
+            and info.st_uid == 0
+            and parent.st_uid == 0
+            and not parent.st_mode & (stat.S_IWGRP | stat.S_IWOTH)
+        ):
+            current = candidate.resolve(strict=True)
+        else:
+            current = candidate
+    return current
+
+
 def _assert_outside_root(root: Path, out: Path) -> Path:
     resolved_root = root.resolve(strict=True)
     resolved_out = out.expanduser().absolute()
     lexical_relative = None
-    # Compare against the root as given as well as resolved, so an ancestor
-    # system link (e.g. /var -> /private/var on macOS) does not hide .scratch.
-    for candidate_root in (root.expanduser().absolute(), resolved_root):
-        try:
-            lexical_relative = resolved_out.relative_to(candidate_root)
+    # Compare both spellings of each side, so a system link such as
+    # /var -> /private/var on macOS does not hide .scratch in either direction.
+    for candidate_out in (resolved_out, _resolve_system_links(resolved_out)):
+        for candidate_root in (root.expanduser().absolute(), resolved_root):
+            try:
+                lexical_relative = candidate_out.relative_to(candidate_root)
+                break
+            except ValueError:
+                continue
+        if lexical_relative is not None:
             break
-        except ValueError:
-            continue
     if lexical_relative is not None:
         if lexical_relative.parts and lexical_relative.parts[0].casefold() == ".scratch":
             probe = resolved_root

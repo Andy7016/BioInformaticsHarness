@@ -6204,19 +6204,24 @@
       }
     },
     {
-      "bytes": 30658,
+      "bytes": 31970,
       "license": "Apache-2.0",
       "path": "scripts/research_support/plan_seal.py",
       "role": "code",
-      "sha256": "0eca607aba9771b0f3e2b9ba7fdcbae14cf34c6f205e5d98086daf0085edfacd",
+      "sha256": "f65c239b37cc551903f0b3fdd93ada0b4ab9af4dd9b361fb26dd2fb42d484f1b",
       "source": "scripts/research_support/plan_seal.py",
       "source_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
         "baseline_revision": "764bd88",
-        "previous_transform": "verbatim",
-        "previous_details": {}
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       },
       "previous": {
         "revision": "764bd88",
@@ -6225,7 +6230,12 @@
         "source": "scripts/research_support/plan_seal.py",
         "transform": "verbatim",
         "source_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
-        "transform_details": {}
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       }
     },
     {
@@ -6645,19 +6655,24 @@
       "transform_details": {}
     },
     {
-      "bytes": 11479,
+      "bytes": 17688,
       "license": "Apache-2.0",
       "path": "tests/test_plan_seal.py",
       "role": "test",
-      "sha256": "99ac452b9d20392902bbe4f050e7ce43316abbcb2638dbbb0e65098b65cf7d36",
+      "sha256": "e1c2a139859543b399f2b278ea6d299e90ea1b4c21c003b7bb5e5de5ce503d15",
       "source": "tests/test_plan_seal.py",
       "source_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
         "baseline_revision": "764bd88",
-        "previous_transform": "verbatim",
-        "previous_details": {}
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       },
       "previous": {
         "revision": "764bd88",
@@ -6666,7 +6681,12 @@
         "source": "tests/test_plan_seal.py",
         "transform": "verbatim",
         "source_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
-        "transform_details": {}
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88",
+          "previous_transform": "verbatim",
+          "previous_details": {}
+        }
       }
     },
     {
@@ -6858,7 +6878,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "e0562ed003a5bcb75a115f13acbc14771501e202",
+    "head": "e82a001869033a09c2e5333e019abbfe741ffd5c",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

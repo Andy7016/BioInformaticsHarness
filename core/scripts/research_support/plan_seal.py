@@ -163,6 +163,18 @@ def _path_is_within(candidate: Path, root: Path) -> bool:
         return False
 
 
+def _directory_key(path: Path) -> tuple[int, int]:
+    info = path.stat()
+    return (int(info.st_dev), int(info.st_ino))
+
+
+def _physical_chain(path: Path) -> set[tuple[int, int]]:
+    """Return identities of an existing path and all its physical ancestors."""
+
+    physical = path.resolve(strict=True)
+    return {_directory_key(item) for item in (physical, *physical.parents)}
+
+
 def _reject_overlapping_roots(plan_root: Path, archive_root: Path) -> None:
     # This prevents copying a plan into itself and prevents the archive from
     # becoming a newly discovered source file during the final source check.
@@ -171,6 +183,20 @@ def _reject_overlapping_roots(plan_root: Path, archive_root: Path) -> None:
         or _path_is_within(plan_root, archive_root)
     ):
         _error("plan_root and archive_root must not contain one another")
+    # Accepted system links (/var -> /private/var) and case-insensitive file
+    # systems give one directory several spellings, so also compare physical
+    # identities. Callers have already refused user-controlled links; this runs
+    # before any staging, copy or acknowledgement write.
+    archive_exists = archive_root.exists()
+    try:
+        plan_key = _directory_key(plan_root)
+        archive_chain = _physical_chain(archive_root if archive_exists else archive_root.parent)
+        plan_chain = _physical_chain(plan_root)
+        archive_key = _directory_key(archive_root) if archive_exists else None
+    except (OSError, RuntimeError) as exc:
+        _error(f"cannot compare physical plan and archive roots: {exc}", "unknown")
+    if plan_key in archive_chain or (archive_key is not None and archive_key in plan_chain):
+        _error("plan_root and archive_root must not contain one another (physical paths overlap)")
 
 
 def _signature(info: os.stat_result) -> tuple[int, int, int, int, int]:

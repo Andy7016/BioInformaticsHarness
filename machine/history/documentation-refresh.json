@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "e0562ed003a5bcb75a115f13acbc14771501e202",
+    "head": "e82a001869033a09c2e5333e019abbfe741ffd5c",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 9625,
-      "current_sha256": "27da1a241ad6642dbd6bf92293c90bd12edb6dbe57e0b005f4ec89b749012b15"
+      "current_bytes": 9851,
+      "current_sha256": "26d4ccd5c7b8ffbb84f01e275e029a7fe98a6d529ad4ab079693682f051b124f"
     },
     {
       "path": "LICENSING.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 286831,
-      "current_sha256": "9dfa3668dbbc2739a4cc5966f339387cf03efa36e5b8a8411bb71aa20056abb9"
+      "current_bytes": 287539,
+      "current_sha256": "ffdc7d67cbc95d9bd841938ac3cc4e8d183f5efd8e908968c911f71f7398fce8"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -1547,8 +1547,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/scripts/research_support/plan_seal.py",
       "previous_sha256": "75bbf0518d862a6f47b002def51682e2c31fff80b14a5f140ebd9efd491942fd",
-      "current_bytes": 30658,
-      "current_sha256": "0eca607aba9771b0f3e2b9ba7fdcbae14cf34c6f205e5d98086daf0085edfacd"
+      "current_bytes": 31970,
+      "current_sha256": "f65c239b37cc551903f0b3fdd93ada0b4ab9af4dd9b361fb26dd2fb42d484f1b"
     },
     {
       "path": "core/scripts/research_support/research_cycle.py",
@@ -1632,8 +1632,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/tests/test_plan_seal.py",
       "previous_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
-      "current_bytes": 11479,
-      "current_sha256": "99ac452b9d20392902bbe4f050e7ce43316abbcb2638dbbb0e65098b65cf7d36"
+      "current_bytes": 17688,
+      "current_sha256": "e1c2a139859543b399f2b278ea6d299e90ea1b4c21c003b7bb5e5de5ce503d15"
     },
     {
       "path": "core/tests/test_public_run_bounded.py",
@@ -1833,8 +1833,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9558,
-      "current_sha256": "060555c48f44793c088ab88512613b60190f2f52154e3dfc6ea43f35b0a77abe"
+      "current_bytes": 9636,
+      "current_sha256": "ae1bc239cb0d5bdedfff17191aa01e90765e5fdef2c85f23df1816b50386869c"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -2988,8 +2988,8 @@
       "path": "tests/test_documentation.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 23619,
-      "current_sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9"
+      "current_bytes": 26291,
+      "current_sha256": "826269866041931cb2fd351aff26bd43ca2624016b6fb25318019817e48704cf"
     },
     {
       "path": "tests/test_guidance_update.py",
@@ -3002,8 +3002,8 @@
       "path": "tools/documentation.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 65683,
-      "current_sha256": "79d861dcde8d061880c06b983008f077228f337514013a88670f9f1ba07f40c7"
+      "current_bytes": 66824,
+      "current_sha256": "98bfe290055c39ce2facd99800ceac1ac2345fe6512f3a5b4478c161c5af67f7"
     },
     {
       "path": "tools/guidance_update.py",

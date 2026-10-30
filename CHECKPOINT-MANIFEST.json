@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 9625,
+      "bytes": 9851,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "27da1a241ad6642dbd6bf92293c90bd12edb6dbe57e0b005f4ec89b749012b15",
+      "sha256": "26d4ccd5c7b8ffbb84f01e275e029a7fe98a6d529ad4ab079693682f051b124f",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 286831,
+      "bytes": 287539,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "9dfa3668dbbc2739a4cc5966f339387cf03efa36e5b8a8411bb71aa20056abb9",
+      "sha256": "ffdc7d67cbc95d9bd841938ac3cc4e8d183f5efd8e908968c911f71f7398fce8",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -4909,10 +4909,10 @@
       }
     },
     {
-      "bytes": 30658,
+      "bytes": 31970,
       "license": "Apache-2.0",
       "path": "core/scripts/research_support/plan_seal.py",
-      "sha256": "0eca607aba9771b0f3e2b9ba7fdcbae14cf34c6f205e5d98086daf0085edfacd",
+      "sha256": "f65c239b37cc551903f0b3fdd93ada0b4ab9af4dd9b361fb26dd2fb42d484f1b",
       "source": {
         "path": "scripts/research_support/plan_seal.py",
         "release_manifest": {
@@ -5378,10 +5378,10 @@
       "transform": "verbatim"
     },
     {
-      "bytes": 11479,
+      "bytes": 17688,
       "license": "Apache-2.0",
       "path": "core/tests/test_plan_seal.py",
-      "sha256": "99ac452b9d20392902bbe4f050e7ce43316abbcb2638dbbb0e65098b65cf7d36",
+      "sha256": "e1c2a139859543b399f2b278ea6d299e90ea1b4c21c003b7bb5e5de5ce503d15",
       "source": {
         "path": "tests/test_plan_seal.py",
         "release_manifest": {
@@ -6246,8 +6246,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 9558,
-      "sha256": "060555c48f44793c088ab88512613b60190f2f52154e3dfc6ea43f35b0a77abe",
+      "bytes": 9636,
+      "sha256": "ae1bc239cb0d5bdedfff17191aa01e90765e5fdef2c85f23df1816b50386869c",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8520,7 +8520,7 @@
     {
       "path": "machine/history/documentation-refresh.json",
       "bytes": 129059,
-      "sha256": "ac489089ab68ef29a07c327132b54652f1b906066c1bac366d6e329cec868a06",
+      "sha256": "afb907db2bcdd8cc685edd32350cc60bd9e0c06db34ab36fd35041dbb891955e",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8755,15 +8755,26 @@
     },
     {
       "path": "tests/test_documentation.py",
-      "bytes": 23619,
-      "sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9",
+      "bytes": 26291,
+      "sha256": "826269866041931cb2fd351aff26bd43ca2624016b6fb25318019817e48704cf",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "tests/test_documentation.py",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/test_documentation.py",
+        "sha256": "ad86c64e18c4d7e2e42e488d60456ca40da0aba5a66abdde1da31212ff473ec9",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "tests/test_documentation.py",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "tests/test_guidance_update.py",
@@ -8790,8 +8801,8 @@
     },
     {
       "path": "tools/documentation.py",
-      "bytes": 65683,
-      "sha256": "79d861dcde8d061880c06b983008f077228f337514013a88670f9f1ba07f40c7",
+      "bytes": 66824,
+      "sha256": "98bfe290055c39ce2facd99800ceac1ac2345fe6512f3a5b4478c161c5af67f7",
       "license": "Apache-2.0",
       "source": {
         "kind": "first-party-documentation-revision",

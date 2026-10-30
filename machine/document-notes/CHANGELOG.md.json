@@ -137,7 +137,7 @@
     {
       "id": "2026-10-28-cross-platform-paths-optional-proxy",
       "date": "2026-10-28",
-      "reason": "Record PR #1: accept root-controlled system links (macOS /var, /tmp) in path walks and make the GitHub proxy optional; entry merged below the 2026-10-29/30 entries.",
+      "reason": "Record PR #1: accept root-controlled system links (macOS /var, /tmp) in path walks and reject physical plan/archive overlap across alias spellings before any write; make the GitHub proxy optional; entry merged below the 2026-10-29/30 entries.",
       "technical_records": [
         "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
         "core/machine/tools/source-acquisition.json"
@@ -147,8 +147,8 @@
         "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764"
       },
       "revised_identity": {
-        "bytes": 9625,
-        "sha256": "27da1a241ad6642dbd6bf92293c90bd12edb6dbe57e0b005f4ec89b749012b15"
+        "bytes": 9851,
+        "sha256": "26d4ccd5c7b8ffbb84f01e275e029a7fe98a6d529ad4ab079693682f051b124f"
       },
       "acceptance_status": "contributor_local_macos_tests; maintainer native macOS validation pending"
     }

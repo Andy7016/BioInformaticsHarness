@@ -6,9 +6,12 @@ import io
 import json
 import os
 from pathlib import Path
+import shutil
 import tempfile
 import unittest
+from unittest import mock
 
+from scripts.research_support import plan_seal
 from scripts.research_support._common import SupportError, dump_new, is_root_controlled_link
 from scripts.research_support.plan_seal import (
     PUBLIC_APPLICATIONS_PROTOCOL,
@@ -255,6 +258,117 @@ class PlanSealTests(unittest.TestCase):
     def test_root_controlled_system_link_is_accepted(self) -> None:
         system_link = Path("/var")
         self.assertTrue(is_root_controlled_link(system_link, system_link.lstat()))
+
+
+def _system_alias_bases() -> list[Path]:
+    """Existing writable temporary bases whose spelling crosses a system link."""
+
+    bases = []
+    for value in (tempfile.gettempdir(), "/tmp", "/var/tmp"):
+        base = Path(value)
+        if base.is_dir() and base.resolve() != base and os.access(base, os.W_OK):
+            bases.append(base)
+    return bases
+
+
+@unittest.skipUnless(_system_alias_bases(), "requires a system-link temp alias, as on macOS")
+class PhysicalAliasOverlapTests(unittest.TestCase):
+    """L is a path through a system link; P is the same directory resolved."""
+
+    def make_fixture(self, alias_base: Path) -> tuple[Path, Path, Path, Path]:
+        alias = Path(tempfile.mkdtemp(dir=alias_base))
+        self.addCleanup(shutil.rmtree, alias.resolve(), True)
+        physical = alias.resolve()
+        self.assertNotEqual(alias, physical)
+        plan_alias = alias / "plan"
+        plan_alias.mkdir()
+        (plan_alias / "PLAN.md").write_text("A frozen plan.\n", encoding="utf-8")
+        (plan_alias / "notes").mkdir()
+        (plan_alias / "notes" / "scope.txt").write_text("Bounded scope.\n", encoding="utf-8")
+        dump_new(plan_alias / "READY.json", build_ready(plan_alias, "fixture-case"))
+        return alias, physical, plan_alias, physical / "plan"
+
+    def snapshot(self, root: Path) -> dict[str, bytes]:
+        return {
+            path.relative_to(root).as_posix(): path.read_bytes()
+            for path in sorted(root.rglob("*"))
+            if path.is_file()
+        }
+
+    def assert_refused_before_writes(self, plan: Path, archive: Path, base: Path) -> None:
+        before = self.snapshot(base)
+        with mock.patch.object(plan_seal.tempfile, "mkdtemp", wraps=tempfile.mkdtemp) as stage, \
+                mock.patch.object(plan_seal, "_copy_one", wraps=plan_seal._copy_one) as copy, \
+                mock.patch.object(plan_seal, "dump_new", wraps=plan_seal.dump_new) as ack:
+            with self.assertRaisesRegex(SupportError, "physical paths overlap"):
+                seal_plan(plan, archive, "fixture-case", STANDARD_PROTOCOL)
+        self.assertEqual((stage.call_count, copy.call_count, ack.call_count), (0, 0, 0))
+        self.assertEqual(self.snapshot(base), before)
+
+    def test_overlapping_alias_spellings_are_refused_before_any_write(self) -> None:
+        for alias_base in _system_alias_bases():
+            for swapped in (False, True):
+                rows = {
+                    "same-physical-root": lambda a, p, pa, pp: pp,
+                    "archive-physical-descendant": lambda a, p, pa, pp: pp / "archive-new",
+                    "archive-physical-ancestor": lambda a, p, pa, pp: p,
+                }
+                for row, archive_for in rows.items():
+                    with self.subTest(base=str(alias_base), swapped=swapped, row=row):
+                        alias, physical, plan_alias, plan_physical = self.make_fixture(alias_base)
+                        plan, archive = plan_alias, archive_for(alias, physical, plan_alias, plan_physical)
+                        if swapped:
+                            plan = plan_physical
+                            archive = Path(str(archive).replace(str(physical), str(alias), 1))
+                        self.assert_refused_before_writes(plan, archive, physical)
+                        self.assertFalse((plan_physical / "ARCHIVED.json").exists())
+
+    def test_distinct_sibling_through_system_link_seals_an_independent_copy(self) -> None:
+        for alias_base in _system_alias_bases():
+            with self.subTest(base=str(alias_base)):
+                alias, physical, plan_alias, plan_physical = self.make_fixture(alias_base)
+                archive = physical / "archive-new"
+                first = seal_plan(plan_alias, archive, "fixture-case", STANDARD_PROTOCOL)
+                self.assertEqual(first["status"], "archived")
+                self.assertFalse(os.path.samefile(plan_physical, archive))
+                for name in ("READY.json", "PLAN.md", "notes/scope.txt"):
+                    source, copied = plan_physical / name, archive / name
+                    self.assertEqual(source.read_bytes(), copied.read_bytes())
+                    self.assertFalse(os.path.samefile(source, copied))
+                    self.assertEqual(copied.stat().st_nlink, 1)
+                ack_bytes = (plan_physical / "ARCHIVED.json").read_bytes()
+                second = seal_plan(plan_alias, archive, "fixture-case", STANDARD_PROTOCOL)
+                self.assertEqual(second["status"], "already_archived")
+                self.assertEqual((plan_physical / "ARCHIVED.json").read_bytes(), ack_bytes)
+
+    def test_user_owned_link_to_archive_parent_is_still_refused(self) -> None:
+        alias_base = _system_alias_bases()[0]
+        alias, physical, plan_alias, plan_physical = self.make_fixture(alias_base)
+        outside = physical / "outside"
+        outside.mkdir()
+        link = alias / "linked-parent"
+        try:
+            os.symlink(outside, link, target_is_directory=True)
+        except OSError as exc:
+            self.skipTest(f"symlink creation is unavailable: {exc}")
+        with self.assertRaisesRegex(SupportError, "symlink or reparse"):
+            seal_plan(plan_alias, link / "archive-new", "fixture-case", STANDARD_PROTOCOL)
+        self.assertEqual(list(outside.iterdir()), [])
+
+
+class CaseInsensitiveOverlapTests(unittest.TestCase):
+    def test_case_variant_of_plan_root_is_refused_as_archive(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            plan = root / "plan"
+            plan.mkdir()
+            if not (root / "PLAN").exists():
+                self.skipTest("file system is case-sensitive")
+            (plan / "PLAN.md").write_text("A frozen plan.\n", encoding="utf-8")
+            dump_new(plan / "READY.json", build_ready(plan, "fixture-case"))
+            with self.assertRaisesRegex(SupportError, "physical paths overlap"):
+                seal_plan(plan, root / "PLAN", "fixture-case", STANDARD_PROTOCOL)
+            self.assertFalse((plan / "ARCHIVED.json").exists())
 
 
 if __name__ == "__main__":
