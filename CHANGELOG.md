@@ -1,5 +1,10 @@
 # Changelog
 
+## 按研究语境准备独立评阅 — 2026-10-30
+
+- 在[回应路线与验收](core/docs/methods/guides/revision-responses-and-acceptance.md#按研究语境准备评审)加入可选领域准备：先辨认对象、测量、任务与证据层级，围绕陌生测量、跨领域分歧和相反证据补读。
+- 优先复用课题笔记与方法经验，保留既有首稿、独立评阅、实际修订与接受路径。
+
 ## 条件化模型比较 — 2026-10-30
 
 - 在[基准与公平比较卡](core/docs/methods/cards/benchmark-teacher-fairness.md)中，把模型优劣拆成任务、训练时可见信息、预测对象与评价量，按条件选择比较、系统用途说明或补证。

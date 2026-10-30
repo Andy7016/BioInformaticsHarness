@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "e82a001869033a09c2e5333e019abbfe741ffd5c",
+    "head": "31ff6f91a419adb45b5cd0efc6c3bb192056c670",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 9851,
-      "current_sha256": "26d4ccd5c7b8ffbb84f01e275e029a7fe98a6d529ad4ab079693682f051b124f"
+      "current_bytes": 10274,
+      "current_sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c"
     },
     {
       "path": "LICENSING.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 287539,
-      "current_sha256": "ffdc7d67cbc95d9bd841938ac3cc4e8d183f5efd8e908968c911f71f7398fce8"
+      "current_bytes": 288987,
+      "current_sha256": "572fd6c819919523b9a8e4f8bc4c6f8b9e408c467408981effa84bb8c5a5dc3b"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -430,8 +430,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 12519,
-      "current_sha256": "d46d233d6fda0d07c7ff736ff6e16d174ecd66b30097222a5988737343765585"
+      "current_bytes": 12793,
+      "current_sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -720,8 +720,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/revision-responses-and-acceptance.md",
       "previous_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
-      "current_bytes": 12250,
-      "current_sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
+      "current_bytes": 13667,
+      "current_sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4"
     },
     {
       "path": "core/docs/methods/guides/sequence-novelty-and-background.md",
@@ -1632,8 +1632,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/tests/test_plan_seal.py",
       "previous_sha256": "b668649a395c380b7fb1eb1ec1bc29c32a8f6ccea7d9b19c567965f77bfd62be",
-      "current_bytes": 17688,
-      "current_sha256": "e1c2a139859543b399f2b278ea6d299e90ea1b4c21c003b7bb5e5de5ce503d15"
+      "current_bytes": 17722,
+      "current_sha256": "44065572cba89e0050bd432c4bcd6e044ea41dc207490e68079b089c3dc97996"
     },
     {
       "path": "core/tests/test_public_run_bounded.py",
@@ -1802,6 +1802,13 @@
       "current_sha256": "0eb7e548cffda826c114dbe2de0816f1ab359e5fb3340c913a3216bd34b21a49"
     },
     {
+      "path": "machine/changes/macos-paths-optional-github-proxy-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2049,
+      "current_sha256": "7dfa14639680f4e9565d96f191f7e92ab1f2290db744c85572129b239252c8f6"
+    },
+    {
       "path": "machine/changes/method-experience-20261027.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1814,6 +1821,13 @@
       "baseline_revision": "764bd88",
       "current_bytes": 3304,
       "current_sha256": "04a06ee82b382feb41e674c3141ff0d7146fbc443fe3a21125faf3ebd86dee1a"
+    },
+    {
+      "path": "machine/changes/revisor-contextual-preparation-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 2017,
+      "current_sha256": "58fc743073a523f57b38224cabc529ce68536d873a01a24bdcced494a723333d"
     },
     {
       "path": "machine/changes/single-session-stability-20261029.json",
@@ -1833,8 +1847,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9636,
-      "current_sha256": "ae1bc239cb0d5bdedfff17191aa01e90765e5fdef2c85f23df1816b50386869c"
+      "current_bytes": 10346,
+      "current_sha256": "fc216c1ab18c56a5c16e62384787039b93aa40ba34d058523f462f42dc650df5"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -2148,8 +2162,8 @@
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 30839,
-      "current_sha256": "ceb7e0dbd52dded5c2fe73f1c5918564ad967205feb4bb3e775ff0a3fc16a5f6"
+      "current_bytes": 31477,
+      "current_sha256": "92aa259cd313a1f50b22f123e38523e609fb70f6b3ad20e8d1fb79e2e070f9c8"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -2386,8 +2400,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 15018,
-      "current_sha256": "fb43d5c76fce19493455c779df1648630ef3eaa3b5d38b1602dd128d5228478c"
+      "current_bytes": 15677,
+      "current_sha256": "432e5f42f1bbb88c2d639e3032304b02f7fe1968ed6e5920a30333767063105d"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/sequence-novelty-and-background.md.json",
@@ -2470,8 +2484,8 @@
       "path": "machine/document-notes/core/docs/methods/source-acquisition-routing.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9925,
-      "current_sha256": "be68f244bea3001fe4303d5a6bb371f67ad14f19887b8c8a429f4012370e248c"
+      "current_bytes": 10036,
+      "current_sha256": "3e572a41201e04f47ea2161022a9fafa8a126cc63240f6eb10454894e940a6cd"
     },
     {
       "path": "machine/document-notes/core/docs/methods/worked-examples/README.md.json",
@@ -2964,6 +2978,13 @@
       "current_sha256": "14b7e89af6105844a96a9bb3cacf750addf5a93f6ded3b27bf5bee536163c32e"
     },
     {
+      "path": "machine/reviews/pr1-integration-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 3961,
+      "current_sha256": "5ddc89e4300eca8402e98f7a0b51dee17ab0495b12b9f18b3366b500543ca4e0"
+    },
+    {
       "path": "machine/schemas/source-design-index.schema.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2974,8 +2995,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 275142,
-      "current_sha256": "197aff7e89ab1353d532b0ceeceb7f0b49f5016bf2c58b0ad67a8f3f8fc4d341"
+      "current_bytes": 279904,
+      "current_sha256": "741202076f1a49273f680b4140e4bce3bcf96ca8bb6aba1071e991735b827f6d"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

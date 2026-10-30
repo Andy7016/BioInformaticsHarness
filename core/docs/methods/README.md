@@ -39,6 +39,7 @@ Use the trigger that matches your research question. The table suggests a starti
 | 序列新颖性、最近天然关系、复制或背景富集 | [序列新颖性与匹配背景](guides/sequence-novelty-and-background.md) | [序列卡](cards/sequence-representation.md)、[选择后统计](guides/statistical-units-and-selection.md) |
 | 生成结构需核几何、装配/精修或角误差稳健性 | [结构几何与扰动](guides/structural-geometry-and-perturbation.md) | [结构卡](cards/structure-mapping-scoring.md)、[坐标卡](cards/coordinate-transforms.md) |
 | 标签、代理、测量构念与模型目标／主张之间有距离 | [测量到主张](guides/measurement-to-claim.md) | [指标语义](cards/metric-semantics.md)、[统计单位](guides/statistical-units-and-selection.md) |
+| 独立评阅遇到陌生测量、跨领域分歧或关键相反证据 | [按语境准备评审](guides/revision-responses-and-acceptance.md#按研究语境准备评审) | [方法经验](guides/method-experience.md)、[重读与视角](guides/review-choice-synthesis.md) |
 | 收到具体评审请求，需要选择回应路线和验收产物 | [回应路线与验收](guides/revision-responses-and-acceptance.md) | [修订记录契约](revision-contract.md)、[公开评审对照](peer-review-comparison.md) |
 | 候选/模型筛选、择优、分支或阶段间单位/分母改变 | [逐阶段选择与分母](cards/stage-selection.md) | [信息用途](cards/information-use.md)与[指标语义](cards/metric-semantics.md) |
 | 先验、教师、预训练、评价参考或X/y/condition在多个阶段使用 | [信息用途与主张](cards/information-use.md) | [基准卡](cards/benchmark-teacher-fairness.md)与[流程关系契约](flow-contract.md) |

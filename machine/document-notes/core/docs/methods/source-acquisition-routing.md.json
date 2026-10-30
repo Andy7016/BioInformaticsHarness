@@ -56,5 +56,8 @@
       ],
       "acceptance": "offline acquisition tests with stubbed public DNS; no live GitHub request performed"
     }
+  ],
+  "current_technical_records": [
+    "machine/changes/macos-paths-optional-github-proxy-20261030.json"
   ]
 }

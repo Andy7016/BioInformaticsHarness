@@ -65,15 +65,29 @@
         "sha256": "ff537944b354f5f6db5d5d7fb5998ab35da70c493ac843aecd1c422f9bae8517"
       },
       "previous_document_updated_at_utc": "2026-10-25T12:41:42.164835+00:00"
+    },
+    {
+      "id": "revisor-contextual-preparation-20261030",
+      "date": "2026-10-30",
+      "reason": "User-adopted optional contextual preparation in existing guide/navigation; no extra first-draft gate or file family.",
+      "technical_records": [
+        "machine/changes/revisor-contextual-preparation-20261030.json"
+      ],
+      "acceptance_status": "accepted_user_optional_policy",
+      "previous_document_identity": {
+        "bytes": 12250,
+        "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
+      }
     }
   ],
-  "updated_at_utc": "2026-10-29T05:09:46.525548+00:00",
+  "updated_at_utc": "2026-10-30T12:17:20.529696+00:00",
   "current_identity": {
-    "bytes": 12250,
-    "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
+    "bytes": 13667,
+    "sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",
-    "machine/changes/single-session-stability-20261029.json"
+    "machine/changes/single-session-stability-20261029.json",
+    "machine/changes/revisor-contextual-preparation-20261030.json"
   ]
 }

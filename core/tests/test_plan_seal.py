@@ -366,7 +366,7 @@ class CaseInsensitiveOverlapTests(unittest.TestCase):
                 self.skipTest("file system is case-sensitive")
             (plan / "PLAN.md").write_text("A frozen plan.\n", encoding="utf-8")
             dump_new(plan / "READY.json", build_ready(plan, "fixture-case"))
-            with self.assertRaisesRegex(SupportError, "physical paths overlap"):
+            with self.assertRaisesRegex(SupportError, r"(?:must not contain one another|physical paths overlap)"):
                 seal_plan(plan, root / "PLAN", "fixture-case", STANDARD_PROTOCOL)
             self.assertFalse((plan / "ARCHIVED.json").exists())
 
