@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "ab7e6bcef41e3359d2317e999f78ed207684ef3e",
+    "head": "3fb4543487a488199a01aea3210ed71ca7c747ff",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 8666,
-      "current_sha256": "b9fb9a876fd78d125c22087c99f1b56840562632d94d4553ca2138c0ebe77b81"
+      "current_bytes": 9129,
+      "current_sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764"
     },
     {
       "path": "LICENSING.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 280145,
-      "current_sha256": "db690b6dbfb8a10d40ccc25d998623e6d7c4f11782bbad39e58652d666231ad0"
+      "current_bytes": 280961,
+      "current_sha256": "15f8643d6cb78396885442242e08428af8cb73d98ee1730ade7525b65dc585ff"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -439,8 +439,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/cards/benchmark-teacher-fairness.md",
       "previous_sha256": "a536a9e35c92a519c9b43da5d922f7aaa4670e6b5dcc58ef9c33d1594213b77f",
-      "current_bytes": 4940,
-      "current_sha256": "3e4f5f1a00ffb75a40e0f2fa07dd0fb3fc581a802501e6aca073d1c8ac3cde47"
+      "current_bytes": 7584,
+      "current_sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523"
     },
     {
       "path": "core/docs/methods/cards/coordinate-transforms.md",
@@ -697,8 +697,8 @@
       "path": "core/docs/methods/guides/review-choice-synthesis.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 11276,
-      "current_sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+      "current_bytes": 12660,
+      "current_sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2"
     },
     {
       "path": "core/docs/methods/guides/review-coverage-and-closure.md",
@@ -1736,6 +1736,13 @@
       "current_sha256": "4b007244be595ba374977f6be3cdcb921a0fdbe908725ca582e3c9ccd5dcc67f"
     },
     {
+      "path": "machine/changes/conditional-model-comparison-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6835,
+      "current_sha256": "f4c1cd26fbb6cf50c6632ea989955246b1b7185ebe9d461d2d4be62bb0bfa1e7"
+    },
+    {
       "path": "machine/changes/continuity-and-engineering-20261027.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1781,8 +1788,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7660,
-      "current_sha256": "95d1c1cf30fdb21cf6210fda77ff945fd95470ff3e5c0c185c76b40a5d4a3705"
+      "current_bytes": 8684,
+      "current_sha256": "090f036d9aecd8e2bf932b0d4262a4d4eb22cfee8641da28b4f8ed33522b6935"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -2103,8 +2110,8 @@
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7057,
-      "current_sha256": "4d57d4501e6926a8d19c0a6861f28484f9c9eeba2dcfeae1eccf17650c667125"
+      "current_bytes": 8416,
+      "current_sha256": "2c616b0c71f3292e596fc82af58ee49f17490a4075eed6ba9f6515cb6d0b8393"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/coordinate-transforms.md.json",
@@ -2313,8 +2320,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 8403,
-      "current_sha256": "835fc534681c6a78e03ca1db2ce9e27c4dbb459ebd10926650adfe6cd69201e4"
+      "current_bytes": 9498,
+      "current_sha256": "e6344895c74a108961f00bcdcf538cd78e9bd8847448487d2d470165f6d410c8"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-coverage-and-closure.md.json",
@@ -2922,8 +2929,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 271834,
-      "current_sha256": "198326b4e0f8f59f0dbe6688adf42a88d97c1730908c3bc3796831aba71977e3"
+      "current_bytes": 275142,
+      "current_sha256": "197aff7e89ab1353d532b0ceeceb7f0b49f5016bf2c58b0ad67a8f3f8fc4d341"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

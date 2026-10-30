@@ -1,0 +1,116 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "conditional-model-comparison-20261030",
+  "date": "2026-10-30",
+  "summary": "Condition baseline/deep-model judgments on task, training-visible information, prediction/output target and evaluation while retaining the existing first-draft and independent-revisor workflow.",
+  "impact": "guidance",
+  "baseline_commit": "3fb4543487a488199a01aea3210ed71ca7c747ff",
+  "paths": [
+    "core/docs/methods/cards/benchmark-teacher-fairness.md",
+    "core/docs/methods/guides/review-choice-synthesis.md",
+    "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
+    "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
+    "CHANGELOG.md",
+    "machine/document-notes/CHANGELOG.md.json",
+    "machine/changes/conditional-model-comparison-20261030.json",
+    "machine/source-design-index.jsonl"
+  ],
+  "reading_paths": [
+    "core/docs/methods/cards/benchmark-teacher-fairness.md",
+    "core/docs/methods/guides/review-choice-synthesis.md"
+  ],
+  "reading_sections": {
+    "core/docs/methods/cards/benchmark-teacher-fairness.md": [
+      "先把模型优劣拆成可比较的问题"
+    ],
+    "core/docs/methods/guides/review-choice-synthesis.md": [
+      "先变条件，再检查目标是否改变",
+      "用修订前后检查含义是否改变"
+    ]
+  },
+  "revisit": "At a current/next-gate method comparison, match task, information, output and evaluation; select a feasible baseline and appraise the exact common scope before ranking.",
+  "acceptance": "A reader can identify the task, each candidate information set, prediction/output event and evaluation denominator; distinguish matched comparison, resource-conditioned system utility and unresolved/incomparable evidence; route missing relationships through existing revision procedures.",
+  "change_rationale": [
+    {
+      "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
+      "prior_coverage": "Data/search budget, initialization, teacher truth, postprocessing, coverage, units and metric denominators already existed.",
+      "addition_needed": "Make the four-way comparison condition explicit and connect it to baseline input feasibility, system utility, common comparison scope and missing-evidence responses."
+    },
+    {
+      "path": "core/docs/methods/guides/review-choice-synthesis.md",
+      "prior_coverage": "Conditional synthesis, target changes, evidence routes and original-draft preservation already existed.",
+      "addition_needed": "Connect the baseline/deep-model question to method selection and retain independent revisor completion instead of adding a first-draft threshold."
+    }
+  ],
+  "public_reading_basis": [
+    {
+      "path": "core/docs/methods/worked-examples/common-and-task-specific.md",
+      "availability": "public",
+      "read_scope": "Complete existing worked example, including its conditional additive baseline, output/metric distinctions and original public source links.",
+      "new_primary_paper_reading": false
+    },
+    {
+      "path": "core/docs/methods/cards/information-use.md",
+      "availability": "public",
+      "read_scope": "Complete existing information-use guidance."
+    },
+    {
+      "path": "core/docs/methods/cards/metric-semantics.md",
+      "availability": "public",
+      "read_scope": "Complete existing metric-event and denominator guidance."
+    },
+    {
+      "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
+      "availability": "public",
+      "read_scope": "Targeted existing revision-closure passage and linked workflow."
+    }
+  ],
+  "design_inputs": [
+    {
+      "availability": "private_archive",
+      "locator": "machine/experiments/20261029-perturbation-theory/REPORT-v2.md",
+      "sha256": "a2af7a7b9d0474593549a43f2ea4e05d1c6ece012fc99955ba906633d28a1a53",
+      "kind": "accepted_bounded_case",
+      "read_scope": "Relevant task/information/output/evaluation passages"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/experiments/20261029-perturbation-theory/CURRENT.md",
+      "sha256": "d28b287ace5964d6b0854ee6ff6c338669e4a260f0eaca1128e0700243d80c42",
+      "kind": "case_navigation_or_scoped_assessment",
+      "read_scope": "Complete current entry or assessment"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/experiments/20261029-perturbation-theory/reviews/independent-review-v2.json",
+      "sha256": "7acdb99bda27ebe181ee560650134309fd82ea77ae6c1fea8f5bc633f7a32a0e",
+      "kind": "case_navigation_or_scoped_assessment",
+      "read_scope": "Complete current entry or assessment"
+    },
+    {
+      "availability": "private_archive",
+      "locator": "machine/reviews/2026-10-single-session-iteration-20261029/GPT-CASE-EVALUATION.json",
+      "sha256": "67e1ca977b751b724ce8c44c9a830be61b6ebc0bf897bfb7779666b0a8ea8ff2",
+      "kind": "case_navigation_or_scoped_assessment",
+      "read_scope": "Complete current entry or assessment"
+    }
+  ],
+  "evidence_scope": "The accepted private perturbation case is a worked instance of conditional comparison and reviewed revision. Its numerical findings and full report are not exported. Public prose is independently usable through existing public guides and their original public sources.",
+  "implementation_boundary": [
+    "Existing method card, synthesis guide, document notes, change index, changelog and append-only source index only.",
+    "No runtime, schema, test, manifest, tool-input contract or new mandatory file family changed.",
+    "Existing first-draft and independent-revisor stages retained; missing relationships may be completed by reviewed revision.",
+    "Original source_text, source_commit and source_sha256 fields, source-index prefix and frozen case inputs retained.",
+    "One case is not generalized to a model winner, exhaustive field ranking, architecture/pretraining causal effect or general Harness effect."
+  ],
+  "acceptance_status": "accepted_parent_documentation_integration",
+  "validation_scope": "Parent accepted the bounded content and retained first-draft/revisor boundaries. Documentation refresh/check, checkpoint and core verifiers passed; inventories are regenerated for committed bytes. Runtime and scientific comparative effect remain separate.",
+  "effect_status": "No controlled same-prompt rerun, new model execution or isolated guidance-effect estimate performed.",
+  "future_optional_experiment": {
+    "kind": "same_prompt_clean_rerun",
+    "status": "future_optional_not_executed",
+    "purpose": "If later selected, compare a frozen prompt under old/new guidance and matching task/information/resource conditions, keeping first-draft and reviewed-final outcomes distinct.",
+    "required_for_this_iteration": false
+  },
+  "historical_backfill": false
+}

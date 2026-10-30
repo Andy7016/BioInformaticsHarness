@@ -1723,24 +1723,29 @@
       }
     },
     {
-      "bytes": 4940,
+      "bytes": 7584,
       "license": "CC-BY-4.0",
       "path": "docs/methods/cards/benchmark-teacher-fairness.md",
       "role": "normative-prose",
-      "sha256": "3e4f5f1a00ffb75a40e0f2fa07dd0fb3fc581a802501e6aca073d1c8ac3cde47",
+      "sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523",
       "source": "docs/methods/cards/benchmark-teacher-fairness.md",
       "source_sha256": "1df66931540e8b31d0908d6c8eb58db55e691626ac2a8a528b67f09576fb1d3d",
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-22",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
-        "previous_transform": "markdown-links-and-local-redaction",
+        "previous_transform": "first-party-documentation-revision",
         "previous_details": {
-          "changed": true,
-          "images_converted_to_ordinary_links": 0,
-          "links_redirected_to_archive_pointers": 5,
-          "links_rewritten_to_package": 3,
-          "local_redactions": []
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88",
+          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_details": {
+            "changed": true,
+            "images_converted_to_ordinary_links": 0,
+            "links_redirected_to_archive_pointers": 5,
+            "links_rewritten_to_package": 3,
+            "local_redactions": []
+          }
         }
       },
       "previous": {
@@ -1751,11 +1756,16 @@
         "transform": "markdown-links-and-local-redaction",
         "source_sha256": "1df66931540e8b31d0908d6c8eb58db55e691626ac2a8a528b67f09576fb1d3d",
         "transform_details": {
-          "changed": true,
-          "images_converted_to_ordinary_links": 0,
-          "links_redirected_to_archive_pointers": 5,
-          "links_rewritten_to_package": 3,
-          "local_redactions": []
+          "revision": "2026-10-22",
+          "baseline_revision": "764bd88",
+          "previous_transform": "markdown-links-and-local-redaction",
+          "previous_details": {
+            "changed": true,
+            "images_converted_to_ordinary_links": 0,
+            "links_redirected_to_archive_pointers": 5,
+            "links_rewritten_to_package": 3,
+            "local_redactions": []
+          }
         }
       }
     },
@@ -2847,15 +2857,15 @@
     },
     {
       "path": "docs/methods/guides/review-choice-synthesis.md",
-      "bytes": 11276,
-      "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c",
+      "bytes": 12660,
+      "sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:docs/methods/guides/review-choice-synthesis.md",
       "source_sha256": null,
       "transform": "first-party-documentation-revision",
       "transform_details": {
-        "revision": "2026-10-24",
+        "revision": "2026-10-27",
         "baseline_revision": "764bd88",
         "previous_transform": "first-party-documentation-revision",
         "previous_details": {
@@ -2864,7 +2874,12 @@
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
             "revision": "2026-10-24",
-            "baseline_revision": "764bd88"
+            "baseline_revision": "764bd88",
+            "previous_transform": "first-party-documentation-revision",
+            "previous_details": {
+              "revision": "2026-10-24",
+              "baseline_revision": "764bd88"
+            }
           }
         }
       },
@@ -2881,7 +2896,12 @@
           "previous_transform": "first-party-documentation-revision",
           "previous_details": {
             "revision": "2026-10-24",
-            "baseline_revision": "764bd88"
+            "baseline_revision": "764bd88",
+            "previous_transform": "first-party-documentation-revision",
+            "previous_details": {
+              "revision": "2026-10-24",
+              "baseline_revision": "764bd88"
+            }
           }
         }
       }
@@ -6697,7 +6717,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "ab7e6bcef41e3359d2317e999f78ed207684ef3e",
+    "head": "3fb4543487a488199a01aea3210ed71ca7c747ff",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

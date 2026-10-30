@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 8666,
+      "bytes": 9129,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "b9fb9a876fd78d125c22087c99f1b56840562632d94d4553ca2138c0ebe77b81",
+      "sha256": "9c06a6468d55b8aa820d113e37d099c74bff4e0ce3c0cfd114527370fcf37764",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 280145,
+      "bytes": 280961,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "db690b6dbfb8a10d40ccc25d998623e6d7c4f11782bbad39e58652d666231ad0",
+      "sha256": "15f8643d6cb78396885442242e08428af8cb73d98ee1730ade7525b65dc585ff",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -1376,10 +1376,10 @@
       }
     },
     {
-      "bytes": 4940,
+      "bytes": 7584,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
-      "sha256": "3e4f5f1a00ffb75a40e0f2fa07dd0fb3fc581a802501e6aca073d1c8ac3cde47",
+      "sha256": "97085a88a3b6d413c7563b99b03b686282e6b941d41b2011a024e2fb4a24f523",
       "source": {
         "path": "docs/methods/cards/benchmark-teacher-fairness.md",
         "release_manifest": {
@@ -2206,8 +2206,8 @@
     },
     {
       "path": "core/docs/methods/guides/review-choice-synthesis.md",
-      "bytes": 11276,
-      "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c",
+      "bytes": 12660,
+      "sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6047,6 +6047,29 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/conditional-model-comparison-20261030.json",
+      "bytes": 6835,
+      "sha256": "f4c1cd26fbb6cf50c6632ea989955246b1b7185ebe9d461d2d4be62bb0bfa1e7",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/conditional-model-comparison-20261030.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/changes/conditional-model-comparison-20261030.json",
+        "sha256": "e878a7b4812bd27a250b207b62899ffafa5ef34c0b06caad83eabfd91e37f839",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/changes/conditional-model-comparison-20261030.json",
+          "revision": "2026-10-27"
+        },
+        "transform": "first-party-documentation-revision"
+      }
+    },
+    {
       "path": "machine/changes/continuity-and-engineering-20261027.json",
       "bytes": 1399,
       "sha256": "d5862a5d843fa6936827f62f7c1dc8f75a4243a7f4f3102cf2718c2c4f99ca27",
@@ -6120,8 +6143,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 7660,
-      "sha256": "95d1c1cf30fdb21cf6210fda77ff945fd95470ff3e5c0c185c76b40a5d4a3705",
+      "bytes": 8684,
+      "sha256": "090f036d9aecd8e2bf932b0d4262a4d4eb22cfee8641da28b4f8ed33522b6935",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6815,15 +6838,26 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
-      "bytes": 7057,
-      "sha256": "4d57d4501e6926a8d19c0a6861f28484f9c9eeba2dcfeae1eccf17650c667125",
+      "bytes": 8416,
+      "sha256": "2c616b0c71f3292e596fc82af58ee49f17490a4075eed6ba9f6515cb6d0b8393",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
         "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
         "revision": "2026-10-22"
       },
-      "transform": "first-party-documentation-revision"
+      "transform": "first-party-documentation-revision",
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
+        "sha256": "4d57d4501e6926a8d19c0a6861f28484f9c9eeba2dcfeae1eccf17650c667125",
+        "source": {
+          "kind": "first-party-documentation-revision",
+          "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
+          "revision": "2026-10-22"
+        },
+        "transform": "first-party-documentation-revision"
+      }
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/coordinate-transforms.md.json",
@@ -7241,8 +7275,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/review-choice-synthesis.md.json",
-      "bytes": 8403,
-      "sha256": "835fc534681c6a78e03ca1db2ce9e27c4dbb459ebd10926650adfe6cd69201e4",
+      "bytes": 9498,
+      "sha256": "e6344895c74a108961f00bcdcf538cd78e9bd8847448487d2d470165f6d410c8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8382,8 +8416,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 126648,
-      "sha256": "6e355d9bc248bf98b21ee3ee292bb6d4b137debd71c8d53ba961e4a7d6cba859",
+      "bytes": 126920,
+      "sha256": "6b0fdfdd01522f7772c876f3ab19167ee0f3bd6333d29c2203d3169007fdc62b",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8583,8 +8617,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 271834,
-      "sha256": "198326b4e0f8f59f0dbe6688adf42a88d97c1730908c3bc3796831aba71977e3",
+      "bytes": 275142,
+      "sha256": "197aff7e89ab1353d532b0ceeceb7f0b49f5016bf2c58b0ad67a8f3f8fc4d341",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

@@ -1,5 +1,10 @@
 # Changelog
 
+## 条件化模型比较 — 2026-10-30
+
+- 在[基准与公平比较卡](core/docs/methods/cards/benchmark-teacher-fairness.md)中，把模型优劣拆成任务、训练时可见信息、预测对象与评价量，按条件选择比较、系统用途说明或补证。
+- 将这一判断接入[方法取舍指南](core/docs/methods/guides/review-choice-synthesis.md)，复用公开工作例，并沿现有首稿、独立评阅与修订机制补足缺失关系。
+
 ## 按需研究入口与经验载体 — 2026-10-29
 
 - 区分研究选用、工具试用与仓库维护测试；按当前问题打开相关指南。

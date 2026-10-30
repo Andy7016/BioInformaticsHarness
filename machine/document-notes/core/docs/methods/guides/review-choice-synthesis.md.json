@@ -77,15 +77,35 @@
       ],
       "acceptance_status": "accepted_bounded_content_v2",
       "accepted_at_utc": "2026-10-25T13:48:09.940509+00:00"
+    },
+    {
+      "id": "2026-10-30-conditional-model-comparison",
+      "date": "2026-10-30",
+      "reason": "Connect conditional comparison to the existing synthesis workflow and preserved-first-draft, independent-revisor and reviewed-revision sequence.",
+      "technical_records": [
+        "machine/changes/conditional-model-comparison-20261030.json"
+      ],
+      "prior_identity": {
+        "bytes": 11276,
+        "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+      },
+      "revised_identity": {
+        "bytes": 12660,
+        "sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2"
+      },
+      "acceptance_status": "accepted_parent_editorial_and_publication_checks",
+      "evidence_scope": "Existing public guidance and a bounded private accepted case; no new primary-paper reading or model execution claimed.",
+      "first_draft_and_revisor": "Existing mechanism retained; no zero-error first-draft requirement or new required carrier."
     }
   ],
-  "updated_at_utc": "2026-10-25T13:48:09.940509+00:00",
+  "updated_at_utc": "2026-10-30T01:59:11.933790+00:00",
   "current_identity": {
-    "bytes": 11276,
-    "sha256": "f969971ae6f22878c0cb4a8cd627eb0d417837d499c50eb8a818ea8c6a61817c"
+    "bytes": 12660,
+    "sha256": "1824573d819141f2a1ab64a8acfbd930fdc8ac8a25a1115f7b0b2787e7649ec2"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",
-    "core/machine/design/biological-argument.json"
+    "core/machine/design/biological-argument.json",
+    "machine/changes/conditional-model-comparison-20261030.json"
   ]
 }
