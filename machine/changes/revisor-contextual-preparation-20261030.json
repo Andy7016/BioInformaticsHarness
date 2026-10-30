@@ -2,7 +2,7 @@
   "schema": "harness.guidance-change/v1",
   "id": "revisor-contextual-preparation-20261030",
   "date": "2026-10-30",
-  "summary": "Keep reviewer preparation optional, source-grounded and triggered by research context; reuse study notes.",
+  "summary": "Begin review with brief object/measurement/task/evidence orientation; keep additional preparation optional, source-grounded and triggered by research context; reuse study notes.",
   "impact": "guidance",
   "paths": [
     "core/docs/methods/guides/revision-responses-and-acceptance.md",
@@ -33,5 +33,13 @@
   "new_mandatory_file_family": false,
   "historical_backfill": false,
   "validation_ref": "machine/reviews/pr1-integration-20261030.json",
-  "validation_status": "accepted_existing_suites_and_package_checks"
+  "validation_status": "accepted_existing_suites_and_package_checks",
+  "wording_clarifications": [
+    {
+      "id": "revisor-orientation-clarification-20261030",
+      "date": "2026-10-30",
+      "reason": "Separate the lightweight review starting point from optional source reading.",
+      "first_draft_requirements_added": false
+    }
+  ]
 }

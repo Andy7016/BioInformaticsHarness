@@ -78,12 +78,25 @@
         "bytes": 12250,
         "sha256": "c7ff880687301ad186556641daf7b346576e7bf55ee9add374bb7120ff974c77"
       }
+    },
+    {
+      "id": "revisor-orientation-clarification-20261030",
+      "date": "2026-10-30",
+      "reason": "User-requested brief object/measurement/task/evidence orientation precedes review; additional source reading remains context-triggered and optional.",
+      "technical_records": [
+        "machine/changes/revisor-contextual-preparation-20261030.json"
+      ],
+      "acceptance_status": "accepted_user_policy_wording_clarification",
+      "previous_document_identity": {
+        "bytes": 13667,
+        "sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4"
+      }
     }
   ],
-  "updated_at_utc": "2026-10-30T12:17:20.529696+00:00",
+  "updated_at_utc": "2026-10-30T14:00:00.663095+00:00",
   "current_identity": {
-    "bytes": 13667,
-    "sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4"
+    "bytes": 13682,
+    "sha256": "13a7d1e4dfe990b71c3b95182f9d107e04500b915901da90bbaab069162cc19e"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",

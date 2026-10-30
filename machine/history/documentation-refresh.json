@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "31ff6f91a419adb45b5cd0efc6c3bb192056c670",
+    "head": "a14ed15f4081b06781bd4169644790f971175a14",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 288987,
-      "current_sha256": "572fd6c819919523b9a8e4f8bc4c6f8b9e408c467408981effa84bb8c5a5dc3b"
+      "current_bytes": 289451,
+      "current_sha256": "05ef8df65cc3e386e2351c046bee7900a493c7a9833a341557e1f8fa9c7e6aca"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -720,8 +720,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/guides/revision-responses-and-acceptance.md",
       "previous_sha256": "eb09048d9ed85a09ee8e1e5cedf12cc9c618d2a0ed5aa4653b072da82420020d",
-      "current_bytes": 13667,
-      "current_sha256": "d22d1795cf95fbe952ecede83d48c4d8e77f2bcfc10d9ca6f8423a82aef876d4"
+      "current_bytes": 13682,
+      "current_sha256": "13a7d1e4dfe990b71c3b95182f9d107e04500b915901da90bbaab069162cc19e"
     },
     {
       "path": "core/docs/methods/guides/sequence-novelty-and-background.md",
@@ -1826,8 +1826,8 @@
       "path": "machine/changes/revisor-contextual-preparation-20261030.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 2017,
-      "current_sha256": "58fc743073a523f57b38224cabc529ce68536d873a01a24bdcced494a723333d"
+      "current_bytes": 2409,
+      "current_sha256": "96b5d4b4e7f460548d74526341dd04803eac88c0f1bea9cd3aad342229944e47"
     },
     {
       "path": "machine/changes/single-session-stability-20261029.json",
@@ -2400,8 +2400,8 @@
       "path": "machine/document-notes/core/docs/methods/guides/revision-responses-and-acceptance.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 15677,
-      "current_sha256": "432e5f42f1bbb88c2d639e3032304b02f7fe1968ed6e5920a30333767063105d"
+      "current_bytes": 16294,
+      "current_sha256": "1abb228c2048039b89a55212a8ba005bf0bb5f34927259eb8f99876f904e93c3"
     },
     {
       "path": "machine/document-notes/core/docs/methods/guides/sequence-novelty-and-background.md.json",
@@ -2981,8 +2981,8 @@
       "path": "machine/reviews/pr1-integration-20261030.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 3961,
-      "current_sha256": "5ddc89e4300eca8402e98f7a0b51dee17ab0495b12b9f18b3366b500543ca4e0"
+      "current_bytes": 4460,
+      "current_sha256": "84209b0c95a51b29fd3017870cd6ecae8eb27f7ddbf9711dbdfa7e47ccf1687f"
     },
     {
       "path": "machine/schemas/source-design-index.schema.json",
@@ -2995,8 +2995,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 279904,
-      "current_sha256": "741202076f1a49273f680b4140e4bce3bcf96ca8bb6aba1071e991735b827f6d"
+      "current_bytes": 281884,
+      "current_sha256": "27f49a04dc04119e124292a5ec659c77c4abbd57051548d7720bf9106d12ac9d"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

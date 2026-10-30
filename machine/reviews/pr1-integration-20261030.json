@@ -82,5 +82,12 @@
     "scope": "Executed on the integrated working tree before acceptance metadata; final identity check repeated after metadata update.",
     "unit_suites": "329 discovered,320 executed successfully,9 platform-skipped."
   },
-  "metadata_export": "Current-task-only redacted export. Runtime and human-guidance bytes match the validated integration; package and root/tool checks are repeated after metadata export."
+  "metadata_export": "Current-task-only redacted export. Runtime and human-guidance bytes match the validated integration; package and root/tool checks are repeated after metadata export.",
+  "guidance_wording_clarification": {
+    "date": "2026-10-30",
+    "scope": "Brief object/measurement/task/evidence orientation precedes review. Additional source reading remains context-triggered and optional.",
+    "runtime_code_changed": false,
+    "first_draft_requirements_added": false,
+    "validation": "Documentation, checkpoint and core package verifiers passed for the wording follow-up."
+  }
 }
