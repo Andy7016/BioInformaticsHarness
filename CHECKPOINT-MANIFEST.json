@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 10925,
+      "bytes": 11418,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "700e39815c6405f06770b5ccbc9ce99f66126ca4e6b53b89cd7577a481eff527",
+      "sha256": "7d5964bcccd74f130d50b7196a8aedb762545f3dfcc7b4de16f90821c675e849",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -450,7 +450,7 @@
       "bytes": 290719,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "ecfef90ac767cd3f0545b7c4b88d6f4cbe784fd3128b22bcca70396aebf6256d",
+      "sha256": "db4d0bd8a666e3889c2b99f9a00de5b4777504eac740b6663cfa29e24e0c125b",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -5720,6 +5720,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+      "bytes": 4117,
+      "sha256": "08fe5f8bef7b611d804b56ef5a0ffc9fe2229913f823fca4bc78214852ef59df",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
       "bytes": 7291,
       "sha256": "b2573d2ce414d986bb01a58764dd34c3a18c4d6bc9a3148dd71e8f285400ec92",
@@ -6197,6 +6209,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/entry-adoption-20261031.json",
+      "bytes": 1521,
+      "sha256": "d98157626ed50c5b32d9a6d34e82997c23a39e1595261d27a4e75cf96bdaad69",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/entry-adoption-20261031.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/guidance-updates-20261027.json",
       "bytes": 1280,
       "sha256": "0eb7e548cffda826c114dbe2de0816f1ab359e5fb3340c913a3216bd34b21a49",
@@ -6329,8 +6353,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 11488,
-      "sha256": "1416c23557f2d1bec3672105d55b1379f5a3dd79514228ce5cd0a03dda7f1204",
+      "bytes": 11839,
+      "sha256": "852925fc9a05da4291ee8cf48753c59a40434c2d6374b29665434cdad1e5574e",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8403,6 +8427,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/document-notes/docs/research/entry-reading-and-transfer-2026-10-31.zh.md.json",
+      "bytes": 4969,
+      "sha256": "c956029500b3803faebeebc77073bb60e1502f2ce3345f7246d11f9621b49790",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/docs/research/entry-reading-and-transfer-2026-10-31.zh.md.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
       "bytes": 916,
       "sha256": "60254f8d300ade92cd7d903dd13be4aa6d3d315846e27e488fa92fcb0c7fb681",
@@ -8614,8 +8650,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 131160,
-      "sha256": "55504f8d79bef7749eb3d7e10120228bb9df4c44884d6ba18a4de2b2ab2764f9",
+      "bytes": 132262,
+      "sha256": "ab1de79369e3bbb1c1263ee99c780665018333c2489e5b2f65b4409427b2d9c8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8742,6 +8778,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+      "bytes": 10545,
+      "sha256": "83ccfd2e0217b0430ad3b255bf87b075411ae5576468fce7d069357af16ef1ad",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/research/long-research-and-engineering-2026-10-27.json",
       "bytes": 7997,
       "sha256": "4b27689bf445add6cda9caebccd4ffa11bce15314f64cd680871e8417a81621d",
@@ -8838,8 +8886,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 291163,
-      "sha256": "6b42c3d30f2dbbb6067e8099aa53ba300a25aa6ff0dc87d10ce25dfc4f683869",
+      "bytes": 293021,
+      "sha256": "9d96ee1ef6310cd75780db65a63838d9aa8e73dc8d7036a0c10ab01e173a24f8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

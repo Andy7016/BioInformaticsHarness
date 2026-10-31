@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "33e66e6d601185d84df558dd76ffed0ccfc4113c",
+    "head": "9fb954db57b8b928e72cfbb77678b40e483bffe7",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 10925,
-      "current_sha256": "700e39815c6405f06770b5ccbc9ce99f66126ca4e6b53b89cd7577a481eff527"
+      "current_bytes": 11418,
+      "current_sha256": "7d5964bcccd74f130d50b7196a8aedb762545f3dfcc7b4de16f90821c675e849"
     },
     {
       "path": "LICENSING.md",
@@ -127,7 +127,7 @@
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
       "current_bytes": 290719,
-      "current_sha256": "ecfef90ac767cd3f0545b7c4b88d6f4cbe784fd3128b22bcca70396aebf6256d"
+      "current_sha256": "db4d0bd8a666e3889c2b99f9a00de5b4777504eac740b6663cfa29e24e0c125b"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -1710,6 +1710,13 @@
       "current_sha256": "42da26ab8595723a262ef727ae7f7b67ad499d5e63ac0e5d7f62d5e8efb12c70"
     },
     {
+      "path": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4117,
+      "current_sha256": "08fe5f8bef7b611d804b56ef5a0ffc9fe2229913f823fca4bc78214852ef59df"
+    },
+    {
       "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1802,6 +1809,13 @@
       "current_sha256": "d5862a5d843fa6936827f62f7c1dc8f75a4243a7f4f3102cf2718c2c4f99ca27"
     },
     {
+      "path": "machine/changes/entry-adoption-20261031.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1521,
+      "current_sha256": "d98157626ed50c5b32d9a6d34e82997c23a39e1595261d27a4e75cf96bdaad69"
+    },
+    {
       "path": "machine/changes/guidance-updates-20261027.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1875,8 +1889,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 11488,
-      "current_sha256": "1416c23557f2d1bec3672105d55b1379f5a3dd79514228ce5cd0a03dda7f1204"
+      "current_bytes": 11839,
+      "current_sha256": "852925fc9a05da4291ee8cf48753c59a40434c2d6374b29665434cdad1e5574e"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -2845,6 +2859,13 @@
       "current_sha256": "c8e206e14d94deba5536637fe4034ade4f75ce1070745292e587d98cd7785906"
     },
     {
+      "path": "machine/document-notes/docs/research/entry-reading-and-transfer-2026-10-31.zh.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 4969,
+      "current_sha256": "c956029500b3803faebeebc77073bb60e1502f2ce3345f7246d11f9621b49790"
+    },
+    {
       "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2978,6 +2999,13 @@
       "current_sha256": "2261e2d1aa17aeca4ae337e4df4c7d63c18279dec67307b480251c4c37a60302"
     },
     {
+      "path": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 10545,
+      "current_sha256": "83ccfd2e0217b0430ad3b255bf87b075411ae5576468fce7d069357af16ef1ad"
+    },
+    {
       "path": "machine/research/long-research-and-engineering-2026-10-27.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -3030,8 +3058,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 291163,
-      "current_sha256": "6b42c3d30f2dbbb6067e8099aa53ba300a25aa6ff0dc87d10ce25dfc4f683869"
+      "current_bytes": 293021,
+      "current_sha256": "9d96ee1ef6310cd75780db65a63838d9aa8e73dc8d7036a0c10ab01e173a24f8"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

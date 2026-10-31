@@ -1,0 +1,29 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "entry-adoption-20261031",
+  "date": "2026-10-31",
+  "summary": "Adopt the tested entry clarification, publish bounded cost/transfer outcomes and retain the existing first-draft/revisor path.",
+  "impact": "guidance",
+  "baseline_commit": "9fb954db57b8b928e72cfbb77678b40e483bffe7",
+  "supersedes_current_status_of": [
+    "study-entry-cost-20261031",
+    "study-entry-scope-20261031"
+  ],
+  "paths": [
+    "README.md",
+    "core/docs/methods/README.md",
+    "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+    "machine/research/entry-reading-and-transfer-2026-10-31.json",
+    "CHANGELOG.md"
+  ],
+  "reading_paths": [
+    "core/docs/methods/README.md",
+    "docs/research/entry-reading-and-transfer-2026-10-31.zh.md"
+  ],
+  "revisit": "At a relevant study handoff, retain existing prose records or choose actual artifact reception/tool contracts by need. Earlier pending-candidate notes remain historical; this note supplies current adoption and bounded evidence. No blanket rewrite or rerun of research.",
+  "acceptance": "User adopted entry clarification after real old-topic repeat and new-topic independent review/revision/closure. Observe reported cost limits; retain existing scientific review and strict selected-tool inputs.",
+  "status": "adopted_after_bounded_trials",
+  "evidence": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+  "new_first_draft_gate": false,
+  "new_mandatory_file_family": false
+}
