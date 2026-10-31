@@ -164,12 +164,52 @@
         "bytes": 9851,
         "sha256": "26d4ccd5c7b8ffbb84f01e275e029a7fe98a6d529ad4ab079693682f051b124f"
       }
+    },
+    {
+      "id": "study-entry-cost-20261031",
+      "date": "2026-10-31",
+      "reason": "Generic entry consolidation; preserve question routing and source/scientific/tool contracts. Comparative pilot acceptance remains separate.",
+      "technical_records": [
+        "machine/changes/study-entry-cost-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_study_use_comparison",
+      "previous_document_identity": {
+        "bytes": 10274,
+        "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c"
+      }
+    },
+    {
+      "id": "study-entry-scope-20261031",
+      "date": "2026-10-31",
+      "reason": "Clarify the selection condition for a deterministic handoff checker and structured receipt; ordinary study delivery keeps existing records.",
+      "technical_records": [
+        "machine/changes/study-entry-scope-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_bounded_repeat",
+      "previous_document_identity": {
+        "bytes": 10595,
+        "sha256": "53d25c8c8b32595229880d736b2f55a1684ddfbf9309707bebbf1fb2e82ad1a2"
+      }
+    },
+    {
+      "id": "entry-adoption-20261031",
+      "date": "2026-10-31",
+      "reason": "Publish bounded adoption and preserve earlier candidate/negative results.",
+      "technical_records": [
+        "machine/research/entry-reading-and-transfer-2026-10-31.json",
+        "machine/changes/entry-adoption-20261031.json"
+      ],
+      "previous_document_identity": {
+        "bytes": 10925,
+        "sha256": "700e39815c6405f06770b5ccbc9ce99f66126ca4e6b53b89cd7577a481eff527"
+      },
+      "acceptance_status": "accepted_user_after_scoped_science_and_usage_trials"
     }
   ],
-  "updated_at_utc": "2026-10-30T12:17:20.529696+00:00",
+  "updated_at_utc": "2026-10-31T06:39:32.075172+00:00",
   "current_identity": {
-    "bytes": 10274,
-    "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c"
+    "bytes": 11418,
+    "sha256": "7d5964bcccd74f130d50b7196a8aedb762545f3dfcc7b4de16f90821c675e849"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",

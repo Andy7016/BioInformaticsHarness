@@ -85,11 +85,24 @@
         "machine/changes/research-insights-20261030.json"
       ],
       "acceptance_scope": "Original note content and original source fields preserved; private audit coordinates excluded."
+    },
+    {
+      "id": "study-entry-cost-20261031",
+      "date": "2026-10-31",
+      "reason": "Generic entry consolidation; preserve question routing and source/scientific/tool contracts. Comparative pilot acceptance remains separate.",
+      "technical_records": [
+        "machine/changes/study-entry-cost-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_study_use_comparison",
+      "previous_document_identity": {
+        "bytes": 3873,
+        "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0"
+      }
     }
   ],
   "current_identity": {
-    "bytes": 3873,
-    "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0"
+    "bytes": 3901,
+    "sha256": "c1ce57863fd38b6149c8772ed4f4fa051a6400b9e073f6c6f19bf5ebd32e321e"
   },
-  "updated_at_utc": "2026-10-31T02:20:47.685288+00:00"
+  "updated_at_utc": "2026-10-31T02:43:03.197183+00:00"
 }

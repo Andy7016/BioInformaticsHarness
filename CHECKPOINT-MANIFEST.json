@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 10274,
+      "bytes": 11418,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c",
+      "sha256": "7d5964bcccd74f130d50b7196a8aedb762545f3dfcc7b4de16f90821c675e849",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -167,10 +167,10 @@
       }
     },
     {
-      "bytes": 3873,
+      "bytes": 3901,
       "license": "CC-BY-4.0",
       "path": "README.md",
-      "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0",
+      "sha256": "c1ce57863fd38b6149c8772ed4f4fa051a6400b9e073f6c6f19bf5ebd32e321e",
       "source": {
         "bytes": 3112,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/README.md",
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 289451,
+      "bytes": 290719,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "e97921ea0fdf6b0171feda942b31c8b9d7b4dd85c38fbef25ea5269b0bd92051",
+      "sha256": "db4d0bd8a666e3889c2b99f9a00de5b4777504eac740b6663cfa29e24e0c125b",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -1358,10 +1358,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 12793,
+      "bytes": 11361,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/README.md",
-      "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e",
+      "sha256": "2fc6a7488b066a682c1edf4806529c88a0faaa74457e7ce35b18eda323742a98",
       "source": {
         "path": "docs/methods/README.md",
         "release_manifest": {
@@ -5720,6 +5720,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+      "bytes": 4117,
+      "sha256": "08fe5f8bef7b611d804b56ef5a0ffc9fe2229913f823fca4bc78214852ef59df",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
       "bytes": 7291,
       "sha256": "b2573d2ce414d986bb01a58764dd34c3a18c4d6bc9a3148dd71e8f285400ec92",
@@ -6197,6 +6209,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/entry-adoption-20261031.json",
+      "bytes": 1521,
+      "sha256": "d98157626ed50c5b32d9a6d34e82997c23a39e1595261d27a4e75cf96bdaad69",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/entry-adoption-20261031.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/guidance-updates-20261027.json",
       "bytes": 1280,
       "sha256": "0eb7e548cffda826c114dbe2de0816f1ab359e5fb3340c913a3216bd34b21a49",
@@ -6292,6 +6316,30 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/study-entry-cost-20261031.json",
+      "bytes": 1490,
+      "sha256": "531a35ccf50fd8a4d33a9d41b98003d8d0f7eaa56262565264953594f22afe5c",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/study-entry-cost-20261031.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
+      "path": "machine/changes/study-entry-scope-20261031.json",
+      "bytes": 1479,
+      "sha256": "37e78ae311c8e6b8ed5092958cb55e31a2a9891eca4cf40d23dd15c352f3bf79",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/study-entry-scope-20261031.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/time-budget-recovery-20261027.json",
       "bytes": 1753,
       "sha256": "0d0bd251c170037572a8fa3f250dee398a05ea1904f7842cb395b6a9525a1fb8",
@@ -6305,8 +6353,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 10346,
-      "sha256": "fc216c1ab18c56a5c16e62384787039b93aa40ba34d058523f462f42dc650df5",
+      "bytes": 11839,
+      "sha256": "852925fc9a05da4291ee8cf48753c59a40434c2d6374b29665434cdad1e5574e",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6352,8 +6400,8 @@
     },
     {
       "path": "machine/document-notes/README.md.json",
-      "bytes": 7252,
-      "sha256": "c2b986378b21d319a6a7978fc4890a12e207a8190e069b94de01ddc23911bc28",
+      "bytes": 7824,
+      "sha256": "22c36bf7c42161e8c7ffa1398a1e947faad2ac0de333cd7276904030de0ed6a7",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6977,8 +7025,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
-      "bytes": 31477,
-      "sha256": "92aa259cd313a1f50b22f123e38523e609fb70f6b3ad20e8d1fb79e2e070f9c8",
+      "bytes": 32619,
+      "sha256": "b43d9a2767294c6874fe4c9313df926525b06feea10cf01042af5a27e847014b",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8379,6 +8427,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/document-notes/docs/research/entry-reading-and-transfer-2026-10-31.zh.md.json",
+      "bytes": 4969,
+      "sha256": "c956029500b3803faebeebc77073bb60e1502f2ce3345f7246d11f9621b49790",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/docs/research/entry-reading-and-transfer-2026-10-31.zh.md.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
       "bytes": 916,
       "sha256": "60254f8d300ade92cd7d903dd13be4aa6d3d315846e27e488fa92fcb0c7fb681",
@@ -8590,8 +8650,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 130639,
-      "sha256": "3e7a1461eb29e035391e3c9996b41d6f574b30a67004b27cbe9509fcfffda42e",
+      "bytes": 132262,
+      "sha256": "ab1de79369e3bbb1c1263ee99c780665018333c2489e5b2f65b4409427b2d9c8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8718,6 +8778,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+      "bytes": 10545,
+      "sha256": "83ccfd2e0217b0430ad3b255bf87b075411ae5576468fce7d069357af16ef1ad",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/research/entry-reading-and-transfer-2026-10-31.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/research/long-research-and-engineering-2026-10-27.json",
       "bytes": 7997,
       "sha256": "4b27689bf445add6cda9caebccd4ffa11bce15314f64cd680871e8417a81621d",
@@ -8814,8 +8886,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 287856,
-      "sha256": "61eebdcdd5d7863d8bd4beeb843be449c79c1e8353a074b6716529ef6653b9dd",
+      "bytes": 293021,
+      "sha256": "9d96ee1ef6310cd75780db65a63838d9aa8e73dc8d7036a0c10ab01e173a24f8",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

@@ -1603,11 +1603,11 @@
       }
     },
     {
-      "bytes": 12793,
+      "bytes": 11361,
       "license": "CC-BY-4.0",
       "path": "docs/methods/README.md",
       "role": "normative-prose",
-      "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e",
+      "sha256": "2fc6a7488b066a682c1edf4806529c88a0faaa74457e7ce35b18eda323742a98",
       "source": "docs/methods/README.md",
       "source_sha256": "f75818893f6d0969025b5831d8db4969a01f9a5e922dd7fee1ffa083d6a89ac4",
       "transform": "first-party-documentation-revision",
@@ -1628,11 +1628,11 @@
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-24",
+                "revision": "2026-10-27",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
-                  "revision": "2026-10-24",
+                  "revision": "2026-10-27",
                   "baseline_revision": "764bd88",
                   "previous_transform": "first-party-documentation-revision",
                   "previous_details": {
@@ -1640,15 +1640,15 @@
                     "baseline_revision": "764bd88",
                     "previous_transform": "first-party-documentation-revision",
                     "previous_details": {
-                      "revision": "2026-10-23",
+                      "revision": "2026-10-24",
                       "baseline_revision": "764bd88",
                       "previous_transform": "first-party-documentation-revision",
                       "previous_details": {
-                        "revision": "2026-10-22",
+                        "revision": "2026-10-24",
                         "baseline_revision": "764bd88",
                         "previous_transform": "first-party-documentation-revision",
                         "previous_details": {
-                          "revision": "2026-10-22",
+                          "revision": "2026-10-23",
                           "baseline_revision": "764bd88",
                           "previous_transform": "first-party-documentation-revision",
                           "previous_details": {
@@ -1658,13 +1658,23 @@
                             "previous_details": {
                               "revision": "2026-10-22",
                               "baseline_revision": "764bd88",
-                              "previous_transform": "markdown-links-and-local-redaction",
+                              "previous_transform": "first-party-documentation-revision",
                               "previous_details": {
-                                "changed": true,
-                                "images_converted_to_ordinary_links": 0,
-                                "links_redirected_to_archive_pointers": 13,
-                                "links_rewritten_to_package": 104,
-                                "local_redactions": []
+                                "revision": "2026-10-22",
+                                "baseline_revision": "764bd88",
+                                "previous_transform": "first-party-documentation-revision",
+                                "previous_details": {
+                                  "revision": "2026-10-22",
+                                  "baseline_revision": "764bd88",
+                                  "previous_transform": "markdown-links-and-local-redaction",
+                                  "previous_details": {
+                                    "changed": true,
+                                    "images_converted_to_ordinary_links": 0,
+                                    "links_redirected_to_archive_pointers": 13,
+                                    "links_rewritten_to_package": 104,
+                                    "local_redactions": []
+                                  }
+                                }
                               }
                             }
                           }
@@ -1698,11 +1708,11 @@
               "baseline_revision": "764bd88",
               "previous_transform": "first-party-documentation-revision",
               "previous_details": {
-                "revision": "2026-10-24",
+                "revision": "2026-10-27",
                 "baseline_revision": "764bd88",
                 "previous_transform": "first-party-documentation-revision",
                 "previous_details": {
-                  "revision": "2026-10-24",
+                  "revision": "2026-10-27",
                   "baseline_revision": "764bd88",
                   "previous_transform": "first-party-documentation-revision",
                   "previous_details": {
@@ -1710,15 +1720,15 @@
                     "baseline_revision": "764bd88",
                     "previous_transform": "first-party-documentation-revision",
                     "previous_details": {
-                      "revision": "2026-10-23",
+                      "revision": "2026-10-24",
                       "baseline_revision": "764bd88",
                       "previous_transform": "first-party-documentation-revision",
                       "previous_details": {
-                        "revision": "2026-10-22",
+                        "revision": "2026-10-24",
                         "baseline_revision": "764bd88",
                         "previous_transform": "first-party-documentation-revision",
                         "previous_details": {
-                          "revision": "2026-10-22",
+                          "revision": "2026-10-23",
                           "baseline_revision": "764bd88",
                           "previous_transform": "first-party-documentation-revision",
                           "previous_details": {
@@ -1728,13 +1738,23 @@
                             "previous_details": {
                               "revision": "2026-10-22",
                               "baseline_revision": "764bd88",
-                              "previous_transform": "markdown-links-and-local-redaction",
+                              "previous_transform": "first-party-documentation-revision",
                               "previous_details": {
-                                "changed": true,
-                                "images_converted_to_ordinary_links": 0,
-                                "links_redirected_to_archive_pointers": 13,
-                                "links_rewritten_to_package": 104,
-                                "local_redactions": []
+                                "revision": "2026-10-22",
+                                "baseline_revision": "764bd88",
+                                "previous_transform": "first-party-documentation-revision",
+                                "previous_details": {
+                                  "revision": "2026-10-22",
+                                  "baseline_revision": "764bd88",
+                                  "previous_transform": "markdown-links-and-local-redaction",
+                                  "previous_details": {
+                                    "changed": true,
+                                    "images_converted_to_ordinary_links": 0,
+                                    "links_redirected_to_archive_pointers": 13,
+                                    "links_rewritten_to_package": 104,
+                                    "local_redactions": []
+                                  }
+                                }
                               }
                             }
                           }
@@ -6918,7 +6938,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "cbff9bdfcbaa88b853ee912e74a7cb51bc7f96db",
+    "head": "9fb954db57b8b928e72cfbb77678b40e483bffe7",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }
