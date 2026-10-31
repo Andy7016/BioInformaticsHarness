@@ -244,12 +244,25 @@
         "bytes": 12793,
         "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e"
       }
+    },
+    {
+      "id": "study-entry-scope-20261031",
+      "date": "2026-10-31",
+      "reason": "Clarify the selection condition for a deterministic handoff checker and structured receipt; ordinary study delivery keeps existing records.",
+      "technical_records": [
+        "machine/changes/study-entry-scope-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_bounded_repeat",
+      "previous_document_identity": {
+        "bytes": 10939,
+        "sha256": "00a4da754f74bf94133f6901ede54142f68c5c498a045a975d5b44c98ca84484"
+      }
     }
   ],
-  "updated_at_utc": "2026-10-31T02:43:03.197183+00:00",
+  "updated_at_utc": "2026-10-31T03:41:36.878659+00:00",
   "current_identity": {
-    "bytes": 10939,
-    "sha256": "00a4da754f74bf94133f6901ede54142f68c5c498a045a975d5b44c98ca84484"
+    "bytes": 11361,
+    "sha256": "2fc6a7488b066a682c1edf4806529c88a0faaa74457e7ce35b18eda323742a98"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",

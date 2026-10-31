@@ -53,6 +53,8 @@ Use only the cards that apply to the study. For a card already proposed for this
 
 案例资料和方法选择理由见相关案例报告与[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。这些来源解释了每份指南的设计理由和适用条件。
 
-交接时使用[交接指南](handoff-contract.md)和[复核回执](review-receipt.md)，记录材料、未完成事项和复核决定。
+研究文字的交接，沿已有课题记录说明所评版本、来源、未完成事项与下一责任；需要接手实际研究工件时，按[接手研究指南](guides/receiving-research-work.md)选择所需检查。已约定的独立科学复核继续按原范围进行。
+
+选用研究交接一致性检查器时，按[工具输入契约](handoff-contract.md)准备清单；需要所提供的结构化复核回执时，使用[复核回执](review-receipt.md)。普通文献交付沿用已选课题记录，程序化检查保留各自严格输入。
 
 研究跨越多个阶段、数据用途和保存工件时，参阅[研究流程指南](flow-contract.md)。[工件采集器](../../scripts/verification/collect_artifact_evidence.py)可读取指定的小型文件并生成采集回执。

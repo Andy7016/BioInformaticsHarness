@@ -177,12 +177,25 @@
         "bytes": 10274,
         "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c"
       }
+    },
+    {
+      "id": "study-entry-scope-20261031",
+      "date": "2026-10-31",
+      "reason": "Clarify the selection condition for a deterministic handoff checker and structured receipt; ordinary study delivery keeps existing records.",
+      "technical_records": [
+        "machine/changes/study-entry-scope-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_bounded_repeat",
+      "previous_document_identity": {
+        "bytes": 10595,
+        "sha256": "53d25c8c8b32595229880d736b2f55a1684ddfbf9309707bebbf1fb2e82ad1a2"
+      }
     }
   ],
-  "updated_at_utc": "2026-10-31T02:43:03.197183+00:00",
+  "updated_at_utc": "2026-10-31T03:41:36.878659+00:00",
   "current_identity": {
-    "bytes": 10595,
-    "sha256": "53d25c8c8b32595229880d736b2f55a1684ddfbf9309707bebbf1fb2e82ad1a2"
+    "bytes": 10925,
+    "sha256": "700e39815c6405f06770b5ccbc9ce99f66126ca4e6b53b89cd7577a481eff527"
   },
   "current_technical_records": [
     "core/machine/design/review-scope-appraisal.json",
