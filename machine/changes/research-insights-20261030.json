@@ -1,0 +1,163 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "research-insights-20261030",
+  "date": "2026-10-30",
+  "summary": "Add an optional contextual research-insights note on scoped value, reviewed revision and post-revision synthesis; retain the first-draft/revisor path.",
+  "impact": "editorial",
+  "baseline_commit": "d1e71d950d31c9e06f2f80426d2f542f0a045c16",
+  "paths": [
+    "docs/research-insights.md",
+    "machine/document-notes/docs/research-insights.md.json",
+    "README.md",
+    "machine/document-notes/README.md.json",
+    "machine/changes/research-insights-20261030.json",
+    "machine/source-design-index.jsonl"
+  ],
+  "reading_paths": [
+    "docs/research-insights.md"
+  ],
+  "reading_sections": {
+    "docs/research-insights.md": [
+      "从条件关系中获得可靠价值",
+      "保留首稿—复核—修订—最终接受的路径",
+      "修订后综合整理，再判断下一轮",
+      "没有时限时，怎样停止本轮阅读",
+      "复核意见也回到图与公式"
+    ]
+  },
+  "revisit": "Read the relevant section when comparison conditions, stage-specific evaluation, post-revision evidence or a stopping decision needs contextual help. No mandatory full reread or new file family is added.",
+  "acceptance": "A reader can distinguish directional relevance, source accuracy, actual execution and external use; keep bounded completion separate from whole-field coverage; route new evidence by its effect on original obligations and current claims.",
+  "public_reading_basis": [
+    {
+      "path": "core/docs/methods/worked-examples/common-and-task-specific.md",
+      "availability": "public",
+      "read_scope": "Existing public worked example; conditional comparison, common/specific signal, metric meaning and original public source links"
+    },
+    {
+      "path": "core/docs/methods/guides/revision-responses-and-acceptance.md",
+      "availability": "public",
+      "read_scope": "Existing response-route, original-obligation and revision-acceptance guidance"
+    }
+  ],
+  "design_inputs": [
+    {
+      "availability": "not_exported",
+      "read_scope": "Existing retrospective appraisal and separately labelled later public-source context",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    },
+    {
+      "availability": "not_exported",
+      "read_scope": "Current accepted scope, actual work and remaining dependencies",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    },
+    {
+      "availability": "not_exported",
+      "read_scope": "Complete accepted report; conditional comparison, source-table work and intended use",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    },
+    {
+      "availability": "not_exported",
+      "read_scope": "Request acceptance, source rechecks, transfer acceptance and historical/current distinctions",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    },
+    {
+      "availability": "not_exported",
+      "read_scope": "Complete original source-reading ledger and unresolved scope",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    },
+    {
+      "availability": "not_exported",
+      "read_scope": "Complete additive reading and execution scope; its historical pending review status is retained",
+      "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+    }
+  ],
+  "later_external_context": [
+    {
+      "id": "systema-later-context",
+      "title": "Systema",
+      "url": "https://www.nature.com/articles/s41587-025-02777-8",
+      "existing_appraisal_scope": "Abstract, Discussion and selected method interpretation",
+      "covered_in_original_GPT_case": false,
+      "role": "Separately labelled later context, reused from the existing parent appraisal",
+      "new_primary_paper_reading_for_this_note": false
+    },
+    {
+      "id": "miller-published-later-context",
+      "title": "Miller published version",
+      "url": "https://www.nature.com/articles/s41587-026-03307-w",
+      "publication_date": "2026-10-01",
+      "existing_appraisal_scope": "Abstract, Main framing, closing results and limitations",
+      "covered_in_original_GPT_case": false,
+      "role": "Separately labelled later context, reused from the existing parent appraisal",
+      "new_primary_paper_reading_for_this_note": false
+    },
+    {
+      "id": "sciadv-later-context",
+      "title": "Science Advances task-spanning benchmark",
+      "url": "https://www.science.org/doi/10.1126/sciadv.aed3414",
+      "publication_date": "2026-09-11",
+      "existing_appraisal_scope": "Abstract, Introduction and Discussion, including metric/signal interpretation",
+      "covered_in_original_GPT_case": false,
+      "role": "Separately labelled later context, reused from the existing parent appraisal",
+      "new_primary_paper_reading_for_this_note": false
+    }
+  ],
+  "evidence_scope": "Reuse the accepted GPT case and existing field appraisal. The public note summarizes contextual lessons without exporting private case tables, exact numerical findings, raw sessions or a new model ranking. Public guides and original public sources remain usable without access to the private archive.",
+  "implementation_boundary": [
+    "One lightweight cumulative optional note, one README navigation row and the corresponding machine records only.",
+    "No method card, guide, template, runtime, schema or changelog changed. Writer edits and parent inventory/version integration are separately recorded.",
+    "Original first submission, reports, source-reading records and acceptance records remain unchanged.",
+    "Original source_text, source_commit and source_sha256 fields in the README document note are preserved; source index bytes are extended only at the tail.",
+    "No primary-paper acquisition or additional model case is performed for this note.",
+    "No universal model difference, isolated Harness effect or broad rule promotion is inferred."
+  ],
+  "deepseek_pending_observation": {
+    "included_in_human_note": false,
+    "basis": "Parent reported a provisional independent-audit observation about a proposed revision confusing a normalized figure axis with a comparison-bracket reference.",
+    "case_acceptance": "Not finally accepted at the time of this note preparation",
+    "possible_later_use": "If retained after source recheck, append a contextual lesson to recheck original figures or formulas before accepting a revision; do not generalize to a model difference."
+  },
+  "acceptance_status": "accepted_parent_contextual_note",
+  "validation_scope": "Parent read the full human note, accepted optional/contextual scope and post-revision evidence routes, and runs final documentation/package checks. No first-draft gate or model/scientific superiority is added.",
+  "effect_status": "Contextual interpretation and testable advice only; no controlled model, guidance or efficiency effect assessed.",
+  "historical_backfill": false,
+  "universal_rule_promotion": false,
+  "observations_addenda": [
+    {
+      "id": "review-source-check-20261030",
+      "date": "2026-10-30",
+      "context": "DeepSeek case internal review error and subsequent parent source check",
+      "established": "Two real reviewer turns completed; recovered raw final text endorsed a wrong normalization/comparison relation. Parent and independent analyst viewed Figure2f and checked the ratio relation.",
+      "case_state_when_written": "v3 revised and recovered; full reacceptance pending, not needed to establish this specific historical observation.",
+      "private_evidence": [
+        {
+          "availability": "not_exported",
+          "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+        },
+        {
+          "availability": "not_exported",
+          "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+        },
+        {
+          "availability": "not_exported",
+          "publication_scope": "Evidence coordinates and identities are retained in the private working archive."
+        }
+      ],
+      "public_source": "https://www.nature.com/articles/s41587-023-01905-6/figures/2",
+      "not_generalized": [
+        "model ranking",
+        "universal revisor benefit",
+        "first-draft completeness rule"
+      ]
+    }
+  ],
+  "publication": {
+    "date": "2026-10-31",
+    "baseline_commit": "cbff9bdfcbaa88b853ee912e74a7cb51bc7f96db",
+    "mode": "Consolidated public-safe export of the original note, source-check addendum and final impact metadata correction.",
+    "human_note_matches_accepted_local_version": true,
+    "private_record_locators_exported": false,
+    "validation": "Documentation, checkpoint and core package checks passed; source capture and receipt verified.",
+    "effect_scope": "No new model case, primary-paper reading, efficiency estimate or isolated Harness effect assessed."
+  }
+}

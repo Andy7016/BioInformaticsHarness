@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "a14ed15f4081b06781bd4169644790f971175a14",
+    "head": "cbff9bdfcbaa88b853ee912e74a7cb51bc7f96db",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 3776,
-      "current_sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe"
+      "current_bytes": 3873,
+      "current_sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -127,7 +127,7 @@
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
       "current_bytes": 289451,
-      "current_sha256": "05ef8df65cc3e386e2351c046bee7900a493c7a9833a341557e1f8fa9c7e6aca"
+      "current_sha256": "e97921ea0fdf6b0171feda942b31c8b9d7b4dd85c38fbef25ea5269b0bd92051"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -1703,6 +1703,13 @@
       "current_sha256": "ab0d034acd3ddb275d09db70f3ca6877215319160d3bf412769af95459591b22"
     },
     {
+      "path": "docs/research-insights.md",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 6736,
+      "current_sha256": "42da26ab8595723a262ef727ae7f7b67ad499d5e63ac0e5d7f62d5e8efb12c70"
+    },
+    {
       "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1816,6 +1823,13 @@
       "current_sha256": "ee678089c9330995d1254d7efb284e9254ada27468dfd3688ce68ca18e57915d"
     },
     {
+      "path": "machine/changes/research-insights-20261030.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 9355,
+      "current_sha256": "d629c0a7717019f4ec3b6d1d8615f72742e1195955d73c85d103c2515e478f58"
+    },
+    {
       "path": "machine/changes/research-use-entry-20261029.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1868,8 +1882,8 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 6293,
-      "current_sha256": "4505202c6ad681e271f6b0b9c7360c63778f03abc74c67818da622477bc35992"
+      "current_bytes": 7252,
+      "current_sha256": "c2b986378b21d319a6a7978fc4890a12e207a8190e069b94de01ddc23911bc28"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
@@ -2810,6 +2824,13 @@
       "current_sha256": "915aa9718e94cb33d90ea4f154501c1e2dabd402e284036c61d522b3c238411a"
     },
     {
+      "path": "machine/document-notes/docs/research-insights.md.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 8219,
+      "current_sha256": "c8e206e14d94deba5536637fe4034ade4f75ce1070745292e587d98cd7785906"
+    },
+    {
       "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -2995,8 +3016,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 281884,
-      "current_sha256": "27f49a04dc04119e124292a5ec659c77c4abbd57051548d7720bf9106d12ac9d"
+      "current_bytes": 287856,
+      "current_sha256": "61eebdcdd5d7863d8bd4beeb843be449c79c1e8353a074b6716529ef6653b9dd"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

@@ -167,10 +167,10 @@
       }
     },
     {
-      "bytes": 3776,
+      "bytes": 3873,
       "license": "CC-BY-4.0",
       "path": "README.md",
-      "sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe",
+      "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0",
       "source": {
         "bytes": 3112,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/README.md",
@@ -450,7 +450,7 @@
       "bytes": 289451,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "05ef8df65cc3e386e2351c046bee7900a493c7a9833a341557e1f8fa9c7e6aca",
+      "sha256": "e97921ea0fdf6b0171feda942b31c8b9d7b4dd85c38fbef25ea5269b0bd92051",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -5708,6 +5708,18 @@
       }
     },
     {
+      "path": "docs/research-insights.md",
+      "bytes": 6736,
+      "sha256": "42da26ab8595723a262ef727ae7f7b67ad499d5e63ac0e5d7f62d5e8efb12c70",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "docs/research-insights.md",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "docs/research/long-research-and-engineering-2026-10-27.zh.md",
       "bytes": 7291,
       "sha256": "b2573d2ce414d986bb01a58764dd34c3a18c4d6bc9a3148dd71e8f285400ec92",
@@ -6221,6 +6233,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/research-insights-20261030.json",
+      "bytes": 9355,
+      "sha256": "d629c0a7717019f4ec3b6d1d8615f72742e1195955d73c85d103c2515e478f58",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/research-insights-20261030.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/research-use-entry-20261029.json",
       "bytes": 3304,
       "sha256": "04a06ee82b382feb41e674c3141ff0d7146fbc443fe3a21125faf3ebd86dee1a",
@@ -6328,8 +6352,8 @@
     },
     {
       "path": "machine/document-notes/README.md.json",
-      "bytes": 6293,
-      "sha256": "4505202c6ad681e271f6b0b9c7360c63778f03abc74c67818da622477bc35992",
+      "bytes": 7252,
+      "sha256": "c2b986378b21d319a6a7978fc4890a12e207a8190e069b94de01ddc23911bc28",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8343,6 +8367,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/document-notes/docs/research-insights.md.json",
+      "bytes": 8219,
+      "sha256": "c8e206e14d94deba5536637fe4034ade4f75ce1070745292e587d98cd7785906",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/document-notes/docs/research-insights.md.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/document-notes/docs/research/long-research-and-engineering-2026-10-27.zh.md.json",
       "bytes": 916,
       "sha256": "60254f8d300ade92cd7d903dd13be4aa6d3d315846e27e488fa92fcb0c7fb681",
@@ -8554,8 +8590,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 129872,
-      "sha256": "6e935d65d1c0822ce2b8dd3a5c7ac6b5a8349dc292a116c17ffe7051bbbe89fb",
+      "bytes": 130639,
+      "sha256": "3e7a1461eb29e035391e3c9996b41d6f574b30a67004b27cbe9509fcfffda42e",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8778,8 +8814,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 281884,
-      "sha256": "27f49a04dc04119e124292a5ec659c77c4abbd57051548d7720bf9106d12ac9d",
+      "bytes": 287856,
+      "sha256": "61eebdcdd5d7863d8bd4beeb843be449c79c1e8353a074b6716529ef6653b9dd",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
