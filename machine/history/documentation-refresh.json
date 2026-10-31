@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "cbff9bdfcbaa88b853ee912e74a7cb51bc7f96db",
+    "head": "1d9dae54cd803ab2177cf1fdb2024dd27593e357",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -27,8 +27,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:CHANGELOG.md",
       "previous_sha256": "7e09c5cb4ab65d4368ea89ecddf01daeb8fb10a4e51af2c08a5f432c59f67e7d",
-      "current_bytes": 10274,
-      "current_sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c"
+      "current_bytes": 10595,
+      "current_sha256": "53d25c8c8b32595229880d736b2f55a1684ddfbf9309707bebbf1fb2e82ad1a2"
     },
     {
       "path": "LICENSING.md",
@@ -54,8 +54,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:README.md",
       "previous_sha256": "bd32869f212652df6628abb03f6a97b618de87418aff7dc229b87e988471d755",
-      "current_bytes": 3873,
-      "current_sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0"
+      "current_bytes": 3901,
+      "current_sha256": "c1ce57863fd38b6149c8772ed4f4fa051a6400b9e073f6c6f19bf5ebd32e321e"
     },
     {
       "path": "ROADMAP.zh.md",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 289451,
-      "current_sha256": "e97921ea0fdf6b0171feda942b31c8b9d7b4dd85c38fbef25ea5269b0bd92051"
+      "current_bytes": 290075,
+      "current_sha256": "f7c1b9f6948fc330dba9a6da73ae974d6ac28d5f72abef695d329c607582c4e6"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -430,8 +430,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/docs/methods/README.md",
       "previous_sha256": "0b1aba2655a8859227d8549dd452d6dbe0a60f41f72b5bc4b0e9c1602460b3ec",
-      "current_bytes": 12793,
-      "current_sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e"
+      "current_bytes": 10939,
+      "current_sha256": "00a4da754f74bf94133f6901ede54142f68c5c498a045a975d5b44c98ca84484"
     },
     {
       "path": "core/docs/methods/cards/benchmark-teacher-fairness.md",
@@ -1851,6 +1851,13 @@
       "current_sha256": "e37488ac178ffb7a774b9bdd39a63fed4d47fe3a91729383d25ee54b2347582b"
     },
     {
+      "path": "machine/changes/study-entry-cost-20261031.json",
+      "change": "added",
+      "baseline_revision": "764bd88",
+      "current_bytes": 1490,
+      "current_sha256": "531a35ccf50fd8a4d33a9d41b98003d8d0f7eaa56262565264953594f22afe5c"
+    },
+    {
       "path": "machine/changes/time-budget-recovery-20261027.json",
       "change": "added",
       "baseline_revision": "764bd88",
@@ -1861,8 +1868,8 @@
       "path": "machine/document-notes/CHANGELOG.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 10346,
-      "current_sha256": "fc216c1ab18c56a5c16e62384787039b93aa40ba34d058523f462f42dc650df5"
+      "current_bytes": 10919,
+      "current_sha256": "874e64dc59711e684225d3f877715e932c398ba493351f31cf2e715863a70b40"
     },
     {
       "path": "machine/document-notes/LICENSING.md.json",
@@ -1882,8 +1889,8 @@
       "path": "machine/document-notes/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7252,
-      "current_sha256": "c2b986378b21d319a6a7978fc4890a12e207a8190e069b94de01ddc23911bc28"
+      "current_bytes": 7824,
+      "current_sha256": "22c36bf7c42161e8c7ffa1398a1e947faad2ac0de333cd7276904030de0ed6a7"
     },
     {
       "path": "machine/document-notes/ROADMAP.zh.md.json",
@@ -2176,8 +2183,8 @@
       "path": "machine/document-notes/core/docs/methods/README.md.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 31477,
-      "current_sha256": "92aa259cd313a1f50b22f123e38523e609fb70f6b3ad20e8d1fb79e2e070f9c8"
+      "current_bytes": 32050,
+      "current_sha256": "cd7d54dfaad7bfea4ef44278c7bf6e27e4fe8e59c50262ab1474b762c23d1f15"
     },
     {
       "path": "machine/document-notes/core/docs/methods/cards/benchmark-teacher-fairness.md.json",
@@ -3016,8 +3023,8 @@
       "path": "machine/source-design-index.jsonl",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 287856,
-      "current_sha256": "61eebdcdd5d7863d8bd4beeb843be449c79c1e8353a074b6716529ef6653b9dd"
+      "current_bytes": 289526,
+      "current_sha256": "d604a9abdc2eb99a5ed25e015d92ba53cbcc6aebf93a989cfbd1ceb07e5096a4"
     },
     {
       "path": "machine/time-budget-recovery-contract.json",

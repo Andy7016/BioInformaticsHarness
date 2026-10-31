@@ -37,10 +37,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 10274,
+      "bytes": 10595,
       "license": "CC-BY-4.0",
       "path": "CHANGELOG.md",
-      "sha256": "089a16674d28e5f08a031dd8448472a2a2f8305aed20015edc1fc312ea01ff1c",
+      "sha256": "53d25c8c8b32595229880d736b2f55a1684ddfbf9309707bebbf1fb2e82ad1a2",
       "source": {
         "bytes": 1632,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/CHANGELOG.md",
@@ -167,10 +167,10 @@
       }
     },
     {
-      "bytes": 3873,
+      "bytes": 3901,
       "license": "CC-BY-4.0",
       "path": "README.md",
-      "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0",
+      "sha256": "c1ce57863fd38b6149c8772ed4f4fa051a6400b9e073f6c6f19bf5ebd32e321e",
       "source": {
         "bytes": 3112,
         "path": "docs/reviews/2026-10-checkpoint-publication/public-repository/README.md",
@@ -447,10 +447,10 @@
       }
     },
     {
-      "bytes": 289451,
+      "bytes": 290075,
       "license": "Apache-2.0",
       "path": "core/RELEASE-MANIFEST.json",
-      "sha256": "e97921ea0fdf6b0171feda942b31c8b9d7b4dd85c38fbef25ea5269b0bd92051",
+      "sha256": "f7c1b9f6948fc330dba9a6da73ae974d6ac28d5f72abef695d329c607582c4e6",
       "source": {
         "path": "generated:scripts/release/build_release.py",
         "release_manifest": {
@@ -1358,10 +1358,10 @@
       "transform": "first-party-documentation-revision"
     },
     {
-      "bytes": 12793,
+      "bytes": 10939,
       "license": "CC-BY-4.0",
       "path": "core/docs/methods/README.md",
-      "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e",
+      "sha256": "00a4da754f74bf94133f6901ede54142f68c5c498a045a975d5b44c98ca84484",
       "source": {
         "path": "docs/methods/README.md",
         "release_manifest": {
@@ -6292,6 +6292,18 @@
       "transform": "first-party-documentation-revision"
     },
     {
+      "path": "machine/changes/study-entry-cost-20261031.json",
+      "bytes": 1490,
+      "sha256": "531a35ccf50fd8a4d33a9d41b98003d8d0f7eaa56262565264953594f22afe5c",
+      "license": "CC-BY-4.0",
+      "source": {
+        "kind": "first-party-documentation-revision",
+        "path": "machine/changes/study-entry-cost-20261031.json",
+        "revision": "2026-10-27"
+      },
+      "transform": "first-party-documentation-revision"
+    },
+    {
       "path": "machine/changes/time-budget-recovery-20261027.json",
       "bytes": 1753,
       "sha256": "0d0bd251c170037572a8fa3f250dee398a05ea1904f7842cb395b6a9525a1fb8",
@@ -6305,8 +6317,8 @@
     },
     {
       "path": "machine/document-notes/CHANGELOG.md.json",
-      "bytes": 10346,
-      "sha256": "fc216c1ab18c56a5c16e62384787039b93aa40ba34d058523f462f42dc650df5",
+      "bytes": 10919,
+      "sha256": "874e64dc59711e684225d3f877715e932c398ba493351f31cf2e715863a70b40",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6352,8 +6364,8 @@
     },
     {
       "path": "machine/document-notes/README.md.json",
-      "bytes": 7252,
-      "sha256": "c2b986378b21d319a6a7978fc4890a12e207a8190e069b94de01ddc23911bc28",
+      "bytes": 7824,
+      "sha256": "22c36bf7c42161e8c7ffa1398a1e947faad2ac0de333cd7276904030de0ed6a7",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -6977,8 +6989,8 @@
     },
     {
       "path": "machine/document-notes/core/docs/methods/README.md.json",
-      "bytes": 31477,
-      "sha256": "92aa259cd313a1f50b22f123e38523e609fb70f6b3ad20e8d1fb79e2e070f9c8",
+      "bytes": 32050,
+      "sha256": "cd7d54dfaad7bfea4ef44278c7bf6e27e4fe8e59c50262ab1474b762c23d1f15",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8590,8 +8602,8 @@
     },
     {
       "path": "machine/history/documentation-refresh.json",
-      "bytes": 130639,
-      "sha256": "3e7a1461eb29e035391e3c9996b41d6f574b30a67004b27cbe9509fcfffda42e",
+      "bytes": 130899,
+      "sha256": "559a40537341748eff79be81af23be8c6fbffd5ec1f5ae373f9bfdb6e9986f33",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",
@@ -8814,8 +8826,8 @@
     },
     {
       "path": "machine/source-design-index.jsonl",
-      "bytes": 287856,
-      "sha256": "61eebdcdd5d7863d8bd4beeb843be449c79c1e8353a074b6716529ef6653b9dd",
+      "bytes": 289526,
+      "sha256": "d604a9abdc2eb99a5ed25e015d92ba53cbcc6aebf93a989cfbd1ceb07e5096a4",
       "license": "CC-BY-4.0",
       "source": {
         "kind": "first-party-documentation-revision",

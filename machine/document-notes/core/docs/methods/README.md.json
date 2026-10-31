@@ -231,12 +231,25 @@
         "bytes": 12519,
         "sha256": "d46d233d6fda0d07c7ff736ff6e16d174ecd66b30097222a5988737343765585"
       }
+    },
+    {
+      "id": "study-entry-cost-20261031",
+      "date": "2026-10-31",
+      "reason": "Generic entry consolidation; preserve question routing and source/scientific/tool contracts. Comparative pilot acceptance remains separate.",
+      "technical_records": [
+        "machine/changes/study-entry-cost-20261031.json"
+      ],
+      "acceptance_status": "candidate_pending_study_use_comparison",
+      "previous_document_identity": {
+        "bytes": 12793,
+        "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e"
+      }
     }
   ],
-  "updated_at_utc": "2026-10-30T12:17:20.529696+00:00",
+  "updated_at_utc": "2026-10-31T02:43:03.197183+00:00",
   "current_identity": {
-    "bytes": 12793,
-    "sha256": "c1f8a91a9cf657620f0b7b6ba3c3046ca8976a2b88bf1402b90fb1e8834b504e"
+    "bytes": 10939,
+    "sha256": "00a4da754f74bf94133f6901ede54142f68c5c498a045a975d5b44c98ca84484"
   },
   "current_technical_records": [
     "core/machine/design/rereading-perspectives.json",

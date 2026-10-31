@@ -13,9 +13,9 @@ git clone https://github.com/vvcchh0/BioInformaticsHarness.git
 cd BioInformaticsHarness
 ```
 
-从新主题开始时，先选择[研究前期准备路线](core/docs/methods/guides/research-preparation.md)。希望先看清领域时，可按[综述优先](core/docs/methods/guides/review-first-preparation.md)梳理证据、分歧和问题，再决定下一步。
+文献调研与理论比较，从本轮问题、已有课题记录和预期交付开始，在[方法指南](core/docs/methods/README.md)中按当前决定选择入口。问题尚待成形时读[前期准备](core/docs/methods/guides/research-preparation.md)；需要先看清领域时读[综述优先](core/docs/methods/guides/review-first-preparation.md)。问题已明确时，沿相关指南回到原文与实际研究。
 
-文献调研与理论比较可先在现有课题记录中写清问题、证据和预期交付，按当前决定选择指南。需要资料获取、交接、诊断或证据整理工具时，再按[工具快速入门](core/QUICKSTART.md)准备 Python 3.11 或更新版本并选择对应命令。运行真实模型应用时，按案例说明安装科学计算依赖。
+需要资料获取、交接、诊断或证据整理工具时，按[工具快速入门](core/QUICKSTART.md)准备 Python 3.11 或更新版本并选择对应命令。运行真实模型应用时，按案例说明安装科学计算依赖。
 
 ## 示例
 

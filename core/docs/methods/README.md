@@ -1,17 +1,12 @@
 # Domain method guides
 
-Choose a guide when a research decision needs a concrete measure, comparison, or handoff. The cards focus on conditions and actions: define the biological target, choose the study unit, state what each input is used for, and decide which result would change the conclusion.
+Start with the decision in the current question or study notes. Use the table to reach a relevant guide, then connect its conditions to the sources and actual work. Follow another entry when a new doubt, changed evidence or a selected operation calls for it.
 
-## How to use the cards
+In existing study records, connect the biological object and source version to the method choice, input roles, measurement and unit, fitting/split boundaries, output and evaluation. State the chosen route, a suitable alternative and the evidence that would change the decision. Retain stable entity identities and representations when they affect the work.
 
-1. Start from the question or workflow stage that triggered the work.
-2. Read the matching card and this study's relevant, version-linked experience notes; name the measurement, unit, split, and comparison that fit the current study.
-3. Record the chosen method, a suitable alternative, and the condition that would change your decision.
-4. Use a tool only when it answers that question. The cards do not make every check mandatory for every study.
+Reuse the study's relevant, version-linked [method experience](guides/method-experience.md). A small single-owner study may keep stable entries in existing notes; structured records remain available for parallel work or explicit machine consumption. Before using a method again, revisit its applicable experience.
 
-Use [worked examples](worked-examples/README.md) to see how method choices change a decision. The [research-support tools](research-support-tools.md) help with file handoff and limited diagnostics. For public references and design reasons, see the [combined source and design index](../../../docs/REFERENCES-AND-DESIGN.md) and [research history](../../../docs/history/EVOLUTION.zh.md).
-
-When a method encounter changes a decision, retain its context, actual attempt, evidence and next action in a [local method experience](guides/method-experience.md). A small, single-owner study may use stable entries in existing notes; structured entries and an index remain available for parallel work or explicit machine consumption. Revisit the relevant experience before using the method again.
+[Worked examples](worked-examples/README.md) illustrate decisions. Select [research-support tools](research-support-tools.md) when they serve the question; selected tools keep their input contracts and require actual run/output evidence. Literature synthesis uses the source evidence appropriate to its claims. Design references and history are available through the [source index](../../../docs/REFERENCES-AND-DESIGN.md).
 
 ## Choose a guide by research question
 
@@ -55,24 +50,6 @@ Use the trigger that matches your research question. The table suggests a starti
 | UMAP/VIA/检索解释，或速度、显存、质量比较 | [表征可视化与效率比较](cards/visualization-efficiency.md) | 由任务卡补充输入与真值条件 |
 
 Use only the cards that apply to the study. For a card already proposed for this task and material to a method choice or acceptance, record a short reason when it is not used. Other cards remain outside the current work; new evidence can trigger relevant reading later. Keep a missing required source `unknown` and state which judgment or action it affects.
-
-## 最小使用步骤
-
-1. Record stable sample, molecule, cell, or chain IDs, source version, and representation.
-2. Choose methods that can affect the research decision; record their inputs, parameters, selection reasons, and suitable alternatives.
-3. Describe the fitting range, entity separation, and which `X`, `y`, and condition data are visible at each stage.
-4. For coordinate changes, record source and target, units, boundaries, stage, and reversibility using the [coordinate guide](cards/coordinate-transforms.md). For metrics, define the mathematical event, reference labels, denominator, aggregation, and implementation using the [metric guide](cards/metric-semantics.md).
-5. When a component should use a setting, record the declared value, source-code path, observed effect, and input contribution using the [execution evidence guide](cards/execution-evidence.md).
-6. Run a small example suited to the question. Record the execution, output, method assumptions, and how the result supports the claim.
-
-## 组合示例
-
-- RNA长序列二级结构：序列卡 + 结构卡；若画RNA Atlas，再加可视化卡。
-- Enformer式序列到轨道：序列卡 + 坐标卡 + 指标卡；只有配置或梯度需要核对实际作用时再加执行证据卡。
-- ESMFold蒸馏与速度比较：结构卡 + 基准卡 + 可视化/效率卡。
-- Uni-Mol自由构象/固定口袋比较：结构卡 + 坐标卡 + 指标卡；权重和编码器关系另加执行证据卡。
-- MolCLR性质迁移：分子图卡 + 基准卡；需要降维或检索时再加可视化卡。
-- scGPT注释与传导式整合：单细胞卡 + 基准卡；做基因程序解释时仍需保留证据级别。
 
 案例资料和方法选择理由见相关案例报告与[公开研究设计与方法索引](../../../docs/REFERENCES-AND-DESIGN.md)。这些来源解释了每份指南的设计理由和适用条件。
 
