@@ -34,6 +34,7 @@ cd BioInformaticsHarness
 | 怎样选择研究方法 | [方法指南](core/docs/methods/README.md) |
 | 怎样比较方法并安排原文重读 | [方法取舍与视角切换](core/docs/methods/guides/review-choice-synthesis.md) |
 | 最新指南在哪些案例中得到检查 | [重读与生物论证链研究总结](docs/research/rereading-validation-2026-10-27.zh.md) |
+| 想按具体情境回看研究经验 | [研究心得（可选）](docs/research-insights.md) |
 | 怎样向人解释结果 | [生物学解释与交接](core/docs/methods/guides/biological-explanation-and-handoff.md) |
 | 参考了哪些工作，怎样用于设计 | [参考来源与设计索引](docs/REFERENCES-AND-DESIGN.md) |
 | 项目怎样发展至今 | [项目短史](docs/history/EVOLUTION.zh.md)与[版本记录](CHANGELOG.md) |

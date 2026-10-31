@@ -63,11 +63,33 @@
         "machine/changes/research-use-entry-20261029.json"
       ],
       "acceptance_ref": "machine/changes/research-use-entry-20261029.json"
+    },
+    {
+      "id": "2026-10-30-research-insights-20261030",
+      "date": "2026-10-30",
+      "reason": "Add one optional navigation entry to a contextual research-insights note.",
+      "prior_identity": {
+        "bytes": 3776,
+        "sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe"
+      },
+      "technical_records": [
+        "machine/changes/research-insights-20261030.json"
+      ],
+      "acceptance_ref": "machine/changes/research-insights-20261030.json"
+    },
+    {
+      "id": "research-insights-publication-20261031",
+      "date": "2026-10-31",
+      "reason": "Publish the accepted contextual note and source-checked addendum with public-only evidence navigation.",
+      "technical_records": [
+        "machine/changes/research-insights-20261030.json"
+      ],
+      "acceptance_scope": "Original note content and original source fields preserved; private audit coordinates excluded."
     }
   ],
   "current_identity": {
-    "bytes": 3776,
-    "sha256": "4b7180da444409563fd8523b98e02f5206c1aec2c91f1379b49b10e718661bfe"
+    "bytes": 3873,
+    "sha256": "0f2b3be41806f251cbb1ba788017d69745e0b95c3223024f220efcceec6e73d0"
   },
-  "updated_at_utc": "2026-10-29T06:22:52.609392+00:00"
+  "updated_at_utc": "2026-10-31T02:20:47.685288+00:00"
 }
