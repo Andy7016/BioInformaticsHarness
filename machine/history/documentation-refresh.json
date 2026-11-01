@@ -7,7 +7,7 @@
   "documentation_revision": "2026-10-27",
   "working_tree": {
     "kind": "first-party-documentation-revision",
-    "head": "83e6e575cac8f01b86f531ca01074b689231661e",
+    "head": "f4729e9a3f4cb4287e3fc5576cbc2f4fcd87511b",
     "tag_unchanged_by_refresh": true
   },
   "record_path": "machine/history/documentation-refresh.json",
@@ -126,8 +126,8 @@
       "baseline_revision": "764bd88",
       "baseline_locator": "764bd88:core/RELEASE-MANIFEST.json",
       "previous_sha256": "b54b0cd83b5870306211066aaf6f49d346d3e379cdcb95351f332e408830da65",
-      "current_bytes": 301475,
-      "current_sha256": "c9d235f2ffdee0d8a449df57417f81d3bc8fb0b6f743c894bcb1beda07b15f4a"
+      "current_bytes": 305714,
+      "current_sha256": "23b242bb638dd2b920f9debd4f72df7dbb500c927897c6f2e75e4ae5379ff7e0"
     },
     {
       "path": "core/THIRD_PARTY.md",
@@ -1409,8 +1409,8 @@
       "path": "core/examples/research-support/study-view/README.md",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 4801,
-      "current_sha256": "e55457974a168e235de33d9799be6d81604750f187c415eadbcfc6d38e26d7f3"
+      "current_bytes": 5298,
+      "current_sha256": "be3b7242d08e014a4ab5a942a715100bc7b294f3ca6e8e1b9f4b298bc1a38b17"
     },
     {
       "path": "core/examples/research-support/study-view/demo-study/README.md",
@@ -1458,8 +1458,8 @@
       "path": "core/examples/research-support/study-view/demo-study/evidence-map.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 5649,
-      "current_sha256": "edd990aeb5b235e61f39692cae94eed84d41dcb9a9a72863cda248e209abafa1"
+      "current_bytes": 5629,
+      "current_sha256": "c8d2478b5595db36a2084cfba38708c8fbd37a530cca64b0a993f1b9df53b953"
     },
     {
       "path": "core/examples/research-support/study-view/demo-study/human-input-v2.md",
@@ -1591,8 +1591,8 @@
       "path": "core/machine/tools/study-view.json",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 7162,
-      "current_sha256": "125d37ce269597eb6170b683af009853045ee2bfa3d776c049d27d4addaa1ca3"
+      "current_bytes": 8508,
+      "current_sha256": "2dcce2483934d9373f1ebbe1b9871d7e11bbc9da834c41b2ec6b7eb2e5b652f9"
     },
     {
       "path": "core/references.json",
@@ -1689,15 +1689,15 @@
       "path": "core/scripts/research_support/study_view.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 32103,
-      "current_sha256": "fec45d6db04d2e155e4fd8ea59179e7e1d0852cf815621d7cda455f64f682961"
+      "current_bytes": 35076,
+      "current_sha256": "00e122dffadb67ec8cdb8e713e8470040590bc416bc37d382d8112cc68c2c4d9"
     },
     {
       "path": "core/scripts/research_support/study_view_template.html",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 32275,
-      "current_sha256": "8fdf64db82e925dd40890ce35676974b61275d6984434bb12783e93a553556ac"
+      "current_bytes": 33239,
+      "current_sha256": "34520cfcfcc6efc6d7b393cfc9f6cd83ba4f2985a10039578c9ea6a2ac878a8e"
     },
     {
       "path": "core/scripts/research_support/task_context.py",
@@ -1749,8 +1749,8 @@
       "path": "core/tests/research_support/test_study_view.py",
       "change": "added",
       "baseline_revision": "764bd88",
-      "current_bytes": 9094,
-      "current_sha256": "a56478850d286e905f7df4ba7608ecdfa9256777be2ac18736e20bcc5b6b0422"
+      "current_bytes": 13998,
+      "current_sha256": "ec641783395205b125631c6b0fb2711c25a2e428e15c0c2eb851a4385a5ddf9c"
     },
     {
       "path": "core/tests/test_plan_seal.py",

@@ -16,14 +16,14 @@
           "source_id": "demo-source-1",
           "work_id": "demo-work-1",
           "evidence_unit_id": "demo-source-1-unit",
-          "relation": "demo_reference",
+          "relation": "supports",
           "basis": "演示 ID 关系。"
         },
         {
           "source_id": "demo-source-2",
           "work_id": "demo-work-2",
           "evidence_unit_id": "demo-source-2-unit",
-          "relation": "demo_reference",
+          "relation": "qualifies",
           "basis": "演示 ID 关系。"
         }
       ]
@@ -41,7 +41,7 @@
           "source_id": "demo-source-3",
           "work_id": "demo-work-3",
           "evidence_unit_id": "demo-source-3-unit",
-          "relation": "demo_reference",
+          "relation": "supports",
           "basis": "演示 ID 关系。"
         }
       ]
@@ -59,7 +59,7 @@
           "source_id": "demo-source-2",
           "work_id": "demo-work-2",
           "evidence_unit_id": "demo-source-2-unit",
-          "relation": "demo_reference",
+          "relation": "contradicts",
           "basis": "演示 ID 关系。"
         }
       ]

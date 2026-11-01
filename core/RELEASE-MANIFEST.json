@@ -5575,8 +5575,8 @@
     },
     {
       "path": "examples/research-support/study-view/README.md",
-      "bytes": 4801,
-      "sha256": "e55457974a168e235de33d9799be6d81604750f187c415eadbcfc6d38e26d7f3",
+      "bytes": 5298,
+      "sha256": "be3b7242d08e014a4ab5a942a715100bc7b294f3ca6e8e1b9f4b298bc1a38b17",
       "license": "CC-BY-4.0",
       "role": "documentation",
       "source": "first-party-documentation-revision:examples/research-support/study-view/README.md",
@@ -5584,7 +5584,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "examples/research-support/study-view/README.md",
+        "sha256": "e55457974a168e235de33d9799be6d81604750f187c415eadbcfc6d38e26d7f3",
+        "source": "first-party-documentation-revision:examples/research-support/study-view/README.md",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -5673,8 +5690,8 @@
     },
     {
       "path": "examples/research-support/study-view/demo-study/evidence-map.json",
-      "bytes": 5649,
-      "sha256": "edd990aeb5b235e61f39692cae94eed84d41dcb9a9a72863cda248e209abafa1",
+      "bytes": 5629,
+      "sha256": "c8d2478b5595db36a2084cfba38708c8fbd37a530cca64b0a993f1b9df53b953",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:examples/research-support/study-view/demo-study/evidence-map.json",
@@ -5682,7 +5699,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "examples/research-support/study-view/demo-study/evidence-map.json",
+        "sha256": "edd990aeb5b235e61f39692cae94eed84d41dcb9a9a72863cda248e209abafa1",
+        "source": "first-party-documentation-revision:examples/research-support/study-view/demo-study/evidence-map.json",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6232,8 +6266,8 @@
     },
     {
       "path": "machine/tools/study-view.json",
-      "bytes": 7162,
-      "sha256": "125d37ce269597eb6170b683af009853045ee2bfa3d776c049d27d4addaa1ca3",
+      "bytes": 8508,
+      "sha256": "2dcce2483934d9373f1ebbe1b9871d7e11bbc9da834c41b2ec6b7eb2e5b652f9",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:machine/tools/study-view.json",
@@ -6241,7 +6275,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "machine/tools/study-view.json",
+        "sha256": "125d37ce269597eb6170b683af009853045ee2bfa3d776c049d27d4addaa1ca3",
+        "source": "first-party-documentation-revision:machine/tools/study-view.json",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6626,8 +6677,8 @@
     },
     {
       "path": "scripts/research_support/study_view.py",
-      "bytes": 32103,
-      "sha256": "fec45d6db04d2e155e4fd8ea59179e7e1d0852cf815621d7cda455f64f682961",
+      "bytes": 35076,
+      "sha256": "00e122dffadb67ec8cdb8e713e8470040590bc416bc37d382d8112cc68c2c4d9",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:scripts/research_support/study_view.py",
@@ -6635,13 +6686,30 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/study_view.py",
+        "sha256": "fec45d6db04d2e155e4fd8ea59179e7e1d0852cf815621d7cda455f64f682961",
+        "source": "first-party-documentation-revision:scripts/research_support/study_view.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
       "path": "scripts/research_support/study_view_template.html",
-      "bytes": 32275,
-      "sha256": "8fdf64db82e925dd40890ce35676974b61275d6984434bb12783e93a553556ac",
+      "bytes": 33239,
+      "sha256": "34520cfcfcc6efc6d7b393cfc9f6cd83ba4f2985a10039578c9ea6a2ac878a8e",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:scripts/research_support/study_view_template.html",
@@ -6649,7 +6717,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "scripts/research_support/study_view_template.html",
+        "sha256": "8fdf64db82e925dd40890ce35676974b61275d6984434bb12783e93a553556ac",
+        "source": "first-party-documentation-revision:scripts/research_support/study_view_template.html",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -6943,8 +7028,8 @@
     },
     {
       "path": "tests/research_support/test_study_view.py",
-      "bytes": 9094,
-      "sha256": "a56478850d286e905f7df4ba7608ecdfa9256777be2ac18736e20bcc5b6b0422",
+      "bytes": 13998,
+      "sha256": "ec641783395205b125631c6b0fb2711c25a2e428e15c0c2eb851a4385a5ddf9c",
       "license": "Apache-2.0",
       "role": "documentation-tooling",
       "source": "first-party-documentation-revision:tests/research_support/test_study_view.py",
@@ -6952,7 +7037,24 @@
       "transform": "first-party-documentation-revision",
       "transform_details": {
         "revision": "2026-10-27",
-        "baseline_revision": "764bd88"
+        "baseline_revision": "764bd88",
+        "previous_transform": "first-party-documentation-revision",
+        "previous_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
+      },
+      "previous": {
+        "revision": "764bd88",
+        "path": "tests/research_support/test_study_view.py",
+        "sha256": "a56478850d286e905f7df4ba7608ecdfa9256777be2ac18736e20bcc5b6b0422",
+        "source": "first-party-documentation-revision:tests/research_support/test_study_view.py",
+        "transform": "first-party-documentation-revision",
+        "source_sha256": null,
+        "transform_details": {
+          "revision": "2026-10-27",
+          "baseline_revision": "764bd88"
+        }
       }
     },
     {
@@ -7200,7 +7302,7 @@
     "kind": "first-party-documentation-revision",
     "baseline_revision": "764bd88",
     "baseline_commit": "764bd88b090439c8fe0d1646826d23865dc5c20b",
-    "head": "83e6e575cac8f01b86f531ca01074b689231661e",
+    "head": "f4729e9a3f4cb4287e3fc5576cbc2f4fcd87511b",
     "frozen_tag": "v0.1.0-alpha.2",
     "frozen_tag_target": "764bd88b090439c8fe0d1646826d23865dc5c20b"
   }

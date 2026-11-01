@@ -19,6 +19,16 @@
     "schema": "research-support.study-view.v1",
     "fields": ["generated_utc", "root_name", "stages", "cycles", "nodes", "edges", "files", "gaps", "scientific_acceptance"],
     "edge_direction": "Every edge runs upstream -> downstream (basis or input -> derived record). Relations stated from the dependent side are reversed and renamed on creation.",
+    "edge_context": "An edge with a cycle field holds only for that cycle version; the page indexes edges for the selected version. Evidence source edges carry the cycle that pairs the evidence map with a ledger.",
+    "stage_marks": {
+      "current": "the cycle's recorded stage; status shown from the checker",
+      "recorded": "a stage reference is present and the checker inspected the stage",
+      "recorded_unchecked": "a stage reference is present but the checker did not inspect the stage (after the current stage, or after direction_choice while waiting_human)",
+      "unconfirmed": "the cycle names a selected direction that its discussion decision does not record",
+      "gap": "a stage reference is missing, outside the root or invalid",
+      "none": "nothing recorded for the stage",
+      "rule": "Marks never follow stage order; a stage before the current one is not shown as passed without a record."
+    },
     "scientific_acceptance": "always not_assessed"
   },
   "scan": {
@@ -55,7 +65,7 @@
       "schema": "harness.research-preparation-evidence-map/v1",
       "nodes": {"finding": "findings[]", "method": "method_candidates[]", "question": "questions[]"},
       "edges": {
-        "findings[].evidence[].source_id": "source -> finding (supports), using the ledger named by the same cycle",
+        "findings[].evidence[]": "source -> finding with evidence.relation kept: supports, contradicts, qualifies, context (as context_for); any other value becomes neutral cited_by with the stated value. Drawn once per cycle that names both this map and a ledger, with that cycle on the edge; scan order never chooses a ledger.",
         "method_candidates[].motivated_by_finding_ids": "finding -> method (motivates)",
         "questions[].motivated_by_finding_ids": "finding -> question (motivates)",
         "questions[].candidate_method_ids": "method -> question (candidate_for)"
@@ -108,7 +118,7 @@
     {"id": "multiple-next-actions", "detail": "Cycle next_action, checker next_action and evidence-map review_decision.next_action coexist; the view prefers the checker."}
   ],
   "validation": {
-    "automated": "tests/research_support/test_study_view.py: version order, checker reuse, edge direction, branch states, revision chain, gaps vs null, later-stage needs_work, symlink/dot exclusion, script-close escaping, CLI no-overwrite",
+    "automated": "tests/research_support/test_study_view.py: version order, checker reuse, edge direction, evidence relations including unknown values, per-cycle ledger pairing in both scan orders, record-based stage marks (pending choice at a later stage, return to an earlier stage, unconfirmed selection), branch states, revision chain, gaps vs null, later-stage needs_work, symlink/dot exclusion, script-close escaping, CLI no-overwrite",
     "manual": "Demo page inspected in a browser at desktop and 375 px widths: all tabs, trace highlighting, detail panel; no console errors or horizontal overflow",
     "not_done": ["Use on a real study directory", "Reader study of whether the page explains a research path"]
   }

@@ -69,6 +69,78 @@ class StudyViewModelTests(unittest.TestCase):
         self.assertIn(("file:brief.md", "file:discussion-v2.json"), _edges(model, "brief_ref"))
         self.assertIn(("file:evidence-map.json", "file:cycle-v2.json"), _edges(model, "used_by"))
 
+    def test_evidence_relations_are_kept_and_unknown_values_stay_neutral(self) -> None:
+        def relate(record: dict) -> None:
+            first, _second, third = record["findings"]
+            first["evidence"][0]["relation"] = "context"
+            first["evidence"][1]["relation"] = "qualifies"
+            third["evidence"][0]["relation"] = "fixture_reference"
+
+        _rewrite(self.root / "evidence-map.json", relate)
+        model = build_study_view(self.root)
+        self.assertEqual([c["check"]["status"] for c in model["cycles"]], ["ready", "ready"])
+        source, finding = "source:source-ledger.json#", "finding:evidence-map.json#"
+        self.assertIn((f"{source}demo-source-1", f"{finding}demo-finding-1"), _edges(model, "context_for"))
+        self.assertIn((f"{source}demo-source-2", f"{finding}demo-finding-1"), _edges(model, "qualifies"))
+        self.assertIn((f"{source}demo-source-3", f"{finding}demo-finding-2"), _edges(model, "supports"))
+        neutral = [e for e in model["edges"] if e["relation"] == "cited_by"]
+        self.assertEqual({(e["from"], e["to"]) for e in neutral}, {(f"{source}demo-source-2", f"{finding}demo-finding-3")})
+        self.assertEqual({e["stated"] for e in neutral}, {"fixture_reference"})
+        self.assertNotIn(f"{finding}demo-finding-1", {to for _, to in _edges(model, "supports")})
+
+    def test_demo_contradicting_source_is_not_drawn_as_support(self) -> None:
+        model = build_study_view(DEMO)
+        pair = ("source:source-ledger.json#demo-source-2", "finding:evidence-map.json#demo-finding-3")
+        self.assertIn(pair, _edges(model, "contradicts"))
+        self.assertNotIn(pair, _edges(model, "supports"))
+
+    def test_each_cycle_keeps_the_ledger_it_names_in_either_scan_order(self) -> None:
+        for first, second in (("a-ledger.json", "z-ledger.json"), ("z-ledger.json", "a-ledger.json")):
+            with self.subTest(first=first, second=second):
+                root = Path(self.temporary.name) / first.split(".")[0]
+                shutil.copytree(DEMO, root)
+                shutil.copy(root / "source-ledger.json", root / first)
+                (root / "source-ledger.json").rename(root / second)
+                _rewrite(root / "cycle-v1.json", lambda d: d["synthesis"].update(source_ledger_ref=first))
+                _rewrite(root / "cycle-v2.json", lambda d: d["synthesis"].update(source_ledger_ref=second))
+                model = build_study_view(root)
+                self.assertEqual([c["check"]["status"] for c in model["cycles"]], ["ready", "ready"])
+                self.assertEqual([c["source_ledger"] for c in model["cycles"]], [first, second])
+                bound = {
+                    (e["from"].split(":", 1)[1].split("#")[0], e["cycle"])
+                    for e in model["edges"] if e["relation"] in {"supports", "qualifies", "contradicts"}
+                }
+                self.assertEqual(bound, {(first, "cycle-v1.json"), (second, "cycle-v2.json")})
+                self.assertEqual(model["gaps"], [])
+
+    def test_stage_marks_come_from_records_not_stage_order(self) -> None:
+        # A cycle that claims a later stage while the choice is still pending.
+        _rewrite(self.root / "cycle-v1.json", lambda d: d.update(stage="execution_evaluation"))
+        # A cycle that returns to an earlier stage after a recorded choice.
+        _rewrite(self.root / "cycle-v2.json", lambda d: d.update(stage="synthesis"))
+        model = build_study_view(self.root)
+        pending, returned = ({s["stage"]: s["mark"] for s in c["stages"]} for c in model["cycles"])
+        self.assertEqual(model["cycles"][0]["check"]["status"], "waiting_human")
+        self.assertEqual(pending["execution_evaluation"], "current")
+        self.assertEqual(pending["direction_choice"], "none")
+        self.assertEqual(pending["data_and_plan"], "none")
+        self.assertEqual(pending["synthesis"], "recorded")
+        self.assertEqual(returned["synthesis"], "current")
+        self.assertEqual(returned["human_discussion"], "recorded_unchecked")
+        self.assertEqual(returned["direction_choice"], "recorded_unchecked")
+        self.assertEqual(returned["data_and_plan"], "none")
+        self.assertNotIn("已经过", render_html(model))
+
+    def test_direction_named_only_by_the_cycle_is_unconfirmed(self) -> None:
+        _rewrite(self.root / "cycle-v2.json", lambda d: d["direction"].update(selected_direction_id="demo-direction-labels"))
+        model = build_study_view(self.root)
+        marks = {s["stage"]: s["mark"] for s in model["cycles"][1]["stages"]}
+        self.assertEqual(marks["direction_choice"], "current")
+        _rewrite(self.root / "cycle-v2.json", lambda d: d.update(stage="data_and_plan"))
+        model = build_study_view(self.root)
+        marks = {s["stage"]: s["mark"] for s in model["cycles"][1]["stages"]}
+        self.assertEqual(marks["direction_choice"], "unconfirmed")
+
     def test_branch_states_keep_unselected_and_pending_directions(self) -> None:
         model = build_study_view(DEMO)
         first, second = model["cycles"]

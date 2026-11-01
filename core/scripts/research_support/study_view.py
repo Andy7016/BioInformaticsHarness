@@ -71,6 +71,17 @@ UPSTREAM_FORM = {
     "route_not_selected": "handled_by_other_route",
 }
 
+# Evidence-map relations (source -> finding).  Any other recorded value is
+# drawn as a neutral citation that keeps the stated value.
+EVIDENCE_RELATIONS = {
+    "supports": "supports",
+    "contradicts": "contradicts",
+    "qualifies": "qualifies",
+    "context": "context_for",
+}
+NEUTRAL_EVIDENCE_RELATION = "cited_by"
+BAD_REF_STATES = {"missing", "outside_root", "invalid"}
+
 # Cycle reference fields grouped by the stage that records them.
 STAGE_REFS: dict[str, tuple[tuple[str, ...], ...]] = {
     "synthesis": (
@@ -202,12 +213,12 @@ class _Builder:
             self.nodes[node_id]["kind"] = kind
         return node_id
 
-    def edge(self, source: str, target: str, relation: str) -> None:
+    def edge(self, source: str, target: str, relation: str, **extra: Any) -> None:
         # Records state some links from the dependent side; store every edge
         # upstream -> downstream so "from" is always where a record came from.
         if relation in UPSTREAM_FORM:
             source, target, relation = target, source, UPSTREAM_FORM[relation]
-        self.edges.append({"from": source, "to": target, "relation": relation})
+        self.edges.append({"from": source, "to": target, "relation": relation, **extra})
 
     def gap(self, kind: str, detail: str, file: str) -> None:
         self.gaps.append({"kind": kind, "detail": detail, "file": file})
@@ -256,7 +267,7 @@ class _Builder:
                 },
             )
 
-    def add_evidence_map(self, rel: str, record: dict[str, Any], ledger: str | None) -> None:
+    def add_evidence_map(self, rel: str, record: dict[str, Any]) -> None:
         map_node = self.file_node(rel, "evidence_map")
         decision = record.get("review_decision") or {}
         self.nodes[map_node].update(status=decision.get("status"), summary=_text(decision.get("next_action")))
@@ -290,15 +301,8 @@ class _Builder:
                         "novelty_search": _get(question, ("novelty_search_scope", "status")),
                     },
                 )
-        # Links are drawn after all nodes of this map exist.
-        for finding in record.get("findings") or []:
-            fid = _text(finding.get("finding_id"))
-            if not fid:
-                continue
-            for evidence in finding.get("evidence") or []:
-                sid = _text(evidence.get("source_id"))
-                if sid and ledger:
-                    self.link_id(f"finding:{rel}#{fid}", rel, f"source:{ledger}#{sid}", "cites", f"finding {fid} source {sid}")
+        # Links are drawn after all nodes of this map exist.  Source links
+        # depend on which ledger a cycle pairs with this map; see _cycle.
         for method in record.get("method_candidates") or []:
             mid = _text(method.get("method_id"))
             for fid in method.get("motivated_by_finding_ids") or []:
@@ -309,6 +313,29 @@ class _Builder:
                 self.link_id(f"question:{rel}#{qid}", rel, f"finding:{rel}#{fid}", "motivated_by", f"question {qid} finding {fid}")
             for mid in question.get("candidate_method_ids") or []:
                 self.link_id(f"question:{rel}#{qid}", rel, f"method:{rel}#{mid}", "candidate_method", f"question {qid} method {mid}")
+
+    def link_evidence_sources(self, cycle: str, rel: str, ledger: str) -> None:
+        """Link findings of one evidence map to the ledger one cycle pairs it with.
+
+        Each edge carries the cycle that states the pairing, so a map reused
+        with different ledgers keeps every pairing instead of the last one read.
+        """
+
+        for finding in self.records[rel].get("findings") or []:
+            fid = _text(finding.get("finding_id"))
+            if not fid:
+                continue
+            for evidence in finding.get("evidence") or []:
+                sid = _text(evidence.get("source_id"))
+                if not sid:
+                    continue
+                source = f"source:{ledger}#{sid}"
+                if source not in self.nodes:
+                    self.gap("identifier", f"finding {fid} source {sid} does not resolve in {ledger} (paired by {cycle})", rel)
+                    continue
+                stated = evidence.get("relation")
+                relation = EVIDENCE_RELATIONS.get(stated, NEUTRAL_EVIDENCE_RELATION) if isinstance(stated, str) else NEUTRAL_EVIDENCE_RELATION
+                self.edge(source, f"finding:{rel}#{fid}", relation, stated=stated, cycle=cycle)
 
     def add_discussion(self, rel: str, record: dict[str, Any], evidence_map: str | None) -> dict[str, Any]:
         """Add directions and the recorded decision; return branch states."""
@@ -494,6 +521,22 @@ class _Builder:
         evidence_map = self._present(_get(record, ("synthesis", "evidence_map_ref")))
         ledger = self._present(_get(record, ("synthesis", "source_ledger_ref")))
         discussion_rel = self._present(_get(record, ("direction", "discussion_ref")))
+        if (
+            evidence_map and ledger
+            and self.records.get(evidence_map, {}).get("schema") == EVIDENCE_MAP_SCHEMA
+            and self.records.get(ledger, {}).get("schema") == SOURCE_LEDGER_SCHEMA
+        ):
+            self.link_evidence_sources(rel, evidence_map, ledger)
+        branches: dict[str, Any] = {}
+        if discussion_rel and self.records.get(discussion_rel, {}).get("schema") == DISCUSSION_SCHEMA:
+            branches = self.add_discussion(discussion_rel, self.records[discussion_rel], evidence_map)
+        recorded_selection = _text(_get(record, ("direction", "selected_direction_id")))
+        # The checker inspects stages up to the current one, and stops after
+        # the direction stages while a human choice is pending.
+        rank = {stage_id: index for index, stage_id in enumerate(STAGES)}
+        checked_through = rank.get(stage, -1)
+        if check["status"] == "waiting_human":
+            checked_through = min(checked_through, rank["direction_choice"])
         stages = []
         for stage_id in STAGES:
             refs = []
@@ -506,15 +549,13 @@ class _Builder:
                     state, target = self._resolve(item)
                     if state in {"present", "directory"} and target:
                         self.edge(node, self.file_node(target, "directory" if state == "directory" else None), "uses")
-                    elif state in {"missing", "outside_root", "invalid"}:
+                    elif state in BAD_REF_STATES:
                         self.gap("reference", f"{'.'.join(path)}: {item!r} is {state}", rel)
                     refs.append({"field": ".".join(path), "value": item, "state": state, "path": target})
-            stages.append({"stage": stage_id, "refs": refs})
+            stages.append({"stage": stage_id, "refs": refs, "mark": self._stage_mark(
+                stage_id, stage, refs, recorded_selection, branches, rank[stage_id] > checked_through,
+            )})
 
-        branches: dict[str, Any] = {}
-        if discussion_rel and self.records.get(discussion_rel, {}).get("schema") == DISCUSSION_SCHEMA:
-            branches = self.add_discussion(discussion_rel, self.records[discussion_rel], evidence_map)
-        recorded_selection = _get(record, ("direction", "selected_direction_id"))
         for qid in _get(record, ("synthesis", "question_ids")) or []:
             if evidence_map:
                 self.link_id(node, rel, f"question:{evidence_map}#{qid}", "considers", f"cycle question {qid}")
@@ -538,6 +579,34 @@ class _Builder:
             "check": check,
         }
 
+    @staticmethod
+    def _stage_mark(
+        stage_id: str, current: Any, refs: list[dict[str, Any]], selection: str | None,
+        branches: dict[str, Any], unchecked: bool,
+    ) -> str:
+        """Say what the record shows for one stage; never infer it from order.
+
+        current: the cycle's stage, whose status comes from the checker.
+        recorded / recorded_unchecked: references exist; the checker did or did
+        not inspect this stage.  unconfirmed: the cycle names a direction that
+        its discussion does not record.  gap: a reference does not resolve.
+        none: nothing is recorded for the stage.
+        """
+
+        if stage_id == current:
+            return "current"
+        states = {item["state"] for item in refs}
+        if states & BAD_REF_STATES:
+            return "gap"
+        if stage_id == "direction_choice":
+            if not selection:
+                return "none"
+            if not branches.get("decided") or branches.get("selected") != selection:
+                return "unconfirmed"
+        elif not states & {"present", "directory"}:
+            return "none"
+        return "recorded_unchecked" if unchecked else "recorded"
+
     def _present(self, value: Any) -> str | None:
         state, rel = self._resolve(value)
         return rel if state == "present" else None
@@ -545,20 +614,12 @@ class _Builder:
     # -- assembly ---------------------------------------------------------
 
     def build(self) -> None:
-        # Pair each evidence map with the ledger its cycle names, when known.
-        ledger_for_map: dict[str, str] = {}
-        for record in self.records.values():
-            if record.get("schema") == CYCLE_SCHEMA:
-                emap = self._present(_get(record, ("synthesis", "evidence_map_ref")))
-                ledger = self._present(_get(record, ("synthesis", "source_ledger_ref")))
-                if emap and ledger:
-                    ledger_for_map[emap] = ledger
         for rel, record in self.records.items():
             if record.get("schema") == SOURCE_LEDGER_SCHEMA:
                 self.add_ledger(rel, record)
         for rel, record in self.records.items():
             if record.get("schema") == EVIDENCE_MAP_SCHEMA:
-                self.add_evidence_map(rel, record, ledger_for_map.get(rel))
+                self.add_evidence_map(rel, record)
         self.add_cycles()
         for rel, record in self.records.items():
             schema = record.get("schema") or record.get("schema_version")
@@ -569,11 +630,17 @@ class _Builder:
         seen = set()
         unique = []
         for edge in self.edges:
-            key = (edge["from"], edge["to"], edge["relation"])
+            key = tuple(sorted((name, str(value)) for name, value in edge.items()))
             if key not in seen and edge["to"] in self.nodes and edge["from"] in self.nodes:
                 seen.add(key)
                 unique.append(edge)
         self.edges = unique
+        # Cycles sharing a map and ledger repeat the same unresolved source.
+        gaps = []
+        for gap in self.gaps:
+            if gap not in gaps:
+                gaps.append(gap)
+        self.gaps = gaps
 
 
 def build_study_view(root: Path | str | os.PathLike[str], *, exclude: Iterable[Path] = ()) -> dict[str, Any]:
