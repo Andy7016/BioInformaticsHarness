@@ -1,5 +1,32 @@
 # Changelog
 
+## 研究路径视图原型 — 2026-10-31
+
+- 新增[研究路径视图](core/examples/research-support/study-view/README.md)：把课题目录中的周期、讨论、证据图与修订记录整理成一页离线 HTML，显示阶段位置、分支选择、证据来路和修订链。
+- 只画记录中明确写出的引用与 ID；未记录的步骤如实显示，无法解析的引用列为缺口；阶段状态沿用研究周期检查器。
+- 附虚构演示课题与梳理时发现的结构问题；接口与字段对应见[机器记录](core/machine/tools/study-view.json)。
+
+## 入口澄清验收与新题迁移 — 2026-10-31
+
+- 保留按问题选择指南及普通研究交付入口，继续使用现有首稿、独立评阅、实际修订和接受路径。
+- [实验总结](docs/research/entry-reading-and-transfer-2026-10-31.zh.md)保留首次候选的读取增加、定向复跑的观察收益，以及新题分母解释经评阅修正的过程。
+- 本轮采用范围与后续课题接收条件见[变化索引](machine/changes/entry-adoption-20261031.json)。
+
+## 区分研究文字交付与工具检查输入 — 2026-10-31
+
+- [方法目录](core/docs/methods/README.md)将普通研究交付接到已有课题记录，把交接一致性检查器及结构化回执按选用条件分流。
+- 原科学复核、工件接手检查与已选工具的严格输入继续沿原范围执行。
+
+## 按当前决定选择研究入口 — 2026-10-31
+
+- 根目录入口按当前问题、前期准备与工具使用分流，已有明确问题时直接进入相关方法。
+- [方法目录](core/docs/methods/README.md)合并重复使用步骤，保留完整问题分流表及原指南、方法卡与工具契约。
+
+## 按研究语境准备独立评阅 — 2026-10-30
+
+- 在[回应路线与验收](core/docs/methods/guides/revision-responses-and-acceptance.md#按研究语境准备评审)加入可选领域准备：先辨认对象、测量、任务与证据层级，围绕陌生测量、跨领域分歧和相反证据补读。
+- 优先复用课题笔记与方法经验，保留既有首稿、独立评阅、实际修订与接受路径。
+
 ## 条件化模型比较 — 2026-10-30
 
 - 在[基准与公平比较卡](core/docs/methods/cards/benchmark-teacher-fairness.md)中，把模型优劣拆成任务、训练时可见信息、预测对象与评价量，按条件选择比较、系统用途说明或补证。
@@ -17,6 +44,13 @@
 - 在[修订指南](core/docs/methods/guides/revision-responses-and-acceptance.md)中保留请求来源、原主张范围与修订复核，让当前裁定可按所评对象直接读取。
 - 将[综述收束](core/docs/methods/guides/review-coverage-and-closure.md)接回原问题与实际证据，按任务依据区分进度检查点和显式硬预算。
 - [方法经验](core/docs/methods/guides/method-experience.md)中的后续条件逐项连接动作；设计输入的可得性与本轮接受范围见[变化索引](machine/changes/single-session-stability-20261029.json)。
+
+## 跨平台路径与可选 GitHub 代理 — 2026-10-28
+
+- 计划封存与执行捕获接受只有 root 能创建或替换的系统链接（如 macOS 的 `/var`、`/tmp`），用户可写位置的符号链接仍被拒绝。
+- 封存前按物理身份拒绝计划目录与封存目录相同或互相包含，覆盖 `/var` 与 `/private/var` 等别名拼写及大小写不敏感的文件系统；文档检查接受任一拼写的 `.scratch` 报告。
+- POSIX 绝对路径写入 READY 清单时给出“必须相对 plan_root”的明确错误。
+- `github_proxy` 默认为空，GitHub 直连；需要代理时在复制的配置中设置，见[资料获取入口](core/docs/methods/source-acquisition-routing.md)。
 
 ## 方法使用经验与持续研究 — 2026-10-27
 

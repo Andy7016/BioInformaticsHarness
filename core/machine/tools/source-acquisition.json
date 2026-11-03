@@ -87,7 +87,7 @@
   },
   "routing": {
     "academic": "explicit Direct sessions, trust_env=false",
-    "github": "per-hop github-proxy from configuration, current default http://127.0.0.1:7890",
+    "github": "github-direct by default; per-hop github-proxy only when configuration sets github_proxy",
     "global_proxy_mutation": false,
     "redirects": "manual, destination validated and route recomputed each hop",
     "live_github_probe_performed": false

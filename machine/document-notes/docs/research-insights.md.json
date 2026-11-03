@@ -1,0 +1,48 @@
+{
+  "schema": "harness.document-notes/v1",
+  "document": "docs/research-insights.md",
+  "origin": "first_party_new_document",
+  "created_at_utc": "2026-10-30T04:20:48.221190+00:00",
+  "source_commit": null,
+  "source_sha256": "10d60f698aeba31676b6ab174ed26674030c08dc33bb59a72263ca2ca2845453",
+  "source_text": "# 研究心得\n\n这份笔记积累具体研究中的观察、解释和可检验建议，供研究者与 agent 在遇到相似问题时按需阅读。比较条件难以对齐、首稿与修订的评价混在一起，或修订后又出现新证据时，可从相关小节读起。后续经验继续追加在这里；跨案例的支持与反例积累到足以说明适用条件后，再考虑提炼为通用指南。\n\n## 从条件关系中获得可靠价值\n\n一次围绕单细胞扰动预测争议的 GPT 案例，经实际修订和独立复核后，完成了所约定的文献解释与公开结果表核查。它的可靠价值集中在恢复“任务—可用信息—预测输出—评价事件”的关系，并在可比交集上做原表级核算。例如，预测未测单基因、预测两个已测单体的未测组合，以及辨认非加性事件，各自需要不同的信息与读出。[GEARS 原始工作](https://www.nature.com/articles/s41587-023-01905-6)、[线性基线评测](https://www.nature.com/articles/s41592-025-02772-6)及[共同信号与任务特异能力工作例](../core/docs/methods/worked-examples/common-and-task-specific.md)提供了可继续检查的公开材料。\n\n回看这类结果时，分开四个层次更容易判断它能支持什么：\n\n| 判断层次 | 这次经验提示怎样核对 |\n| --- | --- |\n| 研究方向是否命中 | 议题确实接近领域中的比较与评价问题；种子论文已指定，发现新主题的能力还需要另设检验 |\n| 来源是否读准 | 回到具体段落、公式、图与实现，检查输入角色、数据对象、划分和评价含义；方向相关之后，读源仍需逐项核实 |\n| 实际做了哪些工作 | 公开表的核算与独立复算提供了执行证据；完整模型训练与原始加载过程各自需要相应运行材料 |\n| 能用于什么决定 | 条件解释可帮助选择基线与设计评价；新背景预测、实验排序与前瞻用途继续接到相应数据和实测终点 |\n\n有界专题的完成，按该专题承诺的对象、问题和交付判断。若目标扩大为一份当前的全领域综述，来源覆盖、候选方法与反例搜索也随之扩大。交付时同时说明已完成的范围、仍开放的研究目标与下一步责任，读者便能据此接手。\n\n## 保留首稿—复核—修订—最终接受的路径\n\n这个案例中，复核实质补上了输入、评价、数据对象和划分之间的关系。首稿、复核意见、实际修订和具名最终接受应当各自保留：首稿按原文评价；复核说明缺了什么及其影响；修订落实到具体文字或分析；最终接受指向所评版本与范围。\n\n对流程的改进，可以先关注复核怎样补实关系、修订是否准确落地，以及接受前是否重核关键原文。首稿继续承担清楚表达问题、证据和初步结论的责任，后续复核负责发现与修复遗漏。评价这条路径时，同时观察首稿质量和经复核后的成果，分别记录各阶段的贡献。具体操作可按[回应路线与修订验收](../core/docs/methods/guides/revision-responses-and-acceptance.md)选择。\n\n## 修订后综合整理，再判断下一轮\n\n在没有资源截止、且本轮修订已经落实后，先做一次综合整理，再决定是否开启新轮次，是一条可用的推进路线。整理的重点是把新证据接回当前承诺与主张：\n\n| 新证据带来的影响 | 当前可采取的动作 |\n| --- | --- |\n| 发现原承诺仍有缺项，或足以推翻、明显削弱当前主张 | 留在本轮，补解释、补分析、收窄或撤回相关主张，再复核受影响部分 |\n| 对研究有价值，主要回答超出本轮范围的新问题 | 写清新问题、来源与可能改变的决定，作为下一轮入口 |\n| 需要新数据或实验才能区分解释 | 接到明确的后续验证，说明所需材料、比较对象、预期读出与负责接手者 |\n\n在修订过程中读到足以改变当前结论的反证时，就及时接回修订。修订后的综合整理再统一回收这些变化，检查遗漏，并形成下一步选择。\n\n本次后续领域对照列入了 [Systema](https://www.nature.com/articles/s41587-025-02777-8)、[Miller 等的正式发表版](https://www.nature.com/articles/s41587-026-03307-w)和 [Science Advances 的任务比较](https://www.science.org/doi/10.1126/sciadv.aed3414)。这三项来源未纳入原 GPT 案例；若继续写当前领域综述，应把它们纳入新一轮的范围与论证检查。旧案例的实际阅读和接受范围按当时记录保留。\n\n## 没有时限时，怎样停止本轮阅读\n\n停止点可以来自研究义务、证据影响和行动价值。综合整理时问三个问题：本轮承诺是否已经交付并得到相应复核；新证据是否会改变当前主张或下一步选择；继续查找能区分哪一种解释、改变哪一项行动。\n\n当本轮义务已履行，重要反证已处理，剩余阅读主要扩展用途时，可以结束这一轮，并把扩展问题交给下一轮。方向明确且调研充分的工程问题，可以进入有界试用并保留未决问题；理论问题、前期探索和下游影响大的长流程决定，则给反例、竞争解释和可重复性检查更多份额。\n\n## 怎样继续积累\n\n追加心得时，保留产生它的背景、所用依据、当前解释、适用条件和可改变建议的观察。后续案例若支持、修正或推翻某条心得，接着补记原因与关系。已有课题笔记足以承载的材料可以沿用原位置；这里保留值得回看的综合认识，按问题触发阅读。通用指南的提炼留待跨案例证据与适用条件清楚之后。\n",
+  "technical_notes": [
+    "source_text and source_sha256 identify the original newly authored note. Null source_commit records pre-commit authoring; a subsequent maintainer commit is recorded separately.",
+    "Later changes should preserve these original-source fields and append dated revision notes.",
+    "Private motivating evidence is explicitly marked in the linked change and source-design records; human navigation uses public guides and original public sources."
+  ],
+  "editorial_revisions": [
+    {
+      "id": "2026-10-30-research-insights-20261030",
+      "date": "2026-10-30",
+      "reason": "Accumulate contextual research insights without raising first-draft obligations or creating mandatory guidance.",
+      "technical_records": [
+        "machine/changes/research-insights-20261030.json"
+      ],
+      "acceptance_ref": "machine/changes/research-insights-20261030.json"
+    },
+    {
+      "id": "2026-10-30-research-insights-review-source-check",
+      "date": "2026-10-30",
+      "reason": "Add a source-verified contextual observation that review can introduce a figure-reference error; distinguish review occurrence, implementation and evidence support.",
+      "technical_records": [
+        "machine/changes/research-insights-20261030.json"
+      ],
+      "acceptance_scope": "Original plot, independent audit and recovered reviewer final text support this observation; full v3 case acceptance is a separate pending gate."
+    },
+    {
+      "id": "research-insights-publication-20261031",
+      "date": "2026-10-31",
+      "reason": "Publish the accepted contextual note and source-checked addendum with public-only evidence navigation.",
+      "technical_records": [
+        "machine/changes/research-insights-20261030.json"
+      ],
+      "acceptance_scope": "Original note content and original source fields preserved; private audit coordinates excluded."
+    }
+  ],
+  "current_identity": {
+    "bytes": 6736,
+    "sha256": "42da26ab8595723a262ef727ae7f7b67ad499d5e63ac0e5d7f62d5e8efb12c70"
+  },
+  "updated_at_utc": "2026-10-31T02:20:47.685288+00:00"
+}

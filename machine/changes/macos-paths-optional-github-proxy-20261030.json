@@ -1,0 +1,39 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "macos-paths-optional-github-proxy-20261030",
+  "date": "2026-10-30",
+  "summary": "Adopt PR1 system-link/physical-overlap fixes and optional explicit GitHub proxy; preserve Windows refusal semantics.",
+  "impact": "interface",
+  "paths": [
+    "core/config/source-routing.json",
+    "core/scripts/acquisition/route_sources.py",
+    "core/scripts/research_support/_common.py",
+    "core/scripts/research_support/plan_seal.py",
+    "core/scripts/research_support/execution_capture.py",
+    "tools/documentation.py",
+    "core/docs/methods/source-acquisition-routing.md",
+    "core/machine/tools/source-acquisition.json",
+    "core/tests/test_plan_seal.py",
+    "machine/changes/macos-paths-optional-github-proxy-20261030.json"
+  ],
+  "reading_paths": [
+    "core/docs/methods/source-acquisition-routing.md"
+  ],
+  "reading_sections": {
+    "core/docs/methods/source-acquisition-routing.md": [
+      "从 core 目录开始",
+      "选择资料入口"
+    ]
+  },
+  "revisit": "For studies using affected acquisition/seal/capture paths, appraise explicit proxy choice and physically independent archive roots. Preserve old configuration and results; apply changes to relevant next tool use.",
+  "acceptance": "Existing affected suites and package verifiers pass on the integration tree; overlap and unsafe links refused before staging/copy/ACK, explicit proxy selected without environment inheritance. Attribute author macOS reports and local Windows execution separately.",
+  "feature_origin": {
+    "url": "https://github.com/vvcchh0/BioInformaticsHarness/pull/1",
+    "head": "31ff6f91a419adb45b5cd0efc6c3bb192056c670"
+  },
+  "integration_fix": "Case-insensitive test accepts lexical containment or physical-identity refusal; runtime protection unchanged.",
+  "live_acquisition": "Not established by offline routing tests.",
+  "historical_backfill": false,
+  "validation_ref": "machine/reviews/pr1-integration-20261030.json",
+  "validation_status": "accepted_existing_suites_and_package_checks"
+}

@@ -242,6 +242,54 @@ class DocumentationCheckTests(unittest.TestCase):
         self.assertEqual(rejected_report["findings"][0]["rule"], "report-inside-public-root")
 
 
+def _system_alias_bases() -> list[Path]:
+    bases = []
+    for value in (tempfile.gettempdir(), "/tmp", "/var/tmp"):
+        base = Path(value)
+        if base.is_dir() and base.resolve() != base and os.access(base, os.W_OK):
+            bases.append(base)
+    return bases
+
+
+@unittest.skipUnless(_system_alias_bases(), "requires a system-link temp alias, as on macOS")
+class ReportPathAliasTests(unittest.TestCase):
+    """Root and report may use either spelling of a system link such as /var."""
+
+    def test_scratch_report_is_accepted_for_every_spelling_pair(self) -> None:
+        for base in _system_alias_bases():
+            alias = Path(tempfile.mkdtemp(dir=base))
+            self.addCleanup(shutil.rmtree, alias.resolve(), True)
+            physical = alias.resolve()
+            (physical / "public" / ".scratch").mkdir(parents=True)
+            for root in (alias / "public", physical / "public"):
+                for out_base in (alias, physical):
+                    out = out_base / "public" / ".scratch" / "report.json"
+                    with self.subTest(root=str(root), out=str(out)):
+                        self.assertEqual(documentation._assert_outside_root(root, out), out)
+                    inside = out_base / "public" / "report.json"
+                    with self.subTest(root=str(root), inside=str(inside)):
+                        with self.assertRaises(documentation.RefreshError) as caught:
+                            documentation._assert_outside_root(root, inside)
+                        self.assertEqual(caught.exception.rule, "report-inside-public-root")
+
+    def test_user_link_inside_scratch_is_still_refused(self) -> None:
+        alias = Path(tempfile.mkdtemp(dir=_system_alias_bases()[0]))
+        self.addCleanup(shutil.rmtree, alias.resolve(), True)
+        physical = alias.resolve()
+        (physical / "public" / ".scratch").mkdir(parents=True)
+        (physical / "elsewhere").mkdir()
+        try:
+            os.symlink(physical / "elsewhere", physical / "public" / ".scratch" / "linked", target_is_directory=True)
+        except OSError as exc:
+            self.skipTest(f"symlink creation is unavailable: {exc}")
+        for root, out_base in ((physical / "public", alias), (alias / "public", physical)):
+            out = out_base / "public" / ".scratch" / "linked" / "report.json"
+            with self.subTest(root=str(root), out=str(out)):
+                with self.assertRaises(documentation.RefreshError) as caught:
+                    documentation._assert_outside_root(root, out)
+                self.assertEqual(caught.exception.rule, "report-scratch-link")
+
+
 class RefreshCompatibilityTests(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory(prefix="documentation-refresh-")

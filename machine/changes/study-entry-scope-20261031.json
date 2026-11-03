@@ -1,0 +1,27 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "study-entry-scope-20261031",
+  "date": "2026-10-31",
+  "summary": "Distinguish prose study delivery from selected deterministic checker/structured receipt input contracts.",
+  "impact": "guidance",
+  "baseline_commit": "33e66e6d601185d84df558dd76ffed0ccfc4113c",
+  "paths": [
+    "core/docs/methods/README.md",
+    "CHANGELOG.md",
+    "machine/document-notes/core/docs/methods/README.md.json",
+    "machine/document-notes/CHANGELOG.md.json",
+    "machine/changes/study-entry-scope-20261031.json",
+    "machine/source-design-index.jsonl"
+  ],
+  "reading_paths": [
+    "core/docs/methods/README.md"
+  ],
+  "revisit": "At a relevant handoff choice, identify whether prose delivery, actual artifact reception or a selected checker/receipt format is needed. No blanket historical rewrite.",
+  "acceptance": "Existing study records can carry ordinary report delivery; actual artifact reception and selected tools retain their required checks and strict inputs.",
+  "status": "candidate_pending_bounded_repeat",
+  "scientific_cards_or_strict_interfaces_changed": false,
+  "new_mandatory_file_family": false,
+  "efficiency_effect": "not_yet_measured_for_this_clarification",
+  "design_basis": "Existing public separation of study use and maintenance/tool inputs. A bounded private route observation motivates clarification, not a universal efficiency claim.",
+  "private_working_evidence": "not_exported"
+}

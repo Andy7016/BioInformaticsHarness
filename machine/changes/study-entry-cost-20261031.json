@@ -1,0 +1,29 @@
+{
+  "schema": "harness.guidance-change/v1",
+  "id": "study-entry-cost-20261031",
+  "date": "2026-10-31",
+  "summary": "Consolidate generic study-use entry instructions while preserving the complete routing table and scientific/tool contracts.",
+  "impact": "editorial",
+  "baseline_commit": "1d9dae54cd803ab2177cf1fdb2024dd27593e357",
+  "paths": [
+    "README.md",
+    "core/docs/methods/README.md",
+    "CHANGELOG.md",
+    "machine/document-notes/README.md.json",
+    "machine/document-notes/core/docs/methods/README.md.json",
+    "machine/document-notes/CHANGELOG.md.json",
+    "machine/changes/study-entry-cost-20261031.json",
+    "machine/source-design-index.jsonl"
+  ],
+  "reading_paths": [
+    "README.md",
+    "core/docs/methods/README.md"
+  ],
+  "revisit": "Optional entry orientation at the next relevant study step; no blanket reread or reopening of past claims.",
+  "acceptance": "The reader can choose a question-relevant entry, retain source/measurement/input/split/evaluation conditions and continue actual work. Study-use cost and scientific outcomes assessed separately.",
+  "status": "candidate_pending_study_use_comparison",
+  "scientific_cards_or_strict_interfaces_changed": false,
+  "new_startup_file_family": false,
+  "efficiency_effect": "not_yet_measured",
+  "design_scope": "Generic navigation and duplicate entry prose only; no old-topic answer, new-topic clue, reference interpretation or case-specific method recommendation added."
+}

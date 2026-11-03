@@ -1,0 +1,168 @@
+{
+  "schema": "harness.public-entry-trial/v1",
+  "date": "2026-10-31",
+  "status": "accepted_user_entry_clarification_and_existing_revisor_path",
+  "human_summary": "docs/research/entry-reading-and-transfer-2026-10-31.zh.md",
+  "versions": {
+    "baseline": "1d9dae54cd803ab2177cf1fdb2024dd27593e357",
+    "first_candidate": "33e66e6d601185d84df558dd76ffed0ccfc4113c",
+    "scope_clarification": "9fb954db57b8b928e72cfbb77678b40e483bffe7"
+  },
+  "old_topic": {
+    "title": "单细胞扰动预测的方法选择",
+    "task_and_source_corpus_fixed": true,
+    "fresh_author_contexts": true,
+    "author_and_working_revisor": "native analyst GPT-6.1 Sol/max",
+    "rows": {
+      "baseline": {
+        "harness_read_content_utf8_bytes": 112174,
+        "all_explicit_read_content_utf8_bytes": 795479,
+        "author_artifact_file_count": 9,
+        "author_artifact_bytes": 143291,
+        "harness_by_actor": {
+          "author": 75446,
+          "revisor": 36728
+        }
+      },
+      "first_candidate": {
+        "harness_read_content_utf8_bytes": 118087,
+        "all_explicit_read_content_utf8_bytes": 735873,
+        "author_artifact_file_count": 17,
+        "author_artifact_bytes": 310451,
+        "harness_by_actor": {
+          "author": 81359,
+          "revisor": 36728
+        },
+        "harness_read_content_utf8_bytes_delta_percent_vs_baseline": 5.271274983507768,
+        "all_explicit_read_content_utf8_bytes_delta_percent_vs_baseline": -7.493095355125656,
+        "author_artifact_bytes_delta_percent_vs_baseline": 116.65771053311093
+      },
+      "scoped_followup": {
+        "harness_read_content_utf8_bytes": 101029,
+        "all_explicit_read_content_utf8_bytes": 717422,
+        "author_artifact_file_count": 9,
+        "author_artifact_bytes": 146363,
+        "harness_by_actor": {
+          "author": 70399,
+          "revisor": 30630
+        },
+        "harness_read_content_utf8_bytes_delta_percent_vs_baseline": -9.935457414374094,
+        "all_explicit_read_content_utf8_bytes_delta_percent_vs_baseline": -9.8125783333061,
+        "author_artifact_bytes_delta_percent_vs_baseline": 2.143889009079425
+      }
+    },
+    "cost_unit": "Fixed-reader explicit body UTF8 bytes; source text included in all-body totals, response overhead separate; supplied reviews excluded from author artifact stock.",
+    "interpretation": [
+      "Observed follow-up Harness content and all explicit reader text are lower than baseline; authored file count stays9 and artifact bytes increase slightly.",
+      "Observed path choices include both reduced and increased source-specific guide exposure. No individual review guide is deemed unnecessary for every task.",
+      "This is one adaptive fresh execution per variant, not randomized replicated evidence that the footer caused a stable efficiency improvement.",
+      "Source reading, independent review, relevant rereading and source-table analysis are scientific work; their counts alone do not identify waste.",
+      "Provider token usage, billing, hidden reasoning and all generated-calculation output are unobserved; do not convert bytes into token or monetary claims.",
+      "The transfer topic was fixed before candidate outcomes and uses the selected frozen version; its open external reading is not a matched cost-effect endpoint."
+    ],
+    "first_candidate_primary_failure_retained": true,
+    "invalid_instrument_pilot_excluded": true,
+    "invalid_pilot_reason": "Concurrent shared-append trace corruption before first report; replaced by immutable per-event reader v2 before formal trials.",
+    "reader_sha256": "6a636d0c6070ddd80053ab2543e8ae22e81538851ec4f2d54917c5b1daa8a53d",
+    "final_scientific_scopes": "Named bounded reports independently accepted; frozen seven-criterion source audit supported the selected final with no necessary regression or lost obligation."
+  },
+  "new_topic": {
+    "title": "宏基因组物种分类中，参考数据库覆盖与未知物种如何改变可靠性评价和方法选择？",
+    "scope": "Modern short-read DNA bacterial/archaeal classification, ancestor placement, rejection and abundance interpretation.",
+    "parent_paper_or_method_seeds": [],
+    "first_report_sha256": "7e5c8adc03ce7b8bd5dc6cdbc10b14321ad7b82cddb7f6d1d1d413e1d7d8e314",
+    "accepted_report_sha256": "da0f0f52ba05b2330abc8e304f2c5ac23f35f7a9d4d5db16214d27239c22111a",
+    "first_review_sha256": "7055f5f7b5c3bfbbe102d58fc38f8edff00d2fd7945421ab6ba3888ef3c1d518",
+    "scoped_re_review_sha256": "787c1751054d86197b4a41a3760e80f60c7485e57e676bc8899bc92d7016608d",
+    "necessary_revision": {
+      "id": "R1",
+      "first": "needs_local_revision",
+      "issue": "Unknown true mass does not determine an existing estimate denominator; condition abundance interpretation on actual normalization and unit.",
+      "actual": "Six local replacements in derived v2; source rereading and ME3 supersession of historical overgeneralization.",
+      "final": "pass_resolved_for_v2"
+    },
+    "optional_adopted": [
+      "O1: abundance filtering is candidate screening, not sufficient evidence of presence; no new MAP2B performance claim.",
+      "O2: distinguish BC/rJSD/L1/L2 ranking changes from default rAD behavior."
+    ],
+    "acceptance": "accepted_within_declared_scope; actual author receipt and CURRENT closure completed",
+    "author_artifact_count": 7,
+    "author_artifact_bytes": 102530,
+    "source_input_count": 7,
+    "source_input_bytes": 861011,
+    "entry_use": {
+      "harness_read_paths_by_actor": {
+        "author": [
+          "harness/AGENTS.md",
+          "harness/README.md",
+          "harness/core/docs/methods/README.md",
+          "harness/core/docs/methods/cards/benchmark-teacher-fairness.md",
+          "harness/core/docs/methods/cards/metric-semantics.md",
+          "harness/core/docs/methods/guides/method-experience.md",
+          "harness/core/docs/methods/guides/research-preparation.md",
+          "harness/core/docs/methods/guides/review-choice-synthesis.md",
+          "harness/core/docs/methods/guides/revision-responses-and-acceptance.md",
+          "harness/core/docs/methods/guides/statistical-units-and-selection.md",
+          "harness/machine/AGENT-INSTRUCTIONS.md"
+        ],
+        "revisor": [
+          "harness/AGENTS.md",
+          "harness/core/docs/methods/cards/benchmark-teacher-fairness.md",
+          "harness/core/docs/methods/cards/metric-semantics.md",
+          "harness/core/docs/methods/guides/review-coverage-and-closure.md",
+          "harness/core/docs/methods/guides/revision-responses-and-acceptance.md",
+          "harness/machine/AGENT-INSTRUCTIONS.md"
+        ]
+      },
+      "handoff_contract_or_structured_receipt_read": false,
+      "scope": "Ordinary research used existing notes, reports, current entry and actual response; no strict-tool contract relaxation is inferred. Descriptive single-case route observation only."
+    },
+    "method_experience": "ME1/ME2 connected guide use to actual comparison and constructed checks. ME3 records the real revisor correction, reuses ME2/S1/S6, and supersedes the historical denominator generalization without erasing it.",
+    "actual_execution": "Author and revisor ran lightweight standard-library constructed arithmetic/score checks. No classifier, training, FASTQ, assembly, real-cohort calibration or new-species discovery run occurred.",
+    "remaining_required_current_obligations": [],
+    "future_dependencies": [
+      "Target habitat/depth/unknown fraction/error budget",
+      "Real classifier/assembly performance and calibration",
+      "Full genus/distant-unknown ranking",
+      "New-species discovery",
+      "Unobtained supplementary/version details for exact original experiment reproduction"
+    ],
+    "open_external_reading_is_matched_cost_effect_endpoint": false
+  },
+  "four_dimensions": {
+    "goal_preservation": {
+      "status": "supported_within_bounded_case",
+      "scope": "Declared bounded question and named artifacts."
+    },
+    "control_flow_preservation": {
+      "status": "supported_within_planned_coordination",
+      "scope": "R1 stays local; source/denominator/normalization and actual runs remain distinguished; future software tests are not marked complete."
+    },
+    "revision_implementation": {
+      "status": "supported_by_actual_response_and_re_review",
+      "scope": "Necessary R1 corrected; chosen O1/O2 checked in their actual added scope. No optional issue retroactively made mandatory."
+    },
+    "state_convergence": {
+      "status": "supported_after_actual_author_closure",
+      "scope": "Accepted named report/current navigation align; future deployment, classifier runs and distant-unknown validation retain their own dependencies."
+    }
+  },
+  "parent_coordination": "Fresh author and revisor contexts, planned freezes and raw review delivery, same-author continuation, scoped re-review and closure delivery. One nonscientific checkpoint inquiry. This is not fully autonomous long-horizon or cross-memory evidence.",
+  "source_urls": [
+    "https://www.nature.com/articles/s41592-022-01431-4",
+    "https://www.nature.com/articles/s41587-023-01688-w",
+    "https://www.biorxiv.org/content/10.1101/2023.05.31.543018v2.full-text",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6206640/",
+    "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1891-0",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8184642/"
+  ],
+  "evidence_access": "Curated first-party public summary; original reports, complete traces, source copies and immutable experiment snapshots retained privately. No paper bodies or third-party rows redistributed.",
+  "rights": "Public first-party prose/structured summary follows repository documentation licensing. Sun2021 legal author manuscript was local reading only; general redistribution license unverified.",
+  "limits": [
+    "Single adaptive execution per entry variant; no isolated causal wording effect or broad efficiency rate.",
+    "Author file stock stays9 and bytes rise slightly in old scoped follow-up.",
+    "Provider tokens/billing, full generated output and reasoning cost unobserved.",
+    "No weak-model, cross-memory or fully autonomous long-horizon benefit established."
+  ],
+  "guidance_scope": "34 routing rows/scientific cards/runtime/strict chosen-tool inputs preserved. No new first-draft gate or mandatory record family."
+}
